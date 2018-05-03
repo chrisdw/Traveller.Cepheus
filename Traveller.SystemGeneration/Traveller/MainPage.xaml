@@ -4,8 +4,21 @@
              xmlns:local="clr-namespace:Traveller"
              x:Class="org.DownesWard.Traveller.SystemGeneration.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
 
+    <StackLayout>
+	    <Label Text="Welcome to the Cepheus Engine system generator" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
+        <Picker Title="Campaign" SelectedIndexChanged="OnCampaignChanged">
+            <Picker.Items>
+                <x:String>Classic</x:String>
+                <x:String>Hostile</x:String>
+            </Picker.Items>
+        </Picker>
+        <Label Text="Space Opera"  />
+        <Switch x:Name="spaceOperaSwitch" />
+        <Label Text="Hard Science"  />
+        <Switch x:Name="hardScienceSwitch" />
+        <Button Text="Generate" Clicked="OnGenerateClicked" />
+    </StackLayout>
 </ContentPage>

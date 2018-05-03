@@ -13,5 +13,16 @@ namespace org.DownesWard.Traveller.SystemGeneration
 		{
 			InitializeComponent();
 		}
-	}
+
+        public void OnCampaignChanged(object sender, EventArgs e)
+        {
+            // TODO: Set the campaign type
+        }
+
+        public void OnGenerateClicked(object sender, EventArgs e)
+        {
+            //TODO: generate stuff
+        }
+
+    }
 }

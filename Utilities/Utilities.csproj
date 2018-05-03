@@ -5,4 +5,8 @@
     <RootNamespace>org.DownesWard.Utilities</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.427558-pre4" />
+  </ItemGroup>
+
 </Project>
