@@ -7,8 +7,8 @@
     <ProjectGuid>{CE985608-FD19-4A47-AB80-6A18E61D1A6A}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>org.DownesWard.Traveller.UWP</RootNamespace>
-    <AssemblyName>Traveller.UWP</AssemblyName>
+    <RootNamespace>org.DownesWard.Traveller.SystemGeneration.UWP</RootNamespace>
+    <AssemblyName>Traveller.SystemGeneration.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
@@ -152,9 +152,9 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Traveller\Traveller.csproj">
-      <Project>{4922705B-5119-4A0C-B89A-FE0BC7002A2D}</Project>
-      <Name>Traveller</Name>
+    <ProjectReference Include="..\Traveller\Traveller.SystemGeneration.csproj">
+      <Project>{7cc1c7c0-a070-4a99-9b7f-7d98ff574044}</Project>
+      <Name>Traveller.SystemGeneration</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

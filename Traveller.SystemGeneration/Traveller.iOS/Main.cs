@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace org.DownesWard.Traveller.iOS
+namespace org.DownesWard.Traveller.SystemGeneration.iOS
 {
     public class Application
     {

@@ -8,9 +8,9 @@
     <ProjectGuid>{D0982443-172E-4A34-8CFB-01344EC6DD61}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>org.DownesWard.Traveller.iOS</RootNamespace>
+    <RootNamespace>org.DownesWard.Traveller.SystemGeneration.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Traveller.iOS</AssemblyName>
+    <AssemblyName>Traveller.SystemGeneration.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -121,11 +121,11 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Traveller\Traveller.csproj">
-      <Project>{4922705B-5119-4A0C-B89A-FE0BC7002A2D}</Project>
-      <Name>Traveller</Name>
+    <ProjectReference Include="..\Traveller\Traveller.SystemGeneration.csproj">
+      <Project>{7cc1c7c0-a070-4a99-9b7f-7d98ff574044}</Project>
+      <Name>Traveller.SystemGeneration</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

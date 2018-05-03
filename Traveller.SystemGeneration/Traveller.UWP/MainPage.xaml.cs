@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace org.DownesWard.Traveller.UWP
+namespace org.DownesWard.Traveller.SystemGeneration.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace org.DownesWard.Traveller.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Traveller.App());
+            LoadApplication(new Traveller.SystemGeneration.App());
         }
     }
 }

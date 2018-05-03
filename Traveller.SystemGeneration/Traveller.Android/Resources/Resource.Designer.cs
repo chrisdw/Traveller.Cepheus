@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("org.DownesWard.Traveller.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("org.DownesWard.Traveller.SystemGeneration.Droid.Resource", IsApplication=true)]
 
-namespace org.DownesWard.Traveller.Droid
+namespace org.DownesWard.Traveller.SystemGeneration.Droid
 {
 	
 	
@@ -26,7 +26,7 @@ namespace org.DownesWard.Traveller.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::org.DownesWard.Traveller.Droid.Resource.Attribute.actionBarSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::org.DownesWard.Traveller.SystemGeneration.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

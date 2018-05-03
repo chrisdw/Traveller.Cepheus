@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace org.DownesWard.Traveller
+namespace org.DownesWard.Traveller.SystemGeneration
 {
 	public partial class App : Application
 	{
@@ -13,7 +13,7 @@ namespace org.DownesWard.Traveller
 		{
 			InitializeComponent();
 
-			MainPage = new Traveller.MainPage();
+			MainPage = new Traveller.SystemGeneration.MainPage();
 		}
 
 		protected override void OnStart ()
