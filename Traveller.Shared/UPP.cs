@@ -19,5 +19,10 @@ namespace org.DownesWard.Traveller.Shared
         {
             return Size.Value.ToString() + Atmosphere.Value.ToString() + Hydro.Value.ToString();
         }
+
+        public string SocialUPP()
+        {
+            return Pop.Value.ToString() + Government.Value.ToString() + Law.Value.ToString();
+        }
     }
 }
