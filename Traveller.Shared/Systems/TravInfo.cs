@@ -59,5 +59,16 @@ namespace org.DownesWard.Traveller.Shared.Systems
             }
             return builder.ToString();
         }
+
+        public void DoTradeClassification()
+        {
+            var builder = new StringBuilder();
+
+            if ((Atmosphere.Value >= 4 && Atmosphere.Value <= 9) && (Hydro.Value >= 4 && Hydro.Value <= 8) && (Pop.Value >= 5 && Pop.Value <= 7))
+            {
+                builder.Append("Ag ");
+            }
+            Remarks = builder.ToString();
+        }
     }
 }

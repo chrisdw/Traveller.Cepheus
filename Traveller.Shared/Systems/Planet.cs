@@ -23,12 +23,5 @@ namespace org.DownesWard.Traveller.Shared.Systems
             AVERAGE,
             HEAVY
         }
-
-        public TravInfo Info { get; } = new TravInfo();
-
-        public void Generate(Configuration config)
-        {
-            // TODO: Add generation code
-        }
     }
 }

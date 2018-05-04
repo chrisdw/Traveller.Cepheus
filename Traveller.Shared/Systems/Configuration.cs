@@ -6,14 +6,10 @@ namespace org.DownesWard.Traveller.Shared.Systems
 {
     public class Configuration
     {
-        public enum Campaign
-        {
-            CLASSIC,
-            HOSTILE
-        }
-
-        public Campaign CurrentCampaign { get; set; }
-        public bool SpaceOpera { get; set; }
-        public bool HardScience { get; set; }
+        public Campaign CurrentCampaign { get; set; } = Campaign.CLASSIC;
+        public StarportTableType StarportTable { get; set; } = StarportTableType.STANDARD;
+        public GenerationType Generation { get; set; } = GenerationType.SIMPLE;
+        public bool SpaceOpera { get; set; } = false;
+        public bool HardScience { get; set; } = false;
     }
 }

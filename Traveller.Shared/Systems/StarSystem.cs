@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace org.DownesWard.Traveller.Shared.Systems
+{
+    public class StarSystem
+    {
+        public enum SystemType
+        {
+            SOLO,
+            BINARY,
+            TRINARY
+        }
+
+        public TravInfo Information { get; } = new TravInfo();
+        
+        public Planet Mainworld { get; private set; }
+
+        public void Generate(Configuration config)
+        {
+            // TODO: Add generation code
+            if (config.Generation == GenerationType.SIMPLE)
+            {
+                // Just need the UPP, trade code and remarks
+            }
+        }
+    }
+}

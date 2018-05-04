@@ -21,23 +21,23 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             if (campaignPicker.SelectedIndex == 0)
             {
-                config.CurrentCampaign = Configuration.Campaign.CLASSIC;
+                config.CurrentCampaign = Campaign.CLASSIC;
             }
             else
             {
-                config.CurrentCampaign = Configuration.Campaign.HOSTILE;
+                config.CurrentCampaign = Campaign.HOSTILE;
             }
         }
 
         public void OnGenerateClicked(object sender, EventArgs e)
         {
-            var planet = new Planet();
+            var system = new StarSystem();
             config.SpaceOpera = spaceOperaSwitch.IsToggled;
             config.HardScience = hardScienceSwitch.IsToggled;
 
-            planet.Generate(config);
+            system.Generate(config);
             // As this is a basic generation, get a normal UPP
-            UPPLabel.Text = planet.Info.DisplayString();
+            UPPLabel.Text = system.Information.DisplayString();
         }
 
     }
