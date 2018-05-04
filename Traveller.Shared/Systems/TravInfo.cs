@@ -18,7 +18,7 @@ namespace org.DownesWard.Traveller.Shared.Systems
             Bases = string.Empty;
         }
 
-        public string UPP(Planet.WorldType type, double diameter)
+        public string UPP(Planet.WorldType type = Planet.WorldType.NORMAL, double diameter = 0)
         {
             var builder = new StringBuilder();
             switch (type)
@@ -40,8 +40,22 @@ namespace org.DownesWard.Traveller.Shared.Systems
                     builder.AppendFormat("{0}-{1}-{3}-{4}", StartPort, PhysicalUPP(), SocialUPP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.STAR:
-                    builder.Append("QCompanion Star");
+                    builder.Append("Companion Star");
                     break;
+            }
+            return builder.ToString();
+        }
+
+        public string DisplayString(Planet.WorldType type = Planet.WorldType.NORMAL, double diameter = 0)
+        {
+            var builder = new StringBuilder();
+            builder.AppendFormat("{0}\t{1}\t{2}", UPP(), Bases, Remarks);
+            if (type != Planet.WorldType.LGG && type != Planet.WorldType.SGG && type != Planet.WorldType.STAR)
+            {
+                if (PopMult > 0)
+                {
+                    builder.AppendFormat("\t{0}", PopMult);
+                }
             }
             return builder.ToString();
         }
