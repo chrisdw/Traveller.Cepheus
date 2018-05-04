@@ -68,7 +68,23 @@ namespace org.DownesWard.Traveller.Shared.Systems
             {
                 builder.Append("Ag ");
             }
-            Remarks = builder.ToString();
+            if (Size.Value == 0)
+            {
+                builder.Append("As ");
+            }
+            if (Pop.Value == 0)
+            {
+                builder.Append("Ba ");
+            }
+            if (Atmosphere.Value >= 2 && Hydro.Value == 0)
+            {
+                builder.Append("De ");
+            }
+            if (Atmosphere.Value >= 10 && Hydro.Value > 0)
+            {
+                builder.Append("Fl ");
+            }
+            Remarks += builder.ToString();
         }
     }
 }
