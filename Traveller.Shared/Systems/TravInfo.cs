@@ -84,6 +84,46 @@ namespace org.DownesWard.Traveller.Shared.Systems
             {
                 builder.Append("Fl ");
             }
+            if (Pop.Value >= 9)
+            {
+                builder.Append("Hi ");
+            }
+            if (Atmosphere.Value <= 1 && Hydro.Value > 0)
+            {
+                builder.Append("Ic ");
+            }
+            if (((Atmosphere.Value >= 2 && Atmosphere.Value <= 4) || Atmosphere.Value == 7 || Atmosphere.Value == 9) && Pop.Value >= 9)
+            {
+                builder.Append("In ");
+            }
+            if (Pop.Value > 0 && Hydro.Value <= 4)
+            {
+                builder.Append("Lo ");
+            }
+            if (Atmosphere.Value <= 3 && Hydro.Value <= 4 && Pop.Value >= 6)
+            {
+                builder.Append("Na ");
+            }
+            if (Pop.Value > 0 && Pop.Value <= 6)
+            {
+                builder.Append("Ni ");
+            }
+            if ((Atmosphere.Value >= 2 && Atmosphere.Value <= 5) && Hydro.Value <= 3 && Pop.Value > 0)
+            {
+                builder.Append("Po ");
+            }
+            if ((Atmosphere.Value == 6 || Atmosphere.Value == 8) && (Pop.Value >= 6 && Pop.Value <= 8) && (Government.Value >= 4 && Government.Value <= 9))
+            {
+                builder.Append("Ri ");
+            }
+            if (Size.Value > 0 && Atmosphere.Value == 0)
+            {
+                builder.Append("Va ");
+            }
+            if (Hydro.Value == 10)
+            {
+                builder.Append("Wa ");
+            }
             Remarks += builder.ToString();
         }
     }
