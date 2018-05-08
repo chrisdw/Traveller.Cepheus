@@ -23,6 +23,8 @@ namespace org.DownesWard.Traveller.Shared.Systems
             if (config.Generation == GenerationType.SIMPLE)
             {
                 // Just need the UPP, trade code and remarks
+                Mainworld = new Planet();
+                
             }
         }
     }
