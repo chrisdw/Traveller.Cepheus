@@ -13,7 +13,7 @@ namespace org.DownesWard.Traveller.Shared.Systems
             TRINARY
         }
 
-        public TravInfo Information { get; } = new TravInfo();
+        public TravInfo Information { get; private set;  } = new TravInfo();
         
         public Planet Mainworld { get; private set; }
 
@@ -24,7 +24,8 @@ namespace org.DownesWard.Traveller.Shared.Systems
             {
                 // Just need the UPP, trade code and remarks
                 Mainworld = new Planet();
-                
+                Mainworld.Generate(config);
+                Information = Mainworld.Normal;
             }
         }
     }

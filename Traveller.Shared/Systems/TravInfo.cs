@@ -12,7 +12,7 @@ namespace org.DownesWard.Traveller.Shared.Systems
 
         public TravInfo()
         {
-            StartPort = 'X';
+            Starport = 'X';
             PopMult = 0;
             Remarks = string.Empty;
             Bases = string.Empty;
@@ -30,14 +30,14 @@ namespace org.DownesWard.Traveller.Shared.Systems
                     builder.AppendFormat("SGG - diameter {0} km", diameter.ToString("F"));
                     break;
                 case Planet.WorldType.SMALL:
-                    builder.AppendFormat("{0}-S{1}{2}-{3}-{4}", StartPort, Atmosphere.ToString(), Hydro.ToString(), SocialUPP(), TechLevel.ToString());
+                    builder.AppendFormat("{0}-S{1}{2}-{3}-{4}", Starport, Atmosphere.ToString(), Hydro.ToString(), SocialUPP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.RING:
-                    builder.AppendFormat("{0}-R00-{1}-{2}", StartPort, SocialUPP(), TechLevel.ToString());
+                    builder.AppendFormat("{0}-R00-{1}-{2}", Starport, SocialUPP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.NORMAL:
                 case Planet.WorldType.PLANETOID:
-                    builder.AppendFormat("{0}-{1}-{3}-{4}", StartPort, PhysicalUPP(), SocialUPP(), TechLevel.ToString());
+                    builder.AppendFormat("{0}-{1}{2}-{3}", Starport, PhysicalUPP(), SocialUPP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.STAR:
                     builder.Append("Companion Star");
@@ -259,15 +259,15 @@ namespace org.DownesWard.Traveller.Shared.Systems
 
             if (dieroll < 3)
             {
-                StartPort = 'Y';
+                Starport = 'Y';
             }
             else if (dieroll == 3)
             {
-                StartPort = 'H';
+                Starport = 'H';
             }
             else if (dieroll >= 6)
             {
-                StartPort = 'F';
+                Starport = 'F';
             }
 
             if (TechLevel.Value != main.TechLevel.Value)
@@ -276,12 +276,198 @@ namespace org.DownesWard.Traveller.Shared.Systems
             }
             else
             {
-                StartPort = 'G';
+                Starport = 'G';
             }
             if (Pop.Value == 0)
             {
                 TechLevel.Value = 0;
             }
+        }
+
+        public void ReduceStarport(int levels)
+        {
+            switch (Starport)
+            {
+                case 'A':
+                    if (levels == 1)
+                    {
+                        Starport = 'B';
+                    }
+                    else
+                    {
+                        Starport = 'C';
+                    }
+                    break;
+                case 'B':
+                    if (levels == 1)
+                    {
+                        Starport = 'C';
+                    }
+                    else
+                    {
+                        Starport = 'D';
+                    }
+                    break;
+                case 'C':
+                    if (levels == 1)
+                    {
+                        Starport = 'D';
+                    }
+                    else
+                    {
+                        Starport = 'E';
+                    }
+                    break;
+                case 'D':
+                    if (levels == 1)
+                    {
+                        Starport = 'E';
+                    }
+                    else
+                    {
+                        Starport = 'X';
+                    }
+                    break;
+                case 'E':
+                    Starport = 'X';
+                    break;
+                case 'F':
+                    if (levels == 1)
+                    {
+                        Starport = 'G';
+                    }
+                    else
+                    {
+                        Starport = 'H';
+                    }
+                    break;
+                case 'G':
+                    if (levels == 1)
+                    {
+                        Starport = 'H';
+                    }
+                    else
+                    {
+                        Starport = 'Y';
+                    }
+                    break;
+                case 'H':
+                    Starport = 'Y';
+                    break;
+            }
+        }
+
+        public void GetTravInfo(Configuration config)
+        {
+            Pop.Value = Common.d6() + Common.d6() - 2;
+
+            if (Size.Value <= 2) Pop.Value -= 1;
+            if (Atmosphere.Value <= 3) Pop.Value -= 3;
+            if (Atmosphere.Value == 10) Pop.Value -= 2;
+            if (Atmosphere.Value == 11) Pop.Value -= 3;
+            if (Atmosphere.Value == 12) Pop.Value -= 4;
+            if (Atmosphere.Value > 12) Pop.Value -= 2;
+            if (Atmosphere.Value == 6) Pop.Value += 3;
+            if (Atmosphere.Value == 5 || Atmosphere.Value == 8)  Pop.Value += 1;
+            if (Hydro.Value == 0 && Atmosphere.Value > 3)  Pop.Value -= 2;
+
+            if (config.HardScience)
+            {
+                if (Size.Value <= 2) Pop.Value -= 1;
+                if (Size.Value >= 10) Pop.Value -= 1;
+                if (Atmosphere.Value != 5 && Atmosphere.Value != 6 && Atmosphere.Value != 8)
+                {
+                    Pop.Value -= 1;
+                }
+                else
+                {
+                    Pop.Value += 1;
+                }
+            }
+
+            if (Pop.Value == 0)
+            {
+                Government.Value = 0;
+                Law.Value = 0;
+                TechLevel.Value = 0;
+                PopMult = 0;
+            }
+            else
+            {
+                Government.Value = Common.d6() + Common.d6() - 7 + Pop.Value;
+                Law.Value = Common.d6() + Common.d6() - 7 + Government.Value;
+                {
+                    PopMult = (short)Common.d10();
+                } while (PopMult == 10) ;
+            }
+        }
+
+        public void CompleteTravInfo(Configuration config)
+        {
+
+        }
+
+        public double Population()
+        {
+            return PopMult * Math.Pow(10, Pop.Value);
+        }
+
+        private char GetStarport(Configuration config)
+        {
+            var dieroll = Common.d6() + Common.d6();
+            if (config.HardScience)
+            {
+                dieroll = dieroll + 7 - Pop.Value;
+            }
+            else
+            {
+                if (Pop.Value == 1) dieroll += 2;
+                if (Pop.Value == 2) dieroll += 1;
+                if (Pop.Value >= 6 && Pop.Value <= 9) dieroll -= 1;
+                if (Pop.Value == 10) dieroll -= 2;
+            }
+
+            if (Pop.Value == 0)
+                return 'X';
+
+            char starport = 'X';
+
+            switch (config.StarportTable)
+            {
+                case StarportTableType.BACKWATER:
+                    if (dieroll < 3) starport = 'A';
+                    else if (dieroll < 6) starport = 'B';
+                    else if (dieroll < 9) starport = 'C';
+                    else if (dieroll < 10) starport = 'D';
+                    else if (dieroll < 12) starport = 'E';
+                    else starport = 'X';
+                    break;
+                case StarportTableType.STANDARD:
+                    if (dieroll < 4) starport = 'A';
+                    else if (dieroll < 7) starport = 'B';
+                    else if (dieroll < 9) starport = 'C';
+                    else if (dieroll < 10) starport = 'D';
+                    else if (dieroll < 12) starport = 'E';
+                    else starport = 'X';
+                    break;
+                case StarportTableType.MATURE:
+                    if (dieroll < 4) starport = 'A';
+                    else if (dieroll < 7) starport = 'B';
+                    else if (dieroll < 9) starport = 'C';
+                    else if (dieroll < 10) starport = 'D';
+                    else starport = 'E';
+                    break;
+                case StarportTableType.CLUSTER:
+                    if (dieroll < 6) starport = 'A';
+                    else if (dieroll < 8) starport = 'B';
+                    else if (dieroll < 10) starport = 'C';
+                    else if (dieroll < 11) starport = 'D';
+                    else if (dieroll < 12) starport = 'E';
+                    else starport = 'X';
+                    break;
+            }
+
+            return starport;
         }
     }
 }

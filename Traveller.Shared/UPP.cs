@@ -6,7 +6,7 @@ namespace org.DownesWard.Traveller.Shared
 {
     public class UPP
     {
-        public char StartPort { get; set; }
+        public char Starport { get; set; }
         public TravCode Size { get; } = new TravCode(10);
         public TravCode Atmosphere { get; } = new TravCode();
         public TravCode Hydro { get; } = new TravCode(10);
@@ -17,12 +17,12 @@ namespace org.DownesWard.Traveller.Shared
 
         public string PhysicalUPP()
         {
-            return Size.Value.ToString() + Atmosphere.Value.ToString() + Hydro.Value.ToString();
+            return Size.ToString() + Atmosphere.ToString() + Hydro.ToString();
         }
 
         public string SocialUPP()
         {
-            return Pop.Value.ToString() + Government.Value.ToString() + Law.Value.ToString();
+            return Pop.ToString() + Government.ToString() + Law.ToString();
         }
     }
 }
