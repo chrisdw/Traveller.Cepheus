@@ -126,5 +126,162 @@ namespace org.DownesWard.Traveller.Shared.Systems
             }
             Remarks += builder.ToString();
         }
+
+        // Make the changes necessary to represent the social information 
+        // of a subordiate world relative to the main world
+        public void DoSubordinate(TravInfo main)
+        {
+            var builder = new StringBuilder();
+
+            // Government
+            var dieroll = Common.d6();
+            if (main.Government.Value == 6)
+            {
+                dieroll += Pop.Value;
+            }
+            if (main.Government.Value == 7)
+            {
+                dieroll -= 1;
+            }
+            if (Pop.Value == 0)
+            {
+                Government.Value = 0;
+            }
+            else
+            {
+                if (dieroll > 4)
+                {
+                    Government.Value = 6;
+                }
+                else
+                {
+                    Government.Value = dieroll - 1;
+                }
+            }
+
+            // Law
+            if (Pop.Value == 0)
+            {
+                Law.Value = 0;
+            }
+            else
+            {
+                Law.Value = Common.d6() - 3 + main.Law.Value;
+            }
+
+            // Farming world
+            if ((Atmosphere.Value >= 4 && Atmosphere.Value <= 9) && (Hydro.Value >= 4 && Hydro.Value <= 8) && Pop.Value >= 2)
+            {
+                builder.AppendFormat("{0} ", "Fa");
+            }
+            
+            // Mining world
+            if (main.Remarks.Contains("In"))
+            {
+                if (Pop.Value >= 2)
+                {
+                    builder.AppendFormat("{0} ", "Mn");
+                }
+            }
+
+            // Colony world
+            if (Government.Value == 6 && Pop.Value >= 5)
+            {
+                builder.AppendFormat("{0} ", "Co");
+            }
+
+            // Research world
+            if (main.TechLevel.Value >= 9 && main.Pop.Value >= 1 && Pop.Value > 0)
+            {
+                dieroll = Common.d6() + Common.d6();
+                if (main.TechLevel.Value >= 10)
+                {
+                    dieroll += 2;
+                }
+                if (dieroll >= 11)
+                {
+                    builder.AppendFormat("{0} ", "Re");
+                }
+            }
+
+            // Mi?
+            if (main.Pop.Value >= 8 && !main.Remarks.Contains("Po") && Pop.Value > 0)
+            {
+                dieroll = Common.d6() + Common.d6();
+                if (main.Pop.Value >= 9)
+                {
+                    dieroll += 1;
+                }
+                if (main.Atmosphere.Value == Atmosphere.Value)
+                {
+                    dieroll += 1;
+                }
+                if (dieroll >= 12)
+                {
+                    builder.AppendFormat("{0} ", "Mi");
+                }
+            }
+
+            // Bases
+            if (main.Bases.Contains("N") && Pop.Value >= 3)
+            {
+                builder.AppendFormat("{0} ", "Nv");
+            }
+            if (main.Bases.Contains("S") && Pop.Value >= 2)
+            {
+                builder.AppendFormat("{0} ", "Sc");
+            }
+
+            // Finish up
+            Remarks += builder.ToString();
+
+            // Tech Level
+            TechLevel.Value = main.TechLevel.Value - 1;
+            if (Remarks.Contains("Sc") || Remarks.Contains("Nv") || Remarks.Contains("Re"))
+            {
+                TechLevel.Value += 1;
+            }
+
+            // Spaceport
+            dieroll = Common.d6();
+            if (Pop.Value >= 6)
+            {
+                dieroll += 2;
+            }
+            if (Pop.Value == 1)
+            {
+                dieroll -= 2;
+            }
+            if (Pop.Value == 0)
+            {
+                dieroll -= 3;
+            }
+
+            if (dieroll < 3)
+            {
+                StartPort = 'Y';
+            }
+            else if (dieroll == 3)
+            {
+                StartPort = 'H';
+            }
+            else if (dieroll >= 6)
+            {
+                StartPort = 'F';
+            }
+
+            if (TechLevel.Value != main.TechLevel.Value)
+            {
+                TechLevel.Value += 1;
+            }
+            else
+            {
+                StartPort = 'G';
+            }
+            if (Pop.Value == 0)
+            {
+                TechLevel.Value = 0;
+            }
+        }
     }
 }
