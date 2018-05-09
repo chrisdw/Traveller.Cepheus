@@ -404,7 +404,95 @@ namespace org.DownesWard.Traveller.Shared.Systems
 
         public void CompleteTravInfo(Configuration config)
         {
+            Starport = GetStarport(config);
+            if (Pop.Value == 0)
+            {
+                TechLevel.Value = 0;
+            }
+            else
+            {
+                TechLevel.Value = Common.d6();
+                switch (Starport)
+                {
+                    case 'A':
+                        TechLevel.Value += 6;
+                        break;
+                    case 'B':
+                        TechLevel.Value += 4;
+                        break;
+                    case 'C':
+                        TechLevel.Value += 2;
+                        break;
+                    case 'X':
+                        TechLevel.Value -= 4;
+                        break;
+                }
 
+                switch (Size.Value)
+                {
+                    case 0:
+                    case 1:
+                        TechLevel.Value += 2;
+                        break;
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 11:
+                    case 12:
+                        TechLevel.Value += 1;
+                        break;
+                }
+
+                switch (Atmosphere.Value)
+                {
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 10:
+                        TechLevel.Value += 1;
+                        break;
+                    case 13:
+                        TechLevel.Value -= 2;
+                        break;
+                }
+
+                switch (Hydro.Value)
+                {
+                    case 9:
+                        TechLevel.Value += 1;
+                        break;
+                    case 10:
+                        TechLevel.Value += 2;
+                        break;
+                }
+
+                switch (Pop.Value)
+                {
+                    case 9:
+                        TechLevel.Value += 2;
+                        break;
+                    case 10:
+                        TechLevel.Value += 4;
+                        break;
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                        TechLevel.Value += 1;
+                        break;
+                }
+
+                switch (Government.Value)
+                {
+                    case 0:
+                    case 5:
+                        TechLevel.Value += 1;
+                        break;
+                }
+            }
         }
 
         public double Population()
