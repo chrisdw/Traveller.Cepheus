@@ -23,9 +23,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 config.CurrentCampaign = Campaign.CLASSIC;
             }
-            else
+            else if (campaignPicker.SelectedIndex == 1)
             {
                 config.CurrentCampaign = Campaign.HOSTILE;
+            }
+            else
+            {
+                config.CurrentCampaign = Campaign.HAMMERSSLAMMERS;
             }
         }
 

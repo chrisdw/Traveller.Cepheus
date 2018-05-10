@@ -9,6 +9,9 @@ namespace org.DownesWard.Traveller.Shared.Systems
         public short PopMult { get; set; }
         public string Remarks { get; set; }
         public string Bases { get; set; }
+        public string ConflictReason { get; set; }
+
+        public List<Faction> Factions { get; } = new List<Faction>();
 
         public TravInfo()
         {
@@ -491,6 +494,147 @@ namespace org.DownesWard.Traveller.Shared.Systems
                     case 5:
                         TechLevel.Value += 1;
                         break;
+                }
+
+                if ((Hydro.Value == 0 || Hydro.Value == 10) && Pop.Value > 5)
+                {
+                    if (TechLevel.Value < 4)
+                    {
+                        TechLevel.Value = 4;
+                    }
+                }
+
+                switch (Atmosphere.Value)
+                {
+                    case 0:
+                    case 2:
+                    case 3:
+                    case 10:
+                    case 11:
+                    case 12:
+                        if (TechLevel.Value < 7)
+                        {
+                            TechLevel.Value = 7;
+                        }
+                        break;
+                    case 4:
+                    case 7:
+                    case 9:
+                        if (TechLevel.Value < 5)
+                        {
+                            TechLevel.Value = 5;
+                        }
+                        break;
+                    case 13:
+                    case 14:
+                        if (Hydro.Value == 10)
+                        {
+                            if (TechLevel.Value < 7)
+                            {
+                                TechLevel.Value = 7;
+                            }
+                        }
+                        break;
+                }
+            }
+
+            DoFactions(config);
+
+            // Bases
+            // TODO: bases
+
+            DoTradeClassification();
+
+            if (config.CurrentCampaign == Campaign.HAMMERSSLAMMERS && Pop.Value > 0)
+            {
+                var conflictDm = 0;
+                if (Pop.Value >= 7 && TechLevel.Value >= 11)
+                {
+                    Remarks += " Old Colony";
+                    conflictDm += 2;
+                }
+                else if (Pop.Value >= 6 && Pop.Value <= 9 && TechLevel.Value >= 8)
+                {
+                    Remarks += " Middle Colony";
+                }
+                else if (Pop.Value >= 4 && Pop.Value <= 8)
+                {
+                    Remarks += " Young Colony";
+                    conflictDm -= 2;
+                }
+                if (Government.Value == 7)
+                {
+                    conflictDm += 2;
+                }
+                else if (Government.Value == 6)
+                {
+                    conflictDm -= 2;
+                }
+                ConflictReason = SeedOfConflict(conflictDm);
+            }
+        }
+
+        private string SeedOfConflict(int conflictDm)
+        {
+            var conflictSeed = string.Empty;
+
+            var conflictScore = Common.d6() + Common.d6() + conflictDm;
+
+            if (conflictScore <= 2)
+            {
+                conflictSeed = "Rebellion against parent world";
+            }
+            else if (conflictScore >= 11)
+            {
+                conflictSeed = "Civil War";
+            }
+            else
+            {
+                switch (conflictScore)
+                {
+                    case 3:
+                        conflictSeed = "Rebellion against off-world interests";
+                        break;
+                    case 4:
+                        conflictSeed = "Trade War";
+                        break;
+                    case 5:
+                        conflictSeed = "Ethnic or Religious Divide";
+                        break;
+                    case 6: conflictSeed = "Territory War"; break;
+                    case 7: conflictSeed = string.Format("Invasion ({0})", SeedOfConflict(conflictDm)); break;
+                    case 8: conflictSeed = "Resource War"; break;
+                    case 9: conflictSeed = "Peacekeeping"; break;
+                    case 10: conflictSeed = "Failed Coup"; break;
+                }
+            }
+            return conflictSeed;
+        }
+        public void DoFactions(Configuration config)
+        {
+            var numFactions = Common.d3();
+
+            if (Government.Value == 7)
+            {
+                numFactions++;
+            }
+            else if (Government.Value > 10)
+            {
+                numFactions--;
+            }
+            if (numFactions > 0 && Pop.Value > 0)
+            {
+                for (var i = 0; i < numFactions; i++)
+                {
+                    var faction = new Faction();
+                    faction.Government.Value = Common.d6() + Common.d6() - 7 + Pop.Value;
+                    faction.Strength.Value = Common.d6() + Common.d6();
+                    if (config.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
+                    {
+                        var roll1 = Common.d6();
+                        var roll2 = Common.d6();
+                    }
+                    Factions.Add(faction);
                 }
             }
         }

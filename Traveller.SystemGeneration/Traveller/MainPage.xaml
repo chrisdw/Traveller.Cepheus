@@ -13,6 +13,7 @@
             <Picker.Items>
                 <x:String>Classic</x:String>
                 <x:String>Hostile</x:String>
+                <x:String>Hammer's Slammers</x:String>
             </Picker.Items>
         </Picker>
         <Label Text="Space Opera"  />

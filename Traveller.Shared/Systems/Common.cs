@@ -16,7 +16,8 @@ namespace org.DownesWard.Traveller.Shared.Systems
     public enum Campaign
     {
         CLASSIC,
-        HOSTILE
+        HOSTILE,
+        HAMMERSSLAMMERS
     }
 
     public enum GenerationType
