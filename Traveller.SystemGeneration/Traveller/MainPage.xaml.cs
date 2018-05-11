@@ -10,7 +10,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 {
 	public partial class MainPage : ContentPage
 	{
-        Configuration config { get; } = new Configuration();
+        Configuration Config { get; } = new Configuration();
 
 		public MainPage()
 		{
@@ -21,27 +21,30 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             if (campaignPicker.SelectedIndex == 0)
             {
-                config.CurrentCampaign = Campaign.CLASSIC;
+                Config.CurrentCampaign = Campaign.CLASSIC;
             }
             else if (campaignPicker.SelectedIndex == 1)
             {
-                config.CurrentCampaign = Campaign.HOSTILE;
+                Config.CurrentCampaign = Campaign.HOSTILE;
             }
             else
             {
-                config.CurrentCampaign = Campaign.HAMMERSSLAMMERS;
+                Config.CurrentCampaign = Campaign.HAMMERSSLAMMERS;
             }
         }
 
         public void OnGenerateClicked(object sender, EventArgs e)
         {
             var system = new StarSystem();
-            config.SpaceOpera = spaceOperaSwitch.IsToggled;
-            config.HardScience = hardScienceSwitch.IsToggled;
+            Config.SpaceOpera = spaceOperaSwitch.IsToggled;
+            Config.HardScience = hardScienceSwitch.IsToggled;
 
-            system.Generate(config);
+            system.Generate(Config);
             // As this is a basic generation, get a normal UPP
             UPPLabel.Text = system.Information.DisplayString();
+
+            var worldView = new WorldView(system.Information, Config);
+            Navigation.PushModalAsync(worldView);
         }
 
     }

@@ -16,10 +16,14 @@
                 <x:String>Hammer's Slammers</x:String>
             </Picker.Items>
         </Picker>
-        <Label Text="Space Opera"  />
-        <Switch x:Name="spaceOperaSwitch" />
-        <Label Text="Hard Science"  />
-        <Switch x:Name="hardScienceSwitch" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Space Opera"  />
+            <Switch x:Name="spaceOperaSwitch" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Hard Science"  />
+            <Switch x:Name="hardScienceSwitch" />
+        </StackLayout>
         <Button x:Name="generateButton" Text="Generate" Clicked="OnGenerateClicked" />
         <Label x:Name="UPPLabel" Text="" />
     </StackLayout>

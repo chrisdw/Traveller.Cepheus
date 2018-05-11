@@ -11,6 +11,13 @@ namespace org.DownesWard.Traveller.Shared.Systems
         public string Bases { get; set; }
         public string ConflictReason { get; set; }
 
+        public string UPPString
+        {
+            get
+            {
+                return UPP();
+            }
+        }
         public List<Faction> Factions { get; } = new List<Faction>();
 
         public TravInfo()
@@ -399,6 +406,7 @@ namespace org.DownesWard.Traveller.Shared.Systems
             {
                 Government.Value = Common.d6() + Common.d6() - 7 + Pop.Value;
                 Law.Value = Common.d6() + Common.d6() - 7 + Government.Value;
+                do
                 {
                     PopMult = (short)Common.d10();
                 } while (PopMult == 10) ;
@@ -541,7 +549,62 @@ namespace org.DownesWard.Traveller.Shared.Systems
             DoFactions(config);
 
             // Bases
-            // TODO: bases
+            switch (Starport)
+            {
+                case 'A':
+                    var dieroll = Common.d6() + Common.d6();
+                    if (dieroll >= 8)
+                    {
+                        Bases += 'N';
+                    }
+                    dieroll = Common.d6() + Common.d6();
+                    if (dieroll >= 10)
+                    {
+                        Bases += 'S';
+                    }
+                    dieroll = Common.d6() + Common.d6();
+                    if (dieroll >= 10)
+                    {
+                        Bases += 'M';
+                    }
+                    break;
+                case 'B':
+                    dieroll = Common.d6() + Common.d6();
+                    if (dieroll >= 8)
+                    {
+                        Bases += 'N';
+                    }
+                    dieroll = Common.d6() + Common.d6();
+                    if (dieroll >= 9)
+                    {
+                        Bases += 'S';
+                    }
+                    dieroll = Common.d6() + Common.d6();
+                    if (dieroll >= 9)
+                    {
+                        Bases += 'M';
+                    }
+                    break;
+                case 'C':
+                    dieroll = Common.d6() + Common.d6();
+                    if (dieroll >= 8)
+                    {
+                        Bases += 'S';
+                    }
+                    dieroll = Common.d6() + Common.d6();
+                    if (dieroll >= 8)
+                    {
+                        Bases += 'M';
+                    }
+                    break;
+                case 'D':
+                    dieroll = Common.d6() + Common.d6();
+                    if (dieroll >= 7)
+                    {
+                        Bases += 'S';
+                    }
+                    break;
+            }
 
             DoTradeClassification();
 
@@ -633,6 +696,145 @@ namespace org.DownesWard.Traveller.Shared.Systems
                     {
                         var roll1 = Common.d6();
                         var roll2 = Common.d6();
+                        switch (roll1)
+                        {
+                            case 1:
+                                switch (roll2)
+                                {
+                                    case 1: faction.Origin = "Eastern United States";  break;
+                                    case 2: faction.Origin = "Midwest United States";  break;
+                                    case 3: faction.Origin = "Southern United States"; break;
+                                    case 4: faction.Origin = "Western United States";  break;
+                                    case 5: faction.Origin = "Canadian"; break;
+                                    case 6: faction.Origin = "Evangelical Christian"; break;
+                                }
+                                break;
+                            case 2:
+                                switch (roll2)
+                                {
+                                    case 1: faction.Origin = "Mexican"; break;
+                                    case 2: faction.Origin = "Central American"; break;
+                                    case 3: faction.Origin = "South American (Amazon Basin)"; break;
+                                    case 4: faction.Origin = "South American (Andean)"; break;
+                                    case 5: faction.Origin = "South American (South)"; break;
+                                    case 6: faction.Origin = "Catholic"; break;
+                                }
+                                break;
+                            case 3:
+                                switch (roll2)
+                                {
+                                    case 1 : faction.Origin = "European - Scandanavian"; break;
+                                    case 2 : faction.Origin = "European - British Isles"; break;
+                                    case 3 : faction.Origin = "European - Western"; break;
+                                    case 4 : faction.Origin = "European - Eastern"; break;
+                                    case 5 : faction.Origin = "European - Southern"; break;
+                                    case 6 : faction.Origin = "Protestant"; break;
+                                }
+                                break;
+                            case 4:
+                                switch (roll2)
+                                {
+                                    case 1: case 2 : faction.Origin = "Russian"; break;
+                                    case 3: case 4 : faction.Origin = "Chinese"; break;
+                                    case 5 : faction.Origin = "Japanese"; break;
+                                    case 6 : faction.Origin = "Buddist"; break;
+                                }
+                                break;
+                            case 5:
+                                switch (roll2)
+                                {
+                                    case 1 : faction.Origin = "Turkish"; break;
+                                    case 2 : faction.Origin = "North Afican"; break;
+                                    case 3 : faction.Origin = "Central African"; break;
+                                    case 4 : faction.Origin = "South African"; break;
+                                    case 5 : faction.Origin = "Indonesian"; break;
+                                    case 6 : faction.Origin = "Islamic"; break;
+                                }
+                                break;
+                            case 6:
+                                switch (roll2)
+                                {
+                                    case 1 : faction.Origin = "Arabic"; break;
+                                    case 2 : faction.Origin = "Australian"; break;
+                                    case 3 : faction.Origin = "Old Colony"; break;
+                                    case 4 : faction.Origin = "South African"; break;
+                                    case 5 : faction.Origin = "The Way (Mainstream)"; break;
+                                    case 6 : faction.Origin = "The Way (Heretical)"; break;
+                                }
+                                break;
+                        }
+                        // Now do the name
+                        roll1 = Common.d6();
+                        roll2 = Common.d6();
+                        switch (roll1)
+                        {
+                            case 1:
+                                switch (roll2)
+                                {
+                                    case 1 : faction.Name = "Republicans"; break;
+                                    case 2 : faction.Name = "Federalists"; break;
+                                    case 3 : faction.Name = "Royalists"; break;
+                                    case 4 : faction.Name = "Sepratists"; break;
+                                    case 5 : faction.Name = "Alliance"; break;
+                                    case 6 : faction.Name = "League of Barons"; break;
+                                }
+                                break;
+                            case 2:
+                                switch (roll2)
+                                {
+                                    case 1 : faction.Name = "Trade Federation"; break;
+                                    case 2 : faction.Name = "Farmers Union"; break;
+                                    case 3 : faction.Name = "Citizen's Movement"; break;
+                                    case 4 : faction.Name = "Revolutionaries"; break;
+                                    case 5 : faction.Name = "Glorious Brotherhood"; break;
+                                    case 6 : faction.Name = "Freedom Party"; break;
+                                }
+                                break;
+                            case 3:
+                                switch (roll2)
+                                {
+                                    case 1 : faction.Name = "Corporate Militia"; break;
+                                    case 2 : faction.Name = "Rebels"; break;
+                                    case 3 : faction.Name = "Industry Alliance"; break;
+                                    case 4 : faction.Name = "Coalition"; break;
+                                    case 5 : faction.Name = "Tripartate Alliance"; break;
+                                    case 6 : faction.Name = "Coastal Union"; break;
+                                }
+                                break;
+                            case 4:
+                                switch (roll2)
+                                {
+                                    case 1 : faction.Name = "Highlanders"; break;
+                                    case 2 : faction.Name = "Southern States"; break;
+                                    case 3 : faction.Name = "North Star League"; break;
+                                    case 4 : faction.Name = "Terran Loyalists"; break;
+                                    case 5 : faction.Name = "Progressive Party"; break;
+                                    case 6 : faction.Name = "Crusaders"; break;
+                                }
+                                break;
+                            case 5:
+                                switch (roll2)
+                                {
+                                    case 1 : faction.Name = "Mountain Partisans"; break;
+                                    case 2 : faction.Name = "Centralists"; break;
+                                    case 3 : faction.Name = "Treaty Forces"; break;
+                                    case 4 : faction.Name = "Western Alliance"; break;
+                                    case 5 : faction.Name = "Eastern Bloc"; break;
+                                    case 6 : faction.Name = "Stability Party"; break;
+                                }
+                                break;
+                            case 6:
+                                switch (roll2)
+                                {
+                                    case 1 : faction.Name = "Moderate Alliance"; break;
+                                    case 2 : faction.Name = "People's Party"; break;
+                                    case 3 : faction.Name = "Imperialist"; break;
+                                    case 4 : faction.Name = "Monarchists"; break;
+                                    case 5 : faction.Name = "Liberators"; break;
+                                    case 6 : faction.Name = "Peace Faction"; break;
+                                }
+                                break;
+                        }
                     }
                     Factions.Add(faction);
                 }

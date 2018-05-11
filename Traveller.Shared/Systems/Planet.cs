@@ -36,6 +36,7 @@ namespace org.DownesWard.Traveller.Shared.Systems
                 Normal.Hydro.Value = Common.d6() + Common.d6() - 7 + Normal.Atmosphere.Value;
                 Normal.GetTravInfo(config);
                 Normal.DoTradeClassification();
+                Normal.CompleteTravInfo(config);
             }
         }
     }
