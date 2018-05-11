@@ -46,5 +46,48 @@ namespace org.DownesWard.Traveller.Shared.Systems
         {
             return od10.roll();
         }
+
+        public static double CalcGaiaFactor(double l, double o, double g, double e)
+        {
+            var Ideal = 288.0 / l / o / g;
+            var TheFactor = (Ideal - e) / 2;
+
+            if (TheFactor > 0.0)
+            {
+                if (TheFactor > 0.1)
+                {
+                    TheFactor = 0.1;
+                }
+            }
+            else
+            {
+                if (TheFactor < -0.1)
+                {
+                    TheFactor = -0.1;
+                }
+            }
+
+            return (e + TheFactor);
+        }
+
+        public static double Change(double original)
+        {
+            var X = (d10() * 10.0) + d10();
+            var Y = X / 100.0;
+
+            if (d6() < 4)
+            {
+                return original * Y;
+            }
+            else
+            {
+                return (original * (1.0 + Y));
+            }
+        }
+
+        public static double CtoF(double cdegrees)
+        {
+            return ((cdegrees * 1.8) + 32);
+        }
     }
 }

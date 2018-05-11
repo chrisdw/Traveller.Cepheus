@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.Shared.Systems
 {
@@ -902,6 +903,76 @@ namespace org.DownesWard.Traveller.Shared.Systems
             }
 
             return starport;
+        }
+
+        public void SaveToXML(XmlElement objWorld, Configuration configuration)
+        {
+            var xeInfo = objWorld.OwnerDocument.CreateElement("TravellerInfo");
+            objWorld.AppendChild(xeInfo);
+            var xeChild = objWorld.OwnerDocument.CreateElement("Starport");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Starport.ToString()));
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("Size");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Size.Value.ToString()));
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("Atmosphere");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Atmosphere.Value.ToString()));
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("Hydro");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Hydro.Value.ToString()));
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("Pop");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Pop.Value.ToString()));
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("Government");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Government.Value.ToString());
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("Law");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Law.Value.ToString()));
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("TechLevel");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(TechLevel.Value.ToString()));
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("PopMult");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(PopMult.ToString()));
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("Remarks");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Remarks));
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("Bases");
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Bases));
+            xeInfo.AppendChild(xeChild);
+
+            if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
+            {
+                xeChild = objWorld.OwnerDocument.CreateElement("ConflictReason");
+                xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(ConflictReason));
+            }
+
+            xeInfo.AppendChild(xeChild);
+            xeChild = objWorld.OwnerDocument.CreateElement("Factions");
+            foreach (var faction in Factions)
+            {
+                var xeFactionChild = objWorld.OwnerDocument.CreateElement("Faction");
+                var xeAttrib = objWorld.OwnerDocument.CreateAttribute("Government");
+                xeAttrib.Value = faction.GovernmentString;
+                xeFactionChild.Attributes.Append(xeAttrib);
+                xeAttrib = objWorld.OwnerDocument.CreateAttribute("Strength");
+                xeAttrib.Value = faction.StrengthString;
+                xeFactionChild.Attributes.Append(xeAttrib);
+                if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
+                {
+                    xeAttrib = objWorld.OwnerDocument.CreateAttribute("Origin");
+                    xeAttrib.Value = faction.Origin;
+                    xeFactionChild.Attributes.Append(xeAttrib);
+                    xeAttrib = objWorld.OwnerDocument.CreateAttribute("Name");
+                    xeAttrib.Value = faction.Name;
+                    xeFactionChild.Attributes.Append(xeAttrib);
+                }
+                xeFactionChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(faction.DisplayString()));
+                xeChild.AppendChild(xeFactionChild);
+            }
+            xeInfo.AppendChild(xeChild);
         }
     }
 }
