@@ -26,9 +26,9 @@ namespace org.DownesWard.Traveller.Shared.Systems
         public char DecClass { get; set; }
         public double StellarMass { get; set; }
         public double Luminosity { get; set; }
-        public short NumOrbits { get; set; }
+        public List<Orbit> Orbits { get; } = new List<Orbit>();
         public short HZone { get; set; }
-        public int NumCompanions { get; set; }
+        public List<CompanionStar> Companions { get; } = new List<CompanionStar>();
         public string Name { get; set; }
     }
 }
