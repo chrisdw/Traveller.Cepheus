@@ -17,7 +17,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             UNAVAILABLE
         }
 
-        public OrbitType Type { get; set; }
+        public OrbitType OrbitalType { get; set; }
 
         public enum OccupiedBy
         {

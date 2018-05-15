@@ -162,7 +162,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         dieroll = 0;
                     }
                     Normal.Size.Value = dieroll;
-
+                    Diameter = GetDiameter();
+                    Dense = GetDensity(myOrbit);
                     if (numsats < 0)
                     {
                         numsats = 0;
@@ -179,6 +180,81 @@ namespace org.DownesWard.Traveller.SystemGeneration
         private int BuildSattelites(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, short HZone, double ComLumAddFromPrim, int numsats)
         {
             return 0;
+        }
+
+        protected double GetDiameter()
+        {
+            var diam = 0.0;
+
+            switch (Normal.Size.Value)
+            {
+                case 0:
+                    diam = 200 + Common.Change(300);
+                    PlanetType = WorldType.SMALL;
+                    break;
+                case 1:
+                    diam = 800 + Common.Change(800);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+                case 2:
+                    diam = 2400 + Common.Change(1600);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+                case 3:
+                    diam = 4000 + Common.Change(800);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+                case 4:
+                    diam = 5600 + Common.Change(800);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+                case 5:
+                    diam = 7200 + Common.Change(800);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+                case 6:
+                    diam = 8800 + Common.Change(800);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+                case 7:
+                    diam = 10400 + Common.Change(800);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+                case 8:
+                    diam = 12000 + Common.Change(800);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+                case 9:
+                    diam = 13600 + Common.Change(800);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+                case 10:
+                    diam = 15200 + Common.Change(800);
+                    PlanetType = WorldType.NORMAL;
+                    break;
+            }
+            return diam;
+        }
+
+        protected DensityType GetDensity(Orbit myOrbit)
+        {
+            var dense = DensityType.AVERAGE;
+
+            var dieroll = Common.d6();
+            if (myOrbit.OrbitalType == Orbit.OrbitType.OUTER)
+            {
+                dieroll -= 2;
+            }
+            if (dieroll < 2)
+            {
+                dense = DensityType.LIGHT;
+            }
+            else if (dieroll > 4)
+            {
+                dense = DensityType.HEAVY;
+            }
+
+            return dense;
         }
     }
 }
