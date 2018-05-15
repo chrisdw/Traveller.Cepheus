@@ -1,4 +1,4 @@
-﻿namespace org.DownesWard.Traveller.Shared.Systems
+﻿namespace org.DownesWard.Traveller.SystemGeneration
 {
     public class Constants
     {

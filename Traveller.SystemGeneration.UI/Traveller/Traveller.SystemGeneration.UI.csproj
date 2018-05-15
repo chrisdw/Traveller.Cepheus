@@ -9,7 +9,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>org.DownesWard.Traveller.SystemGeneration</RootNamespace>
-    <AssemblyName>Traveller.SystemGeneration</AssemblyName>
+    <AssemblyName>Traveller.SystemGeneration.UI</AssemblyName>
     <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
@@ -21,6 +21,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Traveller.Shared\Traveller.Shared.csproj" />
+    <ProjectReference Include="..\..\Traveller.SystemGeneration\Traveller.SystemGeneration.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">

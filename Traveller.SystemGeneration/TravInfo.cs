@@ -1,9 +1,10 @@
-﻿using System;
+﻿using org.DownesWard.Traveller.Shared;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 
-namespace org.DownesWard.Traveller.Shared.Systems
+namespace org.DownesWard.Traveller.SystemGeneration
 {
     public class TravInfo : UPP
     {
@@ -925,7 +926,7 @@ namespace org.DownesWard.Traveller.Shared.Systems
             xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Pop.Value.ToString()));
             xeInfo.AppendChild(xeChild);
             xeChild = objWorld.OwnerDocument.CreateElement("Government");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Government.Value.ToString());
+            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Government.Value.ToString()));
             xeInfo.AppendChild(xeChild);
             xeChild = objWorld.OwnerDocument.CreateElement("Law");
             xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Law.Value.ToString()));
@@ -969,7 +970,7 @@ namespace org.DownesWard.Traveller.Shared.Systems
                     xeAttrib.Value = faction.Name;
                     xeFactionChild.Attributes.Append(xeAttrib);
                 }
-                xeFactionChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(faction.DisplayString()));
+                xeFactionChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(faction.DisplayString(configuration)));
                 xeChild.AppendChild(xeFactionChild);
             }
             xeInfo.AppendChild(xeChild);

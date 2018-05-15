@@ -1,8 +1,9 @@
-﻿using System;
+﻿using org.DownesWard.Traveller.Shared;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.DownesWard.Traveller.Shared.Systems
+namespace org.DownesWard.Traveller.SystemGeneration
 {
     public class Faction
     {

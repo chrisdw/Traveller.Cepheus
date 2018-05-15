@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using org.DownesWard.Utilities;
 
-namespace org.DownesWard.Traveller.Shared.Systems
+namespace org.DownesWard.Traveller.SystemGeneration
 {
     public enum StarportTableType
     {

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using org.DownesWard.Traveller.AnimalEncounters;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.DownesWard.Traveller.Shared.Systems
+namespace org.DownesWard.Traveller.SystemGeneration
 {
     public class Planet
     {
@@ -26,7 +27,7 @@ namespace org.DownesWard.Traveller.Shared.Systems
 
         public DensityType Dense { get; set; }
         public double Pressure { get; set; }
-        public int maxpop { get; set; }
+        public int Maxpop { get; set; }
         public double OrbitPeriod { get; set; }
         public double OrbitRange { get; set; }
 
@@ -48,7 +49,7 @@ namespace org.DownesWard.Traveller.Shared.Systems
         public int LifeFactor { get; set; }
         public string Name { get; set; }
 
-        // TODO: Add reference to encounter table generator
+        public TableGenerator TableGenerator { get; } = new TableGenerator();
 
         // Temprature talbes
         public double[] Summer { get; } = new double[Constants.NUM_HEX_ROWS * 2];

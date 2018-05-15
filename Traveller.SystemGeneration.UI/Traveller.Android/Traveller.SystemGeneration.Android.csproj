@@ -83,9 +83,9 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Traveller\Traveller.SystemGeneration.csproj">
+    <ProjectReference Include="..\Traveller\Traveller.SystemGeneration.UI.csproj">
       <Project>{7cc1c7c0-a070-4a99-9b7f-7d98ff574044}</Project>
-      <Name>Traveller.SystemGeneration</Name>
+      <Name>Traveller.SystemGeneration.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
