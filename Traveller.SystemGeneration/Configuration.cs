@@ -11,5 +11,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public GenerationType Generation { get; set; } = GenerationType.SIMPLE;
         public bool SpaceOpera { get; set; } = false;
         public bool HardScience { get; set; } = false;
+        public bool GenerateTravInfo { get; set; } = true;
     }
 }

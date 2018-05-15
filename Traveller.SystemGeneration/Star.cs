@@ -21,7 +21,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         protected int TypeRoll { get; set; }
         protected int ClassRoll { get; set; }
-        public StellarType Type { get; set; }
+        public StellarType StarType { get; set; }
         public char LumClass { get; set; }
         public char DecClass { get; set; }
         public double StellarMass { get; set; }
