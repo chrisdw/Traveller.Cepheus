@@ -12,5 +12,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public bool SpaceOpera { get; set; } = false;
         public bool HardScience { get; set; } = false;
         public bool GenerateTravInfo { get; set; } = true;
+        public bool UseGaiaFactor { get; set; } = true;
+        public bool UseFareheight { get; set; } = false;
     }
 }

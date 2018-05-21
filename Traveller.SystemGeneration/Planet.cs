@@ -234,13 +234,14 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     }
 
                     // TODO: Temprature charts
+                    GetTempChart(myOrbit, ComLumAddFromPrim, primary, configuration);
                     // TODO: Native life
 
                     if (Normal.Size.Value == 0 || myOrbit.Occupied == Orbit.OccupiedBy.CAPTURED)
                     {
                         numsats = 0;
                     }
-                    else 
+                    else
                     {
                         numsats = Common.d6() - 3;
                     }
@@ -422,7 +423,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     press = 0.0 + Common.Change(3.0);
                     break;
             }
-            return press; 
+            return press;
         }
 
         protected int GetHydrographics(Orbit orbit, Configuration configuration)
@@ -534,6 +535,345 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
             maxpop = Math.Max(0, maxpop);
             return maxpop;
+        }
+
+        protected void GetTempChart(Orbit orbit, double ComLumAddFromPrim, Star primary, Configuration configuration)
+        {
+            var L = primary.Luminosity;
+            var O = Constants.HABITNUM / Math.Sqrt(orbit.Range);
+            var atmosCode = 0;
+            var E = 0.0;
+
+            if (Normal.Atmosphere.Value < 4)
+            {
+                atmosCode = 0;
+            }
+            else if (Normal.Atmosphere.Value < 10)
+            {
+                atmosCode = 1;
+            }
+            else if (Normal.Atmosphere.Value < 16)
+            {
+                atmosCode = 2;
+            }
+            else
+            {
+                atmosCode = 4;
+            }
+
+            if (orbit.OrbitalType == Orbit.OrbitType.HABITABLE)
+            {
+                E = DataTables.EnergyAbsorbHZ[Normal.Hydro.Value, atmosCode];
+            }
+            else
+            {
+                E = DataTables.EnergyAbsorbNHZ[Normal.Hydro.Value, atmosCode];
+            }
+
+            var G = DataTables.Greenhouse[Normal.Atmosphere.Value];
+
+            if (configuration.UseGaiaFactor && Maxpop > 5)
+            {
+                E = Common.CalcGaiaFactor(L, O, G, E);
+            }
+
+            var X = ((L * O) + ComLumAddFromPrim) * E * G;
+            Temp = X - 273;
+
+            var DayPlus = Daytime(Rotation / 2, L, orbit.Range);
+            var NightMinus = Nighttime(Rotation / 2);
+            Tilt = AxialTilt();
+            var k = 0;
+            if (Tilt == 0.0)
+            {
+                k = 0;
+            }
+            else if (Tilt < 6.0)
+            {
+                k = 1;
+            }
+            else if (Tilt < 110)
+            {
+                k = 2;
+            }
+            else if (Tilt < 16.0)
+            {
+                k = 3;
+            }
+            else if (Tilt < 21.0)
+            {
+                k = 4;
+            }
+            else if (Tilt < 26.0)
+            {
+                k = 5;
+            }
+            else if (Tilt < 31.0)
+            {
+                k = 6;
+            }
+            else if (Tilt < 36.0)
+            {
+                k = 7;
+            }
+            else if (Tilt < 46.0)
+            {
+                k = 8;
+            }
+            else if (Tilt < 61.0)
+            {
+                k = 9;
+            }
+            else if (Tilt < 85.0)
+            {
+                k = 10;
+            }
+            else
+            {
+                k = 11;
+            }
+
+            Ecc = OrbitEcc();
+
+            for (var i = 0; i < (Constants.NUM_HEX_ROWS * 2) - 1; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    X = DayPlus;
+                }
+                else
+                {
+                    X = NightMinus;
+                }
+
+                if (!TidallyLocked)
+                {
+                    Summer[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + (Ecc * 30) + ((0.6 * Tilt) * DataTables.AxialTiltEffects[i / 2, k]) + X;
+                    Fall[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + X;
+                    Winter[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] - (Ecc * 30) - (Tilt * DataTables.AxialTiltEffects[i / 2, k]) + X;
+                }
+                else
+                {
+                    var latEffect = 0.0;
+                    if (i % 2 == 0)
+                    {
+                        latEffect = Math.Min((X / Normal.Size.Value) * i / 2, X);
+                    }
+                    else
+                    {
+                        latEffect = Math.Max((X / Normal.Size.Value) * i / 2, X);
+                    }
+                    // Axial tilt has no effect on a tiddaly locked world
+                    Summer[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + (Ecc * 30) + latEffect;
+                    Fall[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + latEffect;
+                    Winter[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] - (Ecc * 30) + latEffect;
+                }
+                if (configuration.UseFareheight)
+                {
+                    Summer[i] = Common.CtoF(Summer[i]);
+                    Fall[i] = Common.CtoF(Fall[i]);
+                    Winter[i] = Common.CtoF(Winter[i]);
+                }
+            }
+        }
+
+        protected double Daytime(double daylength, double lum, double dist)
+        {
+            var X = 0.0;
+            var Max = 0.0;
+
+            var R = lum / Math.Sqrt(dist);
+            switch (Normal.Atmosphere.Value)
+            {
+                case 0:
+                    X = 1.0 * R * daylength;
+
+                    Max = 0.1 * (Temp + 273) * R;
+                    break;
+                case 1:
+                    X = 0.9 * R * daylength;
+                    Max = 0.3 * (Temp + 273) * R;
+                    break;
+                case 2:
+                case 3:
+                case 14:
+                    X = 0.8 * R * daylength;
+                    Max = 0.8 * (Temp + 273) * R;
+                    break;
+                case 4:
+                case 5:
+                    X = 0.6 * R * daylength;
+                    Max = 1.5 * (Temp + 273) * R;
+                    break;
+                case 6:
+                case 7:
+                    X = 0.5 * R * daylength;
+                    Max = 2.5 * (Temp + 273) * R;
+                    break;
+                case 8:
+                case 9:
+                    X = 0.4 * R * daylength;
+                    Max = 4.0 * (Temp + 273) * R;
+                    break;
+                default:
+                    X = 0.2 * R * daylength;
+                    Max = 5.0 * (Temp + 273) * R;
+                    break;
+            }
+            if (X > Max)
+            {
+                X = Max;
+            }
+            if (TidallyLocked)
+            {
+                return Max;
+            }
+            else
+            {
+                return X;
+            }
+        }
+
+        protected double Nighttime(double daylength)
+        {
+            var X = 0.0;
+            var Max = 0.0;
+
+            switch (Normal.Atmosphere.Value)
+            {
+                case 0:
+                    X = 20.0 * daylength;
+                    Max = 0.8 * (Temp + 273);
+                    break;
+                case 1:
+                    X = 15.0 * daylength;
+                    Max = 0.7 * (Temp + 273);
+                    break;
+                case 2:
+                case 3:
+                case 14:
+                    X = 8.0 * daylength;
+                    Max = 0.5 * (Temp + 273);
+                    break;
+                case 4:
+                case 5:
+                    X = 3.0 * daylength;
+                    Max = 0.3 * (Temp + 273);
+                    break;
+                case 6:
+                case 7:
+                    X = 1.0 * daylength;
+                    Max = 0.15 * (Temp + 273);
+                    break;
+                case 8:
+                case 9:
+                    X = 0.5 * daylength;
+                    Max = 0.1 * (Temp + 273);
+                    break;
+                default:
+                    X = 0.2 * daylength;
+                    Max = 0.05 * (Temp + 273);
+                    break;
+            }
+            if (X > Max)
+            {
+                X = Max;
+            }
+            if (TidallyLocked)
+            {
+                return -Max;
+            }
+            else
+            {
+                return -X;
+            }
+        }
+
+        protected double AxialTilt()
+        {
+            var dieroll = Common.d6() + Common.d6();
+            switch (dieroll)
+            {
+                case 2:
+                case 3:
+                    return (-1.0 + Common.d10());
+
+                case 4:
+                case 5:
+                    return (9.0 + Common.d10());
+
+                case 6:
+                case 7:
+                    return (19.0 + Common.d10());
+
+                case 8:
+                case 9:
+                    return (20.0 + Common.d10());
+
+                case 10:
+                case 11:
+                    return (29.0 + Common.d10());
+                default:
+                    dieroll = Common.d6();
+                    switch (dieroll)
+                    {
+                        case 1:
+                        case 2:
+                            return (49 + Common.d10());
+
+                        case 3:
+                            return (59 + Common.d10());
+
+                        case 4:
+                            return (69 + Common.d10());
+
+                        case 5:
+                            return (79 + Common.d10());
+
+                        default:
+                            return (90.0);
+                    }
+            }
+        }
+
+        protected double OrbitEcc()
+        {
+            var dieroll = Common.d6() + Common.d6();
+            switch (dieroll)
+            {
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                    return 0.0;
+                case 8:
+                    return 0.005;
+                case 9:
+                    return 0.01;
+                case 10:
+                    return 0.015;
+                case 11:
+                    return 0.02;
+                default:
+                    dieroll = Common.d6() + Common.d6();
+                    switch (dieroll)
+                    {
+                        case 1:
+                            return 0.025;
+                        case 2:
+                            return 0.05;
+                        case 3:
+                            return 0.1;
+                        case 4:
+                            return 0.2;
+                        case 5:
+                            return 0.25;
+                        default:
+                            return 0.3;
+                    }
+            }
         }
     }
 }

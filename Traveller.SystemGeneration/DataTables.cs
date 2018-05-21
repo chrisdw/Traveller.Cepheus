@@ -4,28 +4,28 @@ using System.Text;
 
 namespace org.DownesWard.Traveller.SystemGeneration
 {
-    public class DataTables
+    public static class DataTables
     {
         // Stellar Mass tables
-        public double[] MassTableIa = { 16, 16, 14, 11, 10, 8.1, 8.1, 10, 11, 14, 16, 16 };
-        public double[] MassTableIb = { 16, 16, 14, 11, 10, 8.1, 8.1, 10, 11, 14, 16, 16 };
-        public double[] MassTableII = { 16, 16, 14, 11, 10, 8.1, 8.1, 10, 11, 14, 16, 16 };
-        public double[] MassTableIII = { 14, 14, 12, 9, 8, 5, 2.5, 3.2, 4, 5, 6.3, 7.4 };
-        public double[] MassTableIV = { 10, 8, 6, 4, 2.5, 2, 1.75, 2, 2.3, 0, 0, 0 };
-        public double[] MassTableV = { 6, 4, 3.2, 2.1, 1.7, 1.3, 1.04, 0.94, 0.825, 0.57, 0.489, 0.331 };
-        public double[] MassTableD = { 0.3, 0.3, 0.36, 0.36, 0.42, 0.42, 0.63, 0.63, 0.83, 0.83, 1.11, 1.11 };
+        public static double[] MassTableIa = { 16, 16, 14, 11, 10, 8.1, 8.1, 10, 11, 14, 16, 16 };
+        public static double[] MassTableIb = { 16, 16, 14, 11, 10, 8.1, 8.1, 10, 11, 14, 16, 16 };
+        public static double[] MassTableII = { 16, 16, 14, 11, 10, 8.1, 8.1, 10, 11, 14, 16, 16 };
+        public static double[] MassTableIII = { 14, 14, 12, 9, 8, 5, 2.5, 3.2, 4, 5, 6.3, 7.4 };
+        public static double[] MassTableIV = { 10, 8, 6, 4, 2.5, 2, 1.75, 2, 2.3, 0, 0, 0 };
+        public static double[] MassTableV = { 6, 4, 3.2, 2.1, 1.7, 1.3, 1.04, 0.94, 0.825, 0.57, 0.489, 0.331 };
+        public static double[] MassTableD = { 0.3, 0.3, 0.36, 0.36, 0.42, 0.42, 0.63, 0.63, 0.83, 0.83, 1.11, 1.11 };
 
         // Luminisoity Tables
-        public double[] LumTableIa = { 11.0, 10.0, 6.85, 5.4, 4.95, 4.75, 4.86, 5.22, 5.46, 7.04, 8.24, 11.05, 11.28 };
-        public double[] LumTableIb = { 11.0, 10.0, 6.85, 5.4, 4.95, 4.75, 4.86, 5.22, 5.46, 7.04, 8.24, 11.05, 11.28 };
-        public double[] LumTableII = { 11.0, 10.0, 6.85, 5.4, 4.95, 4.75, 4.86, 5.22, 5.46, 7.04, 8.24, 11.05, 11.28 };
-        public double[] LumTableIII = { 8.0, 6.0, 4.09, 3.08, 2.7, 2.56, 2.66, 2.94, 3.12, 4.23, 4.65, 6.91, 7.2 };
-        public double[] LumTableIV = { 6.0, 4.0, 3.53, 2.47, 2.09, 1.86, 1.6, 1.49, 1.47, 1.27, 1.25, 1.1, 1.02 };
-        public double[] LumTableV = { 4.2, 3.5, 3.08, 2.0, 1.69, 1.37, 1.05, 0.9, 0.81, 0.53, 0.45, 0.29, 0.18 };
-        public double[] LumTableD = { 0.37, 0.31, 0.27, 0.27, 0.13, 0.13, 0.09, 0.09, 0.08, 0.08, 0.07, 0.07, 0.07 };
+        public static double[] LumTableIa = { 11.0, 10.0, 6.85, 5.4, 4.95, 4.75, 4.86, 5.22, 5.46, 7.04, 8.24, 11.05, 11.28 };
+        public static double[] LumTableIb = { 11.0, 10.0, 6.85, 5.4, 4.95, 4.75, 4.86, 5.22, 5.46, 7.04, 8.24, 11.05, 11.28 };
+        public static double[] LumTableII = { 11.0, 10.0, 6.85, 5.4, 4.95, 4.75, 4.86, 5.22, 5.46, 7.04, 8.24, 11.05, 11.28 };
+        public static double[] LumTableIII = { 8.0, 6.0, 4.09, 3.08, 2.7, 2.56, 2.66, 2.94, 3.12, 4.23, 4.65, 6.91, 7.2 };
+        public static double[] LumTableIV = { 6.0, 4.0, 3.53, 2.47, 2.09, 1.86, 1.6, 1.49, 1.47, 1.27, 1.25, 1.1, 1.02 };
+        public static double[] LumTableV = { 4.2, 3.5, 3.08, 2.0, 1.69, 1.37, 1.05, 0.9, 0.81, 0.53, 0.45, 0.29, 0.18 };
+        public static double[] LumTableD = { 0.37, 0.31, 0.27, 0.27, 0.13, 0.13, 0.09, 0.09, 0.08, 0.08, 0.07, 0.07, 0.07 };
 
         // Energy absorption factors
-        public double[,] EnergyAbsorbHZ = {
+        public static double[,] EnergyAbsorbHZ = {
             {0.9, 0.9, 0.74, 0.9},
             {0.829, 0.9, 0.697, 0.9},
             {0.803, 0.86, 0.672, 0.882},
@@ -38,7 +38,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {0.814, 0.62, 0.5, 0.793},
             {0.818, 0.619, 0.5, 0.773}
         };
-        public double[,] EnergyAbsorbNHZ = {
+        public static double[,] EnergyAbsorbNHZ = {
             {0.8, 0.8, 0.68, 0.8},
             {0.744, 0.811, 0.646, 0.811},
             {0.736, 0.789, 0.635, 0.807},
@@ -53,10 +53,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
         };
 
         // Greenhouse factors
-        public double[] Greenhouse = { 1.0, 1.0, 1.0, 1.0, 1.05, 1.05, 1.1, 1.1, 1.15, 1.15, 1.15, 1.0, 1.1, 1.15, 1.0, 1.1 };
+        public static double[] Greenhouse = { 1.0, 1.0, 1.0, 1.0, 1.05, 1.05, 1.1, 1.1, 1.15, 1.15, 1.15, 1.0, 1.1, 1.15, 1.0, 1.1 };
 
         // Latitude Temperature Modifiers
-        public double[,] LatitudeMods = {
+        public static double[,] LatitudeMods = {
             {6, 9, 12, 13, 15, 16, 18, 17, 21, 22, 24},
             {4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16},
             {2, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8},
@@ -70,7 +70,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {-14, -21, -28, -31, -35, -38, -42, -45, -49, -52, -56}
         };
 
-        public double[,] AxialTiltEffects = {
+        public static double[,] AxialTiltEffects = {
             {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.5, 0.75, 1.0},
             {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.5, 0.75, 1.0, 1.0},
             {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.5, 0.75, 1.0, 1.0, 1.0},
