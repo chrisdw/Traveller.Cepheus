@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-GB" target-language="fr-FR" original="TRAVELLER.SYSTEMGENERATION/FACTION.RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-GB" target-language="fr-FR" original="TRAVELLER.SYSTEMGENERATION/RESOURCES/FACTION.RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
     </header>
     <body>
-      <group id="TRAVELLER.SYSTEMGENERATION/FACTION.RESOURCES.RESX" datatype="resx">
+      <group id="TRAVELLER.SYSTEMGENERATION/RESOURCES/FACTION.RESOURCES.RESX" datatype="resx">
         <trans-unit id="Description" translate="yes" xml:space="preserve">
           <source>Government: {0}, Strength: {1}</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Gouvernement : {0}, force : {1}</target>
@@ -101,6 +101,191 @@
         <trans-unit id="Str_6" translate="yes" xml:space="preserve">
           <source>Overwelming Popular Support</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Immense soutien populaire</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en-GB" target-language="fr-FR" original="TRAVELLER.SYSTEMGENERATION/RESOURCES/TRAVINFO.RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.SYSTEMGENERATION/RESOURCES/TRAVINFO.RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Base_Military" translate="yes" xml:space="preserve">
+          <source>M</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">M</target>
+        </trans-unit>
+        <trans-unit id="Base_Naval" translate="yes" xml:space="preserve">
+          <source>N</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">N</target>
+        </trans-unit>
+        <trans-unit id="Base_Scout" translate="yes" xml:space="preserve">
+          <source>S</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">S</target>
+        </trans-unit>
+        <trans-unit id="ColonyAge_Middle" translate="yes" xml:space="preserve">
+          <source>Middle Colony</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colonie centrale</target>
+        </trans-unit>
+        <trans-unit id="ColonyAge_Old" translate="yes" xml:space="preserve">
+          <source>Old Colony</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ancienne colonie</target>
+        </trans-unit>
+        <trans-unit id="ColonyAge_Young" translate="yes" xml:space="preserve">
+          <source>Young Colony</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jeune colonie</target>
+        </trans-unit>
+        <trans-unit id="CompanionStar" translate="yes" xml:space="preserve">
+          <source>Companion Star</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Étoile compagnon</target>
+        </trans-unit>
+        <trans-unit id="Conflict_CivilWar" translate="yes" xml:space="preserve">
+          <source>Civil War</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Guerre civile</target>
+        </trans-unit>
+        <trans-unit id="Conflict_Divide" translate="yes" xml:space="preserve">
+          <source>Ethnic or Religious Divide</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fracture ethnique ou religieuse</target>
+        </trans-unit>
+        <trans-unit id="Conflict_FailedCoup" translate="yes" xml:space="preserve">
+          <source>Failed Coup</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Coup d’État manqué</target>
+        </trans-unit>
+        <trans-unit id="Conflict_Invasion" translate="yes" xml:space="preserve">
+          <source>Invasion ({0})</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Invasion ({0})</target>
+        </trans-unit>
+        <trans-unit id="Conflict_Peacekeeping" translate="yes" xml:space="preserve">
+          <source>Peacekeeping</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Maintien de la paix</target>
+        </trans-unit>
+        <trans-unit id="Conflict_RebellionOffWorld" translate="yes" xml:space="preserve">
+          <source>Rebellion against off-world interests</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rébellion contre intérêts hors-monde</target>
+        </trans-unit>
+        <trans-unit id="Conflict_RebellionParent" translate="yes" xml:space="preserve">
+          <source>Rebellion against parent world</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rébellion contre monde parent</target>
+        </trans-unit>
+        <trans-unit id="Conflict_ResourceWar" translate="yes" xml:space="preserve">
+          <source>Resource War</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Guerre des ressources</target>
+        </trans-unit>
+        <trans-unit id="Conflict_Territory" translate="yes" xml:space="preserve">
+          <source>Territory War</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Guerre de territoire</target>
+        </trans-unit>
+        <trans-unit id="Conflict_TradeWar" translate="yes" xml:space="preserve">
+          <source>Trade War</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Guerre commerciale</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Canadian" translate="yes" xml:space="preserve">
+          <source>Canadian</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Canadien</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_EastUS" translate="yes" xml:space="preserve">
+          <source>Eastern United States</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Est des États-Unis</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Evangelical" translate="yes" xml:space="preserve">
+          <source>Evangelical Christian</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chrétien évangélique</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_MidWestUS" translate="yes" xml:space="preserve">
+          <source>Midwest United States</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Midwest des États-Unis</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_SouthUS" translate="yes" xml:space="preserve">
+          <source>Southern United States</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sud des États-Unis</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_WestUS" translate="yes" xml:space="preserve">
+          <source>Western United States</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ouest des États-Unis</target>
+        </trans-unit>
+        <trans-unit id="Subbase_Naval" translate="yes" xml:space="preserve">
+          <source>Nv</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">NV</target>
+        </trans-unit>
+        <trans-unit id="Subbase_Scout" translate="yes" xml:space="preserve">
+          <source>Sc</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">SC</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_Agricultural" translate="yes" xml:space="preserve">
+          <source>Ag</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">AG</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_Asteroid" translate="yes" xml:space="preserve">
+          <source>As</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Comme</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_Barren" translate="yes" xml:space="preserve">
+          <source>Ba</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">BA</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_Colony" translate="yes" xml:space="preserve">
+          <source>Co</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Co</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_Desert" translate="yes" xml:space="preserve">
+          <source>De</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">De</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_FarmingColony" translate="yes" xml:space="preserve">
+          <source>Fa</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">FA</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_FluidOceans" translate="yes" xml:space="preserve">
+          <source>Fl</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">FL</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_HighPopulation" translate="yes" xml:space="preserve">
+          <source>Hi</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Salut</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_IceCapped" translate="yes" xml:space="preserve">
+          <source>Ic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">IC</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_Industrial" translate="yes" xml:space="preserve">
+          <source>In</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dans</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_LowPopulation" translate="yes" xml:space="preserve">
+          <source>Lo</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lo</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_MiningColony" translate="yes" xml:space="preserve">
+          <source>Mn</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mn</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_NonAgricultural" translate="yes" xml:space="preserve">
+          <source>Na</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Na</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_NonIndustrial" translate="yes" xml:space="preserve">
+          <source>Ni</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ni</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_Poor" translate="yes" xml:space="preserve">
+          <source>Po</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Po</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_ResearchColony" translate="yes" xml:space="preserve">
+          <source>Re</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Re</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_Rich" translate="yes" xml:space="preserve">
+          <source>Ri</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">RI</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_VaccumWorld" translate="yes" xml:space="preserve">
+          <source>Va</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Va</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_WaterWorld" translate="yes" xml:space="preserve">
+          <source>Wa</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wa</target>
         </trans-unit>
       </group>
     </body>
