@@ -1,6 +1,5 @@
 ﻿using org.DownesWard.Traveller.Shared;
-using System;
-using System.Collections.Generic;
+using org.DownesWard.Traveller.SystemGeneration.Resources;
 using System.Text;
 
 namespace org.DownesWard.Traveller.SystemGeneration
@@ -19,27 +18,27 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 var longString = string.Empty;
                 if (Strength.Value <= 3)
                 {
-                    longString = "Obscure Group";
+                    longString = Faction_Resources.Str_1;
                 }
                 else if (Strength.Value <= 5)
                 {
-                    longString = "Fringe Group";
+                    longString = Faction_Resources.Str_2;
                 }
                 else if (Strength.Value <= 7)
                 {
-                    longString = "Minor Group";
+                    longString = Faction_Resources.Str_3;
                 }
                 else if (Strength.Value <= 9)
                 {
-                    longString = "Notable Group";
+                    longString = Faction_Resources.Str_4;
                 }
                 else if (Strength.Value <= 11)
                 {
-                    longString = "Significant Group";
+                    longString = Faction_Resources.Str_5;
                 }
                 else
                 {
-                    longString = "Overwelming Popular Support";
+                    longString = Faction_Resources.Str_6;
                 }
                 return longString;
             }
@@ -52,21 +51,21 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 // Note: not a perfect overlap with government types
                 switch (Government.Value)
                 {
-                    case 0: longString = "None"; break;
-                    case 1: longString = "Company"; break;
-                    case 2: longString = "Participating Democracy"; break;
-                    case 3: longString = "Self perpetuating oligarchy"; break;
-                    case 4: longString = "Representative Democracy"; break;
-                    case 5: longString = "Feudal Technocracy"; break;
-                    case 6: longString = "Off world interests"; break;
-                    case 7: longString = "Anarchists"; break;
-                    case 8: longString = "Civil Service Bureaucracy"; break;
-                    case 9: longString = "Impersonal Bureaucracy"; break;
-                    case 10: longString = "Charismatic Dictator"; break;
-                    case 11: longString = "Non-charismatic Dictator"; break;
-                    case 12: longString = "Charismatic oligarchy"; break;
-                    case 13: longString = "Religious Dictatorship"; break;
-                    default: longString = string.Format("Other ({0})", Government.Value.ToString()); break;
+                    case 0: longString = Faction_Resources.Gov_0; break;
+                    case 1: longString = Faction_Resources.Gov_1; break;
+                    case 2: longString = Faction_Resources.Gov_2; break;
+                    case 3: longString = Faction_Resources.Gov_3; break;
+                    case 4: longString = Faction_Resources.Gov_4; break;
+                    case 5: longString = Faction_Resources.Gov_5; break;
+                    case 6: longString = Faction_Resources.Gov_6; break;
+                    case 7: longString = Faction_Resources.Gov_7; break;
+                    case 8: longString = Faction_Resources.Gov_8; break;
+                    case 9: longString = Faction_Resources.Gov_9; break;
+                    case 10: longString = Faction_Resources.Gov_10; break;
+                    case 11: longString = Faction_Resources.Gov_11; break;
+                    case 12: longString = Faction_Resources.Gov_12; break;
+                    case 13: longString = Faction_Resources.Gov_13; break;
+                    default: longString = string.Format(Faction_Resources.Gov_Other, Government.Value.ToString()); break;
                 }
                 return longString;
             }
@@ -77,14 +76,16 @@ namespace org.DownesWard.Traveller.SystemGeneration
             var builder = new StringBuilder();
             if (config.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
-                builder.AppendFormat("Name: {0}, ", Name);
+                builder.AppendFormat(Faction_Resources.Name, Name);
+                builder.Append(" ");
             }
 
-            builder.AppendFormat("Government: {0}, Strength: {1}", GovernmentString, StrengthString);
+            builder.AppendFormat(Faction_Resources.Description, GovernmentString, StrengthString);
 
             if (config.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
-                builder.AppendFormat(" Origin: {0}, ", Origin);
+                builder.Append(" ");
+                builder.AppendFormat(Faction_Resources.Origin, Origin);
             }
             return builder.ToString();
         }

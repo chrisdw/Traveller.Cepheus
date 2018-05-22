@@ -1,4 +1,5 @@
 ﻿using org.DownesWard.Traveller.Shared;
+using org.DownesWard.Traveller.SystemGeneration.Resources;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -52,7 +53,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     builder.AppendFormat("{0}-{1}{2}-{3}", Starport, PhysicalUPP(), SocialUPP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.STAR:
-                    builder.Append("Companion Star");
+                    builder.Append(TravInfo_Resources.CompanionStar);
                     break;
             }
             return builder.ToString();
@@ -78,63 +79,63 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             if ((Atmosphere.Value >= 4 && Atmosphere.Value <= 9) && (Hydro.Value >= 4 && Hydro.Value <= 8) && (Pop.Value >= 5 && Pop.Value <= 7))
             {
-                builder.Append("Ag ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_Agricultural);
             }
             if (Size.Value == 0)
             {
-                builder.Append("As ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_Asteroid);
             }
             if (Pop.Value == 0)
             {
-                builder.Append("Ba ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_Barren);
             }
             if (Atmosphere.Value >= 2 && Hydro.Value == 0)
             {
-                builder.Append("De ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_Desert);
             }
             if (Atmosphere.Value >= 10 && Hydro.Value > 0)
             {
-                builder.Append("Fl ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_FluidOceans);
             }
             if (Pop.Value >= 9)
             {
-                builder.Append("Hi ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_HighPopulation);
             }
             if (Atmosphere.Value <= 1 && Hydro.Value > 0)
             {
-                builder.Append("Ic ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_IceCapped);
             }
             if (((Atmosphere.Value >= 2 && Atmosphere.Value <= 4) || Atmosphere.Value == 7 || Atmosphere.Value == 9) && Pop.Value >= 9)
             {
-                builder.Append("In ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_Industrial);
             }
             if (Pop.Value > 0 && Hydro.Value <= 4)
             {
-                builder.Append("Lo ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_LowPopulation);
             }
             if (Atmosphere.Value <= 3 && Hydro.Value <= 4 && Pop.Value >= 6)
             {
-                builder.Append("Na ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_NonAgricultural);
             }
             if (Pop.Value > 0 && Pop.Value <= 6)
             {
-                builder.Append("Ni ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_NonIndustrial);
             }
             if ((Atmosphere.Value >= 2 && Atmosphere.Value <= 5) && Hydro.Value <= 3 && Pop.Value > 0)
             {
-                builder.Append("Po ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_Poor);
             }
             if ((Atmosphere.Value == 6 || Atmosphere.Value == 8) && (Pop.Value >= 6 && Pop.Value <= 8) && (Government.Value >= 4 && Government.Value <= 9))
             {
-                builder.Append("Ri ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_Rich);
             }
             if (Size.Value > 0 && Atmosphere.Value == 0)
             {
-                builder.Append("Va ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_VaccumWorld);
             }
             if (Hydro.Value == 10)
             {
-                builder.Append("Wa ");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_WaterWorld);
             }
             Remarks += builder.ToString();
         }
@@ -184,22 +185,22 @@ namespace org.DownesWard.Traveller.SystemGeneration
             // Farming world
             if ((Atmosphere.Value >= 4 && Atmosphere.Value <= 9) && (Hydro.Value >= 4 && Hydro.Value <= 8) && Pop.Value >= 2)
             {
-                builder.AppendFormat("{0} ", "Fa");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_FarmingColony);
             }
             
             // Mining world
-            if (main.Remarks.Contains("In"))
+            if (main.Remarks.Contains(TravInfo_Resources.TradeCode_Industrial))
             {
                 if (Pop.Value >= 2)
                 {
-                    builder.AppendFormat("{0} ", "Mn");
+                    builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_MiningColony);
                 }
             }
 
             // Colony world
             if (Government.Value == 6 && Pop.Value >= 5)
             {
-                builder.AppendFormat("{0} ", "Co");
+                builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_Colony);
             }
 
             // Research world
@@ -212,12 +213,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 }
                 if (dieroll >= 11)
                 {
-                    builder.AppendFormat("{0} ", "Re");
+                    builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_ResearchColony);
                 }
             }
 
             // Mi?
-            if (main.Pop.Value >= 8 && !main.Remarks.Contains("Po") && Pop.Value > 0)
+            if (main.Pop.Value >= 8 && !main.Remarks.Contains(TravInfo_Resources.TradeCode_Poor) && Pop.Value > 0)
             {
                 dieroll = Common.d6() + Common.d6();
                 if (main.Pop.Value >= 9)
@@ -230,18 +231,18 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 }
                 if (dieroll >= 12)
                 {
-                    builder.AppendFormat("{0} ", "Mi");
+                    builder.AppendFormat("{0} ", TravInfo_Resources.TradeCode_MiningColony);
                 }
             }
 
             // Bases
-            if (main.Bases.Contains("N") && Pop.Value >= 3)
+            if (main.Bases.Contains(TravInfo_Resources.Base_Naval) && Pop.Value >= 3)
             {
-                builder.AppendFormat("{0} ", "Nv");
+                builder.AppendFormat("{0} ", TravInfo_Resources.Subbase_Naval);
             }
             if (main.Bases.Contains("S") && Pop.Value >= 2)
             {
-                builder.AppendFormat("{0} ", "Sc");
+                builder.AppendFormat("{0} ", TravInfo_Resources.Subbase_Scout);
             }
 
             // Finish up
@@ -249,7 +250,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             // Tech Level
             TechLevel.Value = main.TechLevel.Value - 1;
-            if (Remarks.Contains("Sc") || Remarks.Contains("Nv") || Remarks.Contains("Re"))
+            if (Remarks.Contains(TravInfo_Resources.Subbase_Scout) || 
+                Remarks.Contains(TravInfo_Resources.Subbase_Naval) || 
+                Remarks.Contains(TravInfo_Resources.TradeCode_ResearchColony))
             {
                 TechLevel.Value += 1;
             }
@@ -557,53 +560,53 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     var dieroll = Common.d6() + Common.d6();
                     if (dieroll >= 8)
                     {
-                        Bases += 'N';
+                        Bases += TravInfo_Resources.Base_Naval;
                     }
                     dieroll = Common.d6() + Common.d6();
                     if (dieroll >= 10)
                     {
-                        Bases += 'S';
+                        Bases += TravInfo_Resources.Base_Scout;
                     }
                     dieroll = Common.d6() + Common.d6();
                     if (dieroll >= 10)
                     {
-                        Bases += 'M';
+                        Bases += TravInfo_Resources.Base_Military;
                     }
                     break;
                 case 'B':
                     dieroll = Common.d6() + Common.d6();
                     if (dieroll >= 8)
                     {
-                        Bases += 'N';
+                        Bases += TravInfo_Resources.Base_Naval;
                     }
                     dieroll = Common.d6() + Common.d6();
                     if (dieroll >= 9)
                     {
-                        Bases += 'S';
+                        Bases += TravInfo_Resources.Base_Scout;
                     }
                     dieroll = Common.d6() + Common.d6();
                     if (dieroll >= 9)
                     {
-                        Bases += 'M';
+                        Bases += TravInfo_Resources.Base_Military;
                     }
                     break;
                 case 'C':
                     dieroll = Common.d6() + Common.d6();
                     if (dieroll >= 8)
                     {
-                        Bases += 'S';
+                        Bases += TravInfo_Resources.Base_Scout;
                     }
                     dieroll = Common.d6() + Common.d6();
                     if (dieroll >= 8)
                     {
-                        Bases += 'M';
+                        Bases += TravInfo_Resources.Base_Military;
                     }
                     break;
                 case 'D':
                     dieroll = Common.d6() + Common.d6();
                     if (dieroll >= 7)
                     {
-                        Bases += 'S';
+                        Bases += TravInfo_Resources.Base_Scout;
                     }
                     break;
             }
@@ -615,16 +618,16 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 var conflictDm = 0;
                 if (Pop.Value >= 7 && TechLevel.Value >= 11)
                 {
-                    Remarks += " Old Colony";
+                    Remarks += string.Format(" {0}", TravInfo_Resources.ColonyAge_Old);
                     conflictDm += 2;
                 }
                 else if (Pop.Value >= 6 && Pop.Value <= 9 && TechLevel.Value >= 8)
                 {
-                    Remarks += " Middle Colony";
+                    Remarks += string.Format(" {0}", TravInfo_Resources.ColonyAge_Middle);
                 }
                 else if (Pop.Value >= 4 && Pop.Value <= 8)
                 {
-                    Remarks += " Young Colony";
+                    Remarks += string.Format(" {0}" , TravInfo_Resources.ColonyAge_Young);
                     conflictDm -= 2;
                 }
                 if (Government.Value == 7)
@@ -647,30 +650,30 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             if (conflictScore <= 2)
             {
-                conflictSeed = "Rebellion against parent world";
+                conflictSeed = TravInfo_Resources.Conflict_RebellionParent;
             }
             else if (conflictScore >= 11)
             {
-                conflictSeed = "Civil War";
+                conflictSeed = TravInfo_Resources.Conflict_CivilWar;
             }
             else
             {
                 switch (conflictScore)
                 {
                     case 3:
-                        conflictSeed = "Rebellion against off-world interests";
+                        conflictSeed = TravInfo_Resources.Conflict_RebellionOffWorld;
                         break;
                     case 4:
-                        conflictSeed = "Trade War";
+                        conflictSeed = TravInfo_Resources.Conflict_TradeWar;
                         break;
                     case 5:
-                        conflictSeed = "Ethnic or Religious Divide";
+                        conflictSeed = TravInfo_Resources.Conflict_Divide;
                         break;
-                    case 6: conflictSeed = "Territory War"; break;
-                    case 7: conflictSeed = string.Format("Invasion ({0})", SeedOfConflict(conflictDm)); break;
-                    case 8: conflictSeed = "Resource War"; break;
-                    case 9: conflictSeed = "Peacekeeping"; break;
-                    case 10: conflictSeed = "Failed Coup"; break;
+                    case 6: conflictSeed = TravInfo_Resources.Conflict_Territory; break;
+                    case 7: conflictSeed = string.Format(TravInfo_Resources.Conflict_Invasion, SeedOfConflict(conflictDm)); break;
+                    case 8: conflictSeed = TravInfo_Resources.Conflict_ResourceWar; break;
+                    case 9: conflictSeed = TravInfo_Resources.Conflict_Peacekeeping; break;
+                    case 10: conflictSeed = TravInfo_Resources.Conflict_FailedCoup; break;
                 }
             }
             return conflictSeed;
@@ -703,12 +706,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
                             case 1:
                                 switch (roll2)
                                 {
-                                    case 1: faction.Origin = "Eastern United States";  break;
-                                    case 2: faction.Origin = "Midwest United States";  break;
-                                    case 3: faction.Origin = "Southern United States"; break;
-                                    case 4: faction.Origin = "Western United States";  break;
-                                    case 5: faction.Origin = "Canadian"; break;
-                                    case 6: faction.Origin = "Evangelical Christian"; break;
+                                    case 1: faction.Origin = TravInfo_Resources.FactionOrigin_EastUS;  break;
+                                    case 2: faction.Origin = TravInfo_Resources.FactionOrigin_MidWestUS;  break;
+                                    case 3: faction.Origin = TravInfo_Resources.FactionOrigin_SouthUS; break;
+                                    case 4: faction.Origin = TravInfo_Resources.FactionOrigin_WestUS;  break;
+                                    case 5: faction.Origin = TravInfo_Resources.FactionOrigin_Canadian; break;
+                                    case 6: faction.Origin = TravInfo_Resources.FactionOrigin_Evangelical; break;
                                 }
                                 break;
                             case 2:
