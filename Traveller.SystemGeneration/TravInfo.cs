@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 {
     public class TravInfo : UPP
     {
-        public short PopMult { get; set; }
+        public int PopMult { get; set; }
         public string Remarks { get; set; }
         public string Bases { get; set; }
         public string ConflictReason { get; set; }

@@ -262,6 +262,21 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     PlanetType = WorldType.STAR;
                     break;
             }
+
+            if (Life)
+            {
+                if (LifeFactor > 5)
+                {
+                    TableGenerator.Generate(2, Normal);
+                }
+                else
+                {
+                    TableGenerator.Generate(1, Normal);
+                }
+            }
+            Collapse.Size.Value = Normal.Size.Value;
+            Collapse.Atmosphere.Value = Normal.Atmosphere.Value;
+            Collapse.Hydro.Value = Normal.Hydro.Value;
             return Maxpop;
         }
 
@@ -979,6 +994,87 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 }
                 LifeFactor = dieroll;
             }
+        }
+
+        /// <summary>
+        /// This version of Collapse is used for main worlds and simple 
+        /// generation. There's another version used when walking an
+        /// entire system.
+        /// </summary>
+        public void DoCollapse()
+        {
+            var dieroll = 0;
+
+            // Tech level decline (or for low tech worlds possibly increase!)
+            if (Normal.TechLevel.Value <= 8)
+            {
+                dieroll = Common.d6() - 3;
+            }
+            else if (Normal.TechLevel.Value >= 9 && Normal.TechLevel.Value <= 10)
+            {
+                dieroll = Common.d6();
+            }
+            else if (Normal.TechLevel.Value >= 11 && Normal.TechLevel.Value <= 13)
+            {
+                dieroll = Common.d6() + Common.d6();
+            }
+            else
+            {
+                dieroll = Common.d6() + Common.d6() + Common.d6();
+            }
+            Collapse.TechLevel.Value = Normal.TechLevel.Value - dieroll;
+            var techLevelFall = Normal.TechLevel.Value - Collapse.TechLevel.Value;
+
+            if (Normal.Pop.Value > Maxpop)
+            {
+                Collapse.Pop.Value = Maxpop;
+            }
+            else
+            {
+                Collapse.Pop.Value = Normal.Pop.Value;
+            }
+
+            if (Collapse.Pop.Value == 0)
+            {
+                // Everybody died!
+                Collapse.Starport = 'X';
+                Collapse.Government.Value = 0;
+                Collapse.Law.Value = 0;
+                Collapse.TechLevel.Value = 0;
+                Collapse.PopMult = 0;
+            }
+            else
+            {
+                Collapse.PopMult = Normal.PopMult - (techLevelFall / 4);
+                if (Collapse.PopMult < 0)
+                {
+                    Collapse.Pop.Value -= 1;
+                    Collapse.PopMult += 9;
+                }
+                if (Collapse.Pop.Value <= 5)
+                {
+                    Collapse.TechLevel.Value -= 1;
+                    Collapse.PopMult /= 2;
+                    if (Collapse.PopMult < 1)
+                    {
+                        Collapse.Pop.Value -= 1;
+                        Collapse.PopMult = 5;
+                    }
+                }
+
+                // TODO: Starport
+                // TODO: Government
+
+                // Population recovery
+                Collapse.PopMult *= 2;
+                if (Collapse.PopMult > 9)
+                {
+                    Collapse.Pop.Value += 1;
+                    Collapse.PopMult -= 10;
+                }
+            }
+
+            Collapse.DoTradeClassification();
         }
     }
 }
