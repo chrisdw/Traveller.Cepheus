@@ -233,9 +233,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         OrbitNumber += roll;
                     }
 
-                    // TODO: Temprature charts
                     GetTempChart(myOrbit, ComLumAddFromPrim, primary, configuration);
-                    // TODO: Native life
+
+                    GetNativeLife(primary);
 
                     if (Normal.Size.Value == 0 || myOrbit.Occupied == Orbit.OccupiedBy.CAPTURED)
                     {
@@ -873,6 +873,111 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         default:
                             return 0.3;
                     }
+            }
+        }
+
+        protected void GetNativeLife(Star primary)
+        {
+            var dieroll = Common.d6() + Common.d6();
+
+            // Atmosphere effects
+            if (Normal.Atmosphere.Value == 0)
+            {
+                dieroll -= 3;
+            }
+            if (Normal.Atmosphere.Value >= 4 && Normal.Atmosphere.Value <= 9)
+            {
+                dieroll += 4;
+            }
+
+            // Hydrographic effects
+            if (Normal.Hydro.Value == 0)
+            {
+                dieroll -= 2;
+            }
+            if (Normal.Hydro.Value >= 2 && Normal.Hydro.Value <= 8)
+            {
+                dieroll += 1;
+            }
+
+            // Temprature effects
+            if (Temp < - 20.0)
+            {
+                dieroll -= 1;
+            }
+            else if (Temp > 30)
+            {
+                dieroll -= 1;
+            }
+
+            // Stellar effects
+            if (primary.StarType == Star.StellarType.G || primary.StarType == Star.StellarType.K)
+            {
+                dieroll += 1;
+            }
+            else if (primary.StarType == Star.StellarType.F || 
+                primary.StarType == Star.StellarType.A ||
+                primary.StarType == Star.StellarType.B)
+            {
+                dieroll -= 1;
+            }
+
+            Life = (dieroll >= 10);
+            if (Life)
+            {
+                dieroll = Common.d6() + Common.d6() - 2;
+                switch (Normal.Atmosphere.Value)
+                {
+                    case 0:
+                    case 1:
+                        dieroll -= 8;
+                        break;
+                    case 2:
+                    case 3:
+                        dieroll -= 6;
+                        break;
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                        dieroll += 2;
+                        break;
+                    case 9:
+                    case 10:
+                        dieroll -= 4;
+                        break;
+                    case 11:
+                        dieroll -= 6;
+                        break;
+                    case 12:
+                        dieroll -= 8;
+                        break;
+                    default:
+                        dieroll -= 2;
+                        break;
+                }
+                if (Normal.Hydro.Value == 0)
+                {
+                    dieroll -= 4;
+                }
+                else if (Normal.Hydro.Value == 1)
+                {
+                    dieroll -= 2;
+                }
+                else if (Normal.Hydro.Value >= 6 && Normal.Hydro.Value <= 9)
+                {
+                    dieroll += 1;
+                }
+                else if (Normal.Hydro.Value == 10)
+                {
+                    dieroll -= 1;
+                }
+                if (dieroll < 1)
+                {
+                    dieroll = 1;
+                }
+                LifeFactor = dieroll;
             }
         }
     }
