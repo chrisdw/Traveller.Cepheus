@@ -22,14 +22,14 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class TravInfo_Resources {
+    internal class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal TravInfo_Resources() {
+        internal Resources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("org.DownesWard.Traveller.SystemGeneration.Resources.TravInfo.Resources", typeof(TravInfo_Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("org.DownesWard.Traveller.SystemGeneration.Resources.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -214,6 +214,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Government: {0}, Strength: {1}.
+        /// </summary>
+        internal static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Canadian.
         /// </summary>
         internal static string FactionOrigin_Canadian {
@@ -264,6 +273,213 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static string FactionOrigin_WestUS {
             get {
                 return ResourceManager.GetString("FactionOrigin_WestUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to None.
+        /// </summary>
+        internal static string Gov_0 {
+            get {
+                return ResourceManager.GetString("Gov_0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Company.
+        /// </summary>
+        internal static string Gov_1 {
+            get {
+                return ResourceManager.GetString("Gov_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Charismatic Dictator.
+        /// </summary>
+        internal static string Gov_10 {
+            get {
+                return ResourceManager.GetString("Gov_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Non-charismatic Dictator.
+        /// </summary>
+        internal static string Gov_11 {
+            get {
+                return ResourceManager.GetString("Gov_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Charismatic oligarchy.
+        /// </summary>
+        internal static string Gov_12 {
+            get {
+                return ResourceManager.GetString("Gov_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Religious Dictatorship.
+        /// </summary>
+        internal static string Gov_13 {
+            get {
+                return ResourceManager.GetString("Gov_13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Participating Democracy.
+        /// </summary>
+        internal static string Gov_2 {
+            get {
+                return ResourceManager.GetString("Gov_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Self perpetuating oligarchy.
+        /// </summary>
+        internal static string Gov_3 {
+            get {
+                return ResourceManager.GetString("Gov_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Representative Democracy.
+        /// </summary>
+        internal static string Gov_4 {
+            get {
+                return ResourceManager.GetString("Gov_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feudal Technocracy.
+        /// </summary>
+        internal static string Gov_5 {
+            get {
+                return ResourceManager.GetString("Gov_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Off world interests.
+        /// </summary>
+        internal static string Gov_6 {
+            get {
+                return ResourceManager.GetString("Gov_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anarchists.
+        /// </summary>
+        internal static string Gov_7 {
+            get {
+                return ResourceManager.GetString("Gov_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Civil Service Bureaucracy.
+        /// </summary>
+        internal static string Gov_8 {
+            get {
+                return ResourceManager.GetString("Gov_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Impersonal Bureaucracy.
+        /// </summary>
+        internal static string Gov_9 {
+            get {
+                return ResourceManager.GetString("Gov_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other ({0}).
+        /// </summary>
+        internal static string Gov_Other {
+            get {
+                return ResourceManager.GetString("Gov_Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name: {0},.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origin: {0},.
+        /// </summary>
+        internal static string Origin {
+            get {
+                return ResourceManager.GetString("Origin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Obscure Group.
+        /// </summary>
+        internal static string Str_1 {
+            get {
+                return ResourceManager.GetString("Str_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fringe Group.
+        /// </summary>
+        internal static string Str_2 {
+            get {
+                return ResourceManager.GetString("Str_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor Group.
+        /// </summary>
+        internal static string Str_3 {
+            get {
+                return ResourceManager.GetString("Str_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notable Group.
+        /// </summary>
+        internal static string Str_4 {
+            get {
+                return ResourceManager.GetString("Str_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Significant Group.
+        /// </summary>
+        internal static string Str_5 {
+            get {
+                return ResourceManager.GetString("Str_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overwelming Popular Support.
+        /// </summary>
+        internal static string Str_6 {
+            get {
+                return ResourceManager.GetString("Str_6", resourceCulture);
             }
         }
         

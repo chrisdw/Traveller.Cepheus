@@ -168,6 +168,9 @@
   <data name="Conflict_TradeWar" xml:space="preserve">
     <value>Trade War</value>
   </data>
+  <data name="Description" xml:space="preserve">
+    <value>Government: {0}, Strength: {1}</value>
+  </data>
   <data name="FactionOrigin_Canadian" xml:space="preserve">
     <value>Canadian</value>
   </data>
@@ -185,6 +188,75 @@
   </data>
   <data name="FactionOrigin_WestUS" xml:space="preserve">
     <value>Western United States</value>
+  </data>
+  <data name="Gov_0" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Gov_1" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="Gov_10" xml:space="preserve">
+    <value>Charismatic Dictator</value>
+  </data>
+  <data name="Gov_11" xml:space="preserve">
+    <value>Non-charismatic Dictator</value>
+  </data>
+  <data name="Gov_12" xml:space="preserve">
+    <value>Charismatic oligarchy</value>
+  </data>
+  <data name="Gov_13" xml:space="preserve">
+    <value>Religious Dictatorship</value>
+  </data>
+  <data name="Gov_2" xml:space="preserve">
+    <value>Participating Democracy</value>
+  </data>
+  <data name="Gov_3" xml:space="preserve">
+    <value>Self perpetuating oligarchy</value>
+  </data>
+  <data name="Gov_4" xml:space="preserve">
+    <value>Representative Democracy</value>
+  </data>
+  <data name="Gov_5" xml:space="preserve">
+    <value>Feudal Technocracy</value>
+  </data>
+  <data name="Gov_6" xml:space="preserve">
+    <value>Off world interests</value>
+  </data>
+  <data name="Gov_7" xml:space="preserve">
+    <value>Anarchists</value>
+  </data>
+  <data name="Gov_8" xml:space="preserve">
+    <value>Civil Service Bureaucracy</value>
+  </data>
+  <data name="Gov_9" xml:space="preserve">
+    <value>Impersonal Bureaucracy</value>
+  </data>
+  <data name="Gov_Other" xml:space="preserve">
+    <value>Other ({0})</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name: {0},</value>
+  </data>
+  <data name="Origin" xml:space="preserve">
+    <value>Origin: {0},</value>
+  </data>
+  <data name="Str_1" xml:space="preserve">
+    <value>Obscure Group</value>
+  </data>
+  <data name="Str_2" xml:space="preserve">
+    <value>Fringe Group</value>
+  </data>
+  <data name="Str_3" xml:space="preserve">
+    <value>Minor Group</value>
+  </data>
+  <data name="Str_4" xml:space="preserve">
+    <value>Notable Group</value>
+  </data>
+  <data name="Str_5" xml:space="preserve">
+    <value>Significant Group</value>
+  </data>
+  <data name="Str_6" xml:space="preserve">
+    <value>Overwelming Popular Support</value>
   </data>
   <data name="Subbase_Naval" xml:space="preserve">
     <value>Nv</value>

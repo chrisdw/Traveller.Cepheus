@@ -24,25 +24,19 @@
     <ProjectReference Include="..\Traveller.Shared\Traveller.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Resources\Faction.Resources.Designer.cs">
+    <Compile Update="Resources\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Faction.Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\TravInfo.Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>TravInfo.Resources.resx</DependentUpon>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Faction.Resources.resx">
+    <EmbeddedResource Update="Resources\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Faction.Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\TravInfo.Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TravInfo.Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MultilingualResources\" />
   </ItemGroup>
 </Project>
