@@ -916,7 +916,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
 
             // Temprature effects
-            if (Temp < - 20.0)
+            if (Temp < -20.0)
             {
                 dieroll -= 1;
             }
@@ -930,7 +930,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 dieroll += 1;
             }
-            else if (primary.StarType == Star.StellarType.F || 
+            else if (primary.StarType == Star.StellarType.F ||
                 primary.StarType == Star.StellarType.A ||
                 primary.StarType == Star.StellarType.B)
             {
@@ -1062,8 +1062,78 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     }
                 }
 
-                // TODO: Starport
-                // TODO: Government
+                // What happended to the Starport
+                dieroll = Common.d6();
+                if (dieroll > techLevelFall)
+                {
+                    Collapse.ReduceStarport(1);
+                    // Did any bases survive
+                    if (Normal.Bases.Contains(Resources.Resources.Base_Naval))
+                    {
+                        dieroll = Common.d10();
+                        if (dieroll > 8)
+                        {
+                            Collapse.Bases += Resources.Resources.Base_Naval;
+                        }
+                    }
+                    if (Normal.Bases.Contains(Resources.Resources.Base_Scout))
+                    {
+                        dieroll = Common.d10();
+                        if (dieroll > 7)
+                        {
+                            Collapse.Bases += Resources.Resources.Base_Scout;
+                        }
+                    }
+                    if (Normal.Bases.Contains(Resources.Resources.Base_Military))
+                    {
+                        dieroll = Common.d10();
+                        if (dieroll > 8)
+                        {
+                            Collapse.Bases += Resources.Resources.Base_Military;
+                        }
+                    }
+                }
+                else if (dieroll == techLevelFall)
+                {
+                    Collapse.ReduceStarport(2);
+                    Collapse.Bases = string.Empty;
+                }
+                else
+                {
+                    Collapse.Starport = 'X';
+                    Collapse.Bases = string.Empty;
+                }
+
+                var balk = Collapse.Size.Value + Collapse.Pop.Value - Collapse.TechLevel.Value;
+
+                dieroll = Common.d6() + Common.d6();
+                if (dieroll <= balk)
+                {
+                    Collapse.Remarks += "Balkanised";
+                }
+
+                if (Collapse.Pop.Value > 4)
+                {
+                    dieroll = Common.d10();
+                    if (dieroll < techLevelFall)
+                    {
+                        Collapse.Government.Value = 6;
+                    }
+                    else
+                    {
+                        Collapse.Government.Value = Common.d6() + Common.d6() - 7 + Collapse.Pop.Value;
+                    }
+                    Collapse.Law.Value = Common.d6() + Common.d6() - 7 + Collapse.Government.Value;
+                }
+                else
+                {
+                    Collapse.Law.Value = Common.d6() + Common.d6() - 7 + Collapse.Government.Value;
+                }
+
+                if (Collapse.Government.Value == 6)
+                {
+                    Collapse.Law.Value += 4;
+                }
 
                 // Population recovery
                 Collapse.PopMult *= 2;
@@ -1072,9 +1142,137 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     Collapse.Pop.Value += 1;
                     Collapse.PopMult -= 10;
                 }
-            }
 
-            Collapse.DoTradeClassification();
+                Collapse.DoTradeClassification();
+            }
+        }
+
+        /// <summary>
+        /// This version of DoCollapse is used when generating a complete system
+        /// </summary>
+        /// <param name="main"></param>
+        public void DoCollapse(Planet main)
+        {
+            if (!MainWorld && PlanetType != WorldType.SGG && PlanetType != WorldType.LGG && PlanetType != WorldType.STAR)
+            {
+                var dieroll = 0;
+
+                // Tech level decline (or for low tech worlds possibly increase!)
+                if (Normal.TechLevel.Value <= 8)
+                {
+                    dieroll = Common.d6() - 3;
+                }
+                else if (Normal.TechLevel.Value >= 9 && Normal.TechLevel.Value <= 10)
+                {
+                    dieroll = Common.d6();
+                }
+                else if (Normal.TechLevel.Value >= 11 && Normal.TechLevel.Value <= 13)
+                {
+                    dieroll = Common.d6() + Common.d6();
+                }
+                else
+                {
+                    dieroll = Common.d6() + Common.d6() + Common.d6();
+                }
+                Collapse.TechLevel.Value = Normal.TechLevel.Value - dieroll;
+                var techLevelFall = Normal.TechLevel.Value - Collapse.TechLevel.Value;
+
+                if (Normal.Pop.Value > Maxpop)
+                {
+                    Collapse.Pop.Value = Maxpop;
+                }
+                else
+                {
+                    Collapse.Pop.Value = Normal.Pop.Value;
+                }
+
+                if (Collapse.Pop.Value == 0)
+                {
+                    // Everybody died!
+                    Collapse.Starport = 'Y';
+                    Collapse.Government.Value = 0;
+                    Collapse.Law.Value = 0;
+                    Collapse.TechLevel.Value = 0;
+                    Collapse.PopMult = 0;
+                }
+                else
+                {
+                    Collapse.PopMult = Normal.PopMult - (techLevelFall / 4);
+                    if (Collapse.PopMult < 0)
+                    {
+                        Collapse.Pop.Value -= 1;
+                        Collapse.PopMult += 9;
+                    }
+                    if (Collapse.Pop.Value <= 5)
+                    {
+                        Collapse.TechLevel.Value -= 1;
+                        Collapse.PopMult /= 2;
+                        if (Collapse.PopMult < 1)
+                        {
+                            Collapse.Pop.Value -= 1;
+                            Collapse.PopMult = 5;
+                        }
+                    }
+
+                    dieroll = Common.d6();
+                    if (dieroll > techLevelFall)
+                    {
+                        Collapse.ReduceStarport(1);
+                    }
+                    else if (dieroll == techLevelFall)
+                    {
+                        Collapse.ReduceStarport(2);
+                        Collapse.Bases = string.Empty;
+                    }
+                    else
+                    {
+                        Collapse.Starport = 'Y';
+                        Collapse.Bases = string.Empty;
+                    }
+
+                    var balk = Collapse.Size.Value + Collapse.Pop.Value - Collapse.TechLevel.Value;
+
+                    dieroll = Common.d6() + Common.d6();
+                    if (dieroll <= balk)
+                    {
+                        Collapse.Remarks += "Balk";
+                    }
+
+                    if (Collapse.Pop.Value > 4)
+                    {
+                        dieroll = Common.d10();
+                        if (dieroll < techLevelFall)
+                        {
+                            Collapse.Government.Value = 6;
+                        }
+                        else
+                        {
+                            Collapse.Government.Value = Common.d6() + Common.d6() - 7 + Collapse.Pop.Value;
+                        }
+                    }
+                    else
+                    {
+                        Collapse.Government.Value = Common.d6() + Common.d6() - 7 + Collapse.Pop.Value;
+                    }
+                    Collapse.Law.Value = Common.d6() + Common.d6() - 7 + Collapse.Government.Value;
+                    if (Collapse.Government.Value == 6)
+                    {
+                        Collapse.Law.Value += 4;
+                    }
+                    // Population recovery
+                    Collapse.PopMult *= 2;
+                    if (Collapse.PopMult > 9)
+                    {
+                        Collapse.Pop.Value += 1;
+                        Collapse.PopMult -= 10;
+                    }
+                    Collapse.DoSubordinate(main.Collapse);
+                }
+            }
+            foreach (var sattelite in Sattelites)
+            {
+                sattelite.DoCollapse(main);
+            }
         }
     }
 }
