@@ -17,7 +17,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
     {
         CLASSIC,
         HOSTILE,
-        HAMMERSSLAMMERS
+        HAMMERSSLAMMERS,
+        THENEWERA
     }
 
     public enum GenerationType

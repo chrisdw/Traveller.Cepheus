@@ -620,7 +620,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
             else
             {
-                atmosCode = 4;
+                atmosCode = 3;
             }
 
             if (orbit.OrbitalType == Orbit.OrbitType.HABITABLE)
