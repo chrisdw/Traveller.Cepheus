@@ -107,6 +107,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return V;
         }
 
+        protected void GetTravInfo(Configuration configuration)
+        {
+            Normal.GetTravInfo(configuration);
+        }
+
         public int FleshOut(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, short HZone, double ComLumAddFromPrim)
         {
             var M = primary.StellarMass;
@@ -253,6 +258,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
                     Maxpop = Math.Max(satMaxPop, Maxpop);
 
+                    if (configuration.GenerateTravInfo)
+                    {
+                        GetTravInfo(configuration);
+                    }
                     break;
 
                 case Orbit.OccupiedBy.PLANETOID:
@@ -282,7 +291,45 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private int BuildSattelites(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, short HZone, double ComLumAddFromPrim, int numsats)
         {
-            return 0;
+            var ringcount = 0;
+            var retry = false;
+            var ret = 0;
+
+            for (var i = 0; i < numsats)
+            {
+                var sattelite = new Sattelite();
+                sattelite.Name = string.Format("{0}/A{1}", Name, i);
+                sattelite.Build(Normal.Size.Value, PlanetType);
+                if (sattelite.PlanetType == WorldType.RING)
+                {
+                    ringcount += 1;
+                }
+                if (ringcount > 3)
+                {
+                    // Can only have 3 rings
+                    while (sattelite.PlanetType == WorldType.RING)
+                    {
+                        sattelite.Build(Normal.Size.Value, PlanetType);
+                    }
+                }
+                // Check for repeat orbits
+                do
+                {
+                    retry = false;
+                    for (var j = 0; j < i - 1; j++)
+                    {
+                        if (Sattelites[j].OrbitNumber == Sattelites[i].OrbitNumber)
+                        {
+                            sattelite.SetOrbit(Normal.Size.Value, PlanetType);
+                        }
+                    }
+                } while (retry);
+                var k = sattelite.FleshOut(configuration, this, myOrbit, primary, HZone, ComLumAddFromPrim);
+                ret = Math.Max(k, ret);
+                Sattelites.Add(sattelite);
+            }
+            Sattelites.Sort();
+            return ret;
         }
 
         protected double GetDiameter()
@@ -1068,28 +1115,28 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 {
                     Collapse.ReduceStarport(1);
                     // Did any bases survive
-                    if (Normal.Bases.Contains(Resources.Resources.Base_Naval))
+                    if (Normal.Bases.Contains(Languages.Base_Naval))
                     {
                         dieroll = Common.d10();
                         if (dieroll > 8)
                         {
-                            Collapse.Bases += Resources.Resources.Base_Naval;
+                            Collapse.Bases += Languages.Base_Naval;
                         }
                     }
-                    if (Normal.Bases.Contains(Resources.Resources.Base_Scout))
+                    if (Normal.Bases.Contains(Languages.Base_Scout))
                     {
                         dieroll = Common.d10();
                         if (dieroll > 7)
                         {
-                            Collapse.Bases += Resources.Resources.Base_Scout;
+                            Collapse.Bases += Languages.Base_Scout;
                         }
                     }
-                    if (Normal.Bases.Contains(Resources.Resources.Base_Military))
+                    if (Normal.Bases.Contains(Languages.Base_Military))
                     {
                         dieroll = Common.d10();
                         if (dieroll > 8)
                         {
-                            Collapse.Bases += Resources.Resources.Base_Military;
+                            Collapse.Bases += Languages.Base_Military;
                         }
                     }
                 }

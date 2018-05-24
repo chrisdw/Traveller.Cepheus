@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Base_Military" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="Base_Naval" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="Base_Scout" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="ColonyAge_Middle" xml:space="preserve">
+    <value>Mittleren Kolonie</value>
+  </data>
+  <data name="ColonyAge_Old" xml:space="preserve">
+    <value>Alte Kolonie</value>
+  </data>
+  <data name="ColonyAge_Young" xml:space="preserve">
+    <value>Jungen Kolonie</value>
+  </data>
+  <data name="CompanionStar" xml:space="preserve">
+    <value>Begleitstern</value>
+  </data>
+  <data name="Conflict_CivilWar" xml:space="preserve">
+    <value>Bürgerkrieg</value>
+  </data>
+  <data name="Conflict_Divide" xml:space="preserve">
+    <value>Ethnische oder religiöse Kluft</value>
+  </data>
+  <data name="Conflict_FailedCoup" xml:space="preserve">
+    <value>Gescheiterten Putsch</value>
+  </data>
+  <data name="Conflict_Invasion" xml:space="preserve">
+    <value>Invasion ({0})</value>
+  </data>
+  <data name="Conflict_Peacekeeping" xml:space="preserve">
+    <value>Friedenssicherung</value>
+  </data>
+  <data name="Conflict_RebellionOffWorld" xml:space="preserve">
+    <value>Rebellion gegen off-Welt-Interessen</value>
+  </data>
+  <data name="Conflict_RebellionParent" xml:space="preserve">
+    <value>Rebellion gegen die Eltern Welt</value>
+  </data>
+  <data name="Conflict_ResourceWar" xml:space="preserve">
+    <value>Ressourcenkrieg</value>
+  </data>
+  <data name="Conflict_Territory" xml:space="preserve">
+    <value>Gebiet Krieg</value>
+  </data>
+  <data name="Conflict_TradeWar" xml:space="preserve">
+    <value>Handelskrieg</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Regierung: {0}, Stärke: {1}</value>
+  </data>
+  <data name="FactionOrigin_Canadian" xml:space="preserve">
+    <value>Kanadische</value>
+  </data>
+  <data name="FactionOrigin_EastUS" xml:space="preserve">
+    <value>Osten der USA</value>
+  </data>
+  <data name="FactionOrigin_Evangelical" xml:space="preserve">
+    <value>Evangelischer Christ</value>
+  </data>
+  <data name="FactionOrigin_MidWestUS" xml:space="preserve">
+    <value>Mittleren Westen der USA</value>
+  </data>
+  <data name="FactionOrigin_SouthUS" xml:space="preserve">
+    <value>Süden der Vereinigten Staaten</value>
+  </data>
+  <data name="FactionOrigin_WestUS" xml:space="preserve">
+    <value>Westen der USA</value>
+  </data>
+  <data name="Gov_0" xml:space="preserve">
+    <value>Keine</value>
+  </data>
+  <data name="Gov_1" xml:space="preserve">
+    <value>Unternehmen</value>
+  </data>
+  <data name="Gov_10" xml:space="preserve">
+    <value>Charismatische Diktator</value>
+  </data>
+  <data name="Gov_11" xml:space="preserve">
+    <value>Nicht-charismatischen Diktator</value>
+  </data>
+  <data name="Gov_12" xml:space="preserve">
+    <value>Charismatische Oligarchie</value>
+  </data>
+  <data name="Gov_13" xml:space="preserve">
+    <value>Religiöse Diktatur</value>
+  </data>
+  <data name="Gov_2" xml:space="preserve">
+    <value>Teilnehmende Demokratie</value>
+  </data>
+  <data name="Gov_3" xml:space="preserve">
+    <value>Selbst die Oligarchie zu verewigen</value>
+  </data>
+  <data name="Gov_4" xml:space="preserve">
+    <value>Repräsentative Demokratie</value>
+  </data>
+  <data name="Gov_5" xml:space="preserve">
+    <value>Feudale Technokratie</value>
+  </data>
+  <data name="Gov_6" xml:space="preserve">
+    <value>Welt-Interessen</value>
+  </data>
+  <data name="Gov_7" xml:space="preserve">
+    <value>Anarchisten</value>
+  </data>
+  <data name="Gov_8" xml:space="preserve">
+    <value>Öffentlichen Dienst Bürokratie</value>
+  </data>
+  <data name="Gov_9" xml:space="preserve">
+    <value>Unpersönliche Bürokratie</value>
+  </data>
+  <data name="Gov_Other" xml:space="preserve">
+    <value>Andere ({0})</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name: {0},</value>
+  </data>
+  <data name="Origin" xml:space="preserve">
+    <value>Herkunft: {0},</value>
+  </data>
+  <data name="Str_1" xml:space="preserve">
+    <value>Obskure Gruppe</value>
+  </data>
+  <data name="Str_2" xml:space="preserve">
+    <value>Randgruppe</value>
+  </data>
+  <data name="Str_3" xml:space="preserve">
+    <value>Moll Gruppe</value>
+  </data>
+  <data name="Str_4" xml:space="preserve">
+    <value>Bemerkenswerte Gruppe</value>
+  </data>
+  <data name="Str_5" xml:space="preserve">
+    <value>Bedeutende Gruppe</value>
+  </data>
+  <data name="Str_6" xml:space="preserve">
+    <value>Überwältigend populäre Unterstützung</value>
+  </data>
+  <data name="Subbase_Naval" xml:space="preserve">
+    <value>NV</value>
+  </data>
+  <data name="Subbase_Scout" xml:space="preserve">
+    <value>SC</value>
+  </data>
+  <data name="TradeCode_Agricultural" xml:space="preserve">
+    <value>AG</value>
+  </data>
+  <data name="TradeCode_Asteroid" xml:space="preserve">
+    <value>Als</value>
+  </data>
+  <data name="TradeCode_Barren" xml:space="preserve">
+    <value>BA</value>
+  </data>
+  <data name="TradeCode_Colony" xml:space="preserve">
+    <value>Co</value>
+  </data>
+  <data name="TradeCode_Desert" xml:space="preserve">
+    <value>De</value>
+  </data>
+  <data name="TradeCode_FarmingColony" xml:space="preserve">
+    <value>FA</value>
+  </data>
+  <data name="TradeCode_FluidOceans" xml:space="preserve">
+    <value>FL</value>
+  </data>
+  <data name="TradeCode_HighPopulation" xml:space="preserve">
+    <value>Hallo</value>
+  </data>
+  <data name="TradeCode_IceCapped" xml:space="preserve">
+    <value>IC</value>
+  </data>
+  <data name="TradeCode_Industrial" xml:space="preserve">
+    <value>In</value>
+  </data>
+  <data name="TradeCode_LowPopulation" xml:space="preserve">
+    <value>Lo</value>
+  </data>
+  <data name="TradeCode_MiningColony" xml:space="preserve">
+    <value>MN</value>
+  </data>
+  <data name="TradeCode_NonAgricultural" xml:space="preserve">
+    <value>Na</value>
+  </data>
+  <data name="TradeCode_NonIndustrial" xml:space="preserve">
+    <value>NI</value>
+  </data>
+  <data name="TradeCode_Poor" xml:space="preserve">
+    <value>Po</value>
+  </data>
+  <data name="TradeCode_ResearchColony" xml:space="preserve">
+    <value>Re</value>
+  </data>
+  <data name="TradeCode_Rich" xml:space="preserve">
+    <value>RI</value>
+  </data>
+  <data name="TradeCode_VaccumWorld" xml:space="preserve">
+    <value>VA</value>
+  </data>
+  <data name="TradeCode_WaterWorld" xml:space="preserve">
+    <value>WA</value>
+  </data>
+</root>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.SystemGeneration
+﻿namespace org.DownesWard.Traveller.SystemGeneration
 {
     public class CompanionStar : Star
     {

@@ -20,23 +20,28 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
+    <None Remove="MultilingualResources\Traveller.SystemGeneration.de-DE.xlf" />
+    <None Remove="MultilingualResources\Traveller.SystemGeneration.fr-FR.xlf" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Traveller.AnimalEncounters\Traveller.AnimalEncounters.csproj" />
     <ProjectReference Include="..\Traveller.Shared\Traveller.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Resources\Resources.Designer.cs">
+    <XliffResource Include="MultilingualResources\Traveller.SystemGeneration.de-DE.xlf" />
+    <XliffResource Include="MultilingualResources\Traveller.SystemGeneration.fr-FR.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Languages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
+      <DependentUpon>Languages.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Resources.resx">
+    <EmbeddedResource Update="Resources\Languages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>Languages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MultilingualResources\" />
   </ItemGroup>
 </Project>
