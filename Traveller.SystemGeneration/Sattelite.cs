@@ -62,7 +62,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 Rotation = OrbitPeriod;
             }
 
-            GetTempChart(planet, myOrbit, ComLumAddFromPrim, primary, configuration);
+            GetTempChart(planet, myOrbit, ComLumAddFromPrim, primary, configuration, true);
 
             if (configuration.GenerateTravInfo)
             {
@@ -262,129 +262,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         return (350);
                 }
             }
-        }
-
-        private void GetTempChart(Planet planet, Orbit myOrbit, double ComLumAddFromPrim, Star primary, Configuration configuration)
-        {
-            var E = 0.0;
-            var L = primary.Luminosity;
-            var O = Constants.HABITNUM / Math.Sqrt(myOrbit.Range);
-            var atmosCode = 0;
-
-            if (Normal.Atmosphere.Value < 4)
-            {
-                atmosCode = 0;
-            }
-            else if (Normal.Atmosphere.Value < 10)
-            {
-                atmosCode = 1;
-            }
-            else if (Normal.Atmosphere.Value < 16)
-            {
-                atmosCode = 2;
-            }
-            else
-            {
-                atmosCode = 3;
-            }
-
-            if (myOrbit.OrbitalType == Orbit.OrbitType.HABITABLE)
-            {
-                E = DataTables.EnergyAbsorbHZ[Normal.Hydro.Value, atmosCode];
-            }
-            else
-            {
-                E = DataTables.EnergyAbsorbNHZ[Normal.Hydro.Value, atmosCode];
-            }
-
-            var G = DataTables.Greenhouse[Normal.Atmosphere.Value];
-
-            if (configuration.UseGaiaFactor && Maxpop > 5)
-            {
-                E = Common.CalcGaiaFactor(L, O, G, E);
-            }
-
-            var X = ((L * O) + ComLumAddFromPrim) * E * G;
-            Temp = X - 273;
-
-            var DayPlus = Daytime(Rotation / 2, L, myOrbit.Range, true);
-            var NightMinus = Nighttime(Rotation / 2, true);
-            Tilt = AxialTilt();
-            var k = 0;
-            if (Tilt == 0.0)
-            {
-                k = 0;
-            }
-            else if (Tilt < 6.0)
-            {
-                k = 1;
-            }
-            else if (Tilt < 110)
-            {
-                k = 2;
-            }
-            else if (Tilt < 16.0)
-            {
-                k = 3;
-            }
-            else if (Tilt < 21.0)
-            {
-                k = 4;
-            }
-            else if (Tilt < 26.0)
-            {
-                k = 5;
-            }
-            else if (Tilt < 31.0)
-            {
-                k = 6;
-            }
-            else if (Tilt < 36.0)
-            {
-                k = 7;
-            }
-            else if (Tilt < 46.0)
-            {
-                k = 8;
-            }
-            else if (Tilt < 61.0)
-            {
-                k = 9;
-            }
-            else if (Tilt < 85.0)
-            {
-                k = 10;
-            }
-            else
-            {
-                k = 11;
-            }
-
-            Ecc = OrbitEcc();
-
-            for (var i = 0; i < (Constants.NUM_HEX_ROWS * 2) - 1; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    X = DayPlus;
-                }
-                else
-                {
-                    X = NightMinus;
-                }
-
-                Summer[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + (planet.Ecc * 30) + ((0.6 * Tilt) * DataTables.AxialTiltEffects[i / 2, k]) + X;
-                Fall[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + X;
-                Winter[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] - (planet.Ecc * 30) - (Tilt * DataTables.AxialTiltEffects[i / 2, k]) + X;
-
-                if (configuration.UseFareheight)
-                {
-                    Summer[i] = Common.CtoF(Summer[i]);
-                    Fall[i] = Common.CtoF(Fall[i]);
-                    Winter[i] = Common.CtoF(Winter[i]);
-                }
-            }
-
         }
 
         public int CompareTo(object obj)

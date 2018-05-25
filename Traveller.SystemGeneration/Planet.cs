@@ -239,7 +239,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         OrbitNumber += roll;
                     }
 
-                    GetTempChart(myOrbit, ComLumAddFromPrim, primary, configuration, false);
+                    GetTempChart(this, myOrbit, ComLumAddFromPrim, primary, configuration, false);
 
                     GetNativeLife(primary);
 
@@ -600,7 +600,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return maxpop;
         }
 
-        protected void GetTempChart(Orbit orbit, double ComLumAddFromPrim, Star primary, Configuration configuration, bool forSattelite)
+        protected void GetTempChart(Planet mainWorld, Orbit orbit, double ComLumAddFromPrim, Star primary, Configuration configuration, bool forSattelite)
         {
             var L = primary.Luminosity;
             var O = Constants.HABITNUM / Math.Sqrt(orbit.Range);
@@ -711,9 +711,18 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
                 if (!TidallyLocked || forSattelite)
                 {
-                    Summer[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + (Ecc * 30) + ((0.6 * Tilt) * DataTables.AxialTiltEffects[i / 2, k]) + X;
+                    var eccentricty = 0.0;
+                    if (forSattelite)
+                    {
+                        eccentricty = mainWorld.Ecc;
+                    }
+                    else
+                    {
+                        eccentricty = Ecc;
+                    }
+                    Summer[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + (eccentricty * 30) + ((0.6 * Tilt) * DataTables.AxialTiltEffects[i / 2, k]) + X;
                     Fall[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + X;
-                    Winter[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] - (Ecc * 30) - (Tilt * DataTables.AxialTiltEffects[i / 2, k]) + X;
+                    Winter[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] - (eccentricty * 30) - (Tilt * DataTables.AxialTiltEffects[i / 2, k]) + X;
                 }
                 else
                 {
