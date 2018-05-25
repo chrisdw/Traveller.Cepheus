@@ -307,8 +307,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
             var X = ((L * O) + ComLumAddFromPrim) * E * G;
             Temp = X - 273;
 
-            var DayPlus = Daytime(Rotation / 2, L, myOrbit.Range);
-            var NightMinus = Nighttime(Rotation / 2);
+            var DayPlus = Daytime(Rotation / 2, L, myOrbit.Range, true);
+            var NightMinus = Nighttime(Rotation / 2, true);
             Tilt = AxialTilt();
             var k = 0;
             if (Tilt == 0.0)
@@ -373,9 +373,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     X = NightMinus;
                 }
 
-                Summer[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + (Ecc * 30) + ((0.6 * Tilt) * DataTables.AxialTiltEffects[i / 2, k]) + X;
+                Summer[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + (planet.Ecc * 30) + ((0.6 * Tilt) * DataTables.AxialTiltEffects[i / 2, k]) + X;
                 Fall[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + X;
-                Winter[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] - (Ecc * 30) - (Tilt * DataTables.AxialTiltEffects[i / 2, k]) + X;
+                Winter[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] - (planet.Ecc * 30) - (Tilt * DataTables.AxialTiltEffects[i / 2, k]) + X;
 
                 if (configuration.UseFareheight)
                 {
@@ -387,107 +387,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         }
 
-        protected new double Nighttime(double daylength)
-        {
-            var X = 0.0;
-            var Max = 0.0;
-
-            switch (Normal.Atmosphere.Value)
-            {
-                case 0:
-                    X = 20.0 * daylength;
-                    Max = 0.8 * (Temp + 273);
-                    break;
-                case 1:
-                    X = 15.0 * daylength;
-                    Max = 0.7 * (Temp + 273);
-                    break;
-                case 2:
-                case 3:
-                case 14:
-                    X = 8.0 * daylength;
-                    Max = 0.5 * (Temp + 273);
-                    break;
-                case 4:
-                case 5:
-                    X = 3.0 * daylength;
-                    Max = 0.3 * (Temp + 273);
-                    break;
-                case 6:
-                case 7:
-                    X = 1.0 * daylength;
-                    Max = 0.15 * (Temp + 273);
-                    break;
-                case 8:
-                case 9:
-                    X = 0.5 * daylength;
-                    Max = 0.1 * (Temp + 273);
-                    break;
-                default:
-                    X = 0.2 * daylength;
-                    Max = 0.05 * (Temp + 273);
-                    break;
-            }
-
-            if (X > Max)
-            {
-                X = Max;
-            }
- 
-            return -X;
-
-        }
-
-        protected new double Daytime(double daylength, double lum, double dist)
-        {
-            var X = 0.0;
-            var Max = 0.0;
-
-            var R = lum / Math.Sqrt(dist);
-            switch (Normal.Atmosphere.Value)
-            {
-                case 0:
-                    X = 1.0 * R * daylength;
-
-                    Max = 0.1 * (Temp + 273) * R;
-                    break;
-                case 1:
-                    X = 0.9 * R * daylength;
-                    Max = 0.3 * (Temp + 273) * R;
-                    break;
-                case 2:
-                case 3:
-                case 14:
-                    X = 0.8 * R * daylength;
-                    Max = 0.8 * (Temp + 273) * R;
-                    break;
-                case 4:
-                case 5:
-                    X = 0.6 * R * daylength;
-                    Max = 1.5 * (Temp + 273) * R;
-                    break;
-                case 6:
-                case 7:
-                    X = 0.5 * R * daylength;
-                    Max = 2.5 * (Temp + 273) * R;
-                    break;
-                case 8:
-                case 9:
-                    X = 0.4 * R * daylength;
-                    Max = 4.0 * (Temp + 273) * R;
-                    break;
-                default:
-                    X = 0.2 * R * daylength;
-                    Max = 5.0 * (Temp + 273) * R;
-                    break;
-            }
-            if (X > Max)
-            {
-                X = Max;
-            }
-
-            return X;
-        }
         public int CompareTo(object obj)
         {
             var other = (Sattelite)obj;

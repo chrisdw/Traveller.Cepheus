@@ -1,4 +1,5 @@
 ﻿using org.DownesWard.Traveller.AnimalEncounters;
+using org.DownesWard.Traveller.SystemGeneration.Resources;
 using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
@@ -238,7 +239,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         OrbitNumber += roll;
                     }
 
-                    GetTempChart(myOrbit, ComLumAddFromPrim, primary, configuration);
+                    GetTempChart(myOrbit, ComLumAddFromPrim, primary, configuration, false);
 
                     GetNativeLife(primary);
 
@@ -295,7 +296,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             var retry = false;
             var ret = 0;
 
-            for (var i = 0; i < numsats)
+            for (var i = 0; i < numsats; i++)
             {
                 var sattelite = new Sattelite();
                 sattelite.Name = string.Format("{0}/A{1}", Name, i);
@@ -599,7 +600,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return maxpop;
         }
 
-        protected void GetTempChart(Orbit orbit, double ComLumAddFromPrim, Star primary, Configuration configuration)
+        protected void GetTempChart(Orbit orbit, double ComLumAddFromPrim, Star primary, Configuration configuration, bool forSattelite)
         {
             var L = primary.Luminosity;
             var O = Constants.HABITNUM / Math.Sqrt(orbit.Range);
@@ -642,8 +643,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
             var X = ((L * O) + ComLumAddFromPrim) * E * G;
             Temp = X - 273;
 
-            var DayPlus = Daytime(Rotation / 2, L, orbit.Range);
-            var NightMinus = Nighttime(Rotation / 2);
+            var DayPlus = Daytime(Rotation / 2, L, orbit.Range, forSattelite);
+            var NightMinus = Nighttime(Rotation / 2, forSattelite);
             Tilt = AxialTilt();
             var k = 0;
             if (Tilt == 0.0)
@@ -708,7 +709,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     X = NightMinus;
                 }
 
-                if (!TidallyLocked)
+                if (!TidallyLocked || forSattelite)
                 {
                     Summer[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + (Ecc * 30) + ((0.6 * Tilt) * DataTables.AxialTiltEffects[i / 2, k]) + X;
                     Fall[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + X;
@@ -739,7 +740,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        protected double Daytime(double daylength, double lum, double dist)
+        protected double Daytime(double daylength, double lum, double dist, bool forSatellite)
         {
             var X = 0.0;
             var Max = 0.0;
@@ -786,7 +787,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 X = Max;
             }
-            if (TidallyLocked)
+            if (TidallyLocked && !forSatellite)
             {
                 return Max;
             }
@@ -796,7 +797,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        protected double Nighttime(double daylength)
+        protected double Nighttime(double daylength, bool forSattelite)
         {
             var X = 0.0;
             var Max = 0.0;
@@ -841,7 +842,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 X = Max;
             }
-            if (TidallyLocked)
+            if (TidallyLocked && !forSattelite)
             {
                 return -Max;
             }
