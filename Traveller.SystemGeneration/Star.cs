@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.DownesWard.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -30,6 +31,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public short HZone { get; set; }
         public List<CompanionStar> Companions { get; } = new List<CompanionStar>();
         public string Name { get; set; }
+        public int NumOrbits { get; set; }
+        public int NumCompanions { get; set; }
 
         public Star()
         {
@@ -37,6 +40,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
             LumClass = GetLumClass();
             StellarMass = GetStellarMass();
             Luminosity = GetLuminosity();
+            if (StarType != StellarType.O)
+            {
+                NumOrbits = GetNumOrbits();
+            }
         }
 
         public StellarType GetStellarType()
@@ -253,6 +260,36 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
 
             return ((((B - A) / 5) * X) + A);
+        }
+
+        public int GetNumOrbits()
+        {
+            var dieroll = Common.d6() + Common.d6();
+
+            if (LumClass == '1' || LumClass == 'a' || LumClass == 'b' || LumClass == '2')
+            {
+                dieroll += 8;
+            }
+            else if (LumClass == '3')
+            {
+                dieroll += 4;
+            }
+            else if (LumClass == '4')
+            {
+                dieroll += 2;
+            }
+
+            if (StarType == StellarType.K)
+            {
+                dieroll -= 2;
+            }
+            if (StarType == StellarType.M)
+            {
+                dieroll -= 4;
+            }
+            dieroll.Clamp(0, 19);
+
+            return dieroll;
         }
     }
 }
