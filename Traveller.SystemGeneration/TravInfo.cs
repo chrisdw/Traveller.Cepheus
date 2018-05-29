@@ -717,19 +717,19 @@ namespace org.DownesWard.Traveller.SystemGeneration
                             case 2:
                                 switch (roll2)
                                 {
-                                    case 1: faction.Origin = "Mexican"; break;
-                                    case 2: faction.Origin = "Central American"; break;
-                                    case 3: faction.Origin = "South American (Amazon Basin)"; break;
-                                    case 4: faction.Origin = "South American (Andean)"; break;
-                                    case 5: faction.Origin = "South American (South)"; break;
-                                    case 6: faction.Origin = "Catholic"; break;
+                                    case 1: faction.Origin = Languages.FactionOrigin_Mexican; break;
+                                    case 2: faction.Origin = Languages.FactionOrigin_CentralAmerican; break;
+                                    case 3: faction.Origin = Languages.FactionOrigin_AmazonBasin; break;
+                                    case 4: faction.Origin = Languages.FactionOrigin_Andean; break;
+                                    case 5: faction.Origin = Languages.FactionOrigin_SouthAmerican; break;
+                                    case 6: faction.Origin = Languages.FactionOrigin_Catholic; break;
                                 }
                                 break;
                             case 3:
                                 switch (roll2)
                                 {
-                                    case 1 : faction.Origin = "European - Scandanavian"; break;
-                                    case 2 : faction.Origin = "European - British Isles"; break;
+                                    case 1 : faction.Origin = Languages.FactionOrigin_Scandinavian; break;
+                                    case 2 : faction.Origin = Languages.FactionOrigin_BritishIsles; break;
                                     case 3 : faction.Origin = "European - Western"; break;
                                     case 4 : faction.Origin = "European - Eastern"; break;
                                     case 5 : faction.Origin = "European - Southern"; break;

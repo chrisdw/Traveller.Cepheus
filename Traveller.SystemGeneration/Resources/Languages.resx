@@ -171,8 +171,23 @@
   <data name="Description" xml:space="preserve">
     <value>Government: {0}, Strength: {1}</value>
   </data>
+  <data name="FactionOrigin_AmazonBasin" xml:space="preserve">
+    <value>South American (Amazon Basin)</value>
+  </data>
+  <data name="FactionOrigin_Andean" xml:space="preserve">
+    <value>South American (Andean)</value>
+  </data>
+  <data name="FactionOrigin_BritishIsles" xml:space="preserve">
+    <value>European - British Isles</value>
+  </data>
   <data name="FactionOrigin_Canadian" xml:space="preserve">
     <value>Canadian</value>
+  </data>
+  <data name="FactionOrigin_Catholic" xml:space="preserve">
+    <value>Catholic</value>
+  </data>
+  <data name="FactionOrigin_CentralAmerican" xml:space="preserve">
+    <value>Central American</value>
   </data>
   <data name="FactionOrigin_EastUS" xml:space="preserve">
     <value>Eastern United States</value>
@@ -180,8 +195,17 @@
   <data name="FactionOrigin_Evangelical" xml:space="preserve">
     <value>Evangelical Christian</value>
   </data>
+  <data name="FactionOrigin_Mexican" xml:space="preserve">
+    <value>Mexican</value>
+  </data>
   <data name="FactionOrigin_MidWestUS" xml:space="preserve">
     <value>Midwest United States</value>
+  </data>
+  <data name="FactionOrigin_Scandinavian" xml:space="preserve">
+    <value>European - Scandanavian</value>
+  </data>
+  <data name="FactionOrigin_SouthAmerican" xml:space="preserve">
+    <value>South American (South)</value>
   </data>
   <data name="FactionOrigin_SouthUS" xml:space="preserve">
     <value>Southern United States</value>
