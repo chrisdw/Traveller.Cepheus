@@ -16,7 +16,7 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.427558-pre4" />
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Utilities\Utilities.csproj" />

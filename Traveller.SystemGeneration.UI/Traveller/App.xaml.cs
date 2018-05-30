@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 
 namespace org.DownesWard.Traveller.SystemGeneration
 {
-	public partial class App : Application
+    public partial class App : Application
 	{
 		public App ()
 		{
@@ -18,8 +15,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+            // Handle when your app starts
+            Microsoft.AppCenter.AppCenter.Start("android=6b33c373-f91a-4a52-94f9-5d7da47e46f1;", typeof(Analytics), typeof(Crashes));
+        }
 
 		protected override void OnSleep ()
 		{

@@ -148,8 +148,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.427558-pre4" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.1" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.2.0-Preview1-26502-02" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.0.0.482510</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Traveller\Traveller.SystemGeneration.UI.csproj">
