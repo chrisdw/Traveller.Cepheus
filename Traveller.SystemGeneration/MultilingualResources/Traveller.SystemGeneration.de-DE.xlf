@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-GB" target-language="de-DE" original="TRAVELLER.SYSTEMGENERATION/LANGUAGES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-GB" target-language="de-DE" original="TRAVELLER.SYSTEMGENERATION/RESOURCES/LANGUAGES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
     </header>
     <body>
-      <group id="TRAVELLER.SYSTEMGENERATION/RESOURCES/LANGUAGES.RESX">
+      <group id="TRAVELLER.SYSTEMGENERATION/RESOURCES/LANGUAGES.RESX" datatype="resx">
         <trans-unit id="Base_Military" translate="no" xml:space="preserve">
           <source>M</source>
           <target state="new">M</target>
@@ -78,9 +78,33 @@
           <source>Government: {0}, Strength: {1}</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Regierung: {0}, Stärke: {1}</target>
         </trans-unit>
+        <trans-unit id="FactionOrigin_AmazonBasin" translate="yes" xml:space="preserve">
+          <source>South American (Amazon Basin)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Südamerika (Amazonas)</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Andean" translate="yes" xml:space="preserve">
+          <source>South American (Andean)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Südamerika (Anden)</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_BritishIsles" translate="yes" xml:space="preserve">
+          <source>European - British Isles</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Europäisch - britische Inseln</target>
+        </trans-unit>
         <trans-unit id="FactionOrigin_Canadian" translate="yes" xml:space="preserve">
           <source>Canadian</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Kanadische</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Catholic" translate="yes" xml:space="preserve">
+          <source>Catholic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Katholische</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_CentralAmerican" translate="yes" xml:space="preserve">
+          <source>Central American</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zentralamerikanischen</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Chinese" translate="yes" xml:space="preserve">
+          <source>Chinese</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Chinesisch</target>
         </trans-unit>
         <trans-unit id="FactionOrigin_EastUS" translate="yes" xml:space="preserve">
           <source>Eastern United States</source>
@@ -90,9 +114,25 @@
           <source>Evangelical Christian</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Evangelischer Christ</target>
         </trans-unit>
+        <trans-unit id="FactionOrigin_Mexican" translate="yes" xml:space="preserve">
+          <source>Mexican</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mexikanische</target>
+        </trans-unit>
         <trans-unit id="FactionOrigin_MidWestUS" translate="yes" xml:space="preserve">
           <source>Midwest United States</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mittleren Westen der USA</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Russian" translate="yes" xml:space="preserve">
+          <source>Russian</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Russisch</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Scandinavian" translate="yes" xml:space="preserve">
+          <source>European - Scandanavian</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Europäisch - Skandinavisch</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_SouthAmerican" translate="yes" xml:space="preserve">
+          <source>South American (South)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Südamerikanisch (Süd)</target>
         </trans-unit>
         <trans-unit id="FactionOrigin_SouthUS" translate="yes" xml:space="preserve">
           <source>Southern United States</source>
@@ -277,38 +317,6 @@
         <trans-unit id="TradeCode_WaterWorld" translate="no" xml:space="preserve">
           <source>Wa</source>
           <target state="new">Wa</target>
-        </trans-unit>
-        <trans-unit id="FactionOrigin_AmazonBasin" translate="yes" xml:space="preserve">
-          <source>South American (Amazon Basin)</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Südamerika (Amazonas)</target>
-        </trans-unit>
-        <trans-unit id="FactionOrigin_Andean" translate="yes" xml:space="preserve">
-          <source>South American (Andean)</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Südamerika (Anden)</target>
-        </trans-unit>
-        <trans-unit id="FactionOrigin_BritishIsles" translate="yes" xml:space="preserve">
-          <source>European - British Isles</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Europäisch - britische Inseln</target>
-        </trans-unit>
-        <trans-unit id="FactionOrigin_Catholic" translate="yes" xml:space="preserve">
-          <source>Catholic</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Katholische</target>
-        </trans-unit>
-        <trans-unit id="FactionOrigin_CentralAmerican" translate="yes" xml:space="preserve">
-          <source>Central American</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zentralamerikanischen</target>
-        </trans-unit>
-        <trans-unit id="FactionOrigin_Mexican" translate="yes" xml:space="preserve">
-          <source>Mexican</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mexikanische</target>
-        </trans-unit>
-        <trans-unit id="FactionOrigin_Scandinavian" translate="yes" xml:space="preserve">
-          <source>European - Scandanavian</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Europäisch - Skandinavisch</target>
-        </trans-unit>
-        <trans-unit id="FactionOrigin_SouthAmerican" translate="yes" xml:space="preserve">
-          <source>South American (South)</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Südamerikanisch (Süd)</target>
         </trans-unit>
       </group>
     </body>

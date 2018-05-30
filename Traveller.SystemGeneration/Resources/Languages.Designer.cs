@@ -277,6 +277,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chinese.
+        /// </summary>
+        internal static string FactionOrigin_Chinese {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Chinese", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Eastern United States.
         /// </summary>
         internal static string FactionOrigin_EastUS {
@@ -309,6 +318,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static string FactionOrigin_MidWestUS {
             get {
                 return ResourceManager.GetString("FactionOrigin_MidWestUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Russian.
+        /// </summary>
+        internal static string FactionOrigin_Russian {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Russian", resourceCulture);
             }
         }
         

@@ -189,6 +189,9 @@
   <data name="FactionOrigin_CentralAmerican" xml:space="preserve">
     <value>Central American</value>
   </data>
+  <data name="FactionOrigin_Chinese" xml:space="preserve">
+    <value>Chinese</value>
+  </data>
   <data name="FactionOrigin_EastUS" xml:space="preserve">
     <value>Eastern United States</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="FactionOrigin_MidWestUS" xml:space="preserve">
     <value>Midwest United States</value>
+  </data>
+  <data name="FactionOrigin_Russian" xml:space="preserve">
+    <value>Russian</value>
   </data>
   <data name="FactionOrigin_Scandinavian" xml:space="preserve">
     <value>European - Scandanavian</value>

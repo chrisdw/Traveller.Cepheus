@@ -1,110 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
   <resheader name="resmimetype">
     <value>text/microsoft-resx</value>
   </resheader>
@@ -117,15 +12,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Base_Military" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="Base_Naval" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="Base_Scout" xml:space="preserve">
-    <value>S</value>
-  </data>
   <data name="ColonyAge_Middle" xml:space="preserve">
     <value>Mittleren Kolonie</value>
   </data>
@@ -171,8 +57,26 @@
   <data name="Description" xml:space="preserve">
     <value>Regierung: {0}, Stärke: {1}</value>
   </data>
+  <data name="FactionOrigin_AmazonBasin" xml:space="preserve">
+    <value>Südamerika (Amazonas)</value>
+  </data>
+  <data name="FactionOrigin_Andean" xml:space="preserve">
+    <value>Südamerika (Anden)</value>
+  </data>
+  <data name="FactionOrigin_BritishIsles" xml:space="preserve">
+    <value>Europäisch - britische Inseln</value>
+  </data>
   <data name="FactionOrigin_Canadian" xml:space="preserve">
     <value>Kanadische</value>
+  </data>
+  <data name="FactionOrigin_Catholic" xml:space="preserve">
+    <value>Katholische</value>
+  </data>
+  <data name="FactionOrigin_CentralAmerican" xml:space="preserve">
+    <value>Zentralamerikanischen</value>
+  </data>
+  <data name="FactionOrigin_Chinese" xml:space="preserve">
+    <value>Chinesisch</value>
   </data>
   <data name="FactionOrigin_EastUS" xml:space="preserve">
     <value>Osten der USA</value>
@@ -180,8 +84,20 @@
   <data name="FactionOrigin_Evangelical" xml:space="preserve">
     <value>Evangelischer Christ</value>
   </data>
+  <data name="FactionOrigin_Mexican" xml:space="preserve">
+    <value>Mexikanische</value>
+  </data>
   <data name="FactionOrigin_MidWestUS" xml:space="preserve">
     <value>Mittleren Westen der USA</value>
+  </data>
+  <data name="FactionOrigin_Russian" xml:space="preserve">
+    <value>Russisch</value>
+  </data>
+  <data name="FactionOrigin_Scandinavian" xml:space="preserve">
+    <value>Europäisch - Skandinavisch</value>
+  </data>
+  <data name="FactionOrigin_SouthAmerican" xml:space="preserve">
+    <value>Südamerikanisch (Süd)</value>
   </data>
   <data name="FactionOrigin_SouthUS" xml:space="preserve">
     <value>Süden der Vereinigten Staaten</value>
@@ -257,68 +173,5 @@
   </data>
   <data name="Str_6" xml:space="preserve">
     <value>Überwältigend populäre Unterstützung</value>
-  </data>
-  <data name="Subbase_Naval" xml:space="preserve">
-    <value>Nv</value>
-  </data>
-  <data name="Subbase_Scout" xml:space="preserve">
-    <value>Sc</value>
-  </data>
-  <data name="TradeCode_Agricultural" xml:space="preserve">
-    <value>Ag</value>
-  </data>
-  <data name="TradeCode_Asteroid" xml:space="preserve">
-    <value>As</value>
-  </data>
-  <data name="TradeCode_Barren" xml:space="preserve">
-    <value>Ba</value>
-  </data>
-  <data name="TradeCode_Colony" xml:space="preserve">
-    <value>Co</value>
-  </data>
-  <data name="TradeCode_Desert" xml:space="preserve">
-    <value>De</value>
-  </data>
-  <data name="TradeCode_FarmingColony" xml:space="preserve">
-    <value>Fa</value>
-  </data>
-  <data name="TradeCode_FluidOceans" xml:space="preserve">
-    <value>Fl</value>
-  </data>
-  <data name="TradeCode_HighPopulation" xml:space="preserve">
-    <value>Hi</value>
-  </data>
-  <data name="TradeCode_IceCapped" xml:space="preserve">
-    <value>Ic</value>
-  </data>
-  <data name="TradeCode_Industrial" xml:space="preserve">
-    <value>In</value>
-  </data>
-  <data name="TradeCode_LowPopulation" xml:space="preserve">
-    <value>Lo</value>
-  </data>
-  <data name="TradeCode_MiningColony" xml:space="preserve">
-    <value>Mn</value>
-  </data>
-  <data name="TradeCode_NonAgricultural" xml:space="preserve">
-    <value>Na</value>
-  </data>
-  <data name="TradeCode_NonIndustrial" xml:space="preserve">
-    <value>NI</value>
-  </data>
-  <data name="TradeCode_Poor" xml:space="preserve">
-    <value>Po</value>
-  </data>
-  <data name="TradeCode_ResearchColony" xml:space="preserve">
-    <value>Re</value>
-  </data>
-  <data name="TradeCode_Rich" xml:space="preserve">
-    <value>RI</value>
-  </data>
-  <data name="TradeCode_VaccumWorld" xml:space="preserve">
-    <value>Va</value>
-  </data>
-  <data name="TradeCode_WaterWorld" xml:space="preserve">
-    <value>Wa</value>
   </data>
 </root>

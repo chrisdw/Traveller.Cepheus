@@ -28,10 +28,6 @@
     <ProjectReference Include="..\Traveller.Shared\Traveller.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <XliffResource Include="MultilingualResources\Traveller.SystemGeneration.de-DE.xlf" />
-    <XliffResource Include="MultilingualResources\Traveller.SystemGeneration.fr-FR.xlf" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Update="Resources\Languages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -43,5 +39,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Languages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\Traveller.SystemGeneration.de-DE.xlf" />
+    <XliffResource Include="MultilingualResources\Traveller.SystemGeneration.fr-FR.xlf" />
   </ItemGroup>
 </Project>

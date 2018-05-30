@@ -739,8 +739,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
                             case 4:
                                 switch (roll2)
                                 {
-                                    case 1: case 2 : faction.Origin = "Russian"; break;
-                                    case 3: case 4 : faction.Origin = "Chinese"; break;
+                                    case 1: case 2 : faction.Origin = Languages.FactionOrigin_Russian; break;
+                                    case 3: case 4 : faction.Origin = Languages.FactionOrigin_Chinese; break;
                                     case 5 : faction.Origin = "Japanese"; break;
                                     case 6 : faction.Origin = "Buddist"; break;
                                 }
