@@ -730,10 +730,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
                                 {
                                     case 1 : faction.Origin = Languages.FactionOrigin_Scandinavian; break;
                                     case 2 : faction.Origin = Languages.FactionOrigin_BritishIsles; break;
-                                    case 3 : faction.Origin = "European - Western"; break;
-                                    case 4 : faction.Origin = "European - Eastern"; break;
-                                    case 5 : faction.Origin = "European - Southern"; break;
-                                    case 6 : faction.Origin = "Protestant"; break;
+                                    case 3 : faction.Origin = Languages.FactionOrigin_EuropeanWestern; break;
+                                    case 4 : faction.Origin = Languages.FactionOrigin_EuropeanEastern; break;
+                                    case 5 : faction.Origin = Languages.FactionOrigin_EuropeanSouthern; break;
+                                    case 6 : faction.Origin = Languages.FactionOrigin_Protestant; break;
                                 }
                                 break;
                             case 4:
@@ -741,14 +741,14 @@ namespace org.DownesWard.Traveller.SystemGeneration
                                 {
                                     case 1: case 2 : faction.Origin = Languages.FactionOrigin_Russian; break;
                                     case 3: case 4 : faction.Origin = Languages.FactionOrigin_Chinese; break;
-                                    case 5 : faction.Origin = "Japanese"; break;
-                                    case 6 : faction.Origin = "Buddist"; break;
+                                    case 5 : faction.Origin = Languages.FactionOrigin_Japanese; break;
+                                    case 6 : faction.Origin = Languages.FactionOrigin_Buddist; break;
                                 }
                                 break;
                             case 5:
                                 switch (roll2)
                                 {
-                                    case 1 : faction.Origin = "Turkish"; break;
+                                    case 1 : faction.Origin = Languages.FactionOrigin_Turkish; break;
                                     case 2 : faction.Origin = "North Afican"; break;
                                     case 3 : faction.Origin = "Central African"; break;
                                     case 4 : faction.Origin = "South African"; break;

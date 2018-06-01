@@ -58,7 +58,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     case 4: longString = Languages.Gov_4; break;
                     case 5: longString = Languages.Gov_5; break;
                     case 6: longString = Languages.Gov_6; break;
-                    case 7: longString = Languages.Gov_7; break;
+                    case 7: longString = Languages.Gov_7a; break;
                     case 8: longString = Languages.Gov_8; break;
                     case 9: longString = Languages.Gov_9; break;
                     case 10: longString = Languages.Gov_10; break;

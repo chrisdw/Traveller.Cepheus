@@ -187,8 +187,9 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Intérêts du monde</target>
         </trans-unit>
         <trans-unit id="Gov_7" translate="yes" xml:space="preserve">
-          <source>Anarchists</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Anarchistes</target>
+          <source>Balkanised</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Balkanisation</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Gov_8" translate="yes" xml:space="preserve">
           <source>Civil Service Bureaucracy</source>
@@ -317,6 +318,10 @@
         <trans-unit id="TradeCode_WaterWorld" translate="no" xml:space="preserve">
           <source>Wa</source>
           <target state="new">Wa</target>
+        </trans-unit>
+        <trans-unit id="Gov_7a" translate="yes" xml:space="preserve">
+          <source>Anarchists</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Anarchistes</target>
         </trans-unit>
       </group>
     </body>

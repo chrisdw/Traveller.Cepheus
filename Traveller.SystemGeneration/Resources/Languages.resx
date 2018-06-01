@@ -180,6 +180,9 @@
   <data name="FactionOrigin_BritishIsles" xml:space="preserve">
     <value>European - British Isles</value>
   </data>
+  <data name="FactionOrigin_Buddist" xml:space="preserve">
+    <value>Buddist</value>
+  </data>
   <data name="FactionOrigin_Canadian" xml:space="preserve">
     <value>Canadian</value>
   </data>
@@ -195,14 +198,29 @@
   <data name="FactionOrigin_EastUS" xml:space="preserve">
     <value>Eastern United States</value>
   </data>
+  <data name="FactionOrigin_EuropeanEastern" xml:space="preserve">
+    <value>European - Eastern</value>
+  </data>
+  <data name="FactionOrigin_EuropeanSouthern" xml:space="preserve">
+    <value>European - Southern</value>
+  </data>
+  <data name="FactionOrigin_EuropeanWestern" xml:space="preserve">
+    <value>European - Western</value>
+  </data>
   <data name="FactionOrigin_Evangelical" xml:space="preserve">
     <value>Evangelical Christian</value>
+  </data>
+  <data name="FactionOrigin_Japanese" xml:space="preserve">
+    <value>Japanese</value>
   </data>
   <data name="FactionOrigin_Mexican" xml:space="preserve">
     <value>Mexican</value>
   </data>
   <data name="FactionOrigin_MidWestUS" xml:space="preserve">
     <value>Midwest United States</value>
+  </data>
+  <data name="FactionOrigin_Protestant" xml:space="preserve">
+    <value>Protestant</value>
   </data>
   <data name="FactionOrigin_Russian" xml:space="preserve">
     <value>Russian</value>
@@ -215,6 +233,9 @@
   </data>
   <data name="FactionOrigin_SouthUS" xml:space="preserve">
     <value>Southern United States</value>
+  </data>
+  <data name="FactionOrigin_Turkish" xml:space="preserve">
+    <value>Turkish</value>
   </data>
   <data name="FactionOrigin_WestUS" xml:space="preserve">
     <value>Western United States</value>
@@ -253,6 +274,9 @@
     <value>Off world interests</value>
   </data>
   <data name="Gov_7" xml:space="preserve">
+    <value>Balkanised</value>
+  </data>
+  <data name="Gov_7a" xml:space="preserve">
     <value>Anarchists</value>
   </data>
   <data name="Gov_8" xml:space="preserve">

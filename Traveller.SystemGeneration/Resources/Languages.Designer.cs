@@ -250,6 +250,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Buddist.
+        /// </summary>
+        internal static string FactionOrigin_Buddist {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Buddist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Canadian.
         /// </summary>
         internal static string FactionOrigin_Canadian {
@@ -295,11 +304,47 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to European - Eastern.
+        /// </summary>
+        internal static string FactionOrigin_EuropeanEastern {
+            get {
+                return ResourceManager.GetString("FactionOrigin_EuropeanEastern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to European - Southern.
+        /// </summary>
+        internal static string FactionOrigin_EuropeanSouthern {
+            get {
+                return ResourceManager.GetString("FactionOrigin_EuropeanSouthern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to European - Western.
+        /// </summary>
+        internal static string FactionOrigin_EuropeanWestern {
+            get {
+                return ResourceManager.GetString("FactionOrigin_EuropeanWestern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Evangelical Christian.
         /// </summary>
         internal static string FactionOrigin_Evangelical {
             get {
                 return ResourceManager.GetString("FactionOrigin_Evangelical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Japanese.
+        /// </summary>
+        internal static string FactionOrigin_Japanese {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Japanese", resourceCulture);
             }
         }
         
@@ -318,6 +363,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static string FactionOrigin_MidWestUS {
             get {
                 return ResourceManager.GetString("FactionOrigin_MidWestUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Protestant.
+        /// </summary>
+        internal static string FactionOrigin_Protestant {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Protestant", resourceCulture);
             }
         }
         
@@ -354,6 +408,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static string FactionOrigin_SouthUS {
             get {
                 return ResourceManager.GetString("FactionOrigin_SouthUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turkish.
+        /// </summary>
+        internal static string FactionOrigin_Turkish {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Turkish", resourceCulture);
             }
         }
         
@@ -466,11 +529,20 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Anarchists.
+        ///   Looks up a localized string similar to Balkanised.
         /// </summary>
         internal static string Gov_7 {
             get {
                 return ResourceManager.GetString("Gov_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anarchists.
+        /// </summary>
+        internal static string Gov_7a {
+            get {
+                return ResourceManager.GetString("Gov_7a", resourceCulture);
             }
         }
         
