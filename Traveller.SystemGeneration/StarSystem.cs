@@ -26,6 +26,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 Mainworld = new Planet();
                 Mainworld.Generate(config);
                 Information = Mainworld.Normal;
+                if (config.CurrentCampaign == Campaign.THENEWERA)
+                {
+                    Mainworld.DoCollapse();
+                }
             }
         }
     }

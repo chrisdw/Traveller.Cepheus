@@ -26,15 +26,19 @@
                         <Label Text="Strength:" />
                         <Label Text="{Binding StrengthString}" />
                     </StackLayout>
-                </ViewCell>                
+                </ViewCell>
             </DataTemplate>
-         </ResourceDictionary>
+        </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="lblUPP" Text="UPP" />
                 <Label x:Name="UPP" Text="{Binding UPPString}"/>
+            </StackLayout>
+            <StackLayout x:Name="tneCollapse" Orientation="Horizontal">
+                <Label x:Name="lblCollapseUPP" Text="Post Collapse UPP" />
+                <Label x:Name="collapseUPP" Text=""/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="lblRemarks" Text="Remarks" />

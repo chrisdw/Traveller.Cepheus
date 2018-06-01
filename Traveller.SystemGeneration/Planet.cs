@@ -69,6 +69,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 Normal.Hydro.Value = Common.d6() + Common.d6() - 7 + Normal.Atmosphere.Value;
                 Normal.GetTravInfo(config);
                 Normal.CompleteTravInfo(config);
+
+                Maxpop = GetBasicMaxPop();
+
+                // Intialise physical parameters of collapse data
+                Collapse.Size.Value = Normal.Size.Value;
+                Collapse.Atmosphere.Value = Normal.Atmosphere.Value;
+                Collapse.Hydro.Value = Normal.Hydro.Value;
             }
         }
 
@@ -542,6 +549,24 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         protected int GetMaxPop(Orbit orbit, short HZone, double OrbitNum)
         {
+            int maxpop = GetBasicMaxPop();
+            if (orbit.OrbitalType != Orbit.OrbitType.HABITABLE)
+            {
+                if (OrbitNum > HZone)
+                {
+                    maxpop = maxpop - (((int)OrbitNum - HZone) * 2);
+                }
+                else
+                {
+                    maxpop = maxpop - ((HZone - (int)OrbitNum) * 2);
+                }
+            }
+            maxpop = Math.Max(0, maxpop);
+            return maxpop;
+        }
+
+        private int GetBasicMaxPop()
+        {
             var maxpop = 10;
 
             if (Normal.Size.Value < 4)
@@ -583,17 +608,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
             if (Normal.Atmosphere.Value > 9)
             {
                 maxpop = 0;
-            }
-            if (orbit.OrbitalType != Orbit.OrbitType.HABITABLE)
-            {
-                if (OrbitNum > HZone)
-                {
-                    maxpop = maxpop - (((int)OrbitNum - HZone) * 2);
-                }
-                else
-                {
-                    maxpop = maxpop - ((HZone - (int)OrbitNum) * 2);
-                }
             }
             maxpop = Math.Max(0, maxpop);
             return maxpop;

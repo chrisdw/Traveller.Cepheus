@@ -749,22 +749,22 @@ namespace org.DownesWard.Traveller.SystemGeneration
                                 switch (roll2)
                                 {
                                     case 1 : faction.Origin = Languages.FactionOrigin_Turkish; break;
-                                    case 2 : faction.Origin = "North Afican"; break;
-                                    case 3 : faction.Origin = "Central African"; break;
-                                    case 4 : faction.Origin = "South African"; break;
-                                    case 5 : faction.Origin = "Indonesian"; break;
-                                    case 6 : faction.Origin = "Islamic"; break;
+                                    case 2 : faction.Origin = Languages.FactionOrigin_NorthAfrican; break;
+                                    case 3 : faction.Origin = Languages.FactionOrigin_CentralAfrican; break;
+                                    case 4 : faction.Origin = Languages.FactionOrigin_SouthAfrican; break;
+                                    case 5 : faction.Origin = Languages.FactionOrigin_Indonesian; break;
+                                    case 6 : faction.Origin = Languages.FactionOrigin_Islamic; break;
                                 }
                                 break;
                             case 6:
                                 switch (roll2)
                                 {
-                                    case 1 : faction.Origin = "Arabic"; break;
-                                    case 2 : faction.Origin = "Australian"; break;
-                                    case 3 : faction.Origin = "Old Colony"; break;
-                                    case 4 : faction.Origin = "South African"; break;
-                                    case 5 : faction.Origin = "The Way (Mainstream)"; break;
-                                    case 6 : faction.Origin = "The Way (Heretical)"; break;
+                                    case 1 : faction.Origin = Languages.FactionOrigin_Arabic; break;
+                                    case 2 : faction.Origin = Languages.FactionOrigin_Australian; break;
+                                    case 3 : faction.Origin = Languages.FactionOrigin_OldColony; break;
+                                    case 4 : faction.Origin = Languages.FactionOrigin_MiddleColony; break;
+                                    case 5 : faction.Origin = Languages.FactionOrigin_TheWay_Mainstream; break;
+                                    case 6 : faction.Origin = Languages.FactionOrigin_TheWay_Heretical; break;
                                 }
                                 break;
                         }
@@ -776,12 +776,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
                             case 1:
                                 switch (roll2)
                                 {
-                                    case 1 : faction.Name = "Republicans"; break;
-                                    case 2 : faction.Name = "Federalists"; break;
-                                    case 3 : faction.Name = "Royalists"; break;
-                                    case 4 : faction.Name = "Sepratists"; break;
-                                    case 5 : faction.Name = "Alliance"; break;
-                                    case 6 : faction.Name = "League of Barons"; break;
+                                    case 1 : faction.Name = Languages.FactionName_Republicans; break;
+                                    case 2 : faction.Name = Languages.FactionName_Federalists; break;
+                                    case 3 : faction.Name = Languages.FactionName_Royalists; break;
+                                    case 4 : faction.Name = Languages.FactionName_Sepratists; break;
+                                    case 5 : faction.Name = Languages.FactionName_Alliance; break;
+                                    case 6 : faction.Name = Languages.FactionName_LeagueofBarons; break;
                                 }
                                 break;
                             case 2:

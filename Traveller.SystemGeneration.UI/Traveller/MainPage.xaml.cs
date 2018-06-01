@@ -20,6 +20,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
             else if (campaignPicker.SelectedIndex == 1)
             {
+                Config.CurrentCampaign = Campaign.THENEWERA;
+            }
+            else if (campaignPicker.SelectedIndex == 2)
+            {
                 Config.CurrentCampaign = Campaign.HOSTILE;
             }
             else
@@ -38,7 +42,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             // As this is a basic generation, get a normal UPP
             UPPLabel.Text = system.Information.DisplayString();
 
-            var worldView = new WorldView(system.Information, Config);
+            var worldView = new WorldView(system.Mainworld, Config);
             Navigation.PushModalAsync(worldView);
         }
 

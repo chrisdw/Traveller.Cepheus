@@ -323,6 +323,102 @@
           <source>Anarchists</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Anarchistes</target>
         </trans-unit>
+        <trans-unit id="FactionOrigin_Buddist" translate="yes" xml:space="preserve">
+          <source>Buddist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bouddhistes</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_EuropeanEastern" translate="yes" xml:space="preserve">
+          <source>European - Eastern</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Européenne - orientale</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_EuropeanSouthern" translate="yes" xml:space="preserve">
+          <source>European - Southern</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Européenne - sud</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_EuropeanWestern" translate="yes" xml:space="preserve">
+          <source>European - Western</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Europe - Western</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Japanese" translate="yes" xml:space="preserve">
+          <source>Japanese</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Japonais</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Protestant" translate="yes" xml:space="preserve">
+          <source>Protestant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Protestant</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Turkish" translate="yes" xml:space="preserve">
+          <source>Turkish</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Turc</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Alliance" translate="yes" xml:space="preserve">
+          <source>Alliance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alliance</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Federalists" translate="yes" xml:space="preserve">
+          <source>Federalists</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fédéralistes</target>
+        </trans-unit>
+        <trans-unit id="FactionName_LeagueofBarons" translate="yes" xml:space="preserve">
+          <source>League of Barons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ligue des Barons</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Republicans" translate="yes" xml:space="preserve">
+          <source>Republicans</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Républicains</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Royalists" translate="yes" xml:space="preserve">
+          <source>Royalists</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Royalistes</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Sepratists" translate="yes" xml:space="preserve">
+          <source>Sepratists</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sepratists</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Arabic" translate="yes" xml:space="preserve">
+          <source>Arabic</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Arabe</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Australian" translate="yes" xml:space="preserve">
+          <source>Australian</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Australien</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_CentralAfrican" translate="yes" xml:space="preserve">
+          <source>Central African</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Afrique centrale</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Indonesian" translate="yes" xml:space="preserve">
+          <source>Indonesian</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Indonésien</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_Islamic" translate="yes" xml:space="preserve">
+          <source>Islamic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Islamique</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_MiddleColony" translate="yes" xml:space="preserve">
+          <source>Middle Colony</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colonie centrale</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_NorthAfrican" translate="yes" xml:space="preserve">
+          <source>North African</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Afrique du Nord</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_OldColony" translate="yes" xml:space="preserve">
+          <source>Old Colony</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ancienne colonie</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_SouthAfrican" translate="yes" xml:space="preserve">
+          <source>South African</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Afrique du Sud</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_TheWay_Heretical" translate="yes" xml:space="preserve">
+          <source>The Way (Heretical)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">La voie (hérétique)</target>
+        </trans-unit>
+        <trans-unit id="FactionOrigin_TheWay_Mainstream" translate="yes" xml:space="preserve">
+          <source>The Way (Mainstream)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">La voie (Mainstream)</target>
+        </trans-unit>
       </group>
     </body>
   </file>

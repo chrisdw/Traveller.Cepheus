@@ -223,6 +223,60 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alliance.
+        /// </summary>
+        internal static string FactionName_Alliance {
+            get {
+                return ResourceManager.GetString("FactionName_Alliance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Federalists.
+        /// </summary>
+        internal static string FactionName_Federalists {
+            get {
+                return ResourceManager.GetString("FactionName_Federalists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to League of Barons.
+        /// </summary>
+        internal static string FactionName_LeagueofBarons {
+            get {
+                return ResourceManager.GetString("FactionName_LeagueofBarons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Republicans.
+        /// </summary>
+        internal static string FactionName_Republicans {
+            get {
+                return ResourceManager.GetString("FactionName_Republicans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Royalists.
+        /// </summary>
+        internal static string FactionName_Royalists {
+            get {
+                return ResourceManager.GetString("FactionName_Royalists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sepratists.
+        /// </summary>
+        internal static string FactionName_Sepratists {
+            get {
+                return ResourceManager.GetString("FactionName_Sepratists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to South American (Amazon Basin).
         /// </summary>
         internal static string FactionOrigin_AmazonBasin {
@@ -237,6 +291,24 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static string FactionOrigin_Andean {
             get {
                 return ResourceManager.GetString("FactionOrigin_Andean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arabic.
+        /// </summary>
+        internal static string FactionOrigin_Arabic {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Arabic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Australian.
+        /// </summary>
+        internal static string FactionOrigin_Australian {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Australian", resourceCulture);
             }
         }
         
@@ -273,6 +345,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static string FactionOrigin_Catholic {
             get {
                 return ResourceManager.GetString("FactionOrigin_Catholic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Central African.
+        /// </summary>
+        internal static string FactionOrigin_CentralAfrican {
+            get {
+                return ResourceManager.GetString("FactionOrigin_CentralAfrican", resourceCulture);
             }
         }
         
@@ -340,6 +421,24 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Indonesian.
+        /// </summary>
+        internal static string FactionOrigin_Indonesian {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Indonesian", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Islamic.
+        /// </summary>
+        internal static string FactionOrigin_Islamic {
+            get {
+                return ResourceManager.GetString("FactionOrigin_Islamic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Japanese.
         /// </summary>
         internal static string FactionOrigin_Japanese {
@@ -358,11 +457,38 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Middle Colony.
+        /// </summary>
+        internal static string FactionOrigin_MiddleColony {
+            get {
+                return ResourceManager.GetString("FactionOrigin_MiddleColony", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Midwest United States.
         /// </summary>
         internal static string FactionOrigin_MidWestUS {
             get {
                 return ResourceManager.GetString("FactionOrigin_MidWestUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to North African.
+        /// </summary>
+        internal static string FactionOrigin_NorthAfrican {
+            get {
+                return ResourceManager.GetString("FactionOrigin_NorthAfrican", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Old Colony.
+        /// </summary>
+        internal static string FactionOrigin_OldColony {
+            get {
+                return ResourceManager.GetString("FactionOrigin_OldColony", resourceCulture);
             }
         }
         
@@ -394,6 +520,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to South African.
+        /// </summary>
+        internal static string FactionOrigin_SouthAfrican {
+            get {
+                return ResourceManager.GetString("FactionOrigin_SouthAfrican", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to South American (South).
         /// </summary>
         internal static string FactionOrigin_SouthAmerican {
@@ -408,6 +543,24 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static string FactionOrigin_SouthUS {
             get {
                 return ResourceManager.GetString("FactionOrigin_SouthUS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Way (Heretical).
+        /// </summary>
+        internal static string FactionOrigin_TheWay_Heretical {
+            get {
+                return ResourceManager.GetString("FactionOrigin_TheWay_Heretical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Way (Mainstream).
+        /// </summary>
+        internal static string FactionOrigin_TheWay_Mainstream {
+            get {
+                return ResourceManager.GetString("FactionOrigin_TheWay_Mainstream", resourceCulture);
             }
         }
         

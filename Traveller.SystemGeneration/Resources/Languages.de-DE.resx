@@ -139,7 +139,7 @@
     <value>Welt-Interessen</value>
   </data>
   <data name="Gov_7" xml:space="preserve">
-    <value>Anarchisten</value>
+    <value>Balkanisiert</value>
   </data>
   <data name="Gov_8" xml:space="preserve">
     <value>Öffentlichen Dienst Bürokratie</value>
@@ -173,5 +173,80 @@
   </data>
   <data name="Str_6" xml:space="preserve">
     <value>Überwältigend populäre Unterstützung</value>
+  </data>
+  <data name="Gov_7a" xml:space="preserve">
+    <value>Anarchisten</value>
+  </data>
+  <data name="FactionOrigin_Buddist" xml:space="preserve">
+    <value>Buddhistische</value>
+  </data>
+  <data name="FactionOrigin_EuropeanEastern" xml:space="preserve">
+    <value>Europa - Ost</value>
+  </data>
+  <data name="FactionOrigin_EuropeanSouthern" xml:space="preserve">
+    <value>Europäisch - Süd</value>
+  </data>
+  <data name="FactionOrigin_EuropeanWestern" xml:space="preserve">
+    <value>Europäisch - westlichen</value>
+  </data>
+  <data name="FactionOrigin_Japanese" xml:space="preserve">
+    <value>Japanisch</value>
+  </data>
+  <data name="FactionOrigin_Protestant" xml:space="preserve">
+    <value>Evangelische</value>
+  </data>
+  <data name="FactionOrigin_Turkish" xml:space="preserve">
+    <value>Türkisch</value>
+  </data>
+  <data name="FactionName_Alliance" xml:space="preserve">
+    <value>Alliance</value>
+  </data>
+  <data name="FactionName_Federalists" xml:space="preserve">
+    <value>Föderalisten</value>
+  </data>
+  <data name="FactionName_LeagueofBarons" xml:space="preserve">
+    <value>Liga der Barone</value>
+  </data>
+  <data name="FactionName_Republicans" xml:space="preserve">
+    <value>Republikaner</value>
+  </data>
+  <data name="FactionName_Royalists" xml:space="preserve">
+    <value>Royalisten</value>
+  </data>
+  <data name="FactionName_Sepratists" xml:space="preserve">
+    <value>Sepratists</value>
+  </data>
+  <data name="FactionOrigin_Arabic" xml:space="preserve">
+    <value>Arabisch</value>
+  </data>
+  <data name="FactionOrigin_Australian" xml:space="preserve">
+    <value>Australische</value>
+  </data>
+  <data name="FactionOrigin_CentralAfrican" xml:space="preserve">
+    <value>Zentralafrikanisch</value>
+  </data>
+  <data name="FactionOrigin_Indonesian" xml:space="preserve">
+    <value>Indonesisch</value>
+  </data>
+  <data name="FactionOrigin_Islamic" xml:space="preserve">
+    <value>Islamische</value>
+  </data>
+  <data name="FactionOrigin_MiddleColony" xml:space="preserve">
+    <value>Mittleren Kolonie</value>
+  </data>
+  <data name="FactionOrigin_NorthAfrican" xml:space="preserve">
+    <value>Nord-Afrika</value>
+  </data>
+  <data name="FactionOrigin_OldColony" xml:space="preserve">
+    <value>Alte Kolonie</value>
+  </data>
+  <data name="FactionOrigin_SouthAfrican" xml:space="preserve">
+    <value>South African</value>
+  </data>
+  <data name="FactionOrigin_TheWay_Heretical" xml:space="preserve">
+    <value>Die Art und Weise (ketzerische)</value>
+  </data>
+  <data name="FactionOrigin_TheWay_Mainstream" xml:space="preserve">
+    <value>Die Art und Weise (Mainstream)</value>
   </data>
 </root>
