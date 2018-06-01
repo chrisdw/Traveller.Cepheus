@@ -21,5 +21,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 Factions.ItemTemplate = (DataTemplate)Resources["classicTemplate"];
             }
         }
+
+        private void butAnother_Clicked(object sender, System.EventArgs e)
+        {
+            this.Navigation.PopModalAsync();
+        }
     }
 }
