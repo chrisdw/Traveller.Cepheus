@@ -10,7 +10,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 		{
 			InitializeComponent();
 
-			MainPage = new Traveller.SystemGeneration.MainPage();
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()

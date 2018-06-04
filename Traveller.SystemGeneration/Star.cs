@@ -291,5 +291,54 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             return dieroll;
         }
+
+        public int FleshOut(Configuration configuration)
+        {
+            var SystemHabitability = 0;
+            var ComLumAddFromPrim = 0.0;
+            var k = 0;
+
+            if (Companions.Count > 0)
+            {
+                Name = configuration.BaseName + "-A";
+            }
+            else
+            {
+                Name = configuration.BaseName;
+            }
+
+            SystemHabitability = FleshOutWorlds(configuration, ComLumAddFromPrim);
+
+            foreach (var companion in Companions)
+            {
+                if (companion.OrbitNum != FAR_ORBIT)
+                {
+                    ComLumAddFromPrim = Constants.HABITNUM / Math.Sqrt(Orbits[companion.OrbitNum].Range);
+                    Orbits[companion.OrbitNum].World.Normal.Remarks = companion.DisplayString();
+                }
+                else
+                {
+                    ComLumAddFromPrim = 0.0;
+                }
+
+                k = 0;
+
+                //companion.BuildSystem(ComLumAddFromPrim);
+            }
+
+            return SystemHabitability;
+        }
+
+        public int FleshOutWorlds(Configuration configuration, double ComLumAddFromPrim)
+        {
+            var SystemHabitability = 0;
+            return SystemHabitability;
+        }
+
+        public string DisplayString()
+        {
+            // TODO: Fix this
+            return string.Format("{0}{1} ({2})", StarType, DecClass, LumClass);
+        }
     }
 }
