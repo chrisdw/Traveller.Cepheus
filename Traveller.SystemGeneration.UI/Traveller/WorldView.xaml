@@ -70,7 +70,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="butAnother" Text="Generate Another" Clicked="butAnother_Clicked" />
+            <Button x:Name="butAnother" Text="Go Back" Clicked="butAnother_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

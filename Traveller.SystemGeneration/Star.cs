@@ -28,7 +28,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public double StellarMass { get; set; }
         public double Luminosity { get; set; }
         public List<Orbit> Orbits { get; } = new List<Orbit>();
-        public short HZone { get; set; }
+        public int HZone { get; set; }
         public List<CompanionStar> Companions { get; } = new List<CompanionStar>();
         public string Name { get; set; }
         public int NumOrbits { get; set; }
@@ -297,10 +297,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
             var SystemHabitability = 0;
             var ComLumAddFromPrim = 0.0;
             var k = 0;
+            var nextChar = 'A';
 
             if (Companions.Count > 0)
             {
-                Name = configuration.BaseName + "-A";
+                Name = configuration.BaseName + "-" + nextChar++;
             }
             else
             {
@@ -323,15 +324,114 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
                 k = 0;
 
-                //companion.BuildSystem(ComLumAddFromPrim);
+                companion.Name = configuration.BaseName + "-" + nextChar++;
+                companion.BuildSystem(ComLumAddFromPrim);
+
+                k = companion.FleshOut(configuration, ComLumAddFromPrim);
+                SystemHabitability = Math.Max(k, SystemHabitability);
             }
 
             return SystemHabitability;
         }
 
+        public void BuildSystem(double ComLumAddFromPrim)
+        {
+            HZone = -2;
+
+            for (int i = 0; i < Constants.MAX_ORBITS; i++)
+            {
+                var orbit = new Orbit();
+                orbit.OrbitRange(i);
+                orbit.SetOrbitType(Luminosity, ComLumAddFromPrim);
+                if (orbit.OrbitalType == Orbit.OrbitType.HABITABLE)
+                {
+                    HZone = i;
+                }
+                else if (orbit.OrbitalType == Orbit.OrbitType.OUTER && HZone == -2)
+                {
+                    HZone = i - 1;
+                }
+                Orbits.Add(orbit);
+            }
+            if (HZone == -2)
+            {
+                HZone = 10;
+            }
+
+            // TODO: PlaceEmptyOrbits, PlaceCapturedPlanets, PlaceGasGiant, PlacePlanetoidBelts
+
+            foreach (var orbit in Orbits)
+            {
+                if (orbit.Number > NumOrbits)
+                {
+                    if (orbit.Occupied != Orbit.OccupiedBy.CAPTURED)
+                    {
+                        orbit.OrbitalType = Orbit.OrbitType.UNAVAILABLE;
+                    }
+                }
+            }
+        }
+
+        public int FleshOut(Configuration configuration, double ComLumAddFromPrim)
+        {
+            var SystemHabitability = 0;
+            var k = 0;
+
+            SystemHabitability = FleshOutWorlds(configuration, ComLumAddFromPrim);
+            foreach (var companion in Companions)
+            {
+                if (companion.OrbitNum != FAR_ORBIT)
+                {
+                    ComLumAddFromPrim = Constants.HABITNUM / Math.Sqrt(Orbits[companion.OrbitNum].Range);
+                    Orbits[companion.OrbitNum].World.Normal.Remarks = companion.DisplayString();
+                }
+                else
+                {
+                    ComLumAddFromPrim = 0.0;
+                }
+
+                k = 0;
+
+                companion.BuildSystem(ComLumAddFromPrim);
+
+                k = companion.FleshOut(configuration, ComLumAddFromPrim);
+                SystemHabitability = Math.Max(k, SystemHabitability);
+            }
+            return SystemHabitability;
+        }
+            
         public int FleshOutWorlds(Configuration configuration, double ComLumAddFromPrim)
         {
             var SystemHabitability = 0;
+            var k = 0;
+            var nextChar = 'A';
+
+            foreach (var orbit in Orbits)
+            {
+                switch (orbit.OrbitalType)
+                {
+                    case Orbit.OrbitType.UNAVAILABLE:
+                        if (orbit.Occupied != Orbit.OccupiedBy.STAR)
+                        {
+                            orbit.Occupied = Orbit.OccupiedBy.EMPTY;
+                        }
+                        break;
+                    default:
+                        if (orbit.Occupied != Orbit.OccupiedBy.UNOCCUPIED)
+                        {
+                            orbit.Occupied = Orbit.OccupiedBy.WORLD;
+                        }
+                        break;
+                }
+                if (orbit.Occupied != Orbit.OccupiedBy.EMPTY)
+                {
+                    var planet = new Planet();
+                    planet.Name = Name + "/" + nextChar++;
+                    orbit.World = planet;
+                    k = planet.FleshOut(configuration, orbit.Number, orbit, this, HZone, ComLumAddFromPrim);
+                    SystemHabitability = Math.Max(k, SystemHabitability);
+                }
+            }
             return SystemHabitability;
         }
 
