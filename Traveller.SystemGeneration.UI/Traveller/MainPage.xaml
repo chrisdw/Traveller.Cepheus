@@ -6,26 +6,47 @@
 
 
     <StackLayout>
-	    <Label Text="Welcome to the Cepheus Engine system generator" 
+        <Label Text="Welcome to the Cepheus Engine system generator" 
                VerticalOptions="Center" 
                HorizontalOptions="Center" />
-        <Picker x:Name="campaignPicker" Title="Campaign" SelectedIndexChanged="OnCampaignChanged">
-            <Picker.Items>
-                <x:String>Classic</x:String>
-                <x:String>The New Era</x:String>
-                <x:String>Hostile</x:String>
-                <x:String>Hammer's Slammers</x:String>
-            </Picker.Items>
-        </Picker>
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Space Opera"  />
-            <Switch x:Name="spaceOperaSwitch" />
-        </StackLayout>
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Hard Science"  />
-            <Switch x:Name="hardScienceSwitch" />
-        </StackLayout>
-        <Button x:Name="generateButton" Text="Generate" Clicked="OnGenerateClicked" />
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Configuration">
+                    <ViewCell>
+                        <Picker x:Name="campaignPicker" Title="Campaign" SelectedIndexChanged="OnCampaignChanged">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Classic</x:String>
+                                    <x:String>The New Era</x:String>
+                                    <x:String>Hostile</x:String>
+                                    <x:String>Hammer's Slammers</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </ViewCell>
+                    <ViewCell>
+                        <Picker x:Name="startportTablePicker" Title="Starport Picker" SelectedIndexChanged="startportTablePicker_SelectedIndexChanged">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Backwater</x:String>
+                                    <x:String>Standard</x:String>
+                                    <x:String>Mature</x:String>
+                                    <x:String>Cluster</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </ViewCell>
+                    <EntryCell x:Name="baseName" Label="Name" Keyboard="Text" Placeholder="Base name used to generate system object names" />
+                    <SwitchCell x:Name="spaceOperaSwitch" Text="Space Opera" OnChanged="spaceOperaSwitch_OnChanged"/>
+                    <SwitchCell x:Name="hardScienceSwitch" Text="Hard Science" OnChanged="hardScienceSwitch_Toggled"/>
+                    <SwitchCell x:Name="gaiaFactorSwitch" Text="Gaia Factor" On="True" />
+                    <SwitchCell x:Name="travellerInfoSwitch" Text="Generate Traveller Information" On="True"/>
+                    <SwitchCell x:Name="farenheightSwitch" Text="Use Farenheight" />
+                    <SwitchCell x:Name="fullSystemSwitch" Text="Generate Full System" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <Button x:Name="generateButton" Text="Generate" Clicked="generateButton_Clicked" />
         <Label x:Name="UPPLabel" Text="" />
     </StackLayout>
 </ContentPage>

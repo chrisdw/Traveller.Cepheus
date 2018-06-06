@@ -32,12 +32,55 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        public void OnGenerateClicked(object sender, EventArgs e)
+        private void hardScienceSwitch_Toggled(object sender, ToggledEventArgs e)
+        {
+            if (hardScienceSwitch.On && !spaceOperaSwitch.On)
+            {
+                spaceOperaSwitch.On = true;
+            }
+        }
+
+        private void startportTablePicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (startportTablePicker.SelectedIndex == 0)
+            {
+                Config.StarportTable = StarportTableType.BACKWATER;
+            }
+            else if (startportTablePicker.SelectedIndex == 1)
+            {
+                Config.StarportTable = StarportTableType.STANDARD;
+            }
+            else if (startportTablePicker.SelectedIndex == 2)
+            {
+                Config.StarportTable = StarportTableType.MATURE;
+            }
+            else
+            {
+                Config.StarportTable = StarportTableType.CLUSTER;
+            }
+        }
+
+        private void spaceOperaSwitch_OnChanged(object sender, ToggledEventArgs e)
+        {
+            if (!spaceOperaSwitch.On && hardScienceSwitch.On)
+            {
+                hardScienceSwitch.On = false;
+            }
+        }
+
+        private void generateButton_Clicked(object sender, EventArgs e)
         {
             var system = new StarSystem();
-            Config.SpaceOpera = spaceOperaSwitch.IsToggled;
-            Config.HardScience = hardScienceSwitch.IsToggled;
-
+            Config.SpaceOpera = spaceOperaSwitch.On;
+            Config.HardScience = hardScienceSwitch.On;
+            Config.UseGaiaFactor = gaiaFactorSwitch.On;
+            Config.GenerateTravInfo = travellerInfoSwitch.On;
+            Config.UseFareheight = farenheightSwitch.On;
+            Config.BaseName = baseName.Text;
+            if (fullSystemSwitch.On)
+            {
+                Config.Generation = GenerationType.FULL;
+            }
             system.Generate(Config);
             // As this is a basic generation, get a normal UPP
             UPPLabel.Text = system.Information.DisplayString();
@@ -45,6 +88,5 @@ namespace org.DownesWard.Traveller.SystemGeneration
             var worldView = new WorldView(system.Mainworld, Config);
             Navigation.PushModalAsync(worldView);
         }
-
     }
 }
