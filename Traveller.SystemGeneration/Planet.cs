@@ -119,7 +119,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             Normal.GetTravInfo(configuration);
         }
 
-        public int FleshOut(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, short HZone, double ComLumAddFromPrim)
+        public int FleshOut(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim)
         {
             var M = primary.StellarMass;
             var D = myOrbit.Range;
@@ -296,7 +296,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return Maxpop;
         }
 
-        private int BuildSattelites(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, short HZone, double ComLumAddFromPrim, int numsats)
+        private int BuildSattelites(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim, int numsats)
         {
             var ringcount = 0;
             var retry = false;
@@ -547,7 +547,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return dieroll;
         }
 
-        protected int GetMaxPop(Orbit orbit, short HZone, double OrbitNum)
+        protected int GetMaxPop(Orbit orbit, int HZone, double OrbitNum)
         {
             int maxpop = GetBasicMaxPop();
             if (orbit.OrbitalType != Orbit.OrbitType.HABITABLE)
