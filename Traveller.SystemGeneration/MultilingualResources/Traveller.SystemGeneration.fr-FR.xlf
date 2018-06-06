@@ -189,7 +189,6 @@
         <trans-unit id="Gov_7" translate="yes" xml:space="preserve">
           <source>Balkanised</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Balkanisation</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Gov_8" translate="yes" xml:space="preserve">
           <source>Civil Service Bureaucracy</source>

@@ -304,8 +304,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             for (var i = 0; i < numsats; i++)
             {
-                var sattelite = new Sattelite();
-                sattelite.Name = string.Format("{0}/A{1}", Name, i);
+                var sattelite = new Sattelite
+                {
+                    Name = string.Format("{0}/A{1}", Name, i)
+                };
                 sattelite.Build(Normal.Size.Value, PlanetType);
                 if (sattelite.PlanetType == WorldType.RING)
                 {
@@ -1071,7 +1073,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         /// generation. There's another version used when walking an
         /// entire system.
         /// </summary>
-        public void DoCollapse()
+        public void DoCollapse(Configuration configuration)
         {
             var dieroll = 0;
 
@@ -1212,6 +1214,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     Collapse.Pop.Value += 1;
                     Collapse.PopMult -= 10;
                 }
+
+                Collapse.DoFactions(configuration);
 
                 Collapse.DoTradeClassification();
             }

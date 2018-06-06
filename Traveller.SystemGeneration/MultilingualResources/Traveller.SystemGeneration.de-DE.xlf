@@ -189,7 +189,6 @@
         <trans-unit id="Gov_7" translate="yes" xml:space="preserve">
           <source>Balkanised</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Balkanisiert</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Gov_8" translate="yes" xml:space="preserve">
           <source>Civil Service Bureaucracy</source>
@@ -409,7 +408,7 @@
         </trans-unit>
         <trans-unit id="FactionOrigin_SouthAfrican" translate="yes" xml:space="preserve">
           <source>South African</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">South African</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Süd Afrika</target>
         </trans-unit>
         <trans-unit id="FactionOrigin_TheWay_Heretical" translate="yes" xml:space="preserve">
           <source>The Way (Heretical)</source>

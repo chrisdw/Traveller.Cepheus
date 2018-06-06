@@ -28,7 +28,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 Information = Mainworld.Normal;
                 if (config.CurrentCampaign == Campaign.THENEWERA)
                 {
-                    Mainworld.DoCollapse();
+                    Mainworld.DoCollapse(config);
                 }
             }
         }

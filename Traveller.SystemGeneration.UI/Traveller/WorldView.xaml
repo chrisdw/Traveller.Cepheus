@@ -36,10 +36,6 @@
                 <Label x:Name="lblUPP" Text="UPP" />
                 <Label x:Name="UPP" Text="{Binding UPPString}"/>
             </StackLayout>
-            <StackLayout x:Name="tneCollapse" Orientation="Horizontal">
-                <Label x:Name="lblCollapseUPP" Text="Post Collapse UPP" />
-                <Label x:Name="collapseUPP" Text=""/>
-            </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="lblRemarks" Text="Remarks" />
                 <Label x:Name="Remarks" Text="{Binding Remarks}"/>
@@ -70,6 +66,38 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <StackLayout x:Name="tneData">
+                <StackLayout x:Name="tneCollapse" Orientation="Horizontal">
+                    <Label x:Name="lblCollapseUPP" Text="Post Collapse UPP" />
+                    <Label x:Name="collapseUPP" Text="{Binding UPPString}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="lblCollapseRemarks" Text="Remarks" />
+                    <Label x:Name="collapseRemarks" Text="{Binding Remarks}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="lblCollapseBases" Text="Bases" />
+                    <Label x:Name="collapseBases" Text="{Binding Bases}"/>
+                </StackLayout>
+                <ListView x:Name="tneFactions" BindingContext="Factions">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Name:" />
+                                    <Label Text="{Binding Name}" />
+                                    <Label Text="Origin:" />
+                                    <Label Text="{Binding Origin}" />
+                                    <Label Text="Type:" />
+                                    <Label Text="{Binding GovernmentString}" />
+                                    <Label Text="Strength:" />
+                                    <Label Text="{Binding StrengthString}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
             <Button x:Name="butAnother" Text="Go Back" Clicked="butAnother_Clicked" />
         </StackLayout>
     </ContentPage.Content>

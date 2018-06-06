@@ -137,7 +137,14 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 builder.AppendFormat("{0} ", Languages.TradeCode_WaterWorld);
             }
-            Remarks += builder.ToString();
+            if (string.IsNullOrEmpty(Remarks))
+            {
+                Remarks += builder.ToString();
+            }
+            else
+            {
+                Remarks += " " + builder.ToString();
+            }
         }
 
         // Make the changes necessary to represent the social information 

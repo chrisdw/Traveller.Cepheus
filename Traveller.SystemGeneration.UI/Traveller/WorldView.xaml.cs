@@ -12,19 +12,23 @@ namespace org.DownesWard.Traveller.SystemGeneration
             BindingContext = travInfo.Normal;
             Factions.ItemsSource = travInfo.Normal.Factions;
             conflictReason.IsVisible = (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS);
-            tneCollapse.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
-            if (tneCollapse.IsVisible)
+            tneData.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
+            if (tneData.IsVisible)
             {
-                collapseUPP.Text = travInfo.Collapse.UPPString;
+                tneData.BindingContext = travInfo.Collapse;
+                tneFactions.ItemsSource = travInfo.Collapse.Factions;
             }
             if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
                 Factions.ItemTemplate = (DataTemplate)Resources["hammersSlammersTemplate"];
+                // No post collapse factions in a Hammer's Slammers campaign
             }
             else
             {
                 Factions.ItemTemplate = (DataTemplate)Resources["classicTemplate"];
+                tneFactions.ItemTemplate = (DataTemplate)Resources["classicTemplate"];
             }
+
         }
 
         private void butAnother_Clicked(object sender, System.EventArgs e)
