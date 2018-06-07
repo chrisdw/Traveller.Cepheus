@@ -92,5 +92,17 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 OrbitalType = OrbitType.HABITABLE;
             }
         }
+
+        public int Count(Planet.WorldType worldType)
+        {
+            if (World != null)
+            {
+                if (World.PlanetType == worldType)
+                {
+                    return 1;
+                }
+            }
+            return 0;
+        }
     }
 }

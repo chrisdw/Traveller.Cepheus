@@ -71,7 +71,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void generateButton_Clicked(object sender, EventArgs e)
         {
-            CurrentStarSystem = new StarSystem();
             Config.SpaceOpera = spaceOperaSwitch.On;
             Config.HardScience = hardScienceSwitch.On;
             Config.UseGaiaFactor = gaiaFactorSwitch.On;
@@ -82,7 +81,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 Config.Generation = GenerationType.FULL;
             }
-            CurrentStarSystem.Generate(Config);
+
+            CurrentStarSystem = new StarSystem(Config);
+            CurrentStarSystem.Develop(Config);
+
             panResult.IsVisible = true;
             // As this is a basic generation, get a normal UPP
             UPPLabel.Text = CurrentStarSystem.Information.DisplayString() + CurrentStarSystem.BG;

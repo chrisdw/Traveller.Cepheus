@@ -358,7 +358,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 HZone = 10;
             }
 
-            // TODO: PlaceEmptyOrbits, PlaceCapturedPlanets, PlaceGasGiant, PlacePlanetoidBelts
+            PlaceEmptyOrbits();
+            PlaceCapturedPlanets();
+            PlaceGasGiants();
+            PlacePlanetoidBelts();
 
             foreach (var orbit in Orbits)
             {
@@ -399,7 +402,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
             return SystemHabitability;
         }
-            
+
         public int FleshOutWorlds(Configuration configuration, double ComLumAddFromPrim)
         {
             var SystemHabitability = 0;
@@ -498,10 +501,331 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
             return 0;
         }
+
+        private int NumEmptyOrbits()
+        {
+            var dieroll = Common.d6();
+
+            if (StarType == StellarType.A || StarType == StellarType.B)
+            {
+                dieroll += 1;
+            }
+            if (dieroll < 5)
+            {
+                return 0;
+            }
+            dieroll = Common.d6();
+            if (StarType == StellarType.A || StarType == StellarType.B)
+            {
+                dieroll += 1;
+            }
+            switch (dieroll)
+            {
+                case 1:
+                case 2:
+                    return 1;
+                case 3:
+                    return 2;
+                default:
+                    return 3;
+            }
+        }
+
+        private int NumCapturedPlanets()
+        {
+            var dieroll = Common.d6();
+
+            if (StarType == StellarType.A || StarType == StellarType.B)
+            {
+                dieroll += 1;
+            }
+            if (dieroll < 5)
+            {
+                return 0;
+            }
+            dieroll = Common.d6();
+            switch (dieroll)
+            {
+                case 1:
+                case 2:
+                case 3:
+                    return 1;
+                case 4:
+                case 5:
+                    return 2;
+                default:
+                    return 3;
+            }
+        }
+        private void PlaceEmptyOrbits()
+        {
+            var emptyOrbits = NumEmptyOrbits();
+            var i = emptyOrbits;
+            var hitcount = 0;
+            while (i > 0)
+            {
+                var dieroll = Common.d6() + Common.d6() - 2;
+                if (Orbits[dieroll].Occupied == Orbit.OccupiedBy.UNOCCUPIED)
+                {
+                    Orbits[dieroll].Occupied = Orbit.OccupiedBy.EMPTY;
+                    i--;
+                }
+                else
+                {
+                    hitcount++;
+                    if (hitcount > 100)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void PlaceCapturedPlanets()
+        {
+            var capturedPlanets = NumCapturedPlanets();
+            var i = capturedPlanets;
+            var hitcount = 0;
+            while (i > 0)
+            {
+                var dieroll = Common.d6() + Common.d6();
+                if (Orbits[dieroll].Occupied == Orbit.OccupiedBy.UNOCCUPIED)
+                {
+                    Orbits[dieroll].Occupied = Orbit.OccupiedBy.CAPTURED;
+                    i--;
+                }
+                else
+                {
+                    hitcount++;
+                    if (hitcount > 100)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void PlaceGasGiants()
+        {
+            var gasGiants = NumGasGiants();
+            var i = gasGiants;
+            var hitcount = 0;
+            while (i > 0)
+            {
+                var dieroll = Common.d6() + Common.d6() - 3 + HZone;
+                dieroll.Clamp(0, Constants.MAX_ORBITS - 1);
+
+                if (Orbits[dieroll].Occupied == Orbit.OccupiedBy.UNOCCUPIED)
+                {
+                    Orbits[dieroll].Occupied = Orbit.OccupiedBy.GASGIANT;
+                    i--;
+                }
+                else
+                {
+                    hitcount++;
+                    if (hitcount > 100)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
+        private void PlacePlanetoidBelts()
+        {
+            var planetoidBelts = NumPlanetoids();
+            var i = planetoidBelts;
+            var hitcount = 0;
+            while (i > 0)
+            {
+                var dieroll = Common.d6() + Common.d6() - 1;
+                if (Orbits[dieroll].Occupied == Orbit.OccupiedBy.UNOCCUPIED)
+                {
+                    Orbits[dieroll].Occupied = Orbit.OccupiedBy.PLANETOID;
+                    i--;
+                }
+                else if (Orbits[dieroll].Occupied == Orbit.OccupiedBy.GASGIANT &&
+                    Orbits[dieroll - 1].Occupied == Orbit.OccupiedBy.UNOCCUPIED)
+                {
+                    Orbits[dieroll-1].Occupied = Orbit.OccupiedBy.PLANETOID;
+                    i--;
+                }
+                else
+                {
+                    hitcount++;
+                    if (hitcount > 100)
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+
+        public void AvaialbleOribits(int num)
+        {
+            if (Companions[num].OrbitNum < FAR_ORBIT)
+            {
+                if (Companions[num].OrbitNum > 2)
+                {
+                    for (var j = (Companions[num].OrbitNum /2) + 1;  j < Companions[num].OrbitNum; j++)
+                    {
+                        if (Orbits[j].Occupied != Orbit.OccupiedBy.STAR)
+                        {
+                            Orbits[j].OrbitalType = Orbit.OrbitType.UNAVAILABLE;
+                            Orbits[j].Occupied = Orbit.OccupiedBy.UNOCCUPIED;
+                        }
+                    }
+                }
+                Orbits[Companions[num].OrbitNum].OrbitalType = Orbit.OrbitType.UNAVAILABLE;
+                Orbits[Companions[num].OrbitNum].Occupied = Orbit.OccupiedBy.STAR;
+                if (Orbits[Companions[num].OrbitNum + 1].Occupied != Orbit.OccupiedBy.STAR)
+                {
+                    Orbits[Companions[num].OrbitNum + 1].OrbitalType = Orbit.OrbitType.UNAVAILABLE;
+                    Orbits[Companions[num].OrbitNum + 1].Occupied = Orbit.OccupiedBy.UNOCCUPIED;
+                }
+            }
+        }
+
+        public static string TypeToChar(StellarType stellarType)
+        {
+            switch (stellarType)
+            {
+                case StellarType.O:
+                    return "O";
+                case StellarType.B:
+                    return "B";
+                case StellarType.A:
+                    return "A";
+                case StellarType.F:
+                    return "F";
+                case StellarType.G:
+                    return "G";
+                case StellarType.K:
+                    return "K";
+                case StellarType.M:
+                    return "M";
+            }
+            return "X";
+        }
+
+        public string PrintLumClass()
+        {
+            if (LumClass == 'a')
+            {
+                return "Ia";
+            }
+            else if (LumClass == 'b')
+            {
+                return "Ib";
+            }
+            else if (LumClass == '1')
+            {
+                return "I";
+            }
+            else if (LumClass == '2')
+            {
+                return "II";
+            }
+            else if (LumClass == '3')
+            {
+                return "III";
+            }
+            else if (LumClass == '4')
+            {
+                return "IV";
+            }
+            else if (LumClass == '5')
+            {
+                return "V";
+            }
+            else if (LumClass == 'D')
+            {
+                return "D";
+            }
+            return "X";
+        }
+
+        public Planet GetMainWorld()
+        {
+            Planet cmw = null;
+ 
+            foreach (var orbit in Orbits)
+            {
+                if (orbit.World != null)
+                {
+                    if (cmw == null)
+                    {
+                        cmw = orbit.World;
+                    }
+
+                    if (orbit.World.Normal.Population() > cmw.Normal.Population())
+                    {
+                        cmw = orbit.World;
+                    }
+
+                    // Check satellites
+                    foreach (var satellite in orbit.World.Sattelites)
+                    {
+                        if (satellite.Normal.Population() > cmw.Normal.Population())
+                        {
+                            cmw = satellite;
+                        }
+                    }
+                }
+            }
+
+            foreach (var star in Companions)
+            {
+                var mainworld = star.GetMainWorld();
+                if (mainworld != null)
+                {
+                    if (mainworld.Normal.Population() > cmw.Normal.Population())
+                    {
+                        cmw = mainworld;
+                    }
+                }
+            }
+
+            return cmw;
+        }
+
+        public void Devlop(Configuration configuration, Planet mainworld)
+        {
+            foreach (var orbit in Orbits)
+            {
+                if (orbit.World != null)
+                {
+                    orbit.World.CompleteTravInfo(configuration, mainworld);
+                    if (configuration.CurrentCampaign == Campaign.THENEWERA)
+                    {
+                        orbit.World.DoCollapse(configuration);
+                    }
+                }
+            }
+
+            foreach (var star in Companions)
+            {
+                star.Devlop(configuration, mainworld);
+            }
+        }
+
+        public int Count(Planet.WorldType worldType)
+        {
+            var c = 0;
+
+            foreach (var orbit in Orbits)
+            {
+                c += orbit.Count(worldType);
+            }
+            foreach (var companion in Companions)
+            {
+                c += companion.Count(worldType);
+            }
+            return c;
+        }
         public string DisplayString()
         {
-            // TODO: Fix this
-            return string.Format("{0}{1} ({2})", StarType, DecClass, LumClass);
+            return string.Format("{0}{1} ({2})", TypeToChar(StarType), DecClass, PrintLumClass());
         }
     }
 }

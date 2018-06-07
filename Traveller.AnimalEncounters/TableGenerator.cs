@@ -45,7 +45,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
         int _tsize;
         UPP _upp;
 
-        public void Generate(int tsize, UPP upp)
+        public Encounters Generate(int tsize, UPP upp)
         {
             _tsize = tsize;
             _upp = upp;
@@ -53,6 +53,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
             genTable(tsize, upp);
             findFamily(0);
             //prtTable(tsize, upp);
+            return GetEncounters(tsize, upp);
         }
 
         //---------------------------------------------------------------------------//
@@ -630,6 +631,84 @@ namespace org.DownesWard.Traveller.AnimalEncounters
                     }
                 }
             }
+        }
+
+        private Encounters GetEncounters(int tsize, UPP upp)
+        {
+            var encounters = new Encounters();
+            cr_count = 0;
+            encounters.Regions.Add(GetRegion(tsize, "Clear, Road, Open"));
+            encounters.Regions.Add(GetRegion(tsize, "Prairie, Plain, Steppe"));
+            encounters.Regions.Add(GetRegion(tsize, "Rough, Hills, Foothills"));
+            encounters.Regions.Add(GetRegion(tsize, "Broken, Badlands"));
+            encounters.Regions.Add(GetRegion(tsize, "Mountain, Alpine"));
+            encounters.Regions.Add(GetRegion(tsize, "Forest, Woods"));
+            encounters.Regions.Add(GetRegion(tsize, "Jungle, Rainforest"));
+            encounters.Regions.Add(GetRegion(tsize, "River, Stream, Creek"));
+            encounters.Regions.Add(GetRegion(tsize, "Swamp, Bog"));
+            encounters.Regions.Add(GetRegion(tsize, "Marsh, Wetland"));
+            encounters.Regions.Add(GetRegion(tsize, "Desert, Dunes"));
+            encounters.Regions.Add(GetRegion(tsize, "Beach, Shore, Sea Edge"));
+            encounters.Regions.Add(GetRegion(tsize, "Surface, Ocean, Sea"));
+            encounters.Regions.Add(GetRegion(tsize, "Shallows, Ocean, Sea"));
+            if (upp.Hydro.Value > 0)
+            {
+                encounters.Regions.Add(GetRegion(tsize, "Depths, Ocean, Sea"));
+                encounters.Regions.Add(GetRegion(tsize, "Bottom, Ocean, Sea"));
+            }
+            encounters.Regions.Add(GetRegion(tsize, "Sea Cave, Sea Cavern"));
+            encounters.Regions.Add(GetRegion(tsize, "Sargasso, Seaweed"));
+            encounters.Regions.Add(GetRegion(tsize, "Ruins, Old City"));
+            encounters.Regions.Add(GetRegion(tsize, "Cave, Cavern"));
+            encounters.Regions.Add(GetRegion(tsize, "Chasm, Crevass. Abyss"));
+            encounters.Regions.Add(GetRegion(tsize, "Crater, Hollow"));
+
+            return encounters;
+        }
+
+        private Region GetRegion(int dice, string name)
+        {
+            var region = new Region()
+            {
+                Name = name
+            };
+            var min = 2;
+            var max = 12;
+
+            if (dice == 1)
+            {
+                min = 1;
+                max = 6;
+            }
+            for (var i = min; i <= max; i++)
+            {
+                region.Critters.Add(GetCritter(i));
+            }
+            return region;
+        }
+
+        private Critter GetCritter(int dicenum)
+        {
+            var critter = new Critter()
+            {
+                Dienum = dicenum,
+                Armour = TableData.armours[cr_armour[cr_count]],
+                Attack = cr_attack[cr_count],
+                Attribute = TableData.attribs[cr_attrib[cr_count]].ToString(),
+                CritterType = cr_type[cr_count],
+                Family = cr_family[cr_count],
+                Flee = cr_flee[cr_count],
+                Speed = cr_speed[cr_count],
+                Weapons = TableData.weapons[cr_weapon[cr_count]].Trim(),
+                Weight = TableData.weights[cr_size[cr_count]].Trim(),
+                Wounds = TableData.wounds[cr_size[cr_count]]
+            };
+
+            if (cr_count < MAX_CRIT)
+            {
+                cr_count++; // increment counter (if possible)
+            }
+            return critter;
         }
     }
 }

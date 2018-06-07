@@ -52,6 +52,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public string Name { get; set; }
 
         public TableGenerator TableGenerator { get; } = new TableGenerator();
+        public Encounters Encounters { get; private set; }
 
         // Temprature talbes
         public double[] Summer { get; } = new double[Constants.NUM_HEX_ROWS * 2];
@@ -283,11 +284,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 if (LifeFactor > 5)
                 {
-                    TableGenerator.Generate(2, Normal);
+                    Encounters = TableGenerator.Generate(2, Normal);
                 }
                 else
                 {
-                    TableGenerator.Generate(1, Normal);
+                    Encounters = TableGenerator.Generate(1, Normal);
                 }
             }
             Collapse.Size.Value = Normal.Size.Value;
@@ -1346,6 +1347,42 @@ namespace org.DownesWard.Traveller.SystemGeneration
             foreach (var sattelite in Sattelites)
             {
                 sattelite.DoCollapse(main);
+            }
+        }
+
+        public void CompleteTravInfo(Configuration configuration)
+        {
+            Normal.CompleteTravInfo(configuration);
+        }
+
+        public double Population(bool forCollapse)
+        {
+            var pop = 0.0;
+            
+            foreach (var satelitte in Sattelites)
+            {
+                pop += satelitte.Population(forCollapse);
+            }
+            if (forCollapse)
+            {
+                pop += Collapse.Population();
+            }
+            else
+            {
+                pop += Normal.Population();
+            }
+            return pop;
+        }
+
+        public void CompleteTravInfo(Configuration configuration, Planet mainworld)
+        {
+            if (!MainWorld && PlanetType != WorldType.SMALL && PlanetType != WorldType.LGG && PlanetType != WorldType.SGG)
+            {
+                Normal.DoSubordinate(mainworld.Normal);
+            }
+            foreach (var satellite in Sattelites)
+            {
+                satellite.CompleteTravInfo(configuration, mainworld);
             }
         }
     }

@@ -19,21 +19,116 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         public string BG { get; private set; }
 
-        public void Generate(Configuration config)
+        private int SystemHability;
+        private Star Primary;
+        private SystemType systemType;
+
+        private void FleshOut(Configuration configuration)
         {
-            // TODO: Add generation code
-            if (config.Generation == GenerationType.SIMPLE)
+            SystemHability = Primary.FleshOut(configuration);
+        }
+        private void Generate(Configuration configuration)
+        {
+             // Just need the UPP, trade code and remarks
+            Mainworld = new Planet();
+            Mainworld.Generate(configuration);
+            Information = Mainworld.Normal;
+            if (configuration.CurrentCampaign == Campaign.THENEWERA)
             {
-                // Just need the UPP, trade code and remarks
-                Mainworld = new Planet();
-                Mainworld.Generate(config);
-                Information = Mainworld.Normal;
-                if (config.CurrentCampaign == Campaign.THENEWERA)
+                Mainworld.DoCollapse(configuration);
+            }
+            // Get the BG string
+            BG = string.Format("{0}{1}", Star.NumPlanetoids(), Star.NumGasGiants());
+
+        }
+
+        public static SystemType Nature(bool companion)
+        {
+            var dieroll = Common.d6() + Common.d6();
+
+            if (companion)
+            {
+                dieroll--;
+            }
+            if (dieroll < 8)
+            {
+                return SystemType.SOLO;
+            }
+            if (dieroll == 12)
+            {
+                return SystemType.TRINARY;
+            }
+            return SystemType.BINARY;
+        }
+
+        public StarSystem(Configuration configuration)
+        {
+            SystemHability = 0;
+            var ComLumAddFromPrimary = 0.0;
+
+            if (configuration.Generation == GenerationType.FULL)
+            {
+                systemType = Nature(false);
+                Primary = new Star();
+                if (systemType == SystemType.TRINARY)
                 {
-                    Mainworld.DoCollapse(config);
+                    Primary.NumCompanions = 2;
                 }
+                else if (systemType == SystemType.BINARY)
+                {
+                    Primary.NumCompanions = 1;
+                }
+                Primary.BuildSystem(ComLumAddFromPrimary);
+                for (var i = 0; i < Primary.NumCompanions; i++)
+                {
+                    var companion = new CompanionStar();
+                    Primary.Companions.Add(companion);
+                    var retry = false;
+                    do
+                    {
+                        for (var j = 0; j  < i - 1; j++)
+                        {
+                            if (Primary.Companions[i].OrbitNum == Primary.Companions[j].OrbitNum)
+                            {
+                                Primary.Companions.Remove(companion);
+                                companion = new CompanionStar();
+                                Primary.Companions.Add(companion);
+                                retry = true;
+                            }
+                        }
+                    } while (retry);
+                    Primary.AvaialbleOribits(i);
+                }
+                FleshOut(configuration);
+
                 // Get the BG string
-                BG = string.Format("{0}{1}", Star.NumPlanetoids(), Star.NumGasGiants());
+                BG = string.Format("{0}{1}", Primary.Count(Planet.WorldType.PLANETOID), 
+                    Primary.Count(Planet.WorldType.LGG) + Primary.Count(Planet.WorldType.SGG));
+            }
+            else
+            {
+                Generate(configuration);
+            }
+        }
+
+        public void Develop(Configuration configuration)
+        {
+            if (configuration.Generation == GenerationType.FULL)
+            {
+                var mainworld = Primary.GetMainWorld();
+                if (mainworld != null)
+                {
+                    mainworld.MainWorld = true;
+                    if (configuration.GenerateTravInfo)
+                    {
+                        mainworld.CompleteTravInfo(configuration);
+                    }
+                    if (configuration.CurrentCampaign == Campaign.THENEWERA)
+                    {
+                        mainworld.DoCollapse(configuration);
+                    }
+                    Primary.Devlop(configuration, mainworld);
+                }
             }
         }
     }

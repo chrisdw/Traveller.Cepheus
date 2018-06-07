@@ -98,6 +98,7 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
+            <Button x:Name="butEncounters" Text="Encounters" Clicked="butEncounters_Clicked" />
             <Button x:Name="butAnother" Text="Go Back" Clicked="butAnother_Clicked" />
         </StackLayout>
     </ContentPage.Content>

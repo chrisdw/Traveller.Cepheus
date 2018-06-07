@@ -6,15 +6,15 @@ namespace org.DownesWard.Traveller.SystemGeneration
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WorldView : ContentPage
     {
-        public WorldView(Planet travInfo, Configuration configuration)
+        public WorldView(Planet planet, Configuration configuration)
         {
             InitializeComponent();
 
             // Always set the binding contexts even if not currently visible
-            BindingContext = travInfo.Normal;
-            Factions.ItemsSource = travInfo.Normal.Factions;
-            tneFactions.ItemsSource = travInfo.Collapse.Factions;
-            tneData.BindingContext = travInfo.Collapse;
+            BindingContext = planet.Normal;
+            Factions.ItemsSource = planet.Normal.Factions;
+            tneFactions.ItemsSource = planet.Collapse.Factions;
+            tneData.BindingContext = planet.Collapse;
 
             conflictReason.IsVisible = (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS);
             tneData.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
@@ -34,7 +34,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void butAnother_Clicked(object sender, System.EventArgs e)
         {
-            this.Navigation.PopModalAsync();
+            Navigation.PopModalAsync();
+        }
+
+        private void butEncounters_Clicked(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
