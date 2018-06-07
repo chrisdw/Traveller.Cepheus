@@ -5,7 +5,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
 {
     public partial class MainPage : ContentPage
 	{
-        Configuration Config { get; } = new Configuration();
+        private Configuration Config { get; } = new Configuration();
+        private StarSystem CurrentStarSystem { get; set; }
 
 		public MainPage()
 		{
@@ -70,7 +71,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void generateButton_Clicked(object sender, EventArgs e)
         {
-            var system = new StarSystem();
+            CurrentStarSystem = new StarSystem();
             Config.SpaceOpera = spaceOperaSwitch.On;
             Config.HardScience = hardScienceSwitch.On;
             Config.UseGaiaFactor = gaiaFactorSwitch.On;
@@ -81,11 +82,15 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 Config.Generation = GenerationType.FULL;
             }
-            system.Generate(Config);
+            CurrentStarSystem.Generate(Config);
+            panResult.IsVisible = true;
             // As this is a basic generation, get a normal UPP
-            UPPLabel.Text = system.Information.DisplayString();
+            UPPLabel.Text = CurrentStarSystem.Information.DisplayString() + CurrentStarSystem.BG;
+        }
 
-            var worldView = new WorldView(system.Mainworld, Config);
+        private void viewWorldButton_Clicked(object sender, EventArgs e)
+        {
+            var worldView = new WorldView(CurrentStarSystem.Mainworld, Config);
             Navigation.PushModalAsync(worldView);
         }
     }

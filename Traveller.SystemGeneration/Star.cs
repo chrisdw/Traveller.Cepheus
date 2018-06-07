@@ -435,6 +435,69 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return SystemHabitability;
         }
 
+        public static int NumGasGiants()
+        {
+            var dieroll = Common.d6() + Common.d6();
+
+            if (dieroll < 5)
+            {
+                return 0;
+            }
+
+            dieroll = Common.d6() + Common.d6();
+
+            switch (dieroll)
+            {
+                case 2:
+                case 3:
+                    return 1;
+                case 4:
+                case 5:
+                    return 2;
+                case 6:
+                case 7:
+                    return 3;
+                case 8:
+                case 9:
+                case 10:
+                    return 4;
+                case 11:
+                case 12:
+                    return 5;
+            }
+            return 0;
+        }
+
+        public static int NumPlanetoids()
+        {
+            var dieroll = Common.d6() + Common.d6();
+
+            if (dieroll < 8)
+            {
+                return 0;
+            }
+
+            dieroll = Common.d6() + Common.d6();
+
+            switch (dieroll)
+            {
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                    return 1;
+                case 7:
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                    return 2;
+                case 12:
+                    return 3;
+            }
+            return 0;
+        }
         public string DisplayString()
         {
             // TODO: Fix this

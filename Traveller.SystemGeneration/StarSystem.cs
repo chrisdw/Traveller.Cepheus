@@ -17,6 +17,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
         
         public Planet Mainworld { get; private set; }
 
+        public string BG { get; private set; }
+
         public void Generate(Configuration config)
         {
             // TODO: Add generation code
@@ -30,6 +32,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 {
                     Mainworld.DoCollapse(config);
                 }
+                // Get the BG string
+                BG = string.Format("{0}{1}", Star.NumPlanetoids(), Star.NumGasGiants());
             }
         }
     }

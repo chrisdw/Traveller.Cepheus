@@ -47,6 +47,9 @@
             </TableRoot>
         </TableView>
         <Button x:Name="generateButton" Text="Generate" Clicked="generateButton_Clicked" />
-        <Label x:Name="UPPLabel" Text="" />
+        <StackLayout x:Name="panResult" Orientation="Horizontal" IsVisible="False">
+            <Label x:Name="UPPLabel" Text=""  />
+            <Button x:Name="viewWorldButton" Text="View Details" Clicked="viewWorldButton_Clicked" />
+        </StackLayout>
     </StackLayout>
 </ContentPage>

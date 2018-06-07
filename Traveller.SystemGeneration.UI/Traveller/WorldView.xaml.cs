@@ -9,26 +9,27 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public WorldView(Planet travInfo, Configuration configuration)
         {
             InitializeComponent();
+
+            // Always set the binding contexts even if not currently visible
             BindingContext = travInfo.Normal;
             Factions.ItemsSource = travInfo.Normal.Factions;
+            tneFactions.ItemsSource = travInfo.Collapse.Factions;
+            tneData.BindingContext = travInfo.Collapse;
+
             conflictReason.IsVisible = (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS);
             tneData.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
-            if (tneData.IsVisible)
-            {
-                tneData.BindingContext = travInfo.Collapse;
-                tneFactions.ItemsSource = travInfo.Collapse.Factions;
-            }
+
             if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
                 Factions.ItemTemplate = (DataTemplate)Resources["hammersSlammersTemplate"];
                 // No post collapse factions in a Hammer's Slammers campaign
+                tneFactions.ItemTemplate = (DataTemplate)Resources["classicTemplate"];
             }
             else
             {
                 Factions.ItemTemplate = (DataTemplate)Resources["classicTemplate"];
                 tneFactions.ItemTemplate = (DataTemplate)Resources["classicTemplate"];
             }
-
         }
 
         private void butAnother_Clicked(object sender, System.EventArgs e)
