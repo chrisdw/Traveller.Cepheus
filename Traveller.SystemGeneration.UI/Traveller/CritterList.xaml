@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="org.DownesWard.Traveller.SystemGeneration.CritterList"
+             xmlns:local="clr-namespace:org.DownesWard.Traveller.SystemGeneration">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <DataTemplate x:Key="herbivoreTemplate">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Dienum}" WidthRequest="40" />
+                        <Label Text="{Binding Attribute}" WidthRequest="20"/>
+                        <Label Text="{Binding CritterTypeString}" WidthRequest="160"/>
+                        <Label Text="{Binding WeightKg}" WidthRequest="80"/>
+                        <Label Text="{Binding WeightHits}" WidthRequest="60"/>
+                        <Label Text="{Binding Armour}" WidthRequest="80"/>
+                        <Label Text="{Binding WeaponsDesc}" WidthRequest="120" />
+                        <Label Text="{Binding WeaponsDamage}" WidthRequest="40" />
+                        <Label Text="{Binding Wounds}" WidthRequest="60"/>
+                        <Label Text="F" />
+                        <Label Text="{Binding Flee}" />
+                        <Label Text="A" />
+                        <Label Text="{Binding Attack}" />
+                        <Label Text="S" />
+                        <Label Text="{Binding Speed}" />
+                        <Label Text="{Binding FamilyString}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="carnivoreTemplate">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Dienum}" WidthRequest="40" />
+                        <Label Text="{Binding Attribute}" WidthRequest="20"/>
+                        <Label Text="{Binding CritterTypeString}" WidthRequest="160"/>
+                        <Label Text="{Binding WeightKg}" WidthRequest="80"/>
+                        <Label Text="{Binding WeightHits}" WidthRequest="60"/>
+                        <Label Text="{Binding Armour}" WidthRequest="80"/>
+                        <Label Text="{Binding WeaponsDesc}" WidthRequest="120" />
+                        <Label Text="{Binding WeaponsDamage}" WidthRequest="40" />
+                        <Label Text="{Binding Wounds}" WidthRequest="60"/>
+                        <Label Text="A" />
+                        <Label Text="{Binding Attack}" />
+                        <Label Text="F" />
+                        <Label Text="{Binding Flee}" />
+                        <Label Text="S" />
+                        <Label Text="{Binding Speed}" />
+                        <Label Text="{Binding FamilyString}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="eventTemplate">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Dienum}" WidthRequest="40" />
+                        <Label Text="{Binding Attribute}" WidthRequest="20"/>
+                        <Label Text="{Binding CritterTypeString}" WidthRequest="160"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <local:CritterDataTemplateSelector x:Key="CritterTemplateSelector"
+                                               CarnivoreTemplate="{StaticResource carnivoreTemplate}"
+                                               HerbivoreTemplate="{StaticResource herbivoreTemplate}"
+                                               EventTemplate="{StaticResource eventTemplate}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Region:"/>
+                <Label x:Name="txtRegion" Text="{Binding Name}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Die" WidthRequest="60" />
+                <Label Text="Animal" WidthRequest="160"/>
+                <Label Text="Weight" WidthRequest="100"/>
+                <Label Text="Hits" WidthRequest="40"/>
+                <Label Text="Armour" WidthRequest="80"/>
+                <Label Text="Weapons" WidthRequest="160" />
+                <Label Text="Wounds" WidthRequest="60"/>
+                <Label Text="Behavior" />
+            </StackLayout>
+
+            <ListView x:Name="critterList"
+            ItemsSource="{Binding Items}"
+            CachingStrategy="RecycleElement" ItemTemplate="{StaticResource CritterTemplateSelector}">
+
+            </ListView>
+            <Button x:Name="butBack" Text="Go Back" Clicked="butBack_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

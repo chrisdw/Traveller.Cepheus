@@ -52,7 +52,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public string Name { get; set; }
 
         public TableGenerator TableGenerator { get; } = new TableGenerator();
-        public Encounters Encounters { get; private set; }
+        public Encounters Encounters { get; set; }
 
         // Temprature talbes
         public double[] Summer { get; } = new double[Constants.NUM_HEX_ROWS * 2];
@@ -248,7 +248,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
                     GetTempChart(this, myOrbit, ComLumAddFromPrim, primary, configuration, false);
 
-                    GetNativeLife(primary);
+                    GetNativeLife(false, primary);
 
                     if (Normal.Size.Value == 0 || myOrbit.Occupied == Orbit.OccupiedBy.CAPTURED)
                     {
@@ -309,6 +309,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 {
                     Name = string.Format("{0}/A{1}", Name, i)
                 };
+                Sattelites.Add(sattelite);
                 sattelite.Build(Normal.Size.Value, PlanetType);
                 if (sattelite.PlanetType == WorldType.RING)
                 {
@@ -336,7 +337,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 } while (retry);
                 var k = sattelite.FleshOut(configuration, this, myOrbit, primary, HZone, ComLumAddFromPrim);
                 ret = Math.Max(k, ret);
-                Sattelites.Add(sattelite);
+
             }
             Sattelites.Sort();
             return ret;
@@ -964,7 +965,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        protected void GetNativeLife(Star primary)
+        protected void GetNativeLife(bool basic, Star primary)
         {
             var dieroll = Common.d6() + Common.d6();
 
@@ -988,26 +989,29 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 dieroll += 1;
             }
 
-            // Temprature effects
-            if (Temp < -20.0)
+            if (!basic)
             {
-                dieroll -= 1;
-            }
-            else if (Temp > 30)
-            {
-                dieroll -= 1;
-            }
+                // Temprature effects
+                if (Temp < -20.0)
+                {
+                    dieroll -= 1;
+                }
+                else if (Temp > 30)
+                {
+                    dieroll -= 1;
+                }
 
-            // Stellar effects
-            if (primary.StarType == Star.StellarType.G || primary.StarType == Star.StellarType.K)
-            {
-                dieroll += 1;
-            }
-            else if (primary.StarType == Star.StellarType.F ||
-                primary.StarType == Star.StellarType.A ||
-                primary.StarType == Star.StellarType.B)
-            {
-                dieroll -= 1;
+                // Stellar effects
+                if (primary.StarType == Star.StellarType.G || primary.StarType == Star.StellarType.K)
+                {
+                    dieroll += 1;
+                }
+                else if (primary.StarType == Star.StellarType.F ||
+                    primary.StarType == Star.StellarType.A ||
+                    primary.StarType == Star.StellarType.B)
+                {
+                    dieroll -= 1;
+                }
             }
 
             Life = (dieroll >= 10);

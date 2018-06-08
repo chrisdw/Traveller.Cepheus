@@ -6,8 +6,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WorldView : ContentPage
     {
+        private Planet Planet;
         public WorldView(Planet planet, Configuration configuration)
         {
+            Planet = planet;
             InitializeComponent();
 
             // Always set the binding contexts even if not currently visible
@@ -18,6 +20,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             conflictReason.IsVisible = (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS);
             tneData.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
+            butEncounters.IsVisible = planet.Life;
 
             if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
@@ -39,7 +42,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void butEncounters_Clicked(object sender, System.EventArgs e)
         {
-
+            var regionList = new RegionList(Planet.Encounters);
+            Navigation.PushModalAsync(regionList);
         }
     }
 }

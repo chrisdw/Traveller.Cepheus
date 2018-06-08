@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.DownesWard.Traveller.AnimalEncounters;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -32,11 +33,19 @@ namespace org.DownesWard.Traveller.SystemGeneration
              // Just need the UPP, trade code and remarks
             Mainworld = new Planet();
             Mainworld.Generate(configuration);
-            Information = Mainworld.Normal;
+            
             if (configuration.CurrentCampaign == Campaign.THENEWERA)
             {
                 Mainworld.DoCollapse(configuration);
+                Information = Mainworld.Collapse;
             }
+            else
+            {
+                Information = Mainworld.Normal;
+            }
+            var generator = new TableGenerator();
+            Mainworld.Life = true;
+            Mainworld.Encounters = generator.Generate(2, Mainworld.Normal);
             // Get the BG string
             BG = string.Format("{0}{1}", Star.NumPlanetoids(), Star.NumGasGiants());
 
@@ -119,6 +128,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 if (mainworld != null)
                 {
                     mainworld.MainWorld = true;
+                    Mainworld = mainworld;
+                    
                     if (configuration.GenerateTravInfo)
                     {
                         mainworld.CompleteTravInfo(configuration);
@@ -126,6 +137,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     if (configuration.CurrentCampaign == Campaign.THENEWERA)
                     {
                         mainworld.DoCollapse(configuration);
+                        Information = Mainworld.Collapse;
+                    }
+                    else
+                    {
+                        Information = Mainworld.Normal;
                     }
                     Primary.Devlop(configuration, mainworld);
                 }

@@ -38,6 +38,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             StarType = GetStellarType();
             LumClass = GetLumClass();
+            DecClass = GetDecClass();
             StellarMass = GetStellarMass();
             Luminosity = GetLuminosity();
             if (StarType != StellarType.O)
@@ -129,6 +130,22 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 default:
                     return ' ';
             }
+        }
+
+        private char GetDecClass()
+        {
+            var dieroll = Common.d10() - 1;
+            if (StarType == StellarType.O && dieroll < 5)
+            {
+                dieroll += 5;
+            }
+
+            if (StarType == StellarType.K && LumClass == '4' && dieroll > 4)
+            {
+                dieroll -= 5;
+            }
+            dieroll = dieroll.Clamp(0, 9);
+            return dieroll.ToString()[0];
         }
 
         public double GetStellarMass()
@@ -287,7 +304,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 dieroll -= 4;
             }
-            dieroll.Clamp(0, 19);
+            dieroll = dieroll.Clamp(0, 19);
 
             return dieroll;
         }
@@ -613,7 +630,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             while (i > 0)
             {
                 var dieroll = Common.d6() + Common.d6() - 3 + HZone;
-                dieroll.Clamp(0, Constants.MAX_ORBITS - 1);
+                dieroll = dieroll.Clamp(0, Constants.MAX_ORBITS - 1);
 
                 if (Orbits[dieroll].Occupied == Orbit.OccupiedBy.UNOCCUPIED)
                 {

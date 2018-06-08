@@ -17,12 +17,39 @@ namespace org.DownesWard.Traveller.AnimalEncounters
         public int Flee { get; internal set; }
         public int Speed { get; internal set; }
         public int Family { get; internal set; }
+        public string WeaponsDesc { get; internal set; }
+        public string WeaponsDamage { get; internal set; }
+        public string WeightKg { get; internal set; }
+        public string WeightHits { get; internal set; }
 
         public string CritterTypeString
         {
             get
             {
                 return TableData.ctypes[CritterType].Trim();
+            }
+        }
+
+        public string DisplayString
+        {
+            get
+            {
+                return ToString();
+            }
+        }
+
+        public string FamilyString
+        {
+            get
+            {
+                if (Family > 0)
+                {
+                    return string.Format("*{0,2}", Family);
+                }
+                else
+                {
+                    return string.Empty;
+                }
             }
         }
 

@@ -700,8 +700,12 @@ namespace org.DownesWard.Traveller.AnimalEncounters
                 Flee = cr_flee[cr_count],
                 Speed = cr_speed[cr_count],
                 Weapons = TableData.weapons[cr_weapon[cr_count]].Trim(),
+                WeaponsDamage = TableData.weaponsDmg[cr_weapon[cr_count]],
+                WeaponsDesc = TableData.weaponsDesc[cr_weapon[cr_count]],
                 Weight = TableData.weights[cr_size[cr_count]].Trim(),
-                Wounds = TableData.wounds[cr_size[cr_count]]
+                WeightKg = TableData.weightsKg[cr_size[cr_count]],
+                WeightHits = TableData.weightsHits[cr_size[cr_count]],
+                Wounds = TableData.wounds[cr_size[cr_count]],
             };
 
             if (cr_count < MAX_CRIT)

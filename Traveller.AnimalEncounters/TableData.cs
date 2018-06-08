@@ -109,6 +109,52 @@ namespace org.DownesWard.Traveller.AnimalEncounters
             "40000Kg 16D/8D",
             "44000Kg 17D/9D"
         };
+        public static string[] weightsKg ={
+            "",
+            "1Kg",
+            "3Kg",
+            "6Kg",
+            "12Kg",
+            "25Kg",
+            "50Kg",
+            "100Kg",
+            "200Kg",
+            "400Kg",
+            "800Kg",
+            "1600Kg",
+            "3200Kg",
+            "*  (+6)",
+            "6000Kg",
+            "12000Kg",
+            "24000Kg",
+            "30000Kg",
+            "36000Kg",
+            "40000Kg",
+            "44000Kg"
+        };
+        public static string[] weightsHits ={
+            "",
+            "1D/0",
+            "1D/1D",
+            "1D/2D",
+            "2D/2D",
+            "3D/2D",
+            "4D/2D",
+            "5D/2D",
+            "5D/3D",
+            "6D/3D",
+            "7D/3D",
+            "8D/3D",
+            "8D/4D",
+            "*  (+6)",
+            "9D/4D",
+            "10D/5D",
+            "12D/6D",
+            "14D/7D",
+            "15D/7D",
+            "16D/8D",
+            "17D/9D"
+        };
 
         // constant table of armour names, by armour type (starting at 0)
         public static string[] armours ={
@@ -183,6 +229,54 @@ namespace org.DownesWard.Traveller.AnimalEncounters
             "as pike           3D",
             "as broadsword     4D",
             "as body pistol    3D"
+        };
+
+        public static string[] weaponsDmg ={
+            "",
+            "4D",
+            "2D",
+            "4D",
+            "2D",
+            "4D",
+            "2D",
+            "3D",
+            "2D",
+            "1D",
+            "1D",
+            "2D",
+            "3D",
+            "1D+1",
+            "3D",
+            "4D+2",
+            "2D+1",
+            "2D",
+            "3D",
+            "4D",
+            "3D"
+        };
+
+        public static string[] weaponsDesc ={
+            "",
+            "hooves & horns",
+            "horns",
+            "hooves & teeth",
+            "hooves",
+            "horns & teeth",
+            "thrasher",
+            "claws & teeth",
+            "teeth",
+            "claws",
+            "claws",
+            "thrasher",
+            "claws & teeth",
+            "claws+1",
+            "stinger",
+            "claws+1 teeth+1",
+            "teeth+1",
+            "as blade",
+            "as pike",
+            "as broadsword",
+            "as body pistol"
         };
 
         // offset adjustments for duplicated weapon values
