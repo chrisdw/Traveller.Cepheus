@@ -232,11 +232,128 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Centralists.
+        /// </summary>
+        internal static string FactionName_Centralists {
+            get {
+                return ResourceManager.GetString("FactionName_Centralists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Citizen&apos;s Movement.
+        /// </summary>
+        internal static string FactionName_CitizensMovement {
+            get {
+                return ResourceManager.GetString("FactionName_CitizensMovement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coalition.
+        /// </summary>
+        internal static string FactionName_Coalition {
+            get {
+                return ResourceManager.GetString("FactionName_Coalition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Coastal Union.
+        /// </summary>
+        internal static string FactionName_CoastalUnion {
+            get {
+                return ResourceManager.GetString("FactionName_CoastalUnion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Corporate Militia.
+        /// </summary>
+        internal static string FactionName_CorporateMilitia {
+            get {
+                return ResourceManager.GetString("FactionName_CorporateMilitia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crusaders.
+        /// </summary>
+        internal static string FactionName_Crusaders {
+            get {
+                return ResourceManager.GetString("FactionName_Crusaders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eastern Bloc.
+        /// </summary>
+        internal static string FactionName_EasternBloc {
+            get {
+                return ResourceManager.GetString("FactionName_EasternBloc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Farmers Union.
+        /// </summary>
+        internal static string FactionName_FarmersUnion {
+            get {
+                return ResourceManager.GetString("FactionName_FarmersUnion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Federalists.
         /// </summary>
         internal static string FactionName_Federalists {
             get {
                 return ResourceManager.GetString("FactionName_Federalists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Freedom Party.
+        /// </summary>
+        internal static string FactionName_FreedomParty {
+            get {
+                return ResourceManager.GetString("FactionName_FreedomParty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Glorious Brotherhood.
+        /// </summary>
+        internal static string FactionName_GloriousBrotherhood {
+            get {
+                return ResourceManager.GetString("FactionName_GloriousBrotherhood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Highlanders.
+        /// </summary>
+        internal static string FactionName_Highlanders {
+            get {
+                return ResourceManager.GetString("FactionName_Highlanders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Imperialist.
+        /// </summary>
+        internal static string FactionName_Imperialist {
+            get {
+                return ResourceManager.GetString("FactionName_Imperialist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Industry Alliance.
+        /// </summary>
+        internal static string FactionName_IndustryAlliance {
+            get {
+                return ResourceManager.GetString("FactionName_IndustryAlliance", resourceCulture);
             }
         }
         
@@ -250,11 +367,101 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Liberators.
+        /// </summary>
+        internal static string FactionName_Liberators {
+            get {
+                return ResourceManager.GetString("FactionName_Liberators", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moderate Alliance.
+        /// </summary>
+        internal static string FactionName_ModerateAlliance {
+            get {
+                return ResourceManager.GetString("FactionName_ModerateAlliance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Monarchists.
+        /// </summary>
+        internal static string FactionName_Monarchists {
+            get {
+                return ResourceManager.GetString("FactionName_Monarchists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mountain Partisans.
+        /// </summary>
+        internal static string FactionName_MountainPartisans {
+            get {
+                return ResourceManager.GetString("FactionName_MountainPartisans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to North Star League.
+        /// </summary>
+        internal static string FactionName_NorthStarLeague {
+            get {
+                return ResourceManager.GetString("FactionName_NorthStarLeague", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Peace Faction.
+        /// </summary>
+        internal static string FactionName_PeaceFaction {
+            get {
+                return ResourceManager.GetString("FactionName_PeaceFaction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to People&apos;s Party.
+        /// </summary>
+        internal static string FactionName_PeoplesParty {
+            get {
+                return ResourceManager.GetString("FactionName_PeoplesParty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Progressive Party.
+        /// </summary>
+        internal static string FactionName_ProgressiveParty {
+            get {
+                return ResourceManager.GetString("FactionName_ProgressiveParty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rebels.
+        /// </summary>
+        internal static string FactionName_Rebels {
+            get {
+                return ResourceManager.GetString("FactionName_Rebels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Republicans.
         /// </summary>
         internal static string FactionName_Republicans {
             get {
                 return ResourceManager.GetString("FactionName_Republicans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Revolutionaries.
+        /// </summary>
+        internal static string FactionName_Revolutionaries {
+            get {
+                return ResourceManager.GetString("FactionName_Revolutionaries", resourceCulture);
             }
         }
         
@@ -273,6 +480,69 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static string FactionName_Sepratists {
             get {
                 return ResourceManager.GetString("FactionName_Sepratists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Southern States.
+        /// </summary>
+        internal static string FactionName_SouthernStates {
+            get {
+                return ResourceManager.GetString("FactionName_SouthernStates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stability Party.
+        /// </summary>
+        internal static string FactionName_StabilityParty {
+            get {
+                return ResourceManager.GetString("FactionName_StabilityParty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Terran Loyalists.
+        /// </summary>
+        internal static string FactionName_TerranLoyalists {
+            get {
+                return ResourceManager.GetString("FactionName_TerranLoyalists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trade Federation.
+        /// </summary>
+        internal static string FactionName_TradeFederation {
+            get {
+                return ResourceManager.GetString("FactionName_TradeFederation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Treaty Forces.
+        /// </summary>
+        internal static string FactionName_TreatyForces {
+            get {
+                return ResourceManager.GetString("FactionName_TreatyForces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tripartate Alliance.
+        /// </summary>
+        internal static string FactionName_TripartateAlliance {
+            get {
+                return ResourceManager.GetString("FactionName_TripartateAlliance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Western Alliance.
+        /// </summary>
+        internal static string FactionName_WesternAlliance {
+            get {
+                return ResourceManager.GetString("FactionName_WesternAlliance", resourceCulture);
             }
         }
         

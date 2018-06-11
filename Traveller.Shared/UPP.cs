@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.Shared
+﻿namespace org.DownesWard.Traveller.Shared
 {
     /// <summary>
     /// Universal Persona Profile
@@ -21,7 +17,7 @@ namespace org.DownesWard.Traveller.Shared
             return Str.ToString() + Dex.ToString() + End.ToString();
         }
 
-        public virtual string SocialUWP()
+        public virtual string SocialUPP()
         {
             return Int.ToString() + Edu.ToString() + Soc.ToString();
         }

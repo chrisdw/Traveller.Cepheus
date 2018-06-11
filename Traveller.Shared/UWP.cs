@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.Shared
+﻿namespace org.DownesWard.Traveller.Shared
 {
     /// <summary>
     /// Univeral World Profile

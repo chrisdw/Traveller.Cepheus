@@ -201,56 +201,56 @@ namespace org.DownesWard.Traveller.SystemGeneration
                             case 2:
                                 switch (roll2)
                                 {
-                                    case 1: faction.Name = "Trade Federation"; break;
-                                    case 2: faction.Name = "Farmers Union"; break;
-                                    case 3: faction.Name = "Citizen's Movement"; break;
-                                    case 4: faction.Name = "Revolutionaries"; break;
-                                    case 5: faction.Name = "Glorious Brotherhood"; break;
-                                    case 6: faction.Name = "Freedom Party"; break;
+                                    case 1: faction.Name = Languages.FactionName_TradeFederation; break;
+                                    case 2: faction.Name = Languages.FactionName_FarmersUnion; break;
+                                    case 3: faction.Name = Languages.FactionName_CitizensMovement; break;
+                                    case 4: faction.Name = Languages.FactionName_Revolutionaries; break;
+                                    case 5: faction.Name = Languages.FactionName_GloriousBrotherhood; break;
+                                    case 6: faction.Name = Languages.FactionName_FreedomParty; break;
                                 }
                                 break;
                             case 3:
                                 switch (roll2)
                                 {
-                                    case 1: faction.Name = "Corporate Militia"; break;
-                                    case 2: faction.Name = "Rebels"; break;
-                                    case 3: faction.Name = "Industry Alliance"; break;
-                                    case 4: faction.Name = "Coalition"; break;
-                                    case 5: faction.Name = "Tripartate Alliance"; break;
-                                    case 6: faction.Name = "Coastal Union"; break;
+                                    case 1: faction.Name = Languages.FactionName_CorporateMilitia; break;
+                                    case 2: faction.Name = Languages.FactionName_Rebels; break;
+                                    case 3: faction.Name = Languages.FactionName_IndustryAlliance; break;
+                                    case 4: faction.Name = Languages.FactionName_Coalition; break;
+                                    case 5: faction.Name = Languages.FactionName_TripartateAlliance; break;
+                                    case 6: faction.Name = Languages.FactionName_CoastalUnion; break;
                                 }
                                 break;
                             case 4:
                                 switch (roll2)
                                 {
-                                    case 1: faction.Name = "Highlanders"; break;
-                                    case 2: faction.Name = "Southern States"; break;
-                                    case 3: faction.Name = "North Star League"; break;
-                                    case 4: faction.Name = "Terran Loyalists"; break;
-                                    case 5: faction.Name = "Progressive Party"; break;
-                                    case 6: faction.Name = "Crusaders"; break;
+                                    case 1: faction.Name = Languages.FactionName_Highlanders; break;
+                                    case 2: faction.Name = Languages.FactionName_SouthernStates; break;
+                                    case 3: faction.Name = Languages.FactionName_NorthStarLeague; break;
+                                    case 4: faction.Name = Languages.FactionName_TerranLoyalists; break;
+                                    case 5: faction.Name = Languages.FactionName_ProgressiveParty; break;
+                                    case 6: faction.Name = Languages.FactionName_Crusaders; break;
                                 }
                                 break;
                             case 5:
                                 switch (roll2)
                                 {
-                                    case 1: faction.Name = "Mountain Partisans"; break;
-                                    case 2: faction.Name = "Centralists"; break;
-                                    case 3: faction.Name = "Treaty Forces"; break;
-                                    case 4: faction.Name = "Western Alliance"; break;
-                                    case 5: faction.Name = "Eastern Bloc"; break;
-                                    case 6: faction.Name = "Stability Party"; break;
+                                    case 1: faction.Name = Languages.FactionName_MountainPartisans; break;
+                                    case 2: faction.Name = Languages.FactionName_Centralists; break;
+                                    case 3: faction.Name = Languages.FactionName_TreatyForces; break;
+                                    case 4: faction.Name = Languages.FactionName_WesternAlliance; break;
+                                    case 5: faction.Name = Languages.FactionName_EasternBloc; break;
+                                    case 6: faction.Name = Languages.FactionName_StabilityParty; break;
                                 }
                                 break;
                             case 6:
                                 switch (roll2)
                                 {
-                                    case 1: faction.Name = "Moderate Alliance"; break;
-                                    case 2: faction.Name = "People's Party"; break;
-                                    case 3: faction.Name = "Imperialist"; break;
-                                    case 4: faction.Name = "Monarchists"; break;
-                                    case 5: faction.Name = "Liberators"; break;
-                                    case 6: faction.Name = "Peace Faction"; break;
+                                    case 1: faction.Name = Languages.FactionName_ModerateAlliance; break;
+                                    case 2: faction.Name = Languages.FactionName_PeoplesParty; break;
+                                    case 3: faction.Name = Languages.FactionName_Imperialist; break;
+                                    case 4: faction.Name = Languages.FactionName_Monarchists; break;
+                                    case 5: faction.Name = Languages.FactionName_Liberators; break;
+                                    case 6: faction.Name = Languages.FactionName_PeaceFaction; break;
                                 }
                                 break;
                         }

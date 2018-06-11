@@ -418,6 +418,126 @@
           <source>The Way (Mainstream)</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">La voie (Mainstream)</target>
         </trans-unit>
+        <trans-unit id="FactionName_Centralists" translate="yes" xml:space="preserve">
+          <source>Centralists</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Centralisateurs</target>
+        </trans-unit>
+        <trans-unit id="FactionName_CitizensMovement" translate="yes" xml:space="preserve">
+          <source>Citizen's Movement</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mouvement du citoyen</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Coalition" translate="yes" xml:space="preserve">
+          <source>Coalition</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Coalition</target>
+        </trans-unit>
+        <trans-unit id="FactionName_CoastalUnion" translate="yes" xml:space="preserve">
+          <source>Coastal Union</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">L’Union côtière</target>
+        </trans-unit>
+        <trans-unit id="FactionName_CorporateMilitia" translate="yes" xml:space="preserve">
+          <source>Corporate Militia</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Milice corporative</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Crusaders" translate="yes" xml:space="preserve">
+          <source>Crusaders</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Croisés</target>
+        </trans-unit>
+        <trans-unit id="FactionName_EasternBloc" translate="yes" xml:space="preserve">
+          <source>Eastern Bloc</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bloc de l’est</target>
+        </trans-unit>
+        <trans-unit id="FactionName_FarmersUnion" translate="yes" xml:space="preserve">
+          <source>Farmers Union</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Farmers Union</target>
+        </trans-unit>
+        <trans-unit id="FactionName_FreedomParty" translate="yes" xml:space="preserve">
+          <source>Freedom Party</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Parti de la liberté</target>
+        </trans-unit>
+        <trans-unit id="FactionName_GloriousBrotherhood" translate="yes" xml:space="preserve">
+          <source>Glorious Brotherhood</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Glorieuse confrérie</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Highlanders" translate="yes" xml:space="preserve">
+          <source>Highlanders</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Highlanders</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Imperialist" translate="yes" xml:space="preserve">
+          <source>Imperialist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Impérialiste</target>
+        </trans-unit>
+        <trans-unit id="FactionName_IndustryAlliance" translate="yes" xml:space="preserve">
+          <source>Industry Alliance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alliance de l’industrie</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Liberators" translate="yes" xml:space="preserve">
+          <source>Liberators</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Libérateurs</target>
+        </trans-unit>
+        <trans-unit id="FactionName_ModerateAlliance" translate="yes" xml:space="preserve">
+          <source>Moderate Alliance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alliance modérée</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Monarchists" translate="yes" xml:space="preserve">
+          <source>Monarchists</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Monarchistes</target>
+        </trans-unit>
+        <trans-unit id="FactionName_MountainPartisans" translate="yes" xml:space="preserve">
+          <source>Mountain Partisans</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Partisans de la montagne</target>
+        </trans-unit>
+        <trans-unit id="FactionName_NorthStarLeague" translate="yes" xml:space="preserve">
+          <source>North Star League</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">North Star League</target>
+        </trans-unit>
+        <trans-unit id="FactionName_PeaceFaction" translate="yes" xml:space="preserve">
+          <source>Peace Faction</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Faction de la paix</target>
+        </trans-unit>
+        <trans-unit id="FactionName_PeoplesParty" translate="yes" xml:space="preserve">
+          <source>People's Party</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Parti populaire</target>
+        </trans-unit>
+        <trans-unit id="FactionName_ProgressiveParty" translate="yes" xml:space="preserve">
+          <source>Progressive Party</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Parti progressiste</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Rebels" translate="yes" xml:space="preserve">
+          <source>Rebels</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rebelles</target>
+        </trans-unit>
+        <trans-unit id="FactionName_Revolutionaries" translate="yes" xml:space="preserve">
+          <source>Revolutionaries</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Révolutionnaires</target>
+        </trans-unit>
+        <trans-unit id="FactionName_SouthernStates" translate="yes" xml:space="preserve">
+          <source>Southern States</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">États du Sud</target>
+        </trans-unit>
+        <trans-unit id="FactionName_StabilityParty" translate="yes" xml:space="preserve">
+          <source>Stability Party</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Parti de la stabilité</target>
+        </trans-unit>
+        <trans-unit id="FactionName_TerranLoyalists" translate="yes" xml:space="preserve">
+          <source>Terran Loyalists</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Terrien loyalistes</target>
+        </trans-unit>
+        <trans-unit id="FactionName_TradeFederation" translate="yes" xml:space="preserve">
+          <source>Trade Federation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fédération du commerce</target>
+        </trans-unit>
+        <trans-unit id="FactionName_TreatyForces" translate="yes" xml:space="preserve">
+          <source>Treaty Forces</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Traité de Forces</target>
+        </trans-unit>
+        <trans-unit id="FactionName_TripartateAlliance" translate="yes" xml:space="preserve">
+          <source>Tripartate Alliance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tripartate Alliance</target>
+        </trans-unit>
+        <trans-unit id="FactionName_WesternAlliance" translate="yes" xml:space="preserve">
+          <source>Western Alliance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Alliance ouest</target>
+        </trans-unit>
       </group>
     </body>
   </file>

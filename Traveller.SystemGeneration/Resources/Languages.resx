@@ -426,4 +426,94 @@
   <data name="TradeCode_WaterWorld" xml:space="preserve">
     <value>Wa</value>
   </data>
+  <data name="FactionName_Centralists" xml:space="preserve">
+    <value>Centralists</value>
+  </data>
+  <data name="FactionName_CitizensMovement" xml:space="preserve">
+    <value>Citizen's Movement</value>
+  </data>
+  <data name="FactionName_Coalition" xml:space="preserve">
+    <value>Coalition</value>
+  </data>
+  <data name="FactionName_CoastalUnion" xml:space="preserve">
+    <value>Coastal Union</value>
+  </data>
+  <data name="FactionName_CorporateMilitia" xml:space="preserve">
+    <value>Corporate Militia</value>
+  </data>
+  <data name="FactionName_Crusaders" xml:space="preserve">
+    <value>Crusaders</value>
+  </data>
+  <data name="FactionName_EasternBloc" xml:space="preserve">
+    <value>Eastern Bloc</value>
+  </data>
+  <data name="FactionName_FarmersUnion" xml:space="preserve">
+    <value>Farmers Union</value>
+  </data>
+  <data name="FactionName_FreedomParty" xml:space="preserve">
+    <value>Freedom Party</value>
+  </data>
+  <data name="FactionName_GloriousBrotherhood" xml:space="preserve">
+    <value>Glorious Brotherhood</value>
+  </data>
+  <data name="FactionName_Highlanders" xml:space="preserve">
+    <value>Highlanders</value>
+  </data>
+  <data name="FactionName_Imperialist" xml:space="preserve">
+    <value>Imperialist</value>
+  </data>
+  <data name="FactionName_IndustryAlliance" xml:space="preserve">
+    <value>Industry Alliance</value>
+  </data>
+  <data name="FactionName_Liberators" xml:space="preserve">
+    <value>Liberators</value>
+  </data>
+  <data name="FactionName_ModerateAlliance" xml:space="preserve">
+    <value>Moderate Alliance</value>
+  </data>
+  <data name="FactionName_Monarchists" xml:space="preserve">
+    <value>Monarchists</value>
+  </data>
+  <data name="FactionName_MountainPartisans" xml:space="preserve">
+    <value>Mountain Partisans</value>
+  </data>
+  <data name="FactionName_NorthStarLeague" xml:space="preserve">
+    <value>North Star League</value>
+  </data>
+  <data name="FactionName_PeaceFaction" xml:space="preserve">
+    <value>Peace Faction</value>
+  </data>
+  <data name="FactionName_PeoplesParty" xml:space="preserve">
+    <value>People's Party</value>
+  </data>
+  <data name="FactionName_ProgressiveParty" xml:space="preserve">
+    <value>Progressive Party</value>
+  </data>
+  <data name="FactionName_Rebels" xml:space="preserve">
+    <value>Rebels</value>
+  </data>
+  <data name="FactionName_Revolutionaries" xml:space="preserve">
+    <value>Revolutionaries</value>
+  </data>
+  <data name="FactionName_SouthernStates" xml:space="preserve">
+    <value>Southern States</value>
+  </data>
+  <data name="FactionName_StabilityParty" xml:space="preserve">
+    <value>Stability Party</value>
+  </data>
+  <data name="FactionName_TerranLoyalists" xml:space="preserve">
+    <value>Terran Loyalists</value>
+  </data>
+  <data name="FactionName_TradeFederation" xml:space="preserve">
+    <value>Trade Federation</value>
+  </data>
+  <data name="FactionName_TreatyForces" xml:space="preserve">
+    <value>Treaty Forces</value>
+  </data>
+  <data name="FactionName_TripartateAlliance" xml:space="preserve">
+    <value>Tripartate Alliance</value>
+  </data>
+  <data name="FactionName_WesternAlliance" xml:space="preserve">
+    <value>Western Alliance</value>
+  </data>
 </root>
