@@ -4,6 +4,7 @@ using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.SystemGeneration
 {
@@ -1362,7 +1363,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public double Population(bool forCollapse)
         {
             var pop = 0.0;
-            
+
             foreach (var satelitte in Sattelites)
             {
                 pop += satelitte.Population(forCollapse);
@@ -1388,6 +1389,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 satellite.CompleteTravInfo(configuration, mainworld);
             }
+        }
+        public void SaveToXML(XmlElement objOrbit, Configuration configuration)
+        {
         }
     }
 }

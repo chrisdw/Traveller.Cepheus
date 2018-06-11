@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.SystemGeneration
 {
@@ -69,6 +70,48 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 throw new ArgumentException("The descriptor is too short", "descriptor");
             }
 
+            switch (descriptor[0])
+            {
+                case 'O':
+                case 'B':
+                case 'A':
+                case 'F':
+                case 'G':
+                case 'K':
+                case 'M':
+                    break;
+                default:
+                    throw new ArgumentException("Please enter a type of O, B, A, F, G, K or M", "descriptor");
+            }
+            switch (descriptor[1])
+            {
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    break;
+                default:
+                    throw new ArgumentException("Please enter a decimal class of 0-9", "descriptor");
+            }
+
+            switch (descriptor[2])
+            {
+                case 'a':
+                case 'b':
+                case '3':
+                case '4':
+                case '5':
+                case 'D':
+                    break;
+                default:
+                    throw new ArgumentException("Please enter a luminosity class of a, b, 2 - 5 or D", "descriptor");
+            }
             return valid;
         }
 
@@ -892,6 +935,58 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public string DisplayString()
         {
             return string.Format("{0}{1} ({2})", TypeToChar(StarType), DecClass, PrintLumClass());
+        }
+
+        public virtual void SaveToXML(XmlElement objSystem, Configuration configuration)
+        {
+            var xeStar = objSystem.OwnerDocument.CreateElement("Star");
+            objSystem.AppendChild(xeStar);
+            var xeChild = objSystem.OwnerDocument.CreateElement("Type");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(StarType.ToString()));
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("LumClass");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(LumClass.ToString()));
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("DecClass");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(DecClass.ToString()));
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("StellarMass");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(StellarMass.ToString()));
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("Luminosity");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(Luminosity.ToString()));
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("NumOrbits");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(NumOrbits.ToString()));
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("HZone");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(HZone.ToString()));
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("TypeRoll");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(TypeRoll.ToString()));
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("ClassRoll");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(ClassRoll.ToString()));
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("NumCompanions");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(NumCompanions.ToString());
+            xeStar.AppendChild(xeChild);
+            xeChild = objSystem.OwnerDocument.CreateElement("Name");
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(Name.ToString()));
+            xeStar.AppendChild(xeChild);
+
+            foreach (var orbit in Orbits)
+            {
+                orbit.SaveToXML(xeStar, configuration);
+            }
+
+            var xeStars = objSystem.OwnerDocument.CreateElement("Companions");
+            xeStar.AppendChild(xeStars);
+
+            foreach (var companion in Companions)
+            {
+                companion.SaveToXML(xeStars, configuration);
+            }
         }
     }
 }

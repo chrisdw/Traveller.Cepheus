@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.SystemGeneration
 {
@@ -103,6 +104,39 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 }
             }
             return 0;
+        }
+
+        public void SaveToXML(XmlElement objStar, Configuration configuration)
+        {
+            var xeOrbit = objStar.OwnerDocument.CreateElement("Orbit");
+            objStar.AppendChild(xeOrbit);
+            var xeChild = objStar.OwnerDocument.CreateElement("Type");
+            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(OrbitalType.ToString()));
+            xeOrbit.AppendChild(xeChild);
+            xeChild = objStar.OwnerDocument.CreateElement("Occupied");
+            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(Occupied.ToString()));
+            xeOrbit.AppendChild(xeChild);
+            xeChild = objStar.OwnerDocument.CreateElement("Number");
+
+            if (Occupied == OccupiedBy.CAPTURED)
+            {
+                xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(World.OrbitNumber.ToString()));
+            }
+            else
+            {
+                xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(Number.ToString()));
+            }
+
+            xeOrbit.AppendChild(xeChild);
+            xeChild = objStar.OwnerDocument.CreateElement("Range");
+            xeOrbit.AppendChild(xeChild);
+            xeChild = objStar.OwnerDocument.CreateElement("HasWorld");
+            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode((World != null).ToString()));
+            xeOrbit.AppendChild(xeChild);
+            if (World != null)
+            {
+                World.SaveToXML(xeOrbit, configuration);
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.SystemGeneration
 {
@@ -14,8 +15,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
             TRINARY
         }
 
-        public TravInfo Information { get; private set;  } = new TravInfo();
-        
+        public TravInfo Information { get; private set; } = new TravInfo();
+
         public Planet Mainworld { get; private set; }
 
         public string BG { get; private set; }
@@ -30,10 +31,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
         }
         private void Generate(Configuration configuration)
         {
-             // Just need the UPP, trade code and remarks
+            // Just need the UPP, trade code and remarks
             Mainworld = new Planet();
             Mainworld.Generate(configuration);
-            
+
             if (configuration.CurrentCampaign == Campaign.THENEWERA)
             {
                 Mainworld.DoCollapse(configuration);
@@ -95,7 +96,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     var retry = false;
                     do
                     {
-                        for (var j = 0; j  < i - 1; j++)
+                        for (var j = 0; j < i - 1; j++)
                         {
                             if (Primary.Companions[i].OrbitNum == Primary.Companions[j].OrbitNum)
                             {
@@ -111,7 +112,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 FleshOut(configuration);
 
                 // Get the BG string
-                BG = string.Format("{0}{1}", Primary.Count(Planet.WorldType.PLANETOID), 
+                BG = string.Format("{0}{1}", Primary.Count(Planet.WorldType.PLANETOID),
                     Primary.Count(Planet.WorldType.LGG) + Primary.Count(Planet.WorldType.SGG));
             }
             else
@@ -144,7 +145,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             FleshOut(configuration);
         }
 
-        public StarSystem (Configuration configuration, string primaryDescriptor, string secondaryDescriptor, string trinaryDescriptor)
+        public StarSystem(Configuration configuration, string primaryDescriptor, string secondaryDescriptor, string trinaryDescriptor)
         {
             var ComLumAddFromPrim = 0.0;
             SystemHability = 0;
@@ -182,7 +183,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 {
                     mainworld.MainWorld = true;
                     Mainworld = mainworld;
-                    
+
                     if (configuration.GenerateTravInfo)
                     {
                         mainworld.CompleteTravInfo(configuration);
@@ -200,5 +201,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 }
             }
         }
+
     }
 }
