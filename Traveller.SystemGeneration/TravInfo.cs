@@ -753,48 +753,25 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             var xeInfo = objWorld.OwnerDocument.CreateElement("TravellerInfo");
             objWorld.AppendChild(xeInfo);
-            var xeChild = objWorld.OwnerDocument.CreateElement("Starport");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Starport.ToString()));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("Size");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Size.Value.ToString()));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("Atmosphere");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Atmosphere.Value.ToString()));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("Hydro");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Hydro.Value.ToString()));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("Pop");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Pop.Value.ToString()));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("Government");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Government.Value.ToString()));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("Law");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Law.Value.ToString()));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("TechLevel");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(TechLevel.Value.ToString()));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("PopMult");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(PopMult.ToString()));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("Remarks");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Remarks));
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("Bases");
-            xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(Bases));
-            xeInfo.AppendChild(xeChild);
+
+            Common.CreateTextNode(objWorld, "Starport", Starport.ToString());
+            Common.CreateTextNode(objWorld, "Size", Size.Value.ToString());
+            Common.CreateTextNode(objWorld, "Atmosphere", Atmosphere.Value.ToString());
+            Common.CreateTextNode(objWorld, "Hydro", Hydro.Value.ToString());
+            Common.CreateTextNode(objWorld, "Pop", Pop.Value.ToString());
+            Common.CreateTextNode(objWorld, "Government", Government.Value.ToString());
+            Common.CreateTextNode(objWorld, "Law", Law.Value.ToString());
+            Common.CreateTextNode(objWorld, "TechLevel", TechLevel.Value.ToString());
+            Common.CreateTextNode(objWorld, "PopMult", PopMult.ToString());
+            Common.CreateTextNode(objWorld, "Remarks", Remarks);
+            Common.CreateTextNode(objWorld, "Bases", Bases);
 
             if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
-                xeChild = objWorld.OwnerDocument.CreateElement("ConflictReason");
-                xeChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(ConflictReason));
+                Common.CreateTextNode(objWorld, "ConflictReason", ConflictReason);
             }
 
-            xeInfo.AppendChild(xeChild);
-            xeChild = objWorld.OwnerDocument.CreateElement("Factions");
+            var xeChild = objWorld.OwnerDocument.CreateElement("Factions");
             foreach (var faction in Factions)
             {
                 var xeFactionChild = objWorld.OwnerDocument.CreateElement("Faction");

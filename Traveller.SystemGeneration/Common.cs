@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 using org.DownesWard.Utilities;
 
 namespace org.DownesWard.Traveller.SystemGeneration
@@ -89,6 +90,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public static double CtoF(double cdegrees)
         {
             return ((cdegrees * 1.8) + 32);
+        }
+
+        internal static void CreateTextNode(XmlElement xeParent, string name, string value)
+        {
+            var xeChild = xeParent.OwnerDocument.CreateElement(name);
+            xeChild.AppendChild(xeParent.OwnerDocument.CreateTextNode(value));
+            xeParent.AppendChild(xeChild);
         }
     }
 }

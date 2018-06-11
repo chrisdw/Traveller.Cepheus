@@ -83,49 +83,22 @@ namespace org.DownesWard.Traveller.SystemGeneration
             objStar.AppendChild(xeStar);
 
             // Companion specific attributes
-            var xeChild = objStar.OwnerDocument.CreateElement("OrbitNum");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(OrbitNum.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("Range");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(Range.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("SysNat");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(SysNat.ToString()));
-            xeStar.AppendChild(xeChild);
+            Common.CreateTextNode(objStar, "OrbitNum", OrbitNum.ToString());
+            Common.CreateTextNode(objStar, "Range", Range.ToString());
+            Common.CreateTextNode(objStar, "SysNat", SysNat.ToString());
 
-            xeChild = objStar.OwnerDocument.CreateElement("Type");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(StarType.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("LumClass");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(LumClass.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("DecClass");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(DecClass.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("StellarMass");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(StellarMass.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("Luminosity");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(Luminosity.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("NumOrbits");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(NumOrbits.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("HZone");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(HZone.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("TypeRoll");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(TypeRoll.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("ClassRoll");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(ClassRoll.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("NumCompanions");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(NumCompanions.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objStar.OwnerDocument.CreateElement("Name");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(Name.ToString()));
-            xeStar.AppendChild(xeChild);
+            // Common attributes
+            Common.CreateTextNode(objStar, "Type", StarType.ToString());
+            Common.CreateTextNode(objStar, "LumClass", LumClass.ToString());
+            Common.CreateTextNode(objStar, "DecClass", DecClass.ToString());
+            Common.CreateTextNode(objStar, "StellarMass", StellarMass.ToString());
+            Common.CreateTextNode(objStar, "Luminosity", Luminosity.ToString());
+            Common.CreateTextNode(objStar, "NumOrbits", NumOrbits.ToString());
+            Common.CreateTextNode(objStar, "HZone", HZone.ToString());
+            Common.CreateTextNode(objStar, "TypeRoll", TypeRoll.ToString());
+            Common.CreateTextNode(objStar, "ClassRoll", ClassRoll.ToString());
+            Common.CreateTextNode(objStar, "NumCompanions", NumCompanions.ToString());
+            Common.CreateTextNode(objStar, "Name", Name.ToString());
 
             foreach (var orbit in Orbits)
             {

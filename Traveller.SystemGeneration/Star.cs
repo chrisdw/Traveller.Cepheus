@@ -941,39 +941,17 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             var xeStar = objSystem.OwnerDocument.CreateElement("Star");
             objSystem.AppendChild(xeStar);
-            var xeChild = objSystem.OwnerDocument.CreateElement("Type");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(StarType.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("LumClass");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(LumClass.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("DecClass");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(DecClass.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("StellarMass");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(StellarMass.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("Luminosity");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(Luminosity.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("NumOrbits");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(NumOrbits.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("HZone");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(HZone.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("TypeRoll");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(TypeRoll.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("ClassRoll");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(ClassRoll.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("NumCompanions");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(NumCompanions.ToString()));
-            xeStar.AppendChild(xeChild);
-            xeChild = objSystem.OwnerDocument.CreateElement("Name");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(Name.ToString()));
-            xeStar.AppendChild(xeChild);
+            Common.CreateTextNode(objSystem, "Type", StarType.ToString());
+            Common.CreateTextNode(objSystem, "LumClass", LumClass.ToString());
+            Common.CreateTextNode(objSystem, "DecClass", DecClass.ToString());
+            Common.CreateTextNode(objSystem, "StellarMass", StellarMass.ToString());
+            Common.CreateTextNode(objSystem, "Luminosity", Luminosity.ToString());
+            Common.CreateTextNode(objSystem, "NumOrbits", NumOrbits.ToString());
+            Common.CreateTextNode(objSystem, "HZone", HZone.ToString());
+            Common.CreateTextNode(objSystem, "TypeRoll", TypeRoll.ToString());
+            Common.CreateTextNode(objSystem, "ClassRoll", ClassRoll.ToString());
+            Common.CreateTextNode(objSystem, "NumCompanions", NumCompanions.ToString());
+            Common.CreateTextNode(objSystem, "Name", Name.ToString());
 
             foreach (var orbit in Orbits)
             {
