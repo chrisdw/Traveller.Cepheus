@@ -33,7 +33,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        private void hardScienceSwitch_Toggled(object sender, ToggledEventArgs e)
+        private void HardScienceSwitch_Toggled(object sender, ToggledEventArgs e)
         {
             if (hardScienceSwitch.On && !spaceOperaSwitch.On)
             {
@@ -41,7 +41,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        private void startportTablePicker_SelectedIndexChanged(object sender, EventArgs e)
+        private void StartportTablePicker_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (startportTablePicker.SelectedIndex == 0)
             {
@@ -61,7 +61,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        private void spaceOperaSwitch_OnChanged(object sender, ToggledEventArgs e)
+        private void SpaceOperaSwitch_OnChanged(object sender, ToggledEventArgs e)
         {
             if (!spaceOperaSwitch.On && hardScienceSwitch.On)
             {
@@ -69,7 +69,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        private void generateButton_Clicked(object sender, EventArgs e)
+        private void GenerateButton_Clicked(object sender, EventArgs e)
         {
             Config.SpaceOpera = spaceOperaSwitch.On;
             Config.HardScience = hardScienceSwitch.On;
@@ -87,10 +87,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             panResult.IsVisible = true;
             // As this is a basic generation, get a normal UPP
-            UPPLabel.Text = CurrentStarSystem.Information.DisplayString() + CurrentStarSystem.BG;
+            UWPLabel.Text = CurrentStarSystem.Information.DisplayString() + CurrentStarSystem.BG;
         }
 
-        private void viewWorldButton_Clicked(object sender, EventArgs e)
+        private void ViewWorldButton_Clicked(object sender, EventArgs e)
         {
             var worldView = new WorldView(CurrentStarSystem.Mainworld, Config);
             Navigation.PushModalAsync(worldView);

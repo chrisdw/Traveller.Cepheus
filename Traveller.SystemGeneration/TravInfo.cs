@@ -7,18 +7,18 @@ using System.Xml;
 
 namespace org.DownesWard.Traveller.SystemGeneration
 {
-    public class TravInfo : UPP
+    public class TravInfo : UWP
     {
         public int PopMult { get; set; }
         public string Remarks { get; set; }
         public string Bases { get; set; }
         public string ConflictReason { get; set; }
 
-        public string UPPString
+        public string UWPString
         {
             get
             {
-                return UPP();
+                return UWP();
             }
         }
         public List<Faction> Factions { get; internal set; } = new List<Faction>();
@@ -31,7 +31,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             Bases = string.Empty;
         }
 
-        public string UPP(Planet.WorldType type = Planet.WorldType.NORMAL, double diameter = 0)
+        public string UWP(Planet.WorldType type = Planet.WorldType.NORMAL, double diameter = 0)
         {
             var builder = new StringBuilder();
             switch (type)
@@ -43,14 +43,14 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     builder.AppendFormat("SGG - diameter {0} km", diameter.ToString("F"));
                     break;
                 case Planet.WorldType.SMALL:
-                    builder.AppendFormat("{0}-S{1}{2}-{3}-{4}", Starport, Atmosphere.ToString(), Hydro.ToString(), SocialUPP(), TechLevel.ToString());
+                    builder.AppendFormat("{0}-S{1}{2}-{3}-{4}", Starport, Atmosphere.ToString(), Hydro.ToString(), SocialUWP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.RING:
-                    builder.AppendFormat("{0}-R00-{1}-{2}", Starport, SocialUPP(), TechLevel.ToString());
+                    builder.AppendFormat("{0}-R00-{1}-{2}", Starport, SocialUWP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.NORMAL:
                 case Planet.WorldType.PLANETOID:
-                    builder.AppendFormat("{0}-{1}{2}-{3}", Starport, PhysicalUPP(), SocialUPP(), TechLevel.ToString());
+                    builder.AppendFormat("{0}-{1}{2}-{3}", Starport, PhysicalUWP(), SocialUWP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.STAR:
                     builder.Append(Languages.CompanionStar);
@@ -62,7 +62,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public string DisplayString(Planet.WorldType type = Planet.WorldType.NORMAL, double diameter = 0)
         {
             var builder = new StringBuilder();
-            builder.AppendFormat("{0}\t{1}\t{2}", UPP(), Bases, Remarks);
+            builder.AppendFormat("{0}\t{1}\t{2}", UWP(), Bases, Remarks);
             if (type != Planet.WorldType.LGG && type != Planet.WorldType.SGG && type != Planet.WorldType.STAR)
             {
                 if (PopMult > 0)

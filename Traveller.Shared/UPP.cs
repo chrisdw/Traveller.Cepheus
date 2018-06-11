@@ -4,25 +4,26 @@ using System.Text;
 
 namespace org.DownesWard.Traveller.Shared
 {
+    /// <summary>
+    /// Universal Persona Profile
+    /// </summary>
     public class UPP
     {
-        public char Starport { get; set; }
-        public TravCode Size { get; } = new TravCode(10);
-        public TravCode Atmosphere { get; } = new TravCode();
-        public TravCode Hydro { get; } = new TravCode(10);
-        public TravCode Pop { get; } = new TravCode(10);
-        public TravCode Government { get; } = new TravCode();
-        public TravCode Law { get; } = new TravCode();
-        public TravCode TechLevel { get; } = new TravCode();
+        public TravCode Str { get; } = new TravCode(15);
+        public TravCode Dex { get; } = new TravCode(15);
+        public TravCode End { get; } = new TravCode(15);
+        public TravCode Int { get; } = new TravCode(15);
+        public TravCode Edu { get; } = new TravCode(15);
+        public TravCode Soc { get; } = new TravCode(15);
 
-        public string PhysicalUPP()
+        public virtual string PhysicalUPP()
         {
-            return Size.ToString() + Atmosphere.ToString() + Hydro.ToString();
+            return Str.ToString() + Dex.ToString() + End.ToString();
         }
 
-        public string SocialUPP()
+        public virtual string SocialUWP()
         {
-            return Pop.ToString() + Government.ToString() + Law.ToString();
+            return Int.ToString() + Edu.ToString() + Soc.ToString();
         }
     }
 }

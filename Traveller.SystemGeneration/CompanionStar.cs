@@ -121,7 +121,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(ClassRoll.ToString()));
             xeStar.AppendChild(xeChild);
             xeChild = objStar.OwnerDocument.CreateElement("NumCompanions");
-            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(NumCompanions.ToString());
+            xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(NumCompanions.ToString()));
             xeStar.AppendChild(xeChild);
             xeChild = objStar.OwnerDocument.CreateElement("Name");
             xeChild.AppendChild(objStar.OwnerDocument.CreateTextNode(Name.ToString()));

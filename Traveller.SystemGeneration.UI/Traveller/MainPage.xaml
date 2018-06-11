@@ -25,7 +25,7 @@
                         </Picker>
                     </ViewCell>
                     <ViewCell>
-                        <Picker x:Name="startportTablePicker" Title="Starport Picker" SelectedIndexChanged="startportTablePicker_SelectedIndexChanged">
+                        <Picker x:Name="startportTablePicker" Title="Starport Picker" SelectedIndexChanged="StartportTablePicker_SelectedIndexChanged">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>Backwater</x:String>
@@ -37,8 +37,8 @@
                         </Picker>
                     </ViewCell>
                     <EntryCell x:Name="baseName" Label="Name" Keyboard="Text" Placeholder="Base name used to generate system object names" />
-                    <SwitchCell x:Name="spaceOperaSwitch" Text="Space Opera" OnChanged="spaceOperaSwitch_OnChanged"/>
-                    <SwitchCell x:Name="hardScienceSwitch" Text="Hard Science" OnChanged="hardScienceSwitch_Toggled"/>
+                    <SwitchCell x:Name="spaceOperaSwitch" Text="Space Opera" OnChanged="SpaceOperaSwitch_OnChanged"/>
+                    <SwitchCell x:Name="hardScienceSwitch" Text="Hard Science" OnChanged="HardScienceSwitch_Toggled"/>
                     <SwitchCell x:Name="gaiaFactorSwitch" Text="Gaia Factor" On="True" />
                     <SwitchCell x:Name="travellerInfoSwitch" Text="Generate Traveller Information" On="True"/>
                     <SwitchCell x:Name="farenheightSwitch" Text="Use Farenheight" />
@@ -46,10 +46,10 @@
                 </TableSection>
             </TableRoot>
         </TableView>
-        <Button x:Name="generateButton" Text="Generate" Clicked="generateButton_Clicked" />
+        <Button x:Name="generateButton" Text="Generate" Clicked="GenerateButton_Clicked" />
         <StackLayout x:Name="panResult" Orientation="Horizontal" IsVisible="False">
-            <Label x:Name="UPPLabel" Text=""  />
-            <Button x:Name="viewWorldButton" Text="View Details" Clicked="viewWorldButton_Clicked" />
+            <Label x:Name="UWPLabel" Text=""  />
+            <Button x:Name="ViewWorldButton" Text="View Details" Clicked="ViewWorldButton_Clicked" />
         </StackLayout>
     </StackLayout>
 </ContentPage>

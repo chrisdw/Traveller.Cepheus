@@ -33,8 +33,8 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label x:Name="lblUPP" Text="UPP" />
-                <Label x:Name="UPP" Text="{Binding UPPString}"/>
+                <Label x:Name="lblUWP" Text="UWP" />
+                <Label x:Name="UWP" Text="{Binding UWPString}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="lblRemarks" Text="Remarks" />
@@ -68,8 +68,8 @@
             </ListView>
             <StackLayout x:Name="tneData">
                 <StackLayout x:Name="tneCollapse" Orientation="Horizontal">
-                    <Label x:Name="lblCollapseUPP" Text="Post Collapse UPP" />
-                    <Label x:Name="collapseUPP" Text="{Binding UPPString}"/>
+                    <Label x:Name="lblCollapseUWP" Text="Post Collapse UWP" />
+                    <Label x:Name="collapseUWP" Text="{Binding UWPString}"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label x:Name="lblCollapseRemarks" Text="Remarks" />
@@ -98,8 +98,8 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
-            <Button x:Name="butEncounters" Text="Encounters" Clicked="butEncounters_Clicked" />
-            <Button x:Name="butAnother" Text="Go Back" Clicked="butAnother_Clicked" />
+            <Button x:Name="Encounters" Text="Encounters" Clicked="Encounters_Clicked" />
+            <Button x:Name="Another" Text="Go Back" Clicked="Another_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

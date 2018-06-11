@@ -20,7 +20,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             conflictReason.IsVisible = (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS);
             tneData.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
-            butEncounters.IsVisible = planet.Life;
+            Encounters.IsVisible = planet.Life;
 
             if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
@@ -35,12 +35,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        private void butAnother_Clicked(object sender, System.EventArgs e)
+        private void Another_Clicked(object sender, System.EventArgs e)
         {
             Navigation.PopModalAsync();
         }
 
-        private void butEncounters_Clicked(object sender, System.EventArgs e)
+        private void Encounters_Clicked(object sender, System.EventArgs e)
         {
             var regionList = new RegionList(Planet.Encounters);
             Navigation.PushModalAsync(regionList);

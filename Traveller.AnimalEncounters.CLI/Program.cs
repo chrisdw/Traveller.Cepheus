@@ -7,10 +7,10 @@ namespace org.DownesWard.Traveller.AnimalEncounters.CLI
     {
         static void Main(string[] args)
         {
-            UPP upp = new UPP();
-            upp.Atmosphere.Value = 7;
-            upp.Hydro.Value = 7;
-            upp.Size.Value = 7;
+            UWP uwp = new UWP();
+            uwp.Atmosphere.Value = 7;
+            uwp.Hydro.Value = 7;
+            uwp.Size.Value = 7;
             int tsize = 2;
             TableGenerator table = new TableGenerator();
 
@@ -34,20 +34,20 @@ namespace org.DownesWard.Traveller.AnimalEncounters.CLI
                         // it's a UPP
                         if (arg.Length > 1)
                         {
-                            upp.Size.Value = int.Parse(arg[0].ToString());
+                            uwp.Size.Value = int.Parse(arg[0].ToString());
                         }
                         if (arg.Length > 2)
                         {
-                            upp.Atmosphere.Value = int.Parse(arg[1].ToString());
+                            uwp.Atmosphere.Value = int.Parse(arg[1].ToString());
                         }
                         if (arg.Length > 3)
                         {
-                            upp.Hydro.Value = int.Parse(arg[2].ToString());
+                            uwp.Hydro.Value = int.Parse(arg[2].ToString());
                         }
                     }
                 }
             }
-            table.Generate(tsize, upp);
+            table.Generate(tsize, uwp);
             table.WriteStreamAsText(Console.Out);
         }
     }

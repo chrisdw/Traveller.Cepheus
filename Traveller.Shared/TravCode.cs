@@ -5,7 +5,7 @@ namespace org.DownesWard.Traveller.Shared
 {
     public class TravCode
     {
-        private int maxValue;
+        private readonly int maxValue;
         private int currentValue;
         private readonly string list = "0123456789ABCDEFGHJKLMNPQRSTUVWXYZ";
 

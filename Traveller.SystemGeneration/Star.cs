@@ -969,7 +969,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(ClassRoll.ToString()));
             xeStar.AppendChild(xeChild);
             xeChild = objSystem.OwnerDocument.CreateElement("NumCompanions");
-            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(NumCompanions.ToString());
+            xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(NumCompanions.ToString()));
             xeStar.AppendChild(xeChild);
             xeChild = objSystem.OwnerDocument.CreateElement("Name");
             xeChild.AppendChild(objSystem.OwnerDocument.CreateTextNode(Name.ToString()));
