@@ -1220,7 +1220,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     Collapse.PopMult -= 10;
                 }
 
-                Collapse.DoFactions(configuration);
+                Collapse.Factions = Faction.GenerateFactions(Collapse, configuration);
 
                 Collapse.DoTradeClassification();
             }

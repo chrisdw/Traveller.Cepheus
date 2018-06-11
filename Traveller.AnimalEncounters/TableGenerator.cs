@@ -30,16 +30,15 @@ namespace org.DownesWard.Traveller.AnimalEncounters
     {
         /* global arrays to store the critters */
         public const int MAX_CRIT = 264;
-
-        int[] cr_size = new int[MAX_CRIT];
-        int[] cr_type = new int[MAX_CRIT];
-        int[] cr_weapon = new int[MAX_CRIT];
-        int[] cr_armour = new int[MAX_CRIT];
-        int[] cr_attrib = new int[MAX_CRIT];
-        int[] cr_attack = new int[MAX_CRIT];
-        int[] cr_flee = new int[MAX_CRIT];
-        int[] cr_speed = new int[MAX_CRIT];
-        int[] cr_family = new int[MAX_CRIT];
+        readonly int[] cr_size = new int[MAX_CRIT];
+        readonly int[] cr_type = new int[MAX_CRIT];
+        readonly int[] cr_weapon = new int[MAX_CRIT];
+        readonly int[] cr_armour = new int[MAX_CRIT];
+        readonly int[] cr_attrib = new int[MAX_CRIT];
+        readonly int[] cr_attack = new int[MAX_CRIT];
+        readonly int[] cr_flee = new int[MAX_CRIT];
+        readonly int[] cr_speed = new int[MAX_CRIT];
+        readonly int[] cr_family = new int[MAX_CRIT];
         int cr_count = 0; // number of critters in the array
 
         int _tsize;
@@ -50,8 +49,8 @@ namespace org.DownesWard.Traveller.AnimalEncounters
             _tsize = tsize;
             _upp = upp;
 
-            genTable(tsize, upp);
-            findFamily(0);
+            GenerateTable(tsize, upp);
+            FindFamily(0);
             //prtTable(tsize, upp);
             return GetEncounters(tsize, upp);
         }
@@ -59,85 +58,85 @@ namespace org.DownesWard.Traveller.AnimalEncounters
         //---------------------------------------------------------------------------//
         // generate 1- or 2-dice encounter tables
         //---------------------------------------------------------------------------//
-        protected void genTable(int dice, UPP upp)
+        protected void GenerateTable(int dice, UPP upp)
         {
-            genRegion(dice, "Clear, Road, Open", upp, 3, 0, 0);
-            genRegion(dice, "Prairie, Plain, Steppe", upp, 4, 0, 0);
-            genRegion(dice, "Rough, Hills, Foothills", upp, 0, 0, 0);
-            genRegion(dice, "Broken, Badlands", upp, -3, -3, 0);
-            genRegion(dice, "Mountain, Alpine", upp, 0, 0, 0);
-            genRegion(dice, "Forest, Woods", upp, -4, -4, 0);
-            genRegion(dice, "Jungle, Rainforest", upp, -3, -2, 0);
-            genRegion(dice, "River, Stream, Creek", upp, 1, 1, 3);
-            genRegion(dice, "Swamp, Bog", upp, -2, 4, 5);
-            genRegion(dice, "Marsh, Wetland", upp, 0, -1, 2);
-            genRegion(dice, "Desert, Dunes", upp, 3, -3, 0);
-            genRegion(dice, "Beach, Shore, Sea Edge", upp, 3, 2, 1);
-            genRegion(dice, "Surface, Ocean, Sea", upp, 2, 3, 4);
-            genRegion(dice, "Shallows, Ocean, Sea", upp, 2, 2, 4);
+            GenerateRegion(dice, "Clear, Road, Open", upp, 3, 0, 0);
+            GenerateRegion(dice, "Prairie, Plain, Steppe", upp, 4, 0, 0);
+            GenerateRegion(dice, "Rough, Hills, Foothills", upp, 0, 0, 0);
+            GenerateRegion(dice, "Broken, Badlands", upp, -3, -3, 0);
+            GenerateRegion(dice, "Mountain, Alpine", upp, 0, 0, 0);
+            GenerateRegion(dice, "Forest, Woods", upp, -4, -4, 0);
+            GenerateRegion(dice, "Jungle, Rainforest", upp, -3, -2, 0);
+            GenerateRegion(dice, "River, Stream, Creek", upp, 1, 1, 3);
+            GenerateRegion(dice, "Swamp, Bog", upp, -2, 4, 5);
+            GenerateRegion(dice, "Marsh, Wetland", upp, 0, -1, 2);
+            GenerateRegion(dice, "Desert, Dunes", upp, 3, -3, 0);
+            GenerateRegion(dice, "Beach, Shore, Sea Edge", upp, 3, 2, 1);
+            GenerateRegion(dice, "Surface, Ocean, Sea", upp, 2, 3, 4);
+            GenerateRegion(dice, "Shallows, Ocean, Sea", upp, 2, 2, 4);
             if (upp.Hydro.Value > 0)
             {
-                genRegion(dice, "Depths, Ocean, Sea", upp, 2, 4, 4);
-                genRegion(dice, "Bottom, Ocean, Sea", upp, -4, 0, 4);
+                GenerateRegion(dice, "Depths, Ocean, Sea", upp, 2, 4, 4);
+                GenerateRegion(dice, "Bottom, Ocean, Sea", upp, -4, 0, 4);
             }
-            genRegion(dice, "Sea Cave, Sea Cavern", upp, -2, 0, 4);
-            genRegion(dice, "Sargasso, Seaweed", upp, -4, -2, 4);
-            genRegion(dice, "Ruins, Old City", upp, -3, 0, 0);
-            genRegion(dice, "Cave, Cavern", upp, -4, 1, 0);
-            genRegion(dice, "Chasm, Crevass. Abyss", upp, -1, -3, 0);
-            genRegion(dice, "Crater, Hollow", upp, 0, -1, 0);
+            GenerateRegion(dice, "Sea Cave, Sea Cavern", upp, -2, 0, 4);
+            GenerateRegion(dice, "Sargasso, Seaweed", upp, -4, -2, 4);
+            GenerateRegion(dice, "Ruins, Old City", upp, -3, 0, 0);
+            GenerateRegion(dice, "Cave, Cavern", upp, -4, 1, 0);
+            GenerateRegion(dice, "Chasm, Crevass. Abyss", upp, -1, -3, 0);
+            GenerateRegion(dice, "Crater, Hollow", upp, 0, -1, 0);
 
         }
 
         //---------------------------------------------------------------------------//
         // generate 1- or 2-dice encounter tables for a named region
         //---------------------------------------------------------------------------//
-        protected void genRegion(int dice, string name, UPP upp, int typeDM, int sizeDM, int special)
+        protected void GenerateRegion(int dice, string name, UPP upp, int typeDM, int sizeDM, int special)
         {
             //printf("\n%-60s UPP %-6s\n",name,upp);
             //printf("Die  Animal              Weight  Hits  Armour   Weapons           Wounds\n");
             if (dice == 1)
             {
-                genCritter(1, "S", upp, typeDM, sizeDM, special);
-                genCritter(2, "H", upp, typeDM, sizeDM, special);
-                genCritter(3, "H", upp, typeDM, sizeDM, special);
-                genCritter(4, "H", upp, typeDM, sizeDM, special);
-                genCritter(5, "O", upp, typeDM, sizeDM, special);
-                genCritter(6, "C", upp, typeDM, sizeDM, special);
+                GenerateCritter(1, "S", upp, typeDM, sizeDM, special);
+                GenerateCritter(2, "H", upp, typeDM, sizeDM, special);
+                GenerateCritter(3, "H", upp, typeDM, sizeDM, special);
+                GenerateCritter(4, "H", upp, typeDM, sizeDM, special);
+                GenerateCritter(5, "O", upp, typeDM, sizeDM, special);
+                GenerateCritter(6, "C", upp, typeDM, sizeDM, special);
             }
             else
             {
-                genCritter(2, "S", upp, typeDM, sizeDM, special);
-                genCritter(3, "O", upp, typeDM, sizeDM, special);
-                genCritter(4, "S", upp, typeDM, sizeDM, special);
-                genCritter(5, "O", upp, typeDM, sizeDM, special);
-                genCritter(6, "H", upp, typeDM, sizeDM, special);
-                genCritter(7, "H", upp, typeDM, sizeDM, special);
-                genCritter(8, "H", upp, typeDM, sizeDM, special);
-                genCritter(9, "C", upp, typeDM, sizeDM, special);
-                genCritter(10, "E", upp, typeDM, sizeDM, special);
-                genCritter(11, "C", upp, typeDM, sizeDM, special);
-                genCritter(12, "C", upp, typeDM, sizeDM, special);
+                GenerateCritter(2, "S", upp, typeDM, sizeDM, special);
+                GenerateCritter(3, "O", upp, typeDM, sizeDM, special);
+                GenerateCritter(4, "S", upp, typeDM, sizeDM, special);
+                GenerateCritter(5, "O", upp, typeDM, sizeDM, special);
+                GenerateCritter(6, "H", upp, typeDM, sizeDM, special);
+                GenerateCritter(7, "H", upp, typeDM, sizeDM, special);
+                GenerateCritter(8, "H", upp, typeDM, sizeDM, special);
+                GenerateCritter(9, "C", upp, typeDM, sizeDM, special);
+                GenerateCritter(10, "E", upp, typeDM, sizeDM, special);
+                GenerateCritter(11, "C", upp, typeDM, sizeDM, special);
+                GenerateCritter(12, "C", upp, typeDM, sizeDM, special);
             }
         }
 
         //---------------------------------------------------------------------------//
         // generate a single critter, by type
         //---------------------------------------------------------------------------//
-        protected void genCritter(int dnum, string ctype, UPP upp, int typeDM, int sizeDM, int special)
+        protected void GenerateCritter(int dnum, string ctype, UPP upp, int typeDM, int sizeDM, int special)
         {
             // other attributes of a critter
             int size = 0;
             int weapon = 0;
             int armour = 0;
             int attrib = 0; // flyer etc
-            int att_roll = roll(6) + roll(6);
+            int att_roll = Roll(6) + Roll(6);
             int attack;
             int flee;
             int speed;
 
             // choose a specific type within the overall class
-            int type = roll(6) + roll(6);
+            int type = Roll(6) + Roll(6);
 
             // apply DMs
             type += typeDM;
@@ -219,12 +218,12 @@ namespace org.DownesWard.Traveller.AnimalEncounters
 
 
             // derive a size
-            size = roll(6) + roll(6) + sizeDM;
+            size = Roll(6) + Roll(6) + sizeDM;
             if (size < 1) size = 1;
             if (size > 20) size = 20;
             while (TableData.weights[size][0] == '*')
             {
-                size = roll(6) + roll(6) + sizeDM + 6;
+                size = Roll(6) + Roll(6) + sizeDM + 6;
                 if (size < 1) size = 1;
                 if (size > 20) size = 20;
             }
@@ -233,7 +232,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
 
 
             // derive armour
-            armour = roll(6) + roll(6);
+            armour = Roll(6) + Roll(6);
             if (ctype[0] == 'C') armour -= 1;
             if (ctype[0] == 'S') armour += 1;
             if (ctype[0] == 'H') armour += 2;
@@ -241,7 +240,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
             if (armour > 20) armour = 20;
             while (TableData.armours[armour][0] == '*')
             {
-                armour = roll(6) + roll(6) + 6;
+                armour = Roll(6) + Roll(6) + 6;
                 if (ctype[0] == 'C') armour -= 1;
                 if (ctype[0] == 'S') armour += 1;
                 if (ctype[0] == 'H') armour += 2;
@@ -252,7 +251,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
             if (ctype[0] == 'E') armour = 0;
 
             // derive weapons
-            weapon = roll(6) + roll(6);
+            weapon = Roll(6) + Roll(6);
             if (ctype[0] == 'O') weapon += 4;
             if (ctype[0] == 'C') weapon += 8;
             if (ctype[0] == 'H') weapon -= 3;
@@ -262,7 +261,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
             if (ctype[0] == 'E') weapon = 0;
 
             // derive behaviours
-            attack = roll(6); flee = roll(6); speed = roll(6); // defaults
+            attack = Roll(6); flee = Roll(6); speed = Roll(6); // defaults
             if ((TableData.ctypes[type])[0] == 'F')
             { // filter
                 attack = 0; flee += 2; speed -= 5;
@@ -342,7 +341,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
 
         public void WriteStreamAsText(TextWriter sw)
         {
-            prtTable(sw, _tsize, _upp);
+            PrintTable(sw, _tsize, _upp);
         }
 
         public void WriteToXML(System.Xml.XmlNode parent)
@@ -353,34 +352,34 @@ namespace org.DownesWard.Traveller.AnimalEncounters
             int dice = _tsize;
             UPP upp = _upp;
 
-            xmlRegion(parent, dice, "Clear, Road, Open", upp);
-            xmlRegion(parent, dice, "Prairie, Plain, Steppe", upp);
-            xmlRegion(parent, dice, "Rough, Hills, Foothills", upp);
-            xmlRegion(parent, dice, "Broken, Badlands", upp);
-            xmlRegion(parent, dice, "Mountain, Alpine", upp);
-            xmlRegion(parent, dice, "Forest, Woods", upp);
-            xmlRegion(parent, dice, "Jungle, Rainforest", upp);
-            xmlRegion(parent, dice, "River, Stream, Creek", upp);
-            xmlRegion(parent, dice, "Swamp, Bog", upp);
-            xmlRegion(parent, dice, "Marsh, Wetland", upp);
-            xmlRegion(parent, dice, "Desert, Dunes", upp);
-            xmlRegion(parent, dice, "Beach, Shore, Sea Edge", upp);
-            xmlRegion(parent, dice, "Surface, Ocean, Sea", upp);
-            xmlRegion(parent, dice, "Shallows, Ocean, Sea", upp);
+            XmlRegion(parent, dice, "Clear, Road, Open", upp);
+            XmlRegion(parent, dice, "Prairie, Plain, Steppe", upp);
+            XmlRegion(parent, dice, "Rough, Hills, Foothills", upp);
+            XmlRegion(parent, dice, "Broken, Badlands", upp);
+            XmlRegion(parent, dice, "Mountain, Alpine", upp);
+            XmlRegion(parent, dice, "Forest, Woods", upp);
+            XmlRegion(parent, dice, "Jungle, Rainforest", upp);
+            XmlRegion(parent, dice, "River, Stream, Creek", upp);
+            XmlRegion(parent, dice, "Swamp, Bog", upp);
+            XmlRegion(parent, dice, "Marsh, Wetland", upp);
+            XmlRegion(parent, dice, "Desert, Dunes", upp);
+            XmlRegion(parent, dice, "Beach, Shore, Sea Edge", upp);
+            XmlRegion(parent, dice, "Surface, Ocean, Sea", upp);
+            XmlRegion(parent, dice, "Shallows, Ocean, Sea", upp);
             if (upp.Hydro.Value > 0)
             {
-                xmlRegion(parent, dice, "Depths, Ocean, Sea", upp);
-                xmlRegion(parent, dice, "Bottom, Ocean, Sea", upp);
+                XmlRegion(parent, dice, "Depths, Ocean, Sea", upp);
+                XmlRegion(parent, dice, "Bottom, Ocean, Sea", upp);
             }
-            xmlRegion(parent, dice, "Sea Cave, Sea Cavern", upp);
-            xmlRegion(parent, dice, "Sargasso, Seaweed", upp);
-            xmlRegion(parent, dice, "Ruins, Old City", upp);
-            xmlRegion(parent, dice, "Cave, Cavern", upp);
-            xmlRegion(parent, dice, "Chasm, Crevass. Abyss", upp);
-            xmlRegion(parent, dice, "Crater, Hollow", upp);
+            XmlRegion(parent, dice, "Sea Cave, Sea Cavern", upp);
+            XmlRegion(parent, dice, "Sargasso, Seaweed", upp);
+            XmlRegion(parent, dice, "Ruins, Old City", upp);
+            XmlRegion(parent, dice, "Cave, Cavern", upp);
+            XmlRegion(parent, dice, "Chasm, Crevass. Abyss", upp);
+            XmlRegion(parent, dice, "Crater, Hollow", upp);
         }
 
-        private void xmlRegion(System.Xml.XmlNode parent, int dice, string name, UPP _upp)
+        private void XmlRegion(System.Xml.XmlNode parent, int dice, string name, UPP _upp)
         {
             System.Xml.XmlElement region = parent.OwnerDocument.CreateElement("Region");
             System.Xml.XmlElement nameEle = parent.OwnerDocument.CreateElement("name");
@@ -389,31 +388,31 @@ namespace org.DownesWard.Traveller.AnimalEncounters
 
             if (dice == 1)
             {
-                xmlCritter(region, 1);
-                xmlCritter(region, 2);
-                xmlCritter(region, 3);
-                xmlCritter(region, 4);
-                xmlCritter(region, 5);
-                xmlCritter(region, 6);
+                XmlCritter(region, 1);
+                XmlCritter(region, 2);
+                XmlCritter(region, 3);
+                XmlCritter(region, 4);
+                XmlCritter(region, 5);
+                XmlCritter(region, 6);
             }
             else
             {
-                xmlCritter(region, 2);
-                xmlCritter(region, 3);
-                xmlCritter(region, 4);
-                xmlCritter(region, 5);
-                xmlCritter(region, 6);
-                xmlCritter(region, 7);
-                xmlCritter(region, 8);
-                xmlCritter(region, 9);
-                xmlCritter(region, 10);
-                xmlCritter(region, 11);
-                xmlCritter(region, 12);
+                XmlCritter(region, 2);
+                XmlCritter(region, 3);
+                XmlCritter(region, 4);
+                XmlCritter(region, 5);
+                XmlCritter(region, 6);
+                XmlCritter(region, 7);
+                XmlCritter(region, 8);
+                XmlCritter(region, 9);
+                XmlCritter(region, 10);
+                XmlCritter(region, 11);
+                XmlCritter(region, 12);
             }
             parent.AppendChild(region);
         }
 
-        private void xmlCritter(System.Xml.XmlElement region, int dnum)
+        private void XmlCritter(System.Xml.XmlElement region, int dnum)
         {
             System.Xml.XmlElement critter = region.OwnerDocument.CreateElement("critter");
 
@@ -482,70 +481,70 @@ namespace org.DownesWard.Traveller.AnimalEncounters
         //---------------------------------------------------------------------------//
         // output 1- or 2-dice encounter tables
         //---------------------------------------------------------------------------//
-        protected void prtTable(TextWriter sw, int dice, UPP upp)
+        protected void PrintTable(TextWriter sw, int dice, UPP upp)
         {
             // initialise counter to iterate through the arrays
 
             cr_count = 0;
 
-            prtRegion(sw, dice, "Clear, Road, Open", upp);
-            prtRegion(sw, dice, "Prairie, Plain, Steppe", upp);
-            prtRegion(sw, dice, "Rough, Hills, Foothills", upp);
-            prtRegion(sw, dice, "Broken, Badlands", upp);
-            prtRegion(sw, dice, "Mountain, Alpine", upp);
-            prtRegion(sw, dice, "Forest, Woods", upp);
-            prtRegion(sw, dice, "Jungle, Rainforest", upp);
-            prtRegion(sw, dice, "River, Stream, Creek", upp);
-            prtRegion(sw, dice, "Swamp, Bog", upp);
-            prtRegion(sw, dice, "Marsh, Wetland", upp);
-            prtRegion(sw, dice, "Desert, Dunes", upp);
-            prtRegion(sw, dice, "Beach, Shore, Sea Edge", upp);
-            prtRegion(sw, dice, "Surface, Ocean, Sea", upp);
-            prtRegion(sw, dice, "Shallows, Ocean, Sea", upp);
+            PrintRegion(sw, dice, "Clear, Road, Open", upp);
+            PrintRegion(sw, dice, "Prairie, Plain, Steppe", upp);
+            PrintRegion(sw, dice, "Rough, Hills, Foothills", upp);
+            PrintRegion(sw, dice, "Broken, Badlands", upp);
+            PrintRegion(sw, dice, "Mountain, Alpine", upp);
+            PrintRegion(sw, dice, "Forest, Woods", upp);
+            PrintRegion(sw, dice, "Jungle, Rainforest", upp);
+            PrintRegion(sw, dice, "River, Stream, Creek", upp);
+            PrintRegion(sw, dice, "Swamp, Bog", upp);
+            PrintRegion(sw, dice, "Marsh, Wetland", upp);
+            PrintRegion(sw, dice, "Desert, Dunes", upp);
+            PrintRegion(sw, dice, "Beach, Shore, Sea Edge", upp);
+            PrintRegion(sw, dice, "Surface, Ocean, Sea", upp);
+            PrintRegion(sw, dice, "Shallows, Ocean, Sea", upp);
             if (upp.Hydro.Value > 0)
             {
-                prtRegion(sw, dice, "Depths, Ocean, Sea", upp);
-                prtRegion(sw, dice, "Bottom, Ocean, Sea", upp);
+                PrintRegion(sw, dice, "Depths, Ocean, Sea", upp);
+                PrintRegion(sw, dice, "Bottom, Ocean, Sea", upp);
             }
-            prtRegion(sw, dice, "Sea Cave, Sea Cavern", upp);
-            prtRegion(sw, dice, "Sargasso, Seaweed", upp);
-            prtRegion(sw, dice, "Ruins, Old City", upp);
-            prtRegion(sw, dice, "Cave, Cavern", upp);
-            prtRegion(sw, dice, "Chasm, Crevass. Abyss", upp);
-            prtRegion(sw, dice, "Crater, Hollow", upp);
+            PrintRegion(sw, dice, "Sea Cave, Sea Cavern", upp);
+            PrintRegion(sw, dice, "Sargasso, Seaweed", upp);
+            PrintRegion(sw, dice, "Ruins, Old City", upp);
+            PrintRegion(sw, dice, "Cave, Cavern", upp);
+            PrintRegion(sw, dice, "Chasm, Crevass. Abyss", upp);
+            PrintRegion(sw, dice, "Crater, Hollow", upp);
 
         }
 
         //---------------------------------------------------------------------------//
         // output 1- or 2-dice encounter tables for a named region
         //---------------------------------------------------------------------------//
-        protected void prtRegion(TextWriter sw, int dice, string name, UPP upp)
+        protected void PrintRegion(TextWriter sw, int dice, string name, UPP upp)
         {
             sw.WriteLine();
             sw.WriteLine("{0,65} UPP {1,6}", name, upp.PhysicalUPP());
             sw.WriteLine("Die  Animal              Weight  Hits  Armour   Weapons           Wounds");
             if (dice == 1)
             {
-                prtCritter(sw, 1);
-                prtCritter(sw, 2);
-                prtCritter(sw, 3);
-                prtCritter(sw, 4);
-                prtCritter(sw, 5);
-                prtCritter(sw, 6);
+                PrintCritter(sw, 1);
+                PrintCritter(sw, 2);
+                PrintCritter(sw, 3);
+                PrintCritter(sw, 4);
+                PrintCritter(sw, 5);
+                PrintCritter(sw, 6);
             }
             else
             {
-                prtCritter(sw, 2);
-                prtCritter(sw, 3);
-                prtCritter(sw, 4);
-                prtCritter(sw, 5);
-                prtCritter(sw, 6);
-                prtCritter(sw, 7);
-                prtCritter(sw, 8);
-                prtCritter(sw, 9);
-                prtCritter(sw, 10);
-                prtCritter(sw, 11);
-                prtCritter(sw, 12);
+                PrintCritter(sw, 2);
+                PrintCritter(sw, 3);
+                PrintCritter(sw, 4);
+                PrintCritter(sw, 5);
+                PrintCritter(sw, 6);
+                PrintCritter(sw, 7);
+                PrintCritter(sw, 8);
+                PrintCritter(sw, 9);
+                PrintCritter(sw, 10);
+                PrintCritter(sw, 11);
+                PrintCritter(sw, 12);
             }
         }
 
@@ -554,7 +553,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
         // the critter to output is indexed by the global int cr_count
         // and this function increments the index ready for the next call
         //---------------------------------------------------------------------------//
-        protected void prtCritter(TextWriter sw, int dnum)
+        protected void PrintCritter(TextWriter sw, int dnum)
         {
 
             // print the critter to the output stream
@@ -596,7 +595,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
         //---------------------------------------------------------------------------//
         // roll a die of the specified shape
         //---------------------------------------------------------------------------//
-        int roll(int sides)
+        int Roll(int sides)
         {
             var die = new Dice(sides);
 
@@ -607,7 +606,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters
         //---------------------------------------------------------------------------//
         // find similar critters in the arrays and set their family indicators
         //---------------------------------------------------------------------------//
-        protected void findFamily(int cr_num)
+        protected void FindFamily(int cr_num)
         {
             int fam_count = 0; // used to set next family indicator
             int cr_xref = 0;   // 2nd array index to iterate critters to compare with cr_num

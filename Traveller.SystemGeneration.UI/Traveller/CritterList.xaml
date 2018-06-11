@@ -87,7 +87,7 @@
             CachingStrategy="RecycleElement" ItemTemplate="{StaticResource CritterTemplateSelector}">
 
             </ListView>
-            <Button x:Name="butBack" Text="Go Back" Clicked="butBack_Clicked" />
+            <Button x:Name="butBack" Text="Go Back" Clicked="Back_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

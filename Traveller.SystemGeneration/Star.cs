@@ -47,6 +47,31 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
+        public Star(StellarType stellarType, char stellarClass, char decimalClass)
+        {
+            StarType = stellarType;
+            LumClass = stellarClass;
+            DecClass = decimalClass;
+            StellarMass = GetStellarMass();
+            Luminosity = GetLuminosity();
+            if (StarType != StellarType.O)
+            {
+                NumOrbits = GetNumOrbits();
+            }
+        }
+
+        public static bool Validate(string descriptor)
+        {
+            var valid = true;
+
+            if (string.IsNullOrEmpty(descriptor) || descriptor.Length  < 3)
+            {
+                throw new ArgumentException("The descriptor is too short", "descriptor");
+            }
+
+            return valid;
+        }
+
         public StellarType GetStellarType()
         {
             var dieroll = Common.d6() + Common.d6() + Common.d6();
@@ -445,8 +470,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 }
                 if (orbit.Occupied != Orbit.OccupiedBy.EMPTY)
                 {
-                    var planet = new Planet();
-                    planet.Name = Name + "/" + nextChar++;
+                    var planet = new Planet
+                    {
+                        Name = Name + "/" + nextChar++
+                    };
                     orbit.World = planet;
                     k = planet.FleshOut(configuration, orbit.Number, orbit, this, HZone, ComLumAddFromPrim);
                     SystemHabitability = Math.Max(k, SystemHabitability);

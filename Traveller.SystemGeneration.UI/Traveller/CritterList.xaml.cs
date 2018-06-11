@@ -22,7 +22,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 			critterList.ItemsSource = Items;
         }
 
-        private void butBack_Clicked(object sender, EventArgs e)
+        private void Back_Clicked(object sender, EventArgs e)
         {
             Navigation.PopModalAsync();
         }
