@@ -10,6 +10,12 @@
         {
             Build();
         }
+
+        public CompanionStar(StellarType stellarType, char stellarClass, char decimalClass) : base(stellarType, stellarClass, decimalClass)
+        {
+            Build();
+        }
+
         private int ComOrbit()
         {
             var dieroll = Common.d6() + Common.d6();

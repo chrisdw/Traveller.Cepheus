@@ -752,6 +752,28 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return "X";
         }
 
+        public static StellarType CharToType(char stellarClass)
+        {
+            switch (stellarClass)
+            {
+                case 'O':
+                    return StellarType.O;
+                case 'B':
+                    return StellarType.B;
+                case 'A':
+                    return StellarType.A;
+                case 'F':
+                    return StellarType.F;
+                case 'G':
+                    return StellarType.G;
+                case 'K':
+                    return StellarType.K;
+                case 'M':
+                    return StellarType.M;
+            }
+            throw new ArgumentException("Stellar type out of range OBAFGKM", "stellarClass");
+        }
+
         public string PrintLumClass()
         {
             if (LumClass == 'a')
