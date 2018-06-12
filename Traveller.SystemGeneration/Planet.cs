@@ -1,4 +1,5 @@
 ﻿using org.DownesWard.Traveller.AnimalEncounters;
+using org.DownesWard.Traveller.SystemGeneration.Campaigns;
 using org.DownesWard.Traveller.SystemGeneration.Resources;
 using org.DownesWard.Utilities;
 using System;
@@ -67,6 +68,20 @@ namespace org.DownesWard.Traveller.SystemGeneration
             get
             {
                 return Normal.UWP(PlanetType, Diameter);
+            }
+        }
+
+        public Planet(Configuration configuration)
+        {
+            if (configuration.CurrentCampaign == Campaign.HOSTILE)
+            {
+                Normal.CurrentCampaign = new Hostile();
+                Collapse.CurrentCampaign = new Hostile();
+            }
+            else
+            {
+                Normal.CurrentCampaign = new Classic();
+                Collapse.CurrentCampaign = new Classic();
             }
         }
 

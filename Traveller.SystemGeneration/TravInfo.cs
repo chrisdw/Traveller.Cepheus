@@ -1,4 +1,5 @@
 ﻿using org.DownesWard.Traveller.Shared;
+using org.DownesWard.Traveller.SystemGeneration.Campaigns;
 using org.DownesWard.Traveller.SystemGeneration.Resources;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public string Remarks { get; set; }
         public string Bases { get; set; }
         public string ConflictReason { get; set; }
+
+        internal ICampaign CurrentCampaign { get; set; }
 
         public string UWPString
         {
@@ -75,75 +78,14 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         public void DoTradeClassification()
         {
-            var builder = new StringBuilder();
-
-            if ((Atmosphere.Value >= 4 && Atmosphere.Value <= 9) && (Hydro.Value >= 4 && Hydro.Value <= 8) && (Pop.Value >= 5 && Pop.Value <= 7))
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_Agricultural);
-            }
-            if (Size.Value == 0)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_Asteroid);
-            }
-            if (Pop.Value == 0)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_Barren);
-            }
-            if (Atmosphere.Value >= 2 && Hydro.Value == 0)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_Desert);
-            }
-            if (Atmosphere.Value >= 10 && Hydro.Value > 0)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_FluidOceans);
-            }
-            if (Pop.Value >= 9)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_HighPopulation);
-            }
-            if (Atmosphere.Value <= 1 && Hydro.Value > 0)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_IceCapped);
-            }
-            if (((Atmosphere.Value >= 2 && Atmosphere.Value <= 4) || Atmosphere.Value == 7 || Atmosphere.Value == 9) && Pop.Value >= 9)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_Industrial);
-            }
-            if (Pop.Value > 0 && Hydro.Value <= 4)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_LowPopulation);
-            }
-            if (Atmosphere.Value <= 3 && Hydro.Value <= 4 && Pop.Value >= 6)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_NonAgricultural);
-            }
-            if (Pop.Value > 0 && Pop.Value <= 6)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_NonIndustrial);
-            }
-            if ((Atmosphere.Value >= 2 && Atmosphere.Value <= 5) && Hydro.Value <= 3 && Pop.Value > 0)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_Poor);
-            }
-            if ((Atmosphere.Value == 6 || Atmosphere.Value == 8) && (Pop.Value >= 6 && Pop.Value <= 8) && (Government.Value >= 4 && Government.Value <= 9))
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_Rich);
-            }
-            if (Size.Value > 0 && Atmosphere.Value == 0)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_VaccumWorld);
-            }
-            if (Hydro.Value == 10)
-            {
-                builder.AppendFormat("{0} ", Languages.TradeCode_WaterWorld);
-            }
+            var codes = CurrentCampaign.GenerateTradeCodes(this);
             if (string.IsNullOrEmpty(Remarks))
             {
-                Remarks += builder.ToString();
+                Remarks = codes;
             }
             else
             {
-                Remarks += " " + builder.ToString();
+                Remarks += " " + codes;
             }
         }
 
@@ -256,13 +198,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             Remarks += builder.ToString();
 
             // Tech Level
-            TechLevel.Value = main.TechLevel.Value - 1;
-            if (Remarks.Contains(Languages.Subbase_Scout) || 
-                Remarks.Contains(Languages.Subbase_Naval) || 
-                Remarks.Contains(Languages.TradeCode_ResearchColony))
-            {
-                TechLevel.Value += 1;
-            }
+            TechLevel.Value = CurrentCampaign.GenerateSubordinateTechLevel(this, main);
 
             // Spaceport
             dieroll = Common.d6();
@@ -434,128 +370,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
             else
             {
-                TechLevel.Value = Common.d6();
-                switch (Starport)
-                {
-                    case 'A':
-                        TechLevel.Value += 6;
-                        break;
-                    case 'B':
-                        TechLevel.Value += 4;
-                        break;
-                    case 'C':
-                        TechLevel.Value += 2;
-                        break;
-                    case 'X':
-                        TechLevel.Value -= 4;
-                        break;
-                }
-
-                switch (Size.Value)
-                {
-                    case 0:
-                    case 1:
-                        TechLevel.Value += 2;
-                        break;
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 11:
-                    case 12:
-                        TechLevel.Value += 1;
-                        break;
-                }
-
-                switch (Atmosphere.Value)
-                {
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 10:
-                        TechLevel.Value += 1;
-                        break;
-                    case 13:
-                        TechLevel.Value -= 2;
-                        break;
-                }
-
-                switch (Hydro.Value)
-                {
-                    case 9:
-                        TechLevel.Value += 1;
-                        break;
-                    case 10:
-                        TechLevel.Value += 2;
-                        break;
-                }
-
-                switch (Pop.Value)
-                {
-                    case 9:
-                        TechLevel.Value += 2;
-                        break;
-                    case 10:
-                        TechLevel.Value += 4;
-                        break;
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                        TechLevel.Value += 1;
-                        break;
-                }
-
-                switch (Government.Value)
-                {
-                    case 0:
-                    case 5:
-                        TechLevel.Value += 1;
-                        break;
-                }
-
-                if ((Hydro.Value == 0 || Hydro.Value == 10) && Pop.Value > 5)
-                {
-                    if (TechLevel.Value < 4)
-                    {
-                        TechLevel.Value = 4;
-                    }
-                }
-
-                switch (Atmosphere.Value)
-                {
-                    case 0:
-                    case 2:
-                    case 3:
-                    case 10:
-                    case 11:
-                    case 12:
-                        if (TechLevel.Value < 7)
-                        {
-                            TechLevel.Value = 7;
-                        }
-                        break;
-                    case 4:
-                    case 7:
-                    case 9:
-                        if (TechLevel.Value < 5)
-                        {
-                            TechLevel.Value = 5;
-                        }
-                        break;
-                    case 13:
-                    case 14:
-                        if (Hydro.Value == 10)
-                        {
-                            if (TechLevel.Value < 7)
-                            {
-                                TechLevel.Value = 7;
-                            }
-                        }
-                        break;
-                }
+                TechLevel.Value = CurrentCampaign.GenerateTechLevel(this);
             }
 
             Factions = Faction.GenerateFactions(this, config);

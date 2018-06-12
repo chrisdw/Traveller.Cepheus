@@ -32,7 +32,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         private void Generate(Configuration configuration)
         {
             // Just need the UPP, trade code and remarks
-            Mainworld = new Planet();
+            Mainworld = new Planet(configuration);
             Mainworld.Generate(configuration);
 
             if (configuration.CurrentCampaign == Campaign.THENEWERA)
