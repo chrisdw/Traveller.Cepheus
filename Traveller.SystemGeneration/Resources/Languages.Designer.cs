@@ -1159,6 +1159,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ht.
+        /// </summary>
+        internal static string TradeCode_HighTech {
+            get {
+                return ResourceManager.GetString("TradeCode_HighTech", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ic.
         /// </summary>
         internal static string TradeCode_IceCapped {
@@ -1182,6 +1191,15 @@ namespace org.DownesWard.Traveller.SystemGeneration.Resources {
         internal static string TradeCode_LowPopulation {
             get {
                 return ResourceManager.GetString("TradeCode_LowPopulation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lt.
+        /// </summary>
+        internal static string TradeCode_LowTech {
+            get {
+                return ResourceManager.GetString("TradeCode_LowTech", resourceCulture);
             }
         }
         

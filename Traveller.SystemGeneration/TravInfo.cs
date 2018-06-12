@@ -327,7 +327,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             if (Atmosphere.Value > 12) Pop.Value -= 2;
             if (Atmosphere.Value == 6) Pop.Value += 3;
             if (Atmosphere.Value == 5 || Atmosphere.Value == 8)  Pop.Value += 1;
-            if (Hydro.Value == 0 && Atmosphere.Value > 3)  Pop.Value -= 2;
+            if (Hydro.Value == 0 && Atmosphere.Value < 3)  Pop.Value -= 2;
 
             if (config.HardScience)
             {

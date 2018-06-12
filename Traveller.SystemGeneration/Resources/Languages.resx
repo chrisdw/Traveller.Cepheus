@@ -516,4 +516,10 @@
   <data name="FactionName_WesternAlliance" xml:space="preserve">
     <value>Western Alliance</value>
   </data>
+  <data name="TradeCode_HighTech" xml:space="preserve">
+    <value>Ht</value>
+  </data>
+  <data name="TradeCode_LowTech" xml:space="preserve">
+    <value>Lt</value>
+  </data>
 </root>
