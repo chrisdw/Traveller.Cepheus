@@ -43,10 +43,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     builder.AppendFormat("SGG - diameter {0} km", diameter.ToString("F"));
                     break;
                 case Planet.WorldType.SMALL:
-                    builder.AppendFormat("{0}-S{1}{2}-{3}-{4}", Starport, Atmosphere.ToString(), Hydro.ToString(), SocialUWP(), TechLevel.ToString());
+                    builder.AppendFormat("{0}-S{1}{2}{3}-{4}", Starport, Atmosphere.ToString(), Hydro.ToString(), SocialUWP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.RING:
-                    builder.AppendFormat("{0}-R00-{1}-{2}", Starport, SocialUWP(), TechLevel.ToString());
+                    builder.AppendFormat("{0}-R00{1}-{2}", Starport, SocialUWP(), TechLevel.ToString());
                     break;
                 case Planet.WorldType.NORMAL:
                 case Planet.WorldType.PLANETOID:

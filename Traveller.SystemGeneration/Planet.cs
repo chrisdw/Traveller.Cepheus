@@ -55,12 +55,20 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public TableGenerator TableGenerator { get; } = new TableGenerator();
         public Encounters Encounters { get; set; }
 
-        // Temprature talbes
+        // Temprature tables
         public double[] Summer { get; } = new double[Constants.NUM_HEX_ROWS * 2];
         public double[] Fall { get; } = new double[Constants.NUM_HEX_ROWS * 2];
         public double[] Winter { get; } = new double[Constants.NUM_HEX_ROWS * 2];
 
         public WorldType PlanetType { get; set; }
+
+        public string DisplayString
+        {
+            get
+            {
+                return Normal.UWP(PlanetType, Diameter);
+            }
+        }
 
         public void Generate(Configuration config)
         {

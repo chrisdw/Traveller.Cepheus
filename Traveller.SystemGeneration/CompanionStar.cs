@@ -10,11 +10,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         public CompanionStar() : base()
         {
+            IntialiseOrbits();
             Build();
         }
 
         public CompanionStar(StellarType stellarType, char stellarClass, char decimalClass) : base(stellarType, stellarClass, decimalClass)
         {
+            IntialiseOrbits();
             Build();
         }
 

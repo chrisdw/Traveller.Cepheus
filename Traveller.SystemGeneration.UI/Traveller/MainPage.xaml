@@ -25,7 +25,7 @@
                         </Picker>
                     </ViewCell>
                     <ViewCell>
-                        <Picker x:Name="startportTablePicker" Title="Starport Picker" SelectedIndexChanged="StartportTablePicker_SelectedIndexChanged">
+                        <Picker x:Name="startportTablePicker" Title="Starport" SelectedIndexChanged="StartportTablePicker_SelectedIndexChanged">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>Backwater</x:String>
@@ -50,6 +50,7 @@
         <StackLayout x:Name="panResult" Orientation="Horizontal" IsVisible="False">
             <Label x:Name="UWPLabel" Text=""  />
             <Button x:Name="ViewWorldButton" Text="View Details" Clicked="ViewWorldButton_Clicked" />
+            <Button x:Name="ViewSystemButton" Text="View System" Clicked="ViewSystemButton_Clicked" />
         </StackLayout>
     </StackLayout>
 </ContentPage>

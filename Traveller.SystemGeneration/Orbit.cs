@@ -130,5 +130,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 World.SaveToXML(xeOrbit, configuration);
             }
         }
+
+        public Orbit()
+        {
+            OrbitalType = OrbitType.UNAVAILABLE;
+            Occupied = OccupiedBy.UNOCCUPIED;
+        }
     }
 }

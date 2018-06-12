@@ -400,7 +400,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 if (companion.OrbitNum != FAR_ORBIT)
                 {
                     ComLumAddFromPrim = Constants.HABITNUM / Math.Sqrt(Orbits[companion.OrbitNum].Range);
-                    Orbits[companion.OrbitNum].World.Normal.Remarks = companion.DisplayString();
+                    Orbits[companion.OrbitNum].World.Normal.Remarks = companion.DisplayString;
                 }
                 else
                 {
@@ -422,10 +422,16 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public void BuildSystem(double ComLumAddFromPrim)
         {
             HZone = -2;
+            var buildOrbit = !(Orbits.Count > 0);
 
             for (int i = 0; i < Constants.MAX_ORBITS; i++)
             {
                 var orbit = new Orbit();
+                if (!buildOrbit)
+                {
+                    orbit = Orbits[i];
+                }
+                
                 orbit.OrbitRange(i);
                 orbit.SetOrbitType(Luminosity, ComLumAddFromPrim);
                 if (orbit.OrbitalType == Orbit.OrbitType.HABITABLE)
@@ -436,7 +442,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 {
                     HZone = i - 1;
                 }
-                Orbits.Add(orbit);
+                if (buildOrbit)
+                {
+                    Orbits.Add(orbit);
+                }
             }
             if (HZone == -2)
             {
@@ -471,7 +480,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 if (companion.OrbitNum != FAR_ORBIT)
                 {
                     ComLumAddFromPrim = Constants.HABITNUM / Math.Sqrt(Orbits[companion.OrbitNum].Range);
-                    Orbits[companion.OrbitNum].World.Normal.Remarks = companion.DisplayString();
+                    Orbits[companion.OrbitNum].World.Normal.Remarks = companion.DisplayString;
                 }
                 else
                 {
@@ -504,8 +513,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
                             orbit.Occupied = Orbit.OccupiedBy.EMPTY;
                         }
                         break;
+                    case Orbit.OrbitType.INNER:
+                    case Orbit.OrbitType.OUTER:
+                    case Orbit.OrbitType.HABITABLE:
                     default:
-                        if (orbit.Occupied != Orbit.OccupiedBy.UNOCCUPIED)
+                        if (orbit.Occupied == Orbit.OccupiedBy.UNOCCUPIED)
                         {
                             orbit.Occupied = Orbit.OccupiedBy.WORLD;
                         }
@@ -932,9 +944,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
             return c;
         }
-        public string DisplayString()
+        public string DisplayString
         {
-            return string.Format("{0}{1} ({2})", TypeToChar(StarType), DecClass, PrintLumClass());
+            get
+            {
+                return string.Format("{0}{1} ({2})", TypeToChar(StarType), DecClass, PrintLumClass());
+            }
+            
         }
 
         public virtual void SaveToXML(XmlElement objSystem, Configuration configuration)
@@ -966,5 +982,15 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 companion.SaveToXML(xeStars, configuration);
             }
         }
+
+        protected void IntialiseOrbits()
+        {
+            for (int i = 0; i < Constants.MAX_ORBITS; i++)
+            {
+                var orbit = new Orbit();
+                Orbits.Add(orbit);
+            }
+        }
+
     }
 }

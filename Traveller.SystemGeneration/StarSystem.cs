@@ -22,7 +22,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public string BG { get; private set; }
 
         private int SystemHability;
-        private Star Primary;
+        public Star Primary { get; internal set; }
         private SystemType systemType;
 
         private void FleshOut(Configuration configuration)

@@ -80,6 +80,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             if (fullSystemSwitch.On)
             {
                 Config.Generation = GenerationType.FULL;
+                ViewSystemButton.IsVisible = true;
             }
 
             CurrentStarSystem = new StarSystem(Config);
@@ -94,6 +95,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             var worldView = new WorldView(CurrentStarSystem.Mainworld, Config);
             Navigation.PushModalAsync(worldView);
+        }
+
+        private void ViewSystemButton_Clicked(object sender, EventArgs e)
+        {
+            var systemView = new SystemView(CurrentStarSystem);
+            Navigation.PushModalAsync(systemView);
         }
     }
 }

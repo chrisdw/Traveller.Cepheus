@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="org.DownesWard.Traveller.SystemGeneration.StarView">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Star:"/>
+                <Label x:Name="StarDesc" Text="" />
+            </StackLayout>
+            <ListView x:Name="Orbits">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding OrbitNumber}" />
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding DisplayString}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!-- There will be 0 or more companions -->
+            <ListView x:Name="Companions" ItemSelected="Companions_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding DisplayString}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="BackButton" Text="Go Back" Clicked="BackButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
