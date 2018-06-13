@@ -957,17 +957,17 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             var xeStar = objSystem.OwnerDocument.CreateElement("Star");
             objSystem.AppendChild(xeStar);
-            Common.CreateTextNode(objSystem, "Type", StarType.ToString());
-            Common.CreateTextNode(objSystem, "LumClass", LumClass.ToString());
-            Common.CreateTextNode(objSystem, "DecClass", DecClass.ToString());
-            Common.CreateTextNode(objSystem, "StellarMass", StellarMass.ToString());
-            Common.CreateTextNode(objSystem, "Luminosity", Luminosity.ToString());
-            Common.CreateTextNode(objSystem, "NumOrbits", NumOrbits.ToString());
-            Common.CreateTextNode(objSystem, "HZone", HZone.ToString());
-            Common.CreateTextNode(objSystem, "TypeRoll", TypeRoll.ToString());
-            Common.CreateTextNode(objSystem, "ClassRoll", ClassRoll.ToString());
-            Common.CreateTextNode(objSystem, "NumCompanions", NumCompanions.ToString());
-            Common.CreateTextNode(objSystem, "Name", Name.ToString());
+            Common.CreateTextNode(xeStar, "Type", StarType.ToString());
+            Common.CreateTextNode(xeStar, "LumClass", LumClass.ToString());
+            Common.CreateTextNode(xeStar, "DecClass", DecClass.ToString());
+            Common.CreateTextNode(xeStar, "StellarMass", StellarMass.ToString());
+            Common.CreateTextNode(xeStar, "Luminosity", Luminosity.ToString());
+            Common.CreateTextNode(xeStar, "NumOrbits", NumOrbits.ToString());
+            Common.CreateTextNode(xeStar, "HZone", HZone.ToString());
+            Common.CreateTextNode(xeStar, "TypeRoll", TypeRoll.ToString());
+            Common.CreateTextNode(xeStar, "ClassRoll", ClassRoll.ToString());
+            Common.CreateTextNode(xeStar, "NumCompanions", NumCompanions.ToString());
+            Common.CreateTextNode(xeStar, "Name", Name.ToString());
 
             foreach (var orbit in Orbits)
             {

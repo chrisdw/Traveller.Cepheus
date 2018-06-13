@@ -569,21 +569,21 @@ namespace org.DownesWard.Traveller.SystemGeneration
             var xeInfo = objWorld.OwnerDocument.CreateElement("TravellerInfo");
             objWorld.AppendChild(xeInfo);
 
-            Common.CreateTextNode(objWorld, "Starport", Starport.ToString());
-            Common.CreateTextNode(objWorld, "Size", Size.Value.ToString());
-            Common.CreateTextNode(objWorld, "Atmosphere", Atmosphere.Value.ToString());
-            Common.CreateTextNode(objWorld, "Hydro", Hydro.Value.ToString());
-            Common.CreateTextNode(objWorld, "Pop", Pop.Value.ToString());
-            Common.CreateTextNode(objWorld, "Government", Government.Value.ToString());
-            Common.CreateTextNode(objWorld, "Law", Law.Value.ToString());
-            Common.CreateTextNode(objWorld, "TechLevel", TechLevel.Value.ToString());
-            Common.CreateTextNode(objWorld, "PopMult", PopMult.ToString());
-            Common.CreateTextNode(objWorld, "Remarks", Remarks);
-            Common.CreateTextNode(objWorld, "Bases", Bases);
+            Common.CreateTextNode(xeInfo, "Starport", Starport.ToString());
+            Common.CreateTextNode(xeInfo, "Size", Size.Value.ToString());
+            Common.CreateTextNode(xeInfo, "Atmosphere", Atmosphere.Value.ToString());
+            Common.CreateTextNode(xeInfo, "Hydro", Hydro.Value.ToString());
+            Common.CreateTextNode(xeInfo, "Pop", Pop.Value.ToString());
+            Common.CreateTextNode(xeInfo, "Government", Government.Value.ToString());
+            Common.CreateTextNode(xeInfo, "Law", Law.Value.ToString());
+            Common.CreateTextNode(xeInfo, "TechLevel", TechLevel.Value.ToString());
+            Common.CreateTextNode(xeInfo, "PopMult", PopMult.ToString());
+            Common.CreateTextNode(xeInfo, "Remarks", Remarks);
+            Common.CreateTextNode(xeInfo, "Bases", Bases);
 
             if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
-                Common.CreateTextNode(objWorld, "ConflictReason", ConflictReason);
+                Common.CreateTextNode(xeInfo, "ConflictReason", ConflictReason);
             }
 
             var xeChild = objWorld.OwnerDocument.CreateElement("Factions");

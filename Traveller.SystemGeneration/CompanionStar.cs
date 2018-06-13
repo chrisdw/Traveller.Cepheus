@@ -85,22 +85,22 @@ namespace org.DownesWard.Traveller.SystemGeneration
             objStar.AppendChild(xeStar);
 
             // Companion specific attributes
-            Common.CreateTextNode(objStar, "OrbitNum", OrbitNum.ToString());
-            Common.CreateTextNode(objStar, "Range", Range.ToString());
-            Common.CreateTextNode(objStar, "SysNat", SysNat.ToString());
+            Common.CreateTextNode(xeStar, "OrbitNum", OrbitNum.ToString());
+            Common.CreateTextNode(xeStar, "Range", Range.ToString());
+            Common.CreateTextNode(xeStar, "SysNat", SysNat.ToString());
 
             // Common attributes
-            Common.CreateTextNode(objStar, "Type", StarType.ToString());
-            Common.CreateTextNode(objStar, "LumClass", LumClass.ToString());
-            Common.CreateTextNode(objStar, "DecClass", DecClass.ToString());
-            Common.CreateTextNode(objStar, "StellarMass", StellarMass.ToString());
-            Common.CreateTextNode(objStar, "Luminosity", Luminosity.ToString());
-            Common.CreateTextNode(objStar, "NumOrbits", NumOrbits.ToString());
-            Common.CreateTextNode(objStar, "HZone", HZone.ToString());
-            Common.CreateTextNode(objStar, "TypeRoll", TypeRoll.ToString());
-            Common.CreateTextNode(objStar, "ClassRoll", ClassRoll.ToString());
-            Common.CreateTextNode(objStar, "NumCompanions", NumCompanions.ToString());
-            Common.CreateTextNode(objStar, "Name", Name.ToString());
+            Common.CreateTextNode(xeStar, "Type", StarType.ToString());
+            Common.CreateTextNode(xeStar, "LumClass", LumClass.ToString());
+            Common.CreateTextNode(xeStar, "DecClass", DecClass.ToString());
+            Common.CreateTextNode(xeStar, "StellarMass", StellarMass.ToString());
+            Common.CreateTextNode(xeStar, "Luminosity", Luminosity.ToString());
+            Common.CreateTextNode(xeStar, "NumOrbits", NumOrbits.ToString());
+            Common.CreateTextNode(xeStar, "HZone", HZone.ToString());
+            Common.CreateTextNode(xeStar, "TypeRoll", TypeRoll.ToString());
+            Common.CreateTextNode(xeStar, "ClassRoll", ClassRoll.ToString());
+            Common.CreateTextNode(xeStar, "NumCompanions", NumCompanions.ToString());
+            Common.CreateTextNode(xeStar, "Name", Name.ToString());
 
             foreach (var orbit in Orbits)
             {

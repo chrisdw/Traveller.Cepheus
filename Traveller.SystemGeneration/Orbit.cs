@@ -110,20 +110,20 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             var xeOrbit = objStar.OwnerDocument.CreateElement("Orbit");
             objStar.AppendChild(xeOrbit);
-            Common.CreateTextNode(objStar, "Type", OrbitalType.ToString());
-            Common.CreateTextNode(objStar, "Occupied", Occupied.ToString());
+            Common.CreateTextNode(xeOrbit, "Type", OrbitalType.ToString());
+            Common.CreateTextNode(xeOrbit, "Occupied", Occupied.ToString());
 
             if (Occupied == OccupiedBy.CAPTURED)
             {
-                Common.CreateTextNode(objStar, "Number", World.OrbitNumber.ToString());
+                Common.CreateTextNode(xeOrbit, "Number", World.OrbitNumber.ToString());
             }
             else
             {
-                Common.CreateTextNode(objStar, "Number", Number.ToString());
+                Common.CreateTextNode(xeOrbit, "Number", Number.ToString());
             }
 
-            Common.CreateTextNode(objStar, "Range", Range.ToString());
-            Common.CreateTextNode(objStar, "HasWorld", (World != null).ToString());
+            Common.CreateTextNode(xeOrbit, "Range", Range.ToString());
+            Common.CreateTextNode(xeOrbit, "HasWorld", (World != null).ToString());
 
             if (World != null)
             {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Analytics;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 using Xamarin.Forms;
@@ -6,14 +8,14 @@ using Xamarin.Forms;
 namespace org.DownesWard.Traveller.SystemGeneration
 {
     public partial class MainPage : ContentPage
-	{
+    {
         private Configuration Config { get; } = new Configuration();
         private StarSystem CurrentStarSystem { get; set; }
 
-		public MainPage()
-		{
-			InitializeComponent();
-		}
+        public MainPage()
+        {
+            InitializeComponent();
+        }
 
         public void OnCampaignChanged(object sender, EventArgs e)
         {
@@ -73,6 +75,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void GenerateButton_Clicked(object sender, EventArgs e)
         {
+            Analytics.TrackEvent("SystemGenerated", 
+                new Dictionary<string, string> {
+                    { "Fullsystem" , fullSystemSwitch.On.ToString() },
+                    { "Campaign", Config.CurrentCampaign.ToString() }
+                }
+            );
             Config.SpaceOpera = spaceOperaSwitch.On;
             Config.HardScience = hardScienceSwitch.On;
             Config.UseGaiaFactor = gaiaFactorSwitch.On;
@@ -107,14 +115,27 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void Save_Clicked(object sender, EventArgs e)
         {
-            var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            var path = Path.Combine(docsPath, Config.BaseName + ".xml");
-            XmlDocument doc = new XmlDocument();
-            CurrentStarSystem.SaveToXML(doc, Config);
-            var writer = XmlWriter.Create(path);
-            doc.WriteTo(writer);
-            writer.Flush();
-            writer.Close();
+            if (string.IsNullOrEmpty(Config.BaseName))
+            {
+                DisplayAlert("Warning", "Please give the system a name.", "OK");
+            }
+            else
+            {
+                Analytics.TrackEvent("SystemSaved");
+                var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                var path = Path.Combine(docsPath, Config.BaseName + ".xml");
+                XmlDocument doc = new XmlDocument();
+                CurrentStarSystem.SaveToXML(doc, Config);
+                var writer = XmlWriter.Create(path);
+                doc.WriteTo(writer);
+                writer.Flush();
+                writer.Close();
+            }
+        }
+
+        private void baseName_Completed(object sender, EventArgs e)
+        {
+            Config.BaseName = baseName.Text;
         }
     }
 }

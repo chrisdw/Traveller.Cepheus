@@ -1416,7 +1416,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public virtual void SaveToXML(XmlElement objOrbit, Configuration configuration)
         {
             var nfi = System.Globalization.NumberFormatInfo.InvariantInfo;
-            nfi.NumberDecimalDigits = 2;
+
             var xePlanet = objOrbit.OwnerDocument.CreateElement("Planet");
             objOrbit.AppendChild(xePlanet);
             Common.CreateTextNode(xePlanet, "Type", PlanetType.ToString());
