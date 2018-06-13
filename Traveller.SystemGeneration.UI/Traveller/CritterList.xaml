@@ -18,12 +18,9 @@
                         <Label Text="{Binding WeaponsDesc}" WidthRequest="120" />
                         <Label Text="{Binding WeaponsDamage}" WidthRequest="40" />
                         <Label Text="{Binding Wounds}" WidthRequest="60"/>
-                        <Label Text="F" />
-                        <Label Text="{Binding Flee}" />
-                        <Label Text="A" />
-                        <Label Text="{Binding Attack}" />
-                        <Label Text="S" />
-                        <Label Text="{Binding Speed}" />
+                        <Label Text="{Binding Flee, StringFormat='F{0}'}" />
+                        <Label Text="{Binding Attack, StringFormat='A{0}'}" />
+                        <Label Text="{Binding Speed, StringFormat='S{0}'}" />
                         <Label Text="{Binding FamilyString}" />
                     </StackLayout>
                 </ViewCell>
@@ -40,12 +37,9 @@
                         <Label Text="{Binding WeaponsDesc}" WidthRequest="120" />
                         <Label Text="{Binding WeaponsDamage}" WidthRequest="40" />
                         <Label Text="{Binding Wounds}" WidthRequest="60"/>
-                        <Label Text="A" />
-                        <Label Text="{Binding Attack}" />
-                        <Label Text="F" />
-                        <Label Text="{Binding Flee}" />
-                        <Label Text="S" />
-                        <Label Text="{Binding Speed}" />
+                        <Label Text="{Binding Attack, StringFormat='A{0}'}" />
+                        <Label Text="{Binding Flee, StringFormat='F{0}'}" />
+                        <Label Text="{Binding Speed, StringFormat='S{0}'}" />
                         <Label Text="{Binding FamilyString}" />
                     </StackLayout>
                 </ViewCell>

@@ -73,7 +73,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 if (SysNat == StarSystem.SystemType.BINARY)
                 {
                     NumCompanions = 1;
-                    Companions[0] = new CompanionStar();
+                    Companions.Add(new CompanionStar());
                     AvaialbleOribits(0);
                 }
             }

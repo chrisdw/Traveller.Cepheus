@@ -329,7 +329,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             for (var i = 0; i < numsats; i++)
             {
-                var sattelite = new Sattelite
+                var sattelite = new Sattelite(configuration)
                 {
                     Name = string.Format("{0}/A{1}", Name, i)
                 };

@@ -12,9 +12,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StarView : ContentPage
 	{
-		public StarView (Star star)
+        private Configuration _configuration;
+        public StarView (Star star, Configuration configuration)
 		{
-			InitializeComponent ();
+            _configuration = configuration;
+
+            InitializeComponent ();
             StarDesc.Text = star.DisplayString;
             var orbits = star.Orbits.Where(o => o.World != null).Select(o => o.World);
             Orbits.ItemsSource = orbits;
@@ -29,8 +32,15 @@ namespace org.DownesWard.Traveller.SystemGeneration
         private void Companions_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var companion = e.SelectedItem as CompanionStar;
-            var starViewer = new StarView(companion);
+            var starViewer = new StarView(companion, _configuration);
             Navigation.PushModalAsync(starViewer);
+        }
+
+        private void Orbits_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var planet = e.SelectedItem as Planet;
+            var planetViewer = new WorldView(planet, _configuration);
+            Navigation.PushModalAsync(planetViewer);
         }
     }
 }

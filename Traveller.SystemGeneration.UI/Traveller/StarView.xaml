@@ -8,7 +8,7 @@
                 <Label Text="Star:"/>
                 <Label x:Name="StarDesc" Text="" />
             </StackLayout>
-            <ListView x:Name="Orbits">
+            <ListView x:Name="Orbits" ItemSelected="Orbits_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

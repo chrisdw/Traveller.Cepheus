@@ -538,6 +538,14 @@
           <source>Western Alliance</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Westlichen Allianz</target>
         </trans-unit>
+        <trans-unit id="TradeCode_HighTech" translate="no" xml:space="preserve">
+          <source>Ht</source>
+          <target state="new">Ht</target>
+        </trans-unit>
+        <trans-unit id="TradeCode_LowTech" translate="no" xml:space="preserve">
+          <source>Lt</source>
+          <target state="new">Lt</target>
+        </trans-unit>
       </group>
     </body>
   </file>

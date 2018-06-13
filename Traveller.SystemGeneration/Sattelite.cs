@@ -6,6 +6,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
 {
     public class Sattelite : Planet, IComparable
     {
+        public Sattelite(Configuration configuration) : base(configuration)
+        {
+
+        }
+
         public int FleshOut(Configuration configuration, Planet planet, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim)
         {
             if (PlanetType == WorldType.RING)

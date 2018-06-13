@@ -7,17 +7,22 @@ namespace org.DownesWard.Traveller.SystemGeneration
     public partial class WorldView : ContentPage
     {
         private Planet Planet;
+        private Configuration _configuration;
         public WorldView(Planet planet, Configuration configuration)
         {
+            _configuration = configuration;
             Planet = planet;
             InitializeComponent();
 
             // Always set the binding contexts even if not currently visible
             BindingContext = planet.Normal;
+            UWP.Text = planet.DisplayString;
             Factions.ItemsSource = planet.Normal.Factions;
             tneFactions.ItemsSource = planet.Collapse.Factions;
             tneData.BindingContext = planet.Collapse;
+            Satellites.ItemsSource = planet.Sattelites;
 
+            Satellites.IsVisible = !(planet.Sattelites.Count == 0);
             conflictReason.IsVisible = (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS);
             tneData.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
             Encounters.IsVisible = planet.Life;
@@ -44,6 +49,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             var regionList = new RegionList(Planet.Encounters);
             Navigation.PushModalAsync(regionList);
+        }
+
+        private void Satellites_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var planet = e.SelectedItem as Planet;
+            var planetViewer = new WorldView(planet, _configuration);
+            Navigation.PushModalAsync(planetViewer);
         }
     }
 }

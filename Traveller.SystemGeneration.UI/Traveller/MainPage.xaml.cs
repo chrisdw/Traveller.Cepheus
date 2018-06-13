@@ -99,7 +99,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void ViewSystemButton_Clicked(object sender, EventArgs e)
         {
-            var systemView = new SystemView(CurrentStarSystem);
+            var systemView = new SystemView(CurrentStarSystem, Config);
             Navigation.PushModalAsync(systemView);
         }
     }

@@ -34,7 +34,7 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="lblUWP" Text="UWP" />
-                <Label x:Name="UWP" Text="{Binding UWPString}"/>
+                <Label x:Name="UWP" Text=""/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="lblRemarks" Text="Remarks" />
@@ -98,6 +98,19 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
+            <ListView x:Name="Satellites" BindingContext="Satellites" ItemSelected="Satellites_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding OrbitNumber}"/>
+                                <Label Text="{Binding Name}"/>
+                                <Label Text="{Binding DisplayString}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <Button x:Name="Encounters" Text="Encounters" Clicked="Encounters_Clicked" />
             <Button x:Name="Another" Text="Go Back" Clicked="Another_Clicked" />
         </StackLayout>

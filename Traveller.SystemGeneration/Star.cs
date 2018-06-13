@@ -525,7 +525,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 }
                 if (orbit.Occupied != Orbit.OccupiedBy.EMPTY)
                 {
-                    var planet = new Planet
+                    var planet = new Planet(configuration)
                     {
                         Name = Name + "/" + nextChar++
                     };

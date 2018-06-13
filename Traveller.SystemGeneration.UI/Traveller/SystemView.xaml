@@ -10,7 +10,7 @@
                 <Label x:Name="PrimaryDesc" Text="" />               
             </StackLayout>
             <!-- the primary will have a number of orbits -->
-            <ListView x:Name="Orbits">
+            <ListView x:Name="Orbits" ItemSelected="Orbits_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
