@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:org.DownesWard.Traveller.SystemGeneration"
-             x:Class="org.DownesWard.Traveller.SystemGeneration.MainPage" FlowDirection="LeftToRight">
+             x:Class="org.DownesWard.Traveller.SystemGeneration.MainPage"
+             FlowDirection="LeftToRight"
+             Title="System Generator">
 
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Generate" Order="Primary" Icon="cog.png" Text="Generate" Activated="GenerateButton_Clicked"/>
+        <ToolbarItem Name="SaveMenu" Order="Primary" Icon="save.png" Text="Save" Activated="Save_Clicked"  />
+    </ContentPage.ToolbarItems>
     <StackLayout>
-        <Label Text="Welcome to the Cepheus Engine system generator" 
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" />
         <TableView Intent="Form">
             <TableRoot>
                 <TableSection Title="Configuration">
@@ -46,7 +48,6 @@
                 </TableSection>
             </TableRoot>
         </TableView>
-        <Button x:Name="generateButton" Text="Generate" Clicked="GenerateButton_Clicked" />
         <StackLayout x:Name="panResult" Orientation="Horizontal" IsVisible="False">
             <Label x:Name="UWPLabel" Text=""  />
             <Button x:Name="ViewWorldButton" Text="View Details" Clicked="ViewWorldButton_Clicked" />

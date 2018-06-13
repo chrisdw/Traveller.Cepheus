@@ -115,7 +115,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void Save_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Config.BaseName))
+            if (CurrentStarSystem == null)
+            {
+                DisplayAlert("Warning", "Please generate a system first.", "OK");
+            }
+            else if (string.IsNullOrEmpty(Config.BaseName))
             {
                 DisplayAlert("Warning", "Please give the system a name.", "OK");
             }

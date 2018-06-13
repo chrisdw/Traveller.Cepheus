@@ -99,5 +99,14 @@
       <Name>Traveller.SystemGeneration.UI</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drawable\load.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
