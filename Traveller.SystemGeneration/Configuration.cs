@@ -13,7 +13,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public bool HardScience { get; set; } = false;
         public bool GenerateTravInfo { get; set; } = true;
         public bool UseGaiaFactor { get; set; } = true;
-        public bool UseFareheight { get; set; } = false;
+        public bool UseFarenheight { get; set; } = false;
         public string BaseName { get; set; }
     }
 }

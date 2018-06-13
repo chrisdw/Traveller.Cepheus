@@ -885,7 +885,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     }
 
                     // Check satellites
-                    foreach (var satellite in orbit.World.Sattelites)
+                    foreach (var satellite in orbit.World.Satellites)
                     {
                         if (satellite.Normal.Population() > cmw.Normal.Population())
                         {
@@ -990,6 +990,21 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 var orbit = new Orbit();
                 Orbits.Add(orbit);
             }
+        }
+
+        public double Population(bool forCollapse)
+        {
+            var pop = 0.0;
+            foreach (var orbit in Orbits)
+            {
+                pop += orbit.Population(forCollapse);
+            }
+
+            foreach (var companion in Companions)
+            {
+                pop += companion.Population(forCollapse);
+            }
+            return pop;
         }
 
     }

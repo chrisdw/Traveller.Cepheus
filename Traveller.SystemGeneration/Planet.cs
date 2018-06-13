@@ -41,7 +41,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public bool TidallyLocked { get; set; }
         public double Temp { get; set; }
         public double Diameter { get; set; }
-        public List<Sattelite> Sattelites { get; set; } = new List<Sattelite>();
+        public List<Satellite> Satellites { get; set; } = new List<Satellite>();
         public bool MainWorld { get; set; }
 
         public double OrbitNumber { get; set; }
@@ -174,7 +174,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         numsats = 0;
                     }
 
-                    Maxpop = BuildSattelites(configuration, OrbitNum, myOrbit, primary, HZone, ComLumAddFromPrim, numsats);
+                    Maxpop = BuildSatellites(configuration, OrbitNum, myOrbit, primary, HZone, ComLumAddFromPrim, numsats);
                     break;
                 case Orbit.OccupiedBy.CAPTURED:
                 case Orbit.OccupiedBy.WORLD:
@@ -286,7 +286,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     {
                         numsats = 0;
                     }
-                    var satMaxPop = BuildSattelites(configuration, OrbitNum, myOrbit, primary, HZone, ComLumAddFromPrim, numsats);
+                    var satMaxPop = BuildSatellites(configuration, OrbitNum, myOrbit, primary, HZone, ComLumAddFromPrim, numsats);
 
                     Maxpop = Math.Max(satMaxPop, Maxpop);
 
@@ -321,7 +321,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return Maxpop;
         }
 
-        private int BuildSattelites(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim, int numsats)
+        private int BuildSatellites(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim, int numsats)
         {
             var ringcount = 0;
             var retry = false;
@@ -329,22 +329,22 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             for (var i = 0; i < numsats; i++)
             {
-                var sattelite = new Sattelite(configuration)
+                var satellite = new Satellite(configuration)
                 {
                     Name = string.Format("{0}/A{1}", Name, i)
                 };
-                Sattelites.Add(sattelite);
-                sattelite.Build(Normal.Size.Value, PlanetType);
-                if (sattelite.PlanetType == WorldType.RING)
+                Satellites.Add(satellite);
+                satellite.Build(Normal.Size.Value, PlanetType);
+                if (satellite.PlanetType == WorldType.RING)
                 {
                     ringcount += 1;
                 }
                 if (ringcount > 3)
                 {
                     // Can only have 3 rings
-                    while (sattelite.PlanetType == WorldType.RING)
+                    while (satellite.PlanetType == WorldType.RING)
                     {
-                        sattelite.Build(Normal.Size.Value, PlanetType);
+                        satellite.Build(Normal.Size.Value, PlanetType);
                     }
                 }
                 // Check for repeat orbits
@@ -353,17 +353,17 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     retry = false;
                     for (var j = 0; j < i - 1; j++)
                     {
-                        if (Sattelites[j].OrbitNumber == Sattelites[i].OrbitNumber)
+                        if (Satellites[j].OrbitNumber == Satellites[i].OrbitNumber)
                         {
-                            sattelite.SetOrbit(Normal.Size.Value, PlanetType);
+                            satellite.SetOrbit(Normal.Size.Value, PlanetType);
                         }
                     }
                 } while (retry);
-                var k = sattelite.FleshOut(configuration, this, myOrbit, primary, HZone, ComLumAddFromPrim);
+                var k = satellite.FleshOut(configuration, this, myOrbit, primary, HZone, ComLumAddFromPrim);
                 ret = Math.Max(k, ret);
 
             }
-            Sattelites.Sort();
+            Satellites.Sort();
             return ret;
         }
 
@@ -641,7 +641,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return maxpop;
         }
 
-        protected void GetTempChart(Planet mainWorld, Orbit orbit, double ComLumAddFromPrim, Star primary, Configuration configuration, bool forSattelite)
+        protected void GetTempChart(Planet mainWorld, Orbit orbit, double ComLumAddFromPrim, Star primary, Configuration configuration, bool forSatellite)
         {
             var L = primary.Luminosity;
             var O = Constants.HABITNUM / Math.Sqrt(orbit.Range);
@@ -684,8 +684,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
             var X = ((L * O) + ComLumAddFromPrim) * E * G;
             Temp = X - 273;
 
-            var DayPlus = Daytime(Rotation / 2, L, orbit.Range, forSattelite);
-            var NightMinus = Nighttime(Rotation / 2, forSattelite);
+            var DayPlus = Daytime(Rotation / 2, L, orbit.Range, forSatellite);
+            var NightMinus = Nighttime(Rotation / 2, forSatellite);
             Tilt = AxialTilt();
             var k = 0;
             if (Tilt == 0.0)
@@ -750,10 +750,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     X = NightMinus;
                 }
 
-                if (!TidallyLocked || forSattelite)
+                if (!TidallyLocked || forSatellite)
                 {
                     var eccentricty = 0.0;
-                    if (forSattelite)
+                    if (forSatellite)
                     {
                         eccentricty = mainWorld.Ecc;
                     }
@@ -781,7 +781,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     Fall[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + latEffect;
                     Winter[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] - (Ecc * 30) + latEffect;
                 }
-                if (configuration.UseFareheight)
+                if (configuration.UseFarenheight)
                 {
                     Summer[i] = Common.CtoF(Summer[i]);
                     Fall[i] = Common.CtoF(Fall[i]);
@@ -847,7 +847,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        protected double Nighttime(double daylength, bool forSattelite)
+        protected double Nighttime(double daylength, bool forSatellite)
         {
             var X = 0.0;
             var Max = 0.0;
@@ -892,7 +892,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 X = Max;
             }
-            if (TidallyLocked && !forSattelite)
+            if (TidallyLocked && !forSatellite)
             {
                 return -Max;
             }
@@ -1372,9 +1372,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     Collapse.DoSubordinate(main.Collapse);
                 }
             }
-            foreach (var sattelite in Sattelites)
+            foreach (var satellite in Satellites)
             {
-                sattelite.DoCollapse(main);
+                satellite.DoCollapse(main);
             }
         }
 
@@ -1387,9 +1387,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             var pop = 0.0;
 
-            foreach (var satelitte in Sattelites)
+            foreach (var satellite in Satellites)
             {
-                pop += satelitte.Population(forCollapse);
+                pop += satellite.Population(forCollapse);
             }
             if (forCollapse)
             {
@@ -1408,13 +1408,62 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 Normal.DoSubordinate(mainworld.Normal);
             }
-            foreach (var satellite in Sattelites)
+            foreach (var satellite in Satellites)
             {
                 satellite.CompleteTravInfo(configuration, mainworld);
             }
         }
-        public void SaveToXML(XmlElement objOrbit, Configuration configuration)
+        public virtual void SaveToXML(XmlElement objOrbit, Configuration configuration)
         {
+            var nfi = System.Globalization.NumberFormatInfo.InvariantInfo;
+            nfi.NumberDecimalDigits = 2;
+            var xePlanet = objOrbit.OwnerDocument.CreateElement("Planet");
+            objOrbit.AppendChild(xePlanet);
+            Common.CreateTextNode(xePlanet, "Type", PlanetType.ToString());
+            Common.CreateTextNode(xePlanet, "Dense", Dense.ToString());
+            Common.CreateTextNode(xePlanet, "Mass", Mass().ToString());
+            Common.CreateTextNode(xePlanet, "Gravity", Grav().ToString());
+            Common.CreateTextNode(xePlanet, "Pressure", Pressure.ToString());
+            Common.CreateTextNode(xePlanet, "MaxPop", Maxpop.ToString());
+
+            //TODO: Add other attributes
+
+            var xeChild = objOrbit.OwnerDocument.CreateElement("Temperature");
+            for (var i = 0; i < (Constants.NUM_HEX_ROWS * 2) - 1; i += 2)
+            {
+                var xeTemp = objOrbit.OwnerDocument.CreateElement("Row" + (i / 2 + 1).ToString());
+                if (configuration.UseFarenheight)
+                {
+                    Common.CreateTextNode(xeTemp, "Summer", Common.CtoF(Summer[i]).ToString("N", nfi) + "/" + Common.CtoF(Summer[i + 1]).ToString("N", nfi));
+                    Common.CreateTextNode(xeTemp, "Fall", Common.CtoF(Fall[i]).ToString("N", nfi) + "/" + Common.CtoF(Fall[i + 1]).ToString("N", nfi));
+                    Common.CreateTextNode(xeTemp, "Winter", Common.CtoF(Winter[i]).ToString("N", nfi) + "/" + Common.CtoF(Winter[i + 1]).ToString("N", nfi));
+                }
+                else
+                {
+                    Common.CreateTextNode(xeTemp, "Summer", Summer[i].ToString("N", nfi) + "/" + Summer[i + 1].ToString("N", nfi));
+                    Common.CreateTextNode(xeTemp, "Fall", Fall[i].ToString("N", nfi) + "/" + Fall[i + 1].ToString("N", nfi));
+                    Common.CreateTextNode(xeTemp, "Winter", Winter[i].ToString("N", nfi) + "/" + Winter[i + 1].ToString("N", nfi));
+                }
+                xeChild.AppendChild(xeTemp);
+            }
+
+            xePlanet.AppendChild(xeChild);
+
+            if (Life)
+            {
+                xeChild = objOrbit.OwnerDocument.CreateElement("AnimalEncounters");
+                TableGenerator.WriteToXML(xeChild);
+                xePlanet.AppendChild(xeChild);
+            }
+
+            Normal.SaveToXML(xePlanet, configuration);
+            Collapse.SaveToXML(xePlanet, configuration);
+
+            foreach (var satellite in Satellites)
+            {
+                satellite.SaveToXML(xePlanet, configuration);
+            }
         }
+
     }
 }

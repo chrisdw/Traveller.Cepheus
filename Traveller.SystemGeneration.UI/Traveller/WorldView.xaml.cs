@@ -20,9 +20,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
             Factions.ItemsSource = planet.Normal.Factions;
             tneFactions.ItemsSource = planet.Collapse.Factions;
             tneData.BindingContext = planet.Collapse;
-            Satellites.ItemsSource = planet.Sattelites;
+            Satellites.ItemsSource = planet.Satellites;
 
-            Satellites.IsVisible = !(planet.Sattelites.Count == 0);
+            Satellites.IsVisible = !(planet.Satellites.Count == 0);
             conflictReason.IsVisible = (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS);
             tneData.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
             Encounters.IsVisible = planet.Life;

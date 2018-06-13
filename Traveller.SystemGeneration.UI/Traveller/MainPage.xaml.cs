@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml;
 using Xamarin.Forms;
 
 namespace org.DownesWard.Traveller.SystemGeneration
@@ -75,7 +77,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             Config.HardScience = hardScienceSwitch.On;
             Config.UseGaiaFactor = gaiaFactorSwitch.On;
             Config.GenerateTravInfo = travellerInfoSwitch.On;
-            Config.UseFareheight = farenheightSwitch.On;
+            Config.UseFarenheight = farenheightSwitch.On;
             Config.BaseName = baseName.Text;
             if (fullSystemSwitch.On)
             {
@@ -101,6 +103,18 @@ namespace org.DownesWard.Traveller.SystemGeneration
         {
             var systemView = new SystemView(CurrentStarSystem, Config);
             Navigation.PushModalAsync(systemView);
+        }
+
+        private void Save_Clicked(object sender, EventArgs e)
+        {
+            var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            var path = Path.Combine(docsPath, Config.BaseName + ".xml");
+            XmlDocument doc = new XmlDocument();
+            CurrentStarSystem.SaveToXML(doc, Config);
+            var writer = XmlWriter.Create(path);
+            doc.WriteTo(writer);
+            writer.Flush();
+            writer.Close();
         }
     }
 }

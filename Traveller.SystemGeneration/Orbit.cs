@@ -131,6 +131,15 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
+        public double Population(bool forCollapse)
+        {
+            if (World != null)
+            {
+                return World.Population(forCollapse);
+            }
+            return 0;
+        }
+
         public Orbit()
         {
             OrbitalType = OrbitType.UNAVAILABLE;

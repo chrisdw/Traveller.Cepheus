@@ -189,7 +189,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 builder.AppendFormat("{0} ", Languages.Subbase_Naval);
             }
-            if (main.Bases.Contains("S") && Pop.Value >= 2)
+            if (main.Bases.Contains(Languages.Base_Scout) && Pop.Value >= 2)
             {
                 builder.AppendFormat("{0} ", Languages.Subbase_Scout);
             }
@@ -226,16 +226,16 @@ namespace org.DownesWard.Traveller.SystemGeneration
             else if (dieroll >= 6)
             {
                 Starport = 'F';
-            }
-
-            if (TechLevel.Value != main.TechLevel.Value)
-            {
-                TechLevel.Value += 1;
+                if (TechLevel.Value != main.TechLevel.Value)
+                {
+                    TechLevel.Value += 1;
+                }
             }
             else
             {
                 Starport = 'G';
             }
+
             if (Pop.Value == 0)
             {
                 TechLevel.Value = 0;

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.SystemGeneration
 {
-    public class Sattelite : Planet, IComparable
+    public class Satellite : Planet, IComparable
     {
-        public Sattelite(Configuration configuration) : base(configuration)
+        public Satellite(Configuration configuration) : base(configuration)
         {
 
         }
@@ -271,8 +272,16 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         public int CompareTo(object obj)
         {
-            var other = (Sattelite)obj;
+            var other = obj as Satellite;
             return OrbitNumber.CompareTo(other.OrbitNumber);
+        }
+
+        public override void SaveToXML(XmlElement objOrbit, Configuration configuration)
+        {
+            var xePlanet = objOrbit.OwnerDocument.CreateElement("Satellite");
+            objOrbit.AppendChild(xePlanet);
+            Common.CreateTextNode(xePlanet, "OrbitNumber", OrbitNumber.ToString());
+            base.SaveToXML(xePlanet, configuration);
         }
     }
 }

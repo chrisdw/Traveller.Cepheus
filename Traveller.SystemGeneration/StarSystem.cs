@@ -21,13 +21,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         public string BG { get; private set; }
 
-        private int SystemHability;
+        private int SystemHabitability;
         public Star Primary { get; internal set; }
         private SystemType systemType;
 
         private void FleshOut(Configuration configuration)
         {
-            SystemHability = Primary.FleshOut(configuration);
+            SystemHabitability = Primary.FleshOut(configuration);
         }
         private void Generate(Configuration configuration)
         {
@@ -73,7 +73,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         public StarSystem(Configuration configuration)
         {
-            SystemHability = 0;
+            SystemHabitability = 0;
             var ComLumAddFromPrimary = 0.0;
 
             if (configuration.Generation == GenerationType.FULL)
@@ -124,7 +124,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public StarSystem(Configuration configuration, string primaryDescriptor)
         {
             var ComLumAddFromPrim = 0.0;
-            SystemHability = 0;
+            SystemHabitability = 0;
             systemType = SystemType.SOLO;
             Primary = new Star(Star.CharToType(primaryDescriptor[0]), primaryDescriptor[1], primaryDescriptor[2]);
             Primary.BuildSystem(ComLumAddFromPrim);
@@ -134,7 +134,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public StarSystem(Configuration configuration, string primaryDescriptor, string secondaryDescriptor)
         {
             var ComLumAddFromPrim = 0.0;
-            SystemHability = 0;
+            SystemHabitability = 0;
             systemType = SystemType.BINARY;
             Primary = new Star(Star.CharToType(primaryDescriptor[0]), primaryDescriptor[1], primaryDescriptor[2]);
             Primary.BuildSystem(ComLumAddFromPrim);
@@ -148,7 +148,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public StarSystem(Configuration configuration, string primaryDescriptor, string secondaryDescriptor, string trinaryDescriptor)
         {
             var ComLumAddFromPrim = 0.0;
-            SystemHability = 0;
+            SystemHabitability = 0;
             systemType = SystemType.TRINARY;
             Primary = new Star(Star.CharToType(primaryDescriptor[0]), primaryDescriptor[1], primaryDescriptor[2]);
             Primary.BuildSystem(ComLumAddFromPrim);
@@ -202,5 +202,47 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
+        public void SaveToXML(XmlDocument objDoc, Configuration configuration)
+        {
+            var xeSystem = objDoc.CreateElement("System");
+            objDoc.AppendChild(xeSystem);
+            Common.CreateTextNode(xeSystem, "SysNat", systemType.ToString());
+            Common.CreateTextNode(xeSystem, "SystemHabitability", SystemHabitability.ToString());
+            Common.CreateTextNode(xeSystem, "CurrentCampaign", configuration.CurrentCampaign.ToString());
+            Common.CreateTextNode(xeSystem, "GenerateTravInfo", configuration.GenerateTravInfo.ToString());
+            Common.CreateTextNode(xeSystem, "UseFarenheight", configuration.UseFarenheight.ToString());
+            // Summary information for quick access
+            Common.CreateTextNode(xeSystem, "Summary", systemType.ToString());
+            Common.CreateTextNode(xeSystem, "Primary", Primary.DisplayString);
+            foreach (var companion in Primary.Companions)
+            {
+                Common.CreateTextNode(xeSystem, "Companion", companion.DisplayString);
+                foreach (var otherComp in companion.Companions)
+                {
+                    Common.CreateTextNode(xeSystem, "Companion", companion.DisplayString);
+                }
+            }
+            Common.CreateTextNode(xeSystem, "PlanetoidBelts", "There are " + Primary.Count(Planet.WorldType.PLANETOID) + " planetoid belts");
+            Common.CreateTextNode(xeSystem, "GasGiants", "There are " + (Primary.Count(Planet.WorldType.LGG) + Primary.Count(Planet.WorldType.SGG)) + " Gas Giants");
+            var mainworld = Primary.GetMainWorld();
+            if (mainworld != null)
+            {
+                Common.CreateTextNode(xeSystem, "Mainworld", mainworld.DisplayString);
+                Common.CreateTextNode(xeSystem, "PBG", mainworld.Normal.PopMult.ToString() + BG);
+                if (configuration.CurrentCampaign == Campaign.THENEWERA)
+                {
+                    Common.CreateTextNode(xeSystem, "PostCollapseMainworld", mainworld.Collapse.DisplayString(mainworld.PlanetType, mainworld.Diameter));
+                }
+            }
+            if (configuration.GenerateTravInfo)
+            {
+                Common.CreateTextNode(xeSystem, "SystemPopulation", Primary.Population(false).ToString());
+                if (configuration.CurrentCampaign == Campaign.THENEWERA)
+                {
+                    Common.CreateTextNode(xeSystem, "PostCollapseSystemPopulation", Primary.Population(true).ToString());
+                }
+            }
+            Primary.SaveToXML(xeSystem, configuration);
+        }
     }
 }
