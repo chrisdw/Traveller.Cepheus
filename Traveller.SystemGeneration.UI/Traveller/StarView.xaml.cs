@@ -34,7 +34,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         private async void Orbits_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var planet = e.SelectedItem as Planet;
-            var planetViewer = new WorldView(planet, _configuration);
+            var planetViewer = new PlanetView(planet, _configuration);
             await Navigation.PushAsync(planetViewer);
         }
     }

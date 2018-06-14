@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Input;
 using System.Xml;
 using Xamarin.Forms;
 
@@ -34,6 +35,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             else
             {
                 Config.CurrentCampaign = Campaign.HAMMERSSLAMMERS;
+                GenerateFactionsSwitch.On = true;
             }
         }
 
@@ -87,30 +89,44 @@ namespace org.DownesWard.Traveller.SystemGeneration
             Config.GenerateTravInfo = travellerInfoSwitch.On;
             Config.UseFarenheight = farenheightSwitch.On;
             Config.BaseName = baseName.Text;
+            Config.GenerateFactions = GenerateFactionsSwitch.On;
             if (fullSystemSwitch.On)
             {
                 Config.Generation = GenerationType.FULL;
-                ViewSystemButton.IsVisible = true;
             }
 
             CurrentStarSystem = new StarSystem(Config);
             CurrentStarSystem.Develop(Config);
 
             panResult.IsVisible = true;
-            // As this is a basic generation, get a normal UPP
+            // As this is a basic generation, get a normal UWP
             UWPLabel.Text = CurrentStarSystem.Information.DisplayString() + CurrentStarSystem.BG;
         }
 
         private async void ViewWorldButton_Clicked(object sender, EventArgs e)
         {
-            var worldView = new WorldView(CurrentStarSystem.Mainworld, Config);
-            await Navigation.PushAsync(worldView);
+            if (CurrentStarSystem == null)
+            {
+                await DisplayAlert("Warning", "Please generate a system first.", "OK");
+            }
+            else
+            {
+                var worldView = new PlanetView(CurrentStarSystem.Mainworld, Config);
+                await Navigation.PushAsync(worldView);
+            }
         }
 
         private async void ViewSystemButton_Clicked(object sender, EventArgs e)
         {
-            var systemView = new SystemView(CurrentStarSystem, Config);
-            await Navigation.PushAsync(systemView);
+            if (CurrentStarSystem == null)
+            {
+                await DisplayAlert("Warning", "Please generate a system first.", "OK");
+            }
+            else
+            {
+                var systemView = new SystemView(CurrentStarSystem, Config);
+                await Navigation.PushAsync(systemView);
+            }
         }
 
         private void Save_Clicked(object sender, EventArgs e)

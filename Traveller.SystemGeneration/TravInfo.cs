@@ -373,7 +373,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 TechLevel.Value = CurrentCampaign.GenerateTechLevel(this);
             }
 
-            Factions = Faction.GenerateFactions(this, config);
+            if (config.GenerateFactions)
+            {
+                Factions = Faction.GenerateFactions(this, config);
+            }
 
             // Bases
             switch (Starport)

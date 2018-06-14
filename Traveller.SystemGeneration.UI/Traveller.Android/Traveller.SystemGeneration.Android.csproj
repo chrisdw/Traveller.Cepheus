@@ -108,5 +108,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\load.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\earth.png" />
+    <AndroidResource Include="Resources\drawable\planet.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

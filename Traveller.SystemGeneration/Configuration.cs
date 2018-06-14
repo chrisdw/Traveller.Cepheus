@@ -15,5 +15,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public bool UseGaiaFactor { get; set; } = true;
         public bool UseFarenheight { get; set; } = false;
         public string BaseName { get; set; }
+        public bool GenerateFactions { get; set; }
     }
 }

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="org.DownesWard.Traveller.SystemGeneration.PlanetView"
+             xmlns:local="clr-namespace:org.DownesWard.Traveller.SystemGeneration">
+    <!--Pages can be added as references or inline-->
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="hammersSlammersTemplate">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Name:" />
+                        <Label Text="{Binding Name}" />
+                        <Label Text="Origin:" />
+                        <Label Text="{Binding Origin}" />
+                        <Label Text="Type:" />
+                        <Label Text="{Binding GovernmentString}" />
+                        <Label Text="Strength:" />
+                        <Label Text="{Binding StrengthString}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="classicTemplate">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Type:" />
+                        <Label Text="{Binding GovernmentString}" />
+                        <Label Text="Strength:" />
+                        <Label Text="{Binding StrengthString}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="herbivoreTemplate">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Dienum}" WidthRequest="40" />
+                        <Label Text="{Binding Attribute}" WidthRequest="20"/>
+                        <Label Text="{Binding CritterTypeString}" WidthRequest="160"/>
+                        <Label Text="{Binding WeightKg}" WidthRequest="80"/>
+                        <Label Text="{Binding WeightHits}" WidthRequest="60"/>
+                        <Label Text="{Binding Armour}" WidthRequest="80"/>
+                        <Label Text="{Binding WeaponsDesc}" WidthRequest="120" />
+                        <Label Text="{Binding WeaponsDamage}" WidthRequest="40" />
+                        <Label Text="{Binding Wounds}" WidthRequest="60"/>
+                        <Label Text="{Binding Flee, StringFormat='F{0}'}" />
+                        <Label Text="{Binding Attack, StringFormat='A{0}'}" />
+                        <Label Text="{Binding Speed, StringFormat='S{0}'}" />
+                        <Label Text="{Binding FamilyString}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="carnivoreTemplate">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Dienum}" WidthRequest="40" />
+                        <Label Text="{Binding Attribute}" WidthRequest="20"/>
+                        <Label Text="{Binding CritterTypeString}" WidthRequest="160"/>
+                        <Label Text="{Binding WeightKg}" WidthRequest="80"/>
+                        <Label Text="{Binding WeightHits}" WidthRequest="60"/>
+                        <Label Text="{Binding Armour}" WidthRequest="80"/>
+                        <Label Text="{Binding WeaponsDesc}" WidthRequest="120" />
+                        <Label Text="{Binding WeaponsDamage}" WidthRequest="40" />
+                        <Label Text="{Binding Wounds}" WidthRequest="60"/>
+                        <Label Text="{Binding Attack, StringFormat='A{0}'}" />
+                        <Label Text="{Binding Flee, StringFormat='F{0}'}" />
+                        <Label Text="{Binding Speed, StringFormat='S{0}'}" />
+                        <Label Text="{Binding FamilyString}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="eventTemplate">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Dienum}" WidthRequest="40" />
+                        <Label Text="{Binding Attribute}" WidthRequest="20"/>
+                        <Label Text="{Binding CritterTypeString}" WidthRequest="160"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <local:CritterDataTemplateSelector x:Key="CritterTemplateSelector"
+                                               CarnivoreTemplate="{StaticResource carnivoreTemplate}"
+                                               HerbivoreTemplate="{StaticResource herbivoreTemplate}"
+                                               EventTemplate="{StaticResource eventTemplate}" />            
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <ContentPage Title="Basic Details">
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="lblUWP" Text="UWP" />
+                    <Label x:Name="UWP" Text=""/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="lblRemarks" Text="Remarks" />
+                    <Label x:Name="Remarks" Text="{Binding Remarks}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="lblBases" Text="Bases" />
+                    <Label x:Name="Bases" Text="{Binding Bases}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" x:Name="conflictReason">
+                    <Label Text="Conflict Reason" />
+                    <Label x:Name="ConflictReason" Text="{Binding ConflictReason}"/>
+                </StackLayout>
+                <StackLayout x:Name="tneData">
+                    <StackLayout x:Name="tneCollapse" Orientation="Horizontal">
+                        <Label x:Name="lblCollapseUWP" Text="Post Collapse UWP" />
+                        <Label x:Name="collapseUWP" Text="{Binding UWPString}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="lblCollapseRemarks" Text="Remarks" />
+                        <Label x:Name="collapseRemarks" Text="{Binding Remarks}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="lblCollapseBases" Text="Bases" />
+                        <Label x:Name="collapseBases" Text="{Binding Bases}"/>
+                    </StackLayout>
+                </StackLayout>
+                <ListView x:Name="Satellites" BindingContext="Satellites" ItemSelected="Satellites_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding OrbitNumber}"/>
+                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding DisplayString}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Factions">
+        <ContentPage.Content>
+            <StackLayout>
+                <ListView x:Name="Factions" BindingContext="Factions">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label x:Name="factionNameLabel" Text="Name:" />
+                                    <Label x:Name="factionName" Text="{Binding Name}" />
+                                    <Label x:Name="factionOriginLabel" Text="Origin:" />
+                                    <Label x:Name="factionOrigin" Text="{Binding Origin}" />
+                                    <Label Text="Type:" />
+                                    <Label Text="{Binding GovernmentString}" />
+                                    <Label Text="Strength:" />
+                                    <Label Text="{Binding StrengthString}" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <StackLayout x:Name="tneFactionData">
+                    <Label Text="Post collapse factions"/>
+                    <ListView x:Name="tneFactions" BindingContext="Factions">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Name:" />
+                                        <Label Text="{Binding Name}" />
+                                        <Label Text="Origin:" />
+                                        <Label Text="{Binding Origin}" />
+                                        <Label Text="Type:" />
+                                        <Label Text="{Binding GovernmentString}" />
+                                        <Label Text="Strength:" />
+                                        <Label Text="{Binding StrengthString}" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Temperature" />
+    <ContentPage x:Name="Encounters" Title="Encounters">
+        <StackLayout Orientation="Vertical">
+            <Picker x:Name="RegionPicker" Title="Pick a region" ItemsSource="{Binding Regions}" ItemDisplayBinding="{Binding Name}" SelectedIndexChanged="RegionPicker_SelectedIndexChanged" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Die" WidthRequest="60" />
+                <Label Text="Animal" WidthRequest="160"/>
+                <Label Text="Weight" WidthRequest="100"/>
+                <Label Text="Hits" WidthRequest="40"/>
+                <Label Text="Armour" WidthRequest="80"/>
+                <Label Text="Weapons" WidthRequest="160" />
+                <Label Text="Wounds" WidthRequest="60"/>
+                <Label Text="Behavior" />
+            </StackLayout>
+
+            <ListView x:Name="critterList"
+            CachingStrategy="RecycleElement" ItemTemplate="{StaticResource CritterTemplateSelector}"/>
+        </StackLayout>
+    </ContentPage> 
+</TabbedPage>

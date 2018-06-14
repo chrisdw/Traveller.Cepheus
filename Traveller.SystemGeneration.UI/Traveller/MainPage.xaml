@@ -8,12 +8,14 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Name="Generate" Order="Primary" Icon="cog.png" Text="Generate" Activated="GenerateButton_Clicked" />
-        <ToolbarItem Name="SaveMenu" Order="Primary" Icon="save.png" Text="Save" Activated="Save_Clicked"  />
+        <ToolbarItem Name="SaveMenu" Order="Primary" Icon="save.png" Text="Save" Activated="Save_Clicked" />
+        <ToolbarItem Name="ViewMainWorldMenu" Order="Primary" Icon="earth.png" Text="Save" Activated="ViewWorldButton_Clicked"  />
+        <ToolbarItem Name="ViewSystemMenu" Order="Primary" Icon="planet.png" Text="Save" Activated="ViewSystemButton_Clicked"  />
     </ContentPage.ToolbarItems>
     <StackLayout>
         <TableView Intent="Form">
             <TableRoot>
-                <TableSection Title="Configuration">
+                <TableSection Title="Generation Configuration">
                     <ViewCell>
                         <Picker x:Name="campaignPicker" Title="Campaign" SelectedIndexChanged="OnCampaignChanged">
                             <Picker.ItemsSource>
@@ -45,13 +47,12 @@
                     <SwitchCell x:Name="travellerInfoSwitch" Text="Generate Traveller Information" On="True"/>
                     <SwitchCell x:Name="farenheightSwitch" Text="Use Farenheight" />
                     <SwitchCell x:Name="fullSystemSwitch" Text="Generate Full System" />
+                    <SwitchCell x:Name="GenerateFactionsSwitch" Text="Generate Factions" />
                 </TableSection>
             </TableRoot>
         </TableView>
         <StackLayout x:Name="panResult" Orientation="Horizontal" IsVisible="False">
             <Label x:Name="UWPLabel" Text=""  />
-            <Button x:Name="ViewWorldButton" Text="View Mainworld" Clicked="ViewWorldButton_Clicked" />
-            <Button x:Name="ViewSystemButton" Text="View System" Clicked="ViewSystemButton_Clicked" />
         </StackLayout>
     </StackLayout>
 </ContentPage>
