@@ -80,7 +80,7 @@
             <local:CritterDataTemplateSelector x:Key="CritterTemplateSelector"
                                                CarnivoreTemplate="{StaticResource carnivoreTemplate}"
                                                HerbivoreTemplate="{StaticResource herbivoreTemplate}"
-                                               EventTemplate="{StaticResource eventTemplate}" />            
+                                               EventTemplate="{StaticResource eventTemplate}" />
         </ResourceDictionary>
     </TabbedPage.Resources>
     <ContentPage Title="Basic Details">
@@ -177,7 +177,30 @@
             </StackLayout>
         </ContentPage.Content>
     </ContentPage>
-    <ContentPage Title="Temperature" />
+    <ContentPage Title="Temperature">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Row" WidthRequest="60" HorizontalTextAlignment="Start" />
+                <Label Text="Summer" WidthRequest="160" HorizontalTextAlignment="Center"/>
+                <Label Text="Fall" WidthRequest="160" HorizontalTextAlignment="Center"/>
+                <Label Text="Winter" WidthRequest="160" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <ListView x:Name="TemperatureListView" BindingContext="Temperature">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Row}" WidthRequest="60" HorizontalTextAlignment="Start"/>
+                                <Label Text="{Binding Summer}" WidthRequest="160" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding Fall}" WidthRequest="160" HorizontalTextAlignment="Center"/>
+                                <Label Text="{Binding Winter}" WidthRequest="160" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
     <ContentPage x:Name="Encounters" Title="Encounters">
         <StackLayout Orientation="Vertical">
             <Picker x:Name="RegionPicker" Title="Pick a region" ItemsSource="{Binding Regions}" ItemDisplayBinding="{Binding Name}" SelectedIndexChanged="RegionPicker_SelectedIndexChanged" />
@@ -195,5 +218,5 @@
             <ListView x:Name="critterList"
             CachingStrategy="RecycleElement" ItemTemplate="{StaticResource CritterTemplateSelector}"/>
         </StackLayout>
-    </ContentPage> 
+    </ContentPage>
 </TabbedPage>

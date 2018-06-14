@@ -10,12 +10,22 @@ using Xamarin.Forms.Xaml;
 
 namespace org.DownesWard.Traveller.SystemGeneration
 {
+    public class TemperatureData
+    {
+        public int Row { get; set; }
+        public string Summer { get; set; }
+        public string Fall { get; set; }
+        public string Winter { get; set; }
+    }
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PlanetView : TabbedPage
     {
         private Planet Planet;
         private Configuration _configuration;
-        public PlanetView (Planet planet, Configuration configuration)
+        public List<TemperatureData> Temperature { get; } = new List<TemperatureData>();
+
+        public PlanetView(Planet planet, Configuration configuration)
         {
             _configuration = configuration;
             Planet = planet;
@@ -31,11 +41,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
             Satellites.ItemsSource = Planet.Satellites;
             if (Planet.Life)
             {
-                RegionPicker.BindingContext = planet.Encounters;
-                RegionPicker.ItemsSource = planet.Encounters.Regions;
+                RegionPicker.BindingContext = Planet.Encounters;
+                RegionPicker.ItemsSource = Planet.Encounters.Regions;
                 RegionPicker.SelectedIndex = 0;
             }
-            
+
             Satellites.IsVisible = !(Planet.Satellites.Count == 0);
             conflictReason.IsVisible = (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS);
             tneData.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
@@ -54,6 +64,29 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 Factions.ItemTemplate = (DataTemplate)Resources["classicTemplate"];
                 tneFactions.ItemTemplate = (DataTemplate)Resources["classicTemplate"];
             }
+
+            for (var i = 0; i < (Constants.NUM_HEX_ROWS * 2) - 1; i += 2)
+            {
+                var temp = new TemperatureData()
+                {
+                    Row = (i / 2 + 1)
+                };
+                if (configuration.UseFarenheight)
+                {
+                    temp.Summer = string.Format("{0:N2}/{1:N2}", Common.CtoF(Planet.Summer[i]), Common.CtoF(Planet.Summer[i + 1]));
+                    temp.Fall = string.Format("{0:N2}/{1:N2}", Common.CtoF(Planet.Fall[i]), Common.CtoF(Planet.Fall[i + 1]));
+                    temp.Winter = string.Format("{0:N2}/{1:N2}", Common.CtoF(Planet.Winter[i]), Common.CtoF(Planet.Winter[i + 1]));
+                }
+                else
+                {
+                    temp.Summer = string.Format("{0:N2}/{1:N2}", Planet.Summer[i], Planet.Summer[i+1]);
+                    temp.Fall = string.Format("{0:N2}/{1:N2}", Planet.Fall[i], Planet.Fall[i + 1]);
+                    temp.Winter = string.Format("{0:N2}/{1:N2}", Planet.Winter[i], Planet.Winter[i + 1]);
+                }
+                Temperature.Add(temp);
+            }
+
+            TemperatureListView.ItemsSource = Temperature;
         }
 
         private async void Satellites_ItemSelected(object sender, SelectedItemChangedEventArgs e)
