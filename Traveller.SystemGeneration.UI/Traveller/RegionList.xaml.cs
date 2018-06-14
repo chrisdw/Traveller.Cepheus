@@ -16,16 +16,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
             regions.ItemsSource = encounters.Regions;
         }
 
-        private void regions_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void regions_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var region = (Region)e.SelectedItem;
             var critterList = new CritterList(region);
-            Navigation.PushModalAsync(critterList);
-        }
-
-        private void butBack_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PopModalAsync();
+            await Navigation.PushAsync(critterList);
         }
     }
 }

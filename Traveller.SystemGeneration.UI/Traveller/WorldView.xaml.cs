@@ -13,6 +13,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             _configuration = configuration;
             Planet = planet;
             InitializeComponent();
+            Title = planet.Name;
 
             // Always set the binding contexts even if not currently visible
             BindingContext = planet.Normal;
@@ -40,22 +41,17 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        private void Another_Clicked(object sender, System.EventArgs e)
-        {
-            Navigation.PopModalAsync();
-        }
-
-        private void Encounters_Clicked(object sender, System.EventArgs e)
+        private async void Encounters_Clicked(object sender, System.EventArgs e)
         {
             var regionList = new RegionList(Planet.Encounters);
-            Navigation.PushModalAsync(regionList);
+            await Navigation.PushAsync(regionList);
         }
 
-        private void Satellites_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void Satellites_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var planet = e.SelectedItem as Planet;
             var planetViewer = new WorldView(planet, _configuration);
-            Navigation.PushModalAsync(planetViewer);
+            await Navigation.PushAsync(planetViewer);
         }
     }
 }

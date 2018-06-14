@@ -4,10 +4,6 @@
              x:Class="org.DownesWard.Traveller.SystemGeneration.StarView">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Star:"/>
-                <Label x:Name="StarDesc" Text="" />
-            </StackLayout>
             <ListView x:Name="Orbits" ItemSelected="Orbits_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -33,7 +29,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="BackButton" Text="Go Back" Clicked="BackButton_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

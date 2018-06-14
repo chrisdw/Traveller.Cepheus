@@ -18,29 +18,24 @@ namespace org.DownesWard.Traveller.SystemGeneration
             _configuration = configuration;
 
             InitializeComponent ();
-            StarDesc.Text = star.DisplayString;
+            Title = star.DisplayString;
             var orbits = star.Orbits.Where(o => o.World != null).Select(o => o.World);
             Orbits.ItemsSource = orbits;
             Companions.ItemsSource = star.Companions;
         }
 
-        private void BackButton_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PopModalAsync();
-        }
-
-        private void Companions_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void Companions_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var companion = e.SelectedItem as CompanionStar;
             var starViewer = new StarView(companion, _configuration);
-            Navigation.PushModalAsync(starViewer);
+            await Navigation.PushAsync(starViewer);
         }
 
-        private void Orbits_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void Orbits_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var planet = e.SelectedItem as Planet;
             var planetViewer = new WorldView(planet, _configuration);
-            Navigation.PushModalAsync(planetViewer);
+            await Navigation.PushAsync(planetViewer);
         }
     }
 }

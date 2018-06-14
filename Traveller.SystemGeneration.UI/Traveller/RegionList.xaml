@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="org.DownesWard.Traveller.SystemGeneration.RegionList">
+             x:Class="org.DownesWard.Traveller.SystemGeneration.RegionList"
+             Title="Regions">
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="regions" BindingContext="Regions" ItemSelected="regions_ItemSelected">
@@ -15,7 +16,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="butBack" Text="Go Back" Clicked="butBack_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

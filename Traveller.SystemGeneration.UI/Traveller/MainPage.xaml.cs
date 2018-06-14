@@ -101,16 +101,16 @@ namespace org.DownesWard.Traveller.SystemGeneration
             UWPLabel.Text = CurrentStarSystem.Information.DisplayString() + CurrentStarSystem.BG;
         }
 
-        private void ViewWorldButton_Clicked(object sender, EventArgs e)
+        private async void ViewWorldButton_Clicked(object sender, EventArgs e)
         {
             var worldView = new WorldView(CurrentStarSystem.Mainworld, Config);
-            Navigation.PushModalAsync(worldView);
+            await Navigation.PushAsync(worldView);
         }
 
-        private void ViewSystemButton_Clicked(object sender, EventArgs e)
+        private async void ViewSystemButton_Clicked(object sender, EventArgs e)
         {
             var systemView = new SystemView(CurrentStarSystem, Config);
-            Navigation.PushModalAsync(systemView);
+            await Navigation.PushAsync(systemView);
         }
 
         private void Save_Clicked(object sender, EventArgs e)

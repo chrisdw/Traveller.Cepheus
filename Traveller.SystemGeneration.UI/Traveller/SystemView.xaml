@@ -35,7 +35,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="BackButton" Text="Go Back" Clicked="BackButton_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

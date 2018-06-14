@@ -7,7 +7,7 @@
              Title="System Generator">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Generate" Order="Primary" Icon="cog.png" Text="Generate" Activated="GenerateButton_Clicked"/>
+        <ToolbarItem Name="Generate" Order="Primary" Icon="cog.png" Text="Generate" Activated="GenerateButton_Clicked" />
         <ToolbarItem Name="SaveMenu" Order="Primary" Icon="save.png" Text="Save" Activated="Save_Clicked"  />
     </ContentPage.ToolbarItems>
     <StackLayout>
@@ -50,9 +50,8 @@
         </TableView>
         <StackLayout x:Name="panResult" Orientation="Horizontal" IsVisible="False">
             <Label x:Name="UWPLabel" Text=""  />
-            <Button x:Name="ViewWorldButton" Text="View Details" Clicked="ViewWorldButton_Clicked" />
+            <Button x:Name="ViewWorldButton" Text="View Mainworld" Clicked="ViewWorldButton_Clicked" />
             <Button x:Name="ViewSystemButton" Text="View System" Clicked="ViewSystemButton_Clicked" />
-            <Button x:Name="Save" Text="Save" Clicked="Save_Clicked" />
         </StackLayout>
     </StackLayout>
 </ContentPage>
