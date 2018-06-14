@@ -94,6 +94,28 @@
                     <Label x:Name="lblRemarks" Text="Remarks" />
                     <Label x:Name="Remarks" Text="{Binding Remarks}"/>
                 </StackLayout>
+                <StackLayout x:Name="PhysicalData">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tilt" />
+                        <Label Text="{Binding Tilt}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Ecc" />
+                        <Label Text="{Binding Ecc}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Rotation" />
+                        <Label Text="{Binding Rotation, StringFormat='{0:N2}Hrs'}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Gravity" />
+                        <Label Text="{Binding Grav, StringFormat='{0:N2}G'}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Diameter" />
+                        <Label Text="{Binding Diameter, StringFormat='{0:N2}Km'}"/>
+                    </StackLayout>                    
+                </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label x:Name="lblBases" Text="Bases" />
                     <Label x:Name="Bases" Text="{Binding Bases}"/>

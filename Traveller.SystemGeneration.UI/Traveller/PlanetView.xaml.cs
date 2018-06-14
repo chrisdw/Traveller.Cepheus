@@ -39,6 +39,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             tneFactions.ItemsSource = Planet.Collapse.Factions;
             tneData.BindingContext = Planet.Collapse;
             Satellites.ItemsSource = Planet.Satellites;
+            PhysicalData.BindingContext = Planet;
             if (Planet.Life)
             {
                 RegionPicker.BindingContext = Planet.Encounters;

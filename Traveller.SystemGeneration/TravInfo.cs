@@ -240,6 +240,53 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 TechLevel.Value = 0;
             }
+
+            // if the tech level is too low to support life on this world kill
+            // everyone off!
+            switch (Atmosphere.Value)
+            {
+                case 0:
+                case 2:
+                case 3:
+                case 10:
+                case 11:
+                case 12:
+                    if (TechLevel.Value < 7)
+                    {
+                        ClearDownSocialData();
+                        return;
+                    }
+                    break;
+                case 4:
+                case 7:
+                case 9:
+                    if (TechLevel.Value < 5)
+                    {
+                        ClearDownSocialData();
+                        return;
+                    }
+                    break;
+                case 13:
+                case 14:
+                    if (Hydro.Value == 10)
+                    {
+                        if (TechLevel.Value < 7)
+                        {
+                            ClearDownSocialData();
+                            return;
+                        }
+                    }
+                    break;
+            }
+        }
+
+        private void ClearDownSocialData()
+        {
+            Pop.Value = 0;
+            PopMult = 0;
+            Law.Value = 0;
+            Government.Value = 0;
+            Starport = 'Y';
         }
 
         public void ReduceStarport(int levels)

@@ -105,38 +105,44 @@ namespace org.DownesWard.Traveller.SystemGeneration
         }
 
 
-        public double Mass()
+        public double Mass
         {
-            var R = Diameter / 2;
-            var V = (4 * Math.PI) / 3 * (R * R * R);
-            V = V / Constants.EARTHMASS;
-            switch (Dense)
+            get
             {
-                case DensityType.LIGHT:
-                    V = V * 0.55;
-                    break;
-                case DensityType.HEAVY:
-                    V = V * 1.55;
-                    break;
+                var R = Diameter / 2;
+                var V = (4 * Math.PI) / 3 * (R * R * R);
+                V = V / Constants.EARTHMASS;
+                switch (Dense)
+                {
+                    case DensityType.LIGHT:
+                        V = V * 0.55;
+                        break;
+                    case DensityType.HEAVY:
+                        V = V * 1.55;
+                        break;
+                }
+                return V;
             }
-            return V;
         }
 
-        public double Grav()
+        public double Grav
         {
-            var R = Diameter / 2;
-            var V = (4 * Math.PI) / 3 * R;
-            V = V / Constants.EARTHGRAV;
-            switch (Dense)
+            get
             {
-                case DensityType.LIGHT:
-                    V = V * 0.55;
-                    break;
-                case DensityType.HEAVY:
-                    V = V * 1.55;
-                    break;
+                var R = Diameter / 2;
+                var V = (4 * Math.PI) / 3 * R;
+                V = V / Constants.EARTHGRAV;
+                switch (Dense)
+                {
+                    case DensityType.LIGHT:
+                        V = V * 0.55;
+                        break;
+                    case DensityType.HEAVY:
+                        V = V * 1.55;
+                        break;
+                }
+                return V;
             }
-            return V;
         }
 
         protected void GetTravInfo(Configuration configuration)
@@ -1421,12 +1427,25 @@ namespace org.DownesWard.Traveller.SystemGeneration
             objOrbit.AppendChild(xePlanet);
             Common.CreateTextNode(xePlanet, "Type", PlanetType.ToString());
             Common.CreateTextNode(xePlanet, "Dense", Dense.ToString());
-            Common.CreateTextNode(xePlanet, "Mass", Mass().ToString());
-            Common.CreateTextNode(xePlanet, "Gravity", Grav().ToString());
+            Common.CreateTextNode(xePlanet, "Mass", Mass.ToString());
+            Common.CreateTextNode(xePlanet, "Gravity", Grav.ToString());
             Common.CreateTextNode(xePlanet, "Pressure", Pressure.ToString());
             Common.CreateTextNode(xePlanet, "MaxPop", Maxpop.ToString());
-
-            //TODO: Add other attributes
+            Common.CreateTextNode(xePlanet, "OrbitRange", OrbitRange.ToString());
+            Common.CreateTextNode(xePlanet, "OrbitNumber", OrbitNumber.ToString());
+            Common.CreateTextNode(xePlanet, "Tilt", Tilt.ToString());
+            Common.CreateTextNode(xePlanet, "Ecc", Ecc.ToString());
+            Common.CreateTextNode(xePlanet, "Rotation", Rotation.ToString());
+            Common.CreateTextNode(xePlanet, "TidallyLocked", TidallyLocked.ToString());
+            Common.CreateTextNode(xePlanet, "Temp", Temp.ToString());
+            Common.CreateTextNode(xePlanet, "Diameter", Diameter.ToString());
+            Common.CreateTextNode(xePlanet, "NumSats", Satellites.Count.ToString());
+            Common.CreateTextNode(xePlanet, "Mainworld", MainWorld.ToString());
+            Common.CreateTextNode(xePlanet, "NormalUWP", Normal.DisplayString(PlanetType, Diameter));
+            Common.CreateTextNode(xePlanet, "CollapseUWP", Collapse.DisplayString(PlanetType, Diameter));
+            Common.CreateTextNode(xePlanet, "Life", Life.ToString());
+            Common.CreateTextNode(xePlanet, "LifeFactor", LifeFactor.ToString());
+            Common.CreateTextNode(xePlanet, "Name", Name);
 
             var xeChild = objOrbit.OwnerDocument.CreateElement("Temperature");
             for (var i = 0; i < (Constants.NUM_HEX_ROWS * 2) - 1; i += 2)

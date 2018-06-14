@@ -38,14 +38,14 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             D /= 400000;
 
-            var X = (D * D * D * 793.64) / planet.Mass();
+            var X = (D * D * D * 793.64) / planet.Mass;
 
             OrbitPeriod = Math.Sqrt(X);
 
             // Convert Years to Days
             OrbitPeriod /= Constants.DAYS_PER_YEAR;
 
-            Rotation = (4 * (Common.d6() + Common.d6() - 2)) + 5 + planet.Mass() / D;
+            Rotation = (4 * (Common.d6() + Common.d6() - 2)) + 5 + planet.Mass / D;
 
             if (Rotation > 40.0)
             {
