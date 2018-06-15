@@ -109,11 +109,11 @@
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Oribtal Period" />
-                        <Label Text="{Binding OrbitPeriod, StringFormat='{0:N2}'}"/>
+                        <Label x:Name="OrbitPeriod" Text=""/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Oribtal Range" />
-                        <Label Text="{Binding OrbitRange, StringFormat='{0:N2} AU'}"/>
+                        <Label x:Name="OrbitRange"  Text=""/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Tidally Locked" />
@@ -121,7 +121,7 @@
                     </StackLayout>                    
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Gravity" />
-                        <Label Text="{Binding Grav, StringFormat='{0:N2}G'}"/>
+                        <Label Text="{Binding Grav, StringFormat='{0:N2} G'}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Diameter" />
