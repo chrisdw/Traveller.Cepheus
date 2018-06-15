@@ -8,6 +8,8 @@ namespace org.DownesWard.Traveller.Shared
         private readonly int maxValue;
         private int currentValue;
         private readonly string list = "0123456789ABCDEFGHJKLMNPQRSTUVWXYZ";
+        public string Name {  get; set; }
+        public string ShortName { get; set; }
 
         public TravCode()
         {
@@ -19,6 +21,22 @@ namespace org.DownesWard.Traveller.Shared
         {
             currentValue = 0;
             maxValue = maximum.Clamp(0, list.Length - 1);
+        }
+
+        public TravCode(int maximum, string name, string shortName)
+        {
+            Name = name;
+            ShortName = shortName;
+            currentValue = 0;
+            maxValue = maximum.Clamp(0, list.Length - 1);
+        }
+
+        public TravCode(string name, string shortName)
+        {
+            Name = name;
+            ShortName = shortName;
+            currentValue = 0;
+            maxValue = list.Length - 1;
         }
 
         public int Value

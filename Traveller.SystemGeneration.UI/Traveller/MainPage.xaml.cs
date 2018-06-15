@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows.Input;
 using System.Xml;
 using Xamarin.Forms;
 
@@ -129,26 +128,33 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        private void Save_Clicked(object sender, EventArgs e)
+        private async void Save_Clicked(object sender, EventArgs e)
         {
             if (CurrentStarSystem == null)
             {
-                DisplayAlert("Warning", "Please generate a system first.", "OK");
+                await DisplayAlert("Warning", "Please generate a system first.", "OK");
             }
             else if (string.IsNullOrEmpty(Config.BaseName))
             {
-                DisplayAlert("Warning", "Please give the system a name.", "OK");
+                await DisplayAlert("Warning", "Please give the system a name.", "OK");
             }
             else
             {
                 Analytics.TrackEvent("SystemSaved");
                 var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
                 var path = Path.Combine(docsPath, Config.BaseName + ".xml");
+                if (File.Exists(path))
+                {
+                    var result = await DisplayAlert("Warning", "File exists: Overwrite?", "Yes", "No");
+                    if (!result)
+                    {
+                        return;
+                    }
+                }
                 XmlDocument doc = new XmlDocument();
                 CurrentStarSystem.SaveToXML(doc, Config);
                 var writer = XmlWriter.Create(path);
                 doc.WriteTo(writer);
-                writer.Flush();
                 writer.Close();
             }
         }
