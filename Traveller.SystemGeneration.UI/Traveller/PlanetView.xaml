@@ -105,15 +105,27 @@
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Rotation" />
-                        <Label Text="{Binding Rotation, StringFormat='{0:N2}Hrs'}"/>
+                        <Label Text="{Binding Rotation, StringFormat='{0:N2} Hrs'}"/>
                     </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Oribtal Period" />
+                        <Label Text="{Binding OrbitPeriod, StringFormat='{0:N2}'}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Oribtal Range" />
+                        <Label Text="{Binding OrbitRange, StringFormat='{0:N2} AU'}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tidally Locked" />
+                        <Label Text="{Binding TidallyLocked}"/>
+                    </StackLayout>                    
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Gravity" />
                         <Label Text="{Binding Grav, StringFormat='{0:N2}G'}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Diameter" />
-                        <Label Text="{Binding Diameter, StringFormat='{0:N2}Km'}"/>
+                        <Label Text="{Binding Diameter, StringFormat='{0:N2} Km'}"/>
                     </StackLayout>                    
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">

@@ -157,6 +157,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
             var numsats = 0;
             var dieroll = 0;
 
+            var X = (D * D * D) / M;
+            OrbitPeriod = Math.Sqrt(X);
+            OrbitRange = myOrbit.Range;
             OrbitNumber = OrbitNum;
 
             switch (myOrbit.Occupied)
