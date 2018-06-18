@@ -40,14 +40,14 @@
                             </Picker.ItemsSource>
                         </Picker>
                     </ViewCell>
-                    <EntryCell x:Name="baseName" Label="Name" Keyboard="Text" Placeholder="Base name used to generate system object names" Completed="baseName_Completed"/>
-                    <SwitchCell x:Name="spaceOperaSwitch" Text="Space Opera" OnChanged="SpaceOperaSwitch_OnChanged"/>
-                    <SwitchCell x:Name="hardScienceSwitch" Text="Hard Science" OnChanged="HardScienceSwitch_Toggled"/>
-                    <SwitchCell x:Name="gaiaFactorSwitch" Text="Gaia Factor" On="True" />
-                    <SwitchCell x:Name="travellerInfoSwitch" Text="Generate Traveller Information" On="True"/>
-                    <SwitchCell x:Name="farenheightSwitch" Text="Use Farenheight" />
+                    <EntryCell x:Name="baseName" Label="Name" Keyboard="Text" Placeholder="Base name used to generate system object names" Text="{Binding BaseName, Mode=TwoWay}"/>
+                    <SwitchCell x:Name="spaceOperaSwitch" Text="Space Opera" OnChanged="SpaceOperaSwitch_OnChanged" On="{Binding SpaceOpera, Mode=TwoWay}"/>
+                    <SwitchCell x:Name="hardScienceSwitch" Text="Hard Science" OnChanged="HardScienceSwitch_Toggled" On="{Binding HardScience, Mode=TwoWay}"/>
+                    <SwitchCell x:Name="gaiaFactorSwitch" Text="Gaia Factor" On="{Binding UseGaiaFactor, Mode=TwoWay}" />
+                    <SwitchCell x:Name="travellerInfoSwitch" Text="Generate Traveller Information" On="{Binding GenerateTravInfo, Mode=TwoWay}"/>
+                    <SwitchCell x:Name="farenheightSwitch" Text="Use Farenheight" On="{Binding UseFarenheight, Mode=TwoWay}"/>
                     <SwitchCell x:Name="fullSystemSwitch" Text="Generate Full System" />
-                    <SwitchCell x:Name="GenerateFactionsSwitch" Text="Generate Factions" />
+                    <SwitchCell x:Name="GenerateFactionsSwitch" Text="Generate Factions" On="{Binding GenerateFactions, Mode=TwoWay}"/>
                 </TableSection>
             </TableRoot>
         </TableView>

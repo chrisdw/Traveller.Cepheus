@@ -109,11 +109,11 @@
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Oribtal Period" />
-                        <Label x:Name="OrbitPeriod" Text=""/>
+                        <Label x:Name="OrbitPeriod" Text="{Binding OrbitPeriodString}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Oribtal Range" />
-                        <Label x:Name="OrbitRange"  Text=""/>
+                        <Label x:Name="OrbitRange"  Text="{Binding OrbitRangeString}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Tidally Locked" />

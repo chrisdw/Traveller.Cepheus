@@ -71,6 +71,49 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
+        public string OrbitRangeString
+        {
+            get
+            {
+                var range = OrbitRange;
+                if (range > 1)
+                {
+                    // Use AU
+                    return string.Format("{0:N2} AU", range);
+                }
+                else
+                {
+                    // KM
+                    range *= Constants.MKM_PER_AU;
+                    if (range < 0.01)
+                    {
+                        range *= 100000000;
+                        return string.Format("{0:N2} Km", range);
+                    }
+                    else
+                    {
+                        return string.Format("{0:N2} MKm", range);
+                    }
+                }
+            }
+        }
+
+        public string OrbitPeriodString
+        {
+            get
+            {
+                var period = OrbitPeriod;
+                if (period < 3.0)
+                {
+                    return string.Format("{0:N2} Days", period * Constants.DAYS_PER_YEAR);
+                }
+                else
+                {
+                    return string.Format("{0:N2} Years", period);
+                }
+            }
+         }
+
         public Planet(Configuration configuration)
         {
             if (configuration.CurrentCampaign == Campaign.HOSTILE)

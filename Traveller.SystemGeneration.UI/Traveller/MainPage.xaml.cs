@@ -15,6 +15,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = Config;
         }
 
         public void OnCampaignChanged(object sender, EventArgs e)
@@ -82,13 +83,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     { "Campaign", Config.CurrentCampaign.ToString() }
                 }
             );
-            Config.SpaceOpera = spaceOperaSwitch.On;
-            Config.HardScience = hardScienceSwitch.On;
-            Config.UseGaiaFactor = gaiaFactorSwitch.On;
-            Config.GenerateTravInfo = travellerInfoSwitch.On;
-            Config.UseFarenheight = farenheightSwitch.On;
-            Config.BaseName = baseName.Text;
-            Config.GenerateFactions = GenerateFactionsSwitch.On;
+
             if (fullSystemSwitch.On)
             {
                 Config.Generation = GenerationType.FULL;
@@ -157,11 +152,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 doc.WriteTo(writer);
                 writer.Close();
             }
-        }
-
-        private void baseName_Completed(object sender, EventArgs e)
-        {
-            Config.BaseName = baseName.Text;
         }
     }
 }

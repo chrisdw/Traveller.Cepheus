@@ -47,39 +47,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 RegionPicker.SelectedIndex = 0;
             }
 
-            // Convert Orbit Range into something useful
-            var range = Planet.OrbitRange;
-            if (range > 1)
-            {
-                // Use AU
-                OrbitRange.Text = string.Format("{0:N2} AU", range);
-            }
-            else
-            {
-                // KM
-                range *= Constants.MKM_PER_AU;
-                if (range < 0.01)
-                {
-                    range *= 100000000;
-                    OrbitRange.Text = string.Format("{0:N2} Km", range);
-                }
-                else
-                {
-                    OrbitRange.Text = string.Format("{0:N2} MKm", range);
-                }
-            }
-
-            // Convert Orbit Period
-            var period = Planet.OrbitPeriod;
-            if (period < 3.0)
-            {
-                OrbitPeriod.Text = string.Format("{0} Days", period * Constants.DAYS_PER_YEAR);
-            }
-            else
-            {
-                OrbitPeriod.Text = string.Format("{0} Years", period);
-            }
-
+ 
             Satellites.IsVisible = !(Planet.Satellites.Count == 0);
             conflictReason.IsVisible = (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS);
             tneData.IsVisible = (configuration.CurrentCampaign == Campaign.THENEWERA);
