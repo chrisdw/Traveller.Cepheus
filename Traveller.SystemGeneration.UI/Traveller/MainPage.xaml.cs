@@ -90,7 +90,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
 
             CurrentStarSystem = new StarSystem(Config);
-            CurrentStarSystem.Develop(Config);
+            CurrentStarSystem.Develop();
 
             panResult.IsVisible = true;
             // As this is a basic generation, get a normal UWP
@@ -147,7 +147,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     }
                 }
                 XmlDocument doc = new XmlDocument();
-                CurrentStarSystem.SaveToXML(doc, Config);
+                CurrentStarSystem.SaveToXML(doc);
                 var writer = XmlWriter.Create(path);
                 doc.WriteTo(writer);
                 writer.Close();

@@ -11,6 +11,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public string Name { get; set; }
         public TravCode Strength { get; } = new TravCode(12);
         public string Origin { get; set; }
+        private Configuration _configuration;
+
+        public Faction(Configuration configuration)
+        {
+            _configuration = configuration;
+        }
 
         public string StrengthString
         {
@@ -72,10 +78,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        public string DisplayString(Configuration config)
+        public string DisplayString()
         {
             var builder = new StringBuilder();
-            if (config.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
+            if (_configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
                 builder.AppendFormat(Languages.Name, Name);
                 builder.Append(" ");
@@ -83,7 +89,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             builder.AppendFormat(Languages.Description, GovernmentString, StrengthString);
 
-            if (config.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
+            if (_configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
                 builder.Append(" ");
                 builder.AppendFormat(Languages.Origin, Origin);
@@ -108,7 +114,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             {
                 for (var i = 0; i < numFactions; i++)
                 {
-                    var faction = new Faction();
+                    var faction = new Faction(configuration);
                     faction.Government.Value = Common.d6() + Common.d6() - 7 + world.Pop.Value;
                     faction.Strength.Value = Common.d6() + Common.d6();
                     if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)

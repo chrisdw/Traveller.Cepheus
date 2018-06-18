@@ -12,7 +12,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         }
 
-        public int FleshOut(Configuration configuration, Planet planet, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim)
+        public int FleshOut(Planet planet, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim)
         {
             if (PlanetType == WorldType.RING)
             {
@@ -24,9 +24,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             Diameter = GetDiameter();
             Dense = GetDensity(myOrbit);
-            Normal.Atmosphere.Value = GetAtmosphere(myOrbit, configuration);
+            Normal.Atmosphere.Value = GetAtmosphere(myOrbit);
             Pressure = GetPressure();
-            Normal.Hydro.Value = GetHydrographics(myOrbit, configuration);
+            Normal.Hydro.Value = GetHydrographics(myOrbit);
             Maxpop = GetMaxPop(myOrbit, HZone, myOrbit.Number);
 
             // 149600000 km (149.6 Mkm) in one AU 
@@ -68,11 +68,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 Rotation = OrbitPeriod;
             }
 
-            GetTempChart(planet, myOrbit, ComLumAddFromPrim, primary, configuration, true);
+            GetTempChart(planet, myOrbit, ComLumAddFromPrim, primary, true);
 
-            if (configuration.GenerateTravInfo)
+            if (_configuration.GenerateTravInfo)
             {
-                GetTravInfo(configuration);
+                GetTravInfo();
             }
 
             Collapse.Size.Value = Normal.Size.Value;
@@ -276,12 +276,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return OrbitNumber.CompareTo(other.OrbitNumber);
         }
 
-        public override void SaveToXML(XmlElement objOrbit, Configuration configuration)
+        public override void SaveToXML(XmlElement objOrbit)
         {
             var xePlanet = objOrbit.OwnerDocument.CreateElement("Satellite");
             objOrbit.AppendChild(xePlanet);
             Common.CreateTextNode(xePlanet, "OrbitNumber", OrbitNumber.ToString());
-            base.SaveToXML(xePlanet, configuration);
+            base.SaveToXML(xePlanet);
         }
     }
 }

@@ -35,8 +35,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public int NumOrbits { get; set; }
         public int NumCompanions { get; set; }
 
-        public Star()
+        protected Configuration _configuration;
+
+        public Star(Configuration configuration)
         {
+            _configuration = configuration;
             StarType = GetStellarType();
             LumClass = GetLumClass();
             DecClass = GetDecClass();
@@ -48,8 +51,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        public Star(StellarType stellarType, char stellarClass, char decimalClass)
+        public Star(Configuration configuration, StellarType stellarType, char stellarClass, char decimalClass)
         {
+            _configuration = configuration;
             StarType = stellarType;
             LumClass = stellarClass;
             DecClass = decimalClass;
@@ -377,7 +381,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return dieroll;
         }
 
-        public int FleshOut(Configuration configuration)
+        public int FleshOut()
         {
             var SystemHabitability = 0;
             var ComLumAddFromPrim = 0.0;
@@ -386,14 +390,14 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             if (Companions.Count > 0)
             {
-                Name = configuration.BaseName + "-" + nextChar++;
+                Name = _configuration.BaseName + "-" + nextChar++;
             }
             else
             {
-                Name = configuration.BaseName;
+                Name = _configuration.BaseName;
             }
 
-            SystemHabitability = FleshOutWorlds(configuration, ComLumAddFromPrim);
+            SystemHabitability = FleshOutWorlds(ComLumAddFromPrim);
 
             foreach (var companion in Companions)
             {
@@ -409,10 +413,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
                 k = 0;
 
-                companion.Name = configuration.BaseName + "-" + nextChar++;
+                companion.Name = _configuration.BaseName + "-" + nextChar++;
                 companion.BuildSystem(ComLumAddFromPrim);
 
-                k = companion.FleshOut(configuration, ComLumAddFromPrim);
+                k = companion.FleshOut(ComLumAddFromPrim);
                 SystemHabitability = Math.Max(k, SystemHabitability);
             }
 
@@ -469,12 +473,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        public int FleshOut(Configuration configuration, double ComLumAddFromPrim)
+        public int FleshOut(double ComLumAddFromPrim)
         {
             var SystemHabitability = 0;
             var k = 0;
 
-            SystemHabitability = FleshOutWorlds(configuration, ComLumAddFromPrim);
+            SystemHabitability = FleshOutWorlds(ComLumAddFromPrim);
             foreach (var companion in Companions)
             {
                 if (companion.OrbitNum != FAR_ORBIT)
@@ -491,13 +495,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
                 companion.BuildSystem(ComLumAddFromPrim);
 
-                k = companion.FleshOut(configuration, ComLumAddFromPrim);
+                k = companion.FleshOut(ComLumAddFromPrim);
                 SystemHabitability = Math.Max(k, SystemHabitability);
             }
             return SystemHabitability;
         }
 
-        public int FleshOutWorlds(Configuration configuration, double ComLumAddFromPrim)
+        public int FleshOutWorlds(double ComLumAddFromPrim)
         {
             var SystemHabitability = 0;
             var k = 0;
@@ -525,12 +529,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 }
                 if (orbit.Occupied != Orbit.OccupiedBy.EMPTY)
                 {
-                    var planet = new Planet(configuration)
+                    var planet = new Planet(_configuration)
                     {
                         Name = Name + "/" + nextChar++
                     };
                     orbit.World = planet;
-                    k = planet.FleshOut(configuration, orbit.Number, orbit, this, HZone, ComLumAddFromPrim);
+                    k = planet.FleshOut(orbit.Number, orbit, this, HZone, ComLumAddFromPrim);
                     SystemHabitability = Math.Max(k, SystemHabitability);
                 }
             }
@@ -910,23 +914,23 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return cmw;
         }
 
-        public void Devlop(Configuration configuration, Planet mainworld)
+        public void Devlop(Planet mainworld)
         {
             foreach (var orbit in Orbits)
             {
                 if (orbit.World != null)
                 {
-                    orbit.World.CompleteTravInfo(configuration, mainworld);
-                    if (configuration.CurrentCampaign == Campaign.THENEWERA)
+                    orbit.World.CompleteTravInfo(mainworld);
+                    if (_configuration.CurrentCampaign == Campaign.THENEWERA)
                     {
-                        orbit.World.DoCollapse(configuration);
+                        orbit.World.DoCollapse();
                     }
                 }
             }
 
             foreach (var star in Companions)
             {
-                star.Devlop(configuration, mainworld);
+                star.Devlop(mainworld);
             }
         }
 
@@ -953,7 +957,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             
         }
 
-        public virtual void SaveToXML(XmlElement objSystem, Configuration configuration)
+        public virtual void SaveToXML(XmlElement objSystem)
         {
             var xeStar = objSystem.OwnerDocument.CreateElement("Star");
             objSystem.AppendChild(xeStar);
@@ -971,7 +975,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             foreach (var orbit in Orbits)
             {
-                orbit.SaveToXML(xeStar, configuration);
+                orbit.SaveToXML(xeStar);
             }
 
             var xeStars = objSystem.OwnerDocument.CreateElement("Companions");
@@ -979,7 +983,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             foreach (var companion in Companions)
             {
-                companion.SaveToXML(xeStars, configuration);
+                companion.SaveToXML(xeStars);
             }
         }
 

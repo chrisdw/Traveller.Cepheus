@@ -16,6 +16,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public string ConflictReason { get; set; }
 
         internal ICampaign CurrentCampaign { get; set; }
+        private Configuration _configuration;
 
         public string UWPString
         {
@@ -26,8 +27,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
         }
         public List<Faction> Factions { get; internal set; } = new List<Faction>();
 
-        public TravInfo()
+        public TravInfo(Configuration configuration)
         {
+            _configuration = configuration;
             Starport = 'X';
             PopMult = 0;
             Remarks = string.Empty;
@@ -362,7 +364,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        public void GetTravInfo(Configuration config)
+        public void GetTravInfo()
         {
             Pop.Value = Common.d6() + Common.d6() - 2;
 
@@ -376,7 +378,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             if (Atmosphere.Value == 5 || Atmosphere.Value == 8)  Pop.Value += 1;
             if (Hydro.Value == 0 && Atmosphere.Value < 3)  Pop.Value -= 2;
 
-            if (config.HardScience)
+            if (_configuration.HardScience)
             {
                 if (Size.Value <= 2) Pop.Value -= 1;
                 if (Size.Value >= 10) Pop.Value -= 1;
@@ -408,9 +410,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        public void CompleteTravInfo(Configuration config)
+        public void CompleteTravInfo()
         {
-            Starport = GetStarport(config);
+            Starport = GetStarport();
             if (Pop.Value == 0)
             {
                 TechLevel.Value = 0;
@@ -420,9 +422,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 TechLevel.Value = CurrentCampaign.GenerateTechLevel(this);
             }
 
-            if (config.GenerateFactions)
+            if (_configuration.GenerateFactions)
             {
-                Factions = Faction.GenerateFactions(this, config);
+                Factions = Faction.GenerateFactions(this, _configuration);
             }
 
             // Bases
@@ -485,7 +487,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             DoTradeClassification();
 
-            if (config.CurrentCampaign == Campaign.HAMMERSSLAMMERS && Pop.Value > 0)
+            if (_configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS && Pop.Value > 0)
             {
                 var conflictDm = 0;
                 if (Pop.Value >= 7 && TechLevel.Value >= 11)
@@ -556,10 +558,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return PopMult * Math.Pow(10, Pop.Value);
         }
 
-        private char GetStarport(Configuration config)
+        private char GetStarport()
         {
             var dieroll = Common.d6() + Common.d6();
-            if (config.HardScience)
+            if (_configuration.HardScience)
             {
                 dieroll = dieroll + 7 - Pop.Value;
             }
@@ -576,7 +578,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             char starport = 'X';
 
-            switch (config.StarportTable)
+            switch (_configuration.StarportTable)
             {
                 case StarportTableType.BACKWATER:
                     if (dieroll < 3) starport = 'A';
@@ -614,7 +616,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return starport;
         }
 
-        public void SaveToXML(XmlElement objWorld, Configuration configuration)
+        public void SaveToXML(XmlElement objWorld)
         {
             var xeInfo = objWorld.OwnerDocument.CreateElement("TravellerInfo");
             objWorld.AppendChild(xeInfo);
@@ -631,7 +633,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             Common.CreateTextNode(xeInfo, "Remarks", Remarks);
             Common.CreateTextNode(xeInfo, "Bases", Bases);
 
-            if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
+            if (_configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
             {
                 Common.CreateTextNode(xeInfo, "ConflictReason", ConflictReason);
             }
@@ -646,7 +648,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 xeAttrib = objWorld.OwnerDocument.CreateAttribute("Strength");
                 xeAttrib.Value = faction.StrengthString;
                 xeFactionChild.Attributes.Append(xeAttrib);
-                if (configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
+                if (_configuration.CurrentCampaign == Campaign.HAMMERSSLAMMERS)
                 {
                     xeAttrib = objWorld.OwnerDocument.CreateAttribute("Origin");
                     xeAttrib.Value = faction.Origin;
@@ -655,7 +657,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     xeAttrib.Value = faction.Name;
                     xeFactionChild.Attributes.Append(xeAttrib);
                 }
-                xeFactionChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(faction.DisplayString(configuration)));
+                xeFactionChild.AppendChild(objWorld.OwnerDocument.CreateTextNode(faction.DisplayString()));
                 xeChild.AppendChild(xeFactionChild);
             }
             xeInfo.AppendChild(xeChild);

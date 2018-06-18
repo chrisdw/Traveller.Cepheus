@@ -46,8 +46,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         public double OrbitNumber { get; set; }
 
-        public TravInfo Normal { get; } = new TravInfo();
-        public TravInfo Collapse { get; } = new TravInfo();
+        public TravInfo Normal { get; }
+        public TravInfo Collapse { get; } 
 
         public bool Life { get; set; }
         public int LifeFactor { get; set; }
@@ -62,6 +62,8 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public double[] Winter { get; } = new double[Constants.NUM_HEX_ROWS * 2];
 
         public WorldType PlanetType { get; set; }
+
+        protected Configuration _configuration;
 
         public string DisplayString
         {
@@ -114,9 +116,35 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
          }
 
+        public List<TemperatureData> Temperature
+        {
+            get
+            {
+                var list = new List<TemperatureData>();
+                for (var i = 0; i < (Constants.NUM_HEX_ROWS * 2) - 1; i += 2)
+                {
+                    var temp = new TemperatureData()
+                    {
+                        Row = (i / 2 + 1)
+                    };
+
+                    temp.Summer = string.Format("{0:N2}/{1:N2}", Summer[i], Summer[i + 1]);
+                    temp.Fall = string.Format("{0:N2}/{1:N2}", Fall[i], Fall[i + 1]);
+                    temp.Winter = string.Format("{0:N2}/{1:N2}", Winter[i], Winter[i + 1]);
+
+                    list.Add(temp);
+                }
+                return list;
+            }
+        }
+
         public Planet(Configuration configuration)
         {
-            if (configuration.CurrentCampaign == Campaign.HOSTILE)
+            _configuration = configuration;
+            Normal = new TravInfo(configuration);
+            Collapse = new TravInfo(configuration);
+
+            if (_configuration.CurrentCampaign == Campaign.HOSTILE)
             {
                 Normal.CurrentCampaign = new Hostile();
                 Collapse.CurrentCampaign = new Hostile();
@@ -128,15 +156,15 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        public void Generate(Configuration config)
+        public void Generate()
         {
-            if (config.Generation == GenerationType.SIMPLE)
+            if (_configuration.Generation == GenerationType.SIMPLE)
             {
                 Normal.Size.Value = Common.d6() + Common.d6() - 2;
                 Normal.Atmosphere.Value = Common.d6() + Common.d6() - 7 + Normal.Size.Value;
                 Normal.Hydro.Value = Common.d6() + Common.d6() - 7 + Normal.Atmosphere.Value;
-                Normal.GetTravInfo(config);
-                Normal.CompleteTravInfo(config);
+                Normal.GetTravInfo();
+                Normal.CompleteTravInfo();
 
                 Maxpop = GetBasicMaxPop();
 
@@ -188,12 +216,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        protected void GetTravInfo(Configuration configuration)
+        protected void GetTravInfo()
         {
-            Normal.GetTravInfo(configuration);
+            Normal.GetTravInfo();
         }
 
-        public int FleshOut(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim)
+        public int FleshOut(double OrbitNum, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim)
         {
             var M = primary.StellarMass;
             var D = myOrbit.Range;
@@ -226,7 +254,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         numsats = 0;
                     }
 
-                    Maxpop = BuildSatellites(configuration, OrbitNum, myOrbit, primary, HZone, ComLumAddFromPrim, numsats);
+                    Maxpop = BuildSatellites(OrbitNum, myOrbit, primary, HZone, ComLumAddFromPrim, numsats);
                     break;
                 case Orbit.OccupiedBy.CAPTURED:
                 case Orbit.OccupiedBy.WORLD:
@@ -254,9 +282,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     Normal.Size.Value = dieroll;
                     Diameter = GetDiameter();
                     Dense = GetDensity(myOrbit);
-                    Normal.Atmosphere.Value = GetAtmosphere(myOrbit, configuration);
+                    Normal.Atmosphere.Value = GetAtmosphere(myOrbit);
                     Pressure = GetPressure();
-                    Normal.Hydro.Value = GetHydrographics(myOrbit, configuration);
+                    Normal.Hydro.Value = GetHydrographics(myOrbit);
                     Maxpop = GetMaxPop(myOrbit, HZone, OrbitNum);
                     Rotation = (4 * (Common.d6() + Common.d6() - 2)) + 5 + (M / D);
                     if (Rotation > 40.0)
@@ -322,7 +350,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         OrbitNumber += roll;
                     }
 
-                    GetTempChart(this, myOrbit, ComLumAddFromPrim, primary, configuration, false);
+                    GetTempChart(this, myOrbit, ComLumAddFromPrim, primary, false);
 
                     GetNativeLife(false, primary);
 
@@ -338,13 +366,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     {
                         numsats = 0;
                     }
-                    var satMaxPop = BuildSatellites(configuration, OrbitNum, myOrbit, primary, HZone, ComLumAddFromPrim, numsats);
+                    var satMaxPop = BuildSatellites(OrbitNum, myOrbit, primary, HZone, ComLumAddFromPrim, numsats);
 
                     Maxpop = Math.Max(satMaxPop, Maxpop);
 
-                    if (configuration.GenerateTravInfo)
+                    if (_configuration.GenerateTravInfo)
                     {
-                        GetTravInfo(configuration);
+                        GetTravInfo();
                     }
                     break;
 
@@ -373,7 +401,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return Maxpop;
         }
 
-        private int BuildSatellites(Configuration configuration, double OrbitNum, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim, int numsats)
+        private int BuildSatellites(double OrbitNum, Orbit myOrbit, Star primary, int HZone, double ComLumAddFromPrim, int numsats)
         {
             var ringcount = 0;
             var retry = false;
@@ -381,7 +409,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             for (var i = 0; i < numsats; i++)
             {
-                var satellite = new Satellite(configuration)
+                var satellite = new Satellite(_configuration)
                 {
                     Name = string.Format("{0}/A{1}", Name, i)
                 };
@@ -411,7 +439,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                         }
                     }
                 } while (retry);
-                var k = satellite.FleshOut(configuration, this, myOrbit, primary, HZone, ComLumAddFromPrim);
+                var k = satellite.FleshOut(this, myOrbit, primary, HZone, ComLumAddFromPrim);
                 ret = Math.Max(k, ret);
 
             }
@@ -494,7 +522,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return dense;
         }
 
-        protected int GetAtmosphere(Orbit orbit, Configuration configuration)
+        protected int GetAtmosphere(Orbit orbit)
         {
             var dieroll = Common.d6() + Common.d6() - 7 + Normal.Size.Value;
             if (orbit.OrbitalType == Orbit.OrbitType.INNER)
@@ -515,7 +543,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 dieroll = 0;
             }
 
-            if (configuration.SpaceOpera)
+            if (_configuration.SpaceOpera)
             {
                 if (Normal.Size.Value <= 2)
                 {
@@ -575,7 +603,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return press;
         }
 
-        protected int GetHydrographics(Orbit orbit, Configuration configuration)
+        protected int GetHydrographics(Orbit orbit)
         {
             var dieroll = Common.d6() + Common.d6() - 7 + Normal.Size.Value;
 
@@ -607,7 +635,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 dieroll -= 2;
             }
 
-            if (configuration.SpaceOpera)
+            if (_configuration.SpaceOpera)
             {
                 if (Normal.Size.Value >= 3 && Normal.Size.Value <= 4 && Normal.Atmosphere.Value == 10)
                 {
@@ -693,7 +721,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return maxpop;
         }
 
-        protected void GetTempChart(Planet mainWorld, Orbit orbit, double ComLumAddFromPrim, Star primary, Configuration configuration, bool forSatellite)
+        protected void GetTempChart(Planet mainWorld, Orbit orbit, double ComLumAddFromPrim, Star primary, bool forSatellite)
         {
             var L = primary.Luminosity;
             var O = Constants.HABITNUM / Math.Sqrt(orbit.Range);
@@ -728,7 +756,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             var G = DataTables.Greenhouse[Normal.Atmosphere.Value];
 
-            if (configuration.UseGaiaFactor && Maxpop > 5)
+            if (_configuration.UseGaiaFactor && Maxpop > 5)
             {
                 E = Common.CalcGaiaFactor(L, O, G, E);
             }
@@ -833,7 +861,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     Fall[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] + latEffect;
                     Winter[i] = Temp + DataTables.LatitudeMods[i / 2, Normal.Size.Value] - (Ecc * 30) + latEffect;
                 }
-                if (configuration.UseFarenheight)
+                if (_configuration.UseFarenheight)
                 {
                     Summer[i] = Common.CtoF(Summer[i]);
                     Fall[i] = Common.CtoF(Fall[i]);
@@ -1154,7 +1182,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
         /// generation. There's another version used when walking an
         /// entire system.
         /// </summary>
-        public void DoCollapse(Configuration configuration)
+        public void DoCollapse()
         {
             var dieroll = 0;
 
@@ -1296,7 +1324,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
                     Collapse.PopMult -= 10;
                 }
 
-                Collapse.Factions = Faction.GenerateFactions(Collapse, configuration);
+                Collapse.Factions = Faction.GenerateFactions(Collapse, _configuration);
 
                 Collapse.DoTradeClassification();
             }
@@ -1430,9 +1458,9 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
         }
 
-        public void CompleteTravInfo(Configuration configuration)
+        public void CompleteTravInfo()
         {
-            Normal.CompleteTravInfo(configuration);
+            Normal.CompleteTravInfo();
         }
 
         public double Population(bool forCollapse)
@@ -1454,7 +1482,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return pop;
         }
 
-        public void CompleteTravInfo(Configuration configuration, Planet mainworld)
+        public void CompleteTravInfo(Planet mainworld)
         {
             if (!MainWorld && PlanetType != WorldType.SMALL && PlanetType != WorldType.LGG && PlanetType != WorldType.SGG)
             {
@@ -1462,10 +1490,10 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
             foreach (var satellite in Satellites)
             {
-                satellite.CompleteTravInfo(configuration, mainworld);
+                satellite.CompleteTravInfo(mainworld);
             }
         }
-        public virtual void SaveToXML(XmlElement objOrbit, Configuration configuration)
+        public virtual void SaveToXML(XmlElement objOrbit)
         {
             var nfi = System.Globalization.NumberFormatInfo.InvariantInfo;
 
@@ -1497,18 +1525,11 @@ namespace org.DownesWard.Traveller.SystemGeneration
             for (var i = 0; i < (Constants.NUM_HEX_ROWS * 2) - 1; i += 2)
             {
                 var xeTemp = objOrbit.OwnerDocument.CreateElement("Row" + (i / 2 + 1).ToString());
-                if (configuration.UseFarenheight)
-                {
-                    Common.CreateTextNode(xeTemp, "Summer", Common.CtoF(Summer[i]).ToString("N", nfi) + "/" + Common.CtoF(Summer[i + 1]).ToString("N", nfi));
-                    Common.CreateTextNode(xeTemp, "Fall", Common.CtoF(Fall[i]).ToString("N", nfi) + "/" + Common.CtoF(Fall[i + 1]).ToString("N", nfi));
-                    Common.CreateTextNode(xeTemp, "Winter", Common.CtoF(Winter[i]).ToString("N", nfi) + "/" + Common.CtoF(Winter[i + 1]).ToString("N", nfi));
-                }
-                else
-                {
-                    Common.CreateTextNode(xeTemp, "Summer", Summer[i].ToString("N", nfi) + "/" + Summer[i + 1].ToString("N", nfi));
-                    Common.CreateTextNode(xeTemp, "Fall", Fall[i].ToString("N", nfi) + "/" + Fall[i + 1].ToString("N", nfi));
-                    Common.CreateTextNode(xeTemp, "Winter", Winter[i].ToString("N", nfi) + "/" + Winter[i + 1].ToString("N", nfi));
-                }
+
+                Common.CreateTextNode(xeTemp, "Summer", Summer[i].ToString("N", nfi) + "/" + Summer[i + 1].ToString("N", nfi));
+                Common.CreateTextNode(xeTemp, "Fall", Fall[i].ToString("N", nfi) + "/" + Fall[i + 1].ToString("N", nfi));
+                Common.CreateTextNode(xeTemp, "Winter", Winter[i].ToString("N", nfi) + "/" + Winter[i + 1].ToString("N", nfi));
+ 
                 xeChild.AppendChild(xeTemp);
             }
 
@@ -1521,12 +1542,12 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 xePlanet.AppendChild(xeChild);
             }
 
-            Normal.SaveToXML(xePlanet, configuration);
-            Collapse.SaveToXML(xePlanet, configuration);
+            Normal.SaveToXML(xePlanet);
+            Collapse.SaveToXML(xePlanet);
 
             foreach (var satellite in Satellites)
             {
-                satellite.SaveToXML(xePlanet, configuration);
+                satellite.SaveToXML(xePlanet);
             }
         }
 

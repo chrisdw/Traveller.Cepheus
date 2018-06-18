@@ -106,7 +106,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
             return 0;
         }
 
-        public void SaveToXML(XmlElement objStar, Configuration configuration)
+        public void SaveToXML(XmlElement objStar)
         {
             var xeOrbit = objStar.OwnerDocument.CreateElement("Orbit");
             objStar.AppendChild(xeOrbit);
@@ -127,7 +127,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             if (World != null)
             {
-                World.SaveToXML(xeOrbit, configuration);
+                World.SaveToXML(xeOrbit);
             }
         }
 

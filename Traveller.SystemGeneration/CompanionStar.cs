@@ -8,13 +8,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
         public double Range { get; set; }
         public StarSystem.SystemType SysNat { get; set; }
 
-        public CompanionStar() : base()
+        public CompanionStar(Configuration configuration) : base(configuration)
         {
             IntialiseOrbits();
             Build();
         }
 
-        public CompanionStar(StellarType stellarType, char stellarClass, char decimalClass) : base(stellarType, stellarClass, decimalClass)
+        public CompanionStar(Configuration configuration, StellarType stellarType, char stellarClass, char decimalClass) : base(configuration, stellarType, stellarClass, decimalClass)
         {
             IntialiseOrbits();
             Build();
@@ -73,13 +73,13 @@ namespace org.DownesWard.Traveller.SystemGeneration
                 if (SysNat == StarSystem.SystemType.BINARY)
                 {
                     NumCompanions = 1;
-                    Companions.Add(new CompanionStar());
+                    Companions.Add(new CompanionStar(_configuration));
                     AvaialbleOribits(0);
                 }
             }
         }
 
-        public override void SaveToXML(XmlElement objStar, Configuration configuration)
+        public override void SaveToXML(XmlElement objStar)
         {
             var xeStar = objStar.OwnerDocument.CreateElement("Star");
             objStar.AppendChild(xeStar);
@@ -104,7 +104,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             foreach (var orbit in Orbits)
             {
-                orbit.SaveToXML(xeStar, configuration);
+                orbit.SaveToXML(xeStar);
             }
 
             var xeStars = objStar.OwnerDocument.CreateElement("Companions");
@@ -112,7 +112,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
             foreach (var companion in Companions)
             {
-                companion.SaveToXML(xeStars, configuration);
+                companion.SaveToXML(xeStars);
             }
         }
     }
