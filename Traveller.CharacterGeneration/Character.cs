@@ -41,5 +41,6 @@ namespace Traveller.CharacterGeneration
         public Dictionary<string, Benefit> Benefits { get; } = new Dictionary<string, Benefit>();
 
         public UPP Profile { get; set; }
+        public List<Career> Careers { get; set; }
     }
 }

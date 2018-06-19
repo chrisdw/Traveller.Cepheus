@@ -53,7 +53,7 @@ namespace Traveller.CharacterGeneration
         public int TermsServed { get; set; }
         public List<Benefit> Material { get; } = new List<Benefit>();
         public long[] Cash { get; } = new long[7];
-        public Character Owner { get; set; }
+        public virtual Character Owner { get; set; }
         public int RankNumber { get; set; }
         public bool Retired { get; set; }
 
