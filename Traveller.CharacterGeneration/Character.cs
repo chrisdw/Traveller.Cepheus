@@ -37,10 +37,12 @@ namespace Traveller.CharacterGeneration
         public bool Died { get; set; }
         public Species CharacterSpecies { get; set; }
         public List<string> Journal { get; } = new List<string>();
-        public List<Skill> Skills { get; } = new List<Skill>();
+        public Dictionary<string, Skill> Skills { get; } = new Dictionary<string, Skill>();
         public Dictionary<string, Benefit> Benefits { get; } = new Dictionary<string, Benefit>();
 
         public UPP Profile { get; set; }
         public List<Career> Careers { get; set; }
+
+        public Constants.CultureType Culture { get; set; }
     }
 }

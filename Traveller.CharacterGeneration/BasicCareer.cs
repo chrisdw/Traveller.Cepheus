@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.DownesWard.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -11,13 +12,22 @@ namespace Traveller.CharacterGeneration
         public int CurrentRank { get; set; }
         public int TermSkills { get; set; }
         public int Term { get; set; }
-        public bool Drafted { get; set; }
+        public virtual bool Drafted { get; set; }
+
+        protected Dice dice = new Dice(6);
 
         abstract public bool Enlist();
         abstract public bool Survival();
         abstract public bool Commission();
         abstract public bool Promotion();
-        abstract public bool Renlist();
+        public enum Renlistment
+        {
+            Must,
+            Can,
+            Cant
+        }
+        abstract public Renlistment CanRenlist();
+        abstract public void HandleRenlist(bool renlisted);
         public virtual void EndTerm()
         {
             TermSkills = 1;
