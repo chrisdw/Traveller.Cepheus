@@ -44,5 +44,6 @@ namespace Traveller.CharacterGeneration
         public List<Career> Careers { get; set; }
 
         public Constants.CultureType Culture { get; set; }
+        public Constants.GenerationStyle Style { get; set; } = Constants.GenerationStyle.Classic_Traveller;
     }
 }
