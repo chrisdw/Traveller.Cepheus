@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Traveller.CharacterGeneration.Imperial
+namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
 {
     public class Culture : ICulture
     {

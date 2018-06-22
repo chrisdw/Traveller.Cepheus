@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Traveller.CharacterGeneration
+namespace org.DownesWard.Traveller.CharacterGeneration
 {
     public class Character
     {

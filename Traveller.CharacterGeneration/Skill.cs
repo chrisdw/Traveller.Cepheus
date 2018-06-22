@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Traveller.CharacterGeneration
+namespace org.DownesWard.Traveller.CharacterGeneration
 {
     public class Skill
     {

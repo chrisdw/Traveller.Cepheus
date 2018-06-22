@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Traveller.CharacterGeneration
+namespace org.DownesWard.Traveller.CharacterGeneration
 {
     /// <summary>
     /// Holds the casecade lists for all standard skills
@@ -41,6 +41,23 @@ namespace Traveller.CharacterGeneration
                 new Skill("Automatic Rifle", Skill.SkillClass.None, 1),
                 new Skill("Submachine Gun", Skill.SkillClass.None, 1),
                 new Skill("Shotgun", Skill.SkillClass.None, 1)
+            }
+        };
+
+        public static Skill BladeCombat = new Skill("Blade Combat", Skill.SkillClass.None, 1)
+        {
+            Cascade =
+            {
+                new Skill("Dagger", Skill.SkillClass.None, 1),
+                new Skill("Blade", Skill.SkillClass.None, 1),
+                new Skill("Foil", Skill.SkillClass.None, 1),
+                new Skill("Cutlass", Skill.SkillClass.None, 1),
+                new Skill("Sword", Skill.SkillClass.None, 1),
+                new Skill("Broadsword", Skill.SkillClass.None, 1),
+                new Skill("Halberd", Skill.SkillClass.None, 1),
+                new Skill("Pike", Skill.SkillClass.None, 1),
+                new Skill("Cudgel", Skill.SkillClass.None, 1),
+                new Skill("Bayonet", Skill.SkillClass.None, 1)
             }
         };
     }

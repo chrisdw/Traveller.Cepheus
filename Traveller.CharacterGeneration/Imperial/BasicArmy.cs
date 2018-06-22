@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Traveller.CharacterGeneration.Imperial
+namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
 {
     public class BasicArmy : BasicCareer
     {
@@ -24,12 +24,32 @@ namespace Traveller.CharacterGeneration.Imperial
             table = SkillTables[1];
             table.Name = "Service Skills";
             skills = table.Skills;
-            skills[0] = new Skill("STR", Skill.SkillClass.AttributeChange, 1);
-            skills[1] = new Skill("DEX", Skill.SkillClass.AttributeChange, 1);
-            skills[2] = new Skill("END", Skill.SkillClass.AttributeChange, 1);
-            skills[3] = new Skill("Gambling", Skill.SkillClass.None, 1);
+            skills[0] = new Skill("ATV", Skill.SkillClass.None, 1);
+            skills[1] = new Skill("Air/Raft", Skill.SkillClass.None, 1);
+            skills[2] = new Skill("Forward Observer", Skill.SkillClass.None, 1);
+            skills[3] = Cascades.BladeCombat;
             skills[4] = Cascades.GunCombat;
             skills[5] = Cascades.GunCombat;
+
+            table = SkillTables[2];
+            table.Name = "Education";
+            skills = table.Skills;
+            skills[0] = new Skill("ATV", Skill.SkillClass.None, 1);
+            skills[1] = new Skill("Mechanical", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+            skills[2] = new Skill("Electronics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+            skills[3] = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+            skills[4] = Cascades.BladeCombat;
+            skills[5] = Cascades.GunCombat;
+
+            table = SkillTables[3];
+            table.Name = "Advanced Education";
+            skills = table.Skills;
+            skills[0] = new Skill("Medic", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+            skills[1] = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+            skills[2] = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+            skills[3] = new Skill("Computer", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+            skills[4] = new Skill("Leader", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+            skills[5] = new Skill("Admin", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
 
             Material.Add(new Benefit("Low Psg", 1, Benefit.BenefitType.Material));
             Material.Add(new Benefit("INT", 1, Benefit.BenefitType.AttributeModification));
