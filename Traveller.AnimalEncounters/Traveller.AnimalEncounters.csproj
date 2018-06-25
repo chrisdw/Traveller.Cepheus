@@ -3,6 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>org.DownesWard.Traveller.AnimalEncounters</RootNamespace>
+    <Authors>Chris Downes-Ward, D. S. Lewis</Authors>
+    <Product>Traveller Animal Encounters Generator</Product>
+    <Description>Core logic for generating Traveller encounter tables orginally by D. S. Lewis adapted for C# and .NET Standard</Description>
+    <Copyright>Chris Downes-Ward 2018</Copyright>
+    <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>

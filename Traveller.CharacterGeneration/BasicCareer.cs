@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
     public abstract class BasicCareer : Career
     {
         public SkillTable[] SkillTables { get; } = new SkillTable[4];
-        public string[] Ranks { get; } = new string[6];
+        public string[] Ranks { get; } = new string[7];
         public int CurrentRank { get; set; }
         public int TermSkills { get; set; }
         public int Term { get; set; }

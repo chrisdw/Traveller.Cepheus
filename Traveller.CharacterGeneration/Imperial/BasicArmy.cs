@@ -11,7 +11,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
             CurrentRank = 0;
             TermSkills = 2;
 
-            var table = SkillTables[0];
+            var table = new SkillTable();
+            SkillTables[0] = table;
             table.Name = "Personal Development";
             var skills = table.Skills;
             skills[0] = new Skill("STR", Skill.SkillClass.AttributeChange, 1);
@@ -21,7 +22,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
             skills[4] = new Skill("Brawling", Skill.SkillClass.None, 1);
             skills[5] = new Skill("EDU", Skill.SkillClass.AttributeChange, 1);
 
-            table = SkillTables[1];
+            table = new SkillTable();
+            SkillTables[1] = table;
             table.Name = "Service Skills";
             skills = table.Skills;
             skills[0] = new Skill("ATV", Skill.SkillClass.None, 1);
@@ -31,7 +33,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
             skills[4] = Cascades.GunCombat;
             skills[5] = Cascades.GunCombat;
 
-            table = SkillTables[2];
+            table = new SkillTable();
+            SkillTables[2] = table;
             table.Name = "Education";
             skills = table.Skills;
             skills[0] = new Skill("ATV", Skill.SkillClass.None, 1);
@@ -41,7 +44,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
             skills[4] = Cascades.BladeCombat;
             skills[5] = Cascades.GunCombat;
 
-            table = SkillTables[3];
+            table = new SkillTable();
+            SkillTables[3] = table;
             table.Name = "Advanced Education";
             skills = table.Skills;
             skills[0] = new Skill("Medic", Skill.SkillClass.None, 1, Skill.SkillSex.Female);

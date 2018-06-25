@@ -3,6 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>org.DownesWard.Traveller.CharacterGeneration</RootNamespace>
+    <Authors>Chris Downes-Ward</Authors>
+    <Description>Character Generation Code for Traveller</Description>
+    <Copyright>Chris Downes-Ward 2018</Copyright>
+    <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
