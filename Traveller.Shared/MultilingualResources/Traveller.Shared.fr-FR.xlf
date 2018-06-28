@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-GB" target-language="en" original="TRAVELLER.SHARED/PROPERTIES/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+  <file datatype="xml" source-language="en-GB" target-language="fr-FR" original="TRAVELLER.SHARED/PROPERTIES/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
     <header>
       <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
     </header>
@@ -8,15 +8,15 @@
       <group id="TRAVELLER.SHARED/PROPERTIES/RESOURCES.RESX" datatype="resx">
         <trans-unit id="UWP_Attr_Atmosphere" translate="yes" xml:space="preserve">
           <source>Atmosphere</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Atmosphere</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Atmosphère</target>
         </trans-unit>
         <trans-unit id="UWP_Attr_Size" translate="yes" xml:space="preserve">
           <source>Size</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Size</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Taille</target>
         </trans-unit>
         <trans-unit id="UPP_Attr_Dexterity" translate="yes" xml:space="preserve">
           <source>Dexterity</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dexterity</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dextérité</target>
         </trans-unit>
         <trans-unit id="UPP_Attr_Endurance" translate="yes" xml:space="preserve">
           <source>Endurance</source>
@@ -24,19 +24,19 @@
         </trans-unit>
         <trans-unit id="UPP_Attr_Strength" translate="yes" xml:space="preserve">
           <source>Strength</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Strength</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Point fort</target>
         </trans-unit>
         <trans-unit id="UWP_Attr_Government" translate="yes" xml:space="preserve">
           <source>Government</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Government</target>
+          <target state="needs-review-translation" state-qualifier="exact-match">Administration</target>
         </trans-unit>
         <trans-unit id="UWP_Attr_Hydrographics" translate="yes" xml:space="preserve">
           <source>Hydrographics</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hydrographics</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Malsain</target>
         </trans-unit>
         <trans-unit id="UWP_Attr_Lawlevel" translate="yes" xml:space="preserve">
           <source>Law level</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Law level</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niveau de la Loi</target>
         </trans-unit>
         <trans-unit id="UWP_Attr_Population" translate="yes" xml:space="preserve">
           <source>Population</source>
@@ -44,7 +44,7 @@
         </trans-unit>
         <trans-unit id="UWP_Attr_Techlevel" translate="yes" xml:space="preserve">
           <source>Tech level</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tech level</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niveau de technologie</target>
         </trans-unit>
       </group>
     </body>

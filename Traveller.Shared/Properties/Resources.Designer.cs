@@ -59,5 +59,95 @@ namespace org.DownesWard.Traveller.Shared.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dexterity.
+        /// </summary>
+        internal static string UPP_Attr_Dexterity {
+            get {
+                return ResourceManager.GetString("UPP_Attr_Dexterity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endurance.
+        /// </summary>
+        internal static string UPP_Attr_Endurance {
+            get {
+                return ResourceManager.GetString("UPP_Attr_Endurance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strength.
+        /// </summary>
+        internal static string UPP_Attr_Strength {
+            get {
+                return ResourceManager.GetString("UPP_Attr_Strength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Atmosphere.
+        /// </summary>
+        internal static string UWP_Attr_Atmosphere {
+            get {
+                return ResourceManager.GetString("UWP_Attr_Atmosphere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Government.
+        /// </summary>
+        internal static string UWP_Attr_Government {
+            get {
+                return ResourceManager.GetString("UWP_Attr_Government", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hydrographics.
+        /// </summary>
+        internal static string UWP_Attr_Hydrographics {
+            get {
+                return ResourceManager.GetString("UWP_Attr_Hydrographics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Law level.
+        /// </summary>
+        internal static string UWP_Attr_Lawlevel {
+            get {
+                return ResourceManager.GetString("UWP_Attr_Lawlevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Population.
+        /// </summary>
+        internal static string UWP_Attr_Population {
+            get {
+                return ResourceManager.GetString("UWP_Attr_Population", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Size.
+        /// </summary>
+        internal static string UWP_Attr_Size {
+            get {
+                return ResourceManager.GetString("UWP_Attr_Size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tech level.
+        /// </summary>
+        internal static string UWP_Attr_Techlevel {
+            get {
+                return ResourceManager.GetString("UWP_Attr_Techlevel", resourceCulture);
+            }
+        }
     }
 }

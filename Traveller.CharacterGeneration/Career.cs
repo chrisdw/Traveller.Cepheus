@@ -50,6 +50,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Darrian_Academic
         }
 
+        public enum BenefitPick
+        {
+            None,
+            Skill,
+            Weapon
+        }
+
         public string Name { get; set; }
         public int TermsServed { get; set; }
         public List<Benefit> Material { get; } = new List<Benefit>();
@@ -89,7 +96,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     {
                         pension *= 2;
                     }
-                    Owner.Benefits.Add("Retirement Pay", new Benefit() { Name = "Retirement Pay", Value = pension, TypeOfBenefit = Benefit.BenefitType.Material } );
+                    Owner.AddBenefit(new Benefit() { Name = "Retirement Pay", Value = pension, TypeOfBenefit = Benefit.BenefitType.Material });
                 }
             }
         }
@@ -102,14 +109,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             {
                 roll++;
             }
-            if (Owner.Benefits.ContainsKey("Cash"))
-            {
-                Owner.Benefits["Cash"].Value += Cash[roll];
-            }
-            else
-            {
-                Owner.Benefits.Add("Cash", new Benefit() { Name = "Cash", Value = Cash[roll], TypeOfBenefit = Benefit.BenefitType.Cash });
-            }
+            Owner.AddBenefit(new Benefit() { Name = "Cash", Value = Cash[roll], TypeOfBenefit = Benefit.BenefitType.Cash });
+        }
+
+        public BenefitPick ResolveMaterialBenefit()
+        {
+            var result = BenefitPick.None;
+
+            return result;
         }
     }
 }

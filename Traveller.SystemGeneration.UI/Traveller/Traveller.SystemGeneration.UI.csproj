@@ -17,6 +17,9 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
+    <None Remove="MultilingualResources\Traveller.SystemGeneration.fr-FR.xlf" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="AppCenter.Analytics.Metrics" Version="1.0.0" />
     <PackageReference Include="Microsoft.AppCenter" Version="1.6.1" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.6.1" />
@@ -25,6 +28,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Traveller.Shared\Traveller.Shared.csproj" />
     <ProjectReference Include="..\..\Traveller.SystemGeneration\Traveller.SystemGeneration.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\Traveller.SystemGeneration.fr-FR.xlf" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">

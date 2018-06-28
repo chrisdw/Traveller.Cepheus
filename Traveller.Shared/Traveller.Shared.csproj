@@ -16,10 +16,20 @@
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
   </Target>
   <ItemGroup>
+    <None Remove="MultilingualResources\Traveller.Shared.de-DE.xlf" />
+    <None Remove="MultilingualResources\Traveller.Shared.en.xlf" />
+    <None Remove="MultilingualResources\Traveller.Shared.fr-FR.xlf" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.530893" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Utilities\Utilities.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\Traveller.Shared.de-DE.xlf" />
+    <XliffResource Include="MultilingualResources\Traveller.Shared.en.xlf" />
+    <XliffResource Include="MultilingualResources\Traveller.Shared.fr-FR.xlf" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

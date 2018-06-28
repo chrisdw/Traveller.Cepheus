@@ -13,33 +13,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="UWP_Attr_Atmosphere" xml:space="preserve">
-    <value>Atmosphere</value>
+    <value>Atmosphère</value>
   </data>
   <data name="UWP_Attr_Size" xml:space="preserve">
-    <value>Size</value>
+    <value>Taille</value>
   </data>
   <data name="UPP_Attr_Dexterity" xml:space="preserve">
-    <value>Dexterity</value>
+    <value>Dextérité</value>
   </data>
   <data name="UPP_Attr_Endurance" xml:space="preserve">
     <value>Endurance</value>
   </data>
   <data name="UPP_Attr_Strength" xml:space="preserve">
-    <value>Strength</value>
+    <value>Point fort</value>
   </data>
   <data name="UWP_Attr_Government" xml:space="preserve">
-    <value>Government</value>
+    <value>Administration</value>
   </data>
   <data name="UWP_Attr_Hydrographics" xml:space="preserve">
-    <value>Hydrographics</value>
+    <value>Malsain</value>
   </data>
   <data name="UWP_Attr_Lawlevel" xml:space="preserve">
-    <value>Law level</value>
+    <value>Niveau de la Loi</value>
   </data>
   <data name="UWP_Attr_Population" xml:space="preserve">
     <value>Population</value>
   </data>
   <data name="UWP_Attr_Techlevel" xml:space="preserve">
-    <value>Tech level</value>
+    <value>Niveau de technologie</value>
   </data>
 </root>

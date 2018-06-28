@@ -17,11 +17,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
         private async void Generate_Clicked(object sender, EventArgs e)
         {
-            Character character = new Character();
-            character.Culture = Constants.CultureType.Imperial;
-            character.Sex = "Male";
-            character.Style = Constants.GenerationStyle.Classic_Traveller;
-            character.CharacterSpecies = Character.Species.Human_Imperial;
+            Character character = new Character
+            {
+                Culture = Constants.CultureType.Imperial,
+                Sex = "Male",
+                Style = Constants.GenerationStyle.Classic_Traveller,
+                CharacterSpecies = Character.Species.Human_Imperial
+            };
             character.Generate();
 
             ICulture culture = new Imperial.Culture();

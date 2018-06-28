@@ -103,6 +103,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             }
         }
 
+        public void AddBenefit(Benefit benefit)
+        {
+            if (Benefits.ContainsKey(benefit.Name))
+            {
+                Benefits[benefit.Name].Value += benefit.Value;
+            }
+            else
+            {
+                Benefits.Add(benefit.Name, benefit);
+            }
+        }
+
         public bool AgingCheck()
         {
             var result = true;

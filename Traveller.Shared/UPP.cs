@@ -1,12 +1,14 @@
-﻿namespace org.DownesWard.Traveller.Shared
+﻿using org.DownesWard.Traveller.Shared.Properties;
+
+namespace org.DownesWard.Traveller.Shared
 {
     /// <summary>
     /// Universal Persona Profile
     /// </summary>
     public class UPP
     {
-        public TravCode Str { get; } = new TravCode(15, "Strength", "Str");
-        public TravCode Dex { get; } = new TravCode(15, "Dexterity", "Dex");
+        public TravCode Str { get; } = new TravCode(15, Resources.UPP_Attr_Strength, "Str");
+        public TravCode Dex { get; } = new TravCode(15, Resources.UPP_Attr_Dexterity, "Dex");
         public TravCode End { get; } = new TravCode(15, "Endurance", "End");
         public TravCode Int { get; } = new TravCode(15, "Inteligence", "Int");
         public TravCode Edu { get; } = new TravCode(15, "Education", "Edu");
