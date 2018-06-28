@@ -101,14 +101,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
                         CurrentRank = 1;
                         TermSkills += 1;
                         Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[CurrentRank]));
-                        if (!Owner.Skills.ContainsKey("Submachine Gun"))
-                        {
-                            Owner.Skills.Add("Submachine Gun", new Skill("Submachine Gun", Skill.SkillClass.Military, 1));
-                        }
-                        else
-                        {
-                            Owner.Skills["Submachine Gun"].Level += 1;
-                        }
+                        Owner.AddSkill(new Skill("Submachine Gun", Skill.SkillClass.Military, 1));
                     }
                 }
             }
@@ -127,14 +120,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
                 base.Drafted = value;
                 if (value)
                 {
-                    if (!Owner.Skills.ContainsKey("Rifle"))
-                    {
-                        Owner.Skills.Add("Rifle", new Skill("Rifle", Skill.SkillClass.Military, 1));
-                    }
-                    else
-                    {
-                        Owner.Skills["Rifle"].Level += 1;
-                    }
+                    Owner.AddSkill(new Skill("Rifle", Skill.SkillClass.Military, 1));
                 }
             }
         }
@@ -166,14 +152,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
             if (dice.roll(2) >= target)
             {
                 enlist = true;
-                if (!Owner.Skills.ContainsKey("Rifle"))
-                {
-                    Owner.Skills.Add("Rifle", new Skill("Rifle", Skill.SkillClass.Military, 1));
-                }
-                else
-                {
-                    Owner.Skills["Rifle"].Level += 1;
-                }
+                Owner.AddSkill(new Skill("Rifle", Skill.SkillClass.Military, 1));
                 Owner.Journal.Add(string.Format("Enlisted in Army at age {0}", Owner.Age));
             }
             else

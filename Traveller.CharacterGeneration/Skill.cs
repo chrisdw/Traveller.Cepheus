@@ -89,7 +89,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 return possible;
             }
  
-            var toVisit = new Stack<Skill>(Cascade);
+            var toVisit = new Stack<Skill>();
+            toVisit.Push(this);
 
             while (toVisit.Count > 0)
             {
