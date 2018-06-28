@@ -21,5 +21,13 @@
         {
             return Int.ToString() + Edu.ToString() + Soc.ToString();
         }
+
+        public string Display
+        {
+            get
+            {
+                return PhysicalUPP() + SocialUPP();
+            }
+        }
     }
 }

@@ -146,7 +146,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         career.HandleRenlist(false);
                     }
                 } while (keepGoing);
-            } 
+            }
+
+            var characterView = new CharacterViewer(character);
+            await Navigation.PushAsync(characterView);
         }
     }
 }

@@ -13,4 +13,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Traveller.CharacterGeneration\Traveller.CharacterGeneration.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="CharacterViewer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

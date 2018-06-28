@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="org.DownesWard.Traveller.CharacterGeneration.UI.CharacterViewer">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="UPP"/>
+                <Label Text="{Binding Profile.Display}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Age"/>
+                <Label Text="{Binding Age}"/>
+            </StackLayout>
+            <Label Text="Personal History"/>
+            <ListView x:Name="JournalView" ItemsSource="{Binding Journal}" />
+            <Label Text="Skills"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Skill" WidthRequest="160"/>
+                <Label Text="Level" WidthRequest="60"/>
+            </StackLayout>
+            <ListView x:Name="SkillsView" ItemsSource="Skills">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" WidthRequest="160"/>
+                                <Label Text="{Binding Level}" WidthRequest="60"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
