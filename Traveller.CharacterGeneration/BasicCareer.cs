@@ -1,9 +1,4 @@
-﻿using org.DownesWard.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration
+﻿namespace org.DownesWard.Traveller.CharacterGeneration
 {
     public abstract class BasicCareer : Career
     {
@@ -13,8 +8,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public int TermSkills { get; set; }
         public int Term { get; set; }
         public virtual bool Drafted { get; set; }
-
-        protected Dice dice = new Dice(6);
 
         abstract public bool Enlist();
         abstract public bool Survival();

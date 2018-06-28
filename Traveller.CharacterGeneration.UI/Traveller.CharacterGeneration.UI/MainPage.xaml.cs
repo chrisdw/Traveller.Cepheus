@@ -147,6 +147,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     }
                 } while (keepGoing);
             }
+            var muster = career.MusterOutRolls();
 
             var characterView = new CharacterViewer(character);
             await Navigation.PushAsync(characterView);
