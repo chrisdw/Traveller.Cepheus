@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="org.DownesWard.Traveller.CharacterGeneration.UI.CharacterViewer">
-    <ContentPage.Content>
+    <ContentPage Title="Overview">
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="UPP"/>
@@ -12,9 +12,15 @@
                 <Label Text="Age"/>
                 <Label Text="{Binding Age}"/>
             </StackLayout>
-            <Label Text="Personal History"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Personal History">
+        <StackLayout>
             <ListView x:Name="JournalView" ItemsSource="{Binding Journal}" />
-            <Label Text="Skills"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Skills">
+        <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Skill" WidthRequest="160"/>
                 <Label Text="Level" WidthRequest="60"/>
@@ -32,5 +38,27 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage>
+    <ContentPage Title="Careers">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Career" WidthRequest="160"/>
+                <Label Text="Rank" WidthRequest="160"/>
+                <Label Text="Terms Served" />
+            </StackLayout>
+            <ListView x:Name="CareerView" ItemsSource="{Binding Careers}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" WidthRequest="160"/>
+                                <Label Text="{Binding RankName}" WidthRequest="160"/>
+                                <Label Text="{Binding Term}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

@@ -65,5 +65,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 CheckTableAvailablity();
             }
         }
+
+        public string RankName
+        {
+            get
+            {
+                return Ranks[CurrentRank];
+            }
+        }
     }
 }

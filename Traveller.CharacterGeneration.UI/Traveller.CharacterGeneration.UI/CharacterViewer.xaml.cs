@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace org.DownesWard.Traveller.CharacterGeneration.UI
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CharacterViewer : ContentPage
+	public partial class CharacterViewer : TabbedPage
 	{
 		public CharacterViewer (Character character)
 		{

@@ -8,6 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
     {
         public BasicArmy()
         {
+            Name = "Army";
             CurrentRank = 0;
             TermSkills = 2;
 
