@@ -21,11 +21,13 @@
     </ContentPage>
     <ContentPage Title="Skills">
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Skill" WidthRequest="160"/>
-                <Label Text="Level" WidthRequest="60"/>
-            </StackLayout>
             <ListView x:Name="SkillsView" ItemsSource="Skills">
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Skill" WidthRequest="160"/>
+                        <Label Text="Level" WidthRequest="60"/>
+                    </StackLayout>
+                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -41,12 +43,14 @@
     </ContentPage>
     <ContentPage Title="Careers">
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Career" WidthRequest="160"/>
-                <Label Text="Rank" WidthRequest="160"/>
-                <Label Text="Terms Served" />
-            </StackLayout>
             <ListView x:Name="CareerView" ItemsSource="{Binding Careers}">
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Career" WidthRequest="160"/>
+                        <Label Text="Rank" WidthRequest="160"/>
+                        <Label Text="Terms Served" />
+                    </StackLayout>
+                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

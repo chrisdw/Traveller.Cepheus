@@ -9,10 +9,10 @@ namespace org.DownesWard.Traveller.Shared
     {
         public TravCode Str { get; } = new TravCode(15, Resources.UPP_Attr_Strength, "Str");
         public TravCode Dex { get; } = new TravCode(15, Resources.UPP_Attr_Dexterity, "Dex");
-        public TravCode End { get; } = new TravCode(15, "Endurance", "End");
-        public TravCode Int { get; } = new TravCode(15, "Inteligence", "Int");
-        public TravCode Edu { get; } = new TravCode(15, "Education", "Edu");
-        public TravCode Soc { get; } = new TravCode(15, "Social Standing", "Soc");
+        public TravCode End { get; } = new TravCode(15, Resources.UPP_Attr_Endurance, "End");
+        public TravCode Int { get; } = new TravCode(15, Resources.UPP_Attr_Intelligence, "Int");
+        public TravCode Edu { get; } = new TravCode(15, Resources.UPP_Attr_Education, "Edu");
+        public TravCode Soc { get; } = new TravCode(15, Resources.UPP_Attr_SocialStanding, "Soc");
 
         public virtual string PhysicalUPP()
         {

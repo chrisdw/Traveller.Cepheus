@@ -46,6 +46,22 @@
           <source>Tech level</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Tech-Niveau</target>
         </trans-unit>
+        <trans-unit id="UPP_Attr_Charisma" translate="yes" xml:space="preserve">
+          <source>Charisma</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Charisma</target>
+        </trans-unit>
+        <trans-unit id="UPP_Attr_Education" translate="yes" xml:space="preserve">
+          <source>Education</source>
+          <target state="needs-review-translation" state-qualifier="exact-match">Bildung</target>
+        </trans-unit>
+        <trans-unit id="UPP_Attr_Intelligence" translate="yes" xml:space="preserve">
+          <source>Intelligence</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Intelligenz</target>
+        </trans-unit>
+        <trans-unit id="UPP_Attr_SocialStanding" translate="yes" xml:space="preserve">
+          <source>Social Standing</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Soziale Stellung</target>
+        </trans-unit>
       </group>
     </body>
   </file>

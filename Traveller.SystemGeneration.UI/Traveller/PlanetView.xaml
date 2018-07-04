@@ -213,13 +213,15 @@
     </ContentPage>
     <ContentPage Title="Temperature">
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Row" WidthRequest="60" HorizontalTextAlignment="Start" />
-                <Label Text="Summer" WidthRequest="160" HorizontalTextAlignment="Center"/>
-                <Label Text="Fall" WidthRequest="160" HorizontalTextAlignment="Center"/>
-                <Label Text="Winter" WidthRequest="160" HorizontalTextAlignment="Center"/>
-            </StackLayout>
             <ListView x:Name="TemperatureListView" BindingContext="Temperature">
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Row" WidthRequest="60" HorizontalTextAlignment="Start" />
+                        <Label Text="Summer" WidthRequest="160" HorizontalTextAlignment="Center"/>
+                        <Label Text="Fall" WidthRequest="160" HorizontalTextAlignment="Center"/>
+                        <Label Text="Winter" WidthRequest="160" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -238,19 +240,21 @@
     <ContentPage x:Name="Encounters" Title="Encounters">
         <StackLayout Orientation="Vertical">
             <Picker x:Name="RegionPicker" Title="Pick a region" ItemsSource="{Binding Regions}" ItemDisplayBinding="{Binding Name}" SelectedIndexChanged="RegionPicker_SelectedIndexChanged" />
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Die" WidthRequest="60" />
-                <Label Text="Animal" WidthRequest="160"/>
-                <Label Text="Weight" WidthRequest="100"/>
-                <Label Text="Hits" WidthRequest="40"/>
-                <Label Text="Armour" WidthRequest="80"/>
-                <Label Text="Weapons" WidthRequest="160" />
-                <Label Text="Wounds" WidthRequest="60"/>
-                <Label Text="Behavior" />
-            </StackLayout>
-
             <ListView x:Name="critterList"
-            CachingStrategy="RecycleElement" ItemTemplate="{StaticResource CritterTemplateSelector}"/>
+            CachingStrategy="RecycleElement" ItemTemplate="{StaticResource CritterTemplateSelector}">
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Die" WidthRequest="60" />
+                        <Label Text="Animal" WidthRequest="160"/>
+                        <Label Text="Weight" WidthRequest="100"/>
+                        <Label Text="Hits" WidthRequest="40"/>
+                        <Label Text="Armour" WidthRequest="80"/>
+                        <Label Text="Weapons" WidthRequest="160" />
+                        <Label Text="Wounds" WidthRequest="60"/>
+                        <Label Text="Behavior" />
+                    </StackLayout>
+                </ListView.Header>
+            </ListView>
         </StackLayout>
     </ContentPage>
 </TabbedPage>

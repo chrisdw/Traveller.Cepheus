@@ -42,4 +42,16 @@
   <data name="UWP_Attr_Techlevel" xml:space="preserve">
     <value>Niveau de technologie</value>
   </data>
+  <data name="UPP_Attr_Charisma" xml:space="preserve">
+    <value>Son charisme</value>
+  </data>
+  <data name="UPP_Attr_Education" xml:space="preserve">
+    <value>Éducation</value>
+  </data>
+  <data name="UPP_Attr_Intelligence" xml:space="preserve">
+    <value>Intelligence</value>
+  </data>
+  <data name="UPP_Attr_SocialStanding" xml:space="preserve">
+    <value>Statut social</value>
+  </data>
 </root>
