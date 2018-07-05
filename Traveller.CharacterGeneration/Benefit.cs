@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
@@ -18,7 +19,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         }
 
         public string Name { get; set; }
-        public long Value { get; set; }
+        public int Value { get; set; }
         public BenefitType TypeOfBenefit { get; set; }
 
         public Benefit()
@@ -31,6 +32,28 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Name = name;
             Value = value;
             TypeOfBenefit = benefitType;
+        }
+
+
+        public static List<string> GetWeaponList(Benefit benefit)
+        {
+            switch (benefit.Name)
+            {
+                case "Bow":
+                    return Cascades.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList();
+                case "Gun":
+                    return Cascades.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList();
+                case "Blade":
+                    return Cascades.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList();
+                case "Weapon":
+                    var list = new List<string>();
+                    list.AddRange(Cascades.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList());
+                    list.AddRange(Cascades.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList());
+                    list.AddRange(Cascades.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList());
+                    return list;
+                default:
+                    return new List<string>();
+            }
         }
     }
 }

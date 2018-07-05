@@ -55,9 +55,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
             switch (career)
             {
                 case Career.CareerType.Imperial_Army:
-                    return new BasicArmy();
+                    return new BasicArmy() { Culture = this };
                 default:
-                    return new BasicArmy();
+                    return new BasicArmy() { Culture = this };
             }
         }
 

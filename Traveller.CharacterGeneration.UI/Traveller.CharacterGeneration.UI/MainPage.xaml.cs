@@ -90,27 +90,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         }
                         if (skill.Class == Skill.SkillClass.AttributeChange)
                         {
-                            switch (skill.Name)
-                            {
-                                case "STR":
-                                    character.Profile.Str.Value += skill.Level;
-                                    break;
-                                case "DEX":
-                                    character.Profile.Dex.Value += skill.Level;
-                                    break;
-                                case "END":
-                                    character.Profile.End.Value += skill.Level;
-                                    break;
-                                case "INT":
-                                    character.Profile.Int.Value += skill.Level;
-                                    break;
-                                case "EDU":
-                                    character.Profile.Edu.Value += skill.Level;
-                                    break;
-                                case "SOC":
-                                    character.Profile.Soc.Value += skill.Level;
-                                    break;
-                            }
+                            character.Profile[skill.Name].Value += skill.Level;
                         }
                         else
                         {
@@ -149,8 +129,77 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     }
                 } while (keepGoing);
             }
+            career.MusterOut();
             var muster = career.MusterOutRolls();
+            var cashRolls = muster.Clamp(0, 3);
+            await DisplayAlert("Career", string.Format("You have {0} benefits rolls, no more than {1} can be on the cash table", muster, cashRolls), "OK");
+            for (var i = 0; i < muster; i++)
+            {
+                if (cashRolls > 0)
+                {
+                    var result = await DisplayActionSheet("Select a table", null, null, "Cash", "Material");
+                    if (result.Equals("Cash"))
+                    {
+                        cashRolls--;
+                        career.ResolveCashBenefit();
+                    }
+                    else
+                    {
+                        var picks = career.ResolveMaterialBenefit();
+                        if (picks.pick.HasFlag(Career.BenefitPick.Skill) && picks.pick.HasFlag(Career.BenefitPick.Weapon))
+                        {
+                           
+                            // need to decide between skill or weapon
+                            var picked = await DisplayAlert("Career", "You have received a weapon benefit, do you wish to take it as a skill instead?", "Yes", "No");
 
+                            var list = Benefit.GetWeaponList(picks.benefit);
+                            var title = string.Empty;
+                            if (picked)
+                            {
+                                title = "Select a skill";
+                            }
+                            else
+                            {
+                                title = "Select a weapon";
+                            }
+                            var selected = await DisplayActionSheet(title, null, null, list.ToArray());
+                            if (picked)
+                            {
+                                character.AddSkill(new Skill() { Level = 1, Name = selected });
+                            }
+                            else
+                            {
+                                character.AddBenefit(new Benefit() { Name = selected, TypeOfBenefit = Benefit.BenefitType.Weapon, Value = 1 });
+                            }
+                        }
+                        else if (picks.pick == Career.BenefitPick.Skill)
+                        {
+                            var list = Benefit.GetWeaponList(picks.benefit);
+                            var selected = await DisplayActionSheet("Select a skill", null, null, list.ToArray());
+                            character.AddSkill(new Skill() { Level = 1, Name = selected });
+                        }
+                        else if (picks.pick == Career.BenefitPick.Weapon)
+                        {
+                            // select a class of weapon
+                            var list = Benefit.GetWeaponList(picks.benefit);
+                            var selected = await DisplayActionSheet("Select a weapon", null, null, list.ToArray());
+                            character.AddBenefit(new Benefit() { Name = selected, TypeOfBenefit = Benefit.BenefitType.Weapon, Value = 1 });
+                        }
+                    }
+                }
+                else
+                {
+                    career.ResolveMaterialBenefit();
+                }
+            }
+            // check to see if the total of skill levels is greater than the sum of
+            // int and edu, if it is they have to be reduced
+            var total = character.Skills.Values.Sum(a => a.Level);
+            if (total > character.Profile.Int.Value + character.Profile.Edu.Value)
+            {
+                // Need to reduce skills count
+                await DisplayAlert("Career", "Your skill total exeeeds the sum of INT and EDU, you need to reduce them", "OK");
+            }
             var characterView = new CharacterViewer(character);
             await Navigation.PushAsync(characterView);
         }

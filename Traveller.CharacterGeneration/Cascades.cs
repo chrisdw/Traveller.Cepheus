@@ -60,5 +60,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 new Skill("Bayonet", Skill.SkillClass.None, 1)
             }
         };
+
+        public static Skill BowCombat = new Skill("Bow Combat", Skill.SkillClass.None, 1)
+        {
+            Cascade =
+            {
+                new Skill("Sling", Skill.SkillClass.None, 1),
+                new Skill("Short Bow", Skill.SkillClass.None, 1),
+                new Skill("Long Bow", Skill.SkillClass.None, 1),
+                new Skill("Sporting Crossbow", Skill.SkillClass.None, 1),
+                new Skill("Military Crossbow", Skill.SkillClass.None, 1),
+                new Skill("Repeating Crossbow", Skill.SkillClass.None, 1)
+            }
+        };
     }
 }

@@ -60,7 +60,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
             Material.Add(new Benefit("INT", 1, Benefit.BenefitType.AttributeModification));
             Material.Add(new Benefit("EDU", 1, Benefit.BenefitType.AttributeModification));
             Material.Add(new Benefit("Gun", 1, Benefit.BenefitType.Weapon));
-            Material.Add(new Benefit("Hight Psg", 1, Benefit.BenefitType.Material));
+            Material.Add(new Benefit("High Psg", 1, Benefit.BenefitType.Material));
             Material.Add(new Benefit("Mid Psg", 1, Benefit.BenefitType.Material));
             Material.Add(new Benefit("SOC", 1, Benefit.BenefitType.AttributeModification));
 

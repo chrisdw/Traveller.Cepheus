@@ -65,4 +65,28 @@
             </ListView>
         </StackLayout>
     </ContentPage>
+    <ContentPage Title="Benefits">
+        <StackLayout>
+            <ListView x:Name="BenefitsView" ItemsSource="{Binding Benefits}">
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Benefit" WidthRequest="160"/>
+                        <Label Text="Value" WidthRequest="160"/>
+                        <Label Text="Type" />
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" WidthRequest="160"/>
+                                <Label Text="{Binding Value}" WidthRequest="160"/>
+                                <Label Text="{Binding TypeOfBenefit}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
 </TabbedPage>

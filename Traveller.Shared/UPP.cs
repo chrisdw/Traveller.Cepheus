@@ -1,4 +1,5 @@
 ﻿using org.DownesWard.Traveller.Shared.Properties;
+using System.Collections.Generic;
 
 namespace org.DownesWard.Traveller.Shared
 {
@@ -14,6 +15,28 @@ namespace org.DownesWard.Traveller.Shared
         public TravCode Edu { get; } = new TravCode(15, Resources.UPP_Attr_Education, "Edu");
         public TravCode Soc { get; } = new TravCode(15, Resources.UPP_Attr_SocialStanding, "Soc");
 
+        public virtual TravCode this[string index]
+        {
+            get
+            {
+                switch (index.ToUpperInvariant())
+                {
+                    case "STR":
+                        return Str;
+                    case "DEX":
+                        return Dex;
+                    case "END":
+                        return End;
+                    case "INT":
+                        return Int;
+                    case "EDU":
+                        return Edu;
+                    case "SOC":
+                        return Soc;
+                }
+                throw new KeyNotFoundException(string.Format("attribute {0} not found", index));
+            }
+        }
         public virtual string PhysicalUPP()
         {
             return Str.ToString() + Dex.ToString() + End.ToString();

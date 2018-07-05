@@ -17,6 +17,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 			InitializeComponent ();
             BindingContext = character;
             SkillsView.ItemsSource = character.Skills.Values.OrderBy(s => s.Name);
+            BenefitsView.ItemsSource = character.Benefits.Values.OrderBy(b => b.Name);
 		}
 	}
 }
