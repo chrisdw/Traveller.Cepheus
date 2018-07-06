@@ -1,14 +1,19 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using org.DownesWard.Utilities;
 
 namespace org.DownesWard.Traveller.Shared
 {
-    public class TravCode
+    public class TravCode : INotifyPropertyChanged
     {
         private readonly int maxValue;
         private int currentValue;
         private readonly string list = "0123456789ABCDEFGHJKLMNPQRSTUVWXYZ";
-        public string Name {  get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public string Name { get; set; }
         public string ShortName { get; set; }
 
         public TravCode()
@@ -47,13 +52,25 @@ namespace org.DownesWard.Traveller.Shared
             }
             set
             {
-                currentValue = value.Clamp(0, maxValue);
+                if (value != currentValue)
+                {
+                    currentValue = value.Clamp(0, maxValue);
+                    NotifyPropertyChanged();
+                }
             }
         }
 
         public override string ToString()
         {
             return list.Substring(currentValue, 1);
+        }
+
+        // This method is called by the Set accessor of each property.  
+        // The CallerMemberName attribute that is applied to the optional propertyName  
+        // parameter causes the property name of the caller to be substituted as an argument.  
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
