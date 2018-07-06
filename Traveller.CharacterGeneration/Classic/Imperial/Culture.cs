@@ -3,12 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
+namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 {
     public class Culture : ICulture
     {
         public Constants.CultureType Id => Constants.CultureType.Imperial;
-        static List<Skill> offered = new List<Skill>();
+        static Dictionary<string, Skill> offered = new Dictionary<string, Skill>();
 
         public bool BenefitAllowed(Character character, Benefit benefit)
         {
@@ -29,6 +29,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
                             break;
                         default:
                             careers.Add("Army", Career.CareerType.Imperial_Army);
+                            careers.Add("Marines", Career.CareerType.Imperial_Marines);
                             if (character.Profile.Soc.Value > 10)
                             {
                                 // TODO: Add Noble
@@ -47,6 +48,60 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
             {
                 offered.Clear();
             }
+            switch (character.CharacterSpecies)
+            {
+                case Character.Species.Bwap:
+                    if (skill.Name.Equals("Admin"))
+                    {
+                        if (!character.Skills.ContainsKey("Admin"))
+                        {
+                            // Bwap always get 2 levels of admin on the first go
+                            skill.Level = 2;
+                        }
+                    }
+                    break;
+                case Character.Species.Vargr:
+                    if (skill.Name.Equals("Brawling"))
+                    {
+                        skill.Name = "Infighting";
+                    }
+                    break;
+                case Character.Species.Aslan:
+                    if (skill.Name.Equals("Brawling"))
+                    {
+                        skill.Name = "Dewclaw";
+                    }
+                    if (!offered.ContainsKey(skill.Name))
+                    {
+                        if (skill.SexApplicabilty == Skill.SkillSex.Female && character.Sex.Equals("Male"))
+                        {
+                            check = false;
+                        }
+                        else if (skill.SexApplicabilty == Skill.SkillSex.Male && character.Sex.Equals("Female"))
+                        {
+                            check = false;
+                        }
+                        if (!check)
+                        {
+                            offered.Add(skill.Name, skill);
+                        }
+                    }
+                    break;
+                case Character.Species.Virushi:
+                    if (skill.Name.Equals("SOC"))
+                    {
+                        skill.Name = "EDU";
+                    }
+                    else if (skill.Class == Skill.SkillClass.Weapon)
+                    {
+                        // Virushi always start at level 0 for weapon skills
+                        if (!character.Skills.ContainsKey(skill.Name))
+                        {
+                            skill.Level = 0;
+                        }
+                    }
+                    break;
+            }
             return check;
         }
 
@@ -54,6 +109,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
         {
             switch (career)
             {
+                case Career.CareerType.Imperial_Marines:
+                    return new BasicMarines() { Culture = this };
                 case Career.CareerType.Imperial_Army:
                     return new BasicArmy() { Culture = this };
                 default:
@@ -86,8 +143,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
             var dice = new Dice(6);
             switch (dice.roll(1))
             {
+                case 2:
+                    return new BasicMarines() { Culture = this };
                 case 3:
-                    return new BasicArmy();
+                    return new BasicArmy() { Culture = this };
             }
             return new BasicArmy();
         }

@@ -1,4 +1,6 @@
 ﻿using org.DownesWard.Traveller.Shared;
+using org.DownesWard.Traveller.Shared.Classic;
+using org.DownesWard.Traveller.Shared.Classsic;
 using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
@@ -83,6 +85,58 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             Profile.Str.Value = dice.roll(2) - 4;
                             Profile.Dex.Value = dice.roll(2);
                             Profile.End.Value = dice.roll(2) - 4;
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            break;
+                        case Species.Aslan:
+                            Profile = new AslanUPP();
+                            Profile.Str.Value = dice.roll(2) + 1;
+                            Profile.Dex.Value = dice.roll(2) - 1;
+                            Profile.End.Value = dice.roll(2) + 1;
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            // Imperial Aslan get some automatic skills
+                            AddSkill(new Skill() {  Class = Skill.SkillClass.None, Level = 1, Name= "Tolerance", SexApplicabilty = Skill.SkillSex.DontCare });
+                            if (Sex.Equals("Male"))
+                            {
+                                AddSkill(new Skill() { Class = Skill.SkillClass.None, Level = 1, Name = "Independance", SexApplicabilty = Skill.SkillSex.Male });
+                            }
+                            break;
+                        case Species.Vargr:
+                            Profile = new VargrUPP();
+                            Profile.Str.Value = dice.roll(2) - 1;
+                            Profile.Dex.Value = dice.roll(2) + 1;
+                            Profile.End.Value = dice.roll(2) - 1;
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            Profile["CHR"].Value = dice.roll();
+                            break;
+                        case Species.AelYael:
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2) - 1;
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            break;
+                        case Species.Virushi:
+                            Profile = new VirushiUPP();
+                            Profile.Str.Value = dice.roll(2) + 10;
+                            Profile.Dex.Value = dice.roll(2) + 2;
+                            Profile.End.Value = dice.roll(2) + 10;
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2) - 2;
+                            break;
+                        case Species.Vegan:
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2) + 1;
+                            Profile.End.Value = dice.roll(2);
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);

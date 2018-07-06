@@ -8,12 +8,12 @@ namespace org.DownesWard.Traveller.Shared
     /// </summary>
     public class UPP
     {
-        public TravCode Str { get; } = new TravCode(15, Resources.UPP_Attr_Strength, "Str");
-        public TravCode Dex { get; } = new TravCode(15, Resources.UPP_Attr_Dexterity, "Dex");
-        public TravCode End { get; } = new TravCode(15, Resources.UPP_Attr_Endurance, "End");
-        public TravCode Int { get; } = new TravCode(15, Resources.UPP_Attr_Intelligence, "Int");
-        public TravCode Edu { get; } = new TravCode(15, Resources.UPP_Attr_Education, "Edu");
-        public TravCode Soc { get; } = new TravCode(15, Resources.UPP_Attr_SocialStanding, "Soc");
+        public virtual TravCode Str { get; } = new TravCode(15, Resources.UPP_Attr_Strength, "Str");
+        public virtual TravCode Dex { get; } = new TravCode(15, Resources.UPP_Attr_Dexterity, "Dex");
+        public virtual TravCode End { get; } = new TravCode(15, Resources.UPP_Attr_Endurance, "End");
+        public virtual TravCode Int { get; } = new TravCode(15, Resources.UPP_Attr_Intelligence, "Int");
+        public virtual TravCode Edu { get; } = new TravCode(15, Resources.UPP_Attr_Education, "Edu");
+        public virtual TravCode Soc { get; } = new TravCode(15, Resources.UPP_Attr_SocialStanding, "Soc");
 
         public virtual TravCode this[string index]
         {

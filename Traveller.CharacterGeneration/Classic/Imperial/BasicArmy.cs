@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.DownesWard.Traveller.CharacterGeneration.Imperial
+namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 {
     public class BasicArmy : BasicCareer
     {
