@@ -9,18 +9,19 @@ namespace org.DownesWard.Traveller.CharacterGeneration
     /// </summary>
     public static class Cascades
     {
+        public static Skill Aircraft = new Skill("Aircraft", Skill.SkillClass.None, 1)
+        {
+            Cascade = {
+                new Skill("Grav Vehicle", Skill.SkillClass.None, 1),
+                new Skill("Rotor Aircraft", Skill.SkillClass.None, 1),
+                new Skill("Winged Aircraft", Skill.SkillClass.None, 1)
+            }
+        };
+
         public static Skill Vehicle = new Skill("Vehicle", Skill.SkillClass.None, 1)
         {
             Cascade = {
-                new Skill("Aircraft", Skill.SkillClass.None, 1)
-                {
-                    Cascade =
-                    {
-                        new Skill("Grav Vehicle", Skill.SkillClass.None, 1),
-                        new Skill("Rotor Aircraft", Skill.SkillClass.None, 1),
-                        new Skill("Winged Aircraft", Skill.SkillClass.None, 1)
-                    }
-                },
+                Aircraft,
                 new Skill("Tracked Vehicle", Skill.SkillClass.None, 1),
                 new Skill("Hovercraft", Skill.SkillClass.None, 1),
                 new Skill("Wheeled Vehicle", Skill.SkillClass.None, 1)

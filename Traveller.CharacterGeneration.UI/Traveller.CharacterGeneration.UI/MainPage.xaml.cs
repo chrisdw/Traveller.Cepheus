@@ -199,6 +199,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             {
                 // Need to reduce skills count
                 await DisplayAlert("Career", "Your skill total exeeeds the sum of INT and EDU, you need to reduce them", "OK");
+                var skillView = new SkillView(character);
+                await Navigation.PushModalAsync(skillView);
             }
             var characterView = new CharacterViewer(character);
             await Navigation.PushAsync(characterView);

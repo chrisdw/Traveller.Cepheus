@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="org.DownesWard.Traveller.CharacterGeneration.UI.SkillView">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="SkillsView" ItemsSource="Skills">
+                <ListView.Header>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Skill" WidthRequest="160"/>
+                        <Label Text="Level" WidthRequest="60"/>
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Decrease" Clicked="Decrease_Clicked" CommandParameter="{Binding .}" />
+                            </ViewCell.ContextActions>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" WidthRequest="160"/>
+                                <Label Text="{Binding Level}" WidthRequest="60"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="OK" Text="OK" Clicked="OK_Clicked" IsEnabled="False"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

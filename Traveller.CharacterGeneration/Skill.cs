@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
 {
-    public class Skill
+    public class Skill : INotifyPropertyChanged
     {
         public enum SkillClass
         {
@@ -26,7 +28,21 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             DontCare
         }
 
-        public int Level { get; set; }
+        // This is the only property whose changes we actaully care about
+        private int level = 0;
+        public int Level {
+            get {
+                return level;
+            }
+            set {
+                if (value != level)
+                {
+                    level = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public string Name { get; set; }
         public SkillClass Class { get; set; }
         public SkillSex SexApplicabilty { get; set; }
@@ -77,6 +93,16 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Class = skillClass;
             SexApplicabilty = skillSex;
             Name = name;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        // This method is called by the Set accessor of each property.  
+        // The CallerMemberName attribute that is applied to the optional propertyName  
+        // parameter causes the property name of the caller to be substituted as an argument.  
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public List<Skill> ResolveSkill()
