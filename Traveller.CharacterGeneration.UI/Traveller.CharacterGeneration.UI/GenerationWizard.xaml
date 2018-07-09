@@ -33,11 +33,12 @@
             <Label Text="Select the species. This list is driven by the culture you picked" />
             <Picker x:Name="Species" Title="Pick the species you are from" SelectedItem="{Binding Species, Mode=TwoWay}" SelectedIndexChanged="Species_SelectedIndexChanged" />
             <Label Text="Select the sex. This list is drive by the species you picked" />
-            <Picker x:Name="Sex" Title="Pick the sex you are."></Picker>
+            <Picker x:Name="Sex" Title="Pick the sex you are." SelectedItem="{Binding Sex, Mode=TwoWay}" />
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Step 5: Confirm your decisions">
         <StackLayout>
+            <Label Text="You have selected the following parameters, press Generate to start the character generation process." />
             <StackLayout Orientation="Horizontal">
                 <Label Text="Ruleset" />
                 <Label Text="{Binding Ruleset}" />
@@ -53,7 +54,11 @@
             <StackLayout Orientation="Horizontal">
                 <Label Text="Species" />
                 <Label Text="{Binding Species}" />
-            </StackLayout>            
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Sex" />
+                <Label Text="{Binding Sex}" />
+            </StackLayout>
             <Button x:Name="Generate" Text="Generate" Clicked="Generate_Clicked" />
         </StackLayout>
     </ContentPage>

@@ -72,6 +72,23 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             }
         }
 
+        private string sex;
+        public string Sex
+        {
+            get
+            {
+                return sex;
+            }
+            set
+            {
+                if (value != sex)
+                {
+                    sex = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         // This method is called by the Set accessor of each property.  
