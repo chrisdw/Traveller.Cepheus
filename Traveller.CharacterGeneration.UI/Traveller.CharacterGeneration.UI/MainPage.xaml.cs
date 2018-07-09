@@ -17,6 +17,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
         private async void Generate_Clicked(object sender, EventArgs e)
         {
+            // TODO: Collect this information via a wizard
             Character character = new Character
             {
                 Culture = Constants.CultureType.Imperial,
@@ -26,109 +27,161 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             };
             character.Generate();
 
-            ICulture culture = new Imperial.Culture();
-            var career = culture.GetBasicCareer(Career.CareerType.Imperial_Army);
-            career.Owner = character;
-            if (career.Enlist())
+            ICulture culture = new Classic.Imperial.Culture();
+            var keepgoing = false;
+            do
             {
-                character.Careers.Add(career);
-                var keepGoing = true;
-                do
+                // TODO: Generate pick list of careers, removing careers already pursued
+                var career = culture.GetBasicCareer(Career.CareerType.Imperial_Army);
+                career.Owner = character;
+                if (career.Enlist())
                 {
-                    if (career.Survival())
+                    character.Careers.Add(career);
+                    await ResolveBasicCareer(character, career);
+                }
+                else
+                {
+                    // Unable to enlist, submit to draft?
+                    var res = await DisplayAlert("Career", "You could not enlist. Submit to the draft?", "Yes", "No");
+                    if (res)
                     {
-                        if (career.Commission())
+                        do
                         {
-                            career.Promotion();
-                        }
+                            career = culture.Drafted(character);
+                        } while (character.Careers.Contains(career));
+                        career.Drafted = true;
+                        career.Owner = character;
+                        await DisplayAlert("Career", string.Format("You where drafted into the {0}", career.Name), "OK");
+                        character.Careers.Add(career);
+                        await ResolveBasicCareer(character, career);
+                    }
+                }
+                if (culture.MultipleCareers && !character.Died && !(character.Careers.Sum(c => c.TermsServed) > 6))
+                {
+                    var doagain = await DisplayAlert("Career", "Do you wish to persue another career?", "Yes", "No");
+                    if (doagain)
+                    {
+                        keepgoing = true;
                     }
                     else
                     {
-                        await DisplayAlert("Career", "Your character died.", "Ok");
-                        keepGoing = false;
-                        break;
+                        keepgoing = false;
                     }
+                }
+            } while (keepgoing);
+            // check to see if the total of skill levels is greater than the sum of
+            // int and edu, if it is they have to be reduced
+            var total = character.Skills.Values.Sum(a => a.Level);
+            if (total > character.Profile.Int.Value + character.Profile.Edu.Value)
+            {
+                // Need to reduce skills count
+                await DisplayAlert("Career", "Your skill total exeeeds the sum of INT and EDU, you need to reduce them", "OK");
+                var skillView = new SkillView(character);
+                await Navigation.PushModalAsync(skillView);
+            }
+            var characterView = new CharacterViewer(character);
+            await Navigation.PushAsync(characterView);
+        }
 
-                    for (var i = 0; i < career.TermSkills; i++)
+        private async Task ResolveBasicCareer(Character character, BasicCareer career)
+        {
+            var keepGoing = true;
+            do
+            {
+                if (career.Survival())
+                {
+                    if (career.Commission())
                     {
-                        career.CheckTableAvailablity();
-                        var tables = new List<string>();
-                        SkillTable table = null;
+                        career.Promotion();
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("Career", "Your character died.", "Ok");
+                    keepGoing = false;
+                    break;
+                }
+
+                for (var i = 0; i < career.TermSkills; i++)
+                {
+                    career.CheckTableAvailablity();
+                    var tables = new List<string>();
+                    SkillTable table = null;
+                    for (var j = 0; j < 4; j++)
+                    {
+                        if (career.SkillTables[j].Available)
+                        {
+                            tables.Add(career.SkillTables[j].Name);
+                            table = career.SkillTables[j];
+                        }
+                    }
+                    if (tables.Count > 1)
+                    {
+                        var result = await DisplayActionSheet("Select a skill table", null, null, tables.ToArray());
                         for (var j = 0; j < 4; j++)
                         {
-                            if (career.SkillTables[j].Available)
+                            if (career.SkillTables[j].Name.Equals(result))
                             {
-                                tables.Add(career.SkillTables[j].Name);
                                 table = career.SkillTables[j];
                             }
                         }
-                        if (tables.Count > 1)
-                        {
-                            var result = await DisplayActionSheet("Select a skill table", null, null, tables.ToArray());
-                            for (var j = 0; j < 4; j++)
-                            {
-                                if (career.SkillTables[j].Name.Equals(result))
-                                {
-                                    table = career.SkillTables[j];
-                                }
-                            }
-                        }
-                        var die = new Dice(6);
-                        var roll = die.roll() - 1;
-                        roll = roll.Clamp(0, 5);
-                        var skill = table.Skills[roll];
-                        var skills = skill.ResolveSkill();
-                        if (skills.Count > 1)
-                        {
-                            var names = skills.Select(s => s.Name);
-                            var result = await DisplayActionSheet("Select a skill", null, null, names.ToArray());
-                            skill = skills.Where(s => s.Name == result).First();
-                        }
-                        else
-                        {
-                            skill = skills[0];
-                        }
-                        if (skill.Class == Skill.SkillClass.AttributeChange)
-                        {
-                            character.Profile[skill.Name].Value += skill.Level;
-                        }
-                        else
-                        {
-                            character.AddSkill(skill);
-                        }
                     }
-                    career.EndTerm();
-                    if (!character.AgingCheck())
+                    var die = new Dice(6);
+                    var roll = die.roll() - 1;
+                    roll = roll.Clamp(0, 5);
+                    var skill = table.Skills[roll];
+                    var skills = skill.ResolveSkill();
+                    if (skills.Count > 1)
                     {
-                        break;
+                        var names = skills.Select(s => s.Name);
+                        var result = await DisplayActionSheet("Select a skill", null, null, names.ToArray());
+                        skill = skills.Where(s => s.Name == result).First();
                     }
-                    
-                    var reup = career.CanRenlist();
-                    if (reup == BasicCareer.Renlistment.Must)
+                    else
+                    {
+                        skill = skills[0];
+                    }
+                    if (skill.Class == Skill.SkillClass.AttributeChange)
+                    {
+                        character.Profile[skill.Name].Value += skill.Level;
+                    }
+                    else
+                    {
+                        character.AddSkill(skill);
+                    }
+                }
+                career.EndTerm();
+                if (!character.AgingCheck())
+                {
+                    break;
+                }
+
+                var reup = career.CanRenlist();
+                if (reup == BasicCareer.Renlistment.Must)
+                {
+                    career.HandleRenlist(true);
+                }
+                else if (reup == BasicCareer.Renlistment.Can)
+                {
+                    // Ask if they want to renlist
+                    var result = await DisplayAlert("Career", string.Format("You are now {0}. Do you want to re-enlist", character.Age), "Yes", "No");
+                    if (result)
                     {
                         career.HandleRenlist(true);
-                    }
-                    else if (reup == BasicCareer.Renlistment.Can)
-                    {
-                        // Ask if they want to renlist
-                        var result = await DisplayAlert("Career", string.Format("You are now {0}. Do you want to re-enlist", character.Age), "Yes", "No");
-                        if (result)
-                        {
-                            career.HandleRenlist(true);
-                        }
-                        else
-                        {
-                            keepGoing = false;
-                            career.HandleRenlist(false);
-                        }
                     }
                     else
                     {
                         keepGoing = false;
                         career.HandleRenlist(false);
                     }
-                } while (keepGoing);
-            }
+                }
+                else
+                {
+                    keepGoing = false;
+                    career.HandleRenlist(false);
+                }
+            } while (keepGoing);
+
             career.MusterOut();
             var muster = career.MusterOutRolls();
             var cashRolls = muster.Clamp(0, 3);
@@ -148,7 +201,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         var picks = career.ResolveMaterialBenefit();
                         if (picks.pick.HasFlag(Career.BenefitPick.Skill) && picks.pick.HasFlag(Career.BenefitPick.Weapon))
                         {
-                           
+
                             // need to decide between skill or weapon
                             var picked = await DisplayAlert("Career", "You have received a weapon benefit, do you wish to take it as a skill instead?", "Yes", "No");
 
@@ -192,18 +245,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     career.ResolveMaterialBenefit();
                 }
             }
-            // check to see if the total of skill levels is greater than the sum of
-            // int and edu, if it is they have to be reduced
-            var total = character.Skills.Values.Sum(a => a.Level);
-            if (total > character.Profile.Int.Value + character.Profile.Edu.Value)
-            {
-                // Need to reduce skills count
-                await DisplayAlert("Career", "Your skill total exeeeds the sum of INT and EDU, you need to reduce them", "OK");
-                var skillView = new SkillView(character);
-                await Navigation.PushModalAsync(skillView);
-            }
-            var characterView = new CharacterViewer(character);
-            await Navigation.PushAsync(characterView);
+        }
+
+        private async void Wizard_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new GenerationWizard());
         }
     }
 }

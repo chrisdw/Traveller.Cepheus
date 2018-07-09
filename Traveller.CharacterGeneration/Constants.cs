@@ -13,7 +13,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Traveller_TNE = 3,
             Traveller_4 = 4,
             GURPS_Traveller = 5,
-            Mongoose = 6
+            Mongoose = 6,
+            Cepheus_Engine = 7
         }
 
         public enum CultureType

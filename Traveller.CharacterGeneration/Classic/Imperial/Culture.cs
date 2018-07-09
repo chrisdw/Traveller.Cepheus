@@ -8,6 +8,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
     public class Culture : ICulture
     {
         public Constants.CultureType Id => Constants.CultureType.Imperial;
+
+        public bool MultipleCareers => false;
+
         static Dictionary<string, Skill> offered = new Dictionary<string, Skill>();
 
         public bool BenefitAllowed(Character character, Benefit benefit)
@@ -144,9 +147,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             switch (dice.roll(1))
             {
                 case 2:
-                    return new BasicMarines() { Culture = this };
+                    return new BasicMarines() { Culture = this, Drafted = true };
                 case 3:
-                    return new BasicArmy() { Culture = this };
+                    return new BasicArmy() { Culture = this, Drafted = true };
             }
             return new BasicArmy();
         }

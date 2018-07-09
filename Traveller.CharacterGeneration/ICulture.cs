@@ -7,6 +7,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
     public interface ICulture
     {
         Constants.CultureType Id { get; }
+
+        bool MultipleCareers { get; }
         Dictionary<string, Career.CareerType> Careers(Character character);
         Dictionary<string, Character.Species> Species(Constants.GenerationStyle generationStyle);
         BasicCareer Drafted(Character character);
