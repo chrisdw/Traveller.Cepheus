@@ -89,6 +89,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             }
         }
 
+        public bool ConfigurationComplete
+        {
+            get
+            {
+                return string.IsNullOrEmpty(Ruleset) && string.IsNullOrEmpty(Campaign) && string.IsNullOrEmpty(Culture) && string.IsNullOrEmpty(Species) && string.IsNullOrEmpty(Sex);
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         // This method is called by the Set accessor of each property.  
@@ -98,5 +106,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+
     }
 }

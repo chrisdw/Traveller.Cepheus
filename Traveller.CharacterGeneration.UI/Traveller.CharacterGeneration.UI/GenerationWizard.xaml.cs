@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.UI
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GenerationWizard : CarouselPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class GenerationWizard : CarouselPage
     {
         private GenerationConfiguration generationConfiguration = new GenerationConfiguration();
         private ICulture selectedCulture;
         private Constants.GenerationStyle generationStyle;
-        public GenerationWizard ()
-		{
+
+        public ICommand GenerateCommand { private set; get; }
+
+        public GenerationWizard()
+        {
             BindingContext = generationConfiguration;
-			InitializeComponent ();
-		}
+            InitializeComponent();
+        }
 
         private async void Generate_Clicked(object sender, EventArgs e)
         {
