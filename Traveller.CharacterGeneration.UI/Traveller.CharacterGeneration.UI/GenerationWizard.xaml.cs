@@ -42,7 +42,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             {
                 var clist = selectedCulture.Careers(character);
                 var careerList = clist.Keys.Except(character.Careers.Select(c => c.Name));
-                var selected = await DisplayActionSheet("Select a career", null, null, careerList.ToArray());
+                var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Career, null, null, careerList.ToArray());
                 var career = selectedCulture.GetBasicCareer(clist[selected]);
                 career.Owner = character;
                 if (career.Enlist())
@@ -53,7 +53,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 else
                 {
                     // Unable to enlist, submit to draft?
-                    var res = await DisplayAlert("Career", "You could not enlist. Submit to the draft?", "Yes", "No");
+                    var res = await DisplayAlert(Properties.Resources.Title_App, 
+                        Properties.Resources.Prompt_Draft, 
+                        Properties.Resources.Button_Yes,
+                        Properties.Resources.Button_No);
                     if (res)
                     {
                         do
@@ -62,14 +65,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         } while (character.Careers.Contains(career));
                         career.Drafted = true;
                         career.Owner = character;
-                        await DisplayAlert("Career", string.Format("You where drafted into the {0}", career.Name), "OK");
+                        await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Drafted, career.Name), Properties.Resources.Button_OK);
                         character.Careers.Add(career);
                         await ResolveBasicCareer(character, career);
                     }
                 }
                 if (selectedCulture.MultipleCareers && !character.Died && !(character.Careers.Sum(c => c.TermsServed) > 6))
                 {
-                    var doagain = await DisplayAlert("Career", "Do you wish to persue another career?", "Yes", "No");
+                    var doagain = await DisplayAlert(Properties.Resources.Title_App, 
+                        Properties.Resources.Prompt_Another_Career, 
+                        Properties.Resources.Button_Yes, 
+                        Properties.Resources.Button_No);
                     if (doagain)
                     {
                         keepgoing = true;
@@ -86,7 +92,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             if (total > character.Profile.Int.Value + character.Profile.Edu.Value)
             {
                 // Need to reduce skills count
-                await DisplayAlert("Career", "Your skill total exeeeds the sum of INT and EDU, you need to reduce them", "OK");
+                await DisplayAlert(Properties.Resources.Title_App, Properties.Resources.Msg_Skill_Total, Properties.Resources.Button_OK);
                 var skillView = new SkillView(character);
                 await Navigation.PushModalAsync(skillView);
             }
@@ -179,8 +185,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 else
                 {
                     character.Died = true;
-                    character.Journal.Add(string.Format("Killed at age {0}", character.Age));
-                    await DisplayAlert("Career", "Your character was killed.", "Ok");
+                    character.Journal.Add(string.Format(Properties.Resources.Jrn_Killed, character.Age));
+                    await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Killed, character.Age), Properties.Resources.Button_OK);
                     keepGoing = false;
                     break;
                 }
@@ -200,7 +206,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     }
                     if (tables.Count > 1)
                     {
-                        var result = await DisplayActionSheet("Select a skill table", null, null, tables.ToArray());
+                        var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill_Table, null, null, tables.ToArray());
                         for (var j = 0; j < 4; j++)
                         {
                             if (career.SkillTables[j].Name.Equals(result))
@@ -217,7 +223,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     if (skills.Count > 1)
                     {
                         var names = skills.Select(s => s.Name);
-                        var result = await DisplayActionSheet("Select a skill", null, null, names.ToArray());
+                        var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill, null, null, names.ToArray());
                         skill = skills.Where(s => s.Name == result).First();
                     }
                     else
@@ -237,8 +243,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 if (!character.AgingCheck())
                 {
                     character.Died = true;
-                    character.Journal.Add(string.Format("Died at age {0}", character.Age));
-                    await DisplayAlert("Career", "Your character died of old age.", "Ok");
+                    character.Journal.Add(string.Format(Properties.Resources.Jrn_Died, character.Age));
+                    await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Died, character.Age), Properties.Resources.Button_OK);
                     break;
                 }
 
@@ -250,7 +256,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 else if (reup == BasicCareer.Renlistment.Can)
                 {
                     // Ask if they want to renlist
-                    var result = await DisplayAlert("Career", string.Format("You are now {0}. Do you want to re-enlist", character.Age), "Yes", "No");
+                    var result = await DisplayAlert(Properties.Resources.Title_App, 
+                        string.Format(Properties.Resources.Prompt_Renlist, character.Age),
+                        Properties.Resources.Button_Yes,
+                        Properties.Resources.Button_No);
                     if (result)
                     {
                         career.HandleRenlist(true);
@@ -271,13 +280,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             career.MusterOut();
             var muster = career.MusterOutRolls();
             var cashRolls = muster.Clamp(0, 3);
-            await DisplayAlert("Career", string.Format("You have {0} benefits rolls, no more than {1} can be on the cash table", muster, cashRolls), "OK");
+            await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Prompt_Benefit_Rolls, muster, cashRolls), Properties.Resources.Button_OK);
             for (var i = 0; i < muster; i++)
             {
                 if (cashRolls > 0)
                 {
-                    var result = await DisplayActionSheet("Select a table", null, null, "Cash", "Material");
-                    if (result.Equals("Cash"))
+                    var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Benefit_Table, 
+                        null, null, Properties.Resources.Benefit_Cash, Properties.Resources.Benefit_Material);
+                    if (result.Equals(Properties.Resources.Benefit_Cash))
                     {
                         cashRolls--;
                         career.ResolveCashBenefit();
@@ -289,17 +299,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         {
 
                             // need to decide between skill or weapon
-                            var picked = await DisplayAlert("Career", "You have received a weapon benefit, do you wish to take it as a skill instead?", "Yes", "No");
+                            var picked = await DisplayAlert(Properties.Resources.Title_App, Properties.Resources.Prompt_Weapon_Skill, Properties.Resources.Button_Yes, Properties.Resources.Button_No);
 
                             var list = Benefit.GetWeaponList(picks.benefit);
                             var title = string.Empty;
                             if (picked)
                             {
-                                title = "Select a skill";
+                                title = Properties.Resources.Prompt_Select_Skill;
                             }
                             else
                             {
-                                title = "Select a weapon";
+                                title = Properties.Resources.Prompt_Select_Weapon;
                             }
                             var selected = await DisplayActionSheet(title, null, null, list.ToArray());
                             if (picked)
@@ -314,14 +324,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         else if (picks.pick == Career.BenefitPick.Skill)
                         {
                             var list = Benefit.GetWeaponList(picks.benefit);
-                            var selected = await DisplayActionSheet("Select a skill", null, null, list.ToArray());
+                            var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill, null, null, list.ToArray());
                             character.AddSkill(new Skill() { Level = 1, Name = selected });
                         }
                         else if (picks.pick == Career.BenefitPick.Weapon)
                         {
                             // select a class of weapon
                             var list = Benefit.GetWeaponList(picks.benefit);
-                            var selected = await DisplayActionSheet("Select a weapon", null, null, list.ToArray());
+                            var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Weapon, null, null, list.ToArray());
                             character.AddBenefit(new Benefit() { Name = selected, TypeOfBenefit = Benefit.BenefitType.Weapon, Value = 1 });
                         }
                     }

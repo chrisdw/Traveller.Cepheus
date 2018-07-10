@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Jrn_Died" xml:space="preserve">
+    <value>Starb im Alter {0}</value>
+  </data>
+  <data name="Jrn_Killed" xml:space="preserve">
+    <value>An Alter {0} getötet</value>
+  </data>
+  <data name="Msg_Died" xml:space="preserve">
+    <value>Dein Charakter starb an Altersschwäche unter {0}.</value>
+  </data>
+  <data name="Msg_Drafted" xml:space="preserve">
+    <value>Sie wo die {0} eingezogen.</value>
+  </data>
+  <data name="Msg_Killed" xml:space="preserve">
+    <value>Deinen Charakter starb im Alter von {0}.</value>
+  </data>
+  <data name="Msg_Skill_Total" xml:space="preserve">
+    <value>Ihre Fähigkeiten insgesamt Urheberrechtsverstoß die Summe von INT und EDU, müssen Sie diese zu reduzieren.</value>
+  </data>
+  <data name="Prompt_Another_Career" xml:space="preserve">
+    <value>Möchten Sie eine andere Karriere verfolgen?</value>
+  </data>
+  <data name="Prompt_Draft" xml:space="preserve">
+    <value>Sie können nicht gewinnen. Zum Entwurf einreichen?</value>
+  </data>
+  <data name="Prompt_Select_Skill" xml:space="preserve">
+    <value>Wählen Sie eine Qualifikation</value>
+  </data>
+  <data name="Prompt_Select_Skill_Table" xml:space="preserve">
+    <value>Wählen Sie eine Fertigkeit-Tabelle</value>
+  </data>
+  <data name="Prompt_Renlist" xml:space="preserve">
+    <value>Du bist jetzt {0}. Möchten Sie re-enlist?</value>
+  </data>
+  <data name="Benefit_Cash" xml:space="preserve">
+    <value>Bargeld</value>
+  </data>
+  <data name="Benefit_Material" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="Prompt_Benefit_Rolls" xml:space="preserve">
+    <value>Sie haben {0} Vorteile Rollen, nicht mehr als {1} auf der Cash-Tisch sein kann</value>
+  </data>
+  <data name="Prompt_Select_Benefit_Table" xml:space="preserve">
+    <value>Wählen Sie eine Tabelle nutzen</value>
+  </data>
+  <data name="Prompt_Select_Career" xml:space="preserve">
+    <value>Wählen Sie eine Karriere</value>
+  </data>
+  <data name="Prompt_Weapon_Skill" xml:space="preserve">
+    <value>Möchten Sie nutzen eine Waffe erhalten haben, Sie es stattdessen als eine Fertigkeit zu nehmen?</value>
+  </data>
+  <data name="Button_No" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Button_Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="Prompt_Select_Weapon" xml:space="preserve">
+    <value>Wählen Sie eine Waffe</value>
+  </data>
+  <data name="Title_App" xml:space="preserve">
+    <value>Traveller-Karriere-Generation</value>
+  </data>
+</root>

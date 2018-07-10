@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Jrn_Died" xml:space="preserve">
+    <value>Est décédé à l’âge {0}</value>
+  </data>
+  <data name="Jrn_Killed" xml:space="preserve">
+    <value>Tué à l’âge {0}</value>
+  </data>
+  <data name="Msg_Died" xml:space="preserve">
+    <value>Votre personnage morte de vieillesse à {0}.</value>
+  </data>
+  <data name="Msg_Drafted" xml:space="preserve">
+    <value>Vous là où il est incorporé dans le {0}.</value>
+  </data>
+  <data name="Msg_Killed" xml:space="preserve">
+    <value>Votre personnage a été tué à l’âge de {0}.</value>
+  </data>
+  <data name="Msg_Skill_Total" xml:space="preserve">
+    <value>Votre compétence totale dépasse la somme des INT et EDU, vous avez besoin de les réduire.</value>
+  </data>
+  <data name="Prompt_Another_Career" xml:space="preserve">
+    <value>Vous souhaitez poursuivre une autre carrière ?</value>
+  </data>
+  <data name="Prompt_Draft" xml:space="preserve">
+    <value>Vous ne pouvez pas s’enrôler. Soumettre au projet ?</value>
+  </data>
+  <data name="Prompt_Select_Skill" xml:space="preserve">
+    <value>Sélectionner une compétence</value>
+  </data>
+  <data name="Prompt_Select_Skill_Table" xml:space="preserve">
+    <value>Choisissez un tableau de compétences</value>
+  </data>
+  <data name="Prompt_Renlist" xml:space="preserve">
+    <value>Vous êtes maintenant {0}. Voulez vous réinscrire ?</value>
+  </data>
+  <data name="Benefit_Cash" xml:space="preserve">
+    <value>Trésorerie</value>
+  </data>
+  <data name="Benefit_Material" xml:space="preserve">
+    <value>Matériel</value>
+  </data>
+  <data name="Prompt_Benefit_Rolls" xml:space="preserve">
+    <value>Vous avez {0} avantages rouleaux, pas plus que {1} peut être sur le tableau de trésorerie</value>
+  </data>
+  <data name="Prompt_Select_Benefit_Table" xml:space="preserve">
+    <value>Choisissez un tableau de prestation</value>
+  </data>
+  <data name="Prompt_Select_Career" xml:space="preserve">
+    <value>Choisir une carrière</value>
+  </data>
+  <data name="Prompt_Weapon_Skill" xml:space="preserve">
+    <value>Vous avez reçu un avantage de l’arme, vous souhaitez considérer plutôt comme une compétence ?</value>
+  </data>
+  <data name="Button_No" xml:space="preserve">
+    <value>Non</value>
+  </data>
+  <data name="Button_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Button_Yes" xml:space="preserve">
+    <value>Oui</value>
+  </data>
+  <data name="Prompt_Select_Weapon" xml:space="preserve">
+    <value>Choisir une arme</value>
+  </data>
+  <data name="Title_App" xml:space="preserve">
+    <value>Génération de carrière de voyageur</value>
+  </data>
+</root>

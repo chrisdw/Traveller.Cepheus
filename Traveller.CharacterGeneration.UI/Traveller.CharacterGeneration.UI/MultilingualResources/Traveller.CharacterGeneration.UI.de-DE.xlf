@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-GB" target-language="de-DE" original="TRAVELLER.CHARACTERGENERATION.UI/PROPERTIES/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.CHARACTERGENERATION.UI/PROPERTIES/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Jrn_Died" translate="yes" xml:space="preserve">
+          <source>Died at age {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Starb im Alter {0}</target>
+        </trans-unit>
+        <trans-unit id="Jrn_Killed" translate="yes" xml:space="preserve">
+          <source>Killed at age {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">An Alter {0} getötet</target>
+        </trans-unit>
+        <trans-unit id="Msg_Died" translate="yes" xml:space="preserve">
+          <source>Your character died of old age at {0}.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dein Charakter starb an Altersschwäche unter {0}.</target>
+        </trans-unit>
+        <trans-unit id="Msg_Drafted" translate="yes" xml:space="preserve">
+          <source>You where drafted into the {0}.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie wo die {0} eingezogen.</target>
+        </trans-unit>
+        <trans-unit id="Msg_Killed" translate="yes" xml:space="preserve">
+          <source>Your character was killed at age {0}.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deinen Charakter starb im Alter von {0}.</target>
+        </trans-unit>
+        <trans-unit id="Msg_Skill_Total" translate="yes" xml:space="preserve">
+          <source>Your skill total exeeds the sum of INT and EDU, you need to reduce them.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ihre Fähigkeiten insgesamt Urheberrechtsverstoß die Summe von INT und EDU, müssen Sie diese zu reduzieren.</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Another_Career" translate="yes" xml:space="preserve">
+          <source>Do you wish to persue another career?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Möchten Sie eine andere Karriere verfolgen?</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Draft" translate="yes" xml:space="preserve">
+          <source>You could not enlist. Submit to the draft?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie können nicht gewinnen. Zum Entwurf einreichen?</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Select_Skill" translate="yes" xml:space="preserve">
+          <source>Select a skill</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wählen Sie eine Qualifikation</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Select_Skill_Table" translate="yes" xml:space="preserve">
+          <source>Select a skill table</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wählen Sie eine Fertigkeit-Tabelle</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Renlist" translate="yes" xml:space="preserve">
+          <source>You are now {0}. Do you want to re-enlist?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Du bist jetzt {0}. Möchten Sie re-enlist?</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Cash" translate="yes" xml:space="preserve">
+          <source>Cash</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bargeld</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Material" translate="yes" xml:space="preserve">
+          <source>Material</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Material</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Benefit_Rolls" translate="yes" xml:space="preserve">
+          <source>You have {0} benefits rolls, no more than {1} can be on the cash table</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie haben {0} Vorteile Rollen, nicht mehr als {1} auf der Cash-Tisch sein kann</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Select_Benefit_Table" translate="yes" xml:space="preserve">
+          <source>Select a benefit table</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wählen Sie eine Tabelle nutzen</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Select_Career" translate="yes" xml:space="preserve">
+          <source>Select a career</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wählen Sie eine Karriere</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Weapon_Skill" translate="yes" xml:space="preserve">
+          <source>You have received a weapon benefit, do you wish to take it as a skill instead?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Möchten Sie nutzen eine Waffe erhalten haben, Sie es stattdessen als eine Fertigkeit zu nehmen?</target>
+        </trans-unit>
+        <trans-unit id="Button_No" translate="yes" xml:space="preserve">
+          <source>No</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Nein</target>
+        </trans-unit>
+        <trans-unit id="Button_OK" translate="yes" xml:space="preserve">
+          <source>OK</source>
+          <target state="needs-review-translation" state-qualifier="exact-match">OK</target>
+        </trans-unit>
+        <trans-unit id="Button_Yes" translate="yes" xml:space="preserve">
+          <source>Yes</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ja</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Select_Weapon" translate="yes" xml:space="preserve">
+          <source>Select a weapon</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wählen Sie eine Waffe</target>
+        </trans-unit>
+        <trans-unit id="Title_App" translate="yes" xml:space="preserve">
+          <source>Traveller Career Generation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Traveller-Karriere-Generation</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
