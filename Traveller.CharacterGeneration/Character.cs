@@ -143,6 +143,52 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             break;
                     }
                     break;
+                case Constants.CultureType.Darrian:
+                    switch (CharacterSpecies)
+                    {
+                        case Species.Aslan:
+                            Profile = new AslanUPP();
+                            Profile.Str.Value = dice.roll(2) + 1;
+                            Profile.Dex.Value = dice.roll(2) - 1;
+                            Profile.End.Value = dice.roll(2) + 1;
+                            break;
+                        case Species.Human_Solomani:
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            break;
+                        case Species.Human_Darrian:
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll() + 3;
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll() + 3;
+                            break;
+                    }
+                    Profile.Int.Value = dice.roll(2);
+                    Profile.Edu.Value = dice.roll(2);
+                    Profile.Soc.Value = dice.roll(2);
+                    break;
+                case Constants.CultureType.Vargr:
+                    // Assume all are vargr
+                    Profile = new VargrUPP();
+                    Profile.Str.Value = dice.roll(2) - 1;
+                    Profile.Dex.Value = dice.roll(2) + 1;
+                    Profile.End.Value = dice.roll(2) - 1;
+                    Profile.Int.Value = dice.roll(2);
+                    Profile.Edu.Value = dice.roll(2);
+                    Profile["CHR"].Value = dice.roll();
+                    break;
+                case Constants.CultureType.SwordWorlds:
+                    // Assume all are standard humans
+                    Profile = new UPP();
+                    Profile.Str.Value = dice.roll(2);
+                    Profile.Dex.Value = dice.roll(2);
+                    Profile.End.Value = dice.roll(2);
+                    Profile.Int.Value = dice.roll(2);
+                    Profile.Edu.Value = dice.roll(2);
+                    Profile.Soc.Value = dice.roll(2);
+                    break;
             }
         }
         public void AddSkill(Skill skill)
@@ -174,6 +220,54 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             var result = true;
             switch (CharacterSpecies)
             {
+                case Species.Vargr:
+                    if (Age >= 66)
+                    {
+                        CheckAttribute(Profile.Str, 9, -2);
+                        CheckAttribute(Profile.Dex, 8, -2);
+                        CheckAttribute(Profile.End, 9, -2);
+                        CheckAttribute(Profile.Int, 9, -1);
+                    }
+                    else if (Age >= 50)
+                    {
+                        CheckAttribute(Profile.Str, 8, -1);
+                        CheckAttribute(Profile.Dex, 7, -1);
+                        CheckAttribute(Profile.End, 8, -1);
+                    }
+                    else if (Age >= 34)
+                    {
+                        CheckAttribute(Profile.Str, 7, -1);
+                        CheckAttribute(Profile.Dex, 6, -1);
+                        CheckAttribute(Profile.End, 7, -1);
+                    }
+                    break;
+                case Species.Aslan:
+                    if (Age >= 70)
+                    {
+                        CheckAttribute(Profile.Str, 10, -2);
+                        CheckAttribute(Profile.Dex, 10, -2);
+                        CheckAttribute(Profile.End, 10, -2);
+                        CheckAttribute(Profile.Int, 9, -1);
+                    }
+                    else if (Age >= 66)
+                    {
+                        CheckAttribute(Profile.Str, 9, -2);
+                        CheckAttribute(Profile.Dex, 9, -2);
+                        CheckAttribute(Profile.End, 9, -2);
+                    }
+                    else if (Age >= 60)
+                    {
+                        CheckAttribute(Profile.Str, 9, -1);
+                        CheckAttribute(Profile.Dex, 8, -1);
+                        CheckAttribute(Profile.End, 7, -1);
+                    }
+                    else if (Age >= 56)
+                    {
+                        CheckAttribute(Profile.Str, 8, -1);
+                        CheckAttribute(Profile.Dex, 9, -1);
+                        CheckAttribute(Profile.End, 8, -1);
+                    }
+                    break;
                 default:
                     if (Age >= 66)
                     {

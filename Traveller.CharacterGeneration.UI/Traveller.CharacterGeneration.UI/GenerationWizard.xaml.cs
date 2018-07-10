@@ -37,8 +37,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             };
             character.Generate();
 
-            await DisplayAlert("Test", character.Profile.Display, "OK");
-
             var keepgoing = false;
             do
             {
@@ -180,7 +178,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 }
                 else
                 {
-                    await DisplayAlert("Career", "Your character died.", "Ok");
+                    character.Died = true;
+                    character.Journal.Add(string.Format("Killed at age {0}", character.Age));
+                    await DisplayAlert("Career", "Your character was killed.", "Ok");
                     keepGoing = false;
                     break;
                 }
@@ -236,6 +236,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 career.EndTerm();
                 if (!character.AgingCheck())
                 {
+                    character.Died = true;
+                    character.Journal.Add(string.Format("Died at age {0}", character.Age));
+                    await DisplayAlert("Career", "Your character died of old age.", "Ok");
                     break;
                 }
 
