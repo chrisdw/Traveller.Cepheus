@@ -5,7 +5,6 @@
              x:Class="org.DownesWard.Traveller.CharacterGeneration.UI.MainPage">
 
     <StackLayout>
-        <Button x:Name="Generate" Text="Generate" Clicked="Generate_Clicked" />
         <Button x:Name="Wizard" Text="Wizard" Clicked="Wizard_Clicked" />
     </StackLayout>
 
