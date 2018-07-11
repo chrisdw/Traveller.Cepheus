@@ -6,7 +6,7 @@
     <ContentPage Title="Step 1: Select the ruleset" x:Name="SelectRuleset">
         <StackLayout>
             <Label Text="Select the ruleset" />
-            <Picker x:Name="Ruleset" Title="Pick the rules you want to use" SelectedItem="{Binding Ruleset, Mode=TwoWay}" SelectedIndexChanged="Ruleset_SelectedIndexChanged">
+            <Picker x:Name="Ruleset" Title="Pick the rules you want to use" SelectedItem="{Binding GenerationConfiguration.Ruleset, Mode=TwoWay}" SelectedIndexChanged="Ruleset_SelectedIndexChanged">
                 <Picker.Items>
                     <x:String>Classic</x:String>
                     <x:String>Mega Traveller</x:String>
@@ -19,21 +19,21 @@
     <ContentPage Title="Step 2: Select the campaign" x:Name="SelectCampaign">
         <StackLayout>
             <Label Text="Select the campaign. This list is driven by the ruleset you pick" />
-            <Picker x:Name="Campaign" Title="Pick the campaign you are playing" SelectedItem="{Binding Campaign, Mode=TwoWay}" SelectedIndexChanged="Campaign_SelectedIndexChanged" />
+            <Picker x:Name="Campaign" Title="Pick the campaign you are playing" SelectedItem="{Binding GenerationConfiguration.Campaign, Mode=TwoWay}" SelectedIndexChanged="Campaign_SelectedIndexChanged" />
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Step 3: Select the culture">
         <StackLayout>
             <Label Text="Select the culture. This list is driven by the campaign you picked" />
-            <Picker x:Name="Culture" Title="Pick the culture you are from" SelectedItem="{Binding Culture, Mode=TwoWay}" SelectedIndexChanged="Culture_SelectedIndexChanged" />
+            <Picker x:Name="Culture" Title="Pick the culture you are from" SelectedItem="{Binding GenerationConfiguration.Culture, Mode=TwoWay}" SelectedIndexChanged="Culture_SelectedIndexChanged" />
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Step 4: Select the species and sex">
         <StackLayout>
             <Label Text="Select the species. This list is driven by the culture you picked" />
-            <Picker x:Name="Species" Title="Pick the species you are from" SelectedItem="{Binding Species, Mode=TwoWay}" SelectedIndexChanged="Species_SelectedIndexChanged" />
+            <Picker x:Name="Species" Title="Pick the species you are from" SelectedItem="{Binding GenerationConfiguration.Species, Mode=TwoWay}" SelectedIndexChanged="Species_SelectedIndexChanged" />
             <Label Text="Select the sex. This list is drive by the species you picked" />
-            <Picker x:Name="Sex" Title="Pick the sex you are." SelectedItem="{Binding Sex, Mode=TwoWay}" />
+            <Picker x:Name="Sex" Title="Pick the sex you are." SelectedItem="{Binding GenerationConfiguration.Sex, Mode=TwoWay}" />
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Step 5: Confirm your decisions">
@@ -41,23 +41,23 @@
             <Label Text="You have selected the following parameters, press Generate to start the character generation process." />
             <StackLayout Orientation="Horizontal">
                 <Label Text="Ruleset" />
-                <Label Text="{Binding Ruleset}" />
+                <Label Text="{Binding GenerationConfiguration.Ruleset}" />
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Campaign" />
-                <Label Text="{Binding Campaign}" />
+                <Label Text="{Binding GenerationConfiguration.Campaign}" />
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Culture" />
-                <Label Text="{Binding Culture}" />
+                <Label Text="{Binding GenerationConfiguration.Culture}" />
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Species" />
-                <Label Text="{Binding Species}" />
+                <Label Text="{Binding GenerationConfiguration.Species}" />
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Sex" />
-                <Label Text="{Binding Sex}" />
+                <Label Text="{Binding GenerationConfiguration.Sex}" />
             </StackLayout>
             <Button x:Name="Generate" Text="Generate" Clicked="Generate_Clicked" />
         </StackLayout>

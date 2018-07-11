@@ -93,7 +93,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         {
             get
             {
-                return string.IsNullOrEmpty(Ruleset) && string.IsNullOrEmpty(Campaign) && string.IsNullOrEmpty(Culture) && string.IsNullOrEmpty(Species) && string.IsNullOrEmpty(Sex);
+                return !string.IsNullOrEmpty(Ruleset) && !string.IsNullOrEmpty(Campaign) && !string.IsNullOrEmpty(Culture) && !string.IsNullOrEmpty(Species) && !string.IsNullOrEmpty(Sex);
             }
         }
 

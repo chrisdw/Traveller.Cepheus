@@ -13,17 +13,19 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GenerationWizard : CarouselPage
     {
-        private GenerationConfiguration generationConfiguration = new GenerationConfiguration();
+        public GenerationConfiguration GenerationConfiguration { get; }  = new GenerationConfiguration();
         private ICulture selectedCulture;
         private Constants.GenerationStyle generationStyle;
         private Character.Species species;
 
-        public ICommand GenerateCommand { private set; get; }
-
         public GenerationWizard()
         {
-            BindingContext = generationConfiguration;
+            BindingContext = this;
             InitializeComponent();
+            GenerationConfiguration.PropertyChanged += (a, b) =>
+            {
+                Generate.IsEnabled = GenerationConfiguration.ConfigurationComplete;
+            };
         }
 
         private async void Generate_Clicked(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             Character character = new Character
             {
                 Culture = selectedCulture.Id,
-                Sex = generationConfiguration.Sex,
+                Sex = GenerationConfiguration.Sex,
                 Style = generationStyle,
                 CharacterSpecies = species
             };
@@ -103,7 +105,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         private void Ruleset_SelectedIndexChanged(object sender, EventArgs e)
         {
             Campaign.Items.Clear();
-            switch (generationConfiguration.Ruleset)
+            switch (GenerationConfiguration.Ruleset)
             {
                 case "Classic":
                     Campaign.Items.Add("3rd Imperium");
@@ -125,7 +127,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         private void Campaign_SelectedIndexChanged(object sender, EventArgs e)
         {
             Culture.Items.Clear();
-            switch (generationConfiguration.Campaign)
+            switch (GenerationConfiguration.Campaign)
             {
                 case "3rd Imperium":
                     Culture.Items.Add("Imperial");
@@ -142,7 +144,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
         private void Culture_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (generationConfiguration.Culture)
+            switch (GenerationConfiguration.Culture)
             {
                 case "Imperial":
                     selectedCulture = new Classic.Imperial.Culture();
@@ -161,7 +163,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             {
                 species = selectedCulture.Species(generationStyle)[Species.SelectedItem.ToString()];
             }
-            switch (generationConfiguration.Species)
+            switch (GenerationConfiguration.Species)
             {
                 default:
                     Sex.Items.Add("Male");
