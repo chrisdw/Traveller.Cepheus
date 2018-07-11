@@ -189,6 +189,25 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     Profile.Edu.Value = dice.roll(2);
                     Profile.Soc.Value = dice.roll(2);
                     break;
+                case Constants.CultureType.Dynchia:
+                    Profile = new UPP();
+                    switch (CharacterSpecies)
+                    {
+                        case Species.Human_Dynchia:
+                            Profile.Str.Value = dice.roll() + 3;
+                            Profile.Dex.Value = dice.roll(2) + 1;
+                            Profile.End.Value = dice.roll(2) + 1;
+                            break;
+                        case Species.Human_Solomani:
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            break;
+                    }
+                    Profile.Int.Value = dice.roll(2);
+                    Profile.Edu.Value = dice.roll(2);
+                    Profile.Soc.Value = dice.roll(2);
+                    break;
             }
         }
         public void AddSkill(Skill skill)

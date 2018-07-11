@@ -9,7 +9,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         public BasicScouts()
         {
             CurrentRank = 0;
-            TermSkills = 0;
+            TermSkills = 2;
 
             var table = new SkillTable();
             SkillTables[0] = table;
