@@ -153,7 +153,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             if (dice.roll(2) >= target)
             {
                 enlist = true;
-                Owner.AddSkill(new Skill("Rifle", Skill.SkillClass.Military, 1));
+                Owner.AddSkill(SkillLibrary.Rifle);
                 Owner.Journal.Add(string.Format("Enlisted in Army at age {0}", Owner.Age));
             }
             else

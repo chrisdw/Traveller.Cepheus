@@ -28,11 +28,25 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     switch (character.CharacterSpecies)
                     {
                         case Character.Species.AelYael:
+                            // Won't join merchants
                             careers.Add("Army", Career.CareerType.Imperial_Army);
+                            careers.Add("Marines", Career.CareerType.Imperial_Marines);
+                            careers.Add("Navy", Career.CareerType.Imperial_Navy);
+                            break;
+                        case Character.Species.Virushi:
+                            // No military careers
+                            break;
+                        case Character.Species.Dolphin:
+                            // Unique careers
                             break;
                         default:
                             careers.Add("Army", Career.CareerType.Imperial_Army);
                             careers.Add("Marines", Career.CareerType.Imperial_Marines);
+                            careers.Add("Navy", Career.CareerType.Imperial_Navy);
+                            if (character.CharacterSpecies == Character.Species.Vargr)
+                            {
+                                // TODO: Add corsair
+                            }
                             if (character.Profile.Soc.Value > 10)
                             {
                                 // TODO: Add Noble
@@ -116,6 +130,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new BasicMarines() { Culture = this };
                 case Career.CareerType.Imperial_Army:
                     return new BasicArmy() { Culture = this };
+                case Career.CareerType.Imperial_Navy:
+                    return new BasicNavy() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }
@@ -146,6 +162,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             var dice = new Dice(6);
             switch (dice.roll(1))
             {
+                case 1:
+                    return new BasicNavy() { Culture = this, Drafted = true };
                 case 2:
                     return new BasicMarines() { Culture = this, Drafted = true };
                 case 3:
