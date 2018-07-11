@@ -24,12 +24,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Brawling = new Skill("Brawling", Skill.SkillClass.None, 1);
         public static Skill Computer = new Skill("Computer", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Electronics = new Skill("Electronics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Engineering = new Skill("Engineering", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill FowardObserver = new Skill("Forward Observer", Skill.SkillClass.None, 1);
         public static Skill Gambling = new Skill("Gambling", Skill.SkillClass.None, 1);
+        public static Skill Gunnery = new Skill("Gunnery", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill JackOfTrades = new Skill("Jack-Of-Trades", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Leader = new Skill("Leader", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill Mechanical = new Skill("Mechanical", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Medic = new Skill("Medic", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Navigation = new Skill("Navigation", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Pilot = new Skill("Pilot", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill Tactics = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill ShipsBoat = new Skill("Ships Boat", Skill.SkillClass.None, 1);
         public static Skill VaccSuit = new Skill("Vacc Suit", Skill.SkillClass.None, 1);
 
         public static Skill Aircraft = new Skill("Aircraft", Skill.SkillClass.None, 1)

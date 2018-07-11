@@ -23,6 +23,39 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             skills[4] = SkillLibrary.Int;
             skills[5] = SkillLibrary.Edu;
 
+            table = new SkillTable();
+            SkillTables[1] = table;
+            table.Name = "Service Skills";
+            skills = table.Skills;
+            skills[0] = SkillLibrary.ShipsBoat;
+            skills[1] = SkillLibrary.VaccSuit;
+            skills[2] = SkillLibrary.FowardObserver;
+            skills[3] = SkillLibrary.BladeCombat;
+            skills[4] = SkillLibrary.GunCombat;
+            skills[5] = SkillLibrary.Gunnery;
+
+            table = new SkillTable();
+            SkillTables[2] = table;
+            table.Name = "Education";
+            skills = table.Skills;
+            skills[0] = SkillLibrary.VaccSuit;
+            skills[1] = SkillLibrary.Mechanical;
+            skills[2] = SkillLibrary.Electronics;
+            skills[3] = SkillLibrary.Engineering;
+            skills[4] = SkillLibrary.Gunnery;
+            skills[5] = SkillLibrary.JackOfTrades;
+
+            table = new SkillTable();
+            SkillTables[3] = table;
+            table.Name = "Advanced Education";
+            skills = table.Skills;
+            skills[0] = SkillLibrary.Medic;
+            skills[1] = SkillLibrary.Navigation;
+            skills[2] = SkillLibrary.Engineering;
+            skills[3] = SkillLibrary.Computer;
+            skills[4] = SkillLibrary.Pilot;
+            skills[5] = SkillLibrary.Admin;
+
             Material.Add(BenefitLibrary.LowPsg);
             Material.Add(BenefitLibrary.Int);
             Material.Add(BenefitLibrary.Edu);
