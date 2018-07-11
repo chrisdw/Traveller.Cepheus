@@ -12,7 +12,67 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             CurrentRank = 0;
             TermSkills = 2;
 
-            Ranks[0] = "Marines";
+            var table = new SkillTable();
+            SkillTables[0] = table;
+            table.Name = "Personal Development";
+            var skills = table.Skills;
+            skills[0] = SkillLibrary.Str;
+            skills[1] = SkillLibrary.Dex;
+            skills[2] = SkillLibrary.End;
+            skills[3] = SkillLibrary.Gambling;
+            skills[4] = SkillLibrary.Brawling;
+            skills[5] = SkillLibrary.BladeCombat;
+
+            table = new SkillTable();
+            SkillTables[1] = table;
+            table.Name = "Service Skills";
+            skills = table.Skills;
+            skills[0] = SkillLibrary.ATV;
+            skills[1] = SkillLibrary.VaccSuit;
+            skills[2] = SkillLibrary.BladeCombat;
+            skills[3] = SkillLibrary.BladeCombat;
+            skills[4] = SkillLibrary.GunCombat;
+            skills[5] = SkillLibrary.GunCombat;
+
+            table = new SkillTable();
+            SkillTables[2] = table;
+            table.Name = "Education";
+            skills = table.Skills;
+            skills[0] = SkillLibrary.ATV;
+            skills[1] = SkillLibrary.Mechanical;
+            skills[2] = SkillLibrary.Electronics;
+            skills[3] = SkillLibrary.Tactics;
+            skills[4] = SkillLibrary.BladeCombat;
+            skills[5] = SkillLibrary.GunCombat;
+
+            table = new SkillTable();
+            SkillTables[3] = table;
+            table.Name = "Advanced Education";
+            skills = table.Skills;
+            skills[0] = SkillLibrary.Medic;
+            skills[1] = SkillLibrary.Tactics;
+            skills[2] = SkillLibrary.Tactics;
+            skills[3] = SkillLibrary.Computer;
+            skills[4] = SkillLibrary.Leader;
+            skills[5] = SkillLibrary.Admin;
+
+            Material.Add(BenefitLibrary.LowPsg);
+            Material.Add(BenefitLibrary.Int);
+            Material.Add(BenefitLibrary.Edu);
+            Material.Add(BenefitLibrary.Blade);
+            Material.Add(BenefitLibrary.Travellers);
+            Material.Add(BenefitLibrary.HighPsg);
+            Material.Add(BenefitLibrary.Soc);
+
+            Cash[0] = 2000;
+            Cash[1] = 5000;
+            Cash[2] = 5000;
+            Cash[3] = 10000;
+            Cash[4] = 20000;
+            Cash[5] = 30000;
+            Cash[6] = 40000;
+
+            Ranks[0] = "Marine";
             Ranks[1] = "Lieutenant";
             Ranks[2] = "Captain";
             Ranks[3] = "Force Cmdr";
@@ -80,7 +140,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                         CurrentRank = 1;
                         TermSkills += 1;
                         Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[CurrentRank]));
-                        Owner.AddSkill(new Skill("Submachine Gun", Skill.SkillClass.Military, 1));
+                        Owner.AddSkill(SkillLibrary.Revolver);
                     }
                 }
             }
@@ -122,7 +182,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             if (dice.roll(2) >= target)
             {
                 enlist = true;
-                Owner.AddSkill(new Skill("Cutlass", Skill.SkillClass.Military, 1));
+                Owner.AddSkill(SkillLibrary.Cutlass);
                 Owner.Journal.Add(string.Format("Enlisted in Marines at age {0}", Owner.Age));
             }
             else
@@ -203,7 +263,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                 base.Drafted = value;
                 if (value)
                 {
-                    Owner.AddSkill(new Skill("Cutlass", Skill.SkillClass.Military, 1));
+                    Owner.AddSkill(SkillLibrary.Cutlass);
                 }
             }
         }

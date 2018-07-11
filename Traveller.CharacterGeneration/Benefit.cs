@@ -40,16 +40,16 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             switch (benefit.Name)
             {
                 case "Bow":
-                    return Cascades.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList();
+                    return SkillLibrary.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList();
                 case "Gun":
-                    return Cascades.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList();
+                    return SkillLibrary.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList();
                 case "Blade":
-                    return Cascades.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList();
+                    return SkillLibrary.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList();
                 case "Weapon":
                     var list = new List<string>();
-                    list.AddRange(Cascades.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList());
-                    list.AddRange(Cascades.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList());
-                    list.AddRange(Cascades.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList());
+                    list.AddRange(SkillLibrary.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList());
+                    list.AddRange(SkillLibrary.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList());
+                    list.AddRange(SkillLibrary.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList());
                     return list;
                 default:
                     return new List<string>();

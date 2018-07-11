@@ -16,53 +16,53 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             SkillTables[0] = table;
             table.Name = "Personal Development";
             var skills = table.Skills;
-            skills[0] = new Skill("STR", Skill.SkillClass.AttributeChange, 1);
-            skills[1] = new Skill("DEX", Skill.SkillClass.AttributeChange, 1);
-            skills[2] = new Skill("END", Skill.SkillClass.AttributeChange, 1);
-            skills[3] = new Skill("Gambling", Skill.SkillClass.None, 1);
-            skills[4] = new Skill("Brawling", Skill.SkillClass.None, 1);
-            skills[5] = new Skill("EDU", Skill.SkillClass.AttributeChange, 1);
+            skills[0] = SkillLibrary.Str;
+            skills[1] = SkillLibrary.Dex;
+            skills[2] = SkillLibrary.End;
+            skills[3] = SkillLibrary.Gambling;
+            skills[4] = SkillLibrary.Brawling;
+            skills[5] = SkillLibrary.Edu;
 
             table = new SkillTable();
             SkillTables[1] = table;
             table.Name = "Service Skills";
             skills = table.Skills;
-            skills[0] = new Skill("ATV", Skill.SkillClass.None, 1);
-            skills[1] = new Skill("Air/Raft", Skill.SkillClass.None, 1);
-            skills[2] = new Skill("Forward Observer", Skill.SkillClass.None, 1);
-            skills[3] = Cascades.BladeCombat;
-            skills[4] = Cascades.GunCombat;
-            skills[5] = Cascades.GunCombat;
+            skills[0] = SkillLibrary.ATV;
+            skills[1] = SkillLibrary.AirRaft;
+            skills[2] = SkillLibrary.FowardObserver;
+            skills[3] = SkillLibrary.BladeCombat;
+            skills[4] = SkillLibrary.GunCombat;
+            skills[5] = SkillLibrary.GunCombat;
 
             table = new SkillTable();
             SkillTables[2] = table;
             table.Name = "Education";
             skills = table.Skills;
-            skills[0] = new Skill("ATV", Skill.SkillClass.None, 1);
-            skills[1] = new Skill("Mechanical", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-            skills[2] = new Skill("Electronics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-            skills[3] = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-            skills[4] = Cascades.BladeCombat;
-            skills[5] = Cascades.GunCombat;
+            skills[0] = SkillLibrary.ATV;
+            skills[1] = SkillLibrary.Mechanical;
+            skills[2] = SkillLibrary.Electronics;
+            skills[3] = SkillLibrary.Tactics;
+            skills[4] = SkillLibrary.BladeCombat;
+            skills[5] = SkillLibrary.GunCombat;
 
             table = new SkillTable();
             SkillTables[3] = table;
             table.Name = "Advanced Education";
             skills = table.Skills;
-            skills[0] = new Skill("Medic", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-            skills[1] = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-            skills[2] = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-            skills[3] = new Skill("Computer", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-            skills[4] = new Skill("Leader", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-            skills[5] = new Skill("Admin", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+            skills[0] = SkillLibrary.Medic;
+            skills[1] = SkillLibrary.Tactics;
+            skills[2] = SkillLibrary.Tactics;
+            skills[3] = SkillLibrary.Computer;
+            skills[4] = SkillLibrary.Leader;
+            skills[5] = SkillLibrary.Admin;
 
-            Material.Add(new Benefit("Low Psg", 1, Benefit.BenefitType.Material));
-            Material.Add(new Benefit("INT", 1, Benefit.BenefitType.AttributeModification));
-            Material.Add(new Benefit("EDU", 1, Benefit.BenefitType.AttributeModification));
-            Material.Add(new Benefit("Gun", 1, Benefit.BenefitType.Weapon));
-            Material.Add(new Benefit("High Psg", 1, Benefit.BenefitType.Material));
-            Material.Add(new Benefit("Mid Psg", 1, Benefit.BenefitType.Material));
-            Material.Add(new Benefit("SOC", 1, Benefit.BenefitType.AttributeModification));
+            Material.Add(BenefitLibrary.LowPsg);
+            Material.Add(BenefitLibrary.Int);
+            Material.Add(BenefitLibrary.Edu);
+            Material.Add(BenefitLibrary.Gun);
+            Material.Add(BenefitLibrary.HighPsg);
+            Material.Add(BenefitLibrary.MidPsg);
+            Material.Add(BenefitLibrary.Soc);
 
             Cash[0] = 2000;
             Cash[1] = 5000;
@@ -102,7 +102,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                         CurrentRank = 1;
                         TermSkills += 1;
                         Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[CurrentRank]));
-                        Owner.AddSkill(new Skill("Submachine Gun", Skill.SkillClass.Military, 1));
+                        Owner.AddSkill(SkillLibrary.SubmachineGun);
                     }
                 }
             }
@@ -121,7 +121,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                 base.Drafted = value;
                 if (value)
                 {
-                    Owner.AddSkill(new Skill("Rifle", Skill.SkillClass.Military, 1));
+                    Owner.AddSkill(SkillLibrary.Rifle);
                 }
             }
         }
