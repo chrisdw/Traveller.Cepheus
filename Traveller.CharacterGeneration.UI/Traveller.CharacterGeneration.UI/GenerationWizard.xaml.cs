@@ -122,6 +122,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     Campaign.Items.Add("Orbital");
                     break;
             }
+
+            Citizens.IsVisible = (generationStyle == Constants.GenerationStyle.Classic_Traveller);
         }
 
         private void Campaign_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,7 +149,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             switch (GenerationConfiguration.Culture)
             {
                 case "Imperial":
-                    selectedCulture = new Classic.Imperial.Culture();
+                    selectedCulture = new Classic.Imperial.Culture()
+                    {
+                        UseCitizenRules = GenerationConfiguration.UseCitizens
+                    };
                     break;
             }
             if (selectedCulture != null)

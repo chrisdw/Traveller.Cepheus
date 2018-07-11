@@ -5,6 +5,14 @@
     <ContentPage Title="Overview">
         <StackLayout>
             <StackLayout Orientation="Horizontal">
+                <Label Text="Name"/>
+                <Label Text="{Binding Name}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Sex"/>
+                <Label Text="{Binding Sex}"/>
+            </StackLayout>            
+            <StackLayout Orientation="Horizontal">
                 <Label Text="UPP"/>
                 <Label Text="{Binding Profile.Display}"/>
             </StackLayout>

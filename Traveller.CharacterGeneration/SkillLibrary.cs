@@ -22,6 +22,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill AirRaft = new Skill("Air/Raft", Skill.SkillClass.None, 1);
         public static Skill ATV = new Skill("ATV", Skill.SkillClass.None, 1);
         public static Skill Brawling = new Skill("Brawling", Skill.SkillClass.None, 1);
+        public static Skill Bribery = new Skill("Bribery", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
         public static Skill Computer = new Skill("Computer", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Electronics = new Skill("Electronics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Engineering = new Skill("Engineering", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
@@ -36,6 +37,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Pilot = new Skill("Pilot", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill Tactics = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill ShipsBoat = new Skill("Ships Boat", Skill.SkillClass.None, 1);
+        public static Skill Steward = new Skill("Steward", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
+        public static Skill Streetwise = new Skill("Streetwise", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
         public static Skill VaccSuit = new Skill("Vacc Suit", Skill.SkillClass.None, 1);
 
         public static Skill Aircraft = new Skill("Aircraft", Skill.SkillClass.None, 1)
@@ -67,7 +70,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             {
                 new Skill("Body Pistol", Skill.SkillClass.None, 1),
                 new Skill("Automatic Pistol", Skill.SkillClass.None, 1),
-                new Skill("Revolver", Skill.SkillClass.None, 1),
+                Revolver,
                 new Skill("Carbine", Skill.SkillClass.None, 1),
                 Rifle,
                 new Skill("Laser Carbine", Skill.SkillClass.None, 1),

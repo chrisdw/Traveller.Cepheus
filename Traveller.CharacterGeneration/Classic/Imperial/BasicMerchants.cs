@@ -4,11 +4,11 @@ using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 {
-    public class BasicMarines : BasicCareer
+    public class BasicMerchants : BasicCareer
     {
-        public BasicMarines()
+        public BasicMerchants()
         {
-            Name = "Marines";
+            Name = "Merchants";
             CurrentRank = 0;
             TermSkills = 2;
 
@@ -19,76 +19,71 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             skills[0] = SkillLibrary.Str;
             skills[1] = SkillLibrary.Dex;
             skills[2] = SkillLibrary.End;
-            skills[3] = SkillLibrary.Gambling;
-            skills[4] = SkillLibrary.Brawling;
-            skills[5] = SkillLibrary.BladeCombat;
+            skills[3] = SkillLibrary.Str;
+            skills[4] = SkillLibrary.BladeCombat;
+            skills[5] = SkillLibrary.Bribery;
 
             table = new SkillTable();
             SkillTables[1] = table;
             table.Name = "Service Skills";
             skills = table.Skills;
-            skills[0] = SkillLibrary.ATV;
+            skills[0] = SkillLibrary.Steward;
             skills[1] = SkillLibrary.VaccSuit;
-            skills[2] = SkillLibrary.BladeCombat;
-            skills[3] = SkillLibrary.BladeCombat;
-            skills[4] = SkillLibrary.GunCombat;
-            skills[5] = SkillLibrary.GunCombat;
+            skills[2] = SkillLibrary.Str;
+            skills[3] = SkillLibrary.GunCombat;
+            skills[4] = SkillLibrary.Electronics;
+            skills[5] = SkillLibrary.JackOfTrades;
 
             table = new SkillTable();
             SkillTables[2] = table;
             table.Name = "Education";
             skills = table.Skills;
-            skills[0] = SkillLibrary.ATV;
+            skills[0] = SkillLibrary.Streetwise;
             skills[1] = SkillLibrary.Mechanical;
             skills[2] = SkillLibrary.Electronics;
-            skills[3] = SkillLibrary.Tactics;
-            skills[4] = SkillLibrary.BladeCombat;
-            skills[5] = SkillLibrary.GunCombat;
+            skills[3] = SkillLibrary.Navigation;
+            skills[4] = SkillLibrary.Gunnery;
+            skills[5] = SkillLibrary.Medic;
 
             table = new SkillTable();
             SkillTables[3] = table;
             table.Name = "Advanced Education";
             skills = table.Skills;
             skills[0] = SkillLibrary.Medic;
-            skills[1] = SkillLibrary.Tactics;
-            skills[2] = SkillLibrary.Tactics;
+            skills[1] = SkillLibrary.Navigation;
+            skills[2] = SkillLibrary.Engineering;
             skills[3] = SkillLibrary.Computer;
-            skills[4] = SkillLibrary.Leader;
+            skills[4] = SkillLibrary.Pilot;
             skills[5] = SkillLibrary.Admin;
 
             Material.Add(BenefitLibrary.LowPsg);
             Material.Add(BenefitLibrary.Int);
             Material.Add(BenefitLibrary.Edu);
+            Material.Add(BenefitLibrary.Gun);
             Material.Add(BenefitLibrary.Blade);
-            Material.Add(BenefitLibrary.Travellers);
-            Material.Add(BenefitLibrary.HighPsg);
-            Material.Add(BenefitLibrary.Soc);
+            Material.Add(BenefitLibrary.LowPsg);
+            Material.Add(BenefitLibrary.Merchant);
 
-            Cash[0] = 2000;
+            Cash[0] = 1000;
             Cash[1] = 5000;
-            Cash[2] = 5000;
-            Cash[3] = 10000;
+            Cash[2] = 10000;
+            Cash[3] = 20000;
             Cash[4] = 20000;
-            Cash[5] = 30000;
+            Cash[5] = 40000;
             Cash[6] = 40000;
 
-            Ranks[0] = "Marine";
-            Ranks[1] = "Lieutenant";
-            Ranks[2] = "Captain";
-            Ranks[3] = "Force Cmdr";
-            Ranks[4] = "Lt. Colonel";
-            Ranks[5] = "Colonel";
-            Ranks[6] = "Brigadier";
+            Ranks[0] = "Space Hand";
+            Ranks[1] = "4th Officer";
+            Ranks[2] = "3rd Officer";
+            Ranks[3] = "2nd Officer";
+            Ranks[4] = "1st Officer";
+            Ranks[5] = "Captain";
         }
 
         public override Renlistment CanRenlist()
         {
             var renlist = Renlistment.Cant;
-            var target = 6;
-            if (Owner.CharacterSpecies == Character.Species.AelYael)
-            {
-                target++;
-            }
+            var target = 4;
 
             renlist = BaseCanRenlist(renlist, target);
             return renlist;
@@ -105,8 +100,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                 }
                 else
                 {
-                    var target = 5;
-                    if (Owner.Profile.Edu.Value >= 7)
+                    var target = 4;
+                    if (Owner.Profile.Int.Value >= 6)
                     {
                         target -= 1;
                     }
@@ -116,7 +111,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                         CurrentRank = 1;
                         TermSkills += 1;
                         Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[CurrentRank]));
-                        Owner.AddSkill(SkillLibrary.Revolver);
                     }
                 }
             }
@@ -129,48 +123,51 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 
         public override bool Enlist()
         {
-            var target = 8;
+            var target = 7;
             var enlist = false;
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
                 if (Owner.Sex.Equals("Male"))
                 {
-                    target -= 1;
+                    target += 4;
+                }
+                else
+                {
+                    target--;
                 }
             }
-            else if (Owner.CharacterSpecies == Character.Species.AelYael)
+            else if (Owner.CharacterSpecies == Character.Species.Vargr)
             {
-                target += 1;
+                target += 2;
             }
             else if (Owner.CharacterSpecies == Character.Species.Bwap)
-            {
-                target += 3;
-            }
-            if (Owner.Profile.Int.Value >= 8)
-            {
-                target -= 1;
-            }
-            if (Owner.Profile.Str.Value >= 8)
             {
                 target -= 2;
             }
 
+            if (Owner.Profile.Str.Value >= 7)
+            {
+                target -= 1;
+            }
+            if (Owner.Profile.Int.Value >= 6)
+            {
+                target -= 2;
+            }
             if (dice.roll(2) >= target)
             {
                 enlist = true;
-                Owner.AddSkill(SkillLibrary.Cutlass);
-                Owner.Journal.Add(string.Format("Enlisted in Marines at age {0}", Owner.Age));
+                Owner.Journal.Add(string.Format("Enlisted in Merchants at age {0}", Owner.Age));
             }
             else
             {
-                Owner.Journal.Add(string.Format("Enlisted in Marines refused at age {0}", Owner.Age));
+                Owner.Journal.Add(string.Format("Enlisted in Merchants refused at age {0}", Owner.Age));
             }
             return enlist;
         }
 
         public override void HandleRenlist(bool renlisted)
         {
-            // Marines have no renlistment bonus
+            // Merchants has no renlistment bonus
             if (renlisted)
             {
                 Owner.Journal.Add(string.Format("Remain in service at end of term {0}", Term));
@@ -186,10 +183,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         {
             var promote = false;
 
-            if (CurrentRank > 0 && CurrentRank < 6)
+            if (CurrentRank > 0 && CurrentRank < 5)
             {
-                var target = 9;
-                if (Owner.Profile.Soc.Value >= 8)
+                var target = 10;
+                if (Owner.Profile.Int.Value >= 9)
                 {
                     target--;
                 }
@@ -199,6 +196,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     CurrentRank++;
                     TermSkills++;
                     Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[CurrentRank]));
+                    if (CurrentRank == 4)
+                    {
+                        Owner.AddSkill(SkillLibrary.Pilot);
+                    }
                 }
             }
             return promote;
@@ -208,19 +209,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         {
             var survive = true;
 
-            var target = 6;
-            if (Owner.CharacterSpecies == Character.Species.Aslan)
-            {
-                if (Owner.Sex.Equals("Male"))
-                {
-                    target++;
-                }
-                else
-                {
-                    target--;
-                }
-            }
-            if (Owner.Profile.End.Value >= 8)
+            var target = 5;
+
+            if (Owner.Profile.Int.Value >= 7)
             {
                 target -= 2;
             }
@@ -229,19 +220,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                 survive = true;
             }
             return survive;
-        }
-
-        public override bool Drafted
-        {
-            get => base.Drafted;
-            set
-            {
-                base.Drafted = value;
-                if (value)
-                {
-                    Owner.AddSkill(SkillLibrary.Cutlass);
-                }
-            }
         }
     }
 }

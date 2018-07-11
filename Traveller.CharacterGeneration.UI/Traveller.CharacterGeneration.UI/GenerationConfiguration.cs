@@ -89,6 +89,23 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             }
         }
 
+        private bool useCitizens = true;
+        public bool UseCitizens
+        {
+            get
+            {
+                return useCitizens;
+            }
+            set
+            {
+                if (value != useCitizens)
+                {
+                    useCitizens = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public bool ConfigurationComplete
         {
             get

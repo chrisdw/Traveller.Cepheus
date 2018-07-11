@@ -89,31 +89,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             {
                 target++;
             }
-            var roll = dice.roll(2);
-            if (roll == 12)
-            {
-                renlist = Renlistment.Must;
-                Owner.Journal.Add(string.Format("Forced to remain in Navy at end of term {0}", Term));
-            }
-            else if (Term >= 6)
-            {
-                Retired = true;
-                Owner.Journal.Add(string.Format("Re-enlistment refused due to age at end of term {0}", Term));
-            }
-            else if (roll == 2)
-            {
-                Retired = true;
-                Owner.Journal.Add(string.Format("Dismissed from service at end of term {0}", Term));
-            }
-            else if (roll < target)
-            {
-                Retired = true;
-                Owner.Journal.Add(string.Format("Re-enlistment refused at end of term {0}", Term));
-            }
-            else
-            {
-                renlist = Renlistment.Can;
-            }
+
+            renlist = BaseCanRenlist(renlist, target);
             return renlist;
         }
 

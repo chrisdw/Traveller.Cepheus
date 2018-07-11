@@ -66,5 +66,36 @@
                 return Ranks[CurrentRank];
             }
         }
+
+        protected Renlistment BaseCanRenlist(Renlistment renlist, int target)
+        {
+            var roll = dice.roll(2);
+            if (roll == 12)
+            {
+                renlist = Renlistment.Must;
+                Owner.Journal.Add(string.Format("Forced to remain in {0} at end of term {1}", Name, Term));
+            }
+            else if (Term >= 6)
+            {
+                Retired = true;
+                Owner.Journal.Add(string.Format("Re-enlistment refused due to age at end of term {0}", Term));
+            }
+            else if (roll == 2)
+            {
+                Retired = true;
+                Owner.Journal.Add(string.Format("Dismissed from service at end of term {0}", Term));
+            }
+            else if (roll < target)
+            {
+                Retired = true;
+                Owner.Journal.Add(string.Format("Re-enlistment refused at end of term {0}", Term));
+            }
+            else
+            {
+                renlist = Renlistment.Can;
+            }
+
+            return renlist;
+        }
     }
 }

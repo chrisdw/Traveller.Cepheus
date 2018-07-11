@@ -14,6 +14,10 @@
                     <x:String>Cepheus Engine</x:String>
                 </Picker.Items>
             </Picker>
+            <StackLayout x:Name="Citizens" Orientation="Horizontal" IsVisible="False">
+                <Label Text="Should the extra careers from Citizens of the Imperium be used?"/>
+                <Switch IsToggled="{Binding GenerationConfiguration.UseCitizens}" />
+            </StackLayout>
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Step 2: Select the campaign" x:Name="SelectCampaign">
