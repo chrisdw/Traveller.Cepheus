@@ -138,6 +138,9 @@
   <data name="Jrn_Killed" xml:space="preserve">
     <value>Killed at age {0}</value>
   </data>
+  <data name="Msg_Attribute_Raised" xml:space="preserve">
+    <value>Attribute {0} raised by {1}.</value>
+  </data>
   <data name="Msg_Died" xml:space="preserve">
     <value>Your character died of old age at {0}.</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="Msg_Killed" xml:space="preserve">
     <value>Your character was killed at age {0}.</value>
+  </data>
+  <data name="Msg_Skill_Received" xml:space="preserve">
+    <value>Received skill {0} level {1}.</value>
   </data>
   <data name="Msg_Skill_Total" xml:space="preserve">
     <value>Your skill total exeeds the sum of INT and EDU, you need to reduce them.</value>

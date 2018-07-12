@@ -258,7 +258,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         if (GenerationConfiguration.VerboseSkills)
                         {
-                            await DisplayAlert(Properties.Resources.Title_App, string.Format("Attribute {0} raised by {1}.", skill.Name, skill.Level), Properties.Resources.Button_OK);
+                            await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Attribute_Raised, skill.Name, skill.Level), Properties.Resources.Button_OK);
                         }
                         character.Profile[skill.Name].Value += skill.Level;
                     }
@@ -266,7 +266,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         if (GenerationConfiguration.VerboseSkills)
                         {
-                            await DisplayAlert(Properties.Resources.Title_App, string.Format("Received skill {0} level {1}.", skill.Name, skill.Level), Properties.Resources.Button_OK);
+                            await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Skill_Received, skill.Name, skill.Level), Properties.Resources.Button_OK);
                         }
                         character.AddSkill(skill);
                     }

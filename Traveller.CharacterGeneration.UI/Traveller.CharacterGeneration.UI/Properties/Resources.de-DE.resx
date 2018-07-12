@@ -78,4 +78,10 @@
   <data name="Title_App" xml:space="preserve">
     <value>Traveller-Karriere-Generation</value>
   </data>
+  <data name="Msg_Attribute_Raised" xml:space="preserve">
+    <value>Attribut {0} von {1} angesprochen.</value>
+  </data>
+  <data name="Msg_Skill_Received" xml:space="preserve">
+    <value>Erhielt Spielstärke {0} {1}.</value>
+  </data>
 </root>

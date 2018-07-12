@@ -124,6 +124,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attribute {0} raised by {1}..
+        /// </summary>
+        internal static string Msg_Attribute_Raised {
+            get {
+                return ResourceManager.GetString("Msg_Attribute_Raised", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your character died of old age at {0}..
         /// </summary>
         internal static string Msg_Died {
@@ -147,6 +156,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         internal static string Msg_Killed {
             get {
                 return ResourceManager.GetString("Msg_Killed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Received skill {0} level {1}..
+        /// </summary>
+        internal static string Msg_Skill_Received {
+            get {
+                return ResourceManager.GetString("Msg_Skill_Received", resourceCulture);
             }
         }
         

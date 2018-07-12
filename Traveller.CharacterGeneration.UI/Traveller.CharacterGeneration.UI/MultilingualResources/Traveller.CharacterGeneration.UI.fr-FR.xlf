@@ -94,6 +94,14 @@
           <source>Traveller Career Generation</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Génération de carrière de voyageur</target>
         </trans-unit>
+        <trans-unit id="Msg_Attribute_Raised" translate="yes" xml:space="preserve">
+          <source>Attribute {0} raised by {1}.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attribut {0} soulevées par {1}.</target>
+        </trans-unit>
+        <trans-unit id="Msg_Skill_Received" translate="yes" xml:space="preserve">
+          <source>Received skill {0} level {1}.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Reçu le niveau de compétence de {0} {1}.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
