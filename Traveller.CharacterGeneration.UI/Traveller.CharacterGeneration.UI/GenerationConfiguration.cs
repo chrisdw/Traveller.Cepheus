@@ -114,6 +114,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             }
         }
 
+        // Does not affect validity of the config
+        public bool VerboseSkills { get; set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         // This method is called by the Set accessor of each property.  

@@ -212,6 +212,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         }
         public void AddSkill(Skill skill)
         {
+            Journal.Add(string.Format("Received skill {0} at level {1}", skill.Name, skill.Level));
             if (!Skills.ContainsKey(skill.Name))
             {
                 Skills.Add(skill.Name, skill);
@@ -224,6 +225,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
 
         public void AddBenefit(Benefit benefit)
         {
+            Journal.Add(string.Format("Received benefit {0} of value {1}", benefit.Name, benefit.Value));
             if (Benefits.ContainsKey(benefit.Name))
             {
                 Benefits[benefit.Name].Value += benefit.Value;

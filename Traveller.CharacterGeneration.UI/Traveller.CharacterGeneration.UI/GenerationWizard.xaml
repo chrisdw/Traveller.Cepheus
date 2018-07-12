@@ -56,6 +56,10 @@
                 <Label Text="Sex" />
                 <Label Text="{Binding GenerationConfiguration.Sex}" />
             </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Dislay detailed messages about allocated skills?"/>
+                <Switch IsToggled="{Binding GenerationConfiguration.VerboseSkills}" />
+            </StackLayout>            
             <Button x:Name="Generate" Text="Generate" Clicked="Generate_Clicked" />
         </StackLayout>
     </ContentPage>
