@@ -22,7 +22,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("org.DownesWard.Traveller.Shared.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Charisma.
         /// </summary>
-        internal static string UPP_Attr_Charisma {
+        public static string UPP_Attr_Charisma {
             get {
                 return ResourceManager.GetString("UPP_Attr_Charisma", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Dexterity.
         /// </summary>
-        internal static string UPP_Attr_Dexterity {
+        public static string UPP_Attr_Dexterity {
             get {
                 return ResourceManager.GetString("UPP_Attr_Dexterity", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Education.
         /// </summary>
-        internal static string UPP_Attr_Education {
+        public static string UPP_Attr_Education {
             get {
                 return ResourceManager.GetString("UPP_Attr_Education", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Endurance.
         /// </summary>
-        internal static string UPP_Attr_Endurance {
+        public static string UPP_Attr_Endurance {
             get {
                 return ResourceManager.GetString("UPP_Attr_Endurance", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Intelligence.
         /// </summary>
-        internal static string UPP_Attr_Intelligence {
+        public static string UPP_Attr_Intelligence {
             get {
                 return ResourceManager.GetString("UPP_Attr_Intelligence", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Social Standing.
         /// </summary>
-        internal static string UPP_Attr_SocialStanding {
+        public static string UPP_Attr_SocialStanding {
             get {
                 return ResourceManager.GetString("UPP_Attr_SocialStanding", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Strength.
         /// </summary>
-        internal static string UPP_Attr_Strength {
+        public static string UPP_Attr_Strength {
             get {
                 return ResourceManager.GetString("UPP_Attr_Strength", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Atmosphere.
         /// </summary>
-        internal static string UWP_Attr_Atmosphere {
+        public static string UWP_Attr_Atmosphere {
             get {
                 return ResourceManager.GetString("UWP_Attr_Atmosphere", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Government.
         /// </summary>
-        internal static string UWP_Attr_Government {
+        public static string UWP_Attr_Government {
             get {
                 return ResourceManager.GetString("UWP_Attr_Government", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hydrographics.
         /// </summary>
-        internal static string UWP_Attr_Hydrographics {
+        public static string UWP_Attr_Hydrographics {
             get {
                 return ResourceManager.GetString("UWP_Attr_Hydrographics", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Law level.
         /// </summary>
-        internal static string UWP_Attr_Lawlevel {
+        public static string UWP_Attr_Lawlevel {
             get {
                 return ResourceManager.GetString("UWP_Attr_Lawlevel", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Population.
         /// </summary>
-        internal static string UWP_Attr_Population {
+        public static string UWP_Attr_Population {
             get {
                 return ResourceManager.GetString("UWP_Attr_Population", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Size.
         /// </summary>
-        internal static string UWP_Attr_Size {
+        public static string UWP_Attr_Size {
             get {
                 return ResourceManager.GetString("UWP_Attr_Size", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Tech level.
         /// </summary>
-        internal static string UWP_Attr_Techlevel {
+        public static string UWP_Attr_Techlevel {
             get {
                 return ResourceManager.GetString("UWP_Attr_Techlevel", resourceCulture);
             }

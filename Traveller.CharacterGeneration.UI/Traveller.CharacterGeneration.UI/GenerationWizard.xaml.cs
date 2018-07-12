@@ -1,6 +1,7 @@
 ﻿using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         private Constants.GenerationStyle generationStyle;
         private Character.Species species;
 
+        public ObservableCollection<string> Rulesets { get; } = new ObservableCollection<string>();
+        public ObservableCollection<string> Campaigns { get; } = new ObservableCollection<string>();
+        public ObservableCollection<string> Cultures { get; } = new ObservableCollection<string>();
+        public ObservableCollection<string> Species { get; } = new ObservableCollection<string>();
+        public ObservableCollection<string> Sexes { get; } = new ObservableCollection<string>();
+
         public GenerationWizard()
         {
             BindingContext = this;
@@ -26,6 +33,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             {
                 Generate.IsEnabled = GenerationConfiguration.ConfigurationComplete;
             };
+            Rulesets.Add("Classic");
+            Rulesets.Add("Mega Traveller");
+            Rulesets.Add("Mongoose");
+            Rulesets.Add("Cepheus Engine");
         }
 
         private async void Generate_Clicked(object sender, EventArgs e)
@@ -104,22 +115,22 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
         private void Ruleset_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Campaign.Items.Clear();
+            Campaigns.Clear();
             switch (GenerationConfiguration.Ruleset)
             {
                 case "Classic":
-                    Campaign.Items.Add("3rd Imperium");
+                    Campaigns.Add("3rd Imperium");
                     generationStyle = Constants.GenerationStyle.Classic_Traveller;
                     break;
                 case "Mega Traveller":
                     generationStyle = Constants.GenerationStyle.Mega_Traveller;
-                    Campaign.Items.Add("The Rebellion");
+                    Campaigns.Add("The Rebellion");
                     break;
                 case "Cepheus Engine":
                     generationStyle = Constants.GenerationStyle.Cepheus_Engine;
-                    Campaign.Items.Add("Generic");
-                    Campaign.Items.Add("Hostile");
-                    Campaign.Items.Add("Orbital");
+                    Campaigns.Add("Generic");
+                    Campaigns.Add("Hostile");
+                    Campaigns.Add("Orbital");
                     break;
             }
 
@@ -128,18 +139,19 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
         private void Campaign_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Culture.Items.Clear();
+            Cultures.Clear();
             switch (GenerationConfiguration.Campaign)
             {
                 case "3rd Imperium":
-                    Culture.Items.Add("Imperial");
-                    Culture.Items.Add("Zhodani");
-                    Culture.Items.Add("Solomani");
-                    Culture.Items.Add("Aslan");
-                    Culture.Items.Add("Vargr");
-                    Culture.Items.Add("Darrian");
-                    Culture.Items.Add("Sword Worlds");
-                    Culture.Items.Add("Droyne");
+                    Cultures.Add("Imperial");
+                    Cultures.Add("Zhodani");
+                    Cultures.Add("Solomani");
+                    Cultures.Add("Aslan");
+                    Cultures.Add("Vargr");
+                    Cultures.Add("Darrian");
+                    Cultures.Add("Sword Worlds");
+                    Cultures.Add("Droyne");
+                    Cultures.Add("Dynchia");
                     break;
             }
         }
@@ -157,22 +169,27 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             }
             if (selectedCulture != null)
             {
-                Species.ItemsSource = selectedCulture.Species(generationStyle).Keys.ToList();
+                Species.Clear();
+                var list = selectedCulture.Species(generationStyle).Keys.ToList();
+                foreach (var s in list)
+                {
+                    Species.Add(s);
+                }
             }
         }
 
         private void Species_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Sex.Items.Clear();
+            Sexes.Clear();
             if (selectedCulture != null)
             {
-                species = selectedCulture.Species(generationStyle)[Species.SelectedItem.ToString()];
+                species = selectedCulture.Species(generationStyle)[GenerationConfiguration.Species];
             }
-            switch (GenerationConfiguration.Species)
+            switch (species)
             {
                 default:
-                    Sex.Items.Add("Male");
-                    Sex.Items.Add("Female");
+                    Sexes.Add("Male");
+                    Sexes.Add("Female");
                     break;
             }
         }

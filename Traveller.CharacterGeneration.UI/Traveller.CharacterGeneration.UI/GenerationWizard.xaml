@@ -6,14 +6,7 @@
     <ContentPage Title="Step 1: Select the ruleset" x:Name="SelectRuleset">
         <StackLayout>
             <Label Text="Select the ruleset" />
-            <Picker x:Name="Ruleset" Title="Pick the rules you want to use" SelectedItem="{Binding GenerationConfiguration.Ruleset, Mode=TwoWay}" SelectedIndexChanged="Ruleset_SelectedIndexChanged">
-                <Picker.Items>
-                    <x:String>Classic</x:String>
-                    <x:String>Mega Traveller</x:String>
-                    <x:String>Mongoose</x:String>
-                    <x:String>Cepheus Engine</x:String>
-                </Picker.Items>
-            </Picker>
+            <ListView ItemsSource="{Binding Rulesets}" SelectedItem="{Binding GenerationConfiguration.Ruleset, Mode=TwoWay}" ItemSelected="Ruleset_SelectedIndexChanged" />
             <StackLayout x:Name="Citizens" Orientation="Horizontal" IsVisible="False">
                 <Label Text="Should the extra careers from Citizens of the Imperium be used?"/>
                 <Switch IsToggled="{Binding GenerationConfiguration.UseCitizens}" />
@@ -22,22 +15,22 @@
     </ContentPage>
     <ContentPage Title="Step 2: Select the campaign" x:Name="SelectCampaign">
         <StackLayout>
-            <Label Text="Select the campaign. This list is driven by the ruleset you pick" />
-            <Picker x:Name="Campaign" Title="Pick the campaign you are playing" SelectedItem="{Binding GenerationConfiguration.Campaign, Mode=TwoWay}" SelectedIndexChanged="Campaign_SelectedIndexChanged" />
+            <Label Text="Select the campaign. This list is driven by the ruleset you picked" />
+            <ListView ItemsSource="{Binding Campaigns}" SelectedItem="{Binding GenerationConfiguration.Campaign, Mode=TwoWay}" ItemSelected="Campaign_SelectedIndexChanged" />
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Step 3: Select the culture">
         <StackLayout>
             <Label Text="Select the culture. This list is driven by the campaign you picked" />
-            <Picker x:Name="Culture" Title="Pick the culture you are from" SelectedItem="{Binding GenerationConfiguration.Culture, Mode=TwoWay}" SelectedIndexChanged="Culture_SelectedIndexChanged" />
+            <ListView ItemsSource="{Binding Cultures}" SelectedItem="{Binding GenerationConfiguration.Culture, Mode=TwoWay}" ItemSelected="Culture_SelectedIndexChanged" />
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Step 4: Select the species and sex">
         <StackLayout>
             <Label Text="Select the species. This list is driven by the culture you picked" />
-            <Picker x:Name="Species" Title="Pick the species you are from" SelectedItem="{Binding GenerationConfiguration.Species, Mode=TwoWay}" SelectedIndexChanged="Species_SelectedIndexChanged" />
+            <ListView ItemsSource="{Binding Species}" SelectedItem="{Binding GenerationConfiguration.Species, Mode=TwoWay}" ItemSelected="Species_SelectedIndexChanged" />
             <Label Text="Select the sex. This list is drive by the species you picked" />
-            <Picker x:Name="Sex" Title="Pick the sex you are." SelectedItem="{Binding GenerationConfiguration.Sex, Mode=TwoWay}" />
+            <ListView ItemsSource="{Binding Sexes}" SelectedItem="{Binding GenerationConfiguration.Sex, Mode=TwoWay}" />
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Step 5: Confirm your decisions">
