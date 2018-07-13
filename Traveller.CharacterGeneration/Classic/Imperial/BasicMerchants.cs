@@ -124,7 +124,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         public override bool Enlist()
         {
             var target = 7;
-            var enlist = false;
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
                 if (Owner.Sex.Equals("Male"))
@@ -153,16 +152,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             {
                 target -= 2;
             }
-            if (dice.roll(2) >= target)
-            {
-                enlist = true;
-                Owner.Journal.Add(string.Format("Enlisted in Merchants at age {0}", Owner.Age));
-            }
-            else
-            {
-                Owner.Journal.Add(string.Format("Enlisted in Merchants refused at age {0}", Owner.Age));
-            }
-            return enlist;
+ 
+            return BaseEnlist(target);
         }
 
         public override void HandleRenlist(bool renlisted)

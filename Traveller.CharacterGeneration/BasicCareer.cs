@@ -97,5 +97,21 @@
 
             return renlist;
         }
+
+        protected bool BaseEnlist(int target)
+        {
+            var enlist = false;
+            if (dice.roll(2) >= target)
+            {
+                enlist = true;
+                Owner.Journal.Add(string.Format("Enlisted in {0} at age {1}", Name, Owner.Age));
+            }
+            else
+            {
+                Owner.Journal.Add(string.Format("Enlisted in {0} refused at age {1}", Name, Owner.Age));
+            }
+
+            return enlist;
+        }
     }
 }

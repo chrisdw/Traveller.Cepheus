@@ -129,7 +129,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         public override bool Enlist()
         {
             var target = 8;
-            var enlist = false;
+
             if (Owner.CharacterSpecies == Character.Species.AelYael)
             {
                 target++;
@@ -152,7 +152,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             {
                 Owner.Journal.Add(string.Format("Enlisted in Navy refused at age {0}", Owner.Age));
             }
-            return enlist;
+            return BaseEnlist(target);
         }
 
         public override void HandleRenlist(bool renlisted)

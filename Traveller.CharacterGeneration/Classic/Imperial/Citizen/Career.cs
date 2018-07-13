@@ -88,7 +88,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
         public override bool Enlist()
         {
-            var enlist = false;
             var target = enlistment;
             target += EnlistFactor();
 
@@ -110,15 +109,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
                     target -= 3;
                 }
             }
-            if (dice.roll(2) >= target)
+            var enlist = BaseEnlist(target);
+
+            if (enlist)
             {
-                enlist = true;
                 EnlistSkill();
-                Owner.Journal.Add(string.Format("Enlisted in {0} at age {1}", Name, Owner.Age));
-            }
-            else
-            {
-                Owner.Journal.Add(string.Format("Enlisted in {0} refused at age {1}", Name, Owner.Age));
             }
             return enlist;
         }
