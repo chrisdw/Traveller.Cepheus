@@ -169,6 +169,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 case "Dynchia":
                     selectedCulture = new Classic.Dynchia.Culture();
                     break;
+                case "Sword Worlds":
+                    selectedCulture = new Classic.SwordWorlds.Culture();
+                    break;
             }
             if (selectedCulture != null)
             {
