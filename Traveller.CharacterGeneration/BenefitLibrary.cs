@@ -19,6 +19,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         // Other benefits
         public static Benefit Travellers = new Benefit("Travellers", 1, Benefit.BenefitType.Material);
         public static Benefit Nothing = new Benefit("Nothing", 1, Benefit.BenefitType.Material);
+        public static Benefit Watch = new Benefit("Watch", 1, Benefit.BenefitType.Material);
 
         // Tickets
         public static Benefit LowPsg = new Benefit("Low Psg", 1, Benefit.BenefitType.Material);

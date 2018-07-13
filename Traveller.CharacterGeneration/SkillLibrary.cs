@@ -36,12 +36,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Interrogation = new Skill("Interrogation", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill JackOfTrades = new Skill("Jack-Of-Trades", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Leader = new Skill("Leader", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Liason = new Skill("Liason", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Mechanical = new Skill("Mechanical", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Medic = new Skill("Medic", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Navigation = new Skill("Navigation", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Pilot = new Skill("Pilot", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill Prospecting = new Skill("Prospecting", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Recon = new Skill("Recon", Skill.SkillClass.Military, 1);
+        public static Skill Recruiting = new Skill("Recruiting", Skill.SkillClass.None, 1);
         public static Skill Tactics = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill ShipsBoat = new Skill("Ships Boat", Skill.SkillClass.None, 1);
         public static Skill Steward = new Skill("Steward", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);

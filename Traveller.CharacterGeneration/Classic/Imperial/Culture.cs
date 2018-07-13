@@ -42,6 +42,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             {
                                 careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
                                 careers.Add("Belter", Career.CareerType.Citizen_Belter);
+                                careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -57,6 +58,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             {
                                 careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
                                 careers.Add("Belter", Career.CareerType.Citizen_Belter);
+                                careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -77,6 +79,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             {
                                 careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
                                 careers.Add("Belter", Career.CareerType.Citizen_Belter);
+                                careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
                                 // TODO: Add citizen careers
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {
@@ -182,6 +185,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new Citizen.Barbarian() { Culture = this };
                 case Career.CareerType.Citizen_Belter:
                     return new Citizen.Belter() { Culture = this };
+                case Career.CareerType.Citizen_Bureaucrat:
+                    return new Citizen.Bureaucrat() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }
