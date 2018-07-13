@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
+namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 {
-    public class BasicOther : BasicCareer
+    public class Belter : BasicCareer
     {
-        public BasicOther()
+        public Belter()
         {
             CurrentRank = 0;
-            TermSkills = 2;
+            TermSkills = 3;
 
             var table = new SkillTable();
             SkillTables[0] = table;
@@ -18,67 +18,68 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             skills[0] = SkillLibrary.Str;
             skills[1] = SkillLibrary.Dex;
             skills[2] = SkillLibrary.End;
-            skills[3] = SkillLibrary.BladeCombat;
+            skills[3] = SkillLibrary.Gambling;
             skills[4] = SkillLibrary.Brawling;
-            skills[5] = SkillLibrary.Soc;
+            skills[5] = SkillLibrary.VaccSuit;
 
             table = new SkillTable();
             SkillTables[1] = table;
             table.Name = "Service Skills";
             skills = table.Skills;
-            skills[0] = SkillLibrary.Forgery;
-            skills[1] = SkillLibrary.Gambling;
-            skills[2] = SkillLibrary.Brawling;
-            skills[3] = SkillLibrary.BladeCombat;
-            skills[4] = SkillLibrary.GunCombat;
-            skills[5] = SkillLibrary.Bribery;
+            skills[0] = SkillLibrary.VaccSuit;
+            skills[1] = SkillLibrary.VaccSuit;
+            skills[2] = SkillLibrary.Prospecting;
+            skills[3] = SkillLibrary.FowardObserver;
+            skills[4] = SkillLibrary.Prospecting;
+            skills[5] = SkillLibrary.ShipsBoat;
 
             table = new SkillTable();
             SkillTables[2] = table;
             table.Name = "Education";
             skills = table.Skills;
-            skills[0] = SkillLibrary.Streetwise;
-            skills[1] = SkillLibrary.Mechanical;
-            skills[2] = SkillLibrary.Electronics;
-            skills[3] = SkillLibrary.Gambling;
-            skills[4] = SkillLibrary.Brawling;
-            skills[5] = SkillLibrary.Forgery;
+            skills[0] = SkillLibrary.ShipsBoat;
+            skills[1] = SkillLibrary.Electronics;
+            skills[2] = SkillLibrary.Prospecting;
+            skills[3] = SkillLibrary.Mechanical;
+            skills[4] = SkillLibrary.Prospecting;
+            skills[5] = SkillLibrary.Instruction;
 
             table = new SkillTable();
             SkillTables[3] = table;
             table.Name = "Advanced Education";
             skills = table.Skills;
-            skills[0] = SkillLibrary.Medic;
-            skills[1] = SkillLibrary.Forgery;
-            skills[2] = SkillLibrary.Electronics;
+            skills[0] = SkillLibrary.Navigation;
+            skills[1] = SkillLibrary.Medic;
+            skills[2] = SkillLibrary.Pilot;
             skills[3] = SkillLibrary.Computer;
-            skills[4] = SkillLibrary.Streetwise;
+            skills[4] = SkillLibrary.Engineering;
             skills[5] = SkillLibrary.JackOfTrades;
 
             Material.Add(BenefitLibrary.LowPsg);
             Material.Add(BenefitLibrary.Int);
-            Material.Add(BenefitLibrary.Edu);
-            Material.Add(BenefitLibrary.Gun);
+            Material.Add(BenefitLibrary.Weapon);
             Material.Add(BenefitLibrary.HighPsg);
-            Material.Add(BenefitLibrary.Nothing);
+            Material.Add(BenefitLibrary.Travellers);
+            Material.Add(BenefitLibrary.Seeker);
 
-            Cash[0] = 1000;
-            Cash[1] = 5000;
-            Cash[2] = 10000;
+            Cash[0] = 0;
+            Cash[1] = 0;
+            Cash[2] = 1000;
             Cash[3] = 10000;
-            Cash[4] = 10000;
-            Cash[5] = 50000;
+            Cash[4] = 100000;
+            Cash[5] = 100000;
             Cash[6] = 100000;
 
-            Ranks[0] = string.Empty;
+            Ranks[0] = "Belter";
         }
+
         public override Renlistment CanRenlist()
         {
             var renlist = Renlistment.Cant;
-            var target = 5;
+            var target = 7;
 
             renlist = BaseCanRenlist(renlist, target);
-            return renlist; throw new NotImplementedException();
+            return renlist;
         }
 
         public override bool Commission()
@@ -88,26 +89,40 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 
         public override bool Enlist()
         {
-            var target = 3;
+            var target = 5;
 
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
                 if (Owner.Sex.Equals("Male"))
                 {
-                    target +=2;
-                }
-                else
-                {
-                    target++;
+                    target += 4;
                 }
             }
+            else if (Owner.CharacterSpecies == Character.Species.Virushi || Owner.CharacterSpecies == Character.Species.AelYael)
+            {
+                target--;
+            }
 
-            return BaseEnlist(target);
+            if (Owner.Profile.Dex.Value >= 7)
+            {
+                target -= 1;
+            }
+            if (Owner.Profile.Int.Value >= 6)
+            {
+                target -= 2;
+            }
+
+            var enlist = BaseEnlist(target);
+
+            if (enlist)
+            {
+                Owner.AddSkill(SkillLibrary.VaccSuit);
+            }
+            return enlist;
         }
 
         public override void HandleRenlist(bool renlisted)
         {
-            // Other has no renlistment bonus
             BaseRenlist(renlisted);
         }
 
@@ -120,23 +135,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         {
             var survive = true;
 
-            var target = 5;
+            var target = 9;
 
-            if (Owner.Profile.Int.Value >= 9)
-            {
-                target -= 2;
-            }
+            target -= Term;
+
             if (dice.roll(2) >= target)
             {
                 survive = true;
             }
             return survive;
-        }
-
-        public override void EndTerm()
-        {
-            base.EndTerm();
-            TermSkills = 2;
         }
     }
 }

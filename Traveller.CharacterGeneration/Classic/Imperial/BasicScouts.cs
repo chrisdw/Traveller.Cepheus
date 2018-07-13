@@ -94,7 +94,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         public override bool Enlist()
         {
             var target = 5;
-            var enlist = false;
+
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
                 if (Owner.Sex.Equals("Male"))
@@ -119,15 +119,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             {
                 target -= 2;
             }
-            if (dice.roll(2) >= target)
+
+            var enlist = BaseEnlist(target);
+
+            if (enlist)
             {
-                enlist = true;
                 Owner.AddSkill(SkillLibrary.Pilot);
-                Owner.Journal.Add(string.Format("Enlisted in Scouts at age {0}", Owner.Age));
-            }
-            else
-            {
-                Owner.Journal.Add(string.Format("Enlisted in Scouts refused at age {0}", Owner.Age));
             }
             return enlist;
         }
@@ -135,15 +132,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         public override void HandleRenlist(bool renlisted)
         {
             // Scouts has no renlistment bonus
-            if (renlisted)
-            {
-                Owner.Journal.Add(string.Format("Remain in service at end of term {0}", Term));
-            }
-            else
-            {
-                Retired = false;
-                Owner.Journal.Add(string.Format("Left service at end of term {0}", Term));
-            }
+            BaseRenlist(renlisted);
         }
 
         public override bool Promotion()

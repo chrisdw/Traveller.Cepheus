@@ -41,6 +41,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             if (UseCitizenRules)
                             {
                                 careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
+                                careers.Add("Belter", Career.CareerType.Citizen_Belter);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -55,6 +56,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             if (UseCitizenRules)
                             {
                                 careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
+                                careers.Add("Belter", Career.CareerType.Citizen_Belter);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -74,6 +76,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             if (UseCitizenRules)
                             {
                                 careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
+                                careers.Add("Belter", Career.CareerType.Citizen_Belter);
                                 // TODO: Add citizen careers
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {
@@ -177,6 +180,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new BasicOther() { Culture = this };
                 case Career.CareerType.Citizen_Barbarian:
                     return new Citizen.Barbarian() { Culture = this };
+                case Career.CareerType.Citizen_Belter:
+                    return new Citizen.Belter() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }

@@ -14,7 +14,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         // Weapon benefits
         public static Benefit Blade = new Benefit("Blade", 1, Benefit.BenefitType.Weapon);
         public static Benefit Gun = new Benefit("Gun", 1, Benefit.BenefitType.Weapon);
-       
+        public static Benefit Weapon = new Benefit("Weapon", 1, Benefit.BenefitType.Weapon);
+
         // Other benefits
         public static Benefit Travellers = new Benefit("Travellers", 1, Benefit.BenefitType.Material);
         public static Benefit Nothing = new Benefit("Nothing", 1, Benefit.BenefitType.Material);
@@ -27,5 +28,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         // Ship shares
         public static Benefit Merchant = new Benefit("Merchant", 1, Benefit.BenefitType.Material);
         public static Benefit Scout = new Benefit("Scout", 1, Benefit.BenefitType.Material);
+        public static Benefit Seeker = new Benefit("Seeker", 1, Benefit.BenefitType.Material);
     }
 }

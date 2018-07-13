@@ -113,5 +113,18 @@
 
             return enlist;
         }
+
+        protected void BaseRenlist(bool renlisted)
+        {
+            if (renlisted)
+            {
+                Owner.Journal.Add(string.Format("Remain in {0} at end of term {1}", Name, Term));
+            }
+            else
+            {
+                Retired = false;
+                Owner.Journal.Add(string.Format("Left {0} at end of term {1}", Name, Term));
+            }
+        }
     }
 }

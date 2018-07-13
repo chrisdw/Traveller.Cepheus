@@ -157,16 +157,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 
         public override void HandleRenlist(bool renlisted)
         {
-            // Army has no renlistment bonus
-            if (renlisted)
-            {
-                Owner.Journal.Add(string.Format("Remain in service at end of term {0}", Term));
-            }
-            else
-            {
-                Retired = true;
-                Owner.Journal.Add(string.Format("Left service at end of term {0}", Term));
-            }
+            BaseRenlist(renlisted);
         }
 
         public override bool Promotion()
