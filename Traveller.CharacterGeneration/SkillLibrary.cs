@@ -26,6 +26,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Computer = new Skill("Computer", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Electronics = new Skill("Electronics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Engineering = new Skill("Engineering", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Forgery = new Skill("Forgery", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill FowardObserver = new Skill("Forward Observer", Skill.SkillClass.None, 1);
         public static Skill Gambling = new Skill("Gambling", Skill.SkillClass.None, 1);
         public static Skill Gunnery = new Skill("Gunnery", Skill.SkillClass.None, 1, Skill.SkillSex.Male);

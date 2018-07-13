@@ -16,6 +16,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         // Do we use the extra careers from Citizens of the the Imperium
         public bool UseCitizenRules { get; set; } = false;
 
+        private Dice dice = new Dice(6);
+
         public bool BenefitAllowed(Character character, Benefit benefit)
         {
             // Imperial culture allows all benefits to everyone
@@ -35,25 +37,27 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             careers.Add("Army", Career.CareerType.Imperial_Army);
                             careers.Add("Marines", Career.CareerType.Imperial_Marines);
                             careers.Add("Navy", Career.CareerType.Imperial_Navy);
+                            careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
                                 // TODO: Add citizen careers
                             }
                             else
                             {
-                                // TODO: Add other careeer
+                                careers.Add("Other", Career.CareerType.Imperial_Other);
                             }
                             break;
                         case Character.Species.Virushi:
                             // No military careers
                             careers.Add("Merchants", Career.CareerType.Imperial_Merchants);
+                            careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
                                 // TODO: Add citizen careers
                             }
                             else
                             {
-                                // TODO: Add other careeer
+                                careers.Add("Other", Career.CareerType.Imperial_Other);
                             }
                             break;
                         case Character.Species.Dolphin:
@@ -64,6 +68,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             careers.Add("Marines", Career.CareerType.Imperial_Marines);
                             careers.Add("Navy", Career.CareerType.Imperial_Navy);
                             careers.Add("Merchants", Career.CareerType.Imperial_Merchants);
+                            careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
                                 // TODO: Add citizen careers
@@ -78,7 +83,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             }
                             else
                             {
-                                // TODO: Add other careeer
+                                careers.Add("Other", Career.CareerType.Imperial_Other);
                             }
                             break;
                     }
@@ -163,6 +168,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new BasicNavy() { Culture = this };
                 case Career.CareerType.Imperial_Merchants:
                     return new BasicMerchants() { Culture = this };
+                case Career.CareerType.Imperial_Scouts:
+                    return new BasicScouts() { Culture = this };
+                case Career.CareerType.Imperial_Other:
+                    return new BasicOther() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }
@@ -190,7 +199,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 
         public BasicCareer Drafted(Character character)
         {
-            var dice = new Dice(6);
             switch (dice.roll(1))
             {
                 case 1:
@@ -201,8 +209,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new BasicArmy() { Culture = this, Drafted = true };
                 case 4:
                     return new BasicMerchants() { Culture = this, Drafted = true };
+                case 5:
+                    return new BasicScouts() { Culture = this, Drafted = true };
+                case 6:
+                    return new BasicOther() { Culture = this, Drafted = true };
             }
-            return new BasicArmy();
+            // Should never reach here
+            return new BasicArmy() { Culture = this, Drafted = true };
         }
     }
 }

@@ -166,6 +166,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         UseCitizenRules = GenerationConfiguration.UseCitizens
                     };
                     break;
+                case "Dynchia":
+                    selectedCulture = new Classic.Dynchia.Culture();
+                    break;
             }
             if (selectedCulture != null)
             {
