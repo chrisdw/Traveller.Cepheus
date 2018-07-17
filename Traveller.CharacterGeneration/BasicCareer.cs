@@ -122,7 +122,7 @@
             }
             else
             {
-                Retired = false;
+                Retired = true;
                 Owner.Journal.Add(string.Format("Left {0} at end of term {1}", Name, Term));
             }
         }

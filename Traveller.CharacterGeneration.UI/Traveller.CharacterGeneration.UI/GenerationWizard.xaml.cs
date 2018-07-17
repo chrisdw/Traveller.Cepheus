@@ -26,7 +26,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         public ObservableCollection<string> Species { get; } = new ObservableCollection<string>();
         public ObservableCollection<string> Sexes { get; } = new ObservableCollection<string>();
 
-        private static SemaphoreSlim semaphore = new SemaphoreSlim(0, 3);
+        private static SemaphoreSlim semaphore = new SemaphoreSlim(1);
 
         public GenerationWizard()
         {
@@ -47,33 +47,40 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             var skill = e.OfferedSkill;
             var skills = e.OfferedSkill.ResolveSkill();
 
-            if (skills.Count > 1)
+            await semaphore.WaitAsync();
+            try
             {
-                var names = skills.Select(s => s.Name);
-                var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill, null, null, names.ToArray());
-                skill = skills.Where(s => s.Name == result).First();
-            }
-            else
-            {
-                skill = skills[0];
-            }
-            if (skill.Class == Skill.SkillClass.AttributeChange)
-            {
-                if (GenerationConfiguration.VerboseSkills)
+                if (skills.Count > 1)
                 {
-                    await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Attribute_Raised, skill.Name, skill.Level), Properties.Resources.Button_OK);
+                    var names = skills.Select(s => s.Name);
+                    var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill, null, null, names.ToArray());
+                    skill = skills.Where(s => s.Name == result).First();
                 }
-                e.Owner.Profile[skill.Name].Value += skill.Level;
-            }
-            else
-            {
-                if (GenerationConfiguration.VerboseSkills)
+                else
                 {
-                    await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Skill_Received, skill.Name, skill.Level), Properties.Resources.Button_OK);
+                    skill = skills[0];
                 }
-                e.Owner.AddSkill(skill);
+                if (skill.Class == Skill.SkillClass.AttributeChange)
+                {
+                    if (GenerationConfiguration.VerboseSkills)
+                    {
+                        await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Attribute_Raised, skill.Name, skill.Level), Properties.Resources.Button_OK);
+                    }
+                    e.Owner.Profile[skill.Name].Value += skill.Level;
+                }
+                else
+                {
+                    if (GenerationConfiguration.VerboseSkills)
+                    {
+                        await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Skill_Received, skill.Name, skill.Level), Properties.Resources.Button_OK);
+                    }
+                    e.Owner.AddSkill(skill);
+                }
             }
-
+            finally
+            {
+                semaphore.Release();
+            }
         }
 
         private async void Generate_Clicked(object sender, EventArgs e)
@@ -275,7 +282,16 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
                     if (tables.Count > 1)
                     {
-                        var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill_Table, null, null, tables.ToArray());
+                        var result = string.Empty;
+                        await semaphore.WaitAsync();
+                        try
+                        {
+                            result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill_Table, null, null, tables.ToArray());
+                        }
+                        finally
+                        {
+                            semaphore.Release();
+                        }
                         for (var j = 0; j < 4; j++)
                         {
                             if (career.SkillTables[j].Name.Equals(result))
@@ -312,11 +328,20 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 }
                 else if (reup == BasicCareer.Renlistment.Can)
                 {
-                    // Ask if they want to renlist
-                    var result = await DisplayAlert(Properties.Resources.Title_App,
-                        string.Format(Properties.Resources.Prompt_Renlist, character.Age),
-                        Properties.Resources.Button_Yes,
-                        Properties.Resources.Button_No);
+                    await semaphore.WaitAsync();
+                    var result = false;
+                    try
+                    {
+                        // Ask if they want to renlist
+                        result = await DisplayAlert(Properties.Resources.Title_App,
+                            string.Format(Properties.Resources.Prompt_Renlist, character.Age),
+                            Properties.Resources.Button_Yes,
+                            Properties.Resources.Button_No);
+                    }
+                    finally
+                    {
+                        semaphore.Release();
+                    }
                     if (result)
                     {
                         career.HandleRenlist(true);
