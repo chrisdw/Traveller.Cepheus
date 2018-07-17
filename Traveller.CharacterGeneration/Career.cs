@@ -8,6 +8,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration
 {
     public class Career
     {
+        public class SkillOfferedEventArgs
+        {
+            public Skill OfferedSkill { get; set; }
+            public Character Owner { get; set; }
+        }
+
+        public event EventHandler<SkillOfferedEventArgs> SkillOffered;
+
         public enum CareerType
         {
             Imperial_Navy,
@@ -189,5 +197,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             }
             return result;
         }
+
+        protected virtual void OnSkillOffered(Skill skill)
+        {
+            var e = new SkillOfferedEventArgs() { OfferedSkill = skill, Owner = Owner };
+            SkillOffered?.Invoke(this, e);
+        }
+
     }
 }

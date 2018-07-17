@@ -217,20 +217,20 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             switch (dice.roll(1))
             {
                 case 1:
-                    return new BasicNavy() { Culture = this, Drafted = true };
+                    return new BasicNavy() { Culture = this };
                 case 2:
-                    return new BasicMarines() { Culture = this, Drafted = true };
+                    return new BasicMarines() { Culture = this };
                 case 3:
-                    return new BasicArmy() { Culture = this, Drafted = true };
+                    return new BasicArmy() { Culture = this };
                 case 4:
-                    return new BasicMerchants() { Culture = this, Drafted = true };
+                    return new BasicMerchants() { Culture = this };
                 case 5:
-                    return new BasicScouts() { Culture = this, Drafted = true };
+                    return new BasicScouts() { Culture = this };
                 case 6:
-                    return new BasicOther() { Culture = this, Drafted = true };
+                    return new BasicOther() { Culture = this };
             }
             // Should never reach here
-            return new BasicArmy() { Culture = this, Drafted = true };
+            return new BasicArmy() { Culture = this };
         }
     }
 }

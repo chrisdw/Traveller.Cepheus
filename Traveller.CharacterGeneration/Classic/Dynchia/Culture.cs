@@ -50,18 +50,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Dynchia
             switch (roll)
             {
                 case 1:
-                    return new Imperial.BasicNavy() { Culture = this, Drafted = true };
+                    return new Imperial.BasicNavy() { Culture = this };
                 case 2:
-                    return new Imperial.BasicMarines() { Culture = this, Drafted = true };
+                    return new Imperial.BasicMarines() { Culture = this };
                 case 4:
-                    return new Imperial.BasicMerchants() { Culture = this, Drafted = true };
+                    return new Imperial.BasicMerchants() { Culture = this };
                 case 5:
-                    return new Imperial.BasicScouts() { Culture = this, Drafted = true };
+                    return new Imperial.BasicScouts() { Culture = this };
                 case 6:
-                    return new Imperial.BasicOther() { Culture = this, Drafted = true };
+                    return new Imperial.BasicOther() { Culture = this };
             }
             // Should never reach here
-            return new Imperial.BasicNavy() { Culture = this, Drafted = true };
+            return new Imperial.BasicNavy() { Culture = this };
         }
 
         public BasicCareer GetBasicCareer(Career.CareerType career)

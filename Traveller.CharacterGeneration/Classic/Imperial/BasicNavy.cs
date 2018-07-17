@@ -143,15 +143,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             {
                 target -= 2;
             }
-            if (dice.roll(2) >= target)
-            {
-                enlist = true;
-                Owner.Journal.Add(string.Format("Enlisted in Navy at age {0}", Owner.Age));
-            }
-            else
-            {
-                Owner.Journal.Add(string.Format("Enlisted in Navy refused at age {0}", Owner.Age));
-            }
+
             return BaseEnlist(target);
         }
 

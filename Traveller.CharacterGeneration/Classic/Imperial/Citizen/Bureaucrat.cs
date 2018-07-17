@@ -113,8 +113,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
         protected override void EnlistSkill()
         {
-            // TODO: Resolve this cascade
-            Owner.AddSkill(SkillLibrary.Vehicle);
+            OnSkillOffered(SkillLibrary.Vehicle);
         }
          
         protected override void RankSkill()

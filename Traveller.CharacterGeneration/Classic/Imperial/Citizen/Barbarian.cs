@@ -99,8 +99,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         protected override void CommsionSkill()
         {
             CurrentRank = 2;
-            // TODO: Work out how to resolve this to one of the cascades
-            Owner.AddSkill(SkillLibrary.BladeCombat);
+            OnSkillOffered(SkillLibrary.BladeCombat);
         }
 
         protected override int EnlistFactor()
