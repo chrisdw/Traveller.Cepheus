@@ -1,12 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
+    <MultilingualFallbackLanguage>en-GB</MultilingualFallbackLanguage>
+    <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
+    <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
+  </PropertyGroup>
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>org.DownesWard.Traveller.Language.CLI</RootNamespace>
+    <StartupObject>org.DownesWard.Traveller.Language.CLI.Program</StartupObject>
+    <ApplicationIcon />
+    <Win32Resource />
+    <Authors>Chris Downes-Ward</Authors>
+    <Description>Simple generation program for traveller words</Description>
+    <Copyright>Chris Downes-Ward 2018</Copyright>
+    <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
-
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
+  <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
+    <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
+  </Target>
+  <ItemGroup>
+    <None Remove="MultilingualResources\Traveller.Language.CLI.de-DE.xlf" />
+    <None Remove="MultilingualResources\Traveller.Language.CLI.fr-FR.xlf" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Traveller.Language\Traveller.Language.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <XliffResource Include="MultilingualResources\Traveller.Language.CLI.de-DE.xlf" />
+    <XliffResource Include="MultilingualResources\Traveller.Language.CLI.fr-FR.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

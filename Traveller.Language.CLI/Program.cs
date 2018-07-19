@@ -1,7 +1,6 @@
-﻿using org.DownesWard.Traveller.Language;
-using System;
+﻿using System;
 
-namespace Traveller.Language.CLI
+namespace org.DownesWard.Traveller.Language.CLI
 {
     class Program
     {
@@ -16,13 +15,13 @@ namespace Traveller.Language.CLI
             var langs = new Languages();
             if (args.Length == 0)
             {
-                Console.WriteLine("Please specify the language");
+                Console.WriteLine(Properties.Resources.Msg_No_Language);
                 return;
             }
             var lang = args[0].ToLowerInvariant();
             if (!langs.ContainsKey(lang))
             {
-                Console.WriteLine(string.Format("Language {0} not found", lang));
+                Console.WriteLine(string.Format(Properties.Resources.Msg_Language_Not_Found, lang));
                 return;
             }
             var wordCount = 1;
