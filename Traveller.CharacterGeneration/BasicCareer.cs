@@ -108,7 +108,7 @@
             }
             else
             {
-                Owner.Journal.Add(string.Format("Enlisted in {0} refused at age {1}", Name, Owner.Age));
+                Owner.Journal.Add(string.Format("Enlistment in {0} refused at age {1}", Name, Owner.Age));
             }
 
             return enlist;
@@ -118,7 +118,7 @@
         {
             if (renlisted)
             {
-                Owner.Journal.Add(string.Format("Remain in {0} at end of term {1}", Name, Term));
+                Owner.Journal.Add(string.Format("Remained in {0} at end of term {1}", Name, Term));
             }
             else
             {

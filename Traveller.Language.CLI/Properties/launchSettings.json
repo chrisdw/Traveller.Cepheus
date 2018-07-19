@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Traveller.Language.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": "Vilanii 4"
+    }
+  }
+}
