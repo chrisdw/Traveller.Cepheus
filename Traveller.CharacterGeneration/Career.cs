@@ -152,7 +152,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             result.benefit = benefit;
             if (Culture.BenefitAllowed(Owner, benefit))
             {
-                Owner.Journal.Add(string.Format("Received {0} value {1} as a benefit", benefit.Name, benefit.Value));
                 if (benefit.TypeOfBenefit == Benefit.BenefitType.Material)
                 {
                     Owner.AddBenefit(benefit);
