@@ -124,7 +124,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             set
             {
                 base.Owner = value;
-                if (Owner.Careers.Count > 0)
+                if (Owner.Careers.Count == 0)
                 {
                     Owner.Age = 14;
                 }
