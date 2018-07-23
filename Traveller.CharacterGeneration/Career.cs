@@ -162,7 +162,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 }
                 else if (benefit.TypeOfBenefit == Benefit.BenefitType.AttributeModification)
                 {
-                    Owner.Profile[benefit.Name].Value += benefit.Value;
+                    Owner.AddAttribute(benefit.Name, benefit.Value);
                 }
                 else if (benefit.TypeOfBenefit == Benefit.BenefitType.Weapon)
                 {

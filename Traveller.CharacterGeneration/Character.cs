@@ -236,6 +236,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             }
         }
 
+        public void AddAttribute(string attribute, int value)
+        {
+            Journal.Add(string.Format("Received an uplift to {0} of value {1}", attribute, value));
+            Profile[attribute].Value += value;
+        }
+
         public bool AgingCheck()
         {
             var result = true;

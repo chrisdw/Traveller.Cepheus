@@ -66,7 +66,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Attribute_Raised, skill.Name, skill.Level), Properties.Resources.Button_OK);
                     }
-                    e.Owner.Profile[skill.Name].Value += skill.Level;
+                    e.Owner.AddAttribute(skill.Name, skill.Level);
                 }
                 else
                 {
