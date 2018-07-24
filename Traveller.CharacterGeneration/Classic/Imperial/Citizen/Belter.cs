@@ -135,5 +135,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         {
             // nothing to do here
         }
+
+        public override void EndTerm()
+        {
+            base.EndTerm();
+            TermSkills = 2;
+        }
     }
 }
