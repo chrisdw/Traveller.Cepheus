@@ -52,7 +52,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             {
                 if (skills.Count > 1)
                 {
-                    var names = skills.Select(s => s.Name);
+                    var names = skills.Select(s => s.Name).Distinct();
                     var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill, null, null, names.ToArray());
                     skill = skills.Where(s => s.Name == result).First();
                 }

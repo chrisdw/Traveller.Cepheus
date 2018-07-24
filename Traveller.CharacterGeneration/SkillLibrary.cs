@@ -31,6 +31,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Forgery = new Skill("Forgery", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill FowardObserver = new Skill("Forward Observer", Skill.SkillClass.None, 1);
         public static Skill Gambling = new Skill("Gambling", Skill.SkillClass.None, 1);
+        public static Skill GravVehicle = new Skill("Grav Vehicle", Skill.SkillClass.None, 1);
         public static Skill Gunnery = new Skill("Gunnery", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill Instruction = new Skill("Instruction", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Interrogation = new Skill("Interrogation", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
@@ -54,9 +55,30 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Aircraft = new Skill("Aircraft", Skill.SkillClass.None, 1)
         {
             Cascade = {
-                new Skill("Grav Vehicle", Skill.SkillClass.None, 1),
-                new Skill("Rotor Aircraft", Skill.SkillClass.None, 1),
-                new Skill("Winged Aircraft", Skill.SkillClass.None, 1)
+                GravVehicle,
+                new Skill("Propeller Driven Fixed Wing Aircraft", Skill.SkillClass.None, 1),
+                new Skill("Jet Propelled Fixed Wing Aircraft", Skill.SkillClass.None, 1),
+                new Skill("Helicopters", Skill.SkillClass.None, 1),
+                new Skill("Lighter than Air Craft", Skill.SkillClass.None, 1)
+            }
+        };
+
+        public static Skill Watercraft = new Skill("Watercraft", Skill.SkillClass.None, 1)
+        {
+            Cascade = {
+                new Skill("Hovercraft", Skill.SkillClass.None, 1),
+                new Skill("Small Watercraft", Skill.SkillClass.None, 1),
+                new Skill("Large Watercraft", Skill.SkillClass.None, 1),
+                new Skill("Submersibles", Skill.SkillClass.None, 1)
+            }
+        };
+
+        public static Skill GroundVehicle = new Skill("Ground Vehicle", Skill.SkillClass.None, 1)
+        {
+            Cascade = {
+                GravVehicle,
+                new Skill("Tracked Vehicle", Skill.SkillClass.None, 1),
+                new Skill("Wheeled Vehicle", Skill.SkillClass.None, 1)
             }
         };
 
@@ -64,9 +86,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         {
             Cascade = {
                 Aircraft,
-                new Skill("Tracked Vehicle", Skill.SkillClass.None, 1),
-                new Skill("Hovercraft", Skill.SkillClass.None, 1),
-                new Skill("Wheeled Vehicle", Skill.SkillClass.None, 1)
+                Watercraft,
+                GroundVehicle,
             }
         };
 

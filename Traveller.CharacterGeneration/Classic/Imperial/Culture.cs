@@ -43,6 +43,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
                                 careers.Add("Belter", Career.CareerType.Citizen_Belter);
                                 careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
+                                careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -59,6 +60,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
                                 careers.Add("Belter", Career.CareerType.Citizen_Belter);
                                 careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
+                                careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -80,6 +82,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
                                 careers.Add("Belter", Career.CareerType.Citizen_Belter);
                                 careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
+                                careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
                                 // TODO: Add citizen careers
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {

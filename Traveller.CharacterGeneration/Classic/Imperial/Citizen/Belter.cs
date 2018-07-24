@@ -4,12 +4,21 @@ using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 {
-    public class Belter : BasicCareer
+    public class Belter : Career
     {
         public Belter()
         {
             CurrentRank = 0;
             TermSkills = 3;
+
+            enlistment = 5;
+            enlistment1attr = "DEX";
+            enlistment1val = 7;
+            enlistment2attr = "INT";
+            enlistment2val = 6;
+
+            reenlist = 7;
+            hasRanks = false;
 
             var table = new SkillTable();
             SkillTables[0] = table;
@@ -73,23 +82,34 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Ranks[0] = "Belter";
         }
 
-        public override Renlistment CanRenlist()
+        /// <summary>
+        /// Need to override as survival based on terms served not
+        /// any attribute
+        /// </summary>
+        /// <returns></returns>
+        public override bool Survival()
         {
-            var renlist = Renlistment.Cant;
-            var target = 7;
+            var survive = false;
 
-            renlist = BaseCanRenlist(renlist, target);
-            return renlist;
+            var target = 9;
+
+            target -= Term;
+
+            if (dice.roll(2) >= target)
+            {
+                survive = true;
+            }
+            return survive;
         }
 
-        public override bool Commission()
+        protected override void CommsionSkill()
         {
-            return false;
+            // Nothing to do
         }
 
-        public override bool Enlist()
+        protected override int EnlistFactor()
         {
-            var target = 5;
+            var target = 0;
 
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
@@ -103,47 +123,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
                 target--;
             }
 
-            if (Owner.Profile.Dex.Value >= 7)
-            {
-                target -= 1;
-            }
-            if (Owner.Profile.Int.Value >= 6)
-            {
-                target -= 2;
-            }
-
-            var enlist = BaseEnlist(target);
-
-            if (enlist)
-            {
-                Owner.AddSkill(SkillLibrary.VaccSuit);
-            }
-            return enlist;
+            return target;
         }
 
-        public override void HandleRenlist(bool renlisted)
+        protected override void EnlistSkill()
         {
-            BaseRenlist(renlisted);
+            Owner.AddSkill(SkillLibrary.VaccSuit);
         }
 
-        public override bool Promotion()
+        protected override void RankSkill()
         {
-            return false;
-        }
-
-        public override bool Survival()
-        {
-            var survive = true;
-
-            var target = 9;
-
-            target -= Term;
-
-            if (dice.roll(2) >= target)
-            {
-                survive = true;
-            }
-            return survive;
+            // nothing to do here
         }
     }
 }

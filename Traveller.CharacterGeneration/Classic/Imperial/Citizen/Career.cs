@@ -31,6 +31,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         protected string promotion1attr = "INT";
         protected int promotion1val = 9;
         protected int reenlist = 7;
+        protected bool hasRanks = true;
 
         protected abstract void EnlistSkill();
         protected abstract void RankSkill();
@@ -39,7 +40,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
         public override bool Commission()
         {
-            if (CurrentRank > 0)
+            if (!hasRanks)
+            {
+                return false;
+            }
+            if (CurrentRank == 0)
             {
                 if (Term == 0 && Drafted)
                 {
@@ -137,7 +142,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         {
             var promote = false;
 
-            if (CurrentRank > 0 && CurrentRank < 6)
+            if (CurrentRank > 0 && CurrentRank < 6 && hasRanks)
             {
                 var target = promotion;
                 if (Owner.Profile[promotion1attr].Value >= promotion1val)
@@ -158,7 +163,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
         public override bool Survival()
         {
-            var survive = true;
+            var survive = false;
 
             var target = survival;
 

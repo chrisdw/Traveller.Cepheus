@@ -201,7 +201,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 
         public override bool Survival()
         {
-            var survive = true;
+            var survive = false;
 
             var target = 5;
             if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals("Male"))
