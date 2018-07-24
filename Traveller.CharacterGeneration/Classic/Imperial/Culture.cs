@@ -44,6 +44,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Belter", Career.CareerType.Citizen_Belter);
                                 careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
                                 careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
+                                careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -61,6 +62,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Belter", Career.CareerType.Citizen_Belter);
                                 careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
                                 careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
+                                careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -83,6 +85,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Belter", Career.CareerType.Citizen_Belter);
                                 careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
                                 careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
+                                careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
                                 // TODO: Add citizen careers
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {
@@ -190,6 +193,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new Citizen.Belter() { Culture = this };
                 case Career.CareerType.Citizen_Bureaucrat:
                     return new Citizen.Bureaucrat() { Culture = this };
+                case Career.CareerType.Citizen_Diplomat:
+                    return new Citizen.Diplomat() { Culture = this };
+                case Career.CareerType.Citizen_Doctor:
+                    return new Citizen.Doctor() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }

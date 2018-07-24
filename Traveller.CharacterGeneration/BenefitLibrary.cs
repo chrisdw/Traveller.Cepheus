@@ -17,6 +17,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Benefit Weapon = new Benefit("Weapon", 1, Benefit.BenefitType.Weapon);
 
         // Other benefits
+        public static Benefit Instruments = new Benefit("Instruments", 1, Benefit.BenefitType.Material);
         public static Benefit Travellers = new Benefit("Travellers", 1, Benefit.BenefitType.Material);
         public static Benefit Nothing = new Benefit("Nothing", 1, Benefit.BenefitType.Material);
         public static Benefit Watch = new Benefit("Watch", 1, Benefit.BenefitType.Material);
