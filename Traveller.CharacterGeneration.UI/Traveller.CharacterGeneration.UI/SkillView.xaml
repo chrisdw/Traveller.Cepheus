@@ -16,6 +16,7 @@
                         <ViewCell>
                             <ViewCell.ContextActions>
                                 <MenuItem Text="Decrease" Clicked="Decrease_Clicked" CommandParameter="{Binding .}" />
+                                <MenuItem Text="Remove" Clicked="Removed_Clicked" CommandParameter="{Binding .}" />
                             </ViewCell.ContextActions>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding Name}" WidthRequest="160"/>
