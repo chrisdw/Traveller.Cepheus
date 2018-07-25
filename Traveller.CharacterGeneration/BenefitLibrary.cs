@@ -30,6 +30,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         // Ship shares
         public static Benefit Merchant = new Benefit("Merchant", 1, Benefit.BenefitType.Material);
         public static Benefit Scout = new Benefit("Scout", 1, Benefit.BenefitType.Material);
-        public static Benefit Seeker = new Benefit("Seeker", 1, Benefit.BenefitType.Material);
+        public static Benefit SafariShip = new Benefit("Safari Ship", 1, Benefit.BenefitType.Material);
+        public static Benefit Seeker = new Benefit("Seeker", 1, Benefit.BenefitType.Material);      
     }
 }

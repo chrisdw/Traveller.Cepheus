@@ -31,8 +31,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Forgery = new Skill("Forgery", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill FowardObserver = new Skill("Forward Observer", Skill.SkillClass.None, 1);
         public static Skill Gambling = new Skill("Gambling", Skill.SkillClass.None, 1);
+        public static Skill Gravitics = new Skill("Gravitics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill GravVehicle = new Skill("Grav Vehicle", Skill.SkillClass.None, 1);
         public static Skill Gunnery = new Skill("Gunnery", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Hunting = new Skill("Hunting", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill Instruction = new Skill("Instruction", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Interrogation = new Skill("Interrogation", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill JackOfTrades = new Skill("Jack-Of-Trades", Skill.SkillClass.None, 1, Skill.SkillSex.Female);

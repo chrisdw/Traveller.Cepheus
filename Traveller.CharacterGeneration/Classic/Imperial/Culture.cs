@@ -33,7 +33,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     switch (character.CharacterSpecies)
                     {
                         case Character.Species.AelYael:
-                            // Won't join merchants
+                            // Won't join merchants or become noble
                             careers.Add("Army", Career.CareerType.Imperial_Army);
                             careers.Add("Marines", Career.CareerType.Imperial_Marines);
                             careers.Add("Navy", Career.CareerType.Imperial_Navy);
@@ -45,6 +45,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
                                 careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
                                 careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
+                                careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
+                                careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -53,7 +55,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             }
                             break;
                         case Character.Species.Virushi:
-                            // No military careers
+                            // No military careers or noble
                             careers.Add("Merchants", Career.CareerType.Imperial_Merchants);
                             careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
@@ -63,6 +65,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
                                 careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
                                 careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
+                                careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
+                                careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -86,6 +90,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
                                 careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
                                 careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
+                                careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
+                                careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
                                 // TODO: Add citizen careers
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {
@@ -197,6 +203,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new Citizen.Diplomat() { Culture = this };
                 case Career.CareerType.Citizen_Doctor:
                     return new Citizen.Doctor() { Culture = this };
+                case Career.CareerType.Citizen_Flyer:
+                    return new Citizen.Flyer() { Culture = this };
+                case Career.CareerType.Citizen_Hunter:
+                    return new Citizen.Hunter() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }

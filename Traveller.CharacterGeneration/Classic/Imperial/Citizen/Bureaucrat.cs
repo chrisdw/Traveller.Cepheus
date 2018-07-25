@@ -15,8 +15,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             enlistment = 5;
             enlistment1attr = "EDU";
             enlistment1val = 8;
-            enlistment1attr = "STR";
-            enlistment1val = 8;
+            enlistment2attr = "STR";
+            enlistment2val = 8;
             survival = 4;
             survival2attr = "EDU";
             survival2val = 10;
