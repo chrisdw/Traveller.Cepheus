@@ -154,7 +154,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 var skillView = new SkillView(character);
                 await Navigation.PushModalAsync(skillView);
             }
-            var characterView = new CharacterViewer(character);
+            var characterView = new NavigationPage(new CharacterViewer(character));
             await Navigation.PushAsync(characterView);
         }
 

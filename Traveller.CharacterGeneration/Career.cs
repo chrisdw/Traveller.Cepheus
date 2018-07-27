@@ -148,7 +148,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     roll++;
                 }
             }
-            var benefit = Material[roll];
+            roll = roll.Clamp(1, Material.Count);
+            var benefit = Material[roll-1];
             result.benefit = benefit;
             if (Culture.BenefitAllowed(Owner, benefit))
             {

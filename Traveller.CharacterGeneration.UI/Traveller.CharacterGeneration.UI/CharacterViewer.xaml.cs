@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.DownesWard.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,5 +20,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             SkillsView.ItemsSource = character.Skills.Values.OrderBy(s => s.Name);
             BenefitsView.ItemsSource = character.Benefits.Values.OrderBy(b => b.Name);
 		}
-	}
+
+        private void SaveMenu_Activated(object sender, EventArgs e)
+        {
+            var character = this.BindingContext as Character;
+            var xml = character.Serialize();
+        }
+    }
 }

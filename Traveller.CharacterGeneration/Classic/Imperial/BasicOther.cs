@@ -8,6 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
     {
         public BasicOther()
         {
+            Name = "Other";
             CurrentRank = 0;
             TermSkills = 2;
 
