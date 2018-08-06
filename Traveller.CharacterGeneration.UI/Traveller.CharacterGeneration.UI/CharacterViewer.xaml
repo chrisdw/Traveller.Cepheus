@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="org.DownesWard.Traveller.CharacterGeneration.UI.CharacterViewer">
     <TabbedPage.ToolbarItems>
-        <ToolbarItem Name="SaveMenu" Order="Secondary" Icon="save.png" Text="Save" Activated="SaveMenu_Activated" />
+        <ToolbarItem Name="SaveMenu" Order="Primary" Icon="save.png" Text="Save" Activated="SaveMenu_Activated" />
     </TabbedPage.ToolbarItems>
     <ContentPage Title="Overview">
         <StackLayout>
