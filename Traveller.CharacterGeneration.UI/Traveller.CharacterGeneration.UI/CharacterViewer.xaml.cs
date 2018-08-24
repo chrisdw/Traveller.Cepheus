@@ -1,16 +1,12 @@
-﻿using org.DownesWard.Utilities;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.UI
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CharacterViewer : TabbedPage
 	{
 		public CharacterViewer (Character character)
@@ -23,8 +19,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
         private void SaveMenu_Activated(object sender, EventArgs e)
         {
-            var character = this.BindingContext as Character;
-            var xml = character.Serialize();
+            //var character = BindingContext as Character;
+            //var xml = character.Serialize();
         }
     }
 }

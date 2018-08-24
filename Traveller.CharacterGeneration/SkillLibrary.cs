@@ -49,10 +49,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Recruiting = new Skill("Recruiting", Skill.SkillClass.None, 1);
         public static Skill Tactics = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill ShipsBoat = new Skill("Ships Boat", Skill.SkillClass.None, 1);
+        public static Skill ShipTactics = new Skill("Ship Tactics", Skill.SkillClass.None, 1);
         public static Skill Steward = new Skill("Steward", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
         public static Skill Streetwise = new Skill("Streetwise", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
         public static Skill Survival = new Skill("Survival", Skill.SkillClass.Military, 1);
         public static Skill VaccSuit = new Skill("Vacc Suit", Skill.SkillClass.None, 1);
+        public static Skill ZeroGCombat = new Skill("Zero-G Combat", Skill.SkillClass.None, 1);
 
         public static Skill Aircraft = new Skill("Aircraft", Skill.SkillClass.None, 1)
         {
