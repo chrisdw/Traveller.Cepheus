@@ -99,7 +99,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 }
                                 if (character.Profile.Soc.Value > 10)
                                 {
-                                    // TODO: Add Noble
+                                    careers.Add("Noble", Career.CareerType.Citizen_Noble);
                                 }
                             }
                             else
@@ -207,6 +207,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new Citizen.Flyer() { Culture = this };
                 case Career.CareerType.Citizen_Hunter:
                     return new Citizen.Hunter() { Culture = this };
+                case Career.CareerType.Citizen_Noble:
+                    return new Citizen.Noble() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }

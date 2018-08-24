@@ -23,10 +23,10 @@
     <None Remove="MultilingualResources\Traveller.SystemGeneration.fr-FR.xlf" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="AppCenter.Analytics.Metrics" Version="1.0.0" />
+    <PackageReference Include="AppCenter.Analytics.Metrics" Version="1.1.0" />
     <PackageReference Include="Microsoft.AppCenter" Version="1.8.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.8.0" />
-    <PackageReference Include="Xamarin.Forms" Version="3.1.0.637273" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Traveller.Shared\Traveller.Shared.csproj" />
