@@ -15,12 +15,16 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
 		protected override void OnStart ()
 		{
-            // Handle when your app starts
-            Microsoft.AppCenter.AppCenter.Start(
-                "uwp=23648e12-a43b-41bb-a828-568eaf846814;"  + 
-                "android=6b33c373-f91a-4a52-94f9-5d7da47e46f1", 
+            if (Device.RuntimePlatform == Device.Android ||
+                Device.RuntimePlatform == Device.UWP)
+            {
+                // Handle when your app starts
+                Microsoft.AppCenter.AppCenter.Start(
+                "uwp=23648e12-a43b-41bb-a828-568eaf846814;" +
+                "android=6b33c373-f91a-4a52-94f9-5d7da47e46f1",
                 typeof(Analytics), typeof(Crashes));
-            Analytics.TrackEvent("AppStarted");
+                Analytics.TrackEvent("AppStarted");
+            }
         }
 
 		protected override void OnSleep ()

@@ -19,10 +19,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
 		protected override void OnStart ()
 		{
-            AppCenter.Start("android=dfb3db80-01bd-42b5-83e8-e375307a2ab9;" +
-                              "uwp=53bbf029-c983-42ec-8f57-b621e5fba79e;",
-                              typeof(Analytics), typeof(Crashes));
-            Analytics.TrackEvent("AppStarted");
+            if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android ||
+                Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.UWP)
+            {
+                AppCenter.Start("android=dfb3db80-01bd-42b5-83e8-e375307a2ab9;" +
+                                  "uwp=53bbf029-c983-42ec-8f57-b621e5fba79e;",
+                                  typeof(Analytics), typeof(Crashes));
+                Analytics.TrackEvent("AppStarted");
+            }
         }
 
 		protected override void OnSleep ()

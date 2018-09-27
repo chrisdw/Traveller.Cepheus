@@ -72,7 +72,7 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void RegionPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var region = RegionPicker.SelectedItem as Region;
+            var region = RegionPicker.SelectedItem as AnimalEncounters.Region;
             critterList.ItemsSource = region.Critters;
         }
     }
