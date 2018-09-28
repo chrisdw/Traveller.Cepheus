@@ -32,14 +32,7 @@
         public virtual void CheckTableAvailablity()
         {
             // Default check for "advanced education"
-            if (Owner.Profile.Edu.Value >= 8)
-            {
-                SkillTables[3].Available = true;
-            }
-            else
-            {
-                SkillTables[3].Available = false;
-            }
+            SkillTables[3].Available = (Owner.Profile.Edu.Value >= 8);
         }
 
         public override Character Owner

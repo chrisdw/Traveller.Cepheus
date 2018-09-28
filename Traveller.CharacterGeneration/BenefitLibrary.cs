@@ -10,6 +10,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Benefit Int = new Benefit("INT", 1, Benefit.BenefitType.AttributeModification);
         public static Benefit Edu = new Benefit("EDU", 1, Benefit.BenefitType.AttributeModification);
         public static Benefit Soc = new Benefit("SOC", 1, Benefit.BenefitType.AttributeModification);
+        public static Benefit Chr = new Benefit("CHR", 1, Benefit.BenefitType.AttributeModification);
 
         // Weapon benefits
         public static Benefit Blade = new Benefit("Blade", 1, Benefit.BenefitType.Weapon);

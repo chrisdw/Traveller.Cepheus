@@ -17,6 +17,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Int = new Skill("INT", Skill.SkillClass.AttributeChange, 1);
         public static Skill Edu = new Skill("EDU", Skill.SkillClass.AttributeChange, 1);
         public static Skill Soc = new Skill("SOC", Skill.SkillClass.AttributeChange, 1);
+        public static Skill Chr = new Skill("CHR", Skill.SkillClass.AttributeChange, 1);
 
         // Simple skills
         public static Skill Admin = new Skill("Admin", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
@@ -37,7 +38,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Gravitics = new Skill("Gravitics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill GravVehicle = new Skill("Grav Vehicle", Skill.SkillClass.None, 1);
         public static Skill Gunnery = new Skill("Gunnery", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-        public static Skill Hunting = new Skill("Hunting", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Hunting = new Skill("Infighting", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Infighting = new Skill("Infighting", Skill.SkillClass.None, 1);
         public static Skill Instruction = new Skill("Instruction", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Interrogation = new Skill("Interrogation", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill JackOfTrades = new Skill("Jack-Of-Trades", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
