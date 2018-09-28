@@ -192,13 +192,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             {
                 case "3rd Imperium":
                     Cultures.Add("Imperial");
-                    Cultures.Add("Zhodani");
-                    Cultures.Add("Solomani");
-                    Cultures.Add("Aslan");
-                    Cultures.Add("Vargr");
-                    Cultures.Add("Darrian");
+                    //Cultures.Add("Zhodani");
+                    //Cultures.Add("Solomani");
+                    //Cultures.Add("Aslan");
+                    //Cultures.Add("Vargr");
+                    //Cultures.Add("Darrian");
                     Cultures.Add("Sword Worlds");
-                    Cultures.Add("Droyne");
+                    //Cultures.Add("Droyne");
                     Cultures.Add("Dynchia");
                     break;
             }
