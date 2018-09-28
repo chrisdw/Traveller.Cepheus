@@ -48,6 +48,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
                                 careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
                                 careers.Add("Pirate", Career.CareerType.Citizen_Pirate);
+                                careers.Add("Rogue", Career.CareerType.Citizen_Rogue);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -69,6 +70,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
                                 careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
                                 careers.Add("Pirate", Career.CareerType.Citizen_Pirate);
+                                careers.Add("Rogue", Career.CareerType.Citizen_Rogue);
                                 // TODO: Add citizen careers
                             }
                             else
@@ -95,6 +97,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
                                 careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
                                 careers.Add("Pirate", Career.CareerType.Citizen_Pirate);
+                                careers.Add("Rogue", Career.CareerType.Citizen_Rogue);
                                 // TODO: Add citizen careers
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {
@@ -214,6 +217,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new Citizen.Noble() { Culture = this };
                 case Career.CareerType.Citizen_Pirate:
                     return new Citizen.Pirate() { Culture = this };
+                case Career.CareerType.Citizen_Rogue:
+                    return new Citizen.Rogue() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }

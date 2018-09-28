@@ -19,6 +19,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             enlistment2attr = "DEX";
             enlistment2val = 9;
 
+            survival = 3;
+            survival2attr = "INT";
+            survival2val = 8;
+
             reenlist = 4;
             hasRanks = false;
 

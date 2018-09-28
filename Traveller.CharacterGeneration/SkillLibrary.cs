@@ -26,6 +26,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Bribery = new Skill("Bribery", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
         public static Skill Carousing = new Skill("Carousing", Skill.SkillClass.None, 1);
         public static Skill Computer = new Skill("Computer", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Demolitions = new Skill("Demolitions", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Electronics = new Skill("Electronics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Engineering = new Skill("Engineering", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Forgery = new Skill("Forgery", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
