@@ -40,16 +40,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
-                                careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
-                                careers.Add("Belter", Career.CareerType.Citizen_Belter);
-                                careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
-                                careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
-                                careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
-                                careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
-                                careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
-                                careers.Add("Pirate", Career.CareerType.Citizen_Pirate);
-                                careers.Add("Rogue", Career.CareerType.Citizen_Rogue);
-                                // TODO: Add citizen careers
+                                AddCitizenCareersExceptNoble(careers);
                             }
                             else
                             {
@@ -62,16 +53,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
-                                careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
-                                careers.Add("Belter", Career.CareerType.Citizen_Belter);
-                                careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
-                                careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
-                                careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
-                                careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
-                                careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
-                                careers.Add("Pirate", Career.CareerType.Citizen_Pirate);
-                                careers.Add("Rogue", Career.CareerType.Citizen_Rogue);
-                                // TODO: Add citizen careers
+                                AddCitizenCareersExceptNoble(careers);
                             }
                             else
                             {
@@ -89,16 +71,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
-                                careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
-                                careers.Add("Belter", Career.CareerType.Citizen_Belter);
-                                careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
-                                careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
-                                careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
-                                careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
-                                careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
-                                careers.Add("Pirate", Career.CareerType.Citizen_Pirate);
-                                careers.Add("Rogue", Career.CareerType.Citizen_Rogue);
-                                // TODO: Add citizen careers
+                                AddCitizenCareersExceptNoble(careers);
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {
                                     // TODO: Add corsair
@@ -117,6 +90,21 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     break;
             }
             return careers;
+        }
+
+        private static void AddCitizenCareersExceptNoble(Dictionary<string, Career.CareerType> careers)
+        {
+            careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
+            careers.Add("Belter", Career.CareerType.Citizen_Belter);
+            careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
+            careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
+            careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
+            careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
+            careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
+            careers.Add("Pirate", Career.CareerType.Citizen_Pirate);
+            careers.Add("Rogue", Career.CareerType.Citizen_Rogue);
+            careers.Add("Sailor", Career.CareerType.Citizen_Sailor);
+            careers.Add("Scientist", Career.CareerType.Citizen_Scientist);
         }
 
         public bool CheckSkill(Character character, Skill skill, int count)
@@ -219,6 +207,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new Citizen.Pirate() { Culture = this };
                 case Career.CareerType.Citizen_Rogue:
                     return new Citizen.Rogue() { Culture = this };
+                case Career.CareerType.Citizen_Sailor:
+                    return new Citizen.Sailor() { Culture = this };
+                case Career.CareerType.Citizen_Scientist:
+                    return new Citizen.Scientist() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }

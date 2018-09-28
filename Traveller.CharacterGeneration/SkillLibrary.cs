@@ -22,9 +22,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Admin = new Skill("Admin", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill AirRaft = new Skill("Air/Raft", Skill.SkillClass.None, 1);
         public static Skill ATV = new Skill("ATV", Skill.SkillClass.None, 1);
+        public static Skill BattleDress = new Skill("Battle Dress", Skill.SkillClass.Military, 1);
         public static Skill Brawling = new Skill("Brawling", Skill.SkillClass.None, 1);
         public static Skill Bribery = new Skill("Bribery", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
         public static Skill Carousing = new Skill("Carousing", Skill.SkillClass.None, 1);
+        public static Skill Communications = new Skill("Communications", Skill.SkillClass.None, 1);
         public static Skill Computer = new Skill("Computer", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Demolitions = new Skill("Demolitions", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Electronics = new Skill("Electronics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
