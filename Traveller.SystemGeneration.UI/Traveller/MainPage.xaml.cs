@@ -1,5 +1,4 @@
-﻿using Microsoft.AppCenter.Analytics;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
@@ -77,13 +76,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
 
         private void GenerateButton_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("SystemGenerated", 
-                new Dictionary<string, string> {
-                    { "Fullsystem" , fullSystemSwitch.On.ToString() },
-                    { "Campaign", Config.CurrentCampaign.ToString() }
-                }
-            );
-
             if (fullSystemSwitch.On)
             {
                 Config.Generation = GenerationType.FULL;
@@ -135,7 +127,6 @@ namespace org.DownesWard.Traveller.SystemGeneration
             }
             else
             {
-                Analytics.TrackEvent("SystemSaved");
                 var docsPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
                 var path = Path.Combine(docsPath, Config.BaseName + ".xml");
                 if (File.Exists(path))

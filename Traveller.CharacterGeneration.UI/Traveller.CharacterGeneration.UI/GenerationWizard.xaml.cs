@@ -1,5 +1,4 @@
-﻿using Microsoft.AppCenter.Analytics;
-using org.DownesWard.Utilities;
+﻿using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -86,8 +85,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
         private async void Generate_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Character Generator");
-
             Character character = new Character
             {
                 Culture = selectedCulture.Id,
