@@ -1,4 +1,5 @@
-﻿using org.DownesWard.Utilities;
+﻿using org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr;
+using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -61,7 +62,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             }
                             break;
                         case Character.Species.Dolphin:
-                            // Unique careers
+                            // TODO: Unique careers
                             break;
                         default:
                             careers.Add("Army", Career.CareerType.Imperial_Army);
@@ -74,7 +75,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 AddCitizenCareersExceptNoble(careers);
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {
-                                    // TODO: Add corsair
+                                    careers.Add("Corsair", Career.CareerType.Vargr_Corsair);
                                 }
                                 if (character.Profile.Soc.Value > 10)
                                 {
@@ -211,6 +212,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     return new Citizen.Sailor() { Culture = this };
                 case Career.CareerType.Citizen_Scientist:
                     return new Citizen.Scientist() { Culture = this };
+                case Career.CareerType.Vargr_Corsair:
+                    return new Corsair(Corsair.Mode.Imperial) { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }

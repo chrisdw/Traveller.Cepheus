@@ -31,6 +31,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
         private SuccessEntry[] successTable = new SuccessEntry[10];
         private bool dismissed;
         protected int maxRank;
+        protected bool doneOnce = false;
 
         protected abstract void EnlistSkill();
         protected abstract void RankSkill();

@@ -4,29 +4,35 @@ using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 {
-    public class Army : Career
+    public class Corsair : Career
     {
-        
- 
-        public Army()
+        public enum Mode
         {
-            Name = "Army";
+            Vargr,
+            Imperial
+        }
 
-            enlistment = 5;
-            enlistment1attr = "STR";
-            enlistment1val = 10;
-            enlistment2attr = "END";
-            enlistment2val = 6;
-            survival = 5;
-            survival2attr = "STR";
-            survival2val = 5;
-            position = 7;
-            position1attr = "END";
-            position1val = 6;
-            promotion1attr = "EDU";
-            promotion1val = 9;
+        public Corsair(Mode mode)
+        {
+            CareerMode = mode;
+
+            Name = "Corsair";
+
+            enlistment = 6;
+            enlistment1attr = "END";
+            enlistment1val = 9;
+            enlistment2attr = "DEX";
+            enlistment2val = 7;
+            survival = 6;
+            survival2attr = "END";
+            survival2val = 9;
+            position = 8;
+            position1attr = "CHR";
+            position1val = 7;
+            promotion1attr = "INT";
+            promotion1val = 8;
             promotion2attr = "CHR";
-            promotion2val = 6;
+            promotion2val = 5;
             reenlist = 6;
 
             maxRank = 6;
@@ -41,7 +47,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             skills[0] = SkillLibrary.Str;
             skills[1] = SkillLibrary.Dex;
             skills[2] = SkillLibrary.End;
-            skills[3] = SkillLibrary.Int;
+            skills[3] = SkillLibrary.Bribery;
             skills[4] = SkillLibrary.Infighting;
             skills[5] = SkillLibrary.Chr;
 
@@ -52,90 +58,86 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             skills[0] = SkillLibrary.Vehicle;
             skills[1] = SkillLibrary.VaccSuit;
             skills[2] = SkillLibrary.Infighting;
-            skills[3] = SkillLibrary.BladeCombat;
+            skills[3] = SkillLibrary.Medic;
             skills[4] = SkillLibrary.GunCombat;
             skills[5] = SkillLibrary.GunCombat;
-            
+
             table = new SkillTable();
             SkillTables[2] = table;
             table.Name = "Education";
             skills = table.Skills;
-            skills[0] = SkillLibrary.Vehicle;
-            skills[1] = SkillLibrary.Tactics;
+            skills[0] = SkillLibrary.ShipsBoat;
+            skills[1] = SkillLibrary.VaccSuit;
             skills[2] = SkillLibrary.Electronics;
-            skills[3] = SkillLibrary.Mechanical;
+            skills[3] = SkillLibrary.Medic;
             skills[4] = SkillLibrary.Computer;
-            skills[5] = SkillLibrary.Medic;
+            skills[5] = SkillLibrary.Gunnery;
 
             table = new SkillTable();
             SkillTables[3] = table;
             table.Name = "High Charisma";
             skills = table.Skills;
             skills[0] = SkillLibrary.Medic;
-            skills[1] = SkillLibrary.Tactics;
+            skills[1] = SkillLibrary.Chr;
             skills[2] = SkillLibrary.Leader;
             skills[3] = SkillLibrary.FowardObserver;
-            skills[4] = SkillLibrary.Chr;
-            skills[5] = SkillLibrary.Tactics;
+            skills[4] = SkillLibrary.Pilot;
+            skills[5] = SkillLibrary.Streetwise;
 
             Material.Add(BenefitLibrary.LowPsg);
             Material.Add(BenefitLibrary.Int);
             Material.Add(BenefitLibrary.Edu);
             Material.Add(BenefitLibrary.Gun);
-            Material.Add(BenefitLibrary.HighPsg);
-            Material.Add(BenefitLibrary.HighPsg);
-            Material.Add(BenefitLibrary.Chr);
+            Material.Add(BenefitLibrary.Gun);
+            Material.Add(BenefitLibrary.Gun);
+            Material.Add(BenefitLibrary.Corsair);
 
-            Cash[0] = 5000;
-            Cash[1] = 5000;
+            Cash[0] = 1000;
+            Cash[1] = 1000;
             Cash[2] = 10000;
             Cash[3] = 10000;
-            Cash[4] = 20000;
-            Cash[5] = 20000;
-            Cash[6] = 20000;
+            Cash[4] = 30000;
+            Cash[5] = 30000;
+            Cash[6] = 50000;
 
-            Ranks[0] = "Trooper";
+            Ranks[0] = "Corsair";
             Ranks[1] = "Lieutenant";
-            Ranks[2] = "Captain";
-            Ranks[3] = "Major";
-            Ranks[4] = "Lt. Colonel";
-            Ranks[5] = "Colonel";
-            Ranks[6] = "General";
+            Ranks[2] = "Force Leader";
+            Ranks[3] = "Staff Major";
+            Ranks[4] = "Group Leader";
+            Ranks[5] = "Commodore";
+            Ranks[6] = "Leader";
         }
+
+        public Mode CareerMode { get; private set; }
+
         protected override void CommsionSkill()
         {
             if (!doneOnce && CurrentRank == 1)
             {
-                Owner.AddSkill(SkillLibrary.SubmachineGun);
+                Owner.AddSkill(SkillLibrary.ShipsBoat);
                 doneOnce = true;
             }
         }
 
         protected override int EnlistFactor()
         {
-            return 0;
+            var target = 0;
+            if (CareerMode == Mode.Imperial)
+            {
+                target += 4;
+            }
+            return target;
         }
 
         protected override void EnlistSkill()
         {
-            Owner.AddSkill(SkillLibrary.Rifle);
+            // Nothing to do
         }
 
         protected override void RankSkill()
         {
             // Nothing to do
-        }
-
-        public override bool Drafted
-        {
-            get => base.Drafted;
-            set {
-                base.Drafted = value;
-                if (value)
-                {
-                    Owner.AddSkill(SkillLibrary.Rifle);
-                }
-            }
         }
     }
 }
