@@ -52,6 +52,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
                     return new Army() { Culture = this };
                 case 4:
                     return new Emissary() { Culture = this };
+                case 6:
+                    return new Loner() { Culture = this };
                 default:
                     return new Army() { Culture = this };
             }
@@ -68,6 +70,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
                     return new Corsair(Corsair.Mode.Vargr) { Culture = this };
                 case CharacterGeneration.Career.CareerType.Vargr_Emissary:
                     return new Emissary() { Culture = this };
+                case CharacterGeneration.Career.CareerType.Vargr_Loner:
+                    return new Loner() { Culture = this };
                 default:
                     return new Army() { Culture = this };
             }
