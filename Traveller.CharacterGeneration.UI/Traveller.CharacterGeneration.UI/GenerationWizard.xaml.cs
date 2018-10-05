@@ -195,7 +195,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     //Cultures.Add("Zhodani");
                     //Cultures.Add("Solomani");
                     //Cultures.Add("Aslan");
-                    //Cultures.Add("Vargr");
+                    Cultures.Add("Vargr");
                     //Cultures.Add("Darrian");
                     Cultures.Add("Sword Worlds");
                     //Cultures.Add("Droyne");
