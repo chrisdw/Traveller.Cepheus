@@ -106,6 +106,15 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Psionics.
+        /// </summary>
+        public static string UPP_Attr_Psionics {
+            get {
+                return ResourceManager.GetString("UPP_Attr_Psionics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Social Standing.
         /// </summary>
         public static string UPP_Attr_SocialStanding {

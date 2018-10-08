@@ -62,6 +62,10 @@
           <source>Social Standing</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Statut social</target>
         </trans-unit>
+        <trans-unit id="UPP_Attr_Psionics" translate="yes" xml:space="preserve">
+          <source>Psionics</source>
+          <target state="new">Psionics</target>
+        </trans-unit>
       </group>
     </body>
   </file>
