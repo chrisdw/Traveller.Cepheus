@@ -35,6 +35,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Benefit Scout = new Benefit("Scout", 1, Benefit.BenefitType.Material);
         public static Benefit SafariShip = new Benefit("Safari Ship", 1, Benefit.BenefitType.Material);
         public static Benefit Seeker = new Benefit("Seeker", 1, Benefit.BenefitType.Material);
+        public static Benefit Trader = new Benefit("Trader", 1, Benefit.BenefitType.Material);
         public static Benefit Yacht = new Benefit("Yacht", 1, Benefit.BenefitType.Material);
     }
 }
