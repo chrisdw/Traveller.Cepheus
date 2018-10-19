@@ -44,6 +44,24 @@ namespace org.DownesWard.Traveller.Shared
             maxValue = list.Length - 1;
         }
 
+        public int Modifier {
+            get
+            {
+                if (Value <= 2) return -2;
+                if (Value >= 3 && Value <= 5) return -1;
+                if (Value >= 6 && Value <= 8) return 0;
+                if (Value >= 9 && Value <= 11) return 1;
+                if (Value >= 12 && Value <= 14) return 2;
+                if (Value >= 15 && Value <= 17) return 3;
+                if (Value >= 18 && Value <= 20) return 4;
+                if (Value >= 21 && Value <= 23) return 5;
+                if (Value >= 24 && Value <= 26) return 6;
+                if (Value >= 27 && Value <= 29) return 7;
+                if (Value >= 30 && Value <= 32) return 8;
+                if (Value >= 33) return 9;
+                return 0;
+            }
+        }
         public int Value
         {
             get

@@ -189,10 +189,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             {
                 case "3rd Imperium":
                     Cultures.Add("Imperial");
-                    //Cultures.Add("Zhodani");
+                    Cultures.Add("Zhodani");
                     //Cultures.Add("Solomani");
                     //Cultures.Add("Aslan");
-                    //Cultures.Add("Vargr");
+                    Cultures.Add("Vargr");
                     //Cultures.Add("Darrian");
                     Cultures.Add("Sword Worlds");
                     //Cultures.Add("Droyne");
@@ -216,6 +216,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     break;
                 case "Sword Worlds":
                     selectedCulture = new Classic.SwordWorlds.Culture();
+                    break;
+                case "Zhodani":
+                    selectedCulture = new Classic.Zhodani.Culture();
                     break;
             }
             if (selectedCulture != null)

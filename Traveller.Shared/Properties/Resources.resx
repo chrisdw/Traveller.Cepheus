@@ -132,6 +132,9 @@
   <data name="UPP_Attr_Intelligence" xml:space="preserve">
     <value>Intelligence</value>
   </data>
+  <data name="UPP_Attr_Psionics" xml:space="preserve">
+    <value>Psionics</value>
+  </data>
   <data name="UPP_Attr_SocialStanding" xml:space="preserve">
     <value>Social Standing</value>
   </data>

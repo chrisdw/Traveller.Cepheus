@@ -28,9 +28,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
         protected int promotion2val = 5;
         protected int reenlist = 7;
         protected bool hasRanks = true;
-        private SuccessEntry[] successTable = new SuccessEntry[10];
+        private readonly SuccessEntry[] successTable = new SuccessEntry[10];
         private bool dismissed;
         protected int maxRank;
+        protected bool doneOnce = false;
 
         protected abstract void EnlistSkill();
         protected abstract void RankSkill();

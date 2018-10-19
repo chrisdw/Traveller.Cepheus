@@ -1,4 +1,5 @@
-﻿using org.DownesWard.Traveller.Shared;
+﻿using org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani;
+using org.DownesWard.Traveller.Shared;
 using org.DownesWard.Traveller.Shared.Classic;
 using org.DownesWard.Traveller.Shared.Classsic;
 using org.DownesWard.Utilities;
@@ -207,6 +208,33 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     Profile.Int.Value = dice.roll(2);
                     Profile.Edu.Value = dice.roll(2);
                     Profile.Soc.Value = dice.roll(2);
+                    break;
+                case Constants.CultureType.Zhodani:
+                    Profile = new ZhodaniUPP();
+                    Profile.Str.Value = dice.roll(2);
+                    Profile.Dex.Value = dice.roll(2);
+                    Profile.End.Value = dice.roll(2);
+                    Profile.Int.Value = dice.roll(2);
+                    Profile.Edu.Value = dice.roll(2);
+                    Profile.Soc.Value = dice.roll(2);
+                    Profile["PSI"].Value = dice.roll(2);
+                    if (Profile["PSI"].Value >= 10 && Profile.Soc.Value < 10)
+                    {
+                        Profile.Soc.Value = 10;
+                    }
+                    if (Profile.Edu.Value > Profile.Soc.Value)
+                    {
+                        Profile.Edu.Value = Profile.Soc.Value;
+                    }
+                    if (Profile.Soc.Value >= 10 && Profile.Edu.Value < 8)
+                    {
+                        Profile.Edu.Value = 8;
+                    }
+                    // TODO: Check this logic
+                    if (Profile.Str.Value + Profile.Dex.Value + Profile.End.Value + Profile.Int.Value < Profile["PSI"].Value)
+                    {
+                        Profile["PSI"].Value = Profile.Str.Value + Profile.Dex.Value + Profile.End.Value + Profile.Int.Value;
+                    }
                     break;
             }
         }

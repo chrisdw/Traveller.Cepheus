@@ -18,6 +18,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Edu = new Skill("EDU", Skill.SkillClass.AttributeChange, 1);
         public static Skill Soc = new Skill("SOC", Skill.SkillClass.AttributeChange, 1);
         public static Skill Chr = new Skill("CHR", Skill.SkillClass.AttributeChange, 1);
+        public static Skill ChrDrop = new Skill("CHR", Skill.SkillClass.AttributeChange, -1);
 
         // Simple skills
         public static Skill Admin = new Skill("Admin", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
