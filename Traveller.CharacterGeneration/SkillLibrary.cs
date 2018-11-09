@@ -49,8 +49,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Mechanical = new Skill("Mechanical", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Medic = new Skill("Medic", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Navigation = new Skill("Navigation", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill NonVerbalComms = new Skill("Non-verbal Communication", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Pilot = new Skill("Pilot", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill Prospecting = new Skill("Prospecting", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Psychology = new Skill("Psychology", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Recon = new Skill("Recon", Skill.SkillClass.Military, 1);
         public static Skill Recruiting = new Skill("Recruiting", Skill.SkillClass.None, 1);
         public static Skill Tactics = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
@@ -154,5 +156,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 new Skill("Repeating Crossbow", Skill.SkillClass.None, 1)
             }
         };
+
+        // Psionic Skills
+        public static Skill Awareness = new Skill("Awareness", Skill.SkillClass.Psionic, 1);
+        public static Skill Clairvoyance = new Skill("Clairvoyance", Skill.SkillClass.Psionic, 1);
+        public static Skill Talent = new Skill("Talent", Skill.SkillClass.Psionic, 1);
+        public static Skill Telekinesis = new Skill("Telekinesis", Skill.SkillClass.Psionic, 1);
+        public static Skill Teleportation = new Skill("Teleportation", Skill.SkillClass.Psionic, 1);
+        public static Skill Psi = new Skill("Psi", Skill.SkillClass.Psionic, 1);
     }
 }

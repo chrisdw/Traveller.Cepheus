@@ -11,6 +11,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Benefit Edu = new Benefit("EDU", 1, Benefit.BenefitType.AttributeModification);
         public static Benefit Soc = new Benefit("SOC", 1, Benefit.BenefitType.AttributeModification);
         public static Benefit Chr = new Benefit("CHR", 1, Benefit.BenefitType.AttributeModification);
+        public static Benefit Psi = new Benefit("PSI", 1, Benefit.BenefitType.AttributeModification);
 
         // Weapon benefits
         public static Benefit Blade = new Benefit("Blade", 1, Benefit.BenefitType.Weapon);
@@ -18,6 +19,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Benefit Weapon = new Benefit("Weapon", 1, Benefit.BenefitType.Weapon);
 
         // Other benefits
+        public static Benefit Legion = new Benefit("Legion", 1, Benefit.BenefitType.Material);
         public static Benefit Instruments = new Benefit("Instruments", 1, Benefit.BenefitType.Material);
         public static Benefit Travellers = new Benefit("Travellers", 1, Benefit.BenefitType.Material);
         public static Benefit Nothing = new Benefit("Nothing", 1, Benefit.BenefitType.Material);

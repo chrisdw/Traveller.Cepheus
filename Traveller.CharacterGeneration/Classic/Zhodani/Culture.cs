@@ -1,5 +1,7 @@
-﻿using System;
+﻿using org.DownesWard.Utilities;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 {
@@ -8,6 +10,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
         public Constants.CultureType Id => Constants.CultureType.Zhodani;
 
         public bool MultipleCareers => false;
+
+        private Dice dice = new Dice(6);
 
         public bool BenefitAllowed(Character character, Benefit benefit)
         {
@@ -50,17 +54,122 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 
         public bool CheckSkill(Character character, Skill skill, int count)
         {
-            throw new NotImplementedException();
+            if (skill.Class == Skill.SkillClass.Psionic)
+            {
+                if (character.Skills.Values.Where(s => s.Class == Skill.SkillClass.Psionic).Count() >= 6)
+                {
+                    skill.Class = Skill.SkillClass.AttributeChange;
+                    skill.Name = "PSI";
+                    if (character.Profile["PSI"].Value < 15)
+                    {
+
+                        skill.Level = 1;
+                    }
+                    else
+                    {
+                        skill.Level = 0;
+                    }
+                }
+                else if (skill.Name.Equals("Talent"))
+                {
+                    var list = character.Skills.Values.Where(s => s.Class == Skill.SkillClass.Psionic).Select(s => s.Name);
+                    var items = new List<string>()
+                    {
+                        "Telepathy",
+                        "Clairvoyance",
+                        "Telekinesis",
+                        "Awareness",
+                        "Teleportation",
+                        "Special"
+                    };
+                    var selectList = items.Except(list);
+                    // TODO: Get the user to select 1
+                }
+                else
+                {
+                    if (character.Skills.Keys.Contains(skill.Name))
+                    {
+                        skill.Class = Skill.SkillClass.AttributeChange;
+                        skill.Name = "PSI";
+                        if (character.Profile["PSI"].Value < 15)
+                        {
+
+                            skill.Level = 1;
+                        }
+                        else
+                        {
+                            skill.Level = 0;
+                        }
+                    }
+                    else
+                    {
+                        skill.Level = character.Profile["PSI"].Value;
+                    }
+                }
+            }
+            else if (skill.Class == Skill.SkillClass.Prole)
+            {
+                if (character.Skills.Values.Where(s => s.Class == Skill.SkillClass.Prole).Count() >= 3)
+                {
+                    var items = character.Skills.Values.Where(s => s.Class == Skill.SkillClass.Prole).Select(s => s.Name);
+                    // TODO: Get user to select 1
+                }
+                else
+                {
+                    var items = new List<string>()
+                    {
+                        "Adminstration",
+                        "Broker",
+                        "Computer",
+                        "Electronics",
+                        "Mechanical",
+                        "Steward",
+                        "Trader"
+                    };
+                    // TODO: Get user to select 1
+                }
+            }
+            else if (skill.Class == Skill.SkillClass.AttributeChange)
+            {
+                if (skill.Name.Equals("EDU"))
+                {
+                    if (character.Profile.Edu.Value + skill.Level > character.Profile.Soc.Value)
+                    {
+                        skill.Level = 0;
+                    }
+                }
+            }
+            return true;
         }
 
         public BasicCareer Drafted(Character character)
         {
-            throw new NotImplementedException();
+            switch (dice.roll(1))
+            {
+                case 2:
+                    return new ConsularGuard() { Culture = this };
+                case 3:
+                    return new Army() { Culture = this };
+                case 5:
+                    return new Government() { Culture = this };
+            }
+            // Should never reach here
+            return new Army() { Culture = this };
         }
 
         public BasicCareer GetBasicCareer(Career.CareerType career)
         {
-            throw new NotImplementedException();
+            switch (career)
+            {
+                case CharacterGeneration.Career.CareerType.Zhodani_Army:
+                    return new Army() { Culture = this };
+                case CharacterGeneration.Career.CareerType.Zhodani_ConsularGuard:
+                    return new ConsularGuard() { Culture = this };
+                case CharacterGeneration.Career.CareerType.Zhodani_Government:
+                    return new Government() { Culture = this };
+                default:
+                    return new Army() { Culture = this };
+            }
         }
 
         public Dictionary<string, Character.Species> Species(Constants.GenerationStyle generationStyle)
