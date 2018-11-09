@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/MigrationBackup/d61545a8/Traveller.CharacterGeneration.UI.WPF
+/MigrationBackup/db7af500/Traveller.SystemGeneration.UI.WPF
+/MigrationBackup
