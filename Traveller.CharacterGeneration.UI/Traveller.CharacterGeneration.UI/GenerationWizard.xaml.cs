@@ -222,6 +222,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     break;
                 case "Zhodani":
                     selectedCulture = new Classic.Zhodani.Culture();
+                    // Psionic training and the like are handled at the "Culture" level
+                    ((Classic.Zhodani.Culture)selectedCulture).SkillOffered += SkillOffered;
                     break;
             }
             if (selectedCulture != null)

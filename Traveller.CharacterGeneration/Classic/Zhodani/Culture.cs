@@ -7,6 +7,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 {
     public class Culture : ICulture
     {
+        public event EventHandler<CharacterGeneration.Career.SkillOfferedEventArgs> SkillOffered;
+
         public Constants.CultureType Id => Constants.CultureType.Zhodani;
 
         public bool MultipleCareers => false;
@@ -83,7 +85,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                         "Special"
                     };
                     var selectList = items.Except(list);
-                    // TODO: Get the user to select 1
+                    var cascade = GetSkill(selectList.ToList(), Skill.SkillClass.Psionic);
+                    OnSkillOffered(cascade, character);
                 }
                 else
                 {
@@ -112,7 +115,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                 if (character.Skills.Values.Where(s => s.Class == Skill.SkillClass.Prole).Count() >= 3)
                 {
                     var items = character.Skills.Values.Where(s => s.Class == Skill.SkillClass.Prole).Select(s => s.Name);
-                    // TODO: Get user to select 1
+                    var cascade = GetSkill(items.ToList(), Skill.SkillClass.Prole);
+                    OnSkillOffered(cascade, character);
                 }
                 else
                 {
@@ -126,7 +130,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                         "Steward",
                         "Trader"
                     };
-                    // TODO: Get user to select 1
+                    var cascade = GetSkill(items, Skill.SkillClass.Prole);
+                    OnSkillOffered(cascade, character);
                 }
             }
             else if (skill.Class == Skill.SkillClass.AttributeChange)
@@ -146,12 +151,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
         {
             switch (dice.roll(1))
             {
+                case 1:
+                    return new Navy() { Culture = this };
                 case 2:
                     return new ConsularGuard() { Culture = this };
                 case 3:
                     return new Army() { Culture = this };
+                case 4:
+                    return new Merchant() { Culture = this };
                 case 5:
                     return new Government() { Culture = this };
+                case 6:
+                    return new Prole() { Culture = this };
             }
             // Should never reach here
             return new Army() { Culture = this };
@@ -167,6 +178,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                     return new ConsularGuard() { Culture = this };
                 case CharacterGeneration.Career.CareerType.Zhodani_Government:
                     return new Government() { Culture = this };
+                case CharacterGeneration.Career.CareerType.Zhodani_Merchant:
+                    return new Merchant() { Culture = this };
+                case CharacterGeneration.Career.CareerType.Zhodani_Navy:
+                    return new Navy() { Culture = this };
+                case CharacterGeneration.Career.CareerType.Zhodani_Prole:
+                    return new Prole() { Culture = this };
                 default:
                     return new Army() { Culture = this };
             }
@@ -183,6 +200,22 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             }
 
             return list;
+        }
+
+        private Skill GetSkill(List<string> names, Skill.SkillClass skillClass)
+        {
+            var cascade = new Skill();
+            foreach (var name in names)
+            {
+                cascade.Cascade.Add(new Skill() { Name = name, Class = skillClass, Level = 1 });
+            }
+            return cascade;
+        }
+
+        protected virtual void OnSkillOffered(Skill skill, Character character)
+        {
+            var e = new CharacterGeneration.Career.SkillOfferedEventArgs() { OfferedSkill = skill, Owner = character };
+            SkillOffered?.Invoke(this, e);
         }
     }
 }

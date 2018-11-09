@@ -50,12 +50,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Medic = new Skill("Medic", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Navigation = new Skill("Navigation", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill NonVerbalComms = new Skill("Non-verbal Communication", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Prole = new Skill("Prole", Skill.SkillClass.Prole, 1, Skill.SkillSex.DontCare);
         public static Skill Pilot = new Skill("Pilot", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill Prospecting = new Skill("Prospecting", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Psychology = new Skill("Psychology", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Recon = new Skill("Recon", Skill.SkillClass.Military, 1);
         public static Skill Recruiting = new Skill("Recruiting", Skill.SkillClass.None, 1);
         public static Skill Tactics = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Trader = new Skill("Trader", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill ShipsBoat = new Skill("Ships Boat", Skill.SkillClass.None, 1);
         public static Skill ShipTactics = new Skill("Ship Tactics", Skill.SkillClass.None, 1);
         public static Skill Steward = new Skill("Steward", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
@@ -162,6 +164,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Clairvoyance = new Skill("Clairvoyance", Skill.SkillClass.Psionic, 1);
         public static Skill Talent = new Skill("Talent", Skill.SkillClass.Psionic, 1);
         public static Skill Telekinesis = new Skill("Telekinesis", Skill.SkillClass.Psionic, 1);
+        public static Skill Telepathy = new Skill("Telepathy", Skill.SkillClass.Psionic, 1);
         public static Skill Teleportation = new Skill("Teleportation", Skill.SkillClass.Psionic, 1);
         public static Skill Psi = new Skill("Psi", Skill.SkillClass.Psionic, 1);
     }
