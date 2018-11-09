@@ -204,10 +204,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 
         private Skill GetSkill(List<string> names, Skill.SkillClass skillClass)
         {
-            var cascade = new Skill();
-            foreach (var name in names)
+            var cascade = new Skill() { Class = skillClass, Level = 1 };
+            if (names.Count > 1)
             {
-                cascade.Cascade.Add(new Skill() { Name = name, Class = skillClass, Level = 1 });
+                foreach (var name in names)
+                {
+                    cascade.Cascade.Add(new Skill() { Name = name, Class = skillClass, Level = 1 });
+                }
+            }
+            else
+            {
+                cascade.Name = names[0];
             }
             return cascade;
         }
