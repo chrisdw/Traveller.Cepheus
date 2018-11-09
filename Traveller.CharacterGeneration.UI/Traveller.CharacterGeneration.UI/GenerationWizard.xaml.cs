@@ -302,19 +302,28 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         }
                         for (var j = 0; j < 4; j++)
                         {
-                            if (career.SkillTables[j].Name.Equals(result))
+                            if (career.SkillTables[j].Available && career.SkillTables[j].Name.Equals(result))
                             {
                                 table = career.SkillTables[j];
+                                break;
                             }
                         }
                     }
 
-                    var die = new Dice(6);
-                    var roll = die.roll() - 1;
-                    roll = roll.Clamp(0, 5);
+                    Skill offeredSkill;
+                    var count = 0;
+                    do
+                    {
+                        count++;
+                        var die = new Dice(6);
+                        var roll = die.roll() - 1;
+                        roll = roll.Clamp(0, 5);
+                        offeredSkill = table.Skills[roll];
+                    } while (!selectedCulture.CheckSkill(character, offeredSkill, count));
+
                     var args = new Career.SkillOfferedEventArgs()
                     {
-                        OfferedSkill = table.Skills[roll],
+                        OfferedSkill = offeredSkill,
                         Owner = character
                     };
                     SkillOffered(this, args);
