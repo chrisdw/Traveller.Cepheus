@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
     {
         public Hunter()
         {
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             enlistment = 9;

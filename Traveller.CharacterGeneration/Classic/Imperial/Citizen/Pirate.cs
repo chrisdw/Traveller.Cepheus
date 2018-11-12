@@ -9,7 +9,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         public Pirate()
         {
             Name = "Pirate";
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             enlistment = 7;
@@ -123,7 +123,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
         protected override void RankSkill()
         {
-            if (CurrentRank == 4)
+            if (RankNumber == 4)
             {
                 Owner.AddSkill(SkillLibrary.Pilot);
             }

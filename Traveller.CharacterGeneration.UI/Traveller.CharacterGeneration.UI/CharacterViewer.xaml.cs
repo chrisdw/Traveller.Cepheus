@@ -1,6 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
-
+using System.Xml;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,8 +20,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
         private void SaveMenu_Activated(object sender, EventArgs e)
         {
-            //var character = BindingContext as Character;
-            //var xml = character.Serialize();
+            var character = BindingContext as Character;
+            var doc = new XmlDocument();
+            character.SaveXML(doc);
+            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "character.xml");
+            var writer = XmlWriter.Create(fileName);
+            doc.WriteTo(writer);
+            writer.Close();
         }
     }
 }

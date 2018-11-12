@@ -23,7 +23,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             hasRanks = false;
 
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             var table = new SkillTable();

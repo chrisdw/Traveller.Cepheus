@@ -10,7 +10,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         {
             Name = "Scientist";
 
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             enlistment = 6;

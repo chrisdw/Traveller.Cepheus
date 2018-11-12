@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
 {
@@ -127,13 +128,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 roll++;
             }
             roll = roll.Clamp(1, Cash.Length);
-            Owner.AddBenefit(new Benefit() { Name = "Cash", Value = Cash[roll-1], TypeOfBenefit = Benefit.BenefitType.Cash });
+            Owner.AddBenefit(new Benefit() { Name = "Cash", Value = Cash[roll - 1], TypeOfBenefit = Benefit.BenefitType.Cash });
         }
 
         public BenefitResolution ResolveMaterialBenefit()
         {
             var result = new BenefitResolution() { pick = BenefitPick.None };
-            
+
             var roll = dice.roll();
             if (Owner.Culture == Constants.CultureType.Darrian)
             {
@@ -150,7 +151,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 }
             }
             roll = roll.Clamp(1, Material.Count);
-            var benefit = Material[roll-1];
+            var benefit = Material[roll - 1];
             result.benefit = benefit;
             if (Culture.BenefitAllowed(Owner, benefit))
             {
@@ -205,5 +206,19 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             SkillOffered?.Invoke(this, e);
         }
 
+        public void SaveXML(XmlElement doc)
+        {
+            var career = doc.OwnerDocument.CreateElement("Career");
+            doc.AppendChild(career);
+            var child = career.OwnerDocument.CreateElement("Name");
+            child.AppendChild(child.OwnerDocument.CreateTextNode(Name));
+            career.AppendChild(child);
+            child = career.OwnerDocument.CreateElement("TermsServed");
+            child.AppendChild(child.OwnerDocument.CreateTextNode(TermsServed.ToString()));
+            career.AppendChild(child);
+            child = career.OwnerDocument.CreateElement("Rank");
+            child.AppendChild(child.OwnerDocument.CreateTextNode(RankNumber.ToString()));
+            career.AppendChild(child);
+        }
     }
 }

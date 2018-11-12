@@ -37,7 +37,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             maxRank = 6;
 
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             var table = new SkillTable();
@@ -113,7 +113,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
         protected override void CommsionSkill()
         {
-            if (!doneOnce && CurrentRank == 1)
+            if (!doneOnce && RankNumber == 1)
             {
                 Owner.AddSkill(SkillLibrary.ShipsBoat);
                 doneOnce = true;

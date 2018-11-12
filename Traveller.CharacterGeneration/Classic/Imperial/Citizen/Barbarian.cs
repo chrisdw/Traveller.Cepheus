@@ -9,7 +9,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         public Barbarian()
         {
             Name = "Barbarian";
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             enlistment = 5;
@@ -98,7 +98,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         }
         protected override void CommsionSkill()
         {
-            CurrentRank = 2;
+            RankNumber = 2;
             OnSkillOffered(SkillLibrary.BladeCombat);
         }
 
@@ -114,7 +114,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
         protected override void RankSkill()
         {
-            CurrentRank = 5;
+            RankNumber = 5;
             Owner.AddSkill(SkillLibrary.Leader);
         }
 

@@ -9,7 +9,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         public BasicMerchants()
         {
             Name = "Merchants";
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             var table = new SkillTable();
@@ -92,7 +92,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         public override bool Commission()
         {
             var commision = false;
-            if (CurrentRank == 0)
+            if (RankNumber == 0)
             {
                 if (Term == 0 && Drafted)
                 {
@@ -108,9 +108,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     if (dice.roll(2) >= target)
                     {
                         commision = true;
-                        CurrentRank = 1;
+                        RankNumber = 1;
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[CurrentRank]));
+                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
                     }
                 }
             }
@@ -165,7 +165,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
         {
             var promote = false;
 
-            if (CurrentRank > 0 && CurrentRank < 5)
+            if (RankNumber > 0 && RankNumber < 5)
             {
                 var target = 10;
                 if (Owner.Profile.Int.Value >= 9)
@@ -175,10 +175,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                 if (dice.roll(2) >= target)
                 {
                     promote = true;
-                    CurrentRank++;
+                    RankNumber++;
                     TermSkills++;
-                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[CurrentRank]));
-                    if (CurrentRank == 4)
+                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[RankNumber]));
+                    if (RankNumber == 4)
                     {
                         Owner.AddSkill(SkillLibrary.Pilot);
                     }

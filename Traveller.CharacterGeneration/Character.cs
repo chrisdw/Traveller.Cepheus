@@ -5,6 +5,7 @@ using org.DownesWard.Traveller.Shared.Classsic;
 using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
 {
@@ -385,6 +386,46 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 attribute.Value += drop;
                 Journal.Add(string.Format("{0} reduced by {1} due to aging", attribute.Name, Math.Abs(drop)));
             }
+        }
+
+        public void SaveXML(XmlDocument doc)
+        {
+            var character = doc.CreateElement("Character");
+            doc.AppendChild(character);
+            var child = character.OwnerDocument.CreateElement("Age");
+            child.AppendChild(child.OwnerDocument.CreateTextNode(Age.ToString()));
+            character.AppendChild(child);
+            child = character.OwnerDocument.CreateElement("Culture");
+            child.AppendChild(child.OwnerDocument.CreateTextNode(Culture.ToString()));
+            character.AppendChild(child);
+            child = character.OwnerDocument.CreateElement("Name");
+            child.AppendChild(child.OwnerDocument.CreateTextNode(Name));
+            character.AppendChild(child);
+            child = character.OwnerDocument.CreateElement("Sex");
+            child.AppendChild(child.OwnerDocument.CreateTextNode(Sex));
+            character.AppendChild(child);
+            child = character.OwnerDocument.CreateElement("Species");
+            child.AppendChild(child.OwnerDocument.CreateTextNode(CharacterSpecies.ToString()));
+            character.AppendChild(child);
+            child = character.OwnerDocument.CreateElement("System");
+            child.AppendChild(child.OwnerDocument.CreateTextNode(Style.ToString()));
+            character.AppendChild(child);
+            var journal = character.OwnerDocument.CreateElement("Journal");
+            foreach (var item in Journal)
+            {
+                child = character.OwnerDocument.CreateElement("JournalItem");
+                child.AppendChild(child.OwnerDocument.CreateTextNode(item));
+                journal.AppendChild(child);
+            }
+            character.AppendChild(journal);
+            // Now save the child collections
+            var careers = character.OwnerDocument.CreateElement("Careers");
+            foreach (var career in Careers)
+            {
+                career.SaveXML(careers);
+            }
+            character.AppendChild(careers);
+
         }
     }
 }

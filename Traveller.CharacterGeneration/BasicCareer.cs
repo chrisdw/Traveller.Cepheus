@@ -4,7 +4,7 @@
     {
         public SkillTable[] SkillTables { get; } = new SkillTable[4];
         public string[] Ranks { get; } = new string[7];
-        public int CurrentRank { get; set; }
+
         public int TermSkills { get; set; }
         public int Term { get; set; }
         public virtual bool Drafted { get; set; }
@@ -56,7 +56,7 @@
         {
             get
             {
-                return Ranks[CurrentRank];
+                return Ranks[RankNumber];
             }
         }
 

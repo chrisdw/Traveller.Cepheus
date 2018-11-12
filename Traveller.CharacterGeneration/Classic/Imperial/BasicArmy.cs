@@ -5,7 +5,7 @@
         public BasicArmy()
         {
             Name = "Army";
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             var table = new SkillTable();
@@ -79,7 +79,7 @@
         public override bool Commission()
         {
             var commision = false;
-            if (CurrentRank == 0)
+            if (RankNumber == 0)
             {
                 if (Term == 0 && Drafted)
                 {
@@ -95,9 +95,9 @@
                     if (dice.roll(2) >= target)
                     {
                         commision = true;
-                        CurrentRank = 1;
+                        RankNumber = 1;
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[CurrentRank]));
+                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
                         Owner.AddSkill(SkillLibrary.SubmachineGun);
                     }
                 }
@@ -158,7 +158,7 @@
         {
             var promote = false;
 
-            if (CurrentRank > 0 && CurrentRank < 6)
+            if (RankNumber > 0 && RankNumber < 6)
             {
                 var target = 6;
                 if (Owner.Profile.Edu.Value >= 7)
@@ -168,9 +168,9 @@
                 if (dice.roll(2) >= target)
                 {
                     promote = true;
-                    CurrentRank++;
+                    RankNumber++;
                     TermSkills++;
-                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[CurrentRank]));
+                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[RankNumber]));
                 }
             }
             return promote;

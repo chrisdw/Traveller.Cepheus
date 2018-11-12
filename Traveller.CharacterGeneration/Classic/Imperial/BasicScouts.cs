@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 {
     public class BasicScouts : BasicCareer
     {
         public BasicScouts()
         {
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
+            Name = "Scouts";
 
             var table = new SkillTable();
             SkillTables[0] = table;

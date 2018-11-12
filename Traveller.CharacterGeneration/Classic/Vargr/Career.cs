@@ -54,7 +54,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             {
                 return false;
             }
-            if (CurrentRank == 0)
+            if (RankNumber == 0)
             {
                 if (Term == 0 && Drafted)
                 {
@@ -83,10 +83,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
                     }
                     if (dice.roll(2) >= target)
                     {
-                        CurrentRank = 1;
+                        RankNumber = 1;
                         CommsionSkill();
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[CurrentRank]));
+                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
                         return true;
                     }
                     else
@@ -202,7 +202,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             }
             if (hasRanks)
             {
-                CurrentRank = (CurrentRank + success.RankChange).Clamp(0, maxRank);
+                RankNumber = (RankNumber + success.RankChange).Clamp(0, maxRank);
                 if (success.RankChange < 0)
                 {
                     Owner.Journal.Add(string.Format("You were demoted to {0}", RankName));
@@ -233,15 +233,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
         public override int MusterOutRolls()
         {
             var rolls = TermsServed;
-            if (CurrentRank == 1 || CurrentRank == 2)
+            if (RankNumber == 1 || RankNumber == 2)
             {
                 rolls++;
             }
-            else if (CurrentRank == 3 || CurrentRank == 4)
+            else if (RankNumber == 3 || RankNumber == 4)
             {
                 rolls += 2;
             }
-            else if (CurrentRank > 5)
+            else if (RankNumber > 5)
             {
                 rolls += 3;
             }

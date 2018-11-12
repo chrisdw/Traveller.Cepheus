@@ -9,7 +9,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         public Sailor()
         {
             Name = "Sailor";
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             enlistment = 6;

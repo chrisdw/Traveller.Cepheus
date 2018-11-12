@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
     {
         public Belter()
         {
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 3;
 
             enlistment = 5;

@@ -29,7 +29,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             maxRank = 5;
 
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             var table = new SkillTable();
@@ -117,7 +117,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
         protected override void RankSkill()
         {
-            if (!doneOnce && CurrentRank == 4)
+            if (!doneOnce && RankNumber == 4)
             {
                 Owner.AddSkill(SkillLibrary.Pilot);
                 doneOnce = true;

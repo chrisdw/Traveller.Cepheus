@@ -9,7 +9,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         public Noble()
         {
             Name = "Noble";
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             enlistment = 7;
@@ -112,7 +112,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
         protected override void RankSkill()
         {
-            Owner.Profile["SOC"].Value = CurrentRank + 10;
+            Owner.Profile["SOC"].Value = RankNumber + 10;
         }
 
         public override bool Enlist()

@@ -65,7 +65,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             {
                 return false;
             }
-            if (CurrentRank == 0)
+            if (RankNumber == 0)
             {
                 if (Term == 0 && Drafted)
                 {
@@ -94,10 +94,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                     }
                     if (dice.roll(2) >= target)
                     {
-                        CurrentRank = 1;
+                        RankNumber = 1;
                         CommsionSkill();
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[CurrentRank]));
+                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
                         return true;
                     }
                     else
@@ -161,7 +161,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
         {
             var promote = false;
 
-            if (!doingGames && CurrentRank > 0 && CurrentRank < 6 && hasRanks)
+            if (!doingGames && RankNumber > 0 && RankNumber < 6 && hasRanks)
             {
                 var target = promotion;
                 if (Owner.Profile[promotion1attr].Value >= promotion1val)
@@ -171,10 +171,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                 if (dice.roll(2) >= target)
                 {
                     promote = true;
-                    CurrentRank++;
+                    RankNumber++;
                     RankSkill();
                     TermSkills++;
-                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[CurrentRank]));
+                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[RankNumber]));
                 }
             }
             return promote;

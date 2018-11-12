@@ -29,7 +29,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             maxRank = 6;
 
-            CurrentRank = 0;
+            RankNumber = 0;
             TermSkills = 2;
 
             var table = new SkillTable();
@@ -118,7 +118,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
         protected override void RankSkill()
         {
-            if (!doneOnce && CurrentRank == 5)
+            if (!doneOnce && RankNumber == 5)
             {
                 Owner.Profile["CHR"].Value++;
                 doneOnce = true;
