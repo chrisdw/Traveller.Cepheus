@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 {
@@ -41,6 +39,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
         protected abstract void RankSkill();
         protected abstract int EnlistFactor();
         protected abstract void CommsionSkill();
+
+        public event EventHandler PsionicGamesOffered;
+        public event EventHandler PsionicTrainingOffered;
 
         public override Renlistment CanRenlist()
         {
@@ -179,6 +180,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             return promote;
         }
 
+        public void PsionicGames()
+        {
+            doingGames = true;
+        }
+
+
         public override bool Survival()
         {
             var survive = false;
@@ -188,6 +195,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                 if (dice.roll(3) <= Owner.Profile["PSI"].Value)
                 {
                     // Find out if they want to attend the psionic games
+                    EventArgs e = new EventArgs();
+                    PsionicGamesOffered?.Invoke(this, e);
                 }
             }
             if (doingGames)
@@ -222,6 +231,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             base.EndTerm();
             if (!trained)
             {
+                Owner.Journal.Add("PSI reduced by 1 at end of term as not trained.");
                 Owner.Profile["PSI"].Value--;
             }
         }
@@ -296,6 +306,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                 return;
             }
             // TODO: Get the user to pick talents
+            trained = true;
         }
     }
 }

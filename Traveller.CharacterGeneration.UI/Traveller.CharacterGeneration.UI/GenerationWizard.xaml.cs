@@ -48,6 +48,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             var skill = e.OfferedSkill;
             var skills = e.OfferedSkill.ResolveSkill();
 
+            // TODO: Work out why this is needed
+            if (skill.Name.Equals("Prole"))
+            {
+                return;
+            }
             await semaphore.WaitAsync();
             try
             {
@@ -126,6 +131,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         } while (character.Careers.Contains(career));
                         career.Owner = character;
                         career.Drafted = true;
+                        character.Journal.Add($"Drafted into {career.Name}");
                         await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Drafted, career.Name), Properties.Resources.Button_OK);
                         character.Careers.Add(career);
                         await ResolveBasicCareer(character, career);
@@ -147,9 +153,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     }
                 }
             } while (keepgoing);
-            // check to see if the total of skill levels is greater than the sum of
+            // check to see if the total of skill levels in non-psionic skills is greater than the sum of
             // int and edu, if it is they have to be reduced
-            var total = character.Skills.Values.Sum(a => a.Level);
+            var total = character.Skills.Values.Where(a => a.Class != Skill.SkillClass.Psionic).Sum(a => a.Level);
             if (total > character.Profile.Int.Value + character.Profile.Edu.Value)
             {
                 // Need to reduce skills count
@@ -157,7 +163,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 var skillView = new SkillView(character);
                 await Navigation.PushModalAsync(skillView);
             }
-            var characterView = new NavigationPage(new CharacterViewer(character));
+            var characterView = new CharacterViewer(character);
             await Navigation.PushAsync(characterView);
         }
 
@@ -253,8 +259,25 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             }
         }
 
+        private void DoPsionicGames(object sender, EventArgs e)
+        {
+            Classic.Zhodani.Career career = sender as Classic.Zhodani.Career;
+            var result = DisplayAlert(Properties.Resources.Title_App,
+                "Do you want to attend the psionic games",
+                Properties.Resources.Button_Yes,
+                Properties.Resources.Button_No).Result;
+            if (result)
+            {
+                career.PsionicGames();
+            }
+        }
         private async Task ResolveBasicCareer(Character character, BasicCareer career)
         {
+            if (career is Classic.Zhodani.Career)
+            {
+                var zc = career as Classic.Zhodani.Career;
+                zc.PsionicGamesOffered += DoPsionicGames;
+            }
             var keepGoing = true;
             do
             {
@@ -318,7 +341,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         var die = new Dice(6);
                         var roll = die.roll() - 1;
                         roll = roll.Clamp(0, 5);
-                        offeredSkill = table.Skills[roll];
+                        // Because culture rules can modify the skill "on the fly" we work with a clone
+                        offeredSkill = table.Skills[roll].Clone();
                     } while (!selectedCulture.CheckSkill(character, offeredSkill, count));
 
                     var args = new Career.SkillOfferedEventArgs()
