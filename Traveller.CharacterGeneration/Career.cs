@@ -126,6 +126,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             {
                 roll++;
             }
+            roll = roll.Clamp(1, Cash.Length);
             Owner.AddBenefit(new Benefit() { Name = "Cash", Value = Cash[roll-1], TypeOfBenefit = Benefit.BenefitType.Cash });
         }
 

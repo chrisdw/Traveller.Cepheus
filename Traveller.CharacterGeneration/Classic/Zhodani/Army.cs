@@ -126,7 +126,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             set
             {
                 base.Owner = value;
-                if (Owner.Profile.Soc.Value >- 10)
+                if (Owner.Profile.Soc.Value >= 10)
                 {
                     Ranks[0] = "Subaltern";
                 }

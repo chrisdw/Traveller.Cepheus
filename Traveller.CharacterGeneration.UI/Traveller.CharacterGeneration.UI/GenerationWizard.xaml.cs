@@ -49,7 +49,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             var skills = e.OfferedSkill.ResolveSkill();
 
             // TODO: Work out why this is needed
-            if (skill.Name.Equals("Prole"))
+            if (skill.Name.Equals("Prole") || skill.Name.Equals("Talent") || skill.Name.Equals("Psi"))
             {
                 return;
             }
@@ -262,14 +262,22 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         private void DoPsionicGames(object sender, EventArgs e)
         {
             Classic.Zhodani.Career career = sender as Classic.Zhodani.Career;
-            var result = DisplayAlert(Properties.Resources.Title_App,
-                "Do you want to attend the psionic games",
-                Properties.Resources.Button_Yes,
-                Properties.Resources.Button_No).Result;
-            if (result)
-            {
-                career.PsionicGames();
-            }
+
+            // No idea how to get this to do what I want
+            //var task = Task.Run(async () =>
+            //{
+            //    var result = await DisplayAlert(Properties.Resources.Title_App,
+            //        "Do you want to attend the psionic games",
+            //        Properties.Resources.Button_Yes,
+            //        Properties.Resources.Button_No);
+            //    if (result)
+            //    {
+            //        career.PsionicGames();
+            //    }
+            //});
+            //Device.BeginInvokeOnMainThread(() => { 
+            //    task.Wait();
+            //});
         }
         private async Task ResolveBasicCareer(Character character, BasicCareer career)
         {
