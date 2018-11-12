@@ -24,7 +24,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             var doc = new XmlDocument();
             character.SaveXML(doc);
             string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "character.xml");
-            var writer = XmlWriter.Create(fileName);
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.IndentChars = ("\t");
+            settings.OmitXmlDeclaration = true;
+            var writer = XmlWriter.Create(fileName, settings);
             doc.WriteTo(writer);
             writer.Close();
         }
