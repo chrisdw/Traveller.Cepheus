@@ -105,6 +105,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             return rolls;
         }
 
+        public virtual int MaxCashRolls()
+        {
+            return 3;
+        }
+
         public void MusterOut()
         {
             if (Retired)

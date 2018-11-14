@@ -412,7 +412,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             var muster = career.MusterOutRolls();
             if (muster > 0)
             {
-                var cashRolls = muster.Clamp(0, 3);
+                var maxCashRolls = career.MaxCashRolls();
+                var cashRolls = muster.Clamp(0, maxCashRolls);
                 await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Prompt_Benefit_Rolls, muster, cashRolls), Properties.Resources.Button_OK);
                 for (var i = 0; i < muster; i++)
                 {

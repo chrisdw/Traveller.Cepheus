@@ -87,5 +87,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic
         {
             return Math.Max(TermsServed - 4, 0);
         }
+
+        public override int MaxCashRolls()
+        {
+            return 0;
+        }
     }
 }
