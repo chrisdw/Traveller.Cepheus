@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
 {
-    public class Career
+    public abstract class Career
     {
         public class SkillOfferedEventArgs
         {
@@ -82,6 +82,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public int RankNumber { get; set; }
         public bool Retired { get; set; }
         public ICulture Culture { get; set; }
+
+        abstract public string RankName { get; }
 
         protected Dice dice = new Dice(6);
 
@@ -209,16 +211,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public void SaveXML(XmlElement doc)
         {
             var career = doc.OwnerDocument.CreateElement("Career");
+            career.SetAttribute("Name", Name);
+            career.SetAttribute("TermsServer", TermsServed.ToString());
+            career.SetAttribute("Rank", RankNumber.ToString());
+            career.SetAttribute("RankName", RankName);
             doc.AppendChild(career);
-            var child = career.OwnerDocument.CreateElement("Name");
-            child.AppendChild(child.OwnerDocument.CreateTextNode(Name));
-            career.AppendChild(child);
-            child = career.OwnerDocument.CreateElement("TermsServed");
-            child.AppendChild(child.OwnerDocument.CreateTextNode(TermsServed.ToString()));
-            career.AppendChild(child);
-            child = career.OwnerDocument.CreateElement("Rank");
-            child.AppendChild(child.OwnerDocument.CreateTextNode(RankNumber.ToString()));
-            career.AppendChild(child);
         }
     }
 }

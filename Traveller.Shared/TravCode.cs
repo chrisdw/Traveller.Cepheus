@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Xml;
 using org.DownesWard.Utilities;
 
 namespace org.DownesWard.Traveller.Shared
@@ -89,6 +90,16 @@ namespace org.DownesWard.Traveller.Shared
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public virtual void SaveXML(XmlElement ele)
+        {
+            var code = ele.OwnerDocument.CreateElement("Code");
+            code.SetAttribute("Name", Name);
+            code.SetAttribute("ShortName", ShortName);
+            code.SetAttribute("Value", Value.ToString());
+            code.SetAttribute("Modifier", Modifier.ToString());
+            ele.AppendChild(code);
         }
     }
 }

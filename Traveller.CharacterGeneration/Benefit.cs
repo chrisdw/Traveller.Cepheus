@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
 {
@@ -54,6 +55,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 default:
                     return new List<string>();
             }
+        }
+
+        public void SaveXML(XmlElement ele)
+        {
+            var benefit = ele.OwnerDocument.CreateElement("Benefit");
+            benefit.SetAttribute("Name", Name);
+            benefit.SetAttribute("Value", Value.ToString());
+            benefit.SetAttribute("Type", TypeOfBenefit.ToString());
+            ele.AppendChild(benefit);
         }
     }
 }

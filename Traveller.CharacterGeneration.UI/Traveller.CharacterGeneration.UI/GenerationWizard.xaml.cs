@@ -131,7 +131,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         } while (character.Careers.Contains(career));
                         career.Owner = character;
                         career.Drafted = true;
-                        character.Journal.Add($"Drafted into {career.Name}");
+                        character.Journal.Add(string.Format(Properties.Resources.Jrn_Drafted, career.Name));
                         await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Drafted, career.Name), Properties.Resources.Button_OK);
                         character.Careers.Add(career);
                         await ResolveBasicCareer(character, career);

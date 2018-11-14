@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
 {
@@ -148,6 +149,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 cascade.Add(skill.Clone());
             }
             return clone;
+        }
+
+        public void SaveXML(XmlElement ele)
+        {
+            var skill = ele.OwnerDocument.CreateElement("Skill");
+            skill.SetAttribute("Name", Name);
+            skill.SetAttribute("Level", Level.ToString());
+            ele.AppendChild(skill);
         }
     }
 }

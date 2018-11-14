@@ -419,13 +419,31 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             }
             character.AppendChild(journal);
             // Now save the child collections
+            // Attributes
+            var attribs = character.OwnerDocument.CreateElement("Attributes");
+            Profile.SaveXML(attribs);
+            character.AppendChild(attribs);
+            // Skills
+            var skills = character.OwnerDocument.CreateElement("Skills");
+            foreach (var skill in Skills.Values)
+            {
+                skill.SaveXML(skills);
+            }
+            character.AppendChild(skills);
+            // Careers
             var careers = character.OwnerDocument.CreateElement("Careers");
             foreach (var career in Careers)
             {
                 career.SaveXML(careers);
             }
             character.AppendChild(careers);
-
+            // Benefits
+            var benefits = character.OwnerDocument.CreateElement("Benefits");
+            foreach(var benefit in Benefits.Values)
+            {
+                benefit.SaveXML(benefits);
+            }
+            character.AppendChild(benefits);
         }
     }
 }

@@ -135,6 +135,9 @@
   <data name="Jrn_Died" xml:space="preserve">
     <value>Died at age {0}</value>
   </data>
+  <data name="Jrn_Drafted" xml:space="preserve">
+    <value>Drafted into {0}</value>
+  </data>
   <data name="Jrn_Killed" xml:space="preserve">
     <value>Killed at age {0}</value>
   </data>
@@ -162,8 +165,14 @@
   <data name="Prompt_Benefit_Rolls" xml:space="preserve">
     <value>You have {0} benefits rolls, no more than {1} can be on the cash table</value>
   </data>
+  <data name="Prompt_CharacterName" xml:space="preserve">
+    <value>Please supply a character name.</value>
+  </data>
   <data name="Prompt_Draft" xml:space="preserve">
     <value>You could not enlist. Submit to the draft?</value>
+  </data>
+  <data name="Prompt_FileExists" xml:space="preserve">
+    <value>File already exists. Overwrite?</value>
   </data>
   <data name="Prompt_Renlist" xml:space="preserve">
     <value>You are now {0}. Do you want to re-enlist?</value>

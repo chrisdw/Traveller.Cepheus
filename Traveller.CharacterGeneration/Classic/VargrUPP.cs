@@ -1,4 +1,5 @@
-﻿using org.DownesWard.Traveller.Shared.Properties;
+﻿using System.Xml;
+using org.DownesWard.Traveller.Shared.Properties;
 
 namespace org.DownesWard.Traveller.Shared.Classic
 {
@@ -24,6 +25,12 @@ namespace org.DownesWard.Traveller.Shared.Classic
         public override string SocialUPP()
         {
             return Int.ToString() + Edu.ToString() + Soc.ToString() + Chr.ToString();
+        }
+
+        public override void SaveXML(XmlElement ele)
+        {
+            base.SaveXML(ele);
+            Chr.SaveXML(ele);
         }
     }
  }

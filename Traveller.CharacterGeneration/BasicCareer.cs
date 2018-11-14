@@ -52,7 +52,7 @@
             }
         }
 
-        public string RankName
+        public override string RankName
         {
             get
             {

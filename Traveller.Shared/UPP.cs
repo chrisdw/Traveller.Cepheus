@@ -1,5 +1,6 @@
 ﻿using org.DownesWard.Traveller.Shared.Properties;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.Shared
 {
@@ -53,6 +54,16 @@ namespace org.DownesWard.Traveller.Shared
             {
                 return PhysicalUPP() + SocialUPP();
             }
+        }
+
+        public virtual void SaveXML(XmlElement ele)
+        {
+            Str.SaveXML(ele);
+            Dex.SaveXML(ele);
+            End.SaveXML(ele);
+            Int.SaveXML(ele);
+            Edu.SaveXML(ele);
+            Soc.SaveXML(ele);
         }
     }
 }

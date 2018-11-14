@@ -115,6 +115,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Drafted into {0}.
+        /// </summary>
+        internal static string Jrn_Drafted {
+            get {
+                return ResourceManager.GetString("Jrn_Drafted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Killed at age {0}.
         /// </summary>
         internal static string Jrn_Killed {
@@ -196,11 +205,29 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please supply a character name..
+        /// </summary>
+        internal static string Prompt_CharacterName {
+            get {
+                return ResourceManager.GetString("Prompt_CharacterName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You could not enlist. Submit to the draft?.
         /// </summary>
         internal static string Prompt_Draft {
             get {
                 return ResourceManager.GetString("Prompt_Draft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File already exists. Overwrite?.
+        /// </summary>
+        internal static string Prompt_FileExists {
+            get {
+                return ResourceManager.GetString("Prompt_FileExists", resourceCulture);
             }
         }
         

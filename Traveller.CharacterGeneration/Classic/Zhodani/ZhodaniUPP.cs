@@ -3,6 +3,7 @@ using org.DownesWard.Traveller.Shared.Properties;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 {
@@ -28,6 +29,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
         public override string SocialUPP()
         {
             return string.Format("{0}{1}{2}-{3}", Int.ToString(), Edu.ToString(), Soc.ToString(), Psi.ToString());
+        }
+
+        public override void SaveXML(XmlElement ele)
+        {
+            base.SaveXML(ele);
+            Psi.SaveXML(ele);
         }
     }
 }

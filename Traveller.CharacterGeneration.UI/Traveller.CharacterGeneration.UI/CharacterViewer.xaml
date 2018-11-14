@@ -9,7 +9,7 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Name"/>
-                <Label Text="{Binding Name}"/>
+                <Entry Text="{Binding Name, Mode=TwoWay}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Sex"/>
