@@ -129,6 +129,12 @@
   <data name="UPP_Attr_Endurance" xml:space="preserve">
     <value>Endurance</value>
   </data>
+  <data name="UPP_Attr_HitsD" xml:space="preserve">
+    <value>Hits to Die</value>
+  </data>
+  <data name="UPP_Attr_HitsU" xml:space="preserve">
+    <value>Hits to Unconcious</value>
+  </data>
   <data name="UPP_Attr_Intelligence" xml:space="preserve">
     <value>Intelligence</value>
   </data>

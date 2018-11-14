@@ -23,6 +23,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Benefit Instruments = new Benefit("Instruments", 1, Benefit.BenefitType.Material);
         public static Benefit Travellers = new Benefit("Travellers", 1, Benefit.BenefitType.Material);
         public static Benefit Nothing = new Benefit("Nothing", 1, Benefit.BenefitType.Material);
+        public static Benefit Verbalization = new Benefit("Verbalization", 1, Benefit.BenefitType.Skill);
+        public static Benefit WaldoSet = new Benefit("Waldo Set", 1, Benefit.BenefitType.Material);
         public static Benefit Watch = new Benefit("Watch", 1, Benefit.BenefitType.Material);
 
         // Tickets

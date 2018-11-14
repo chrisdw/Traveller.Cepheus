@@ -97,6 +97,24 @@ namespace org.DownesWard.Traveller.Shared.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hits to Die.
+        /// </summary>
+        public static string UPP_Attr_HitsD {
+            get {
+                return ResourceManager.GetString("UPP_Attr_HitsD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hits to Unconcious.
+        /// </summary>
+        public static string UPP_Attr_HitsU {
+            get {
+                return ResourceManager.GetString("UPP_Attr_HitsU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Intelligence.
         /// </summary>
         public static string UPP_Attr_Intelligence {

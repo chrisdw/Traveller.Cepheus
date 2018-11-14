@@ -28,6 +28,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Brawling = new Skill("Brawling", Skill.SkillClass.None, 1);
         public static Skill Bribery = new Skill("Bribery", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
         public static Skill Carousing = new Skill("Carousing", Skill.SkillClass.None, 1);
+        public static Skill CombatEngineering = new Skill("Combat Engineering", Skill.SkillClass.Military, 1);
         public static Skill Communications = new Skill("Communications", Skill.SkillClass.None, 1);
         public static Skill Computer = new Skill("Computer", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Demolitions = new Skill("Demolitions", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
@@ -167,5 +168,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Telepathy = new Skill("Telepathy", Skill.SkillClass.Psionic, 1);
         public static Skill Teleportation = new Skill("Teleportation", Skill.SkillClass.Psionic, 1);
         public static Skill Psi = new Skill("Psi", Skill.SkillClass.Psionic, 1);
+
+        // Dolphin Specific Skills
+        public static Skill HitsU = new Skill("HitsU", Skill.SkillClass.AttributeChange, 1);
+        public static Skill Herding = new Skill("Herding", Skill.SkillClass.None, 1);
+        public static Skill WaldoOps = new Skill("Waldo Ops", Skill.SkillClass.None, 1);
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 {
     public class Barbarian : Career
     {

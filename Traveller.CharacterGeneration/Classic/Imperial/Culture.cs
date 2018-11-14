@@ -25,9 +25,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             return true;
         }
 
-        public Dictionary<string, Career.CareerType> Careers(Character character)
+        public Dictionary<string, CharacterGeneration.Career.CareerType> Careers(Character character)
         {
-            var careers = new Dictionary<string, Career.CareerType>();
+            var careers = new Dictionary<string, CharacterGeneration.Career.CareerType>();
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
@@ -35,56 +35,57 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     {
                         case Character.Species.AelYael:
                             // Won't join merchants or become noble
-                            careers.Add("Army", Career.CareerType.Imperial_Army);
-                            careers.Add("Marines", Career.CareerType.Imperial_Marines);
-                            careers.Add("Navy", Career.CareerType.Imperial_Navy);
-                            careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
+                            careers.Add("Army", CharacterGeneration.Career.CareerType.Imperial_Army);
+                            careers.Add("Marines", CharacterGeneration.Career.CareerType.Imperial_Marines);
+                            careers.Add("Navy", CharacterGeneration.Career.CareerType.Imperial_Navy);
+                            careers.Add("Scouts", CharacterGeneration.Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
                                 AddCitizenCareersExceptNoble(careers);
                             }
                             else
                             {
-                                careers.Add("Other", Career.CareerType.Imperial_Other);
+                                careers.Add("Other", CharacterGeneration.Career.CareerType.Imperial_Other);
                             }
                             break;
                         case Character.Species.Virushi:
                             // No military careers or noble
-                            careers.Add("Merchants", Career.CareerType.Imperial_Merchants);
-                            careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
+                            careers.Add("Merchants", CharacterGeneration.Career.CareerType.Imperial_Merchants);
+                            careers.Add("Scouts", CharacterGeneration.Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
                                 AddCitizenCareersExceptNoble(careers);
                             }
                             else
                             {
-                                careers.Add("Other", Career.CareerType.Imperial_Other);
+                                careers.Add("Other", CharacterGeneration.Career.CareerType.Imperial_Other);
                             }
                             break;
                         case Character.Species.Dolphin:
-                            // TODO: Unique careers
+                            careers.Add("Civilian", CharacterGeneration.Career.CareerType.Dolphin_Civilian);
+                            careers.Add("Military", CharacterGeneration.Career.CareerType.Dolphin_Military);
                             break;
                         default:
-                            careers.Add("Army", Career.CareerType.Imperial_Army);
-                            careers.Add("Marines", Career.CareerType.Imperial_Marines);
-                            careers.Add("Navy", Career.CareerType.Imperial_Navy);
-                            careers.Add("Merchants", Career.CareerType.Imperial_Merchants);
-                            careers.Add("Scouts", Career.CareerType.Imperial_Scouts);
+                            careers.Add("Army", CharacterGeneration.Career.CareerType.Imperial_Army);
+                            careers.Add("Marines", CharacterGeneration.Career.CareerType.Imperial_Marines);
+                            careers.Add("Navy", CharacterGeneration.Career.CareerType.Imperial_Navy);
+                            careers.Add("Merchants", CharacterGeneration.Career.CareerType.Imperial_Merchants);
+                            careers.Add("Scouts", CharacterGeneration.Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
                                 AddCitizenCareersExceptNoble(careers);
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {
-                                    careers.Add("Corsair", Career.CareerType.Vargr_Corsair);
+                                    careers.Add("Corsair", CharacterGeneration.Career.CareerType.Vargr_Corsair);
                                 }
                                 if (character.Profile.Soc.Value > 10)
                                 {
-                                    careers.Add("Noble", Career.CareerType.Citizen_Noble);
+                                    careers.Add("Noble", CharacterGeneration.Career.CareerType.Citizen_Noble);
                                 }
                             }
                             else
                             {
-                                careers.Add("Other", Career.CareerType.Imperial_Other);
+                                careers.Add("Other", CharacterGeneration.Career.CareerType.Imperial_Other);
                             }
                             break;
                     }
@@ -93,19 +94,19 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             return careers;
         }
 
-        private static void AddCitizenCareersExceptNoble(Dictionary<string, Career.CareerType> careers)
+        private static void AddCitizenCareersExceptNoble(Dictionary<string, CharacterGeneration.Career.CareerType> careers)
         {
-            careers.Add("Barbarian", Career.CareerType.Citizen_Barbarian);
-            careers.Add("Belter", Career.CareerType.Citizen_Belter);
-            careers.Add("Bureaucrat", Career.CareerType.Citizen_Bureaucrat);
-            careers.Add("Diplomat", Career.CareerType.Citizen_Diplomat);
-            careers.Add("Doctor", Career.CareerType.Citizen_Doctor);
-            careers.Add("Flyer", Career.CareerType.Citizen_Flyer);
-            careers.Add("Hunter", Career.CareerType.Citizen_Hunter);
-            careers.Add("Pirate", Career.CareerType.Citizen_Pirate);
-            careers.Add("Rogue", Career.CareerType.Citizen_Rogue);
-            careers.Add("Sailor", Career.CareerType.Citizen_Sailor);
-            careers.Add("Scientist", Career.CareerType.Citizen_Scientist);
+            careers.Add("Barbarian", CharacterGeneration.Career.CareerType.Citizen_Barbarian);
+            careers.Add("Belter", CharacterGeneration.Career.CareerType.Citizen_Belter);
+            careers.Add("Bureaucrat", CharacterGeneration.Career.CareerType.Citizen_Bureaucrat);
+            careers.Add("Diplomat", CharacterGeneration.Career.CareerType.Citizen_Diplomat);
+            careers.Add("Doctor", CharacterGeneration.Career.CareerType.Citizen_Doctor);
+            careers.Add("Flyer", CharacterGeneration.Career.CareerType.Citizen_Flyer);
+            careers.Add("Hunter", CharacterGeneration.Career.CareerType.Citizen_Hunter);
+            careers.Add("Pirate", CharacterGeneration.Career.CareerType.Citizen_Pirate);
+            careers.Add("Rogue", CharacterGeneration.Career.CareerType.Citizen_Rogue);
+            careers.Add("Sailor", CharacterGeneration.Career.CareerType.Citizen_Sailor);
+            careers.Add("Scientist", CharacterGeneration.Career.CareerType.Citizen_Scientist);
         }
 
         public bool CheckSkill(Character character, Skill skill, int count)
@@ -172,48 +173,52 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             return check;
         }
 
-        public BasicCareer GetBasicCareer(Career.CareerType career)
+        public BasicCareer GetBasicCareer(CharacterGeneration.Career.CareerType career)
         {
             switch (career)
             {
-                case Career.CareerType.Imperial_Marines:
+                case CharacterGeneration.Career.CareerType.Imperial_Marines:
                     return new BasicMarines() { Culture = this };
-                case Career.CareerType.Imperial_Army:
+                case CharacterGeneration.Career.CareerType.Imperial_Army:
                     return new BasicArmy() { Culture = this };
-                case Career.CareerType.Imperial_Navy:
+                case CharacterGeneration.Career.CareerType.Imperial_Navy:
                     return new BasicNavy() { Culture = this };
-                case Career.CareerType.Imperial_Merchants:
+                case CharacterGeneration.Career.CareerType.Imperial_Merchants:
                     return new BasicMerchants() { Culture = this };
-                case Career.CareerType.Imperial_Scouts:
+                case CharacterGeneration.Career.CareerType.Imperial_Scouts:
                     return new BasicScouts() { Culture = this };
-                case Career.CareerType.Imperial_Other:
+                case CharacterGeneration.Career.CareerType.Imperial_Other:
                     return new BasicOther() { Culture = this };
-                case Career.CareerType.Citizen_Barbarian:
+                case CharacterGeneration.Career.CareerType.Citizen_Barbarian:
                     return new Citizen.Barbarian() { Culture = this };
-                case Career.CareerType.Citizen_Belter:
+                case CharacterGeneration.Career.CareerType.Citizen_Belter:
                     return new Citizen.Belter() { Culture = this };
-                case Career.CareerType.Citizen_Bureaucrat:
+                case CharacterGeneration.Career.CareerType.Citizen_Bureaucrat:
                     return new Citizen.Bureaucrat() { Culture = this };
-                case Career.CareerType.Citizen_Diplomat:
+                case CharacterGeneration.Career.CareerType.Citizen_Diplomat:
                     return new Citizen.Diplomat() { Culture = this };
-                case Career.CareerType.Citizen_Doctor:
+                case CharacterGeneration.Career.CareerType.Citizen_Doctor:
                     return new Citizen.Doctor() { Culture = this };
-                case Career.CareerType.Citizen_Flyer:
+                case CharacterGeneration.Career.CareerType.Citizen_Flyer:
                     return new Citizen.Flyer() { Culture = this };
-                case Career.CareerType.Citizen_Hunter:
+                case CharacterGeneration.Career.CareerType.Citizen_Hunter:
                     return new Citizen.Hunter() { Culture = this };
-                case Career.CareerType.Citizen_Noble:
+                case CharacterGeneration.Career.CareerType.Citizen_Noble:
                     return new Citizen.Noble() { Culture = this };
-                case Career.CareerType.Citizen_Pirate:
+                case CharacterGeneration.Career.CareerType.Citizen_Pirate:
                     return new Citizen.Pirate() { Culture = this };
-                case Career.CareerType.Citizen_Rogue:
+                case CharacterGeneration.Career.CareerType.Citizen_Rogue:
                     return new Citizen.Rogue() { Culture = this };
-                case Career.CareerType.Citizen_Sailor:
+                case CharacterGeneration.Career.CareerType.Citizen_Sailor:
                     return new Citizen.Sailor() { Culture = this };
-                case Career.CareerType.Citizen_Scientist:
+                case CharacterGeneration.Career.CareerType.Citizen_Scientist:
                     return new Citizen.Scientist() { Culture = this };
-                case Career.CareerType.Vargr_Corsair:
+                case CharacterGeneration.Career.CareerType.Vargr_Corsair:
                     return new Corsair(Corsair.Mode.Imperial) { Culture = this };
+                case CharacterGeneration.Career.CareerType.Dolphin_Civilian:
+                    return new Dolphin.Civilian() { Culture = this };
+                case CharacterGeneration.Career.CareerType.Dolphin_Military:
+                    return new Dolphin.Military() { Culture = this };
                 default:
                     return new BasicArmy() { Culture = this };
             }

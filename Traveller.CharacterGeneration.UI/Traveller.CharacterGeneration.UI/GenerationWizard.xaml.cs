@@ -410,66 +410,69 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
             career.MusterOut();
             var muster = career.MusterOutRolls();
-            var cashRolls = muster.Clamp(0, 3);
-            await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Prompt_Benefit_Rolls, muster, cashRolls), Properties.Resources.Button_OK);
-            for (var i = 0; i < muster; i++)
+            if (muster > 0)
             {
-                if (cashRolls > 0)
+                var cashRolls = muster.Clamp(0, 3);
+                await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Prompt_Benefit_Rolls, muster, cashRolls), Properties.Resources.Button_OK);
+                for (var i = 0; i < muster; i++)
                 {
-                    var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Benefit_Table,
-                        null, null, Properties.Resources.Benefit_Cash, Properties.Resources.Benefit_Material);
-                    if (result.Equals(Properties.Resources.Benefit_Cash))
+                    if (cashRolls > 0)
                     {
-                        cashRolls--;
-                        career.ResolveCashBenefit();
-                    }
-                    else
-                    {
-                        var picks = career.ResolveMaterialBenefit();
-                        if (picks.pick.HasFlag(Career.BenefitPick.Skill) && picks.pick.HasFlag(Career.BenefitPick.Weapon))
+                        var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Benefit_Table,
+                            null, null, Properties.Resources.Benefit_Cash, Properties.Resources.Benefit_Material);
+                        if (result.Equals(Properties.Resources.Benefit_Cash))
                         {
+                            cashRolls--;
+                            career.ResolveCashBenefit();
+                        }
+                        else
+                        {
+                            var picks = career.ResolveMaterialBenefit();
+                            if (picks.pick.HasFlag(Career.BenefitPick.Skill) && picks.pick.HasFlag(Career.BenefitPick.Weapon))
+                            {
 
-                            // need to decide between skill or weapon
-                            var picked = await DisplayAlert(Properties.Resources.Title_App, Properties.Resources.Prompt_Weapon_Skill, Properties.Resources.Button_Yes, Properties.Resources.Button_No);
+                                // need to decide between skill or weapon
+                                var picked = await DisplayAlert(Properties.Resources.Title_App, Properties.Resources.Prompt_Weapon_Skill, Properties.Resources.Button_Yes, Properties.Resources.Button_No);
 
-                            var list = Benefit.GetWeaponList(picks.benefit);
-                            var title = string.Empty;
-                            if (picked)
-                            {
-                                title = Properties.Resources.Prompt_Select_Skill;
+                                var list = Benefit.GetWeaponList(picks.benefit);
+                                var title = string.Empty;
+                                if (picked)
+                                {
+                                    title = Properties.Resources.Prompt_Select_Skill;
+                                }
+                                else
+                                {
+                                    title = Properties.Resources.Prompt_Select_Weapon;
+                                }
+                                var selected = await DisplayActionSheet(title, null, null, list.ToArray());
+                                if (picked)
+                                {
+                                    character.AddSkill(new Skill() { Level = 1, Name = selected });
+                                }
+                                else
+                                {
+                                    character.AddBenefit(new Benefit() { Name = selected, TypeOfBenefit = Benefit.BenefitType.Weapon, Value = 1 });
+                                }
                             }
-                            else
+                            else if (picks.pick == Career.BenefitPick.Skill)
                             {
-                                title = Properties.Resources.Prompt_Select_Weapon;
-                            }
-                            var selected = await DisplayActionSheet(title, null, null, list.ToArray());
-                            if (picked)
-                            {
+                                var list = Benefit.GetWeaponList(picks.benefit);
+                                var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill, null, null, list.ToArray());
                                 character.AddSkill(new Skill() { Level = 1, Name = selected });
                             }
-                            else
+                            else if (picks.pick == Career.BenefitPick.Weapon)
                             {
+                                // select a class of weapon
+                                var list = Benefit.GetWeaponList(picks.benefit);
+                                var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Weapon, null, null, list.ToArray());
                                 character.AddBenefit(new Benefit() { Name = selected, TypeOfBenefit = Benefit.BenefitType.Weapon, Value = 1 });
                             }
                         }
-                        else if (picks.pick == Career.BenefitPick.Skill)
-                        {
-                            var list = Benefit.GetWeaponList(picks.benefit);
-                            var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill, null, null, list.ToArray());
-                            character.AddSkill(new Skill() { Level = 1, Name = selected });
-                        }
-                        else if (picks.pick == Career.BenefitPick.Weapon)
-                        {
-                            // select a class of weapon
-                            var list = Benefit.GetWeaponList(picks.benefit);
-                            var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Weapon, null, null, list.ToArray());
-                            character.AddBenefit(new Benefit() { Name = selected, TypeOfBenefit = Benefit.BenefitType.Weapon, Value = 1 });
-                        }
                     }
-                }
-                else
-                {
-                    career.ResolveMaterialBenefit();
+                    else
+                    {
+                        career.ResolveMaterialBenefit();
+                    }
                 }
             }
         }

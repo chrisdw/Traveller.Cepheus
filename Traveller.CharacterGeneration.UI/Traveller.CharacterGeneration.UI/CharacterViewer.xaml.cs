@@ -54,5 +54,28 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             doc.WriteTo(writer);
             writer.Close();
         }
+
+        private async void LoadMenu_Activated(object sender, EventArgs e)
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            // Get list of files in directory 
+            var files = Directory.GetFiles(path, "*.xml");
+            // Present list to user to select one
+            var filenames = files.Select(f => Path.GetFileNameWithoutExtension(f)).ToArray();
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                var result = await DisplayActionSheet("Select a character", null, null, filenames);
+                if (result != null)
+                {
+                    // Open file
+                    var pathname = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), result + ".xml");
+                    var reader = XmlReader.Create(pathname);
+                    var doc = new XmlDocument();
+                    doc.Load(reader);
+                    // Get XML and look to see what the base character we need is
+                    // Load the character from that XML
+                }
+            });
+        }
     }
 }

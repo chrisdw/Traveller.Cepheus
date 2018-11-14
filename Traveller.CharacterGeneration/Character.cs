@@ -143,6 +143,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
                             break;
+                        case Species.Dolphin:
+                            Profile = new DolphinUPP();
+                            Profile.Int.Value = dice.roll(2) - 2;
+                            Profile["HitsU"].Value = dice.roll(6);
+                            Profile["HitsD"].Value = dice.roll(3);
+                            break;
                     }
                     break;
                 case Constants.CultureType.Darrian:
@@ -324,6 +330,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                         CheckAttribute(Profile.End, 8, -1);
                     }
                     break;
+                case Species.Dolphin:
+                    if (Age >= 30)
+                    {
+                        CheckAttribute(Profile["HITSU"], 8, -1);
+                    }
+                    break;
                 default:
                     if (Age >= 66)
                     {
@@ -346,33 +358,40 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     }
                     break;
             }
-            // Any ageable attributes reduced to 0
-            if (Profile.Str.Value == 0 || Profile.Dex.Value == 0 || Profile.End.Value == 0 || Profile.Int.Value == 0)
+            if (CharacterSpecies != Species.Dolphin) // Dolphins are treated as animals
             {
-                // Possible aging crisis
-                if (dice.roll(2) >= 8)
+                // Any ageable attributes reduced to 0
+                if (Profile.Str.Value == 0 || Profile.Dex.Value == 0 || Profile.End.Value == 0 || Profile.Int.Value == 0)
                 {
-                    if (Profile.Str.Value == 0)
+                    // Possible aging crisis
+                    if (dice.roll(2) >= 8)
                     {
-                        Profile.Str.Value = 1;
+                        if (Profile.Str.Value == 0)
+                        {
+                            Profile.Str.Value = 1;
+                        }
+                        if (Profile.Dex.Value == 0)
+                        {
+                            Profile.Dex.Value = 1;
+                        }
+                        if (Profile.End.Value == 0)
+                        {
+                            Profile.End.Value = 1;
+                        }
+                        if (Profile.Int.Value == 0)
+                        {
+                            Profile.Int.Value = 1;
+                        }
+                        Journal.Add(string.Format("You were ill for {0} months due to aging.", dice.roll()));
                     }
-                    if (Profile.Dex.Value == 0)
+                    else
                     {
-                        Profile.Dex.Value = 1;
+                        result = false;
                     }
-                    if (Profile.End.Value == 0)
-                    {
-                        Profile.End.Value = 1;
-                    }
-                    if (Profile.Int.Value == 0)
-                    {
-                        Profile.Int.Value = 1;
-                    }
-                    Journal.Add(string.Format("You were ill for {0} months due to aging.", dice.roll()));
                 }
                 else
                 {
-                    result = false;
+                    return Profile["HITSU"].Value != 0;
                 }
             }
             return result;

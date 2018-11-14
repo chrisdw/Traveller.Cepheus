@@ -66,6 +66,14 @@
           <source>Psionics</source>
           <target state="new">Psionics</target>
         </trans-unit>
+        <trans-unit id="UPP_Attr_HitsD" translate="yes" xml:space="preserve">
+          <source>Hits to Die</source>
+          <target state="new">Hits to Die</target>
+        </trans-unit>
+        <trans-unit id="UPP_Attr_HitsU" translate="yes" xml:space="preserve">
+          <source>Hits to Unconcious</source>
+          <target state="new">Hits to Unconcious</target>
+        </trans-unit>
       </group>
     </body>
   </file>

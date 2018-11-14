@@ -18,18 +18,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.SwordWorlds
             return true;
         }
 
-        public Dictionary<string, Career.CareerType> Careers(Character character)
+        public Dictionary<string, CharacterGeneration.Career.CareerType> Careers(Character character)
         {
-            var careers = new Dictionary<string, Career.CareerType>();
+            var careers = new Dictionary<string, CharacterGeneration.Career.CareerType>();
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    careers.Add("Army", Career.CareerType.Imperial_Army);
-                    careers.Add("Marines", Career.CareerType.Imperial_Marines);
-                    careers.Add("Navy", Career.CareerType.Imperial_Navy);
-                    careers.Add("Merchants", Career.CareerType.Imperial_Merchants);
-                    careers.Add("Patrol", Career.CareerType.SwordWorlds_Patrol);
-                    careers.Add("Other", Career.CareerType.Imperial_Other);
+                    careers.Add("Army", CharacterGeneration.Career.CareerType.Imperial_Army);
+                    careers.Add("Marines", CharacterGeneration.Career.CareerType.Imperial_Marines);
+                    careers.Add("Navy", CharacterGeneration.Career.CareerType.Imperial_Navy);
+                    careers.Add("Merchants", CharacterGeneration.Career.CareerType.Imperial_Merchants);
+                    careers.Add("Patrol", CharacterGeneration.Career.CareerType.SwordWorlds_Patrol);
+                    careers.Add("Other", CharacterGeneration.Career.CareerType.Imperial_Other);
                     break;
             }
             return careers;
@@ -61,21 +61,21 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.SwordWorlds
             return new Imperial.BasicArmy() { Culture = this };
         }
 
-        public BasicCareer GetBasicCareer(Career.CareerType career)
+        public BasicCareer GetBasicCareer(CharacterGeneration.Career.CareerType career)
         {
             switch (career)
             {
-                case Career.CareerType.Imperial_Marines:
+                case CharacterGeneration.Career.CareerType.Imperial_Marines:
                     return new Imperial.BasicMarines() { Culture = this };
-                case Career.CareerType.Imperial_Army:
+                case CharacterGeneration.Career.CareerType.Imperial_Army:
                     return new Imperial.BasicArmy() { Culture = this };
-                case Career.CareerType.Imperial_Navy:
+                case CharacterGeneration.Career.CareerType.Imperial_Navy:
                     return new Imperial.BasicNavy() { Culture = this };
-                case Career.CareerType.Imperial_Merchants:
+                case CharacterGeneration.Career.CareerType.Imperial_Merchants:
                     return new Imperial.BasicMerchants() { Culture = this };
-                case Career.CareerType.SwordWorlds_Patrol:
+                case CharacterGeneration.Career.CareerType.SwordWorlds_Patrol:
                     return new Patrol() { Culture = this };
-                case Career.CareerType.Imperial_Other:
+                case CharacterGeneration.Career.CareerType.Imperial_Other:
                     return new Imperial.BasicOther() { Culture = this };
                 default:
                     return new Imperial.BasicArmy() { Culture = this };
