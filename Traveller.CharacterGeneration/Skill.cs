@@ -158,5 +158,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             skill.SetAttribute("Level", Level.ToString());
             ele.AppendChild(skill);
         }
+
+        public static Skill Load(XmlElement element)
+        {
+            var skill = new Skill
+            {
+                Name = element.GetAttribute("Name"),
+                Level = int.Parse(element.GetAttribute("Level"))
+            };
+            return skill;
+        }
     }
 }

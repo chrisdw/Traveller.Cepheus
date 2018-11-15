@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Xml;
 
@@ -217,10 +218,32 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         {
             var career = doc.OwnerDocument.CreateElement("Career");
             career.SetAttribute("Name", Name);
-            career.SetAttribute("TermsServer", TermsServed.ToString());
+            career.SetAttribute("TermsServed", TermsServed.ToString());
             career.SetAttribute("Rank", RankNumber.ToString());
             career.SetAttribute("RankName", RankName);
+            career.SetAttribute("Implmentation", GetType().FullName);
             doc.AppendChild(career);
+        }
+
+        public void LoadXML(XmlElement doc)
+        {
+            Name = doc.GetAttribute("Name");
+            RankNumber = int.Parse(doc.GetAttribute("Rank"));
+            TermsServed = int.Parse(doc.GetAttribute("TermsServed"));
+        }
+
+        public static Career Load(XmlElement element)
+        {
+            var name = element.GetAttribute("Implmentation");
+            var assembly = Assembly.GetExecutingAssembly();
+
+            var type = assembly.GetTypes()
+                .First(t => t.FullName == name);
+
+            var career = Activator.CreateInstance(type) as Career;
+            career.LoadXML(element);
+
+            return career;
         }
     }
 }

@@ -3,6 +3,7 @@ using org.DownesWard.Traveller.Shared.Properties;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 
 namespace org.DownesWard.Traveller.Shared.Classsic
 {
@@ -39,6 +40,20 @@ namespace org.DownesWard.Traveller.Shared.Classsic
         public override string SocialUPP()
         {
             return Int.ToString();
+        }
+
+        public override void SaveXML(XmlElement ele)
+        {
+            base.SaveXML(ele);
+            HitsU.SaveXML(ele);
+            HitsD.SaveXML(ele);
+        }
+
+        public override void LoadXML(XmlElement ele)
+        {
+            base.LoadXML(ele);
+            HitsU.LoadXML(ele);
+            HitsD.LoadXML(ele);
         }
     }
 }

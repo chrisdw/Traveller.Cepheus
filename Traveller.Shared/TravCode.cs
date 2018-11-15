@@ -101,5 +101,11 @@ namespace org.DownesWard.Traveller.Shared
             code.SetAttribute("Modifier", Modifier.ToString());
             ele.AppendChild(code);
         }
+
+        public virtual void LoadXML(XmlElement ele)
+        {
+            var code = ele.SelectSingleNode(string.Format("Code[@Name='{0}']", Name)) as XmlElement;
+            Value = int.Parse(code.GetAttribute("Value"));
+        }
     }
 }

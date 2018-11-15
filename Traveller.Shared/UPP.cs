@@ -65,5 +65,15 @@ namespace org.DownesWard.Traveller.Shared
             Edu.SaveXML(ele);
             Soc.SaveXML(ele);
         }
+
+        public virtual void LoadXML(XmlElement ele)
+        {
+            Str.LoadXML(ele);
+            Dex.LoadXML(ele);
+            End.LoadXML(ele);
+            Int.LoadXML(ele);
+            Edu.LoadXML(ele);
+            Soc.LoadXML(ele);
+        }
     }
 }

@@ -9,19 +9,19 @@
     <ContentPage Title="Overview">
         <StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Name"/>
-                <Entry Text="{Binding Name, Mode=TwoWay}"/>
+                <Label Text="Name" WidthRequest="160"/>
+                <Entry Text="{Binding Name, Mode=TwoWay}" WidthRequest="200"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Sex"/>
+                <Label Text="Sex" WidthRequest="160"/>
                 <Label Text="{Binding Sex}"/>
             </StackLayout>            
             <StackLayout Orientation="Horizontal">
-                <Label Text="UPP"/>
+                <Label Text="UPP" WidthRequest="160"/>
                 <Label Text="{Binding Profile.Display}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Age"/>
+                <Label Text="Age" WidthRequest="160"/>
                 <Label Text="{Binding Age}"/>
             </StackLayout>
         </StackLayout>
@@ -69,7 +69,7 @@
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{Binding Name}" WidthRequest="160"/>
                                 <Label Text="{Binding RankName}" WidthRequest="160"/>
-                                <Label Text="{Binding Term}" />
+                                <Label Text="{Binding TermsServed}" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

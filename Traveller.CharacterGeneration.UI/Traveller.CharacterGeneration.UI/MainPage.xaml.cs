@@ -23,5 +23,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         {
             await Navigation.PushAsync(new GenerationWizard());
         }
+
+        private async void View_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CharacterViewer(null));
+        }
     }
 }

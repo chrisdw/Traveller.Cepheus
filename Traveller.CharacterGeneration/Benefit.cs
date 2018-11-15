@@ -65,5 +65,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             benefit.SetAttribute("Type", TypeOfBenefit.ToString());
             ele.AppendChild(benefit);
         }
+
+        public static Benefit Load(XmlElement element)
+        {
+            var benefit = new Benefit
+            {
+                Name = element.GetAttribute("Name"),
+                Value = int.Parse(element.GetAttribute("Value"))
+            };
+            Enum.TryParse(element.GetAttribute("Type"), out BenefitType benefitType);
+            benefit.TypeOfBenefit = benefitType;
+            return benefit;
+        }
     }
 }

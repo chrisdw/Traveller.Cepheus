@@ -13,9 +13,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 		public CharacterViewer (Character character)
 		{
 			InitializeComponent ();
-            BindingContext = character;
-            SkillsView.ItemsSource = character.Skills.Values.OrderBy(s => s.Name);
-            BenefitsView.ItemsSource = character.Benefits.Values.OrderBy(b => b.Name);
+            if (character != null)
+            {
+                BindingContext = character;
+                SkillsView.ItemsSource = character.Skills.Values.OrderBy(s => s.Name);
+                BenefitsView.ItemsSource = character.Benefits.Values.OrderBy(b => b.Name);
+            }
 		}
 
         private async void SaveMenu_Activated(object sender, EventArgs e)
@@ -55,7 +58,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             writer.Close();
         }
 
-        private async void LoadMenu_Activated(object sender, EventArgs e)
+        private void LoadMenu_Activated(object sender, EventArgs e)
         {
             var path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
             // Get list of files in directory 
@@ -74,6 +77,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     doc.Load(reader);
                     // Get XML and look to see what the base character we need is
                     // Load the character from that XML
+                    var character = Character.Load(doc);
+                    BindingContext = character;
+                    SkillsView.ItemsSource = character.Skills.Values.OrderBy(s => s.Name);
+                    BenefitsView.ItemsSource = character.Benefits.Values.OrderBy(b => b.Name);
                 }
             });
         }

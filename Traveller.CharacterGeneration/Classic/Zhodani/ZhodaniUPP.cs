@@ -36,5 +36,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             base.SaveXML(ele);
             Psi.SaveXML(ele);
         }
+
+        public override void LoadXML(XmlElement ele)
+        {
+            base.LoadXML(ele);
+            Psi.LoadXML(ele);
+        }
     }
 }

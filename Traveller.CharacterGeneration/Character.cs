@@ -389,10 +389,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                         result = false;
                     }
                 }
-                else
-                {
-                    return Profile["HITSU"].Value != 0;
-                }
+            }
+            else
+            {
+                return Profile["HITSU"].Value != 0;
             }
             return result;
         }
@@ -463,6 +463,104 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 benefit.SaveXML(benefits);
             }
             character.AppendChild(benefits);
+        }
+        public static Character Load(XmlDocument doc)
+        {
+            var styleStr = doc.GetElementsByTagName("System")[0].InnerText;
+            var character = new Character();
+            Enum.TryParse(styleStr, out Constants.GenerationStyle style);
+            character.Style = style;
+
+            var cultureStr = doc.GetElementsByTagName("Culture")[0].InnerText;
+            Enum.TryParse(cultureStr, out Constants.CultureType culture);
+            character.Culture = culture;
+
+            var speciesStr = doc.GetElementsByTagName("Species")[0].InnerText;
+            Enum.TryParse(speciesStr, out Species species);
+            character.CharacterSpecies = species;
+
+            character.Sex = doc.GetElementsByTagName("Sex")[0].InnerText;
+            character.Name = doc.GetElementsByTagName("Name")[0].InnerText;
+            character.Age = int.Parse(doc.GetElementsByTagName("Age")[0].InnerText);
+
+            // Now have enough to generate the correct profile
+            switch (character.CharacterSpecies)
+            {
+                case Species.Human_Imperial:
+                    // use the standard UPP
+                    character.Profile = new UPP();
+                    break;
+                case Species.Bwap:
+                    character.Profile = new UPP();
+                    break;
+                case Species.Aslan:
+                    character.Profile = new AslanUPP();
+                    break;
+                case Species.Vargr:
+                    character.Profile = new VargrUPP();
+                    break;
+                case Species.AelYael:
+                    character.Profile = new UPP();
+                    break;
+                case Species.Virushi:
+                    character.Profile = new VirushiUPP();
+                    break;
+                case Species.Vegan:
+                    character.Profile = new UPP();
+                    break;
+                case Species.Dolphin:
+                    character.Profile = new DolphinUPP();
+                    break;
+                case Species.Human_Solomani:
+                    character.Profile = new UPP();
+                    break;
+                case Species.Human_SwordWorlds:
+                    character.Profile = new UPP();
+                    break;
+                case Species.Human_Darrian:
+                    character.Profile = new UPP();
+                    break;
+                case Species.Human_Dynchia:
+                    character.Profile = new UPP();
+                    break;
+                case Species.Human_Zhodani:
+                    character.Profile = new ZhodaniUPP();
+                    break;
+                default:
+                    character.Profile = new UPP();
+                    break;
+            }
+
+            var attribs = doc.GetElementsByTagName("Attributes")[0] as XmlElement;
+            character.Profile.LoadXML(attribs);
+
+            var journalItems = doc.GetElementsByTagName("JournalItem");
+            foreach (var item in journalItems)
+            {
+                var journal = item as XmlElement;
+                character.Journal.Add(journal.InnerText);
+            }
+            var careers = doc.GetElementsByTagName("Career");
+            foreach (var item in careers)
+            {
+                var career = item as XmlElement;
+                character.Careers.Add(Career.Load(career));
+            }
+
+            var skills = doc.GetElementsByTagName("Skill");
+            foreach (var item in skills)
+            {
+                var skill = item as XmlElement;
+                character.AddSkill(Skill.Load(skill));
+            }
+
+            var benefits = doc.GetElementsByTagName("Benefit");
+            foreach (var item in benefits)
+            {
+                var benefit = item as XmlElement;
+                character.AddBenefit(Benefit.Load(benefit));
+            }
+            return character;
         }
     }
 }

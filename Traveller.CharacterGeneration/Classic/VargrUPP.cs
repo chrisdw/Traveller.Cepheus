@@ -32,5 +32,11 @@ namespace org.DownesWard.Traveller.Shared.Classic
             base.SaveXML(ele);
             Chr.SaveXML(ele);
         }
+
+        public override void LoadXML(XmlElement ele)
+        {
+            base.LoadXML(ele);
+            Chr.LoadXML(ele);
+        }
     }
  }
