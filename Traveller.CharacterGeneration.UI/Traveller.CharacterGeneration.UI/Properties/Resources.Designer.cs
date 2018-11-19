@@ -169,6 +169,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Received Psionic Training.
+        /// </summary>
+        internal static string Msg_Psionic_Training {
+            get {
+                return ResourceManager.GetString("Msg_Psionic_Training", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Received skill {0} level {1}..
         /// </summary>
         internal static string Msg_Skill_Received {
@@ -255,6 +264,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         internal static string Prompt_Select_Career {
             get {
                 return ResourceManager.GetString("Prompt_Select_Career", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a psionic talent.
+        /// </summary>
+        internal static string Prompt_Select_Psionic {
+            get {
+                return ResourceManager.GetString("Prompt_Select_Psionic", resourceCulture);
             }
         }
         

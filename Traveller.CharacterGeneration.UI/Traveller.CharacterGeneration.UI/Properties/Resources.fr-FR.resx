@@ -84,4 +84,19 @@
   <data name="Msg_Skill_Received" xml:space="preserve">
     <value>Reçu le niveau de compétence de {0} {1}.</value>
   </data>
+  <data name="Prompt_CharacterName" xml:space="preserve">
+    <value>Fournissez un nom de personnage.</value>
+  </data>
+  <data name="Prompt_FileExists" xml:space="preserve">
+    <value>Le fichier existe déjà. Écraser ?</value>
+  </data>
+  <data name="Jrn_Drafted" xml:space="preserve">
+    <value>Enrôlé dans {0}</value>
+  </data>
+  <data name="Msg_Psionic_Training" xml:space="preserve">
+    <value>Ont reçu une formation psionique</value>
+  </data>
+  <data name="Prompt_Select_Psionic" xml:space="preserve">
+    <value>Sélectionnez un talent psionique</value>
+  </data>
 </root>

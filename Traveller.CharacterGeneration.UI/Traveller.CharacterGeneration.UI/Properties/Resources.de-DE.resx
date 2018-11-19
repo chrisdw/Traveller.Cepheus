@@ -84,4 +84,19 @@
   <data name="Msg_Skill_Received" xml:space="preserve">
     <value>Erhielt Spielstärke {0} {1}.</value>
   </data>
+  <data name="Prompt_CharacterName" xml:space="preserve">
+    <value>Bitte geben Sie einen Charakternamen.</value>
+  </data>
+  <data name="Prompt_FileExists" xml:space="preserve">
+    <value>Datei ist bereits vorhanden. Überschreiben?</value>
+  </data>
+  <data name="Jrn_Drafted" xml:space="preserve">
+    <value>{0} eingezogen</value>
+  </data>
+  <data name="Msg_Psionic_Training" xml:space="preserve">
+    <value>Psionische geschult</value>
+  </data>
+  <data name="Prompt_Select_Psionic" xml:space="preserve">
+    <value>Wählen Sie ein PSI-talent</value>
+  </data>
 </root>

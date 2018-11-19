@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
@@ -305,8 +306,28 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                 trained = true;
                 return;
             }
-            // TODO: Get the user to pick talents
+            // Find out if they want to attend the psionic games
+            EventArgs e = new EventArgs();
+            PsionicTrainingOffered?.Invoke(this, e);
             trained = true;
+        }
+
+        public List<Tuple<Skill, int>> GetTalentsList()
+        {
+            var talentList = new List<Tuple<Skill, int>>()
+            {
+                new Tuple<Skill, int>(SkillLibrary.Telepathy.Clone(), 4),
+                new Tuple<Skill, int>(SkillLibrary.Clairvoyance.Clone(), 5),
+                new Tuple<Skill, int>(SkillLibrary.Telekinesis.Clone(), 5),
+                new Tuple<Skill, int>(SkillLibrary.Awareness.Clone(), 6),
+                new Tuple<Skill, int>(SkillLibrary.Teleportation.Clone(), 7),
+                new Tuple<Skill, int>(SkillLibrary.Special.Clone(), 9),
+            };
+
+            // Remove all the skills the owner already has
+            var psiSkills = Owner.Skills.Values.Where(x => x.Class == Skill.SkillClass.Psionic).Select(s => s.Name);
+            talentList.RemoveAll(s => psiSkills.Contains(s.Item1.Name));
+            return talentList;
         }
     }
 }

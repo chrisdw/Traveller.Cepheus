@@ -153,6 +153,9 @@
   <data name="Msg_Killed" xml:space="preserve">
     <value>Your character was killed at age {0}.</value>
   </data>
+  <data name="Msg_Psionic_Training" xml:space="preserve">
+    <value>Received Psionic Training</value>
+  </data>
   <data name="Msg_Skill_Received" xml:space="preserve">
     <value>Received skill {0} level {1}.</value>
   </data>
@@ -182,6 +185,9 @@
   </data>
   <data name="Prompt_Select_Career" xml:space="preserve">
     <value>Select a career</value>
+  </data>
+  <data name="Prompt_Select_Psionic" xml:space="preserve">
+    <value>Select a psionic talent</value>
   </data>
   <data name="Prompt_Select_Skill" xml:space="preserve">
     <value>Select a skill</value>

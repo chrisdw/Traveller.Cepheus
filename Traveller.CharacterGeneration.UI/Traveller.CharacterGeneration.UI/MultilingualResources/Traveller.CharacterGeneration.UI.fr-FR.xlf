@@ -104,15 +104,23 @@
         </trans-unit>
         <trans-unit id="Prompt_CharacterName" translate="yes" xml:space="preserve">
           <source>Please supply a character name.</source>
-          <target state="new">Please supply a character name.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fournissez un nom de personnage.</target>
         </trans-unit>
         <trans-unit id="Prompt_FileExists" translate="yes" xml:space="preserve">
           <source>File already exists. Overwrite?</source>
-          <target state="new">File already exists. Overwrite?</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le fichier existe déjà. Écraser ?</target>
         </trans-unit>
         <trans-unit id="Jrn_Drafted" translate="yes" xml:space="preserve">
           <source>Drafted into {0}</source>
-          <target state="new">Drafted into {0}</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Enrôlé dans {0}</target>
+        </trans-unit>
+        <trans-unit id="Msg_Psionic_Training" translate="yes" xml:space="preserve">
+          <source>Received Psionic Training</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ont reçu une formation psionique</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Select_Psionic" translate="yes" xml:space="preserve">
+          <source>Select a psionic talent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sélectionnez un talent psionique</target>
         </trans-unit>
       </group>
     </body>

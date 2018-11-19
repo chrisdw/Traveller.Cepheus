@@ -110,6 +110,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Career, null, null, careerList.ToArray());
                 var career = selectedCulture.GetBasicCareer(clist[selected]);
                 career.SkillOffered += SkillOffered;
+                if (career is Classic.Zhodani.Career)
+                {
+                    var zc = career as Classic.Zhodani.Career;
+                    zc.PsionicGamesOffered += DoPsionicGames;
+                    zc.PsionicTrainingOffered += DoPsionicTraining;
+                }
                 career.Owner = character;
                 if (career.Enlist())
                 {
@@ -279,13 +285,33 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             //    task.Wait();
             //});
         }
+
+        private async void DoPsionicTraining(object sender, EventArgs e)
+        {
+            var die = new Dice(6);
+            var zc = sender as Classic.Zhodani.Career;
+            zc.Owner.Journal.Add(Properties.Resources.Msg_Psionic_Training);
+            var talents = zc.GetTalentsList();
+            var top = talents.Count;
+            for (int i = 0; i < top; i++)
+            {
+                var names = talents.Select(s => s.Item1.Name).ToArray();
+                var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Psionic, null, null, names);
+                var selected = talents.FirstOrDefault(s => s.Item1.Name == result);
+                if (selected != null)
+                {
+                    if (die.roll(2) - i >= selected.Item2)
+                    {
+                        selected.Item1.Level = zc.Owner.Profile["PSI"].Value;
+                        zc.Owner.AddSkill(selected.Item1);
+                    }
+                }
+                talents = zc.GetTalentsList();
+            }
+        }
+
         private async Task ResolveBasicCareer(Character character, BasicCareer career)
         {
-            if (career is Classic.Zhodani.Career)
-            {
-                var zc = career as Classic.Zhodani.Career;
-                zc.PsionicGamesOffered += DoPsionicGames;
-            }
             var keepGoing = true;
             do
             {

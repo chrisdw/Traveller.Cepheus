@@ -164,6 +164,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Awareness = new Skill("Awareness", Skill.SkillClass.Psionic, 1);
         public static Skill Clairvoyance = new Skill("Clairvoyance", Skill.SkillClass.Psionic, 1);
         public static Skill Talent = new Skill("Talent", Skill.SkillClass.Psionic, 1);
+        public static Skill Special = new Skill("Special", Skill.SkillClass.Psionic, 1);
         public static Skill Telekinesis = new Skill("Telekinesis", Skill.SkillClass.Psionic, 1);
         public static Skill Telepathy = new Skill("Telepathy", Skill.SkillClass.Psionic, 1);
         public static Skill Teleportation = new Skill("Teleportation", Skill.SkillClass.Psionic, 1);
