@@ -57,7 +57,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             skills[2] = SkillLibrary.Bribery;
             skills[3] = SkillLibrary.Carousing;
             skills[4] = SkillLibrary.Liason;
-            skills[5] = SkillLibrary.ShipTactics;
+            skills[5] = SkillLibrary.Tactics;
 
             table = new SkillTable();
             SkillTables[3] = table;
