@@ -221,7 +221,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             career.SetAttribute("TermsServed", TermsServed.ToString());
             career.SetAttribute("Rank", RankNumber.ToString());
             career.SetAttribute("RankName", RankName);
-            career.SetAttribute("Implmentation", GetType().FullName);
+            career.SetAttribute("Implmentation", GetType().AssemblyQualifiedName);
             doc.AppendChild(career);
         }
 
@@ -235,10 +235,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Career Load(XmlElement element)
         {
             var name = element.GetAttribute("Implmentation");
-            var assembly = Assembly.GetExecutingAssembly();
 
-            var type = assembly.GetTypes()
-                .First(t => t.FullName == name);
+            var type = Type.GetType(name);
 
             var career = Activator.CreateInstance(type) as Career;
             career.LoadXML(element);
