@@ -208,7 +208,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     //Cultures.Add("Solomani");
                     //Cultures.Add("Aslan");
                     Cultures.Add("Vargr");
-                    //Cultures.Add("Darrian");
+                    Cultures.Add("Darrian");
                     Cultures.Add("Sword Worlds");
                     //Cultures.Add("Droyne");
                     Cultures.Add("Dynchia");
@@ -225,6 +225,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         UseCitizenRules = GenerationConfiguration.UseCitizens
                     };
+                    break;
+                case "Darrian":
+                    selectedCulture = new Classic.Darrian.Culture();
                     break;
                 case "Dynchia":
                     selectedCulture = new Classic.Dynchia.Culture();
