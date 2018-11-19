@@ -8,8 +8,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
     {
         // Attribute Modifications
         public static Benefit Int = new Benefit("INT", 1, Benefit.BenefitType.AttributeModification);
+        public static Benefit Int2 = new Benefit("INT", 2, Benefit.BenefitType.AttributeModification);
         public static Benefit Edu = new Benefit("EDU", 1, Benefit.BenefitType.AttributeModification);
+        public static Benefit Edu2 = new Benefit("EDU", 2, Benefit.BenefitType.AttributeModification);
         public static Benefit Soc = new Benefit("SOC", 1, Benefit.BenefitType.AttributeModification);
+        public static Benefit Soc2 = new Benefit("SOC", 2, Benefit.BenefitType.AttributeModification);
         public static Benefit Chr = new Benefit("CHR", 1, Benefit.BenefitType.AttributeModification);
         public static Benefit Psi = new Benefit("PSI", 1, Benefit.BenefitType.AttributeModification);
 

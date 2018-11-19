@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
 {
     public class Navy : Imperial.Citizen.Career
     {
@@ -82,7 +78,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
             Material.Add(BenefitLibrary.Weapon);
             Material.Add(BenefitLibrary.Voucher);
             Material.Add(BenefitLibrary.Voucher);
-            Material.Add(BenefitLibrary.Soc);
+            Material.Add(BenefitLibrary.Soc2);
 
             Cash[0] = 1000;
             Cash[1] = 1000;

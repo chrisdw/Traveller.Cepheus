@@ -1,7 +1,5 @@
 ﻿using org.DownesWard.Utilities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
 {
@@ -83,6 +81,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
                     return new Navy() { Culture = this };
                 case 2:
                     return new SpecialArm() { Culture = this };
+                case 3:
+                    return new Army() { Culture = this };
+                case 4:
+                    return new Merchants() { Culture = this };
+                case 5:
+                    return new Noble() { Culture = this };
+                case 6:
+                    return new Academic() { Culture = this };
             }
             // Should never reach here
             return new Army() { Culture = this };
@@ -98,7 +104,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
                     return new Army() { Culture = this };
                 case CharacterGeneration.Career.CareerType.Darrian_Navy:
                     return new Navy() { Culture = this };
-
+                case CharacterGeneration.Career.CareerType.Darrian_Merchant:
+                    return new Merchants() { Culture = this };
+                case CharacterGeneration.Career.CareerType.Darrian_Noble:
+                    return new Noble() { Culture = this };
+                case CharacterGeneration.Career.CareerType.Darrian_Academic:
+                    return new Academic() { Culture = this };
                 default:
                     return new Army() { Culture = this };
             }

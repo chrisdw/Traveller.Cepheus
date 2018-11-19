@@ -32,6 +32,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         protected int promotion1val = 9;
         protected int reenlist = 7;
         protected bool hasRanks = true;
+        protected int maxRank = 6;
 
         protected abstract void EnlistSkill();
         protected abstract void RankSkill();
@@ -142,7 +143,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         {
             var promote = false;
 
-            if (RankNumber > 0 && RankNumber < 6 && hasRanks)
+            if (RankNumber > 0 && RankNumber < maxRank && hasRanks)
             {
                 var target = promotion;
                 if (Owner.Profile[promotion1attr].Value >= promotion1val)

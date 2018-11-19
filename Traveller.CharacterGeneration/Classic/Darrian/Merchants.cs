@@ -4,33 +4,33 @@ using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
 {
-    public class SpecialArm : Imperial.Citizen.Career
+    public class Merchants : Imperial.Citizen.Career
     {
-        public SpecialArm()
+        public Merchants()
         {
-            Name = "Special Arm";
+            Name = "Merchants";
             RankNumber = 0;
             TermSkills = 2;
 
-            enlistment = 10;
-            enlistment1attr = "DEX";
-            enlistment1val = 9;
+            enlistment = 8;
+            enlistment1attr = "STR";
+            enlistment1val = 7;
             enlistment2attr = string.Empty;
             enlistment2val = 0;
-            enlistment3attr = "INT";
-            enlistment3val = 10;
-            survival = 6;
-            survival2attr = "EDU";
-            survival2val = 9;
-            position = 9;
-            position1attr = "INT";
-            position1val = 8;
-            position2attr = string.Empty;
-            position2val = 0;
-            promotion = 10;
-            promotion1attr = "SOC";
-            promotion1val = 10;
-            reenlist = 5;
+            enlistment3attr = "END";
+            enlistment3val = 9;
+            survival = 5;
+            survival2attr = "INT";
+            survival2val = 7;
+            position = 6;
+            position1attr = "STR";
+            position1val = 9;
+            position2attr = "EDU";
+            position2val = 8;
+            promotion = 9;
+            promotion1attr = "INT";
+            promotion1val = 8;
+            reenlist = 4;
 
             var table = new SkillTable();
             SkillTables[0] = table;
@@ -39,9 +39,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
             skills[0] = SkillLibrary.Str;
             skills[1] = SkillLibrary.Dex;
             skills[2] = SkillLibrary.End;
-            skills[3] = SkillLibrary.GunCombat;
-            skills[4] = SkillLibrary.Edu;
-            skills[5] = SkillLibrary.BladeCombat;
+            skills[3] = SkillLibrary.Edu;
+            skills[4] = SkillLibrary.BladeCombat;
+            skills[5] = SkillLibrary.Steward;
 
             table = new SkillTable();
             SkillTables[1] = table;
@@ -49,21 +49,21 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
             skills = table.Skills;
             skills[0] = SkillLibrary.Vehicle;
             skills[1] = SkillLibrary.VaccSuit;
-            skills[2] = SkillLibrary.Mechanical;
-            skills[3] = SkillLibrary.Electronics;
-            skills[4] = SkillLibrary.BladeCombat;
-            skills[5] = SkillLibrary.GunCombat;
+            skills[2] = SkillLibrary.JackOfTrades;
+            skills[3] = SkillLibrary.Medic;
+            skills[4] = SkillLibrary.Electronics;
+            skills[5] = SkillLibrary.Mechanical;
 
             table = new SkillTable();
             SkillTables[2] = table;
             table.Name = "Education";
             skills = table.Skills;
-            skills[0] = SkillLibrary.Medic;
-            skills[1] = SkillLibrary.Tactics;
-            skills[2] = SkillLibrary.Tactics;
+            skills[0] = SkillLibrary.Navigation;
+            skills[1] = SkillLibrary.Engineering;
+            skills[2] = SkillLibrary.Pilot;
             skills[3] = SkillLibrary.Computer;
-            skills[4] = SkillLibrary.Leader;
-            skills[5] = SkillLibrary.Admin;
+            skills[4] = SkillLibrary.Gunnery;
+            skills[5] = SkillLibrary.GunCombat;
 
             table = new SkillTable();
             SkillTables[3] = table;
@@ -74,31 +74,31 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
             skills[2] = SkillLibrary.Engineering;
             skills[3] = SkillLibrary.Computer;
             skills[4] = SkillLibrary.Pilot;
-            skills[5] = SkillLibrary.Pilot;
+            skills[5] = SkillLibrary.Admin;
 
             Material.Add(BenefitLibrary.Soc);
-            Material.Add(BenefitLibrary.Int2);
+            Material.Add(BenefitLibrary.Int);
             Material.Add(BenefitLibrary.Edu);
             Material.Add(BenefitLibrary.Weapon);
+            Material.Add(BenefitLibrary.Blade);
             Material.Add(BenefitLibrary.Voucher);
-            Material.Add(BenefitLibrary.Voucher);
-            Material.Add(BenefitLibrary.Soc2);
+            Material.Add(BenefitLibrary.Trader);
 
             Cash[0] = 1000;
             Cash[1] = 2000;
-            Cash[2] = 2000;
-            Cash[3] = 5000;
+            Cash[2] = 5000;
+            Cash[3] = 10000;
             Cash[4] = 10000;
             Cash[5] = 20000;
             Cash[6] = 30000;
 
-            Ranks[0] = "Spacer";
-            Ranks[1] = "Ensign";
-            Ranks[2] = "Lieutenant";
-            Ranks[3] = "Lt. Commander";
-            Ranks[4] = "Commander";
+            Ranks[0] = "Space Hand";
+            Ranks[1] = "4th Officer";
+            Ranks[2] = "3rd Officer";
+            Ranks[3] = "2nd Officer";
+            Ranks[4] = "1st Officer";
             Ranks[5] = "Captain";
-            Ranks[6] = "Admiral";
+            Ranks[6] = "Sr Captain";
         }
         protected override void CommsionSkill()
         {
@@ -117,14 +117,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
 
         protected override void RankSkill()
         {
-            if (RankNumber == 4)
-            {
-                Owner.AddSkill(SkillLibrary.Leader);
-            }
-            else if (RankNumber == 6)
-            {
-                Owner.Profile.Soc.Value++;
-            }
+            // Nothing to do
         }
 
         public override void CheckTableAvailablity()
@@ -132,4 +125,5 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
             SkillTables[3].Available = (Owner.Profile["SOC"].Value >= 10);
         }
     }
+}
 }
