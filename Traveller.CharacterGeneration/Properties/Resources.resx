@@ -234,6 +234,18 @@
   <data name="Ship_Yacht" xml:space="preserve">
     <value>Yacht</value>
   </data>
+  <data name="Skill_Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Skill_AirRaft" xml:space="preserve">
+    <value>Air/Raft</value>
+  </data>
+  <data name="Skill_ATV" xml:space="preserve">
+    <value>ATV</value>
+  </data>
+  <data name="Skill_BattleDress" xml:space="preserve">
+    <value>Battle Dress</value>
+  </data>
   <data name="Skill_Gambling" xml:space="preserve">
     <value>Gambling</value>
   </data>
@@ -260,5 +272,164 @@
   </data>
   <data name="Table_ServiceSkills" xml:space="preserve">
     <value>Service Skills</value>
+  </data>
+  <data name="Skill_Brawling" xml:space="preserve">
+    <value>Brawling</value>
+  </data>
+  <data name="Skill_DewClaw" xml:space="preserve">
+    <value>Dew Claw</value>
+  </data>
+  <data name="Skill_Bribery" xml:space="preserve">
+    <value>Bribery</value>
+  </data>
+  <data name="Skill_Carousing" xml:space="preserve">
+    <value>Carousing</value>
+  </data>
+  <data name="Skill_CombatEngineering" xml:space="preserve">
+    <value>Combat Engineering</value>
+  </data>
+  <data name="Skill_Communications" xml:space="preserve">
+    <value>Communications</value>
+  </data>
+  <data name="Skill_Computer" xml:space="preserve">
+    <value>Computer</value>
+  </data>
+  <data name="Skill_Demolitions" xml:space="preserve">
+    <value>Demolitions</value>
+  </data>
+  <data name="Skill_Electronics" xml:space="preserve">
+    <value>Electronics</value>
+  </data>
+  <data name="Skill_Engineering" xml:space="preserve">
+    <value>Engineering</value>
+  </data>
+  <data name="Skill_Forgery" xml:space="preserve">
+    <value>Forgery</value>
+  </data>
+  <data name="Skill_ForwardObserver" xml:space="preserve">
+    <value>Forward Observer</value>
+  </data>
+  <data name="Skill_Gravitics" xml:space="preserve">
+    <value>Gravitics</value>
+  </data>
+  <data name="Skill_GravVehicle" xml:space="preserve">
+    <value>Grav Vehicle</value>
+  </data>
+  <data name="Skill_Gunnery" xml:space="preserve">
+    <value>Gunnery</value>
+  </data>
+  <data name="Skill_Hunting" xml:space="preserve">
+    <value>Hunting</value>
+  </data>
+  <data name="Skill_Instruction" xml:space="preserve">
+    <value>Instruction</value>
+  </data>
+  <data name="Skill_Interrogation" xml:space="preserve">
+    <value>Interrogation</value>
+  </data>
+  <data name="Skill_JackOfTrades" xml:space="preserve">
+    <value>Jack-Of-Trades</value>
+  </data>
+  <data name="Skill_Leader" xml:space="preserve">
+    <value>Leader</value>
+  </data>
+  <data name="Skill_Liason" xml:space="preserve">
+    <value>Liason</value>
+  </data>
+  <data name="Skill_Mechanical" xml:space="preserve">
+    <value>Mechanical</value>
+  </data>
+  <data name="Skill_Medic" xml:space="preserve">
+    <value>Medic</value>
+  </data>
+  <data name="Skill_Navigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="Skill_NonVerbalComms" xml:space="preserve">
+    <value>Non-verbal Communication</value>
+  </data>
+  <data name="Skill_Pilot" xml:space="preserve">
+    <value>Pilot</value>
+  </data>
+  <data name="Skill_Prole" xml:space="preserve">
+    <value>Prole</value>
+  </data>
+  <data name="Skill_Psychology" xml:space="preserve">
+    <value>Psychology</value>
+  </data>
+  <data name="Skill_Recon" xml:space="preserve">
+    <value>Recon</value>
+  </data>
+  <data name="Skill_Recruiting" xml:space="preserve">
+    <value>Recruiting</value>
+  </data>
+  <data name="Skill_ShipsBoat" xml:space="preserve">
+    <value>Ships Boat</value>
+  </data>
+  <data name="Skill_ShipTactics" xml:space="preserve">
+    <value>Ship Tactics</value>
+  </data>
+  <data name="Skill_Steward" xml:space="preserve">
+    <value>Steward</value>
+  </data>
+  <data name="Skill_Streetwise" xml:space="preserve">
+    <value>Streetwise</value>
+  </data>
+  <data name="Skill_Survival" xml:space="preserve">
+    <value>Survival</value>
+  </data>
+  <data name="Skill_Tactics" xml:space="preserve">
+    <value>Tactics</value>
+  </data>
+  <data name="Skill_Trader" xml:space="preserve">
+    <value>Trader</value>
+  </data>
+  <data name="Skill_VaccSuit" xml:space="preserve">
+    <value>Vacc Suit</value>
+  </data>
+  <data name="Skill_ZeroGCombat" xml:space="preserve">
+    <value>Zero-G Combat</value>
+  </data>
+  <data name="Skill_Aircraft" xml:space="preserve">
+    <value>Aircraft</value>
+  </data>
+  <data name="Skill_Helicopters" xml:space="preserve">
+    <value>Helicopters</value>
+  </data>
+  <data name="Skill_JetAircraft" xml:space="preserve">
+    <value>Jet Propelled Fixed Wing Aircraft</value>
+  </data>
+  <data name="Skill_LTA" xml:space="preserve">
+    <value>Lighter than Air Craft</value>
+  </data>
+  <data name="Skill_PropellerAircraft" xml:space="preserve">
+    <value>Propeller Driven Fixed Wing Aircraft</value>
+  </data>
+  <data name="Skill_GroundVehicle" xml:space="preserve">
+    <value>Ground Vehicle</value>
+  </data>
+  <data name="Skill_Hovercraft" xml:space="preserve">
+    <value>Hovercraft</value>
+  </data>
+  <data name="Skill_LargeWatercraft" xml:space="preserve">
+    <value>Large Watercraft</value>
+  </data>
+  <data name="Skill_SmallWatercraft" xml:space="preserve">
+    <value>Small Watercraft</value>
+  </data>
+  <data name="Skill_Submersibles" xml:space="preserve">
+    <value>Submersibles</value>
+  </data>
+  <data name="Skill_TrackedVehicle" xml:space="preserve">
+    <value>Tracked Vehicle</value>
+  </data>
+  <data name="Skill_Vehicle" xml:space="preserve">
+    <value>Vehicle</value>
+  </data>
+  <data name="Skill_Watercraft" xml:space="preserve">
+    <value>Watercraft</value>
+  </data>
+  <data name="Skill_WheeledVehicle" xml:space="preserve">
+    <value>Wheeled Vehicle</value>
   </data>
 </root>

@@ -180,23 +180,251 @@
         </trans-unit>
         <trans-unit id="Msg_Aging" translate="yes" xml:space="preserve">
           <source>{0} reduced by {1} due to aging</source>
-          <target state="new">{0} reduced by {1} due to aging</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} réduit de {1} dus au vieillissement</target>
         </trans-unit>
         <trans-unit id="Msg_Ill" translate="yes" xml:space="preserve">
           <source>You were ill for {0} months due to aging.</source>
-          <target state="new">You were ill for {0} months due to aging.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous étiez malade pour {0} mois dus au vieillissement.</target>
         </trans-unit>
         <trans-unit id="Msg_RececivedBenefit" translate="yes" xml:space="preserve">
           <source>Received benefit {0} of value {1}</source>
-          <target state="new">Received benefit {0} of value {1}</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avantages reçus {0} de {1} valeur</target>
         </trans-unit>
         <trans-unit id="Msg_ReceivedAttribute" translate="yes" xml:space="preserve">
           <source>Received an uplift to {0} of value {1}</source>
-          <target state="new">Received an uplift to {0} of value {1}</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Reçu un soulèvement à {0} de {1} valeur</target>
         </trans-unit>
         <trans-unit id="Msg_ReceivedSkill" translate="yes" xml:space="preserve">
           <source>Received skill {0} at level {1}</source>
-          <target state="new">Received skill {0} at level {1}</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Reçu compétence {0} sur {1} niveau</target>
+        </trans-unit>
+        <trans-unit id="Skill_Admin" translate="yes" xml:space="preserve">
+          <source>Admin</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Administrateur</target>
+        </trans-unit>
+        <trans-unit id="Skill_AirRaft" translate="yes" xml:space="preserve">
+          <source>Air/Raft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Air/radeau</target>
+        </trans-unit>
+        <trans-unit id="Skill_ATV" translate="yes" xml:space="preserve">
+          <source>ATV</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">ATV</target>
+        </trans-unit>
+        <trans-unit id="Skill_BattleDress" translate="yes" xml:space="preserve">
+          <source>Battle Dress</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tenue de combat</target>
+        </trans-unit>
+        <trans-unit id="Skill_Brawling" translate="yes" xml:space="preserve">
+          <source>Brawling</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bagarre</target>
+        </trans-unit>
+        <trans-unit id="Skill_DewClaw" translate="yes" xml:space="preserve">
+          <source>Dew Claw</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Griffe de rosée</target>
+        </trans-unit>
+        <trans-unit id="Skill_Bribery" translate="yes" xml:space="preserve">
+          <source>Bribery</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Corruption</target>
+        </trans-unit>
+        <trans-unit id="Skill_Carousing" translate="yes" xml:space="preserve">
+          <source>Carousing</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Festoient</target>
+        </trans-unit>
+        <trans-unit id="Skill_CombatEngineering" translate="yes" xml:space="preserve">
+          <source>Combat Engineering</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Génie de combat</target>
+        </trans-unit>
+        <trans-unit id="Skill_Communications" translate="yes" xml:space="preserve">
+          <source>Communications</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Communications</target>
+        </trans-unit>
+        <trans-unit id="Skill_Computer" translate="yes" xml:space="preserve">
+          <source>Computer</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">ORDINATEUR</target>
+        </trans-unit>
+        <trans-unit id="Skill_Demolitions" translate="yes" xml:space="preserve">
+          <source>Demolitions</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Démolitions</target>
+        </trans-unit>
+        <trans-unit id="Skill_Electronics" translate="yes" xml:space="preserve">
+          <source>Electronics</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Electronics</target>
+        </trans-unit>
+        <trans-unit id="Skill_Engineering" translate="yes" xml:space="preserve">
+          <source>Engineering</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Ingénierie</target>
+        </trans-unit>
+        <trans-unit id="Skill_Forgery" translate="yes" xml:space="preserve">
+          <source>Forgery</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Faux</target>
+        </trans-unit>
+        <trans-unit id="Skill_ForwardObserver" translate="yes" xml:space="preserve">
+          <source>Forward Observer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Observateur</target>
+        </trans-unit>
+        <trans-unit id="Skill_Gravitics" translate="yes" xml:space="preserve">
+          <source>Gravitics</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gravitics</target>
+        </trans-unit>
+        <trans-unit id="Skill_GravVehicle" translate="yes" xml:space="preserve">
+          <source>Grav Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule de grav</target>
+        </trans-unit>
+        <trans-unit id="Skill_Gunnery" translate="yes" xml:space="preserve">
+          <source>Gunnery</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Artillerie</target>
+        </trans-unit>
+        <trans-unit id="Skill_Hunting" translate="yes" xml:space="preserve">
+          <source>Hunting</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chasse</target>
+        </trans-unit>
+        <trans-unit id="Skill_Instruction" translate="yes" xml:space="preserve">
+          <source>Instruction</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Instruction</target>
+        </trans-unit>
+        <trans-unit id="Skill_Interrogation" translate="yes" xml:space="preserve">
+          <source>Interrogation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Interrogatoire</target>
+        </trans-unit>
+        <trans-unit id="Skill_JackOfTrades" translate="yes" xml:space="preserve">
+          <source>Jack-Of-Trades</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prise-de-métiers</target>
+        </trans-unit>
+        <trans-unit id="Skill_Leader" translate="yes" xml:space="preserve">
+          <source>Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef de file</target>
+        </trans-unit>
+        <trans-unit id="Skill_Liason" translate="yes" xml:space="preserve">
+          <source>Liason</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent de liaison</target>
+        </trans-unit>
+        <trans-unit id="Skill_Mechanical" translate="yes" xml:space="preserve">
+          <source>Mechanical</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mécanique</target>
+        </trans-unit>
+        <trans-unit id="Skill_Medic" translate="yes" xml:space="preserve">
+          <source>Medic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Medic</target>
+        </trans-unit>
+        <trans-unit id="Skill_Navigation" translate="yes" xml:space="preserve">
+          <source>Navigation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Navigation</target>
+        </trans-unit>
+        <trans-unit id="Skill_NonVerbalComms" translate="yes" xml:space="preserve">
+          <source>Non-verbal Communication</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Communication non verbale</target>
+        </trans-unit>
+        <trans-unit id="Skill_Pilot" translate="yes" xml:space="preserve">
+          <source>Pilot</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pilote</target>
+        </trans-unit>
+        <trans-unit id="Skill_Prole" translate="yes" xml:space="preserve">
+          <source>Prole</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prole</target>
+        </trans-unit>
+        <trans-unit id="Skill_Psychology" translate="yes" xml:space="preserve">
+          <source>Psychology</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Psychologie</target>
+        </trans-unit>
+        <trans-unit id="Skill_Recon" translate="yes" xml:space="preserve">
+          <source>Recon</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Recon</target>
+        </trans-unit>
+        <trans-unit id="Skill_Recruiting" translate="yes" xml:space="preserve">
+          <source>Recruiting</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Recrutement en cours</target>
+        </trans-unit>
+        <trans-unit id="Skill_ShipsBoat" translate="yes" xml:space="preserve">
+          <source>Ships Boat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bateau bateaux</target>
+        </trans-unit>
+        <trans-unit id="Skill_ShipTactics" translate="yes" xml:space="preserve">
+          <source>Ship Tactics</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tactiques de navire</target>
+        </trans-unit>
+        <trans-unit id="Skill_Steward" translate="yes" xml:space="preserve">
+          <source>Steward</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Steward</target>
+        </trans-unit>
+        <trans-unit id="Skill_Streetwise" translate="yes" xml:space="preserve">
+          <source>Streetwise</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Streetwise</target>
+        </trans-unit>
+        <trans-unit id="Skill_Survival" translate="yes" xml:space="preserve">
+          <source>Survival</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Survie</target>
+        </trans-unit>
+        <trans-unit id="Skill_Tactics" translate="yes" xml:space="preserve">
+          <source>Tactics</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tactiques</target>
+        </trans-unit>
+        <trans-unit id="Skill_Trader" translate="yes" xml:space="preserve">
+          <source>Trader</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Négociant</target>
+        </trans-unit>
+        <trans-unit id="Skill_VaccSuit" translate="yes" xml:space="preserve">
+          <source>Vacc Suit</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Costume de vacc</target>
+        </trans-unit>
+        <trans-unit id="Skill_ZeroGCombat" translate="yes" xml:space="preserve">
+          <source>Zero-G Combat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Combat de Zero-G</target>
+        </trans-unit>
+        <trans-unit id="Skill_Aircraft" translate="yes" xml:space="preserve">
+          <source>Aircraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avion</target>
+        </trans-unit>
+        <trans-unit id="Skill_Helicopters" translate="yes" xml:space="preserve">
+          <source>Helicopters</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hélicoptères</target>
+        </trans-unit>
+        <trans-unit id="Skill_JetAircraft" translate="yes" xml:space="preserve">
+          <source>Jet Propelled Fixed Wing Aircraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jet Propulsion des aéronefs à voilure fixe</target>
+        </trans-unit>
+        <trans-unit id="Skill_LTA" translate="yes" xml:space="preserve">
+          <source>Lighter than Air Craft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Plus léger que l’Air Craft</target>
+        </trans-unit>
+        <trans-unit id="Skill_PropellerAircraft" translate="yes" xml:space="preserve">
+          <source>Propeller Driven Fixed Wing Aircraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hélices d’aéronefs à voilure fixe</target>
+        </trans-unit>
+        <trans-unit id="Skill_GroundVehicle" translate="yes" xml:space="preserve">
+          <source>Ground Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule terrestre</target>
+        </trans-unit>
+        <trans-unit id="Skill_Hovercraft" translate="yes" xml:space="preserve">
+          <source>Hovercraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aéroglisseur</target>
+        </trans-unit>
+        <trans-unit id="Skill_LargeWatercraft" translate="yes" xml:space="preserve">
+          <source>Large Watercraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Grandes embarcations</target>
+        </trans-unit>
+        <trans-unit id="Skill_SmallWatercraft" translate="yes" xml:space="preserve">
+          <source>Small Watercraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Petites embarcations</target>
+        </trans-unit>
+        <trans-unit id="Skill_Submersibles" translate="yes" xml:space="preserve">
+          <source>Submersibles</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Submersibles</target>
+        </trans-unit>
+        <trans-unit id="Skill_TrackedVehicle" translate="yes" xml:space="preserve">
+          <source>Tracked Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule à chenilles</target>
+        </trans-unit>
+        <trans-unit id="Skill_Vehicle" translate="yes" xml:space="preserve">
+          <source>Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule</target>
+        </trans-unit>
+        <trans-unit id="Skill_Watercraft" translate="yes" xml:space="preserve">
+          <source>Watercraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Embarcation</target>
+        </trans-unit>
+        <trans-unit id="Skill_WheeledVehicle" translate="yes" xml:space="preserve">
+          <source>Wheeled Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule à roues</target>
         </trans-unit>
       </group>
     </body>

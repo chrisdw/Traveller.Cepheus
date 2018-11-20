@@ -119,9 +119,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             switch (character.CharacterSpecies)
             {
                 case Character.Species.Bwap:
-                    if (skill.Name.Equals("Admin"))
+                    if (skill.Name.Equals(SkillLibrary.Admin.Name))
                     {
-                        if (!character.Skills.ContainsKey("Admin"))
+                        if (!character.Skills.ContainsKey(SkillLibrary.Admin.Name))
                         {
                             // Bwap always get 2 levels of admin on the first go
                             skill.Level = 2;
@@ -129,15 +129,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     }
                     break;
                 case Character.Species.Vargr:
-                    if (skill.Name.Equals("Brawling"))
+                    if (skill.Name.Equals(SkillLibrary.Brawling.Name))
                     {
-                        skill.Name = "Infighting";
+                        skill.Name = SkillLibrary.Infighting.Name;
                     }
                     break;
                 case Character.Species.Aslan:
-                    if (skill.Name.Equals("Brawling"))
+                    if (skill.Name.Equals(SkillLibrary.Brawling.Name))
                     {
-                        skill.Name = "Dewclaw";
+                        skill.Name = SkillLibrary.DewClaw.Name;
                     }
                     if (!offered.ContainsKey(skill.Name))
                     {

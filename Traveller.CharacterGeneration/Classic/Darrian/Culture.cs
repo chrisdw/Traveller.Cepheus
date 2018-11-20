@@ -46,9 +46,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
             switch (character.CharacterSpecies)
             {
                 case Character.Species.Aslan:
-                    if (skill.Name.Equals("Brawling"))
+                    if (skill.Name.Equals(SkillLibrary.Brawling.Name))
                     {
-                        skill.Name = "Dewclaw";
+                        skill.Name = SkillLibrary.DewClaw.Name;
                     }
                     if (!offered.ContainsKey(skill.Name))
                     {

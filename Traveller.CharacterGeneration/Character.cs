@@ -100,7 +100,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
                             // Imperial Aslan get some automatic skills
-                            AddSkill(SkillLibrary.Toloerance);
+                            AddSkill(SkillLibrary.Tolerance);
                             if (Sex.Equals("Male"))
                             {
                                 AddSkill(SkillLibrary.Independance);

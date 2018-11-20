@@ -77,12 +77,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Dolphin
             base.CheckTableAvailablity();
             if (minTL >= 12)
             {
-                SkillTables[1].Skills[0].Name = "Battle Dress";
+                SkillTables[1].Skills[0].Name = SkillLibrary.BattleDress.Name;
                 SkillTables[1].Skills[0].Class = Skill.SkillClass.Military;
             }
             else
             {
-                SkillTables[1].Skills[0].Name = "Brawling";
+                SkillTables[1].Skills[0].Name = SkillLibrary.Brawling.Name;
                 SkillTables[1].Skills[0].Class = Skill.SkillClass.Military;
             }
             SkillTables[0].Available = (Term <= 4);

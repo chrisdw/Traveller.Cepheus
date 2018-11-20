@@ -35,9 +35,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
         public bool CheckSkill(Character character, Skill skill, int count)
         {
-            if (skill.Name.Equals("Brawling"))
+            if (skill.Name.Equals(SkillLibrary.Brawling.Name))
             {
-                skill.Name = "Infighting";
+                skill.Name = SkillLibrary.Infighting.Name;
             }
             return true;
         }

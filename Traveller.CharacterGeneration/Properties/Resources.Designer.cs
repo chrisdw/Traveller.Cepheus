@@ -412,11 +412,227 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Admin.
+        /// </summary>
+        internal static string Skill_Admin {
+            get {
+                return ResourceManager.GetString("Skill_Admin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aircraft.
+        /// </summary>
+        internal static string Skill_Aircraft {
+            get {
+                return ResourceManager.GetString("Skill_Aircraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Air/Raft.
+        /// </summary>
+        internal static string Skill_AirRaft {
+            get {
+                return ResourceManager.GetString("Skill_AirRaft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ATV.
+        /// </summary>
+        internal static string Skill_ATV {
+            get {
+                return ResourceManager.GetString("Skill_ATV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Battle Dress.
+        /// </summary>
+        internal static string Skill_BattleDress {
+            get {
+                return ResourceManager.GetString("Skill_BattleDress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brawling.
+        /// </summary>
+        internal static string Skill_Brawling {
+            get {
+                return ResourceManager.GetString("Skill_Brawling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bribery.
+        /// </summary>
+        internal static string Skill_Bribery {
+            get {
+                return ResourceManager.GetString("Skill_Bribery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carousing.
+        /// </summary>
+        internal static string Skill_Carousing {
+            get {
+                return ResourceManager.GetString("Skill_Carousing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Combat Engineering.
+        /// </summary>
+        internal static string Skill_CombatEngineering {
+            get {
+                return ResourceManager.GetString("Skill_CombatEngineering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Communications.
+        /// </summary>
+        internal static string Skill_Communications {
+            get {
+                return ResourceManager.GetString("Skill_Communications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Computer.
+        /// </summary>
+        internal static string Skill_Computer {
+            get {
+                return ResourceManager.GetString("Skill_Computer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demolitions.
+        /// </summary>
+        internal static string Skill_Demolitions {
+            get {
+                return ResourceManager.GetString("Skill_Demolitions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dew Claw.
+        /// </summary>
+        internal static string Skill_DewClaw {
+            get {
+                return ResourceManager.GetString("Skill_DewClaw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Electronics.
+        /// </summary>
+        internal static string Skill_Electronics {
+            get {
+                return ResourceManager.GetString("Skill_Electronics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Engineering.
+        /// </summary>
+        internal static string Skill_Engineering {
+            get {
+                return ResourceManager.GetString("Skill_Engineering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forgery.
+        /// </summary>
+        internal static string Skill_Forgery {
+            get {
+                return ResourceManager.GetString("Skill_Forgery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forward Observer.
+        /// </summary>
+        internal static string Skill_ForwardObserver {
+            get {
+                return ResourceManager.GetString("Skill_ForwardObserver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gambling.
         /// </summary>
         internal static string Skill_Gambling {
             get {
                 return ResourceManager.GetString("Skill_Gambling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gravitics.
+        /// </summary>
+        internal static string Skill_Gravitics {
+            get {
+                return ResourceManager.GetString("Skill_Gravitics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grav Vehicle.
+        /// </summary>
+        internal static string Skill_GravVehicle {
+            get {
+                return ResourceManager.GetString("Skill_GravVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ground Vehicle.
+        /// </summary>
+        internal static string Skill_GroundVehicle {
+            get {
+                return ResourceManager.GetString("Skill_GroundVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gunnery.
+        /// </summary>
+        internal static string Skill_Gunnery {
+            get {
+                return ResourceManager.GetString("Skill_Gunnery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Helicopters.
+        /// </summary>
+        internal static string Skill_Helicopters {
+            get {
+                return ResourceManager.GetString("Skill_Helicopters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hovercraft.
+        /// </summary>
+        internal static string Skill_Hovercraft {
+            get {
+                return ResourceManager.GetString("Skill_Hovercraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunting.
+        /// </summary>
+        internal static string Skill_Hunting {
+            get {
+                return ResourceManager.GetString("Skill_Hunting", resourceCulture);
             }
         }
         
@@ -430,6 +646,141 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Instruction.
+        /// </summary>
+        internal static string Skill_Instruction {
+            get {
+                return ResourceManager.GetString("Skill_Instruction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interrogation.
+        /// </summary>
+        internal static string Skill_Interrogation {
+            get {
+                return ResourceManager.GetString("Skill_Interrogation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jack-Of-Trades.
+        /// </summary>
+        internal static string Skill_JackOfTrades {
+            get {
+                return ResourceManager.GetString("Skill_JackOfTrades", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jet Propelled Fixed Wing Aircraft.
+        /// </summary>
+        internal static string Skill_JetAircraft {
+            get {
+                return ResourceManager.GetString("Skill_JetAircraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Large Watercraft.
+        /// </summary>
+        internal static string Skill_LargeWatercraft {
+            get {
+                return ResourceManager.GetString("Skill_LargeWatercraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leader.
+        /// </summary>
+        internal static string Skill_Leader {
+            get {
+                return ResourceManager.GetString("Skill_Leader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Liason.
+        /// </summary>
+        internal static string Skill_Liason {
+            get {
+                return ResourceManager.GetString("Skill_Liason", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lighter than Air Craft.
+        /// </summary>
+        internal static string Skill_LTA {
+            get {
+                return ResourceManager.GetString("Skill_LTA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mechanical.
+        /// </summary>
+        internal static string Skill_Mechanical {
+            get {
+                return ResourceManager.GetString("Skill_Mechanical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medic.
+        /// </summary>
+        internal static string Skill_Medic {
+            get {
+                return ResourceManager.GetString("Skill_Medic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navigation.
+        /// </summary>
+        internal static string Skill_Navigation {
+            get {
+                return ResourceManager.GetString("Skill_Navigation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Non-verbal Communication.
+        /// </summary>
+        internal static string Skill_NonVerbalComms {
+            get {
+                return ResourceManager.GetString("Skill_NonVerbalComms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pilot.
+        /// </summary>
+        internal static string Skill_Pilot {
+            get {
+                return ResourceManager.GetString("Skill_Pilot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prole.
+        /// </summary>
+        internal static string Skill_Prole {
+            get {
+                return ResourceManager.GetString("Skill_Prole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Propeller Driven Fixed Wing Aircraft.
+        /// </summary>
+        internal static string Skill_PropellerAircraft {
+            get {
+                return ResourceManager.GetString("Skill_PropellerAircraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Prospecting.
         /// </summary>
         internal static string Skill_Prospecting {
@@ -439,11 +790,173 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Psychology.
+        /// </summary>
+        internal static string Skill_Psychology {
+            get {
+                return ResourceManager.GetString("Skill_Psychology", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recon.
+        /// </summary>
+        internal static string Skill_Recon {
+            get {
+                return ResourceManager.GetString("Skill_Recon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recruiting.
+        /// </summary>
+        internal static string Skill_Recruiting {
+            get {
+                return ResourceManager.GetString("Skill_Recruiting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ships Boat.
+        /// </summary>
+        internal static string Skill_ShipsBoat {
+            get {
+                return ResourceManager.GetString("Skill_ShipsBoat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ship Tactics.
+        /// </summary>
+        internal static string Skill_ShipTactics {
+            get {
+                return ResourceManager.GetString("Skill_ShipTactics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Small Watercraft.
+        /// </summary>
+        internal static string Skill_SmallWatercraft {
+            get {
+                return ResourceManager.GetString("Skill_SmallWatercraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Steward.
+        /// </summary>
+        internal static string Skill_Steward {
+            get {
+                return ResourceManager.GetString("Skill_Steward", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Streetwise.
+        /// </summary>
+        internal static string Skill_Streetwise {
+            get {
+                return ResourceManager.GetString("Skill_Streetwise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submersibles.
+        /// </summary>
+        internal static string Skill_Submersibles {
+            get {
+                return ResourceManager.GetString("Skill_Submersibles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Survival.
+        /// </summary>
+        internal static string Skill_Survival {
+            get {
+                return ResourceManager.GetString("Skill_Survival", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tactics.
+        /// </summary>
+        internal static string Skill_Tactics {
+            get {
+                return ResourceManager.GetString("Skill_Tactics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tolerance.
         /// </summary>
         internal static string Skill_Tolerance {
             get {
                 return ResourceManager.GetString("Skill_Tolerance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tracked Vehicle.
+        /// </summary>
+        internal static string Skill_TrackedVehicle {
+            get {
+                return ResourceManager.GetString("Skill_TrackedVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trader.
+        /// </summary>
+        internal static string Skill_Trader {
+            get {
+                return ResourceManager.GetString("Skill_Trader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vacc Suit.
+        /// </summary>
+        internal static string Skill_VaccSuit {
+            get {
+                return ResourceManager.GetString("Skill_VaccSuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle.
+        /// </summary>
+        internal static string Skill_Vehicle {
+            get {
+                return ResourceManager.GetString("Skill_Vehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Watercraft.
+        /// </summary>
+        internal static string Skill_Watercraft {
+            get {
+                return ResourceManager.GetString("Skill_Watercraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wheeled Vehicle.
+        /// </summary>
+        internal static string Skill_WheeledVehicle {
+            get {
+                return ResourceManager.GetString("Skill_WheeledVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zero-G Combat.
+        /// </summary>
+        internal static string Skill_ZeroGCombat {
+            get {
+                return ResourceManager.GetString("Skill_ZeroGCombat", resourceCulture);
             }
         }
         

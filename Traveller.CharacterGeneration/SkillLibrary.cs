@@ -21,83 +21,82 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill ChrDrop = new Skill("CHR", Skill.SkillClass.AttributeChange, -1);
 
         // Simple skills
-        public static Skill Admin = new Skill("Admin", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill AirRaft = new Skill("Air/Raft", Skill.SkillClass.None, 1);
-        public static Skill ATV = new Skill("ATV", Skill.SkillClass.None, 1);
-        public static Skill BattleDress = new Skill("Battle Dress", Skill.SkillClass.Military, 1);
-        public static Skill Brawling = new Skill("Brawling", Skill.SkillClass.None, 1);
-        public static Skill Bribery = new Skill("Bribery", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
-        public static Skill Carousing = new Skill("Carousing", Skill.SkillClass.None, 1);
-        public static Skill CombatEngineering = new Skill("Combat Engineering", Skill.SkillClass.Military, 1);
-        public static Skill Communications = new Skill("Communications", Skill.SkillClass.None, 1);
-        public static Skill Computer = new Skill("Computer", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Demolitions = new Skill("Demolitions", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Electronics = new Skill("Electronics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Engineering = new Skill("Engineering", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Forgery = new Skill("Forgery", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill FowardObserver = new Skill("Forward Observer", Skill.SkillClass.None, 1);
+        public static Skill Admin = new Skill(Properties.Resources.Skill_Admin, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill AirRaft = new Skill(Properties.Resources.Skill_AirRaft, Skill.SkillClass.None, 1);
+        public static Skill ATV = new Skill(Properties.Resources.Skill_ATV, Skill.SkillClass.None, 1);
+        public static Skill BattleDress = new Skill(Properties.Resources.Skill_BattleDress, Skill.SkillClass.Military, 1);
+        public static Skill Brawling = new Skill(Properties.Resources.Skill_Brawling, Skill.SkillClass.None, 1);
+        public static Skill Bribery = new Skill(Properties.Resources.Skill_Bribery, Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
+        public static Skill Carousing = new Skill(Properties.Resources.Skill_Carousing, Skill.SkillClass.None, 1);
+        public static Skill CombatEngineering = new Skill(Properties.Resources.Skill_CombatEngineering, Skill.SkillClass.Military, 1);
+        public static Skill Communications = new Skill(Properties.Resources.Skill_Communications, Skill.SkillClass.None, 1);
+        public static Skill Computer = new Skill(Properties.Resources.Skill_Computer, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Demolitions = new Skill(Properties.Resources.Skill_Demolitions, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Electronics = new Skill(Properties.Resources.Skill_Electronics, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Engineering = new Skill(Properties.Resources.Skill_Engineering, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Forgery = new Skill(Properties.Resources.Skill_Forgery, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill FowardObserver = new Skill(Properties.Resources.Skill_ForwardObserver, Skill.SkillClass.None, 1);
         public static Skill Gambling = new Skill(Properties.Resources.Skill_Gambling, Skill.SkillClass.None, 1);
-        public static Skill Gravitics = new Skill("Gravitics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill GravVehicle = new Skill("Grav Vehicle", Skill.SkillClass.None, 1);
-        public static Skill Gunnery = new Skill("Gunnery", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-        public static Skill Hunting = new Skill("Infighting", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-        public static Skill Infighting = new Skill("Infighting", Skill.SkillClass.None, 1);
-        public static Skill Instruction = new Skill("Instruction", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Interrogation = new Skill("Interrogation", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-        public static Skill JackOfTrades = new Skill("Jack-Of-Trades", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Leader = new Skill("Leader", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-        public static Skill Liason = new Skill("Liason", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Mechanical = new Skill("Mechanical", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Medic = new Skill("Medic", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Navigation = new Skill("Navigation", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill NonVerbalComms = new Skill("Non-verbal Communication", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Prole = new Skill("Prole", Skill.SkillClass.Prole, 1, Skill.SkillSex.DontCare);
-        public static Skill Pilot = new Skill("Pilot", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Gravitics = new Skill(Properties.Resources.Skill_Gravitics, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill GravVehicle = new Skill(Properties.Resources.Skill_GravVehicle, Skill.SkillClass.None, 1);
+        public static Skill Gunnery = new Skill(Properties.Resources.Skill_Gunnery, Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Hunting = new Skill(Properties.Resources.Skill_Hunting, Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Instruction = new Skill(Properties.Resources.Skill_Instruction, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Interrogation = new Skill(Properties.Resources.Skill_Interrogation, Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill JackOfTrades = new Skill(Properties.Resources.Skill_JackOfTrades, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Leader = new Skill(Properties.Resources.Skill_Leader, Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Liason = new Skill(Properties.Resources.Skill_Liason, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Mechanical = new Skill(Properties.Resources.Skill_Mechanical, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Medic = new Skill(Properties.Resources.Skill_Medic, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Navigation = new Skill(Properties.Resources.Skill_Navigation, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill NonVerbalComms = new Skill(Properties.Resources.Skill_NonVerbalComms, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Prole = new Skill(Properties.Resources.Skill_Prole, Skill.SkillClass.Prole, 1, Skill.SkillSex.DontCare);
+        public static Skill Pilot = new Skill(Properties.Resources.Skill_Pilot, Skill.SkillClass.None, 1, Skill.SkillSex.Male);
         public static Skill Prospecting = new Skill(Properties.Resources.Skill_Prospecting, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Psychology = new Skill("Psychology", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill Recon = new Skill("Recon", Skill.SkillClass.Military, 1);
-        public static Skill Recruiting = new Skill("Recruiting", Skill.SkillClass.None, 1);
-        public static Skill Tactics = new Skill("Tactics", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-        public static Skill Trader = new Skill("Trader", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
-        public static Skill ShipsBoat = new Skill("Ships Boat", Skill.SkillClass.None, 1);
-        public static Skill ShipTactics = new Skill("Ship Tactics", Skill.SkillClass.None, 1);
-        public static Skill Steward = new Skill("Steward", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
-        public static Skill Streetwise = new Skill("Streetwise", Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
-        public static Skill Survival = new Skill("Survival", Skill.SkillClass.Military, 1);
-        public static Skill VaccSuit = new Skill("Vacc Suit", Skill.SkillClass.None, 1);
-        public static Skill ZeroGCombat = new Skill("Zero-G Combat", Skill.SkillClass.None, 1);
+        public static Skill Psychology = new Skill(Properties.Resources.Skill_Psychology, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Recon = new Skill(Properties.Resources.Skill_Recon, Skill.SkillClass.Military, 1);
+        public static Skill Recruiting = new Skill(Properties.Resources.Skill_Recruiting, Skill.SkillClass.None, 1);
+        public static Skill Tactics = new Skill(Properties.Resources.Skill_Tactics, Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Trader = new Skill(Properties.Resources.Skill_Trader, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill ShipsBoat = new Skill(Properties.Resources.Skill_ShipsBoat, Skill.SkillClass.None, 1);
+        public static Skill ShipTactics = new Skill(Properties.Resources.Skill_ShipTactics, Skill.SkillClass.None, 1);
+        public static Skill Steward = new Skill(Properties.Resources.Skill_Steward, Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
+        public static Skill Streetwise = new Skill(Properties.Resources.Skill_Streetwise, Skill.SkillClass.Civilian, 1, Skill.SkillSex.Female);
+        public static Skill Survival = new Skill(Properties.Resources.Skill_Survival, Skill.SkillClass.Military, 1);
+        public static Skill VaccSuit = new Skill(Properties.Resources.Skill_VaccSuit, Skill.SkillClass.None, 1);
+        public static Skill ZeroGCombat = new Skill(Properties.Resources.Skill_ZeroGCombat, Skill.SkillClass.None, 1);
 
-        public static Skill Aircraft = new Skill("Aircraft", Skill.SkillClass.None, 1)
+        public static Skill Aircraft = new Skill(Properties.Resources.Skill_Aircraft, Skill.SkillClass.None, 1)
         {
             Cascade = {
                 GravVehicle,
-                new Skill("Propeller Driven Fixed Wing Aircraft", Skill.SkillClass.None, 1),
-                new Skill("Jet Propelled Fixed Wing Aircraft", Skill.SkillClass.None, 1),
-                new Skill("Helicopters", Skill.SkillClass.None, 1),
-                new Skill("Lighter than Air Craft", Skill.SkillClass.None, 1)
+                new Skill(Properties.Resources.Skill_PropellerAircraft, Skill.SkillClass.None, 1),
+                new Skill(Properties.Resources.Skill_JetAircraft, Skill.SkillClass.None, 1),
+                new Skill(Properties.Resources.Skill_Helicopters, Skill.SkillClass.None, 1),
+                new Skill(Properties.Resources.Skill_LTA, Skill.SkillClass.None, 1)
             }
         };
 
-        public static Skill Watercraft = new Skill("Watercraft", Skill.SkillClass.None, 1)
+        public static Skill Watercraft = new Skill(Properties.Resources.Skill_Watercraft, Skill.SkillClass.None, 1)
         {
             Cascade = {
-                new Skill("Hovercraft", Skill.SkillClass.None, 1),
-                new Skill("Small Watercraft", Skill.SkillClass.None, 1),
-                new Skill("Large Watercraft", Skill.SkillClass.None, 1),
-                new Skill("Submersibles", Skill.SkillClass.None, 1)
+                new Skill(Properties.Resources.Skill_Hovercraft, Skill.SkillClass.None, 1),
+                new Skill(Properties.Resources.Skill_SmallWatercraft, Skill.SkillClass.None, 1),
+                new Skill(Properties.Resources.Skill_LargeWatercraft, Skill.SkillClass.None, 1),
+                new Skill(Properties.Resources.Skill_Submersibles, Skill.SkillClass.None, 1)
             }
         };
 
-        public static Skill GroundVehicle = new Skill("Ground Vehicle", Skill.SkillClass.None, 1)
+        public static Skill GroundVehicle = new Skill(Properties.Resources.Skill_GroundVehicle, Skill.SkillClass.None, 1)
         {
             Cascade = {
                 GravVehicle,
-                new Skill("Tracked Vehicle", Skill.SkillClass.None, 1),
-                new Skill("Wheeled Vehicle", Skill.SkillClass.None, 1)
+                new Skill(Properties.Resources.Skill_TrackedVehicle, Skill.SkillClass.None, 1),
+                new Skill(Properties.Resources.Skill_WheeledVehicle, Skill.SkillClass.None, 1)
             }
         };
 
-        public static Skill Vehicle = new Skill("Vehicle", Skill.SkillClass.None, 1)
+        public static Skill Vehicle = new Skill(Properties.Resources.Skill_Vehicle, Skill.SkillClass.None, 1)
         {
             Cascade = {
                 Aircraft,
@@ -176,7 +175,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill WaldoOps = new Skill("Waldo Ops", Skill.SkillClass.None, 1);
 
         // Aslan specific skills
+        public static Skill DewClaw = new Skill(Properties.Resources.Skill_DewClaw, Skill.SkillClass.None, 1);
         public static Skill Independance = new Skill(Properties.Resources.Skill_Independance, Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-        public static Skill Toloerance = new Skill(Properties.Resources.Skill_Tolerance, Skill.SkillClass.None, 1, Skill.SkillSex.DontCare);
+        public static Skill Tolerance = new Skill(Properties.Resources.Skill_Tolerance, Skill.SkillClass.None, 1, Skill.SkillSex.DontCare);
+
+        // Vargr specific skills
+        public static Skill Infighting = new Skill("Infighting", Skill.SkillClass.None, 1);
     }
 }
