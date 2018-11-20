@@ -122,7 +122,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     {
                         pension *= 2;
                     }
-                    Owner.AddBenefit(new Benefit() { Name = "Retirement Pay", Value = pension, TypeOfBenefit = Benefit.BenefitType.Material });
+                    Owner.AddBenefit(new Benefit()
+                    {
+                        Name = Properties.Resources.Benefit_RetirementPay,
+                        Value = pension,
+                        TypeOfBenefit = Benefit.BenefitType.Material
+                    });
                 }
             }
         }
@@ -131,12 +136,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         {
             var roll = dice.roll();
 
-            if (Owner.Skills.ContainsKey("Gambling") || Owner.Skills.ContainsKey("Prospecting") || Retired)
+            if (Owner.Skills.ContainsKey(SkillLibrary.Gambling.Name) || Owner.Skills.ContainsKey(SkillLibrary.Prospecting.Name) || Retired)
             {
                 roll++;
             }
             roll = roll.Clamp(1, Cash.Length);
-            Owner.AddBenefit(new Benefit() { Name = "Cash", Value = Cash[roll - 1], TypeOfBenefit = Benefit.BenefitType.Cash });
+            Owner.AddBenefit(new Benefit()
+            {
+                Name = Properties.Resources.Benefit_Cash,
+                Value = Cash[roll - 1],
+                TypeOfBenefit = Benefit.BenefitType.Cash
+            });
         }
 
         public BenefitResolution ResolveMaterialBenefit()
@@ -153,7 +163,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             }
             else
             {
-                if (RankNumber >= 5 || Owner.Skills.ContainsKey("Prospecting"))
+                if (RankNumber >= 5 || Owner.Skills.ContainsKey(SkillLibrary.Prospecting.Name))
                 {
                     roll++;
                 }
@@ -169,7 +179,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 }
                 else if (benefit.TypeOfBenefit == Benefit.BenefitType.Skill)
                 {
-                    Owner.AddSkill(new Skill() { Class = Skill.SkillClass.None, Name = benefit.Name, Level = benefit.Value });
+                    Owner.AddSkill(new Skill()
+                    {
+                        Class = Skill.SkillClass.None,
+                        Name = benefit.Name,
+                        Level = benefit.Value
+                    });
                 }
                 else if (benefit.TypeOfBenefit == Benefit.BenefitType.AttributeModification)
                 {
@@ -186,7 +201,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             }
             else
             {
-                Owner.Journal.Add(string.Format("Not allowed to receive {0} value {1} as a benefit", benefit.Name, benefit.Value));
+                Owner.Journal.Add(string.Format(Properties.Resources.Msg_BenefitNotAllowed, benefit.Name, benefit.Value));
             }
             return result;
         }

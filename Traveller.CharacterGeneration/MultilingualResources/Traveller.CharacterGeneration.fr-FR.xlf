@@ -26,6 +26,178 @@
           <source>Service Skills</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Aptitudes pour le service</target>
         </trans-unit>
+        <trans-unit id="Benefit_Blade" translate="yes" xml:space="preserve">
+          <source>Blade</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lame</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Gun" translate="yes" xml:space="preserve">
+          <source>Gun</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Armes à feu</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Legion" translate="yes" xml:space="preserve">
+          <source>Legion</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Légion</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Weapon" translate="yes" xml:space="preserve">
+          <source>Weapon</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Arme</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Instruments" translate="yes" xml:space="preserve">
+          <source>Instruments</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Instruments de</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Nothing" translate="yes" xml:space="preserve">
+          <source>Nothing</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rien</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Travellers" translate="yes" xml:space="preserve">
+          <source>Travellers</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gens du voyage</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Verbalization" translate="yes" xml:space="preserve">
+          <source>Verbalization</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verbalisation</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Voucher" translate="yes" xml:space="preserve">
+          <source>Voucher</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">N° document</target>
+        </trans-unit>
+        <trans-unit id="Benefit_WaldoSet" translate="yes" xml:space="preserve">
+          <source>Waldo Set</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Set de Waldo</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Watch" translate="yes" xml:space="preserve">
+          <source>Watch</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Montre</target>
+        </trans-unit>
+        <trans-unit id="Benefit_HighPsg" translate="yes" xml:space="preserve">
+          <source>High Psg</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Haute Psg</target>
+        </trans-unit>
+        <trans-unit id="Benefit_LowPsg" translate="yes" xml:space="preserve">
+          <source>Low Psg</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Faible Psg</target>
+        </trans-unit>
+        <trans-unit id="Benefit_MidPsg" translate="yes" xml:space="preserve">
+          <source>Mid Psg</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Psg Mid</target>
+        </trans-unit>
+        <trans-unit id="Ship_Corsair" translate="yes" xml:space="preserve">
+          <source>Corsair</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Corsair</target>
+        </trans-unit>
+        <trans-unit id="Ship_LabShip" translate="yes" xml:space="preserve">
+          <source>Lab Ship</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Navire de laboratoire</target>
+        </trans-unit>
+        <trans-unit id="Ship_Merchant" translate="yes" xml:space="preserve">
+          <source>Merchant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marchand</target>
+        </trans-unit>
+        <trans-unit id="Ship_SafariShip" translate="yes" xml:space="preserve">
+          <source>Safari Ship</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bateau de Safari</target>
+        </trans-unit>
+        <trans-unit id="Ship_Scout" translate="yes" xml:space="preserve">
+          <source>Scout</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scout</target>
+        </trans-unit>
+        <trans-unit id="Ship_Seeker" translate="yes" xml:space="preserve">
+          <source>Seeker</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seeker</target>
+        </trans-unit>
+        <trans-unit id="Ship_Trader" translate="yes" xml:space="preserve">
+          <source>Trader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trader</target>
+        </trans-unit>
+        <trans-unit id="Ship_Yacht" translate="yes" xml:space="preserve">
+          <source>Yacht</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Yacht</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Bow" translate="yes" xml:space="preserve">
+          <source>Bow</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bow</target>
+        </trans-unit>
+        <trans-unit id="Msg_Dismissed" translate="yes" xml:space="preserve">
+          <source>Dismissed from service at end of term {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Renvoyé de service à la fin du terme {0}</target>
+        </trans-unit>
+        <trans-unit id="Msg_MustRenlist" translate="yes" xml:space="preserve">
+          <source>Forced to remain in {0} at end of term {1}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Obligée de rester à {0} à fin de terme {1}</target>
+        </trans-unit>
+        <trans-unit id="Msg_RenlistRefused" translate="yes" xml:space="preserve">
+          <source>Re-enlistment refused due to age at end of term {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">La réinscription refusée en raison de l’âge à la fin du terme {0}</target>
+        </trans-unit>
+        <trans-unit id="Msg_Refused" translate="yes" xml:space="preserve">
+          <source>Re-enlistment refused at end of term {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">La réinscription refusée à fin de terme {0}</target>
+        </trans-unit>
+        <trans-unit id="Msg_Enlist_Refused" translate="yes" xml:space="preserve">
+          <source>Enlistment in {0} refused at age {1}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Enrôlement dans {0} a refusé à âge {1}</target>
+        </trans-unit>
+        <trans-unit id="Msg_Enlist_Success" translate="yes" xml:space="preserve">
+          <source>Enlisted in {0} at age {1}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">S’est enrôlé dans {0} sur {1} âge</target>
+        </trans-unit>
+        <trans-unit id="Msg_Renlist_Fail" translate="yes" xml:space="preserve">
+          <source>Left {0} at end of term {1}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} gauche à fin de terme {1}</target>
+        </trans-unit>
+        <trans-unit id="Msg_Renlist_Success" translate="yes" xml:space="preserve">
+          <source>Remained in {0} at end of term {1}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Restait à {0} à fin de terme {1}</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Cash" translate="yes" xml:space="preserve">
+          <source>Cash</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trésorerie</target>
+        </trans-unit>
+        <trans-unit id="Benefit_RetirementPay" translate="yes" xml:space="preserve">
+          <source>Retirement Pay</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Salaire de la retraite</target>
+        </trans-unit>
+        <trans-unit id="Msg_BenefitNotAllowed" translate="yes" xml:space="preserve">
+          <source>Not allowed to receive {0} value {1} as a benefit</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pas autorisés à recevoir {0} {1} de valeur comme un avantage</target>
+        </trans-unit>
+        <trans-unit id="Skill_Gambling" translate="yes" xml:space="preserve">
+          <source>Gambling</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jeux d’argent</target>
+        </trans-unit>
+        <trans-unit id="Skill_Independance" translate="yes" xml:space="preserve">
+          <source>Independance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Independance</target>
+        </trans-unit>
+        <trans-unit id="Skill_Prospecting" translate="yes" xml:space="preserve">
+          <source>Prospecting</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Prospection</target>
+        </trans-unit>
+        <trans-unit id="Skill_Tolerance" translate="yes" xml:space="preserve">
+          <source>Tolerance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tolérance</target>
+        </trans-unit>
+        <trans-unit id="Msg_Aging" translate="yes" xml:space="preserve">
+          <source>{0} reduced by {1} due to aging</source>
+          <target state="new">{0} reduced by {1} due to aging</target>
+        </trans-unit>
+        <trans-unit id="Msg_Ill" translate="yes" xml:space="preserve">
+          <source>You were ill for {0} months due to aging.</source>
+          <target state="new">You were ill for {0} months due to aging.</target>
+        </trans-unit>
+        <trans-unit id="Msg_RececivedBenefit" translate="yes" xml:space="preserve">
+          <source>Received benefit {0} of value {1}</source>
+          <target state="new">Received benefit {0} of value {1}</target>
+        </trans-unit>
+        <trans-unit id="Msg_ReceivedAttribute" translate="yes" xml:space="preserve">
+          <source>Received an uplift to {0} of value {1}</source>
+          <target state="new">Received an uplift to {0} of value {1}</target>
+        </trans-unit>
+        <trans-unit id="Msg_ReceivedSkill" translate="yes" xml:space="preserve">
+          <source>Received skill {0} at level {1}</source>
+          <target state="new">Received skill {0} at level {1}</target>
+        </trans-unit>
       </group>
     </body>
   </file>

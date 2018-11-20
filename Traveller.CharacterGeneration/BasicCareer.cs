@@ -66,22 +66,22 @@
             if (roll == 12)
             {
                 renlist = Renlistment.Must;
-                Owner.Journal.Add(string.Format("Forced to remain in {0} at end of term {1}", Name, Term));
+                Owner.Journal.Add(string.Format(Properties.Resources.Msg_MustRenlist, Name, Term));
             }
             else if (Term >= 6)
             {
                 Retired = true;
-                Owner.Journal.Add(string.Format("Re-enlistment refused due to age at end of term {0}", Term));
+                Owner.Journal.Add(string.Format(Properties.Resources.Msg_RenlistRefused, Term));
             }
             else if (roll == 2)
             {
                 Retired = true;
-                Owner.Journal.Add(string.Format("Dismissed from service at end of term {0}", Term));
+                Owner.Journal.Add(string.Format(Properties.Resources.Msg_Dismissed, Term));
             }
             else if (roll < target)
             {
                 Retired = true;
-                Owner.Journal.Add(string.Format("Re-enlistment refused at end of term {0}", Term));
+                Owner.Journal.Add(string.Format(Properties.Resources.Msg_Refused, Term));
             }
             else
             {
@@ -97,11 +97,11 @@
             if (dice.roll(2) >= target)
             {
                 enlist = true;
-                Owner.Journal.Add(string.Format("Enlisted in {0} at age {1}", Name, Owner.Age));
+                Owner.Journal.Add(string.Format(Properties.Resources.Msg_Enlist_Success, Name, Owner.Age));
             }
             else
             {
-                Owner.Journal.Add(string.Format("Enlistment in {0} refused at age {1}", Name, Owner.Age));
+                Owner.Journal.Add(string.Format(Properties.Resources.Msg_Enlist_Refused, Name, Owner.Age));
             }
 
             return enlist;
@@ -111,12 +111,12 @@
         {
             if (renlisted)
             {
-                Owner.Journal.Add(string.Format("Remained in {0} at end of term {1}", Name, Term));
+                Owner.Journal.Add(string.Format(Properties.Resources.Msg_Renlist_Success, Name, Term));
             }
             else
             {
                 Retired = true;
-                Owner.Journal.Add(string.Format("Left {0} at end of term {1}", Name, Term));
+                Owner.Journal.Add(string.Format(Properties.Resources.Msg_Renlist_Fail, Name, Term));
             }
         }
     }

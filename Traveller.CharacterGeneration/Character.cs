@@ -100,10 +100,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
                             // Imperial Aslan get some automatic skills
-                            AddSkill(new Skill() {  Class = Skill.SkillClass.None, Level = 1, Name= "Tolerance", SexApplicabilty = Skill.SkillSex.DontCare });
+                            AddSkill(SkillLibrary.Toloerance);
                             if (Sex.Equals("Male"))
                             {
-                                AddSkill(new Skill() { Class = Skill.SkillClass.None, Level = 1, Name = "Independance", SexApplicabilty = Skill.SkillSex.Male });
+                                AddSkill(SkillLibrary.Independance);
                             }
                             break;
                         case Species.Vargr:
@@ -247,7 +247,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         }
         public void AddSkill(Skill skill)
         {
-            Journal.Add(string.Format("Received skill {0} at level {1}", skill.Name, skill.Level));
+            Journal.Add(string.Format(Properties.Resources.Msg_ReceivedSkill, skill.Name, skill.Level));
             if (!Skills.ContainsKey(skill.Name))
             {
                 Skills.Add(skill.Name, skill);
@@ -260,7 +260,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
 
         public void AddBenefit(Benefit benefit)
         {
-            Journal.Add(string.Format("Received benefit {0} of value {1}", benefit.Name, benefit.Value));
+            Journal.Add(string.Format(Properties.Resources.Msg_RececivedBenefit, benefit.Name, benefit.Value));
             if (Benefits.ContainsKey(benefit.Name))
             {
                 Benefits[benefit.Name].Value += benefit.Value;
@@ -273,7 +273,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
 
         public void AddAttribute(string attribute, int value)
         {
-            Journal.Add(string.Format("Received an uplift to {0} of value {1}", attribute, value));
+            Journal.Add(string.Format(Properties.Resources.Msg_ReceivedAttribute, attribute, value));
             Profile[attribute].Value += value;
         }
 
@@ -382,7 +382,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                         {
                             Profile.Int.Value = 1;
                         }
-                        Journal.Add(string.Format("You were ill for {0} months due to aging.", dice.roll()));
+                        Journal.Add(string.Format(Properties.Resources.Msg_Ill, dice.roll()));
                     }
                     else
                     {
@@ -403,7 +403,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             if (save < check)
             {
                 attribute.Value += drop;
-                Journal.Add(string.Format("{0} reduced by {1} due to aging", attribute.Name, Math.Abs(drop)));
+                Journal.Add(string.Format(Properties.Resources.Msg_Aging, attribute.Name, Math.Abs(drop)));
             }
         }
 

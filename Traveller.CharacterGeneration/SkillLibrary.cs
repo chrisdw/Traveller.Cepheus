@@ -36,7 +36,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill Engineering = new Skill("Engineering", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Forgery = new Skill("Forgery", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill FowardObserver = new Skill("Forward Observer", Skill.SkillClass.None, 1);
-        public static Skill Gambling = new Skill("Gambling", Skill.SkillClass.None, 1);
+        public static Skill Gambling = new Skill(Properties.Resources.Skill_Gambling, Skill.SkillClass.None, 1);
         public static Skill Gravitics = new Skill("Gravitics", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill GravVehicle = new Skill("Grav Vehicle", Skill.SkillClass.None, 1);
         public static Skill Gunnery = new Skill("Gunnery", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
@@ -53,7 +53,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill NonVerbalComms = new Skill("Non-verbal Communication", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Prole = new Skill("Prole", Skill.SkillClass.Prole, 1, Skill.SkillSex.DontCare);
         public static Skill Pilot = new Skill("Pilot", Skill.SkillClass.None, 1, Skill.SkillSex.Male);
-        public static Skill Prospecting = new Skill("Prospecting", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
+        public static Skill Prospecting = new Skill(Properties.Resources.Skill_Prospecting, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Psychology = new Skill("Psychology", Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Recon = new Skill("Recon", Skill.SkillClass.Military, 1);
         public static Skill Recruiting = new Skill("Recruiting", Skill.SkillClass.None, 1);
@@ -174,5 +174,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Skill HitsU = new Skill("HitsU", Skill.SkillClass.AttributeChange, 1);
         public static Skill Herding = new Skill("Herding", Skill.SkillClass.None, 1);
         public static Skill WaldoOps = new Skill("Waldo Ops", Skill.SkillClass.None, 1);
+
+        // Aslan specific skills
+        public static Skill Independance = new Skill(Properties.Resources.Skill_Independance, Skill.SkillClass.None, 1, Skill.SkillSex.Male);
+        public static Skill Toloerance = new Skill(Properties.Resources.Skill_Tolerance, Skill.SkillClass.None, 1, Skill.SkillSex.DontCare);
     }
 }

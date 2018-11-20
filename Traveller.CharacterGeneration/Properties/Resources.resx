@@ -117,6 +117,135 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Benefit_Blade" xml:space="preserve">
+    <value>Blade</value>
+  </data>
+  <data name="Benefit_Bow" xml:space="preserve">
+    <value>Bow</value>
+  </data>
+  <data name="Benefit_Cash" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="Benefit_Gun" xml:space="preserve">
+    <value>Gun</value>
+  </data>
+  <data name="Benefit_HighPsg" xml:space="preserve">
+    <value>High Psg</value>
+  </data>
+  <data name="Benefit_Instruments" xml:space="preserve">
+    <value>Instruments</value>
+  </data>
+  <data name="Benefit_Legion" xml:space="preserve">
+    <value>Legion</value>
+  </data>
+  <data name="Benefit_LowPsg" xml:space="preserve">
+    <value>Low Psg</value>
+  </data>
+  <data name="Benefit_MidPsg" xml:space="preserve">
+    <value>Mid Psg</value>
+  </data>
+  <data name="Benefit_Nothing" xml:space="preserve">
+    <value>Nothing</value>
+  </data>
+  <data name="Benefit_RetirementPay" xml:space="preserve">
+    <value>Retirement Pay</value>
+  </data>
+  <data name="Benefit_Travellers" xml:space="preserve">
+    <value>Travellers</value>
+  </data>
+  <data name="Benefit_Verbalization" xml:space="preserve">
+    <value>Verbalization</value>
+  </data>
+  <data name="Benefit_Voucher" xml:space="preserve">
+    <value>Voucher</value>
+  </data>
+  <data name="Benefit_WaldoSet" xml:space="preserve">
+    <value>Waldo Set</value>
+  </data>
+  <data name="Benefit_Watch" xml:space="preserve">
+    <value>Watch</value>
+  </data>
+  <data name="Benefit_Weapon" xml:space="preserve">
+    <value>Weapon</value>
+  </data>
+  <data name="Msg_Aging" xml:space="preserve">
+    <value>{0} reduced by {1} due to aging</value>
+  </data>
+  <data name="Msg_BenefitNotAllowed" xml:space="preserve">
+    <value>Not allowed to receive {0} value {1} as a benefit</value>
+  </data>
+  <data name="Msg_Dismissed" xml:space="preserve">
+    <value>Dismissed from service at end of term {0}</value>
+  </data>
+  <data name="Msg_Enlist_Refused" xml:space="preserve">
+    <value>Enlistment in {0} refused at age {1}</value>
+  </data>
+  <data name="Msg_Enlist_Success" xml:space="preserve">
+    <value>Enlisted in {0} at age {1}</value>
+  </data>
+  <data name="Msg_Ill" xml:space="preserve">
+    <value>You were ill for {0} months due to aging.</value>
+  </data>
+  <data name="Msg_MustRenlist" xml:space="preserve">
+    <value>Forced to remain in {0} at end of term {1}</value>
+  </data>
+  <data name="Msg_RececivedBenefit" xml:space="preserve">
+    <value>Received benefit {0} of value {1}</value>
+  </data>
+  <data name="Msg_ReceivedAttribute" xml:space="preserve">
+    <value>Received an uplift to {0} of value {1}</value>
+  </data>
+  <data name="Msg_ReceivedSkill" xml:space="preserve">
+    <value>Received skill {0} at level {1}</value>
+  </data>
+  <data name="Msg_Refused" xml:space="preserve">
+    <value>Re-enlistment refused at end of term {0}</value>
+  </data>
+  <data name="Msg_RenlistRefused" xml:space="preserve">
+    <value>Re-enlistment refused due to age at end of term {0}</value>
+  </data>
+  <data name="Msg_Renlist_Fail" xml:space="preserve">
+    <value>Left {0} at end of term {1}</value>
+  </data>
+  <data name="Msg_Renlist_Success" xml:space="preserve">
+    <value>Remained in {0} at end of term {1}</value>
+  </data>
+  <data name="Ship_Corsair" xml:space="preserve">
+    <value>Corsair</value>
+  </data>
+  <data name="Ship_LabShip" xml:space="preserve">
+    <value>Lab Ship</value>
+  </data>
+  <data name="Ship_Merchant" xml:space="preserve">
+    <value>Merchant</value>
+  </data>
+  <data name="Ship_SafariShip" xml:space="preserve">
+    <value>Safari Ship</value>
+  </data>
+  <data name="Ship_Scout" xml:space="preserve">
+    <value>Scout</value>
+  </data>
+  <data name="Ship_Seeker" xml:space="preserve">
+    <value>Seeker</value>
+  </data>
+  <data name="Ship_Trader" xml:space="preserve">
+    <value>Trader</value>
+  </data>
+  <data name="Ship_Yacht" xml:space="preserve">
+    <value>Yacht</value>
+  </data>
+  <data name="Skill_Gambling" xml:space="preserve">
+    <value>Gambling</value>
+  </data>
+  <data name="Skill_Independance" xml:space="preserve">
+    <value>Independance</value>
+  </data>
+  <data name="Skill_Prospecting" xml:space="preserve">
+    <value>Prospecting</value>
+  </data>
+  <data name="Skill_Tolerance" xml:space="preserve">
+    <value>Tolerance</value>
+  </data>
   <data name="Table_AdvancedEducation" xml:space="preserve">
     <value>Advaned Eduation</value>
   </data>

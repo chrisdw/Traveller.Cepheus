@@ -38,22 +38,29 @@ namespace org.DownesWard.Traveller.CharacterGeneration
 
         public static List<string> GetWeaponList(Benefit benefit)
         {
-            switch (benefit.Name)
+            if (benefit.Name.Equals(Properties.Resources.Benefit_Bow))
             {
-                case "Bow":
-                    return SkillLibrary.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList();
-                case "Gun":
-                    return SkillLibrary.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList();
-                case "Blade":
-                    return SkillLibrary.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList();
-                case "Weapon":
-                    var list = new List<string>();
-                    list.AddRange(SkillLibrary.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList());
-                    list.AddRange(SkillLibrary.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList());
-                    list.AddRange(SkillLibrary.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList());
-                    return list;
-                default:
-                    return new List<string>();
+                return SkillLibrary.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList();
+            }
+            else if (benefit.Name.Equals(Properties.Resources.Benefit_Gun))
+            {
+                return SkillLibrary.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList();
+            }
+            else if (benefit.Name.Equals(Properties.Resources.Benefit_Blade))
+            {
+                return SkillLibrary.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList();
+            }
+            else if (benefit.Name.Equals(Properties.Resources.Benefit_Weapon))
+            {
+                var list = new List<string>();
+                list.AddRange(SkillLibrary.BowCombat.ResolveSkill().Select(sk => sk.Name).ToList());
+                list.AddRange(SkillLibrary.GunCombat.ResolveSkill().Select(sk => sk.Name).ToList());
+                list.AddRange(SkillLibrary.BladeCombat.ResolveSkill().Select(sk => sk.Name).ToList());
+                return list;
+            }
+            else
+            {
+                return new List<string>();
             }
         }
 

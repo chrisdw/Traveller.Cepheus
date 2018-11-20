@@ -27,4 +27,118 @@
   <data name="Table_ServiceSkills" xml:space="preserve">
     <value>Aptitudes pour le service</value>
   </data>
+  <data name="Benefit_Blade" xml:space="preserve">
+    <value>Lame</value>
+  </data>
+  <data name="Benefit_Gun" xml:space="preserve">
+    <value>Armes à feu</value>
+  </data>
+  <data name="Benefit_Legion" xml:space="preserve">
+    <value>Légion</value>
+  </data>
+  <data name="Benefit_Weapon" xml:space="preserve">
+    <value>Arme</value>
+  </data>
+  <data name="Benefit_Instruments" xml:space="preserve">
+    <value>Instruments de</value>
+  </data>
+  <data name="Benefit_Nothing" xml:space="preserve">
+    <value>Rien</value>
+  </data>
+  <data name="Benefit_Travellers" xml:space="preserve">
+    <value>Gens du voyage</value>
+  </data>
+  <data name="Benefit_Verbalization" xml:space="preserve">
+    <value>Verbalisation</value>
+  </data>
+  <data name="Benefit_Voucher" xml:space="preserve">
+    <value>N° document</value>
+  </data>
+  <data name="Benefit_WaldoSet" xml:space="preserve">
+    <value>Set de Waldo</value>
+  </data>
+  <data name="Benefit_Watch" xml:space="preserve">
+    <value>Montre</value>
+  </data>
+  <data name="Benefit_HighPsg" xml:space="preserve">
+    <value>Haute Psg</value>
+  </data>
+  <data name="Benefit_LowPsg" xml:space="preserve">
+    <value>Faible Psg</value>
+  </data>
+  <data name="Benefit_MidPsg" xml:space="preserve">
+    <value>Psg Mid</value>
+  </data>
+  <data name="Ship_Corsair" xml:space="preserve">
+    <value>Corsair</value>
+  </data>
+  <data name="Ship_LabShip" xml:space="preserve">
+    <value>Navire de laboratoire</value>
+  </data>
+  <data name="Ship_Merchant" xml:space="preserve">
+    <value>Marchand</value>
+  </data>
+  <data name="Ship_SafariShip" xml:space="preserve">
+    <value>Bateau de Safari</value>
+  </data>
+  <data name="Ship_Scout" xml:space="preserve">
+    <value>Scout</value>
+  </data>
+  <data name="Ship_Seeker" xml:space="preserve">
+    <value>Seeker</value>
+  </data>
+  <data name="Ship_Trader" xml:space="preserve">
+    <value>Trader</value>
+  </data>
+  <data name="Ship_Yacht" xml:space="preserve">
+    <value>Yacht</value>
+  </data>
+  <data name="Benefit_Bow" xml:space="preserve">
+    <value>Bow</value>
+  </data>
+  <data name="Msg_Dismissed" xml:space="preserve">
+    <value>Renvoyé de service à la fin du terme {0}</value>
+  </data>
+  <data name="Msg_MustRenlist" xml:space="preserve">
+    <value>Obligée de rester à {0} à fin de terme {1}</value>
+  </data>
+  <data name="Msg_RenlistRefused" xml:space="preserve">
+    <value>La réinscription refusée en raison de l’âge à la fin du terme {0}</value>
+  </data>
+  <data name="Msg_Refused" xml:space="preserve">
+    <value>La réinscription refusée à fin de terme {0}</value>
+  </data>
+  <data name="Msg_Enlist_Refused" xml:space="preserve">
+    <value>Enrôlement dans {0} a refusé à âge {1}</value>
+  </data>
+  <data name="Msg_Enlist_Success" xml:space="preserve">
+    <value>S’est enrôlé dans {0} sur {1} âge</value>
+  </data>
+  <data name="Msg_Renlist_Fail" xml:space="preserve">
+    <value>{0} gauche à fin de terme {1}</value>
+  </data>
+  <data name="Msg_Renlist_Success" xml:space="preserve">
+    <value>Restait à {0} à fin de terme {1}</value>
+  </data>
+  <data name="Benefit_Cash" xml:space="preserve">
+    <value>Trésorerie</value>
+  </data>
+  <data name="Benefit_RetirementPay" xml:space="preserve">
+    <value>Salaire de la retraite</value>
+  </data>
+  <data name="Msg_BenefitNotAllowed" xml:space="preserve">
+    <value>Pas autorisés à recevoir {0} {1} de valeur comme un avantage</value>
+  </data>
+  <data name="Skill_Gambling" xml:space="preserve">
+    <value>Jeux d’argent</value>
+  </data>
+  <data name="Skill_Independance" xml:space="preserve">
+    <value>Independance</value>
+  </data>
+  <data name="Skill_Prospecting" xml:space="preserve">
+    <value>Prospection</value>
+  </data>
+  <data name="Skill_Tolerance" xml:space="preserve">
+    <value>Tolérance</value>
+  </data>
 </root>

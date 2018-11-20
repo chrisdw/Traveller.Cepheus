@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration
+﻿namespace org.DownesWard.Traveller.CharacterGeneration
 {
     public static class BenefitLibrary
     {
@@ -17,33 +13,34 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         public static Benefit Psi = new Benefit("PSI", 1, Benefit.BenefitType.AttributeModification);
 
         // Weapon benefits
-        public static Benefit Blade = new Benefit("Blade", 1, Benefit.BenefitType.Weapon);
-        public static Benefit Gun = new Benefit("Gun", 1, Benefit.BenefitType.Weapon);
-        public static Benefit Weapon = new Benefit("Weapon", 1, Benefit.BenefitType.Weapon);
+        public static Benefit Blade = new Benefit(Properties.Resources.Benefit_Blade, 1, Benefit.BenefitType.Weapon);
+        public static Benefit Bow = new Benefit(Properties.Resources.Benefit_Bow, 1, Benefit.BenefitType.Weapon);
+        public static Benefit Gun = new Benefit(Properties.Resources.Benefit_Gun, 1, Benefit.BenefitType.Weapon);
+        public static Benefit Weapon = new Benefit(Properties.Resources.Benefit_Weapon, 1, Benefit.BenefitType.Weapon);
 
         // Other benefits
-        public static Benefit Legion = new Benefit("Legion", 1, Benefit.BenefitType.Material);
-        public static Benefit Instruments = new Benefit("Instruments", 1, Benefit.BenefitType.Material);
-        public static Benefit Travellers = new Benefit("Travellers", 1, Benefit.BenefitType.Material);
-        public static Benefit Nothing = new Benefit("Nothing", 1, Benefit.BenefitType.Material);
-        public static Benefit Verbalization = new Benefit("Verbalization", 1, Benefit.BenefitType.Skill);
-        public static Benefit Voucher = new Benefit("Voucher", 1, Benefit.BenefitType.Material);
-        public static Benefit WaldoSet = new Benefit("Waldo Set", 1, Benefit.BenefitType.Material);
-        public static Benefit Watch = new Benefit("Watch", 1, Benefit.BenefitType.Material);
+        public static Benefit Legion = new Benefit(Properties.Resources.Benefit_Legion, 1, Benefit.BenefitType.Material);
+        public static Benefit Instruments = new Benefit(Properties.Resources.Benefit_Instruments, 1, Benefit.BenefitType.Material);
+        public static Benefit Travellers = new Benefit(Properties.Resources.Benefit_Travellers, 1, Benefit.BenefitType.Material);
+        public static Benefit Nothing = new Benefit(Properties.Resources.Benefit_Nothing, 1, Benefit.BenefitType.Material);
+        public static Benefit Verbalization = new Benefit(Properties.Resources.Benefit_Verbalization, 1, Benefit.BenefitType.Skill);
+        public static Benefit Voucher = new Benefit(Properties.Resources.Benefit_Voucher, 1, Benefit.BenefitType.Material);
+        public static Benefit WaldoSet = new Benefit(Properties.Resources.Benefit_WaldoSet, 1, Benefit.BenefitType.Material);
+        public static Benefit Watch = new Benefit(Properties.Resources.Benefit_Watch, 1, Benefit.BenefitType.Material);
 
         // Tickets
-        public static Benefit LowPsg = new Benefit("Low Psg", 1, Benefit.BenefitType.Material);
-        public static Benefit MidPsg = new Benefit("Mid Psg", 1, Benefit.BenefitType.Material);
-        public static Benefit HighPsg = new Benefit("High Psg", 1, Benefit.BenefitType.Material);
+        public static Benefit LowPsg = new Benefit(Properties.Resources.Benefit_LowPsg, 1, Benefit.BenefitType.Material);
+        public static Benefit MidPsg = new Benefit(Properties.Resources.Benefit_MidPsg, 1, Benefit.BenefitType.Material);
+        public static Benefit HighPsg = new Benefit(Properties.Resources.Benefit_HighPsg, 1, Benefit.BenefitType.Material);
 
         // Ship shares
-        public static Benefit Corsair = new Benefit("Corsair", 1, Benefit.BenefitType.Material);
-        public static Benefit LabShip = new Benefit("Lab Ship", 1, Benefit.BenefitType.Material);
-        public static Benefit Merchant = new Benefit("Merchant", 1, Benefit.BenefitType.Material);
-        public static Benefit Scout = new Benefit("Scout", 1, Benefit.BenefitType.Material);
-        public static Benefit SafariShip = new Benefit("Safari Ship", 1, Benefit.BenefitType.Material);
-        public static Benefit Seeker = new Benefit("Seeker", 1, Benefit.BenefitType.Material);
-        public static Benefit Trader = new Benefit("Trader", 1, Benefit.BenefitType.Material);
-        public static Benefit Yacht = new Benefit("Yacht", 1, Benefit.BenefitType.Material);
+        public static Benefit Corsair = new Benefit(Properties.Resources.Ship_Corsair, 1, Benefit.BenefitType.Material);
+        public static Benefit LabShip = new Benefit(Properties.Resources.Ship_LabShip, 1, Benefit.BenefitType.Material);
+        public static Benefit Merchant = new Benefit(Properties.Resources.Ship_Merchant, 1, Benefit.BenefitType.Material);
+        public static Benefit Scout = new Benefit(Properties.Resources.Ship_Scout, 1, Benefit.BenefitType.Material);
+        public static Benefit SafariShip = new Benefit(Properties.Resources.Ship_SafariShip, 1, Benefit.BenefitType.Material);
+        public static Benefit Seeker = new Benefit(Properties.Resources.Ship_Seeker, 1, Benefit.BenefitType.Material);
+        public static Benefit Trader = new Benefit(Properties.Resources.Ship_Trader, 1, Benefit.BenefitType.Material);
+        public static Benefit Yacht = new Benefit(Properties.Resources.Ship_Yacht, 1, Benefit.BenefitType.Material);
     }
 }
