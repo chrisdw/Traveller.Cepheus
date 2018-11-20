@@ -135,8 +135,23 @@
   <data name="Career_SpecialArm" xml:space="preserve">
     <value>Special Arm</value>
   </data>
+  <data name="Rank_1stOfficer" xml:space="preserve">
+    <value>1st Officer</value>
+  </data>
+  <data name="Rank_2ndOfficer" xml:space="preserve">
+    <value>2nd Officer</value>
+  </data>
+  <data name="Rank_3rdOfficer" xml:space="preserve">
+    <value>3rd Officer</value>
+  </data>
+  <data name="Rank_4thOfficer" xml:space="preserve">
+    <value>4th Officer</value>
+  </data>
   <data name="Rank_Academic" xml:space="preserve">
     <value>Academic</value>
+  </data>
+  <data name="Rank_Admiral" xml:space="preserve">
+    <value>Admiral</value>
   </data>
   <data name="Rank_AsstInstructor" xml:space="preserve">
     <value>Asst. Instructor</value>
@@ -144,16 +159,73 @@
   <data name="Rank_AsstProfessor" xml:space="preserve">
     <value>Asst. Professor</value>
   </data>
+  <data name="Rank_Baron" xml:space="preserve">
+    <value>Baron</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Captain</value>
+  </data>
+  <data name="Rank_Colonel" xml:space="preserve">
+    <value>Colonel</value>
+  </data>
+  <data name="Rank_Commander" xml:space="preserve">
+    <value>Commander</value>
+  </data>
+  <data name="Rank_Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
   <data name="Rank_Dean" xml:space="preserve">
     <value>Dean</value>
+  </data>
+  <data name="Rank_Duke" xml:space="preserve">
+    <value>Duke</value>
+  </data>
+  <data name="Rank_Ensign" xml:space="preserve">
+    <value>Ensign</value>
+  </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>General</value>
   </data>
   <data name="Rank_Instructor" xml:space="preserve">
     <value>Instructor</value>
   </data>
+  <data name="Rank_Knight" xml:space="preserve">
+    <value>Knight</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_LtColonel" xml:space="preserve">
+    <value>Lt. Colonel</value>
+  </data>
+  <data name="Rank_LtCommander" xml:space="preserve">
+    <value>Lt. Commander</value>
+  </data>
+  <data name="Rank_Major" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="Rank_Marquis" xml:space="preserve">
+    <value>Marquis</value>
+  </data>
+  <data name="Rank_Noble" xml:space="preserve">
+    <value>Noble</value>
+  </data>
   <data name="Rank_Professor" xml:space="preserve">
     <value>Professor</value>
   </data>
+  <data name="Rank_SpaceHand" xml:space="preserve">
+    <value>Space Hand</value>
+  </data>
+  <data name="Rank_Spacer" xml:space="preserve">
+    <value>Spacer</value>
+  </data>
+  <data name="Rank_SrCaptain" xml:space="preserve">
+    <value>Sr Captain</value>
+  </data>
   <data name="Rank_Teacher" xml:space="preserve">
     <value>Teacher</value>
+  </data>
+  <data name="Rank_Trooper" xml:space="preserve">
+    <value>Trooper</value>
   </data>
 </root>

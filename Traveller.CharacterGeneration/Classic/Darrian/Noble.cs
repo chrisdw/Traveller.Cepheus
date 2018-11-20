@@ -91,12 +91,12 @@
             Cash[5] = 20000;
             Cash[6] = 40000;
 
-            Ranks[0] = "Noble";
-            Ranks[1] = "Knight";
-            Ranks[2] = "Baron";
-            Ranks[3] = "Marquis";
-            Ranks[4] = "Count";
-            Ranks[5] = "Duke";
+            Ranks[0] = Resources.Rank_Noble;
+            Ranks[1] = Resources.Rank_Knight;
+            Ranks[2] = Resources.Rank_Baron;
+            Ranks[3] = Resources.Rank_Marquis;
+            Ranks[4] = Resources.Rank_Count;
+            Ranks[5] = Resources.Rank_Duke;
         }
 
         protected override void CommsionSkill()

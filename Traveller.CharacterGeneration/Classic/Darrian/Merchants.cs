@@ -92,13 +92,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
             Cash[5] = 20000;
             Cash[6] = 30000;
 
-            Ranks[0] = "Space Hand";
-            Ranks[1] = "4th Officer";
-            Ranks[2] = "3rd Officer";
-            Ranks[3] = "2nd Officer";
-            Ranks[4] = "1st Officer";
-            Ranks[5] = "Captain";
-            Ranks[6] = "Sr Captain";
+            Ranks[0] = Resources.Rank_SpaceHand;
+            Ranks[1] = Resources.Rank_4thOfficer;
+            Ranks[2] = Resources.Rank_3rdOfficer;
+            Ranks[3] = Resources.Rank_2ndOfficer;
+            Ranks[4] = Resources.Rank_1stOfficer;
+            Ranks[5] = Resources.Rank_Captain;
+            Ranks[6] = Resources.Rank_SrCaptain;
         }
         protected override void CommsionSkill()
         {

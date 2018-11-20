@@ -647,6 +647,102 @@
           <source>Teacher</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Enseignant</target>
         </trans-unit>
+        <trans-unit id="Rank_1stOfficer" translate="yes" xml:space="preserve">
+          <source>1st Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">1er officier</target>
+        </trans-unit>
+        <trans-unit id="Rank_2ndOfficer" translate="yes" xml:space="preserve">
+          <source>2nd Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">2ème officier</target>
+        </trans-unit>
+        <trans-unit id="Rank_3rdOfficer" translate="yes" xml:space="preserve">
+          <source>3rd Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">3ème officier</target>
+        </trans-unit>
+        <trans-unit id="Rank_4thOfficer" translate="yes" xml:space="preserve">
+          <source>4th Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">4ème agent</target>
+        </trans-unit>
+        <trans-unit id="Rank_Captain" translate="yes" xml:space="preserve">
+          <source>Captain</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Capitaine</target>
+        </trans-unit>
+        <trans-unit id="Rank_Colonel" translate="yes" xml:space="preserve">
+          <source>Colonel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colonel</target>
+        </trans-unit>
+        <trans-unit id="Rank_General" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Général</target>
+        </trans-unit>
+        <trans-unit id="Rank_Lieutenant" translate="yes" xml:space="preserve">
+          <source>Lieutenant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lieutenant</target>
+        </trans-unit>
+        <trans-unit id="Rank_LtColonel" translate="yes" xml:space="preserve">
+          <source>Lt. Colonel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le Lieutenant Colonel</target>
+        </trans-unit>
+        <trans-unit id="Rank_Major" translate="yes" xml:space="preserve">
+          <source>Major</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Principale</target>
+        </trans-unit>
+        <trans-unit id="Rank_SpaceHand" translate="yes" xml:space="preserve">
+          <source>Space Hand</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">L’espace main</target>
+        </trans-unit>
+        <trans-unit id="Rank_SrCaptain" translate="yes" xml:space="preserve">
+          <source>Sr Captain</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Capitaine SR</target>
+        </trans-unit>
+        <trans-unit id="Rank_Trooper" translate="yes" xml:space="preserve">
+          <source>Trooper</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trooper</target>
+        </trans-unit>
+        <trans-unit id="Rank_Admiral" translate="yes" xml:space="preserve">
+          <source>Admiral</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Amiral</target>
+        </trans-unit>
+        <trans-unit id="Rank_Baron" translate="yes" xml:space="preserve">
+          <source>Baron</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Baron</target>
+        </trans-unit>
+        <trans-unit id="Rank_Commander" translate="yes" xml:space="preserve">
+          <source>Commander</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Commandant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Count" translate="yes" xml:space="preserve">
+          <source>Count</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Comte</target>
+        </trans-unit>
+        <trans-unit id="Rank_Duke" translate="yes" xml:space="preserve">
+          <source>Duke</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Duc</target>
+        </trans-unit>
+        <trans-unit id="Rank_Ensign" translate="yes" xml:space="preserve">
+          <source>Ensign</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ensign</target>
+        </trans-unit>
+        <trans-unit id="Rank_Knight" translate="yes" xml:space="preserve">
+          <source>Knight</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chevalier</target>
+        </trans-unit>
+        <trans-unit id="Rank_LtCommander" translate="yes" xml:space="preserve">
+          <source>Lt. Commander</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le lieutenant commandant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Marquis" translate="yes" xml:space="preserve">
+          <source>Marquis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marquis</target>
+        </trans-unit>
+        <trans-unit id="Rank_Noble" translate="yes" xml:space="preserve">
+          <source>Noble</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Noble</target>
+        </trans-unit>
+        <trans-unit id="Rank_Spacer" translate="yes" xml:space="preserve">
+          <source>Spacer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Entretoise</target>
+        </trans-unit>
       </group>
     </body>
   </file>

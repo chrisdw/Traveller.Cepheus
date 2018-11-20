@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Career_Academic" xml:space="preserve">
+    <value>Académique</value>
+  </data>
+  <data name="Career_Army" xml:space="preserve">
+    <value>Armée de terre</value>
+  </data>
+  <data name="Career_Merchants" xml:space="preserve">
+    <value>Marchands</value>
+  </data>
+  <data name="Career_Navy" xml:space="preserve">
+    <value>Bleu foncé</value>
+  </data>
+  <data name="Career_Noble" xml:space="preserve">
+    <value>Noble</value>
+  </data>
+  <data name="Career_SpecialArm" xml:space="preserve">
+    <value>Spécial bras</value>
+  </data>
+  <data name="Rank_Academic" xml:space="preserve">
+    <value>Académique</value>
+  </data>
+  <data name="Rank_AsstInstructor" xml:space="preserve">
+    <value>Instructeur de l’ASST.</value>
+  </data>
+  <data name="Rank_AsstProfessor" xml:space="preserve">
+    <value>Professeur adjoint</value>
+  </data>
+  <data name="Rank_Dean" xml:space="preserve">
+    <value>Dean</value>
+  </data>
+  <data name="Rank_Instructor" xml:space="preserve">
+    <value>Instructeur</value>
+  </data>
+  <data name="Rank_Professor" xml:space="preserve">
+    <value>Professeur</value>
+  </data>
+  <data name="Rank_Teacher" xml:space="preserve">
+    <value>Enseignant</value>
+  </data>
+  <data name="Rank_1stOfficer" xml:space="preserve">
+    <value>1er officier</value>
+  </data>
+  <data name="Rank_2ndOfficer" xml:space="preserve">
+    <value>2ème officier</value>
+  </data>
+  <data name="Rank_3rdOfficer" xml:space="preserve">
+    <value>3ème officier</value>
+  </data>
+  <data name="Rank_4thOfficer" xml:space="preserve">
+    <value>4ème agent</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Capitaine</value>
+  </data>
+  <data name="Rank_Colonel" xml:space="preserve">
+    <value>Colonel</value>
+  </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>Général</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_LtColonel" xml:space="preserve">
+    <value>Le Lieutenant Colonel</value>
+  </data>
+  <data name="Rank_Major" xml:space="preserve">
+    <value>Principale</value>
+  </data>
+  <data name="Rank_SpaceHand" xml:space="preserve">
+    <value>L’espace main</value>
+  </data>
+  <data name="Rank_SrCaptain" xml:space="preserve">
+    <value>Capitaine SR</value>
+  </data>
+  <data name="Rank_Trooper" xml:space="preserve">
+    <value>Trooper</value>
+  </data>
+  <data name="Rank_Admiral" xml:space="preserve">
+    <value>Amiral</value>
+  </data>
+  <data name="Rank_Baron" xml:space="preserve">
+    <value>Baron</value>
+  </data>
+  <data name="Rank_Commander" xml:space="preserve">
+    <value>Commandant</value>
+  </data>
+  <data name="Rank_Count" xml:space="preserve">
+    <value>Comte</value>
+  </data>
+  <data name="Rank_Duke" xml:space="preserve">
+    <value>Duc</value>
+  </data>
+  <data name="Rank_Ensign" xml:space="preserve">
+    <value>Ensign</value>
+  </data>
+  <data name="Rank_Knight" xml:space="preserve">
+    <value>Chevalier</value>
+  </data>
+  <data name="Rank_LtCommander" xml:space="preserve">
+    <value>Le lieutenant commandant</value>
+  </data>
+  <data name="Rank_Marquis" xml:space="preserve">
+    <value>Marquis</value>
+  </data>
+  <data name="Rank_Noble" xml:space="preserve">
+    <value>Noble</value>
+  </data>
+  <data name="Rank_Spacer" xml:space="preserve">
+    <value>Entretoise</value>
+  </data>
+</root>

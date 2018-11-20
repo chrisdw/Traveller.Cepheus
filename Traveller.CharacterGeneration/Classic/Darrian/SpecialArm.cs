@@ -88,13 +88,13 @@
             Cash[5] = 20000;
             Cash[6] = 30000;
 
-            Ranks[0] = "Spacer";
-            Ranks[1] = "Ensign";
-            Ranks[2] = "Lieutenant";
-            Ranks[3] = "Lt. Commander";
-            Ranks[4] = "Commander";
-            Ranks[5] = "Captain";
-            Ranks[6] = "Admiral";
+            Ranks[0] = Resources.Rank_Spacer;
+            Ranks[1] = Resources.Rank_Ensign;
+            Ranks[2] = Resources.Rank_Lieutenant;
+            Ranks[3] = Resources.Rank_LtCommander;
+            Ranks[4] = Resources.Rank_Commander;
+            Ranks[5] = Resources.Rank_Captain;
+            Ranks[6] = Resources.Rank_Admiral;
         }
         protected override void CommsionSkill()
         {
