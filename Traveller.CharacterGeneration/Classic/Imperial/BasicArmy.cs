@@ -10,7 +10,7 @@
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Properties.Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = SkillLibrary.Str;
             skills[1] = SkillLibrary.Dex;
@@ -21,7 +21,7 @@
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Properties.Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = SkillLibrary.ATV;
             skills[1] = SkillLibrary.AirRaft;
@@ -32,7 +32,7 @@
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Education";
+            table.Name = Properties.Resources.Table_Education;
             skills = table.Skills;
             skills[0] = SkillLibrary.ATV;
             skills[1] = SkillLibrary.Mechanical;
@@ -43,7 +43,7 @@
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "Advanced Education";
+            table.Name = Properties.Resources.Table_AdvancedEducation;
             skills = table.Skills;
             skills[0] = SkillLibrary.Medic;
             skills[1] = SkillLibrary.Tactics;

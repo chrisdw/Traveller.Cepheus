@@ -29,7 +29,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Properties.Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = SkillLibrary.Str;
             skills[1] = SkillLibrary.Dex;
@@ -40,7 +40,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Properties.Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = SkillLibrary.Vehicle;
             skills[1] = SkillLibrary.ShipsBoat;
@@ -51,7 +51,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Education";
+            table.Name = Properties.Resources.Table_Education;
             skills = table.Skills;
             skills[0] = SkillLibrary.Streetwise;
             skills[1] = SkillLibrary.Admin;

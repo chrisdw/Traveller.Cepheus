@@ -31,7 +31,7 @@
 
         public virtual void CheckTableAvailablity()
         {
-            // Default check for "advanced education"
+            // Default check for Properties.Resources.Table_AdvancedEducation
             SkillTables[3].Available = (Owner.Profile.Edu.Value >= 8);
         }
 
