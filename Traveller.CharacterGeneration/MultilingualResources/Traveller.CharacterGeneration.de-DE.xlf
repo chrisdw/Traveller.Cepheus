@@ -426,6 +426,166 @@
           <source>Wheeled Vehicle</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Radfahrzeug</target>
         </trans-unit>
+        <trans-unit id="Skill_AutomaticPistol" translate="yes" xml:space="preserve">
+          <source>Automatic Pistol</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Automatische Pistole</target>
+        </trans-unit>
+        <trans-unit id="Skill_AutomaticRifle" translate="yes" xml:space="preserve">
+          <source>Automatic Rifle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Automatisches Gewehr</target>
+        </trans-unit>
+        <trans-unit id="Skill_BladeCombat" translate="yes" xml:space="preserve">
+          <source>Blade Combat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Klinge-Kampf</target>
+        </trans-unit>
+        <trans-unit id="Skill_BodyPistol" translate="yes" xml:space="preserve">
+          <source>Body Pistol</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Körper-Pistole</target>
+        </trans-unit>
+        <trans-unit id="Skill_Carbine" translate="yes" xml:space="preserve">
+          <source>Carbine</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Karabiner</target>
+        </trans-unit>
+        <trans-unit id="Skill_Cutlass" translate="yes" xml:space="preserve">
+          <source>Cutlass</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cutlass</target>
+        </trans-unit>
+        <trans-unit id="Skill_GunCombat" translate="yes" xml:space="preserve">
+          <source>Gun Combat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pistole Combat</target>
+        </trans-unit>
+        <trans-unit id="Skill_LaserCarbine" translate="yes" xml:space="preserve">
+          <source>Laser Carbine</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Laser-Karabiner</target>
+        </trans-unit>
+        <trans-unit id="Skill_LaserRifle" translate="yes" xml:space="preserve">
+          <source>Laser Rifle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lasergewehr</target>
+        </trans-unit>
+        <trans-unit id="Skill_Revolver" translate="yes" xml:space="preserve">
+          <source>Revolver</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Revolver</target>
+        </trans-unit>
+        <trans-unit id="Skill_Rifle" translate="yes" xml:space="preserve">
+          <source>Rifle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gewehr</target>
+        </trans-unit>
+        <trans-unit id="Skill_Shotgun" translate="yes" xml:space="preserve">
+          <source>Shotgun</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schrotflinte</target>
+        </trans-unit>
+        <trans-unit id="Skill_SubmachineGun" translate="yes" xml:space="preserve">
+          <source>Submachine Gun</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Maschinenpistole</target>
+        </trans-unit>
+        <trans-unit id="Skill_Sword" translate="yes" xml:space="preserve">
+          <source>Sword</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schwert</target>
+        </trans-unit>
+        <trans-unit id="Skill_Bayonet" translate="yes" xml:space="preserve">
+          <source>Bayonet</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bajonett</target>
+        </trans-unit>
+        <trans-unit id="Skill_Blade" translate="yes" xml:space="preserve">
+          <source>Blade</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Klinge</target>
+        </trans-unit>
+        <trans-unit id="Skill_BowCombat" translate="yes" xml:space="preserve">
+          <source>Bow Combat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bogen-Kampf</target>
+        </trans-unit>
+        <trans-unit id="Skill_Broadsword" translate="yes" xml:space="preserve">
+          <source>Broadsword</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Breitschwert</target>
+        </trans-unit>
+        <trans-unit id="Skill_Cudgel" translate="yes" xml:space="preserve">
+          <source>Cudgel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Knüppel</target>
+        </trans-unit>
+        <trans-unit id="Skill_Dagger" translate="yes" xml:space="preserve">
+          <source>Dagger</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dolch</target>
+        </trans-unit>
+        <trans-unit id="Skill_Foil" translate="yes" xml:space="preserve">
+          <source>Foil</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Folie</target>
+        </trans-unit>
+        <trans-unit id="Skill_Halberd" translate="yes" xml:space="preserve">
+          <source>Halberd</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hellebarde</target>
+        </trans-unit>
+        <trans-unit id="Skill_Pike" translate="yes" xml:space="preserve">
+          <source>Pike</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hecht</target>
+        </trans-unit>
+        <trans-unit id="Skill_Sling" translate="yes" xml:space="preserve">
+          <source>Sling</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schlinge</target>
+        </trans-unit>
+        <trans-unit id="Skill_Awareness" translate="yes" xml:space="preserve">
+          <source>Awareness</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bewusstsein</target>
+        </trans-unit>
+        <trans-unit id="Skill_Clairvoyance" translate="yes" xml:space="preserve">
+          <source>Clairvoyance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hellsehen</target>
+        </trans-unit>
+        <trans-unit id="Skill_LongBow" translate="yes" xml:space="preserve">
+          <source>Long Bow</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Langbogen</target>
+        </trans-unit>
+        <trans-unit id="Skill_MilitaryCrossbow" translate="yes" xml:space="preserve">
+          <source>Military Crossbow</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Militärische Armbrust</target>
+        </trans-unit>
+        <trans-unit id="Skill_RepeatingCrossbow" translate="yes" xml:space="preserve">
+          <source>Repeating Crossbow</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Armbrust zu wiederholen</target>
+        </trans-unit>
+        <trans-unit id="Skill_ShortBow" translate="yes" xml:space="preserve">
+          <source>Short Bow</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kurzbogen</target>
+        </trans-unit>
+        <trans-unit id="Skill_SportingCrossbow" translate="yes" xml:space="preserve">
+          <source>Sporting Crossbow</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sport-Armbrust</target>
+        </trans-unit>
+        <trans-unit id="Skill_Broker" translate="yes" xml:space="preserve">
+          <source>Broker</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Makler</target>
+        </trans-unit>
+        <trans-unit id="Skill_Herding" translate="yes" xml:space="preserve">
+          <source>Herding</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Herding</target>
+        </trans-unit>
+        <trans-unit id="Skill_Infighting" translate="yes" xml:space="preserve">
+          <source>Infighting</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Machtkämpfe</target>
+        </trans-unit>
+        <trans-unit id="Skill_Special" translate="yes" xml:space="preserve">
+          <source>Special</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Spezielle</target>
+        </trans-unit>
+        <trans-unit id="Skill_Talent" translate="yes" xml:space="preserve">
+          <source>Talent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Talent</target>
+        </trans-unit>
+        <trans-unit id="Skill_Telekinesis" translate="yes" xml:space="preserve">
+          <source>Telekinesis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Telekinese</target>
+        </trans-unit>
+        <trans-unit id="Skill_Telepathy" translate="yes" xml:space="preserve">
+          <source>Telepathy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Telepathie</target>
+        </trans-unit>
+        <trans-unit id="Skill_Teleportation" translate="yes" xml:space="preserve">
+          <source>Teleportation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Teleportation</target>
+        </trans-unit>
+        <trans-unit id="Skill_WaldoOps" translate="yes" xml:space="preserve">
+          <source>Waldo Ops</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Waldo-Ops</target>
+        </trans-unit>
       </group>
     </body>
   </file>

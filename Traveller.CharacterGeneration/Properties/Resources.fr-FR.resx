@@ -327,4 +327,124 @@
   <data name="Skill_WheeledVehicle" xml:space="preserve">
     <value>Véhicule à roues</value>
   </data>
+  <data name="Skill_AutomaticPistol" xml:space="preserve">
+    <value>Pistolet automatique</value>
+  </data>
+  <data name="Skill_AutomaticRifle" xml:space="preserve">
+    <value>Fusil automatique</value>
+  </data>
+  <data name="Skill_BladeCombat" xml:space="preserve">
+    <value>Combat de lame</value>
+  </data>
+  <data name="Skill_BodyPistol" xml:space="preserve">
+    <value>Corps de pistolet</value>
+  </data>
+  <data name="Skill_Carbine" xml:space="preserve">
+    <value>Carabine</value>
+  </data>
+  <data name="Skill_Cutlass" xml:space="preserve">
+    <value>Coutelas</value>
+  </data>
+  <data name="Skill_GunCombat" xml:space="preserve">
+    <value>Pistolet Combat</value>
+  </data>
+  <data name="Skill_LaserCarbine" xml:space="preserve">
+    <value>Carabine laser</value>
+  </data>
+  <data name="Skill_LaserRifle" xml:space="preserve">
+    <value>Fusil laser</value>
+  </data>
+  <data name="Skill_Revolver" xml:space="preserve">
+    <value>Revolver</value>
+  </data>
+  <data name="Skill_Rifle" xml:space="preserve">
+    <value>Carabine</value>
+  </data>
+  <data name="Skill_Shotgun" xml:space="preserve">
+    <value>Fusil de chasse</value>
+  </data>
+  <data name="Skill_SubmachineGun" xml:space="preserve">
+    <value>Pistolet mitrailleur</value>
+  </data>
+  <data name="Skill_Sword" xml:space="preserve">
+    <value>Épée</value>
+  </data>
+  <data name="Skill_Bayonet" xml:space="preserve">
+    <value>Baïonnette</value>
+  </data>
+  <data name="Skill_Blade" xml:space="preserve">
+    <value>Lame</value>
+  </data>
+  <data name="Skill_BowCombat" xml:space="preserve">
+    <value>Combat de Bow</value>
+  </data>
+  <data name="Skill_Broadsword" xml:space="preserve">
+    <value>Broadsword</value>
+  </data>
+  <data name="Skill_Cudgel" xml:space="preserve">
+    <value>Trique</value>
+  </data>
+  <data name="Skill_Dagger" xml:space="preserve">
+    <value>OBÈLE</value>
+  </data>
+  <data name="Skill_Foil" xml:space="preserve">
+    <value>Fleuret</value>
+  </data>
+  <data name="Skill_Halberd" xml:space="preserve">
+    <value>Hallebarde</value>
+  </data>
+  <data name="Skill_Pike" xml:space="preserve">
+    <value>Brochet</value>
+  </data>
+  <data name="Skill_Sling" xml:space="preserve">
+    <value>Fronde</value>
+  </data>
+  <data name="Skill_Awareness" xml:space="preserve">
+    <value>Prise de conscience</value>
+  </data>
+  <data name="Skill_Clairvoyance" xml:space="preserve">
+    <value>Voyance</value>
+  </data>
+  <data name="Skill_LongBow" xml:space="preserve">
+    <value>Arc long</value>
+  </data>
+  <data name="Skill_MilitaryCrossbow" xml:space="preserve">
+    <value>ARBALETE militaire</value>
+  </data>
+  <data name="Skill_RepeatingCrossbow" xml:space="preserve">
+    <value>Répétant l’arbalète</value>
+  </data>
+  <data name="Skill_ShortBow" xml:space="preserve">
+    <value>Arc court</value>
+  </data>
+  <data name="Skill_SportingCrossbow" xml:space="preserve">
+    <value>Arbalète de sport</value>
+  </data>
+  <data name="Skill_Broker" xml:space="preserve">
+    <value>Courtier</value>
+  </data>
+  <data name="Skill_Herding" xml:space="preserve">
+    <value>Herding</value>
+  </data>
+  <data name="Skill_Infighting" xml:space="preserve">
+    <value>Luttes intestines</value>
+  </data>
+  <data name="Skill_Special" xml:space="preserve">
+    <value>Spécial</value>
+  </data>
+  <data name="Skill_Talent" xml:space="preserve">
+    <value>Talent</value>
+  </data>
+  <data name="Skill_Telekinesis" xml:space="preserve">
+    <value>Télékinésie</value>
+  </data>
+  <data name="Skill_Telepathy" xml:space="preserve">
+    <value>Télépathie</value>
+  </data>
+  <data name="Skill_Teleportation" xml:space="preserve">
+    <value>Téléportation</value>
+  </data>
+  <data name="Skill_WaldoOps" xml:space="preserve">
+    <value>Waldo Ops</value>
+  </data>
 </root>

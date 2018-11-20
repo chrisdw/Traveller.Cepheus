@@ -72,17 +72,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                         skill.Level = 0;
                     }
                 }
-                else if (skill.Name.Equals("Talent"))
+                else if (skill.Name.Equals(SkillLibrary.Talent.Name))
                 {
                     var list = character.Skills.Values.Where(s => s.Class == Skill.SkillClass.Psionic).Select(s => s.Name);
                     var items = new List<string>()
                     {
-                        "Telepathy",
-                        "Clairvoyance",
-                        "Telekinesis",
-                        "Awareness",
-                        "Teleportation",
-                        "Special"
+                        SkillLibrary.Telepathy.Name,
+                        SkillLibrary.Clairvoyance.Name,
+                        SkillLibrary.Telekinesis.Name,
+                        SkillLibrary.Awareness.Name,
+                        SkillLibrary.Teleportation.Name,
+                        SkillLibrary.Special.Name
                     };
                     var selectList = items.Except(list);
                     var cascade = GetSkill(selectList.ToList(), Skill.SkillClass.Psionic);
@@ -122,13 +122,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                 {
                     var items = new List<string>()
                     {
-                        "Adminstration",
-                        "Broker",
-                        "Computer",
-                        "Electronics",
-                        "Mechanical",
-                        "Steward",
-                        "Trader"
+                        SkillLibrary.Admin.Name,
+                        SkillLibrary.Broker.Name,
+                        SkillLibrary.Computer.Name,
+                        SkillLibrary.Electronics.Name,
+                        SkillLibrary.Mechanical.Name,
+                        SkillLibrary.Steward.Name,
+                        SkillLibrary.Trader.Name
                     };
                     var cascade = GetSkill(items, Skill.SkillClass.Prole);
                     OnSkillOffered(cascade, character);

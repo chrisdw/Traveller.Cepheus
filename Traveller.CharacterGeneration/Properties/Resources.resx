@@ -405,8 +405,29 @@
   <data name="Skill_PropellerAircraft" xml:space="preserve">
     <value>Propeller Driven Fixed Wing Aircraft</value>
   </data>
+  <data name="Skill_AutomaticPistol" xml:space="preserve">
+    <value>Automatic Pistol</value>
+  </data>
+  <data name="Skill_AutomaticRifle" xml:space="preserve">
+    <value>Automatic Rifle</value>
+  </data>
+  <data name="Skill_BladeCombat" xml:space="preserve">
+    <value>Blade Combat</value>
+  </data>
+  <data name="Skill_BodyPistol" xml:space="preserve">
+    <value>Body Pistol</value>
+  </data>
+  <data name="Skill_Carbine" xml:space="preserve">
+    <value>Carbine</value>
+  </data>
+  <data name="Skill_Cutlass" xml:space="preserve">
+    <value>Cutlass</value>
+  </data>
   <data name="Skill_GroundVehicle" xml:space="preserve">
     <value>Ground Vehicle</value>
+  </data>
+  <data name="Skill_GunCombat" xml:space="preserve">
+    <value>Gun Combat</value>
   </data>
   <data name="Skill_Hovercraft" xml:space="preserve">
     <value>Hovercraft</value>
@@ -414,11 +435,32 @@
   <data name="Skill_LargeWatercraft" xml:space="preserve">
     <value>Large Watercraft</value>
   </data>
+  <data name="Skill_LaserCarbine" xml:space="preserve">
+    <value>Laser Carbine</value>
+  </data>
+  <data name="Skill_LaserRifle" xml:space="preserve">
+    <value>Laser Rifle</value>
+  </data>
+  <data name="Skill_Revolver" xml:space="preserve">
+    <value>Revolver</value>
+  </data>
+  <data name="Skill_Rifle" xml:space="preserve">
+    <value>Rifle</value>
+  </data>
+  <data name="Skill_Shotgun" xml:space="preserve">
+    <value>Shotgun</value>
+  </data>
   <data name="Skill_SmallWatercraft" xml:space="preserve">
     <value>Small Watercraft</value>
   </data>
+  <data name="Skill_SubmachineGun" xml:space="preserve">
+    <value>Submachine Gun</value>
+  </data>
   <data name="Skill_Submersibles" xml:space="preserve">
     <value>Submersibles</value>
+  </data>
+  <data name="Skill_Sword" xml:space="preserve">
+    <value>Sword</value>
   </data>
   <data name="Skill_TrackedVehicle" xml:space="preserve">
     <value>Tracked Vehicle</value>
@@ -431,5 +473,83 @@
   </data>
   <data name="Skill_WheeledVehicle" xml:space="preserve">
     <value>Wheeled Vehicle</value>
+  </data>
+  <data name="Skill_Bayonet" xml:space="preserve">
+    <value>Bayonet</value>
+  </data>
+  <data name="Skill_Blade" xml:space="preserve">
+    <value>Blade</value>
+  </data>
+  <data name="Skill_BowCombat" xml:space="preserve">
+    <value>Bow Combat</value>
+  </data>
+  <data name="Skill_Broadsword" xml:space="preserve">
+    <value>Broadsword</value>
+  </data>
+  <data name="Skill_Cudgel" xml:space="preserve">
+    <value>Cudgel</value>
+  </data>
+  <data name="Skill_Dagger" xml:space="preserve">
+    <value>Dagger</value>
+  </data>
+  <data name="Skill_Foil" xml:space="preserve">
+    <value>Foil</value>
+  </data>
+  <data name="Skill_Halberd" xml:space="preserve">
+    <value>Halberd</value>
+  </data>
+  <data name="Skill_Pike" xml:space="preserve">
+    <value>Pike</value>
+  </data>
+  <data name="Skill_Sling" xml:space="preserve">
+    <value>Sling</value>
+  </data>
+  <data name="Skill_Awareness" xml:space="preserve">
+    <value>Awareness</value>
+  </data>
+  <data name="Skill_Clairvoyance" xml:space="preserve">
+    <value>Clairvoyance</value>
+  </data>
+  <data name="Skill_LongBow" xml:space="preserve">
+    <value>Long Bow</value>
+  </data>
+  <data name="Skill_MilitaryCrossbow" xml:space="preserve">
+    <value>Military Crossbow</value>
+  </data>
+  <data name="Skill_RepeatingCrossbow" xml:space="preserve">
+    <value>Repeating Crossbow</value>
+  </data>
+  <data name="Skill_ShortBow" xml:space="preserve">
+    <value>Short Bow</value>
+  </data>
+  <data name="Skill_SportingCrossbow" xml:space="preserve">
+    <value>Sporting Crossbow</value>
+  </data>
+  <data name="Skill_Broker" xml:space="preserve">
+    <value>Broker</value>
+  </data>
+  <data name="Skill_Herding" xml:space="preserve">
+    <value>Herding</value>
+  </data>
+  <data name="Skill_Infighting" xml:space="preserve">
+    <value>Infighting</value>
+  </data>
+  <data name="Skill_Special" xml:space="preserve">
+    <value>Special</value>
+  </data>
+  <data name="Skill_Talent" xml:space="preserve">
+    <value>Talent</value>
+  </data>
+  <data name="Skill_Telekinesis" xml:space="preserve">
+    <value>Telekinesis</value>
+  </data>
+  <data name="Skill_Telepathy" xml:space="preserve">
+    <value>Telepathy</value>
+  </data>
+  <data name="Skill_Teleportation" xml:space="preserve">
+    <value>Teleportation</value>
+  </data>
+  <data name="Skill_WaldoOps" xml:space="preserve">
+    <value>Waldo Ops</value>
   </data>
 </root>
