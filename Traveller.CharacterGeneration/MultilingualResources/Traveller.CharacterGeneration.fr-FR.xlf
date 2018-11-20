@@ -589,4 +589,65 @@
       </group>
     </body>
   </file>
+  <file datatype="xml" source-language="en-GB" target-language="fr-FR" original="TRAVELLER.CHARACTERGENERATION/CLASSIC/DARRIAN/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.CHARACTERGENERATION/CLASSIC/DARRIAN/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Career_Academic" translate="yes" xml:space="preserve">
+          <source>Academic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Académique</target>
+        </trans-unit>
+        <trans-unit id="Career_Army" translate="yes" xml:space="preserve">
+          <source>Army</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Armée de terre</target>
+        </trans-unit>
+        <trans-unit id="Career_Merchants" translate="yes" xml:space="preserve">
+          <source>Merchants</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Marchands</target>
+        </trans-unit>
+        <trans-unit id="Career_Navy" translate="yes" xml:space="preserve">
+          <source>Navy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bleu foncé</target>
+        </trans-unit>
+        <trans-unit id="Career_Noble" translate="yes" xml:space="preserve">
+          <source>Noble</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Noble</target>
+        </trans-unit>
+        <trans-unit id="Career_SpecialArm" translate="yes" xml:space="preserve">
+          <source>Special Arm</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Spécial bras</target>
+        </trans-unit>
+        <trans-unit id="Rank_Academic" translate="yes" xml:space="preserve">
+          <source>Academic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Académique</target>
+        </trans-unit>
+        <trans-unit id="Rank_AsstInstructor" translate="yes" xml:space="preserve">
+          <source>Asst. Instructor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Instructeur de l’ASST.</target>
+        </trans-unit>
+        <trans-unit id="Rank_AsstProfessor" translate="yes" xml:space="preserve">
+          <source>Asst. Professor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Professeur adjoint</target>
+        </trans-unit>
+        <trans-unit id="Rank_Dean" translate="yes" xml:space="preserve">
+          <source>Dean</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dean</target>
+        </trans-unit>
+        <trans-unit id="Rank_Instructor" translate="yes" xml:space="preserve">
+          <source>Instructor</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Instructeur</target>
+        </trans-unit>
+        <trans-unit id="Rank_Professor" translate="yes" xml:space="preserve">
+          <source>Professor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Professeur</target>
+        </trans-unit>
+        <trans-unit id="Rank_Teacher" translate="yes" xml:space="preserve">
+          <source>Teacher</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Enseignant</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
 </xliff>

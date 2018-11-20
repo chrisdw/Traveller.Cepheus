@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
 {
     public class SpecialArm : Imperial.Citizen.Career
     {
         public SpecialArm()
         {
-            Name = "Special Arm";
+            Name = Resources.Career_SpecialArm;
             RankNumber = 0;
             TermSkills = 2;
 

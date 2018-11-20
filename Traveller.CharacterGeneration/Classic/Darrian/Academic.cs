@@ -4,7 +4,7 @@
     {
         public Academic()
         {
-            Name = "Academic";
+            Name = Resources.Career_Academic;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -88,13 +88,13 @@
             Cash[5] = 10000;
             Cash[6] = 30000;
 
-            Ranks[0] = "Academic";
-            Ranks[1] = "Teacher";
-            Ranks[2] = "Asst. Instructor";
-            Ranks[3] = "Instructor";
-            Ranks[4] = "Asst. Professor";
-            Ranks[5] = "Professor";
-            Ranks[6] = "Dean";
+            Ranks[0] = Resources.Rank_Academic;
+            Ranks[1] = Resources.Rank_Teacher;
+            Ranks[2] = Resources.Rank_AsstInstructor;
+            Ranks[3] = Resources.Rank_Instructor;
+            Ranks[4] = Resources.Rank_AsstProfessor;
+            Ranks[5] = Resources.Rank_Professor;
+            Ranks[6] = Resources.Rank_Dean;
         }
         protected override void CommsionSkill()
         {

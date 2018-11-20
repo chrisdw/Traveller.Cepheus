@@ -4,7 +4,7 @@
     {
         public Navy()
         {
-            Name = "Navy";
+            Name = Resources.Career_Navy;
             RankNumber = 0;
             TermSkills = 2;
 

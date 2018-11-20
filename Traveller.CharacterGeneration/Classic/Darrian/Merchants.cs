@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
     {
         public Merchants()
         {
-            Name = "Merchants";
+            Name = Resources.Career_Merchants;
             RankNumber = 0;
             TermSkills = 2;
 

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
 {
     public class Noble : Imperial.Citizen.Career
     {
         public Noble()
         {
-            Name = "Noble";
+            Name = Resources.Career_Noble;
             RankNumber = 0;
             TermSkills = 2;
 

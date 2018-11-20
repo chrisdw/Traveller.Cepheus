@@ -4,7 +4,7 @@
     {
         public Army()
         {
-            Name = "Army";
+            Name = Resources.Career_Army;
             RankNumber = 0;
             TermSkills = 2;
 
