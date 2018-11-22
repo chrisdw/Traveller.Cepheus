@@ -4,7 +4,7 @@
     {
         public BasicArmy()
         {
-            Name = "Army";
+            Name = Properties.Resources.Career_Army;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -68,13 +68,13 @@
             Cash[5] = 20000;
             Cash[6] = 30000;
 
-            Ranks[0] = "Trooper";
-            Ranks[1] = "Lieutenant";
-            Ranks[2] = "Captain";
-            Ranks[3] = "Major";
-            Ranks[4] = "Lt. Colonel";
-            Ranks[5] = "Colonel";
-            Ranks[6] = "General";
+            Ranks[0] = Resources.Rank_Trooper;
+            Ranks[1] = Resources.Rank_Lieutenant;
+            Ranks[2] = Resources.Rank_Captain;
+            Ranks[3] = Resources.Rank_Major;
+            Ranks[4] = Resources.Rank_LtColonel;
+            Ranks[5] = Resources.Rank_Colonel;
+            Ranks[6] = Resources.Rank_General;
         }
         public override bool Commission()
         {
@@ -97,7 +97,7 @@
                         commision = true;
                         RankNumber = 1;
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
+                        Owner.Journal.Add(string.Format(Resources.Prompt_Commisioned, Ranks[RankNumber]));
                         Owner.AddSkill(SkillLibrary.SubmachineGun);
                     }
                 }
@@ -128,7 +128,7 @@
 
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target -= 1;
                 }
@@ -170,7 +170,7 @@
                     promote = true;
                     RankNumber++;
                     TermSkills++;
-                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[RankNumber]));
+                    Owner.Journal.Add(string.Format(Resources.Prompt_Promoted, Ranks[RankNumber]));
                 }
             }
             return promote;
@@ -200,7 +200,7 @@
             var survive = false;
 
             var target = 5;
-            if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals("Male"))
+            if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals(Properties.Resources.Sex_Male))
             {
                 target++;
             }

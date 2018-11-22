@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
     {
         public BasicMarines()
         {
-            Name = "Marines";
+            Name = Properties.Resources.Career_Marines;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -72,13 +72,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             Cash[5] = 30000;
             Cash[6] = 40000;
 
-            Ranks[0] = "Marine";
-            Ranks[1] = "Lieutenant";
-            Ranks[2] = "Captain";
-            Ranks[3] = "Force Cmdr";
-            Ranks[4] = "Lt. Colonel";
-            Ranks[5] = "Colonel";
-            Ranks[6] = "Brigadier";
+            Ranks[0] = Resources.Rank_Marine;
+            Ranks[1] = Resources.Rank_Lieutenant;
+            Ranks[2] = Resources.Rank_Captain;
+            Ranks[3] = Resources.Rank_ForceCmdr;
+            Ranks[4] = Resources.Rank_LtColonel;
+            Ranks[5] = Resources.Rank_Colonel;
+            Ranks[6] = Resources.Rank_Brigadier;
         }
 
         public override Renlistment CanRenlist()
@@ -115,7 +115,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                         commision = true;
                         RankNumber = 1;
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
+                        Owner.Journal.Add(string.Format(Resources.Prompt_Commisioned, Ranks[RankNumber]));
                         Owner.AddSkill(SkillLibrary.Revolver);
                     }
                 }
@@ -132,7 +132,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             var target = 8;
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target -= 1;
                 }
@@ -185,7 +185,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     promote = true;
                     RankNumber++;
                     TermSkills++;
-                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[RankNumber]));
+                    Owner.Journal.Add(string.Format(Resources.Prompt_Promoted, Ranks[RankNumber]));
                 }
             }
             return promote;
@@ -198,7 +198,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             var target = 6;
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target++;
                 }

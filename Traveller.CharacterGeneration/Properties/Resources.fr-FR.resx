@@ -486,4 +486,10 @@
   <data name="Species_Human_Dynchia" xml:space="preserve">
     <value>Homme (Dynchia)</value>
   </data>
+  <data name="Species_Human" xml:space="preserve">
+    <value>Humaine</value>
+  </data>
+  <data name="Species_Human_SwordWorlds" xml:space="preserve">
+    <value>Homme (épée Worlds)</value>
+  </data>
 </root>

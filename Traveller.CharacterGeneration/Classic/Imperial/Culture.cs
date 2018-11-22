@@ -35,42 +35,42 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     {
                         case Character.Species.AelYael:
                             // Won't join merchants or become noble
-                            careers.Add("Army", CharacterGeneration.Career.CareerType.Imperial_Army);
-                            careers.Add("Marines", CharacterGeneration.Career.CareerType.Imperial_Marines);
-                            careers.Add("Navy", CharacterGeneration.Career.CareerType.Imperial_Navy);
-                            careers.Add("Scouts", CharacterGeneration.Career.CareerType.Imperial_Scouts);
+                            careers.Add(Properties.Resources.Career_Army, CharacterGeneration.Career.CareerType.Imperial_Army);
+                            careers.Add(Properties.Resources.Career_Marines, CharacterGeneration.Career.CareerType.Imperial_Marines);
+                            careers.Add(Properties.Resources.Career_Navy, CharacterGeneration.Career.CareerType.Imperial_Navy);
+                            careers.Add(Properties.Resources.Career_Scouts, CharacterGeneration.Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
                                 AddCitizenCareersExceptNoble(careers);
                             }
                             else
                             {
-                                careers.Add("Other", CharacterGeneration.Career.CareerType.Imperial_Other);
+                                careers.Add(Properties.Resources.Career_Other, CharacterGeneration.Career.CareerType.Imperial_Other);
                             }
                             break;
                         case Character.Species.Virushi:
                             // No military careers or noble
-                            careers.Add("Merchants", CharacterGeneration.Career.CareerType.Imperial_Merchants);
-                            careers.Add("Scouts", CharacterGeneration.Career.CareerType.Imperial_Scouts);
+                            careers.Add(Properties.Resources.Career_Merchants, CharacterGeneration.Career.CareerType.Imperial_Merchants);
+                            careers.Add(Properties.Resources.Career_Scouts, CharacterGeneration.Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
                                 AddCitizenCareersExceptNoble(careers);
                             }
                             else
                             {
-                                careers.Add("Other", CharacterGeneration.Career.CareerType.Imperial_Other);
+                                careers.Add(Properties.Resources.Career_Other, CharacterGeneration.Career.CareerType.Imperial_Other);
                             }
                             break;
                         case Character.Species.Dolphin:
-                            careers.Add("Civilian", CharacterGeneration.Career.CareerType.Dolphin_Civilian);
-                            careers.Add("Military", CharacterGeneration.Career.CareerType.Dolphin_Military);
+                            careers.Add(Dolphin.Resources.Career_Civilian, CharacterGeneration.Career.CareerType.Dolphin_Civilian);
+                            careers.Add(Dolphin.Resources.Career_Military, CharacterGeneration.Career.CareerType.Dolphin_Military);
                             break;
                         default:
-                            careers.Add("Army", CharacterGeneration.Career.CareerType.Imperial_Army);
-                            careers.Add("Marines", CharacterGeneration.Career.CareerType.Imperial_Marines);
-                            careers.Add("Navy", CharacterGeneration.Career.CareerType.Imperial_Navy);
-                            careers.Add("Merchants", CharacterGeneration.Career.CareerType.Imperial_Merchants);
-                            careers.Add("Scouts", CharacterGeneration.Career.CareerType.Imperial_Scouts);
+                            careers.Add(Properties.Resources.Career_Army, CharacterGeneration.Career.CareerType.Imperial_Army);
+                            careers.Add(Properties.Resources.Career_Marines, CharacterGeneration.Career.CareerType.Imperial_Marines);
+                            careers.Add(Properties.Resources.Career_Navy, CharacterGeneration.Career.CareerType.Imperial_Navy);
+                            careers.Add(Properties.Resources.Career_Merchants, CharacterGeneration.Career.CareerType.Imperial_Merchants);
+                            careers.Add(Properties.Resources.Career_Scouts, CharacterGeneration.Career.CareerType.Imperial_Scouts);
                             if (UseCitizenRules)
                             {
                                 AddCitizenCareersExceptNoble(careers);
@@ -85,7 +85,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                             }
                             else
                             {
-                                careers.Add("Other", CharacterGeneration.Career.CareerType.Imperial_Other);
+                                careers.Add(Properties.Resources.Career_Other, CharacterGeneration.Career.CareerType.Imperial_Other);
                             }
                             break;
                     }
@@ -141,11 +141,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     }
                     if (!offered.ContainsKey(skill.Name))
                     {
-                        if (skill.SexApplicabilty == Skill.SkillSex.Female && character.Sex.Equals("Male"))
+                        if (skill.SexApplicabilty == Skill.SkillSex.Female && character.Sex.Equals(Properties.Resources.Sex_Male))
                         {
                             check = false;
                         }
-                        else if (skill.SexApplicabilty == Skill.SkillSex.Male && character.Sex.Equals("Female"))
+                        else if (skill.SexApplicabilty == Skill.SkillSex.Male && character.Sex.Equals(Properties.Resources.Sex_Female))
                         {
                             check = false;
                         }

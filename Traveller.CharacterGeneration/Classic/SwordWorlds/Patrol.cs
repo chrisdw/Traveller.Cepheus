@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.SwordWorlds
     {
         public Patrol()
         {
-            Name = "Patrol";
+            Name = Resources.Career_Patrol;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -85,13 +85,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.SwordWorlds
             Cash[5] = 60000;
             Cash[6] = 70000;
 
-            Ranks[0] = "Patrolman";
-            Ranks[1] = "Konstabel";
-            Ranks[2] = "Overhode";
-            Ranks[3] = "Leutnant";
-            Ranks[4] = "Overleutnant";
-            Ranks[5] = "Kapiten";
-            Ranks[6] = "Oberst";
+            Ranks[0] = Resources.Rank_Patrolman;
+            Ranks[1] = Resources.Rank_Konstabel;
+            Ranks[2] = Resources.Rank_Overhode;
+            Ranks[3] = Resources.Rank_Leutnant;
+            Ranks[4] = Resources.Rank_Overleutnant;
+            Ranks[5] = Resources.Rank_Kapiten;
+            Ranks[6] = Resources.Rank_Oberst;
         }
         protected override void CommsionSkill()
         {

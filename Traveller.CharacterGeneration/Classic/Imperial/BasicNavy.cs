@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
     {
         public BasicNavy()
         {
-            Name = "Navy";
+            Name = Properties.Resources.Career_Navy;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -72,13 +72,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             Cash[5] = 50000;
             Cash[6] = 50000;
 
-            Ranks[0] = "Spacer";
-            Ranks[1] = "Ensign";
-            Ranks[2] = "Lieutenant";
-            Ranks[3] = "Lt Cmdr";
-            Ranks[4] = "Commander";
-            Ranks[5] = "Captain";
-            Ranks[6] = "Admiral";
+            Ranks[0] = Resources.Rank_Spacer;
+            Ranks[1] = Resources.Rank_Ensign;
+            Ranks[2] = Resources.Rank_Lieutenant;
+            Ranks[3] = Resources.Rank_LtCmdr;
+            Ranks[4] = Resources.Rank_Commander;
+            Ranks[5] = Resources.Rank_Captain;
+            Ranks[6] = Resources.Rank_Admiral;
         }
 
         public override Renlistment CanRenlist()
@@ -115,7 +115,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                         commision = true;
                         RankNumber = 1;
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
+                        Owner.Journal.Add(string.Format(Resources.Prompt_Commisioned, Ranks[RankNumber]));
                     }
                 }
             }
@@ -168,10 +168,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     promote = true;
                     RankNumber++;
                     TermSkills++;
-                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[RankNumber]));
+                    Owner.Journal.Add(string.Format(Resources.Prompt_Promoted, Ranks[RankNumber]));
                     if (RankNumber == 5 || RankNumber == 6)
                     {
-                        Owner.Journal.Add("Social standing increased by one due to rank.");
+                        Owner.Journal.Add(Resources.Msg_Soc_Bonus);
                         Owner.Profile.Soc.Value++;
                     }
                 }
@@ -186,7 +186,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             var target = 5;
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target++;
                 }

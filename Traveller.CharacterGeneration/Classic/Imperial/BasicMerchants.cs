@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
     {
         public BasicMerchants()
         {
-            Name = "Merchants";
+            Name = Properties.Resources.Career_Merchants;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -72,12 +72,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             Cash[5] = 40000;
             Cash[6] = 40000;
 
-            Ranks[0] = "Space Hand";
-            Ranks[1] = "4th Officer";
-            Ranks[2] = "3rd Officer";
-            Ranks[3] = "2nd Officer";
-            Ranks[4] = "1st Officer";
-            Ranks[5] = "Captain";
+            Ranks[0] = Resources.Rank_SpaceHand;
+            Ranks[1] = Resources.Rank_4thOfficer;
+            Ranks[2] = Resources.Rank_3rdOfficer;
+            Ranks[3] = Resources.Rank_2ndOfficer;
+            Ranks[4] = Resources.Rank_1stOfficer;
+            Ranks[5] = Resources.Rank_Captain;
         }
 
         public override Renlistment CanRenlist()
@@ -110,7 +110,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                         commision = true;
                         RankNumber = 1;
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
+                        Owner.Journal.Add(string.Format(Resources.Prompt_Commisioned, Ranks[RankNumber]));
                     }
                 }
             }
@@ -126,7 +126,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             var target = 7;
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target += 4;
                 }
@@ -177,7 +177,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                     promote = true;
                     RankNumber++;
                     TermSkills++;
-                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[RankNumber]));
+                    Owner.Journal.Add(string.Format(Resources.Prompt_Promoted, Ranks[RankNumber]));
                     if (RankNumber == 4)
                     {
                         Owner.AddSkill(SkillLibrary.Pilot);

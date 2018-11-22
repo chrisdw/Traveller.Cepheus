@@ -1411,6 +1411,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Human.
+        /// </summary>
+        internal static string Species_Human {
+            get {
+                return ResourceManager.GetString("Species_Human", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Human (Darrian).
         /// </summary>
         internal static string Species_Human_Darrian {
@@ -1434,6 +1443,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         internal static string Species_Human_Solomani {
             get {
                 return ResourceManager.GetString("Species_Human_Solomani", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Human (Sword Worlds).
+        /// </summary>
+        internal static string Species_Human_SwordWorlds {
+            get {
+                return ResourceManager.GetString("Species_Human_SwordWorlds", resourceCulture);
             }
         }
         

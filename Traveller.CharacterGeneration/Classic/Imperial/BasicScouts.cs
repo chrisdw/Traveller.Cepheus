@@ -6,7 +6,7 @@
         {
             RankNumber = 0;
             TermSkills = 2;
-            Name = "Scouts";
+            Name = Properties.Resources.Career_Scouts;
 
             var table = new SkillTable();
             SkillTables[0] = table;
@@ -67,7 +67,7 @@
             Cash[5] = 50000;
             Cash[6] = 50000;
 
-            Ranks[0] = "Scout";
+            Ranks[0] = Resources.Rank_Scout;
         }
 
         public override Renlistment CanRenlist()
@@ -94,7 +94,7 @@
 
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target += 4;
                 }

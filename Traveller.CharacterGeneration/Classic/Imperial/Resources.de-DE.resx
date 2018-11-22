@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Rank_1stOfficer" xml:space="preserve">
+    <value>1. Offizier</value>
+  </data>
+  <data name="Rank_2ndOfficer" xml:space="preserve">
+    <value>2. Offizier</value>
+  </data>
+  <data name="Rank_3rdOfficer" xml:space="preserve">
+    <value>3. Offizier</value>
+  </data>
+  <data name="Rank_4thOfficer" xml:space="preserve">
+    <value>4. Offizier</value>
+  </data>
+  <data name="Rank_Admiral" xml:space="preserve">
+    <value>Admiral</value>
+  </data>
+  <data name="Rank_Brigadier" xml:space="preserve">
+    <value>Brigadegeneral</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Kapitän</value>
+  </data>
+  <data name="Rank_Colonel" xml:space="preserve">
+    <value>Oberst</value>
+  </data>
+  <data name="Rank_Commander" xml:space="preserve">
+    <value>Commander</value>
+  </data>
+  <data name="Rank_Ensign" xml:space="preserve">
+    <value>Fähnrich</value>
+  </data>
+  <data name="Rank_ForceCmdr" xml:space="preserve">
+    <value>Kraft Cmdr</value>
+  </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>Allgemein</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Leutnant</value>
+  </data>
+  <data name="Rank_LtCmdr" xml:space="preserve">
+    <value>Lt Cmdr</value>
+  </data>
+  <data name="Rank_LtColonel" xml:space="preserve">
+    <value>Oberstleutnant</value>
+  </data>
+  <data name="Rank_Major" xml:space="preserve">
+    <value>Hauptversion</value>
+  </data>
+  <data name="Rank_Marine" xml:space="preserve">
+    <value>Marine</value>
+  </data>
+  <data name="Rank_SpaceHand" xml:space="preserve">
+    <value>Raum-Hand</value>
+  </data>
+  <data name="Rank_Spacer" xml:space="preserve">
+    <value>Abstandhalter</value>
+  </data>
+  <data name="Rank_Trooper" xml:space="preserve">
+    <value>Trooper</value>
+  </data>
+  <data name="Rank_Scout" xml:space="preserve">
+    <value>Pfadfinder</value>
+  </data>
+  <data name="Msg_Soc_Bonus" xml:space="preserve">
+    <value>Soziale Stellung um eins durch Rang erhöht.</value>
+  </data>
+  <data name="Prompt_Commisioned" xml:space="preserve">
+    <value>Im Auftrag als {0}</value>
+  </data>
+  <data name="Prompt_Promoted" xml:space="preserve">
+    <value>{0} gefördert</value>
+  </data>
+</root>

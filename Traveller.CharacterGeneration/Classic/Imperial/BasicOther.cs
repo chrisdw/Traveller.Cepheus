@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 {
@@ -8,7 +6,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
     {
         public BasicOther()
         {
-            Name = "Other";
+            Name = Properties.Resources.Career_Other;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -93,7 +91,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target +=2;
                 }
