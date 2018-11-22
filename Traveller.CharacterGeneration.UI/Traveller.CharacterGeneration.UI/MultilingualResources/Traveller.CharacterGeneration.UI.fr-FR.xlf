@@ -122,6 +122,18 @@
           <source>Select a psionic talent</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Sélectionnez un talent psionique</target>
         </trans-unit>
+        <trans-unit id="Button_Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Annuler</target>
+        </trans-unit>
+        <trans-unit id="Prompt_SelectCharacter" translate="yes" xml:space="preserve">
+          <source>Select a character</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sélectionner un caractère</target>
+        </trans-unit>
+        <trans-unit id="Prompt_SelectLanguage" translate="yes" xml:space="preserve">
+          <source>Select a language</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sélectionnez une langue</target>
+        </trans-unit>
       </group>
     </body>
   </file>

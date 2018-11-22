@@ -99,4 +99,13 @@
   <data name="Prompt_Select_Psionic" xml:space="preserve">
     <value>Sélectionnez un talent psionique</value>
   </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Prompt_SelectCharacter" xml:space="preserve">
+    <value>Sélectionner un caractère</value>
+  </data>
+  <data name="Prompt_SelectLanguage" xml:space="preserve">
+    <value>Sélectionnez une langue</value>
+  </data>
 </root>

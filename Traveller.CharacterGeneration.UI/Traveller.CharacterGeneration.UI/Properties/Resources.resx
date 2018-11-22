@@ -123,6 +123,9 @@
   <data name="Benefit_Material" xml:space="preserve">
     <value>Material</value>
   </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
   <data name="Button_No" xml:space="preserve">
     <value>No</value>
   </data>
@@ -179,6 +182,12 @@
   </data>
   <data name="Prompt_Renlist" xml:space="preserve">
     <value>You are now {0}. Do you want to re-enlist?</value>
+  </data>
+  <data name="Prompt_SelectCharacter" xml:space="preserve">
+    <value>Select a character</value>
+  </data>
+  <data name="Prompt_SelectLanguage" xml:space="preserve">
+    <value>Select a language</value>
   </data>
   <data name="Prompt_Select_Benefit_Table" xml:space="preserve">
     <value>Select a benefit table</value>

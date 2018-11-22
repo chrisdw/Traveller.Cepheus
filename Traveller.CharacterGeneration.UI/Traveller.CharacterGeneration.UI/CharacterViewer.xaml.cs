@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.DownesWard.Traveller.Language;
+using System;
 using System.IO;
 using System.Linq;
 using System.Xml;
@@ -67,7 +68,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             var filenames = files.Select(f => Path.GetFileNameWithoutExtension(f)).ToArray();
             Device.BeginInvokeOnMainThread(async () =>
             {
-                var result = await DisplayActionSheet("Select a character", null, null, filenames);
+                var result = await DisplayActionSheet(Properties.Resources.Prompt_SelectCharacter, null, null, filenames);
                 if (result != null)
                 {
                     // Open file
@@ -83,6 +84,26 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     BenefitsView.ItemsSource = character.Benefits.Values.OrderBy(b => b.Name);
                 }
             });
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            // Get the list of langauages
+            var langs = new Languages();
+            var list = langs.Keys.ToArray();
+            if (list.Length > 0)
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    var select = await DisplayActionSheet(Properties.Resources.Prompt_SelectLanguage, Properties.Resources.Button_Cancel, null, list);
+                    if (select != null && select != Properties.Resources.Button_Cancel)
+                    {
+                        var character = BindingContext as Character;
+                        var language = langs[select];
+                        character.Name = language.GenerateWord() + language.GenerateWord();
+                    }
+                });
+            }
         }
     }
 }

@@ -99,4 +99,13 @@
   <data name="Prompt_Select_Psionic" xml:space="preserve">
     <value>Wählen Sie ein PSI-talent</value>
   </data>
+  <data name="Button_Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Prompt_SelectCharacter" xml:space="preserve">
+    <value>Wählen Sie ein Zeichen</value>
+  </data>
+  <data name="Prompt_SelectLanguage" xml:space="preserve">
+    <value>Wählen Sie eine Sprache</value>
+  </data>
 </root>

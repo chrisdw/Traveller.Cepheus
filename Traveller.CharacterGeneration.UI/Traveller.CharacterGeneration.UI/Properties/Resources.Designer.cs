@@ -79,6 +79,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Button_Cancel {
+            get {
+                return ResourceManager.GetString("Button_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No.
         /// </summary>
         internal static string Button_No {
@@ -300,6 +309,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         internal static string Prompt_Select_Weapon {
             get {
                 return ResourceManager.GetString("Prompt_Select_Weapon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a character.
+        /// </summary>
+        internal static string Prompt_SelectCharacter {
+            get {
+                return ResourceManager.GetString("Prompt_SelectCharacter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a language.
+        /// </summary>
+        internal static string Prompt_SelectLanguage {
+            get {
+                return ResourceManager.GetString("Prompt_SelectLanguage", resourceCulture);
             }
         }
         
