@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
     {
         public Doctor()
         {
-            Name = "Doctor";
+            Name = Resources.Career_Doctor;
 
             RankNumber = 0;
             TermSkills = 3;
@@ -85,7 +85,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[5] = 60000;
             Cash[6] = 100000;
 
-            Ranks[0] = "Doctor";
+            Ranks[0] = Resources.Rank_Doctor;
         }
 
         protected override void CommsionSkill()
@@ -99,7 +99,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target += 4;
                 }

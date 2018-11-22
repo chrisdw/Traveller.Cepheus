@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 {
     public class Loner : Career
     {
         public Loner()
         {
-            Name = "Loner";
+            Name = Resources.Career_Loner;
 
             enlistment = 7;
             enlistment1attr = "STR";
@@ -61,7 +57,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "High Charisma";
+            table.Name = Resources.Table_HighCharisma;
             skills = table.Skills;
             skills[0] = SkillLibrary.Medic;
             skills[1] = SkillLibrary.JackOfTrades;
@@ -86,7 +82,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             Cash[5] = 40000;
             Cash[6] = 100000;
 
-            Ranks[0] = "Loner";
+            Ranks[0] = Resources.Rank_Loner;
         }
         protected override void CommsionSkill()
         {

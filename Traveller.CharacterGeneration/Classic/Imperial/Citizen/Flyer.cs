@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
     {
         public Flyer()
         {
-            Name = "Flyer";
+            Name = Resources.Career_Flyer;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -88,13 +88,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[5] = 20000;
             Cash[6] = 30000;
 
-            Ranks[0] = "Flyer";
-            Ranks[1] = "Pilot";
-            Ranks[2] = "Flight Leader";
-            Ranks[3] = "Squadron Leader";
-            Ranks[4] = "Staff Major";
-            Ranks[5] = "Group Leader";
-            Ranks[6] = "Air Marshall";
+            Ranks[0] = Resources.Rank_Flyer;
+            Ranks[1] = Resources.Rank_Pilot;
+            Ranks[2] = Resources.Rank_FlightLeader;
+            Ranks[3] = Resources.Rank_SquadronLeader;
+            Ranks[4] = Resources.Rank_StaffMajor;
+            Ranks[5] = Resources.Rank_GroupLeader;
+            Ranks[6] = Resources.Rank_AirMarshall;
 
         }
         protected override void CommsionSkill()
@@ -109,7 +109,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             {
                 target += 1;
             }
-            else if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals("Female"))
+            else if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals(Properties.Resources.Sex_Female))
             {
                 target += 4;
             }

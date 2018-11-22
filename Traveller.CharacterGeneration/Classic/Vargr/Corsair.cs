@@ -16,7 +16,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
         {
             CareerMode = mode;
 
-            Name = "Corsair";
+            Name = Resources.Career_Corsair;
 
             enlistment = 6;
             enlistment1attr = "END";
@@ -75,7 +75,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "High Charisma";
+            table.Name = Resources.Table_HighCharisma;
             skills = table.Skills;
             skills[0] = SkillLibrary.Medic;
             skills[1] = SkillLibrary.Chr;
@@ -101,7 +101,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             Cash[6] = 50000;
 
             Ranks[0] = "Corsair";
-            Ranks[1] = "Lieutenant";
+            Ranks[1] = Resources.Rank_Lieutenant;
             Ranks[2] = "Force Leader";
             Ranks[3] = "Staff Major";
             Ranks[4] = "Group Leader";

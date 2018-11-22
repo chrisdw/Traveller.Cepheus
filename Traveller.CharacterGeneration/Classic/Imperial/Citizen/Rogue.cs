@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
     {
         public Rogue()
         {
-            Name = "Rogue";
+            Name = Resources.Career_Rogue;
 
             RankNumber = 0;
             TermSkills = 2;
@@ -85,7 +85,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[5] = 100000;
             Cash[6] = 100000;
 
-            Ranks[0] = "Rogue";
+            Ranks[0] = Resources.Rank_Rogue;
         }
         protected override void CommsionSkill()
         {
@@ -94,7 +94,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
         protected override int EnlistFactor()
         {
-            throw new NotImplementedException();
+            return 0; ;
         }
 
         protected override void EnlistSkill()

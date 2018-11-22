@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 {
     public class Navy : Career
     {
         public Navy()
         {
-            Name = "Navy";
+            Name = Resources.Career_Navy;
 
             enlistment = 7;
             enlistment1attr = "INT";
@@ -67,7 +63,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "High Charisma";
+            table.Name = Resources.Table_HighCharisma;
             skills = table.Skills;
             skills[0] = SkillLibrary.Medic;
             skills[1] = SkillLibrary.Tactics;
@@ -92,13 +88,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             Cash[5] = 30000;
             Cash[6] = 40000;
 
-            Ranks[0] = "Spacehand";
-            Ranks[1] = "Ensign";
-            Ranks[2] = "Lieutenant";
-            Ranks[3] = "Lt. Commander";
-            Ranks[4] = "Commander";
-            Ranks[5] = "Captain";
-            Ranks[6] = "Admiral";
+            Ranks[0] = Resources.Rank_Spacehand;
+            Ranks[1] = Resources.Rank_Ensign;
+            Ranks[2] = Resources.Rank_Lieutenant;
+            Ranks[3] = Resources.Rank_LtCommander;
+            Ranks[4] = Resources.Rank_Commander;
+            Ranks[5] = Resources.Rank_Captain;
+            Ranks[6] = Resources.Rank_Admiral;
         }
 
         protected override void CommsionSkill()

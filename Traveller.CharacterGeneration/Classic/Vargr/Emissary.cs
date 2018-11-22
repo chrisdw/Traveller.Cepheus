@@ -9,7 +9,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
         public Emissary()
         {
 
-            Name = "Emissary";
+            Name = Resources.Career_Emissary;
 
             enlistment = 8;
             enlistment1attr = "EDU";
@@ -62,7 +62,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "High Charisma";
+            table.Name = Resources.Table_HighCharisma;
             skills = table.Skills;
             skills[0] = SkillLibrary.Medic;
             skills[1] = SkillLibrary.Liason;
@@ -86,7 +86,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             Cash[5] = 50000;
             Cash[6] = 50000;
 
-            Ranks[0] = "Emissary";
+            Ranks[0] = Resources.Rank_Emissary;
         }
 
         protected override void CommsionSkill()

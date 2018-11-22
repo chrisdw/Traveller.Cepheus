@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
     {
         public Diplomat()
         {
-            Name = "Diplomat";
+            Name = Resources.Career_Diplomat;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -89,12 +89,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[6] = 70000;
 
             Ranks[0] = string.Empty;
-            Ranks[1] = "3rd Secretary";
-            Ranks[2] = "2nd Secretary";
-            Ranks[3] = "1st Secretary";
-            Ranks[4] = "Counselor";
-            Ranks[5] = "Minister";
-            Ranks[6] = "Ambassador";
+            Ranks[1] = Resources.Rank_3rdSecretary;
+            Ranks[2] = Resources.Rank_2ndSecretary;
+            Ranks[3] = Resources.Rank_1stSecretary;
+            Ranks[4] = Resources.Rank_Counselor;
+            Ranks[5] = Resources.Rank_Minister;
+            Ranks[6] = Resources.Rank_Ambassador;
         }
 
         protected override void CommsionSkill()
@@ -105,7 +105,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         protected override int EnlistFactor()
         {
             var target = 0;
-            if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals("Male"))
+            if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals(Properties.Resources.Sex_Male))
             {
                 target--;
             }

@@ -89,12 +89,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[6] = 80000;
 
             Ranks[0] = string.Empty;
-            Ranks[1] = "Clerk";
-            Ranks[2] = "Supervisor";
-            Ranks[3] = "Assistant Manager";
-            Ranks[4] = "Manager";
-            Ranks[5] = "Executive";
-            Ranks[6] = "Director";
+            Ranks[1] = Resources.Rank_Clerk;
+            Ranks[2] = Resources.Rank_Supervisor;
+            Ranks[3] = Resources.Rank_AssistantManager;
+            Ranks[4] = Resources.Rank_Manager;
+            Ranks[5] = Resources.Rank_Executive;
+            Ranks[6] = Resources.Rank_Director;
         }
         protected override void CommsionSkill()
         {
@@ -104,7 +104,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         protected override int EnlistFactor()
         {
             var target = 0;
-            if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals("Male"))
+            if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals(Properties.Resources.Sex_Male))
             {
                 target += 4;
             }

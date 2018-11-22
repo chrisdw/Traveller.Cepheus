@@ -8,6 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
     {
         public Belter()
         {
+            Name = Resources.Career_Belter;
             RankNumber = 0;
             TermSkills = 3;
 
@@ -79,7 +80,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[5] = 100000;
             Cash[6] = 100000;
 
-            Ranks[0] = "Belter";
+            Ranks[0] = Resources.Rank_Belter;
         }
 
         /// <summary>
@@ -113,7 +114,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target += 4;
                 }

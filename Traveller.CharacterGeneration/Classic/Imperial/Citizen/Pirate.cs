@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 {
     public class Pirate : Career
     {
         public Pirate()
         {
-            Name = "Pirate";
+            Name = Resources.Career_Pirate;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -89,12 +85,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[5] = 50000;
             Cash[6] = 50000;
 
-            Ranks[0] = "Pirate";
-            Ranks[1] = "Henchman";
-            Ranks[2] = "Corporal";
-            Ranks[3] = "Sergeant";
-            Ranks[4] = "Lieutenant";
-            Ranks[5] = "Leader";
+            Ranks[0] = Resources.Rank_Pirate;
+            Ranks[1] = Resources.Rank_Henchman;
+            Ranks[2] = Resources.Rank_Corporal;
+            Ranks[3] = Resources.Rank_Sergeant;
+            Ranks[4] = Resources.Rank_Lieutenant;
+            Ranks[5] = Resources.Rank_Leader;
         }
 
         protected override void CommsionSkill()

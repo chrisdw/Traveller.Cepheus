@@ -1,8 +1,6 @@
 ﻿using org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr;
 using org.DownesWard.Utilities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 {
@@ -76,11 +74,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
                                 AddCitizenCareersExceptNoble(careers);
                                 if (character.CharacterSpecies == Character.Species.Vargr)
                                 {
-                                    careers.Add("Corsair", CharacterGeneration.Career.CareerType.Vargr_Corsair);
+                                    careers.Add(Vargr.Resources.Career_Corsair, CharacterGeneration.Career.CareerType.Vargr_Corsair);
                                 }
                                 if (character.Profile.Soc.Value > 10)
                                 {
-                                    careers.Add("Noble", CharacterGeneration.Career.CareerType.Citizen_Noble);
+                                    careers.Add(Citizen.Resources.Career_Noble, CharacterGeneration.Career.CareerType.Citizen_Noble);
                                 }
                             }
                             else
@@ -96,17 +94,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
 
         private static void AddCitizenCareersExceptNoble(Dictionary<string, CharacterGeneration.Career.CareerType> careers)
         {
-            careers.Add("Barbarian", CharacterGeneration.Career.CareerType.Citizen_Barbarian);
-            careers.Add("Belter", CharacterGeneration.Career.CareerType.Citizen_Belter);
-            careers.Add("Bureaucrat", CharacterGeneration.Career.CareerType.Citizen_Bureaucrat);
-            careers.Add("Diplomat", CharacterGeneration.Career.CareerType.Citizen_Diplomat);
-            careers.Add("Doctor", CharacterGeneration.Career.CareerType.Citizen_Doctor);
-            careers.Add("Flyer", CharacterGeneration.Career.CareerType.Citizen_Flyer);
-            careers.Add("Hunter", CharacterGeneration.Career.CareerType.Citizen_Hunter);
-            careers.Add("Pirate", CharacterGeneration.Career.CareerType.Citizen_Pirate);
-            careers.Add("Rogue", CharacterGeneration.Career.CareerType.Citizen_Rogue);
-            careers.Add("Sailor", CharacterGeneration.Career.CareerType.Citizen_Sailor);
-            careers.Add("Scientist", CharacterGeneration.Career.CareerType.Citizen_Scientist);
+            careers.Add(Citizen.Resources.Career_Barbarian, CharacterGeneration.Career.CareerType.Citizen_Barbarian);
+            careers.Add(Citizen.Resources.Career_Belter, CharacterGeneration.Career.CareerType.Citizen_Belter);
+            careers.Add(Citizen.Resources.Career_Bureaucrat, CharacterGeneration.Career.CareerType.Citizen_Bureaucrat);
+            careers.Add(Citizen.Resources.Career_Diplomat, CharacterGeneration.Career.CareerType.Citizen_Diplomat);
+            careers.Add(Citizen.Resources.Career_Doctor, CharacterGeneration.Career.CareerType.Citizen_Doctor);
+            careers.Add(Citizen.Resources.Career_Flyer, CharacterGeneration.Career.CareerType.Citizen_Flyer);
+            careers.Add(Citizen.Resources.Career_Hunter, CharacterGeneration.Career.CareerType.Citizen_Hunter);
+            careers.Add(Citizen.Resources.Career_Pirate, CharacterGeneration.Career.CareerType.Citizen_Pirate);
+            careers.Add(Citizen.Resources.Career_Rogue, CharacterGeneration.Career.CareerType.Citizen_Rogue);
+            careers.Add(Citizen.Resources.Career_Sailor, CharacterGeneration.Career.CareerType.Citizen_Sailor);
+            careers.Add(Citizen.Resources.Career_Scientist, CharacterGeneration.Career.CareerType.Citizen_Scientist);
         }
 
         public bool CheckSkill(Character character, Skill skill, int count)
@@ -230,14 +228,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             switch (generationStyle)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    list.Add("Human", Character.Species.Human_Imperial);
-                    list.Add("Dolphin", Character.Species.Dolphin);
-                    list.Add("Aslan", Character.Species.Aslan);
-                    list.Add("Vargr", Character.Species.Vargr);
-                    list.Add("Ael Yael", Character.Species.AelYael);
-                    list.Add("Virushi", Character.Species.Virushi);
-                    list.Add("Bwap", Character.Species.Bwap);
-                    list.Add("Vegan", Character.Species.Vegan);
+                    list.Add(Properties.Resources.Species_Human, Character.Species.Human_Imperial);
+                    list.Add(Properties.Resources.Species_Dolphin, Character.Species.Dolphin);
+                    list.Add(Properties.Resources.Species_Aslan, Character.Species.Aslan);
+                    list.Add(Properties.Resources.Species_Vargr, Character.Species.Vargr);
+                    list.Add(Properties.Resources.Species_AelYael, Character.Species.AelYael);
+                    list.Add(Properties.Resources.Species_Virushi, Character.Species.Virushi);
+                    list.Add(Properties.Resources.Species_Bwap, Character.Species.Bwap);
+                    list.Add(Properties.Resources.Species_Vegan, Character.Species.Vegan);
                     break;
             }
             

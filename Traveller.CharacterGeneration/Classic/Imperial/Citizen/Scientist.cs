@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 {
     public class Scientist : Career
     {
         public Scientist()
         {
-            Name = "Scientist";
+            Name = Resources.Career_Scientist;
 
             RankNumber = 0;
             TermSkills = 2;
@@ -85,7 +81,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[5] = 30000;
             Cash[6] = 40000;
 
-            Ranks[0] = "Scientist";
+            Ranks[0] = Resources.Rank_Scientist;
         }
 
         protected override void CommsionSkill()
@@ -99,7 +95,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
             if (Owner.CharacterSpecies == Character.Species.Aslan)
             {
-                if (Owner.Sex.Equals("Male"))
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     target += 4;
                 }

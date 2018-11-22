@@ -492,4 +492,22 @@
   <data name="Species_Human_SwordWorlds" xml:space="preserve">
     <value>Homme (épée Worlds)</value>
   </data>
+  <data name="Species_Dolphin" xml:space="preserve">
+    <value>Dauphin</value>
+  </data>
+  <data name="Species_AelYael" xml:space="preserve">
+    <value>AEL Yael</value>
+  </data>
+  <data name="Species_Bwap" xml:space="preserve">
+    <value>Bwap</value>
+  </data>
+  <data name="Species_Vargr" xml:space="preserve">
+    <value>Vargr</value>
+  </data>
+  <data name="Species_Vegan" xml:space="preserve">
+    <value>Végétalien</value>
+  </data>
+  <data name="Species_Virushi" xml:space="preserve">
+    <value>Virushi</value>
+  </data>
 </root>

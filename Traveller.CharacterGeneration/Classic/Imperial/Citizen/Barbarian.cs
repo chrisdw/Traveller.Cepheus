@@ -4,7 +4,7 @@
     {
         public Barbarian()
         {
-            Name = "Barbarian";
+            Name = Resources.Career_Barbarian;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -86,10 +86,10 @@
 
             Ranks[0] = string.Empty;
             Ranks[1] = string.Empty;
-            Ranks[2] = "Warrior";
+            Ranks[2] = Resources.Rank_Warrior;
             Ranks[3] = string.Empty;
             Ranks[4] = string.Empty;
-            Ranks[5] = "Chief";
+            Ranks[5] = Resources.Rank_Chief;
             Ranks[6] = string.Empty;
         }
         protected override void CommsionSkill()

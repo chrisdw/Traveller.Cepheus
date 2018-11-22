@@ -8,6 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
     {
         public Hunter()
         {
+            Name = Resources.Career_Hunter;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -82,7 +83,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[5] = 100000;
             Cash[6] = 100000;
 
-            Ranks[0] = "Hunter";
+            Ranks[0] = Resources.Rank_Hunter;
         }
 
         protected override void CommsionSkill()

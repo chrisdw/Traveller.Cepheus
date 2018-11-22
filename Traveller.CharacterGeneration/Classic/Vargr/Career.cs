@@ -86,7 +86,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
                         RankNumber = 1;
                         CommsionSkill();
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
+                        Owner.Journal.Add(string.Format(Resources.Msg_Commissioned, Ranks[RankNumber]));
                         return true;
                     }
                     else
@@ -180,7 +180,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             }
             else
             {
-                Owner.Journal.Add(string.Format("Dismissed from {0} at end of term {1}", Name, Term));
+                Owner.Journal.Add(string.Format(Resources.Msg_Dismissed, Name, Term));
                 Retired = false;
             }
             return renlist;
@@ -193,11 +193,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             Owner.Profile["CHR"].Value += success.CharismaChange;
             if (success.CharismaChange < 0)
             {
-                Owner.Journal.Add(string.Format("Your charisma was redued by {0} due to failure", success.CharismaChange));
+                Owner.Journal.Add(string.Format(Resources.Msg_ReducedChr, success.CharismaChange));
             }
             else if (success.CharismaChange > 0)
             {
-                Owner.Journal.Add(string.Format("Your charisma was increased by {0} due to success", success.CharismaChange));
+                Owner.Journal.Add(string.Format(Resources.Msg_IncreasedChr, success.CharismaChange));
                 TermSkills++;
             }
             if (hasRanks)
@@ -205,11 +205,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
                 RankNumber = (RankNumber + success.RankChange).Clamp(0, maxRank);
                 if (success.RankChange < 0)
                 {
-                    Owner.Journal.Add(string.Format("You were demoted to {0}", RankName));
+                    Owner.Journal.Add(string.Format(Resources.Msg_Demoted, RankName));
                 }
                 else
                 {
-                    Owner.Journal.Add(string.Format("You were promted to {0}", RankName));
+                    Owner.Journal.Add(string.Format(Resources.Msg_Promoted, RankName));
                 }
             }
             return success.Dismissed;

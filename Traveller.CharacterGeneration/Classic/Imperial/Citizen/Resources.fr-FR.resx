@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Career_Barbarian" xml:space="preserve">
+    <value>Barbare</value>
+  </data>
+  <data name="Career_Belter" xml:space="preserve">
+    <value>Belter</value>
+  </data>
+  <data name="Career_Bureaucrat" xml:space="preserve">
+    <value>Bureaucrate</value>
+  </data>
+  <data name="Career_Diplomat" xml:space="preserve">
+    <value>Diplomate</value>
+  </data>
+  <data name="Career_Doctor" xml:space="preserve">
+    <value>Médecin</value>
+  </data>
+  <data name="Prompt_Commissioned" xml:space="preserve">
+    <value>Mis en service comme {0}</value>
+  </data>
+  <data name="Prompt_Promoted" xml:space="preserve">
+    <value>Promu à {0}</value>
+  </data>
+  <data name="Rank_1stSecretary" xml:space="preserve">
+    <value>1er Secrétaire</value>
+  </data>
+  <data name="Rank_2ndSecretary" xml:space="preserve">
+    <value>2ème Secrétaire</value>
+  </data>
+  <data name="Rank_3rdSecretary" xml:space="preserve">
+    <value>3ème Secrétaire</value>
+  </data>
+  <data name="Rank_Ambassador" xml:space="preserve">
+    <value>Ambassadeur</value>
+  </data>
+  <data name="Rank_AssistantManager" xml:space="preserve">
+    <value>Directeur adjoint</value>
+  </data>
+  <data name="Rank_Belter" xml:space="preserve">
+    <value>Belter</value>
+  </data>
+  <data name="Rank_Chief" xml:space="preserve">
+    <value>Chef</value>
+  </data>
+  <data name="Rank_Clerk" xml:space="preserve">
+    <value>Greffier</value>
+  </data>
+  <data name="Rank_Counselor" xml:space="preserve">
+    <value>Conseiller</value>
+  </data>
+  <data name="Rank_Director" xml:space="preserve">
+    <value>Directeur</value>
+  </data>
+  <data name="Rank_Doctor" xml:space="preserve">
+    <value>Médecin</value>
+  </data>
+  <data name="Rank_Executive" xml:space="preserve">
+    <value>Exécutif</value>
+  </data>
+  <data name="Rank_Manager" xml:space="preserve">
+    <value>Gestionnaire</value>
+  </data>
+  <data name="Rank_Minister" xml:space="preserve">
+    <value>Ministre</value>
+  </data>
+  <data name="Rank_Supervisor" xml:space="preserve">
+    <value>Superviseur</value>
+  </data>
+  <data name="Rank_Warrior" xml:space="preserve">
+    <value>Guerrier</value>
+  </data>
+  <data name="Career_Flyer" xml:space="preserve">
+    <value>Flyer</value>
+  </data>
+  <data name="Career_Hunter" xml:space="preserve">
+    <value>Hunter</value>
+  </data>
+  <data name="Career_Noble" xml:space="preserve">
+    <value>Noble</value>
+  </data>
+  <data name="Career_Pirate" xml:space="preserve">
+    <value>Pirate</value>
+  </data>
+  <data name="Career_Rogue" xml:space="preserve">
+    <value>Voyous</value>
+  </data>
+  <data name="Career_Sailor" xml:space="preserve">
+    <value>Sailor</value>
+  </data>
+  <data name="Career_Scientist" xml:space="preserve">
+    <value>Scientifique</value>
+  </data>
+  <data name="Msg_Enslisted" xml:space="preserve">
+    <value>S’est enrôlé dans {0} sur {1} âge</value>
+  </data>
+  <data name="Msg_Refused" xml:space="preserve">
+    <value>Enrôlement dans {0} a refusé à âge {1}</value>
+  </data>
+  <data name="Rank_Admiral" xml:space="preserve">
+    <value>Amiral</value>
+  </data>
+  <data name="Rank_AirMarshall" xml:space="preserve">
+    <value>Maréchal de l’air</value>
+  </data>
+  <data name="Rank_Baron" xml:space="preserve">
+    <value>Baron</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Capitaine</value>
+  </data>
+  <data name="Rank_Commander" xml:space="preserve">
+    <value>Commandant</value>
+  </data>
+  <data name="Rank_Corporal" xml:space="preserve">
+    <value>Caporal</value>
+  </data>
+  <data name="Rank_Count" xml:space="preserve">
+    <value>Comte</value>
+  </data>
+  <data name="Rank_Duke" xml:space="preserve">
+    <value>Duc</value>
+  </data>
+  <data name="Rank_Ensign" xml:space="preserve">
+    <value>Ensign</value>
+  </data>
+  <data name="Rank_FlightLeader" xml:space="preserve">
+    <value>Chef de section</value>
+  </data>
+  <data name="Rank_Flyer" xml:space="preserve">
+    <value>Flyer</value>
+  </data>
+  <data name="Rank_GroupLeader" xml:space="preserve">
+    <value>Chef de groupe</value>
+  </data>
+  <data name="Rank_Henchman" xml:space="preserve">
+    <value>Acolyte</value>
+  </data>
+  <data name="Rank_Hunter" xml:space="preserve">
+    <value>Hunter</value>
+  </data>
+  <data name="Rank_Knight" xml:space="preserve">
+    <value>Chevalier</value>
+  </data>
+  <data name="Rank_Leader" xml:space="preserve">
+    <value>Chef de file</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_LtCommander" xml:space="preserve">
+    <value>Le lieutenant commandant</value>
+  </data>
+  <data name="Rank_Marquis" xml:space="preserve">
+    <value>Marquis</value>
+  </data>
+  <data name="Rank_Noble" xml:space="preserve">
+    <value>Noble</value>
+  </data>
+  <data name="Rank_Pilot" xml:space="preserve">
+    <value>Pilote</value>
+  </data>
+  <data name="Rank_Pirate" xml:space="preserve">
+    <value>Pirate</value>
+  </data>
+  <data name="Rank_Rogue" xml:space="preserve">
+    <value>Voyous</value>
+  </data>
+  <data name="Rank_Sailor" xml:space="preserve">
+    <value>Sailor</value>
+  </data>
+  <data name="Rank_Scientist" xml:space="preserve">
+    <value>Scientifique</value>
+  </data>
+  <data name="Rank_Sergeant" xml:space="preserve">
+    <value>Sergent</value>
+  </data>
+  <data name="Rank_SquadronLeader" xml:space="preserve">
+    <value>Chef d’Escadron</value>
+  </data>
+  <data name="Rank_StaffMajor" xml:space="preserve">
+    <value>Major du personnel</value>
+  </data>
+</root>

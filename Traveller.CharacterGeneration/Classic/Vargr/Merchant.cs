@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
     {
         public Merchant()
         {
-            Name = "Merchant";
+            Name = Resources.Career_Merchant;
 
             enlistment = 5;
             enlistment1attr = "DEX";
@@ -67,7 +67,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "High Charisma";
+            table.Name = Resources.Table_HighCharisma;
             skills = table.Skills;
             skills[0] = SkillLibrary.Medic;
             skills[1] = SkillLibrary.Admin;
@@ -92,12 +92,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             Cash[5] = 50000;
             Cash[6] = 50000;
 
-            Ranks[0] = "Spacehand";
-            Ranks[1] = "4th Officer";
-            Ranks[2] = "3rd Officer";
-            Ranks[3] = "2nd Officer";
-            Ranks[4] = "1st Officer";
-            Ranks[5] = "Captain";
+            Ranks[0] = Resources.Rank_Spacehand;
+            Ranks[1] = Resources.Rank_4thOfficer;
+            Ranks[2] = Resources.Rank_3rdOfficer;
+            Ranks[3] = Resources.Rank_2ndOfficer;
+            Ranks[4] = Resources.Rank_1stOfficer;
+            Ranks[5] = Resources.Rank_Captain;
         }
 
         protected override void CommsionSkill()

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Career_Corsair" xml:space="preserve">
+    <value>Corsair</value>
+  </data>
+  <data name="Career_Army" xml:space="preserve">
+    <value>Armee</value>
+  </data>
+  <data name="Msg_Commissioned" xml:space="preserve">
+    <value>Im Auftrag als {0}</value>
+  </data>
+  <data name="Msg_Demoted" xml:space="preserve">
+    <value>Sie wurden {0} degradiert.</value>
+  </data>
+  <data name="Msg_Dismissed" xml:space="preserve">
+    <value>Entlassung aus {0} am Ende der Laufzeit {1}</value>
+  </data>
+  <data name="Msg_IncreasedChr" xml:space="preserve">
+    <value>Ihre Ausstrahlung war von {0} durch Erfolg erhöht.</value>
+  </data>
+  <data name="Msg_Promoted" xml:space="preserve">
+    <value>Sie wurden Passworte {0}</value>
+  </data>
+  <data name="Msg_ReducedChr" xml:space="preserve">
+    <value>Ihre Ausstrahlung war Redued von {0} Ausfall</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Kapitän</value>
+  </data>
+  <data name="Rank_Colonel" xml:space="preserve">
+    <value>Oberst</value>
+  </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>Allgemeine</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Leutnant</value>
+  </data>
+  <data name="Rank_LtColonel" xml:space="preserve">
+    <value>Oberstleutnant</value>
+  </data>
+  <data name="Rank_Major" xml:space="preserve">
+    <value>Großen</value>
+  </data>
+  <data name="Rank_Trooper" xml:space="preserve">
+    <value>Trooper</value>
+  </data>
+  <data name="Table_HighCharisma" xml:space="preserve">
+    <value>Hohes Charisma</value>
+  </data>
+  <data name="Career_Emissary" xml:space="preserve">
+    <value>Emissär</value>
+  </data>
+  <data name="Career_Loner" xml:space="preserve">
+    <value>Einzelgänger</value>
+  </data>
+  <data name="Career_Merchant" xml:space="preserve">
+    <value>Kaufmann</value>
+  </data>
+  <data name="Career_Navy" xml:space="preserve">
+    <value>Marine</value>
+  </data>
+  <data name="Rank_1stOfficer" xml:space="preserve">
+    <value>1. Offizier</value>
+  </data>
+  <data name="Rank_2ndOfficer" xml:space="preserve">
+    <value>2. Offizier</value>
+  </data>
+  <data name="Rank_3rdOfficer" xml:space="preserve">
+    <value>3. Offizier</value>
+  </data>
+  <data name="Rank_4thOfficer" xml:space="preserve">
+    <value>4. Offizier</value>
+  </data>
+  <data name="Rank_Admiral" xml:space="preserve">
+    <value>Admiral</value>
+  </data>
+  <data name="Rank_Commander" xml:space="preserve">
+    <value>Commander</value>
+  </data>
+  <data name="Rank_Emissary" xml:space="preserve">
+    <value>Emissär</value>
+  </data>
+  <data name="Rank_Ensign" xml:space="preserve">
+    <value>Fähnrich</value>
+  </data>
+  <data name="Rank_Loner" xml:space="preserve">
+    <value>Einzelgänger</value>
+  </data>
+  <data name="Rank_LtCommander" xml:space="preserve">
+    <value>Lt. Commander</value>
+  </data>
+  <data name="Rank_Spacehand" xml:space="preserve">
+    <value>Spacehand</value>
+  </data>
+</root>

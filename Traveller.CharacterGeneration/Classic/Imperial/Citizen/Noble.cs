@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 {
     public class Noble : Career
     {
         public Noble()
         {
-            Name = "Noble";
+            Name = Resources.Career_Noble;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -87,12 +83,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             Cash[5] = 100000;
             Cash[6] = 200000;
 
-            Ranks[0] = "Noble";
-            Ranks[1] = "Knight";
-            Ranks[2] = "Baron";
-            Ranks[3] = "Marquis";
-            Ranks[4] = "Count";
-            Ranks[5] = "Duke";
+            Ranks[0] = Resources.Rank_Noble;
+            Ranks[1] = Resources.Rank_Knight;
+            Ranks[2] = Resources.Rank_Baron;
+            Ranks[3] = Resources.Rank_Marquis;
+            Ranks[4] = Resources.Rank_Count;
+            Ranks[5] = Resources.Rank_Duke;
         }
 
         protected override void CommsionSkill()
@@ -118,7 +114,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         public override bool Enlist()
         {
             var target = 10;
-            if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex == "Female")
+            if (Owner.CharacterSpecies == Character.Species.Aslan && Owner.Sex.Equals(Properties.Resources.Sex_Female))
             {
                 target++;
             }
@@ -127,11 +123,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             if (Owner.Profile["SOC"].Value >= target)
             {
                 enlist = true;
-                Owner.Journal.Add(string.Format("Enlisted in {0} at age {1}", Name, Owner.Age));
+                Owner.Journal.Add(string.Format(Resources.Msg_Enslisted, Name, Owner.Age));
             }
             else
             {
-                Owner.Journal.Add(string.Format("Enlistment in {0} refused at age {1}", Name, Owner.Age));
+                Owner.Journal.Add(string.Format(Resources.Msg_Refused, Name, Owner.Age));
             }
  
             return enlist;

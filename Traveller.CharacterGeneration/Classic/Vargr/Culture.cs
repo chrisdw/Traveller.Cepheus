@@ -22,12 +22,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    careers.Add("Navy", CharacterGeneration.Career.CareerType.Vargr_Navy);
-                    careers.Add("Corsairs", CharacterGeneration.Career.CareerType.Vargr_Corsair);
-                    careers.Add("Army", CharacterGeneration.Career.CareerType.Vargr_Army);
-                    careers.Add("Emissaries", CharacterGeneration.Career.CareerType.Vargr_Emissary);
-                    careers.Add("Merchants", CharacterGeneration.Career.CareerType.Vargr_Merchant);
-                    careers.Add("Merchants", CharacterGeneration.Career.CareerType.Vargr_Loner);
+                    careers.Add(Resources.Career_Navy, CharacterGeneration.Career.CareerType.Vargr_Navy);
+                    careers.Add(Resources.Career_Corsair, CharacterGeneration.Career.CareerType.Vargr_Corsair);
+                    careers.Add(Resources.Career_Army, CharacterGeneration.Career.CareerType.Vargr_Army);
+                    careers.Add(Resources.Career_Emissary, CharacterGeneration.Career.CareerType.Vargr_Emissary);
+                    careers.Add(Resources.Career_Merchant, CharacterGeneration.Career.CareerType.Vargr_Merchant);
+                    careers.Add(Resources.Career_Loner, CharacterGeneration.Career.CareerType.Vargr_Loner);
                     break;
             }
             return careers;
@@ -91,7 +91,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             switch (generationStyle)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    list.Add("Vargr", Character.Species.Vargr);
+                    list.Add(Properties.Resources.Species_Vargr, Character.Species.Vargr);
                     break;
             }
 

@@ -1402,11 +1402,38 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ael Yael.
+        /// </summary>
+        internal static string Species_AelYael {
+            get {
+                return ResourceManager.GetString("Species_AelYael", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Aslan.
         /// </summary>
         internal static string Species_Aslan {
             get {
                 return ResourceManager.GetString("Species_Aslan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bwap.
+        /// </summary>
+        internal static string Species_Bwap {
+            get {
+                return ResourceManager.GetString("Species_Bwap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dolphin.
+        /// </summary>
+        internal static string Species_Dolphin {
+            get {
+                return ResourceManager.GetString("Species_Dolphin", resourceCulture);
             }
         }
         
@@ -1452,6 +1479,33 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         internal static string Species_Human_SwordWorlds {
             get {
                 return ResourceManager.GetString("Species_Human_SwordWorlds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vargr.
+        /// </summary>
+        internal static string Species_Vargr {
+            get {
+                return ResourceManager.GetString("Species_Vargr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vegan.
+        /// </summary>
+        internal static string Species_Vegan {
+            get {
+                return ResourceManager.GetString("Species_Vegan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Virushi.
+        /// </summary>
+        internal static string Species_Virushi {
+            get {
+                return ResourceManager.GetString("Species_Virushi", resourceCulture);
             }
         }
         
