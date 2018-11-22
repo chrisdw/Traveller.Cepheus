@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 {
     public class Navy : Career
     {
         public Navy()
         {
-            Name = "Navy";
+            Name = Resources.Career_Navy;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -92,13 +88,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             Cash[5] = 20000;
             Cash[6] = 20000;
 
-            Ranks[0] = "Spacer";
-            Ranks[1] = "Ensign";
-            Ranks[2] = "Lieutenant";
-            Ranks[3] = "Lt Commander";
-            Ranks[4] = "Commander";
-            Ranks[5] = "Captain";
-            Ranks[6] = "Admiral";
+            Ranks[0] = Resources.Rank_Spacer;
+            Ranks[1] = Resources.Rank_Ensign;
+            Ranks[2] = Resources.Rank_Lieutenant;
+            Ranks[3] = Resources.Rank_LtCommander;
+            Ranks[4] = Resources.Rank_Commander;
+            Ranks[5] = Resources.Rank_Captain;
+            Ranks[6] = Resources.Rank_Admiral;
         }
 
         protected override void CommsionSkill()
@@ -136,7 +132,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                 base.Owner = value;
                 if (Owner.Profile.Soc.Value >= 10)
                 {
-                    Ranks[0] = "Midshipman";
+                    Ranks[0] = Resources.Rank_Midshipman;
                 }
             }
         }

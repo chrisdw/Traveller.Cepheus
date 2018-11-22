@@ -1,15 +1,11 @@
 ﻿using org.DownesWard.Traveller.Shared;
-using org.DownesWard.Traveller.Shared.Properties;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 {
     public class ZhodaniUPP : UPP
     {
-        public TravCode Psi { get; } = new TravCode(15, Resources.UPP_Attr_Psionics, "Psi");
+        public TravCode Psi { get; } = new TravCode(15, Shared.Properties.Resources.UPP_Attr_Psionics, "Psi");
 
         public override TravCode this[string index]
         {

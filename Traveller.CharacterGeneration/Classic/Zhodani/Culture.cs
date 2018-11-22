@@ -40,15 +40,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    careers.Add("Navy", Career.CareerType.Zhodani_Navy);
+                    careers.Add(Resources.Career_Navy, Career.CareerType.Zhodani_Navy);
                     if (character.Profile.Soc.Value >= 10 || character.Profile["PSI"].Value >= 9)
                     {
-                        careers.Add("Consular Guard", Career.CareerType.Zhodani_ConsularGuard);
+                        careers.Add(Resources.Career_ConsularGuard, Career.CareerType.Zhodani_ConsularGuard);
                     }
-                    careers.Add("Army", Career.CareerType.Zhodani_Army);
-                    careers.Add("Merchants", Career.CareerType.Zhodani_Merchant);
-                    careers.Add("Government", Career.CareerType.Zhodani_Government);
-                    careers.Add("Prole", Career.CareerType.Zhodani_Prole);
+                    careers.Add(Resources.Career_Army, Career.CareerType.Zhodani_Army);
+                    careers.Add(Resources.Career_Merchant, Career.CareerType.Zhodani_Merchant);
+                    careers.Add(Resources.Career_Government, Career.CareerType.Zhodani_Government);
+                    careers.Add(Resources.Career_Prole, Career.CareerType.Zhodani_Prole);
                     break;
             }
             return careers;
@@ -195,7 +195,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             switch (generationStyle)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    list.Add("Human (Zhodani)", Character.Species.Human_Zhodani);
+                    list.Add(Properties.Resources.Species_Human_Zhodani, Character.Species.Human_Zhodani);
                     break;
             }
 

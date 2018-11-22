@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 {
     public class Government : Career
     {
         public Government()
         {
-            Name = "Government";
+            Name = Resources.Career_Government;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -84,13 +80,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             Cash[5] = 20000;
             Cash[6] = 40000;
 
-            Ranks[0] = "Clerk";
-            Ranks[1] = "Assistant Supervisor";
-            Ranks[2] = "Supervisor";
-            Ranks[3] = "Executive";
-            Ranks[4] = "Consul";
-            Ranks[5] = "World Consul";
-            Ranks[6] = "High Consul";
+            Ranks[0] = Resources.Rank_Clerk;
+            Ranks[1] = Resources.Rank_AssistantSupervisor;
+            Ranks[2] = Resources.Rank_Supervisor;
+            Ranks[3] = Resources.Rank_Executive;
+            Ranks[4] = Resources.Rank_Consul;
+            Ranks[5] = Resources.Rank_WorldConsul;
+            Ranks[6] = Resources.Rank_HighConsul;
         }
 
         protected override void CommsionSkill()

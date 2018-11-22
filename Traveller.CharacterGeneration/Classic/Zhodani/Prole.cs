@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 {
     public class Prole : Career
     {
         public Prole()
         {
-            Name = "Prole";
+            Name = Resources.Career_Prole;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -83,13 +79,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             Cash[4] = 10000;
             Cash[5] = 30000;
 
-            Ranks[0] = "Worker";
-            Ranks[1] = "Assistant Supervisor";
-            Ranks[2] = "Supervisor";
-            Ranks[3] = "Manager";
-            Ranks[4] = "Executive";
-            Ranks[5] = "Senior Executive";
-            Ranks[6] = "Director";
+            Ranks[0] = Resources.Rank_Worker;
+            Ranks[1] = Resources.Rank_AssistantSupervisor;
+            Ranks[2] = Resources.Rank_Supervisor;
+            Ranks[3] = Resources.Rank_Manager;
+            Ranks[4] = Resources.Rank_Executive;
+            Ranks[5] = Resources.Rank_SeniorExecutive;
+            Ranks[6] = Resources.Rank_Director;
         }
 
         protected override void CommsionSkill()

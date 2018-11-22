@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Career_Army" xml:space="preserve">
+    <value>Armée de terre</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Capitaine</value>
+  </data>
+  <data name="Rank_Colonel" xml:space="preserve">
+    <value>Colonel</value>
+  </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>Général</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_LtColonel" xml:space="preserve">
+    <value>Le Lieutenant Colonel</value>
+  </data>
+  <data name="Rank_Major" xml:space="preserve">
+    <value>Principaux</value>
+  </data>
+  <data name="Rank_Subaltern" xml:space="preserve">
+    <value>Subalterne</value>
+  </data>
+  <data name="Rank_Trooper" xml:space="preserve">
+    <value>Trooper</value>
+  </data>
+  <data name="Career_ConsularGuard" xml:space="preserve">
+    <value>Garde consulaire</value>
+  </data>
+  <data name="Career_Government" xml:space="preserve">
+    <value>Gouvernement</value>
+  </data>
+  <data name="Career_Merchant" xml:space="preserve">
+    <value>Marchand</value>
+  </data>
+  <data name="Career_Navy" xml:space="preserve">
+    <value>Marine</value>
+  </data>
+  <data name="Career_Prole" xml:space="preserve">
+    <value>Prole</value>
+  </data>
+  <data name="Msg_Commissioned" xml:space="preserve">
+    <value>Mis en service comme {0}</value>
+  </data>
+  <data name="Msg_Enobled" xml:space="preserve">
+    <value>Enobled en raison de gagner des jeux de la psionique.</value>
+  </data>
+  <data name="Msg_Promoted" xml:space="preserve">
+    <value>Promu à {0}</value>
+  </data>
+  <data name="Msg_PsiRaised" xml:space="preserve">
+    <value>Lb/po2 surélevé par un succès dans les jeux psionique.</value>
+  </data>
+  <data name="Msg_PsiRaised2" xml:space="preserve">
+    <value>Lb/po2 soulevées par deux en raison de gagner des jeux de la psionique</value>
+  </data>
+  <data name="Msg_PsiReduced" xml:space="preserve">
+    <value>Lb/po2, réduit de 1 à la fin du mandat en tant que non formés.</value>
+  </data>
+  <data name="Rank_1stOfficer" xml:space="preserve">
+    <value>1er officier</value>
+  </data>
+  <data name="Rank_2ndOfficer" xml:space="preserve">
+    <value>2ème officier</value>
+  </data>
+  <data name="Rank_3rdOfficer" xml:space="preserve">
+    <value>3ème officier</value>
+  </data>
+  <data name="Rank_4thOfficer" xml:space="preserve">
+    <value>4ème agent</value>
+  </data>
+  <data name="Rank_Admiral" xml:space="preserve">
+    <value>Amiral</value>
+  </data>
+  <data name="Rank_AssistantSupervisor" xml:space="preserve">
+    <value>Assistant superviseur</value>
+  </data>
+  <data name="Rank_Clerk" xml:space="preserve">
+    <value>Greffier</value>
+  </data>
+  <data name="Rank_Commander" xml:space="preserve">
+    <value>Commandant</value>
+  </data>
+  <data name="Rank_Consul" xml:space="preserve">
+    <value>Consul</value>
+  </data>
+  <data name="Rank_DeckHand" xml:space="preserve">
+    <value>Matelot</value>
+  </data>
+  <data name="Rank_Director" xml:space="preserve">
+    <value>Réalisateur</value>
+  </data>
+  <data name="Rank_Ensign" xml:space="preserve">
+    <value>Ensign</value>
+  </data>
+  <data name="Rank_Executive" xml:space="preserve">
+    <value>Executive</value>
+  </data>
+  <data name="Rank_HighConsul" xml:space="preserve">
+    <value>Consul de haute</value>
+  </data>
+  <data name="Rank_LtCommander" xml:space="preserve">
+    <value>Le lieutenant commandant</value>
+  </data>
+  <data name="Rank_Manager" xml:space="preserve">
+    <value>Gestionnaire</value>
+  </data>
+  <data name="Rank_Midshipman" xml:space="preserve">
+    <value>Aspirant de marine</value>
+  </data>
+  <data name="Rank_SeniorCaptain" xml:space="preserve">
+    <value>Capitaine principal</value>
+  </data>
+  <data name="Rank_SeniorExecutive" xml:space="preserve">
+    <value>Cadre dirigeant</value>
+  </data>
+  <data name="Rank_Spacer" xml:space="preserve">
+    <value>Entretoise</value>
+  </data>
+  <data name="Rank_Supervisor" xml:space="preserve">
+    <value>Superviseur</value>
+  </data>
+  <data name="Rank_Worker" xml:space="preserve">
+    <value>Travailleur</value>
+  </data>
+  <data name="Rank_WorldConsul" xml:space="preserve">
+    <value>Consul du monde</value>
+  </data>
+</root>

@@ -510,4 +510,7 @@
   <data name="Species_Virushi" xml:space="preserve">
     <value>Virushi</value>
   </data>
+  <data name="Species_Human_Zhodani" xml:space="preserve">
+    <value>Homme (Zhodani)</value>
+  </data>
 </root>

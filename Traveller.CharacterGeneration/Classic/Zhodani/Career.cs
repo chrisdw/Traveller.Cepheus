@@ -98,7 +98,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                         RankNumber = 1;
                         CommsionSkill();
                         TermSkills += 1;
-                        Owner.Journal.Add(string.Format("Commissioned as {0}", Ranks[RankNumber]));
+                        Owner.Journal.Add(string.Format(Resources.Msg_Commissioned, Ranks[RankNumber]));
                         return true;
                     }
                     else
@@ -175,7 +175,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                     RankNumber++;
                     RankSkill();
                     TermSkills++;
-                    Owner.Journal.Add(string.Format("Promoted to {0}", Ranks[RankNumber]));
+                    Owner.Journal.Add(string.Format(Resources.Msg_Promoted, Ranks[RankNumber]));
                 }
             }
             return promote;
@@ -232,7 +232,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             base.EndTerm();
             if (!trained)
             {
-                Owner.Journal.Add("PSI reduced by 1 at end of term as not trained.");
+                Owner.Journal.Add(Resources.Msg_PsiReduced);
                 Owner.Profile["PSI"].Value--;
             }
         }
@@ -287,15 +287,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             if (firstRound > 0)
             {
                 Owner.Profile["PSI"].Value++;
-                Owner.Journal.Add("PSI Raised by one due to success in Psionic games");
+                Owner.Journal.Add(Resources.Msg_PsiRaised);
             }
             // 2nd round
             if (dice.roll(2) - firstRound < 12)
             {
                 Owner.Profile["PSI"].Value += 2;
-                Owner.Journal.Add("PSI Raised by two due to winning the Psionic games");
+                Owner.Journal.Add(Resources.Msg_PsiRaised2);
                 Owner.Profile.Soc.Value = 11;
-                Owner.Journal.Add("Enobled due to winning the Psionic games");
+                Owner.Journal.Add(Resources.Msg_Enobled);
             }
         }
 

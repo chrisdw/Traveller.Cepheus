@@ -1483,6 +1483,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Human (Zhodani).
+        /// </summary>
+        internal static string Species_Human_Zhodani {
+            get {
+                return ResourceManager.GetString("Species_Human_Zhodani", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vargr.
         /// </summary>
         internal static string Species_Vargr {

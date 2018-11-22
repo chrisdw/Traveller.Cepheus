@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
 {
     public class Merchant : Career
     {
         public Merchant()
         {
-            Name = "Merchant";
+            Name = Resources.Career_Merchant;
             RankNumber = 0;
             TermSkills = 2;
 
@@ -92,13 +88,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             Cash[5] = 20000;
             Cash[6] = 30000;
 
-            Ranks[0] = "Deck Hand";
-            Ranks[1] = "4th Officer";
-            Ranks[2] = "3rd Officer";
-            Ranks[3] = "2nd Officer";
-            Ranks[4] = "1st Officer";
-            Ranks[5] = "Captain";
-            Ranks[6] = "Senior Captain";
+            Ranks[0] = Resources.Rank_DeckHand;
+            Ranks[1] = Resources.Rank_4thOfficer;
+            Ranks[2] = Resources.Rank_3rdOfficer;
+            Ranks[3] = Resources.Rank_2ndOfficer;
+            Ranks[4] = Resources.Rank_1stOfficer;
+            Ranks[5] = Resources.Rank_Captain;
+            Ranks[6] = Resources.Rank_SeniorCaptain;
         }
 
         protected override void CommsionSkill()
