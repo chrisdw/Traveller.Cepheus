@@ -98,9 +98,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     var select = await DisplayActionSheet(Properties.Resources.Prompt_SelectLanguage, Properties.Resources.Button_Cancel, null, list);
                     if (select != null && select != Properties.Resources.Button_Cancel)
                     {
-                        var character = BindingContext as Character;
                         var language = langs[select];
-                        character.Name = language.GenerateWord() + language.GenerateWord();
+                        Name.Text = language.GenerateWord() + " " + language.GenerateWord();
                     }
                 });
             }

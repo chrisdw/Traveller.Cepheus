@@ -10,7 +10,7 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Name" WidthRequest="160"/>
-                <Entry Text="{Binding Name, Mode=TwoWay}" WidthRequest="200"/>
+                <Entry x:Name="Name" Text="{Binding Name, Mode=TwoWay}" WidthRequest="200"/>
                 <Button x:Name="GenerateName" Text="Generate Name" Clicked="Button_Clicked" />
             </StackLayout>
             <StackLayout Orientation="Horizontal">
