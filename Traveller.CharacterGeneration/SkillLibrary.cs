@@ -173,6 +173,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         // Dolphin Specific Skills
         public static Skill HitsU = new Skill("HitsU", Skill.SkillClass.AttributeChange, 1);
         public static Skill Herding = new Skill(Properties.Resources.Skill_Herding, Skill.SkillClass.None, 1);
+        public static Skill Verbalization = new Skill(Properties.Resources.Skill_Verbalization, Skill.SkillClass.None, 1);
         public static Skill WaldoOps = new Skill(Properties.Resources.Skill_WaldoOps, Skill.SkillClass.None, 1);
 
         // Aslan specific skills

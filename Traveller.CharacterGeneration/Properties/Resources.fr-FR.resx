@@ -447,4 +447,43 @@
   <data name="Skill_WaldoOps" xml:space="preserve">
     <value>Waldo Ops</value>
   </data>
+  <data name="Skill_Verbalization" xml:space="preserve">
+    <value>Verbalisation</value>
+  </data>
+  <data name="Sex_Female" xml:space="preserve">
+    <value>Féminin</value>
+  </data>
+  <data name="Sex_Male" xml:space="preserve">
+    <value>Masculin</value>
+  </data>
+  <data name="Species_Aslan" xml:space="preserve">
+    <value>Aslan</value>
+  </data>
+  <data name="Species_Human_Darrian" xml:space="preserve">
+    <value>Homme (Darrian)</value>
+  </data>
+  <data name="Species_Human_Solomani" xml:space="preserve">
+    <value>Homme (Solomani)</value>
+  </data>
+  <data name="Career_Army" xml:space="preserve">
+    <value>Armée de terre</value>
+  </data>
+  <data name="Career_Marines" xml:space="preserve">
+    <value>Marines</value>
+  </data>
+  <data name="Career_Merchants" xml:space="preserve">
+    <value>Marchands</value>
+  </data>
+  <data name="Career_Navy" xml:space="preserve">
+    <value>Bleu foncé</value>
+  </data>
+  <data name="Career_Other" xml:space="preserve">
+    <value>Autre</value>
+  </data>
+  <data name="Career_Scouts" xml:space="preserve">
+    <value>Scouts</value>
+  </data>
+  <data name="Species_Human_Dynchia" xml:space="preserve">
+    <value>Homme (Dynchia)</value>
+  </data>
 </root>

@@ -73,7 +73,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic
         {
             if (Owner.Profile.Int.Value >= 9)
             {
-                SkillTables[0].Skills[0].Name = "Verbalization";
+                SkillTables[0].Skills[0].Name = SkillLibrary.Verbalization.Name;
                 SkillTables[0].Skills[0].Class = Skill.SkillClass.Civilian;
             }
             else

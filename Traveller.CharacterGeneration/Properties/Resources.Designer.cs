@@ -214,6 +214,60 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Army.
+        /// </summary>
+        internal static string Career_Army {
+            get {
+                return ResourceManager.GetString("Career_Army", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marines.
+        /// </summary>
+        internal static string Career_Marines {
+            get {
+                return ResourceManager.GetString("Career_Marines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merchants.
+        /// </summary>
+        internal static string Career_Merchants {
+            get {
+                return ResourceManager.GetString("Career_Merchants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navy.
+        /// </summary>
+        internal static string Career_Navy {
+            get {
+                return ResourceManager.GetString("Career_Navy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Other.
+        /// </summary>
+        internal static string Career_Other {
+            get {
+                return ResourceManager.GetString("Career_Other", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scouts.
+        /// </summary>
+        internal static string Career_Scouts {
+            get {
+                return ResourceManager.GetString("Career_Scouts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} reduced by {1} due to aging.
         /// </summary>
         internal static string Msg_Aging {
@@ -336,6 +390,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         internal static string Msg_RenlistRefused {
             get {
                 return ResourceManager.GetString("Msg_RenlistRefused", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Female.
+        /// </summary>
+        internal static string Sex_Female {
+            get {
+                return ResourceManager.GetString("Sex_Female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Male.
+        /// </summary>
+        internal static string Sex_Male {
+            get {
+                return ResourceManager.GetString("Sex_Male", resourceCulture);
             }
         }
         
@@ -1285,6 +1357,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Verbalization.
+        /// </summary>
+        internal static string Skill_Verbalization {
+            get {
+                return ResourceManager.GetString("Skill_Verbalization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Waldo Ops.
         /// </summary>
         internal static string Skill_WaldoOps {
@@ -1317,6 +1398,42 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         internal static string Skill_ZeroGCombat {
             get {
                 return ResourceManager.GetString("Skill_ZeroGCombat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aslan.
+        /// </summary>
+        internal static string Species_Aslan {
+            get {
+                return ResourceManager.GetString("Species_Aslan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Human (Darrian).
+        /// </summary>
+        internal static string Species_Human_Darrian {
+            get {
+                return ResourceManager.GetString("Species_Human_Darrian", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Human (Dynchia).
+        /// </summary>
+        internal static string Species_Human_Dynchia {
+            get {
+                return ResourceManager.GetString("Species_Human_Dynchia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Human (Solomani).
+        /// </summary>
+        internal static string Species_Human_Solomani {
+            get {
+                return ResourceManager.GetString("Species_Human_Solomani", resourceCulture);
             }
         }
         

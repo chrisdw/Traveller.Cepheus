@@ -25,12 +25,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    careers.Add("Navy", CharacterGeneration.Career.CareerType.Darrian_Navy);
-                    careers.Add("Special Arm", CharacterGeneration.Career.CareerType.Darrian_SpecialArm);
-                    careers.Add("Army", CharacterGeneration.Career.CareerType.Darrian_Army);
-                    careers.Add("Merchants", CharacterGeneration.Career.CareerType.Darrian_Merchant);
-                    careers.Add("Noble", CharacterGeneration.Career.CareerType.Darrian_Noble);
-                    careers.Add("Academic", CharacterGeneration.Career.CareerType.Darrian_Academic);
+                    careers.Add(Resources.Career_Navy, CharacterGeneration.Career.CareerType.Darrian_Navy);
+                    careers.Add(Resources.Career_SpecialArm, CharacterGeneration.Career.CareerType.Darrian_SpecialArm);
+                    careers.Add(Resources.Career_Army, CharacterGeneration.Career.CareerType.Darrian_Army);
+                    careers.Add(Resources.Career_Merchants, CharacterGeneration.Career.CareerType.Darrian_Merchant);
+                    careers.Add(Resources.Career_Noble, CharacterGeneration.Career.CareerType.Darrian_Noble);
+                    careers.Add(Resources.Career_Academic, CharacterGeneration.Career.CareerType.Darrian_Academic);
                     break;
             }
             return careers;
@@ -52,11 +52,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
                     }
                     if (!offered.ContainsKey(skill.Name))
                     {
-                        if (skill.SexApplicabilty == Skill.SkillSex.Female && character.Sex.Equals("Male"))
+                        if (skill.SexApplicabilty == Skill.SkillSex.Female && character.Sex.Equals(Properties.Resources.Sex_Male))
                         {
                             check = false;
                         }
-                        else if (skill.SexApplicabilty == Skill.SkillSex.Male && character.Sex.Equals("Female"))
+                        else if (skill.SexApplicabilty == Skill.SkillSex.Male && character.Sex.Equals(Properties.Resources.Sex_Female))
                         {
                             check = false;
                         }
@@ -121,9 +121,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
             switch (generationStyle)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    list.Add("Human (Darrian)", Character.Species.Human_Darrian);
-                    list.Add("Human (Solomani)", Character.Species.Human_Solomani);
-                    list.Add("Aslan", Character.Species.Aslan);
+                    list.Add(Properties.Resources.Species_Human_Darrian, Character.Species.Human_Darrian);
+                    list.Add(Properties.Resources.Species_Human_Solomani, Character.Species.Human_Solomani);
+                    list.Add(Properties.Resources.Species_Aslan, Character.Species.Aslan);
                     break;
             }
 

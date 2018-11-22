@@ -7,11 +7,11 @@
             RankNumber = 0;
             TermSkills = 1;
             terms = dice.roll(2);
-            Name = "Civilian";
+            Name = Resources.Career_Civilian;
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Basic Skills";
+            table.Name = Resources.Table_BasicSkills;
             var skills = table.Skills;
             skills[0] = SkillLibrary.HitsU;
             skills[1] = SkillLibrary.HitsU;
@@ -22,7 +22,7 @@
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Civilian Skills";
+            table.Name = Resources.Table_CivilianSkills;
             skills = table.Skills;
             skills[0] = SkillLibrary.Herding;
             skills[1] = SkillLibrary.Herding;
@@ -46,7 +46,7 @@
             Material.Add(BenefitLibrary.Verbalization);
             Material.Add(BenefitLibrary.WaldoSet);
 
-            Ranks[0] = "Dolphin";
+            Ranks[0] = Resources.Rank_Dolphin;
         }
 
         public override void CheckTableAvailablity()
@@ -54,12 +54,12 @@
             base.CheckTableAvailablity();
             if (Owner.Profile.Int.Value >= 9)
             {
-                SkillTables[1].Skills[0].Name = "Liason";
+                SkillTables[1].Skills[0].Name = SkillLibrary.Liason.Name;
                 SkillTables[1].Skills[0].Class = Skill.SkillClass.Civilian;
             }
             else
             {
-                SkillTables[1].Skills[0].Name = "Herding";
+                SkillTables[1].Skills[0].Name = SkillLibrary.Herding.Name;
                 SkillTables[1].Skills[0].Class = Skill.SkillClass.Civilian;
             }
         }

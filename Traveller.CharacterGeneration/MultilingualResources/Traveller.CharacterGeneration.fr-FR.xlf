@@ -586,6 +586,58 @@
           <source>Waldo Ops</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Waldo Ops</target>
         </trans-unit>
+        <trans-unit id="Skill_Verbalization" translate="yes" xml:space="preserve">
+          <source>Verbalization</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verbalisation</target>
+        </trans-unit>
+        <trans-unit id="Sex_Female" translate="yes" xml:space="preserve">
+          <source>Female</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Féminin</target>
+        </trans-unit>
+        <trans-unit id="Sex_Male" translate="yes" xml:space="preserve">
+          <source>Male</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Masculin</target>
+        </trans-unit>
+        <trans-unit id="Species_Aslan" translate="yes" xml:space="preserve">
+          <source>Aslan</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aslan</target>
+        </trans-unit>
+        <trans-unit id="Species_Human_Darrian" translate="yes" xml:space="preserve">
+          <source>Human (Darrian)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Homme (Darrian)</target>
+        </trans-unit>
+        <trans-unit id="Species_Human_Solomani" translate="yes" xml:space="preserve">
+          <source>Human (Solomani)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Homme (Solomani)</target>
+        </trans-unit>
+        <trans-unit id="Career_Army" translate="yes" xml:space="preserve">
+          <source>Army</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Armée de terre</target>
+        </trans-unit>
+        <trans-unit id="Career_Marines" translate="yes" xml:space="preserve">
+          <source>Marines</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marines</target>
+        </trans-unit>
+        <trans-unit id="Career_Merchants" translate="yes" xml:space="preserve">
+          <source>Merchants</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Marchands</target>
+        </trans-unit>
+        <trans-unit id="Career_Navy" translate="yes" xml:space="preserve">
+          <source>Navy</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bleu foncé</target>
+        </trans-unit>
+        <trans-unit id="Career_Other" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <target state="needs-review-translation" state-qualifier="exact-match">Autre</target>
+        </trans-unit>
+        <trans-unit id="Career_Scouts" translate="yes" xml:space="preserve">
+          <source>Scouts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scouts</target>
+        </trans-unit>
+        <trans-unit id="Species_Human_Dynchia" translate="yes" xml:space="preserve">
+          <source>Human (Dynchia)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Homme (Dynchia)</target>
+        </trans-unit>
       </group>
     </body>
   </file>
@@ -742,6 +794,39 @@
         <trans-unit id="Rank_Spacer" translate="yes" xml:space="preserve">
           <source>Spacer</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Entretoise</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en-GB" target-language="fr-FR" original="TRAVELLER.CHARACTERGENERATION/CLASSIC/DOLPHIN/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.CHARACTERGENERATION/CLASSIC/DOLPHIN/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Career_Civilian" translate="yes" xml:space="preserve">
+          <source>Civilian</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Civil</target>
+        </trans-unit>
+        <trans-unit id="Career_Military" translate="yes" xml:space="preserve">
+          <source>Military</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Militaire</target>
+        </trans-unit>
+        <trans-unit id="Table_BasicSkills" translate="yes" xml:space="preserve">
+          <source>Basic Skills</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Compétences de base</target>
+        </trans-unit>
+        <trans-unit id="Table_CivilianSkills" translate="yes" xml:space="preserve">
+          <source>Civilian Skills</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Compétences civiles</target>
+        </trans-unit>
+        <trans-unit id="Rank_Dolphin" translate="yes" xml:space="preserve">
+          <source>Dolphin</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dauphin</target>
+        </trans-unit>
+        <trans-unit id="Table_MilitarySkills" translate="yes" xml:space="preserve">
+          <source>Military Skills</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ses compétences militaires</target>
         </trans-unit>
       </group>
     </body>

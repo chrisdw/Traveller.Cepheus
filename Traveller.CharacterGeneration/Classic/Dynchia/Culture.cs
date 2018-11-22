@@ -24,12 +24,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Dynchia
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    careers.Add("Army", CharacterGeneration.Career.CareerType.Imperial_Army);
-                    careers.Add("Marines", CharacterGeneration.Career.CareerType.Imperial_Marines);
-                    careers.Add("Navy", CharacterGeneration.Career.CareerType.Imperial_Navy);
-                    careers.Add("Merchants", CharacterGeneration.Career.CareerType.Imperial_Merchants);
-                    careers.Add("Scouts", CharacterGeneration.Career.CareerType.Imperial_Scouts);
-                    careers.Add("Other", CharacterGeneration.Career.CareerType.Imperial_Other);
+                    careers.Add(Properties.Resources.Career_Army, CharacterGeneration.Career.CareerType.Imperial_Army);
+                    careers.Add(Properties.Resources.Career_Marines, CharacterGeneration.Career.CareerType.Imperial_Marines);
+                    careers.Add(Properties.Resources.Career_Navy, CharacterGeneration.Career.CareerType.Imperial_Navy);
+                    careers.Add(Properties.Resources.Career_Merchants, CharacterGeneration.Career.CareerType.Imperial_Merchants);
+                    careers.Add(Properties.Resources.Career_Scouts, CharacterGeneration.Career.CareerType.Imperial_Scouts);
+                    careers.Add(Properties.Resources.Career_Other, CharacterGeneration.Career.CareerType.Imperial_Other);
                     break;
             }
             return careers;
@@ -91,8 +91,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Dynchia
             switch (generationStyle)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    list.Add("Human (Dynchia)", Character.Species.Human_Dynchia);
-                    list.Add("Human (Solomani)", Character.Species.Human_Solomani);
+                    list.Add(Properties.Resources.Species_Human_Dynchia, Character.Species.Human_Dynchia);
+                    list.Add(Properties.Resources.Species_Human_Solomani, Character.Species.Human_Solomani);
                     break;
             }
 

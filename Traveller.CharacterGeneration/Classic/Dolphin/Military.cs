@@ -22,7 +22,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Dolphin
             RankNumber = 0;
             TermSkills = 1;
             terms = dice.roll(2) + 4;
-            Name = "Military";
+            Name = Resources.Career_Military;
 
             if (solomani)
             {
@@ -34,7 +34,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Dolphin
             }
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Basic Skills";
+            table.Name = Resources.Table_BasicSkills;
             var skills = table.Skills;
             skills[0] = SkillLibrary.HitsU;
             skills[1] = SkillLibrary.HitsU;
@@ -45,7 +45,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Dolphin
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Military Skills";
+            table.Name = Resources.Table_MilitarySkills;
             skills = table.Skills;
             skills[0] = SkillLibrary.Brawling;
             skills[1] = SkillLibrary.Brawling;
@@ -69,7 +69,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Dolphin
             Material.Add(BenefitLibrary.Verbalization);
             Material.Add(BenefitLibrary.WaldoSet);
 
-            Ranks[0] = "Dolphin";
+            Ranks[0] = Resources.Rank_Dolphin;
         }
 
         public override void CheckTableAvailablity()
