@@ -99,9 +99,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
+                            // Sex is by die roll
+                            if (dice.roll(2) <= 5)
+                            {
+                                Sex = Properties.Resources.Sex_Male;
+                            }
+                            else
+                            {
+                                Sex = Properties.Resources.Sex_Female;
+                            }
                             // Imperial Aslan get some automatic skills
                             AddSkill(SkillLibrary.Tolerance);
-                            if (Sex.Equals("Male"))
+                            if (Sex.Equals(Properties.Resources.Sex_Male))
                             {
                                 AddSkill(SkillLibrary.Independance);
                             }
@@ -159,6 +168,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             Profile.Str.Value = dice.roll(2) + 1;
                             Profile.Dex.Value = dice.roll(2) - 1;
                             Profile.End.Value = dice.roll(2) + 1;
+                            // Sex is by die roll
+                            if (dice.roll(2) <= 5)
+                            {
+                                Sex = Properties.Resources.Sex_Male;
+                            }
+                            else
+                            {
+                                Sex = Properties.Resources.Sex_Female;
+                            }
                             break;
                         case Species.Human_Solomani:
                             Profile = new UPP();
@@ -242,6 +260,35 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     {
                         Profile["PSI"].Value = Profile.Str.Value + Profile.Dex.Value + Profile.End.Value + Profile.Int.Value;
                     }
+                    break;
+                case Constants.CultureType.Aslan:
+                    switch (CharacterSpecies)
+                    {
+                        case Species.Aslan:
+                            Profile = new AslanUPP();
+                            Profile.Str.Value = dice.roll(2) + 1;
+                            Profile.Dex.Value = dice.roll(2) - 1;
+                            Profile.End.Value = dice.roll(2) + 1;
+                            // Sex is by die roll
+                            if (dice.roll(2) <= 5)
+                            {
+                                Sex = Properties.Resources.Sex_Male;
+                            }
+                            else
+                            {
+                                Sex = Properties.Resources.Sex_Female;
+                            }
+                            break;
+                        case Species.Human_Solomani:
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            break;
+                    }
+                    Profile.Int.Value = dice.roll(2);
+                    Profile.Edu.Value = dice.roll(2);
+                    Profile.Soc.Value = dice.roll(2);
                     break;
             }
         }

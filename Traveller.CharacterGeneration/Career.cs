@@ -56,7 +56,20 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Darrian_Army,
             Darrian_Merchant,
             Darrian_Noble,
-            Darrian_Academic
+            Darrian_Academic,
+            Aslan_Space,
+            Aslan_Space_Officer,
+            Aslan_Military,
+            Aslan_Military_Officer,
+            Aslan_Wanderer,
+            Aslan_Management,
+            Aslan_Outcast,
+            Aslan_Pirate,
+            Aslan_Scientist,
+            Aslan_Envoy,
+            Aslan_Medic,
+            Aslan_Flyer,
+            Aslan_Belter
         }
 
         [Flags]
