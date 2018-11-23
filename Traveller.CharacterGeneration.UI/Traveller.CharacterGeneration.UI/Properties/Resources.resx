@@ -180,6 +180,9 @@
   <data name="Prompt_FileExists" xml:space="preserve">
     <value>File already exists. Overwrite?</value>
   </data>
+  <data name="Prompt_PsionicGames" xml:space="preserve">
+    <value>Do you want to attend the psionic games?</value>
+  </data>
   <data name="Prompt_Renlist" xml:space="preserve">
     <value>You are now {0}. Do you want to re-enlist?</value>
   </data>

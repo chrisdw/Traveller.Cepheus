@@ -274,7 +274,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
             Device.BeginInvokeOnMainThread(async () => { 
                 var result = await DisplayAlert(Properties.Resources.Title_App,
-                    "Do you want to attend the psionic games",
+                    Properties.Resources.Prompt_PsionicGames,
                     Properties.Resources.Button_Yes,
                     Properties.Resources.Button_No);
                 if (result)

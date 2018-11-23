@@ -250,6 +250,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Do you want to attend the psionic games?.
+        /// </summary>
+        internal static string Prompt_PsionicGames {
+            get {
+                return ResourceManager.GetString("Prompt_PsionicGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You are now {0}. Do you want to re-enlist?.
         /// </summary>
         internal static string Prompt_Renlist {

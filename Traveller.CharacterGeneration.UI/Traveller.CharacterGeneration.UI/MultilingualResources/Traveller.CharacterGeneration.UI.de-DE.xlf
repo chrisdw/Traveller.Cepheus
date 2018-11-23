@@ -134,6 +134,10 @@
           <source>Select a language</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wählen Sie eine Sprache</target>
         </trans-unit>
+        <trans-unit id="Prompt_PsionicGames" translate="yes" xml:space="preserve">
+          <source>Do you want to attend the psionic games?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Möchten Sie die PSI-Spielen teilnehmen?</target>
+        </trans-unit>
       </group>
     </body>
   </file>
