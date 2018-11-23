@@ -272,21 +272,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         {
             Classic.Zhodani.Career career = sender as Classic.Zhodani.Career;
 
-            // No idea how to get this to do what I want
-            //var task = Task.Run(async () =>
-            //{
-            //    var result = await DisplayAlert(Properties.Resources.Title_App,
-            //        "Do you want to attend the psionic games",
-            //        Properties.Resources.Button_Yes,
-            //        Properties.Resources.Button_No);
-            //    if (result)
-            //    {
-            //        career.PsionicGames();
-            //    }
-            //});
-            //Device.BeginInvokeOnMainThread(() => { 
-            //    task.Wait();
-            //});
+            Device.BeginInvokeOnMainThread(async () => { 
+                var result = await DisplayAlert(Properties.Resources.Title_App,
+                    "Do you want to attend the psionic games",
+                    Properties.Resources.Button_Yes,
+                    Properties.Resources.Button_No);
+                if (result)
+                {
+                    career.PsionicGames();
+                }
+            });
+
         }
 
         private async void DoPsionicTraining(object sender, EventArgs e)

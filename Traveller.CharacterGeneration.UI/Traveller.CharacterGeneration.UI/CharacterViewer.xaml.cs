@@ -91,17 +91,56 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             // Get the list of langauages
             var langs = new Languages();
             var list = langs.Keys.ToArray();
+
             if (list.Length > 0)
             {
-                Device.BeginInvokeOnMainThread(async () =>
+                var character = BindingContext as Character;
+                if (character.Culture == Constants.CultureType.Zhodani && langs.Keys.Contains("zhodani"))
                 {
-                    var select = await DisplayActionSheet(Properties.Resources.Prompt_SelectLanguage, Properties.Resources.Button_Cancel, null, list);
-                    if (select != null && select != Properties.Resources.Button_Cancel)
+                    var language = langs["zhodani"];
+                    if (character.Profile.Soc.Value < 10)
                     {
-                        var language = langs[select];
                         Name.Text = language.GenerateWord() + " " + language.GenerateWord();
                     }
-                });
+                    else
+                    {
+                        var suffix = string.Empty;
+                        switch (character.Profile.Soc.Value)
+                        {
+                            case 10:
+                                suffix = "iepr";
+                                break;
+                            case 11:
+                                suffix = "atl";
+                                break;
+                            case 12:
+                                suffix = "stebr";
+                                break;
+                            case 13:
+                                suffix = "tlas";
+                                break;
+                            case 14:
+                                suffix = "tlasche'";
+                                break;
+                            case 15:
+                                suffix = "iashav";
+                                break;
+                        }
+                        Name.Text = language.GenerateWord() + suffix;
+                    }
+                }
+                else {
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        var select = await DisplayActionSheet(Properties.Resources.Prompt_SelectLanguage, Properties.Resources.Button_Cancel, null, list);
+                        if (select != null && select != Properties.Resources.Button_Cancel)
+                        {
+                            var language = langs[select];
+
+                            Name.Text = language.GenerateWord() + " " + language.GenerateWord();
+                        }
+                    });
+                }
             }
         }
     }
