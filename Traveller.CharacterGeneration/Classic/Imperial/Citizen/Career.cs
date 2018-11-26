@@ -20,6 +20,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         protected int survival = 6;
         protected string survival2attr = "INT";
         protected int survival2val = 8;
+        protected string survival3attr = string.Empty;
+        protected int survival3val = 8;
         protected int position = 9;
         protected string position1attr = "STR";
         protected int position1val = 10;
@@ -97,23 +99,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
             var target = enlistment;
             target += EnlistFactor();
 
-            if (Owner.Profile[enlistment1attr].Value <= enlistment1val)
+            if (!string.IsNullOrEmpty(enlistment2attr) && Owner.Profile[enlistment1attr].Value <= enlistment1val)
             {
                 target--;
             }
-            if (!string.IsNullOrEmpty(enlistment2attr))
+            if (!string.IsNullOrEmpty(enlistment2attr) && Owner.Profile[enlistment2attr].Value <= enlistment2val)
             {
-                if (Owner.Profile[enlistment2attr].Value <= enlistment2val)
-                {
-                    target -= 2;
-                }
+                target -= 2;
             }
-            if (!string.IsNullOrEmpty(enlistment3attr))
+            if (!string.IsNullOrEmpty(enlistment3attr) && Owner.Profile[enlistment3attr].Value <= enlistment3val)
             {
-                if (Owner.Profile[enlistment3attr].Value <= enlistment3val)
-                {
-                    target -= 3;
-                }
+                target -= 3;
             }
             var enlist = BaseEnlist(target);
 
@@ -168,9 +164,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
             var target = survival;
 
-            if (Owner.Profile[survival2attr].Value >= survival2val)
+            if (!string.IsNullOrEmpty(survival2attr) && Owner.Profile[survival2attr].Value >= survival2val)
             {
                 target -= 2;
+            }
+            if (!string.IsNullOrEmpty(survival3attr) && Owner.Profile[survival3attr].Value >= survival3val)
+            {
+                target -= 3;
             }
             if (dice.roll(2) >= target)
             {

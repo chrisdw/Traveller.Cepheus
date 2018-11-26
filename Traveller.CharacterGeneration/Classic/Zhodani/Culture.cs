@@ -224,5 +224,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             var e = new CharacterGeneration.Career.SkillOfferedEventArgs() { OfferedSkill = skill, Owner = character };
             SkillOffered?.Invoke(this, e);
         }
+
+        public int TableModifier(Character character, SkillTable table)
+        {
+            return 0;
+        }
     }
 }

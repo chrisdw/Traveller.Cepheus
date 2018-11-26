@@ -97,5 +97,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
 
             return list;
         }
+
+        public int TableModifier(Character character, SkillTable table)
+        {
+            return 0;
+        }
     }
 }

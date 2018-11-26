@@ -2,7 +2,11 @@
 {
     public abstract class BasicCareer : Career
     {
-        public SkillTable[] SkillTables { get; } = new SkillTable[4];
+        // Allow for careers with different number of skill tables
+        // to redefine this if they want to
+        protected SkillTable[] skillTables = new SkillTable[4];
+
+        public SkillTable[] SkillTables { get { return skillTables; } }
         public string[] Ranks { get; } = new string[7];
 
         public int TermSkills { get; set; }

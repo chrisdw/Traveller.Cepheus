@@ -262,5 +262,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             // Should never reach here
             return new BasicArmy() { Culture = this };
         }
+
+        public int TableModifier(Character character, SkillTable table)
+        {
+            return 0;
+        }
     }
 }

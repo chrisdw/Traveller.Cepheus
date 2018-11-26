@@ -206,7 +206,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     Cultures.Add("Imperial");
                     Cultures.Add("Zhodani");
                     //Cultures.Add("Solomani");
-                    //Cultures.Add("Aslan");
+                    Cultures.Add("Aslan");
                     Cultures.Add("Vargr");
                     Cultures.Add("Darrian");
                     Cultures.Add("Sword Worlds");
@@ -239,6 +239,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     selectedCulture = new Classic.Zhodani.Culture();
                     // Psionic training and the like are handled at the "Culture" level
                     ((Classic.Zhodani.Culture)selectedCulture).SkillOffered += SkillOffered;
+                    break;
+                case "Aslan":
+                    selectedCulture = new Classic.Aslan.Culture();
                     break;
             }
             if (selectedCulture != null)
@@ -372,7 +375,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         count++;
                         var die = new Dice(6);
-                        var roll = die.roll() - 1;
+                        var roll = die.roll() - 1 + selectedCulture.TableModifier(character, table);
                         roll = roll.Clamp(0, 5);
                         // Because culture rules can modify the skill "on the fly" we work with a clone
                         offeredSkill = table.Skills[roll].Clone();

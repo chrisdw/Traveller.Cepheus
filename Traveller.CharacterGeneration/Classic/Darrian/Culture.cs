@@ -129,5 +129,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Darrian
 
             return list;
         }
+
+        public int TableModifier(Character character, SkillTable table)
+        {
+            return 0;
+        }
     }
 }

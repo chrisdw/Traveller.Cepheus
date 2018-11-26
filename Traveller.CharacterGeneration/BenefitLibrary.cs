@@ -19,7 +19,9 @@
         public static Benefit Weapon = new Benefit(Properties.Resources.Benefit_Weapon, 1, Benefit.BenefitType.Weapon);
 
         // Other benefits
+        public static Benefit Land = new Benefit("Land", 1, Benefit.BenefitType.Material);
         public static Benefit Legion = new Benefit(Properties.Resources.Benefit_Legion, 1, Benefit.BenefitType.Material);
+        public static Benefit Independance = new Benefit(Properties.Resources.Skill_Independance, 1, Benefit.BenefitType.Skill);
         public static Benefit Instruments = new Benefit(Properties.Resources.Benefit_Instruments, 1, Benefit.BenefitType.Material);
         public static Benefit Travellers = new Benefit(Properties.Resources.Benefit_Travellers, 1, Benefit.BenefitType.Material);
         public static Benefit Nothing = new Benefit(Properties.Resources.Benefit_Nothing, 1, Benefit.BenefitType.Material);

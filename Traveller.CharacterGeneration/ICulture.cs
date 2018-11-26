@@ -16,5 +16,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         bool BenefitAllowed(Character character, Benefit benefit);
 
         BasicCareer GetBasicCareer(Career.CareerType career);
+
+        int TableModifier(Character character, SkillTable table);
     }
 }

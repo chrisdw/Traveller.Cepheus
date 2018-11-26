@@ -122,7 +122,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             return 3;
         }
 
-        public void MusterOut()
+        public virtual void MusterOut()
         {
             if (Retired)
             {
@@ -151,6 +151,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             {
                 roll++;
             }
+            if (Owner.Culture == Constants.CultureType.Aslan)
+            {
+                if (Owner.Skills.ContainsKey(SkillLibrary.Independance.Name) && Owner.Skills[SkillLibrary.Independance.Name].Level >= 3)
+                {
+                    roll++;
+                }
+            }
             roll = roll.Clamp(1, Cash.Length);
             Owner.AddBenefit(new Benefit()
             {
@@ -168,6 +175,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             if (Owner.Culture == Constants.CultureType.Darrian)
             {
                 if (RankNumber >= 5 || Owner.Profile.Soc.Value >= 11)
+                {
+                    roll++;
+                }
+            }
+            else if (Owner.Culture == Constants.CultureType.Aslan)
+            {
+                if (Owner.Profile.Soc.Value >= 9)
+                {
+                    roll++;
+                }
+                if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
                 {
                     roll++;
                 }

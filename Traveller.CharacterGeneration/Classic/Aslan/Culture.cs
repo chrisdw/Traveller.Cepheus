@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.DownesWard.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,6 +10,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
         public Constants.CultureType Id => Constants.CultureType.Aslan;
 
         public bool MultipleCareers => false;
+
+        public int ROPScore { get; set; }
+        private Dice dice = new Dice(6);
 
         static Dictionary<string, Skill> offered = new Dictionary<string, Skill>();
 
@@ -24,9 +28,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             {
                 case Constants.GenerationStyle.Classic_Traveller:
                     careers.Add("Space", CharacterGeneration.Career.CareerType.Aslan_Space);
-                    careers.Add("Space Officer", CharacterGeneration.Career.CareerType.Aslan_Space_Officer);
+                    if (character.Profile.Soc.Value > 9)
+                    {
+                        careers.Add("Space Officer", CharacterGeneration.Career.CareerType.Aslan_Space_Officer);
+                    }
                     careers.Add("Military", CharacterGeneration.Career.CareerType.Aslan_Military);
-                    careers.Add("Military Officer", CharacterGeneration.Career.CareerType.Aslan_Military_Officer);
+                    if (character.Profile.Soc.Value > 9)
+                    {
+                        careers.Add("Military Officer", CharacterGeneration.Career.CareerType.Aslan_Military_Officer);
+                    }
                     careers.Add("Pirate", CharacterGeneration.Career.CareerType.Aslan_Pirate);
                     if (character.Sex.Equals(Properties.Resources.Sex_Male))
                     {
@@ -89,7 +99,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
         public BasicCareer GetBasicCareer(CharacterGeneration.Career.CareerType career)
         {
-            throw new NotImplementedException();
+            switch (career)
+            {
+                case CharacterGeneration.Career.CareerType.Aslan_Space:
+                    return new Space { Culture = this, Officer = false };
+                case CharacterGeneration.Career.CareerType.Aslan_Space_Officer:
+                    return new Space { Culture = this, Officer = true };
+                default:
+                    return new Space { Culture = this, Officer = false };
+            }
         }
 
         public Dictionary<string, Character.Species> Species(Constants.GenerationStyle generationStyle)
@@ -104,6 +122,45 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             }
 
             return list;
+        }
+
+        public void CalculateROP(Character character)
+        {
+            var roll = dice.roll(2);
+            var score = 0;
+
+            if (character.Sex.Equals(Properties.Resources.Sex_Male))
+            {
+                score += character.Profile.Str.Value - roll;
+                score += character.Profile.Dex.Value - roll;
+                score += character.Profile.End.Value - roll;
+                score += character.Profile.Int.Value - roll;
+                score += character.Profile.Edu.Value - roll;
+                score += character.Profile.Soc.Value - roll;
+            }
+            else if (character.Sex.Equals(Properties.Resources.Sex_Female))
+            {
+                score += (character.Profile.Int.Value - roll) * 2;
+                score += (character.Profile.Edu.Value - roll) * 2;
+                score += (character.Profile.Soc.Value - roll) * 2;
+            }
+            ROPScore = score;
+        }
+
+        public int TableModifier(Character character, SkillTable table)
+        {
+            if (table.Name.Equals("Personal Development") || table.Name.Equals("Service Skills"))
+            {
+                if (character.Sex.Equals(Properties.Resources.Sex_Male))
+                {
+                    return -1;
+                }
+                else
+                {
+                    return +1;
+                }
+            }
+            return 0;
         }
     }
 }

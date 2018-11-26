@@ -94,5 +94,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.SwordWorlds
 
             return list;
         }
+
+        public int TableModifier(Character character, SkillTable table)
+        {
+            return 0;
+        }
     }
 }
