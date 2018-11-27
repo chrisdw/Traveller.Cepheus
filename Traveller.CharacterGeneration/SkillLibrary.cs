@@ -129,6 +129,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
 
         public static Skill Cutlass = new Skill(Properties.Resources.Skill_Cutlass, Skill.SkillClass.None, 1);
         public static Skill Sword = new Skill(Properties.Resources.Skill_Sword, Skill.SkillClass.None, 1);
+        public static Skill Pike = new Skill(Properties.Resources.Skill_Pike, Skill.SkillClass.None, 1);
+        public static Skill Cudgel = new Skill(Properties.Resources.Skill_Cudgel, Skill.SkillClass.None, 1);
 
         public static Skill BladeCombat = new Skill(Properties.Resources.Skill_BladeCombat, Skill.SkillClass.Military, 1)
         {
@@ -141,8 +143,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 Sword,
                 new Skill(Properties.Resources.Skill_Broadsword, Skill.SkillClass.None, 1),
                 new Skill(Properties.Resources.Skill_Halberd, Skill.SkillClass.None, 1),
-                new Skill(Properties.Resources.Skill_Pike, Skill.SkillClass.None, 1),
-                new Skill(Properties.Resources.Skill_Cudgel, Skill.SkillClass.None, 1),
+                Pike,
+                Cudgel,
                 new Skill(Properties.Resources.Skill_Bayonet, Skill.SkillClass.None, 1)
             }
         };

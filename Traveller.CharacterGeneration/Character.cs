@@ -314,7 +314,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             }
             else
             {
-                Benefits.Add(benefit.Name, benefit);
+                Benefits.Add(benefit.Name, benefit.Clone());
             }
         }
 

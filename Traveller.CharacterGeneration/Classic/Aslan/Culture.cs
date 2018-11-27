@@ -1,7 +1,6 @@
 ﻿using org.DownesWard.Utilities;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 {
@@ -9,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
     {
         public Constants.CultureType Id => Constants.CultureType.Aslan;
 
-        public bool MultipleCareers => false;
+        public bool MultipleCareers => true;
 
         public int ROPScore { get; set; }
         private Dice dice = new Dice(6);
@@ -18,6 +17,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
         public bool BenefitAllowed(Character character, Benefit benefit)
         {
+            if (character.Sex.Equals(Properties.Resources.Sex_Female) && 
+                benefit.Name.Equals(BenefitLibrary.Independance.Name))
+            {
+                benefit.Name = BenefitLibrary.Weapon.Name;
+            }
             return true;
         }
 
@@ -37,7 +41,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
                     {
                         careers.Add("Military Officer", CharacterGeneration.Career.CareerType.Aslan_Military_Officer);
                     }
-                    careers.Add("Pirate", CharacterGeneration.Career.CareerType.Aslan_Pirate);
+                    if (character.Careers.Any(c => c.Name.Equals("Outcast")))
+                    {
+                        careers.Add("Pirate", CharacterGeneration.Career.CareerType.Aslan_Pirate);
+                    }
                     if (character.Sex.Equals(Properties.Resources.Sex_Male))
                     {
                         careers.Add("Wanderer", CharacterGeneration.Career.CareerType.Aslan_Wanderer);
@@ -67,9 +74,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
                 offered.Clear();
             }
 
-            if (skill.Name.Equals(SkillLibrary.Brawling.Name))
+
+
+            if (skill.Name.Equals(CharacterGeneration.SkillLibrary.Brawling.Name))
             {
-                skill.Name = SkillLibrary.DewClaw.Name;
+                skill.Name = CharacterGeneration.SkillLibrary.DewClaw.Name;
             }
             if (!offered.ContainsKey(skill.Name))
             {
@@ -87,6 +96,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
                 }
             }
 
+            if (skill.Name.Equals(CharacterGeneration.SkillLibrary.Independance.Name)
+                && character.Sex.Equals(Properties.Resources.Sex_Male))
+            {
+                check = (dice.roll(2) < character.Profile.Soc.Value);
+            }
             return check;
         }
 
@@ -94,7 +108,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
         {
             character.Profile.Soc.Value = 2;
             // Set to outcast
-            throw new NotImplementedException();
+            return new Outcast { Culture = this };
         }
 
         public BasicCareer GetBasicCareer(CharacterGeneration.Career.CareerType career)
@@ -105,6 +119,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
                     return new Space { Culture = this, Officer = false };
                 case CharacterGeneration.Career.CareerType.Aslan_Space_Officer:
                     return new Space { Culture = this, Officer = true };
+                case CharacterGeneration.Career.CareerType.Aslan_Military:
+                    return new Military { Culture = this, Officer = false };
+                case CharacterGeneration.Career.CareerType.Aslan_Military_Officer:
+                    return new Military { Culture = this, Officer = true };
+                case CharacterGeneration.Career.CareerType.Aslan_Pirate:
+                    return new Pirate { Culture = this };
+                case CharacterGeneration.Career.CareerType.Aslan_Outcast:
+                    return new Outcast { Culture = this };
                 default:
                     return new Space { Culture = this, Officer = false };
             }
@@ -147,9 +169,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             ROPScore = score;
         }
 
-        public int TableModifier(Character character, SkillTable table)
+        public int TableModifier(Character character, CharacterGeneration.Career career, SkillTable table)
         {
-            if (table.Name.Equals("Personal Development") || table.Name.Equals("Service Skills"))
+            if (career.Name.Equals("Space") || career.Name.Equals("Military") || career.Name.Equals("Outcast")
+                || career.Name.Equals("Management"))
+            {
+                if (table.Name.Equals("Personal Development") || table.Name.Equals("Service Skills"))
+                {
+                    if (character.Sex.Equals(Properties.Resources.Sex_Male))
+                    {
+                        return -1;
+                    }
+                    else
+                    {
+                        return +1;
+                    }
+                }
+            }
+            else if (career.Name.Equals("Pirate"))
             {
                 if (character.Sex.Equals(Properties.Resources.Sex_Male))
                 {

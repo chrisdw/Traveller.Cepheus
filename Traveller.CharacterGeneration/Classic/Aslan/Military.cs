@@ -2,11 +2,13 @@
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 {
-    public class Space : Career
+    public class Military : Career
     {
-        public Space()
+        public bool Officer { get; set; }
+
+        public Military()
         {
-            Name = "Space";
+            Name = "Military";
             TermSkills = 2;
 
             Array.Resize(ref skillTables, 8);
@@ -14,7 +16,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             enlistment2attr = string.Empty;
             enlistment3attr = string.Empty;
 
-            // Spacer tables
+            // Militiary tables
             var table = new SkillTable();
             SkillTables[0] = table;
             table.Name = "Personal Development";
@@ -23,43 +25,43 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             skills[1] = CharacterGeneration.SkillLibrary.Str;
             skills[2] = CharacterGeneration.SkillLibrary.Dex;
             skills[3] = CharacterGeneration.SkillLibrary.End;
-            skills[4] = CharacterGeneration.SkillLibrary.Int;
+            skills[4] = CharacterGeneration.SkillLibrary.DewClaw;
             skills[5] = CharacterGeneration.SkillLibrary.Admin;
 
             table = new SkillTable();
             SkillTables[1] = table;
             table.Name = "Service Skills";
             skills = table.Skills;
-            skills[0] = CharacterGeneration.SkillLibrary.Gunnery;
-            skills[1] = CharacterGeneration.SkillLibrary.VaccSuit;
-            skills[2] = SkillLibrary.GunCombat;
-            skills[3] = CharacterGeneration.SkillLibrary.DewClaw;
-            skills[4] = CharacterGeneration.SkillLibrary.Vehicle;
-            skills[5] = CharacterGeneration.SkillLibrary.Steward;
+            skills[0] = CharacterGeneration.SkillLibrary.GunCombat;
+            skills[1] = CharacterGeneration.SkillLibrary.Vehicle;
+            skills[2] = CharacterGeneration.SkillLibrary.Hunting;
+            skills[3] = SkillLibrary.PersonalWeapons; 
+            skills[4] = SkillLibrary.GunCombat;
+            skills[5] = CharacterGeneration.SkillLibrary.FowardObserver;
 
             table = new SkillTable();
             SkillTables[2] = table;
             table.Name = "Service Skills (Female)";
             skills = table.Skills;
-            skills[0] = CharacterGeneration.SkillLibrary.Computer;
+            skills[0] = CharacterGeneration.SkillLibrary.Steward;
             skills[1] = CharacterGeneration.SkillLibrary.Mechanical;
             skills[2] = CharacterGeneration.SkillLibrary.Electronics;
             skills[3] = CharacterGeneration.SkillLibrary.Medic;
-            skills[4] = CharacterGeneration.SkillLibrary.Engineering;
-            skills[5] = CharacterGeneration.SkillLibrary.JackOfTrades;
+            skills[4] = CharacterGeneration.SkillLibrary.Computer;
+            skills[5] = SkillLibrary.GunCombat;
 
             table = new SkillTable();
             SkillTables[3] = table;
             table.Name = "Service Skills (Male)";
             skills = table.Skills;
-            skills[0] = CharacterGeneration.SkillLibrary.Gunnery;
-            skills[1] = CharacterGeneration.SkillLibrary.ShipsBoat;
-            skills[2] = CharacterGeneration.SkillLibrary.ShipsBoat;
-            skills[3] = CharacterGeneration.SkillLibrary.Pilot;
+            skills[0] = SkillLibrary.GunCombat;
+            skills[1] = SkillLibrary.GunCombat;
+            skills[2] = CharacterGeneration.SkillLibrary.Vehicle;
+            skills[3] = CharacterGeneration.SkillLibrary.Vehicle;
             skills[4] = CharacterGeneration.SkillLibrary.Leader;
-            skills[5] = CharacterGeneration.SkillLibrary.VaccSuit;
+            skills[5] = CharacterGeneration.SkillLibrary.Tactics;
 
-            // Space officer tables
+            // Military officer tables
             table = new SkillTable();
             SkillTables[4] = table;
             table.Name = "Personal Development";
@@ -69,49 +71,46 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             skills[2] = CharacterGeneration.SkillLibrary.Dex;
             skills[3] = CharacterGeneration.SkillLibrary.End;
             skills[4] = CharacterGeneration.SkillLibrary.Int;
-            skills[5] = CharacterGeneration.SkillLibrary.Navigation;
+            skills[5] = CharacterGeneration.SkillLibrary.Tolerance;
 
             table = new SkillTable();
             SkillTables[5] = table;
             table.Name = "Service Skills";
             skills = table.Skills;
-            skills[0] = CharacterGeneration.SkillLibrary.Pilot;
-            skills[1] = CharacterGeneration.SkillLibrary.VaccSuit;
-            skills[2] = SkillLibrary.GunCombat;
-            skills[3] = CharacterGeneration.SkillLibrary.DewClaw;
-            skills[4] = CharacterGeneration.SkillLibrary.Vehicle;
-            skills[5] = CharacterGeneration.SkillLibrary.Computer;
+            skills[0] = CharacterGeneration.SkillLibrary.Tactics;
+            skills[1] = CharacterGeneration.SkillLibrary.Vehicle;
+            skills[2] = CharacterGeneration.SkillLibrary.DewClaw;
+            skills[3] = CharacterGeneration.SkillLibrary.Tolerance;
+            skills[4] = SkillLibrary.GunCombat;
+            skills[5] = CharacterGeneration.SkillLibrary.JackOfTrades;
 
             table = new SkillTable();
             SkillTables[6] = table;
             table.Name = "Service Skills (Female)";
             skills = table.Skills;
-            skills[0] = CharacterGeneration.SkillLibrary.Computer;
-            skills[1] = CharacterGeneration.SkillLibrary.Tolerance;
-            skills[2] = CharacterGeneration.SkillLibrary.Navigation;
+            skills[0] = CharacterGeneration.SkillLibrary.Admin;
+            skills[1] = CharacterGeneration.SkillLibrary.FowardObserver;
+            skills[2] = CharacterGeneration.SkillLibrary.Computer;
             skills[3] = CharacterGeneration.SkillLibrary.Medic;
-            skills[4] = CharacterGeneration.SkillLibrary.Engineering;
-            skills[5] = CharacterGeneration.SkillLibrary.JackOfTrades;
+            skills[4] = CharacterGeneration.SkillLibrary.Admin;
+            skills[5] = CharacterGeneration.SkillLibrary.Streetwise;
 
             table = new SkillTable();
             SkillTables[7] = table;
             table.Name = "Service Skills (Male)";
             skills = table.Skills;
-            skills[0] = CharacterGeneration.SkillLibrary.Gunnery;
-            skills[1] = CharacterGeneration.SkillLibrary.Pilot;
-            skills[2] = CharacterGeneration.SkillLibrary.Leader;
-            skills[3] = CharacterGeneration.SkillLibrary.Leader;
-            skills[4] = CharacterGeneration.SkillLibrary.Tolerance;
-            skills[5] = CharacterGeneration.SkillLibrary.Hunting;
-
+            skills[0] = CharacterGeneration.SkillLibrary.Independance;
+            skills[1] = CharacterGeneration.SkillLibrary.Leader;
+            skills[2] = SkillLibrary.GunCombat;
+            skills[3] = CharacterGeneration.SkillLibrary.Tolerance;
+            skills[4] = CharacterGeneration.SkillLibrary.Leader;
+            skills[5] = CharacterGeneration.SkillLibrary.Tactics;
         }
-
-        public bool Officer { get; set; }
-
         protected override void CommsionSkill()
         {
             Officer = true;
             Reconfigure();
+
             if (Owner.Profile.Soc.Value < 9)
             {
                 Owner.Profile.Soc.Value = 9;
@@ -119,7 +118,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             }
             if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
             {
-                Owner.AddSkill(CharacterGeneration.SkillLibrary.Leader);
+                Owner.AddSkill(CharacterGeneration.SkillLibrary.Tactics);
             }
             else
             {
@@ -130,9 +129,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
         protected override void EnlistSkill()
         {
-            if (Officer)
+            if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
             {
-                RankNumber = 1;
+                Owner.AddSkill(CharacterGeneration.SkillLibrary.DewClaw);
+            }
+            else
+            {
+                Owner.AddSkill(SkillLibrary.Uealikhe);
             }
         }
 
@@ -151,7 +154,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             SkillTables[4].Available = Officer;
             SkillTables[5].Available = Officer;
             SkillTables[6].Available = Officer && Owner.Sex.Equals(Properties.Resources.Sex_Female);
-            SkillTables[7].Available = Officer && Owner.Sex.Equals(Properties.Resources.Sex_Male);         
+            SkillTables[7].Available = Officer && Owner.Sex.Equals(Properties.Resources.Sex_Male);
         }
 
         public override Character Owner
@@ -161,22 +164,22 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             {
                 base.Owner = value;
 
-                Ranks[0] = "Spacer";
-                Ranks[1] = "Intendant";
+                Ranks[0] = "Trooper";
+                Ranks[1] = "Cadet";
                 Ranks[2] = "Lieutenant";
-                Ranks[3] = "Senior Lieutenant";
+                Ranks[3] = "Captain";
 
                 if (Owner.Sex.Equals(Properties.Resources.Sex_Female))
                 {
-                    Ranks[4] = "Executive Lieutenant";
-                    Ranks[5] = "Executive";
+                    Ranks[4] = "Executive";
+                    Ranks[5] = "Senior Executive";
                     Ranks[6] = "Chief of Staff";
                 }
                 else
                 {
-                    Ranks[4] = "Commandant Lieutenant";
-                    Ranks[5] = "Captain";
-                    Ranks[6] = "Admiral";
+                    Ranks[4] = "Commandant";
+                    Ranks[5] = "Senior Commandant";
+                    Ranks[6] = "General";
                 }
 
                 Reconfigure();
@@ -199,22 +202,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
         {
             if (Owner.Sex.Equals(Properties.Resources.Sex_Female))
             {
-                position = 10;
+                position = 9;
                 position1attr = "SOC";
                 position1val = 9;
                 if (Officer)
                 {
-                    enlistment = 10;
+                    enlistment = 9;
                     reenlist = 6;
+                    survival3attr = "INT";
+                    survival3val = 9;
                 }
                 else
                 {
-                    enlistment = 8;
+                    enlistment = 7;
                     reenlist = 5;
+                    survival3attr = "EDU";
+                    survival3val = 7;
                 }
-                survival = 7;
-                survival3attr = "INT";
-                survival3val = 8;
+                survival = 8;
             }
             else
             {
@@ -224,19 +229,19 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
                 if (Officer)
                 {
-                    enlistment = 11;
-                    reenlist = 6;
+                    enlistment = 10;
+                    reenlist = 5;
                     survival = 8;
-                    survival3attr = "INT";
-                    survival3val = 8;
+                    survival3attr = "EDU";
+                    survival3val = 6;
                 }
                 else
                 {
-                    enlistment = 8;
-                    reenlist = 5;
+                    enlistment = 7;
+                    reenlist = 4;
                     survival = 7;
-                    survival3attr = "INT";
-                    survival3val = 7;
+                    survival3attr = "END";
+                    survival3val = 8;
                 }
             }
         }
@@ -246,11 +251,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             if (Officer)
             {
                 Cash[0] = 1000;
-                Cash[1] = 5000;
+                Cash[1] = 1000;
                 Cash[2] = 5000;
-                Cash[3] = 10000;
-                Cash[4] = 20000;
-                Cash[5] = 50000;
+                Cash[3] = 5000;
+                Cash[4] = 10000;
+                Cash[5] = 20000;
                 Cash[6] = 50000;
 
                 Material.Add(BenefitLibrary.MidPsg);
@@ -265,12 +270,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             else
             {
                 Cash[0] = 500;
-                Cash[1] = 1000;
+                Cash[1] = 500;
                 Cash[2] = 1000;
-                Cash[3] = 5000;
+                Cash[3] = 1000;
                 Cash[4] = 5000;
-                Cash[5] = 10000;
-                Cash[6] = 20000;
+                Cash[5] = 5000;
+                Cash[6] = 10000;
 
                 Material.Add(BenefitLibrary.LowPsg);
                 Material.Add(BenefitLibrary.Int);
@@ -289,6 +294,5 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
                 }
             }
         }
-
     }
 }

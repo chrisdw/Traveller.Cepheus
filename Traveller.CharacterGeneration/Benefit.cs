@@ -64,6 +64,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             }
         }
 
+        public Benefit Clone()
+        {
+            var benefit = new Benefit()
+            {
+                Name = Name,
+                Value = Value,
+                TypeOfBenefit = TypeOfBenefit
+            };
+            return benefit;
+        }
+
         public void SaveXML(XmlElement ele)
         {
             var benefit = ele.OwnerDocument.CreateElement("Benefit");

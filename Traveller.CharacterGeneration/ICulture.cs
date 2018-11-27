@@ -17,6 +17,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration
 
         BasicCareer GetBasicCareer(Career.CareerType career);
 
-        int TableModifier(Character character, SkillTable table);
+        int TableModifier(Character character, Career career, SkillTable table);
     }
 }

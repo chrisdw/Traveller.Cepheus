@@ -143,11 +143,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         {
             var clone = new Skill() { Name = Name, Class = Class, Level = Level, SexApplicabilty = SexApplicabilty };
 
-            var cascade = new List<Skill>();
             foreach (var skill in Cascade)
             {
-                cascade.Add(skill.Clone());
+                clone.Cascade.Add(skill.Clone());
             }
+
             return clone;
         }
 

@@ -108,39 +108,42 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 var clist = selectedCulture.Careers(character);
                 var careerList = clist.Keys.Except(character.Careers.Select(c => c.Name));
                 var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Career, null, null, careerList.ToArray());
-                var career = selectedCulture.GetBasicCareer(clist[selected]);
-                career.SkillOffered += SkillOffered;
-                if (career is Classic.Zhodani.Career)
-                {
-                    var zc = career as Classic.Zhodani.Career;
-                    zc.PsionicGamesOffered += DoPsionicGames;
-                    zc.PsionicTrainingOffered += DoPsionicTraining;
-                }
-                career.Owner = character;
-                if (career.Enlist())
-                {
-                    character.Careers.Add(career);
-                    await ResolveBasicCareer(character, career);
-                }
-                else
-                {
-                    // Unable to enlist, submit to draft?
-                    var res = await DisplayAlert(Properties.Resources.Title_App,
-                        Properties.Resources.Prompt_Draft,
-                        Properties.Resources.Button_Yes,
-                        Properties.Resources.Button_No);
-                    if (res)
+                if (!string.IsNullOrEmpty(selected))
+                { 
+                    var career = selectedCulture.GetBasicCareer(clist[selected]);
+                    career.SkillOffered += SkillOffered;
+                    if (career is Classic.Zhodani.Career)
                     {
-                        do
-                        {
-                            career = selectedCulture.Drafted(character);
-                        } while (character.Careers.Contains(career));
-                        career.Owner = character;
-                        career.Drafted = true;
-                        character.Journal.Add(string.Format(Properties.Resources.Jrn_Drafted, career.Name));
-                        await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Drafted, career.Name), Properties.Resources.Button_OK);
+                        var zc = career as Classic.Zhodani.Career;
+                        zc.PsionicGamesOffered += DoPsionicGames;
+                        zc.PsionicTrainingOffered += DoPsionicTraining;
+                    }
+                    career.Owner = character;
+                    if (career.Enlist())
+                    {
                         character.Careers.Add(career);
                         await ResolveBasicCareer(character, career);
+                    }
+                    else
+                    {
+                        // Unable to enlist, submit to draft?
+                        var res = await DisplayAlert(Properties.Resources.Title_App,
+                            Properties.Resources.Prompt_Draft,
+                            Properties.Resources.Button_Yes,
+                            Properties.Resources.Button_No);
+                        if (res)
+                        {
+                            do
+                            {
+                                career = selectedCulture.Drafted(character);
+                            } while (character.Careers.Contains(career));
+                            career.Owner = character;
+                            career.Drafted = true;
+                            character.Journal.Add(string.Format(Properties.Resources.Jrn_Drafted, career.Name));
+                            await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Drafted, career.Name), Properties.Resources.Button_OK);
+                            character.Careers.Add(career);
+                            await ResolveBasicCareer(character, career);
+                        }
                     }
                 }
                 if (selectedCulture.MultipleCareers && !character.Died && !(character.Careers.Sum(c => c.TermsServed) > 6))
@@ -157,6 +160,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         keepgoing = false;
                     }
+                }
+                else
+                {
+                    keepgoing = false;
                 }
             } while (keepgoing);
             // check to see if the total of skill levels in non-psionic skills is greater than the sum of
@@ -338,7 +345,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     career.CheckTableAvailablity();
                     var tables = new List<string>();
                     SkillTable table = null;
-                    for (var j = 0; j < 4; j++)
+                    for (var j = 0; j < career.SkillTables.Length; j++)
                     {
                         if (career.SkillTables[j].Available)
                         {
@@ -359,7 +366,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         {
                             semaphore.Release();
                         }
-                        for (var j = 0; j < 4; j++)
+                        for (var j = 0; j < career.SkillTables.Length; j++)
                         {
                             if (career.SkillTables[j].Available && career.SkillTables[j].Name.Equals(result))
                             {
@@ -375,7 +382,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         count++;
                         var die = new Dice(6);
-                        var roll = die.roll() - 1 + selectedCulture.TableModifier(character, table);
+                        var roll = die.roll() - 1 + selectedCulture.TableModifier(character, career, table);
                         roll = roll.Clamp(0, 5);
                         // Because culture rules can modify the skill "on the fly" we work with a clone
                         offeredSkill = table.Skills[roll].Clone();

@@ -37,6 +37,7 @@
 
         // Ship shares
         public static Benefit Corsair = new Benefit(Properties.Resources.Ship_Corsair, 1, Benefit.BenefitType.Material);
+        public static Benefit Escort = new Benefit("Escort", 1, Benefit.BenefitType.Material);
         public static Benefit LabShip = new Benefit(Properties.Resources.Ship_LabShip, 1, Benefit.BenefitType.Material);
         public static Benefit Merchant = new Benefit(Properties.Resources.Ship_Merchant, 1, Benefit.BenefitType.Material);
         public static Benefit Scout = new Benefit(Properties.Resources.Ship_Scout, 1, Benefit.BenefitType.Material);
