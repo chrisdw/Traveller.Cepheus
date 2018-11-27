@@ -6,7 +6,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
     {
         protected override void CommsionSkill()
         {
-            Name = "Wanderer";
+            Name = Resources.Career_Wanderer;
             hasRanks = false;
             Array.Resize(ref skillTables, 3);
 
@@ -20,7 +20,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Independance;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -31,7 +31,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Independance;
             skills[1] = CharacterGeneration.SkillLibrary.Vehicle;
@@ -42,7 +42,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Service Skills (Male)";
+            table.Name = Resources.Table_ServiceSkillsMale;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Pilot;
             skills[1] = CharacterGeneration.SkillLibrary.ShipsBoat;
@@ -68,7 +68,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             Cash[5] = 10000;
             Cash[6] = 20000;
 
-            Ranks[0] = "Wanderer";
+            Ranks[0] = Resources.Rank_Wanderer;
         }
 
         protected override void EnlistSkill()

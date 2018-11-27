@@ -4,7 +4,7 @@
     {
         public Outcast()
         {
-            Name = "Outcast";
+            Name = Resources.Career_Outcast;
             hasRanks = false;
 
             RankNumber = 0;
@@ -19,7 +19,7 @@
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Independance;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -30,7 +30,7 @@
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = SkillLibrary.GunCombat;
             skills[1] = CharacterGeneration.SkillLibrary.DewClaw;
@@ -41,7 +41,7 @@
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Service Skills (Female)";
+            table.Name = Resources.Table_ServiceSkillsFemale;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Bribery;
             skills[1] = CharacterGeneration.SkillLibrary.Mechanical;
@@ -52,7 +52,7 @@
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "Service Skills (Male)";
+            table.Name = Resources.Table_ServiceSkillsMale;
             skills = table.Skills;
             skills[0] = SkillLibrary.PersonalWeapons;
             skills[1] = CharacterGeneration.SkillLibrary.ShipsBoat;
@@ -77,7 +77,7 @@
             Cash[5] = 20000;
             Cash[6] = 40000;
 
-            Ranks[0] = "Outcast";
+            Ranks[0] = Resources.Rank_Outcast;
         }
         protected override void CommsionSkill()
         {
@@ -101,6 +101,18 @@
         {
             SkillTables[2].Available = Owner.Sex.Equals(Properties.Resources.Sex_Female);
             SkillTables[3].Available = Owner.Sex.Equals(Properties.Resources.Sex_Male);
+        }
+
+        public override void MusterOut()
+        {
+            base.MusterOut();
+            if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
+            {
+                for (var i = 0; i < Cash.Length; i++)
+                {
+                    Cash[i] /= 2;
+                }
+            }
         }
     }
 }

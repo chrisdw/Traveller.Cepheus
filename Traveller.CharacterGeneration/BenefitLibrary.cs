@@ -19,8 +19,8 @@
         public static Benefit Weapon = new Benefit(Properties.Resources.Benefit_Weapon, 1, Benefit.BenefitType.Weapon);
 
         // Other benefits
-        public static Benefit Corporation = new Benefit("Corporation", 1, Benefit.BenefitType.Material);
-        public static Benefit Land = new Benefit("Land", 1, Benefit.BenefitType.Material);
+        public static Benefit Corporation = new Benefit(Properties.Resources.Benefit_Corporation, 1, Benefit.BenefitType.Material);
+        public static Benefit Land = new Benefit(Properties.Resources.Benefit_Land, 1, Benefit.BenefitType.Material);
         public static Benefit Legion = new Benefit(Properties.Resources.Benefit_Legion, 1, Benefit.BenefitType.Material);
         public static Benefit Independance = new Benefit(Properties.Resources.Skill_Independance, 1, Benefit.BenefitType.Skill);
         public static Benefit Instruments = new Benefit(Properties.Resources.Benefit_Instruments, 1, Benefit.BenefitType.Material);
@@ -39,11 +39,11 @@
 
         // Ship shares
         public static Benefit Corsair = new Benefit(Properties.Resources.Ship_Corsair, 1, Benefit.BenefitType.Material);
-        public static Benefit Courier = new Benefit("Courier", 1, Benefit.BenefitType.Material);
-        public static Benefit Escort = new Benefit("Escort", 1, Benefit.BenefitType.Material);
+        public static Benefit Courier = new Benefit(Properties.Resources.Ship_Courier, 1, Benefit.BenefitType.Material);
+        public static Benefit Escort = new Benefit(Properties.Resources.Ship_Escort, 1, Benefit.BenefitType.Material);
         public static Benefit LabShip = new Benefit(Properties.Resources.Ship_LabShip, 1, Benefit.BenefitType.Material);
         public static Benefit Merchant = new Benefit(Properties.Resources.Ship_Merchant, 1, Benefit.BenefitType.Material);
-        public static Benefit Researcher = new Benefit("Researcher", 1, Benefit.BenefitType.Material);
+        public static Benefit Researcher = new Benefit(Properties.Resources.Ship_Researcher, 1, Benefit.BenefitType.Material);
         public static Benefit Scout = new Benefit(Properties.Resources.Ship_Scout, 1, Benefit.BenefitType.Material);
         public static Benefit SafariShip = new Benefit(Properties.Resources.Ship_SafariShip, 1, Benefit.BenefitType.Material);
         public static Benefit Seeker = new Benefit(Properties.Resources.Ship_Seeker, 1, Benefit.BenefitType.Material);

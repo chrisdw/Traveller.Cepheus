@@ -19,7 +19,7 @@
                 if (ac.ROPScore == 0)
                 {
                     ac.CalculateROP(Owner);
-                    Owner.Journal.Add(string.Format("Rite of Passage Score is {0}", ac.ROPScore));
+                    Owner.Journal.Add(string.Format(Resources.Msg_ROPScore, ac.ROPScore));
                 }
             }
         }

@@ -4,7 +4,7 @@
     {
         public Pirate()
         {
-            Name = "Pirate";
+            Name = Resources.Career_Pirate;
             TermSkills = 2;
 
             enlistment = 8;
@@ -24,7 +24,7 @@
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Independance;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -35,7 +35,7 @@
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Gunnery;
             skills[1] = CharacterGeneration.SkillLibrary.DewClaw;
@@ -46,7 +46,7 @@
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Advanced Service Skills";
+            table.Name = Resources.Table_AdvancedServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Gunnery;
             skills[1] = CharacterGeneration.SkillLibrary.Engineering;
@@ -57,7 +57,7 @@
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "Experience";
+            table.Name = Resources.Table_Experience;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Pilot;
             skills[1] = CharacterGeneration.SkillLibrary.ShipsBoat;
@@ -82,12 +82,12 @@
             Cash[5] = 70000;
             Cash[6] = 100000;
 
-            Ranks[0] = "Pirate";
-            Ranks[1] = "Soldier";
-            Ranks[2] = "Warrior";
-            Ranks[3] = "Veteran";
-            Ranks[4] = "Lieutenant";
-            Ranks[5] = "Commandant";
+            Ranks[0] = Resources.Rank_Pirate;
+            Ranks[1] = Resources.Rank_Soldier;
+            Ranks[2] = Resources.Rank_Warrior;
+            Ranks[3] = Resources.Rank_Veteran;
+            Ranks[4] = Resources.Rank_Lieutenant;
+            Ranks[5] = Resources.Rank_Commandant;
         }
 
         protected override int EnlistFactor()
@@ -116,6 +116,18 @@
         public override void CheckTableAvailablity()
         {
 
+        }
+
+        public override void MusterOut()
+        {
+            base.MusterOut();
+            if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
+            {
+                for (var i = 0; i < Cash.Length; i++)
+                {
+                    Cash[i] /= 2;
+                }
+            }
         }
     }
 }

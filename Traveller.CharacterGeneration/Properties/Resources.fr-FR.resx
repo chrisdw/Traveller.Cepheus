@@ -513,4 +513,22 @@
   <data name="Species_Human_Zhodani" xml:space="preserve">
     <value>Homme (Zhodani)</value>
   </data>
+  <data name="Sex_Random" xml:space="preserve">
+    <value>Au hasard</value>
+  </data>
+  <data name="Benefit_Corporation" xml:space="preserve">
+    <value>Corporation</value>
+  </data>
+  <data name="Benefit_Land" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="Ship_Courier" xml:space="preserve">
+    <value>Service de messagerie</value>
+  </data>
+  <data name="Ship_Escort" xml:space="preserve">
+    <value>Escort girl</value>
+  </data>
+  <data name="Ship_Researcher" xml:space="preserve">
+    <value>Chercheur</value>
+  </data>
 </root>

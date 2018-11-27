@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration
+﻿namespace org.DownesWard.Traveller.CharacterGeneration
 {
     /// <summary>
     /// Holds all standard skills

@@ -4,7 +4,7 @@
     {
         protected override void CommsionSkill()
         {
-            Name = "Medic";
+            Name = Resources.Career_Medic;
             hasRanks = false;
 
             enlistment = 9;
@@ -18,7 +18,7 @@
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Edu;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -29,7 +29,7 @@
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Admin;
             skills[1] = CharacterGeneration.SkillLibrary.Mechanical;
@@ -40,7 +40,7 @@
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Advanced Service Skills";
+            table.Name = Resources.Table_AdvancedServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Medic;
             skills[1] = CharacterGeneration.SkillLibrary.Medic;
@@ -51,7 +51,7 @@
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "Experience";
+            table.Name = Resources.Table_Experience;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Computer;
             skills[1] = CharacterGeneration.SkillLibrary.Medic;
@@ -77,7 +77,7 @@
             Cash[5] = 40000;
             Cash[6] = 70000;
 
-            Ranks[0] = "Medic";
+            Ranks[0] = Resources.Rank_Medic;
         }
 
         protected override void EnlistSkill()
@@ -105,11 +105,11 @@
                 {
                     if (Owner.Profile.Dex.Value >= 8)
                     {
-                        return "Surgeon";
+                        return Resources.Rank_Surgeon;
                     }
                     else
                     {
-                        return "Doctor";
+                        return Resources.Rank_Doctor;
                     }
                 }
                 return Ranks[RankNumber];

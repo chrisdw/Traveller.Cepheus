@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Career_Belter" xml:space="preserve">
+    <value>Belter</value>
+  </data>
+  <data name="Career_Envoy" xml:space="preserve">
+    <value>Envoyé</value>
+  </data>
+  <data name="Career_Flyer" xml:space="preserve">
+    <value>Flyer</value>
+  </data>
+  <data name="Career_Management" xml:space="preserve">
+    <value>Gestion</value>
+  </data>
+  <data name="Career_Medic" xml:space="preserve">
+    <value>Medic</value>
+  </data>
+  <data name="Career_Military" xml:space="preserve">
+    <value>Militaire</value>
+  </data>
+  <data name="Career_Outcast" xml:space="preserve">
+    <value>Outcast</value>
+  </data>
+  <data name="Career_Pirate" xml:space="preserve">
+    <value>Pirate</value>
+  </data>
+  <data name="Career_Scientist" xml:space="preserve">
+    <value>Scientifique</value>
+  </data>
+  <data name="Career_Space" xml:space="preserve">
+    <value>Espace</value>
+  </data>
+  <data name="Career_Wanderer" xml:space="preserve">
+    <value>Wanderer</value>
+  </data>
+  <data name="Career_MilitaryOfficer" xml:space="preserve">
+    <value>Des officiers de</value>
+  </data>
+  <data name="Career_SpaceOfficer" xml:space="preserve">
+    <value>Espace agent</value>
+  </data>
+  <data name="Msg_Commision" xml:space="preserve">
+    <value>SOC porté à 9 en raison de l’été commissionné.</value>
+  </data>
+  <data name="Msg_ROPScore" xml:space="preserve">
+    <value>Rite de Passage Score is {0}.</value>
+  </data>
+  <data name="Rank_Adminstrator" xml:space="preserve">
+    <value>Adminstrator</value>
+  </data>
+  <data name="Rank_Admiral" xml:space="preserve">
+    <value>Amiral</value>
+  </data>
+  <data name="Rank_AirMarshal" xml:space="preserve">
+    <value>Maréchal de l’air</value>
+  </data>
+  <data name="Rank_Belter" xml:space="preserve">
+    <value>Belter</value>
+  </data>
+  <data name="Rank_Cadet" xml:space="preserve">
+    <value>Cadet</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Capitaine</value>
+  </data>
+  <data name="Rank_ChiefOfStaff" xml:space="preserve">
+    <value>Chef de cabinet</value>
+  </data>
+  <data name="Rank_Clerk" xml:space="preserve">
+    <value>Greffier</value>
+  </data>
+  <data name="Rank_Commandant" xml:space="preserve">
+    <value>Commandant</value>
+  </data>
+  <data name="Rank_CommandantLieutenant" xml:space="preserve">
+    <value>Lieutenant commandant</value>
+  </data>
+  <data name="Rank_Director" xml:space="preserve">
+    <value>Directeur</value>
+  </data>
+  <data name="Rank_Doctor" xml:space="preserve">
+    <value>Médecin</value>
+  </data>
+  <data name="Rank_Envoy" xml:space="preserve">
+    <value>Envoyé</value>
+  </data>
+  <data name="Rank_Executive" xml:space="preserve">
+    <value>Exécutif</value>
+  </data>
+  <data name="Rank_ExecutiveLieutenant" xml:space="preserve">
+    <value>Lieutenant général</value>
+  </data>
+  <data name="Rank_FlightCommandant" xml:space="preserve">
+    <value>Commandant de vol</value>
+  </data>
+  <data name="Rank_Flyer" xml:space="preserve">
+    <value>Flyer</value>
+  </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>Générales</value>
+  </data>
+  <data name="Rank_GroupLeader" xml:space="preserve">
+    <value>Chef de groupe</value>
+  </data>
+  <data name="Rank_Intendant" xml:space="preserve">
+    <value>Intendant</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_Manager" xml:space="preserve">
+    <value>Gestionnaire</value>
+  </data>
+  <data name="Rank_Medic" xml:space="preserve">
+    <value>Medic</value>
+  </data>
+  <data name="Rank_Officer" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Rank_Outcast" xml:space="preserve">
+    <value>Outcast</value>
+  </data>
+  <data name="Rank_Pilot" xml:space="preserve">
+    <value>Pilote</value>
+  </data>
+  <data name="Rank_Pirate" xml:space="preserve">
+    <value>Pirate</value>
+  </data>
+  <data name="Rank_Scientist" xml:space="preserve">
+    <value>Scientifique</value>
+  </data>
+  <data name="Rank_SeniorCommandant" xml:space="preserve">
+    <value>Commandant supérieur</value>
+  </data>
+  <data name="Rank_SeniorExecutive" xml:space="preserve">
+    <value>Cadre dirigeant</value>
+  </data>
+  <data name="Rank_SeniorLieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_Soldier" xml:space="preserve">
+    <value>Soldat</value>
+  </data>
+  <data name="Rank_Spacer" xml:space="preserve">
+    <value>Entretoise</value>
+  </data>
+  <data name="Rank_SquadronLeader" xml:space="preserve">
+    <value>Chef d’Escadron</value>
+  </data>
+  <data name="Rank_Supervisor" xml:space="preserve">
+    <value>Superviseur</value>
+  </data>
+  <data name="Rank_Surgeon" xml:space="preserve">
+    <value>Chirurgien</value>
+  </data>
+  <data name="Rank_Trooper" xml:space="preserve">
+    <value>Trooper</value>
+  </data>
+  <data name="Rank_Veteran" xml:space="preserve">
+    <value>Ancien combattant</value>
+  </data>
+  <data name="Rank_Wanderer" xml:space="preserve">
+    <value>Wanderer</value>
+  </data>
+  <data name="Rank_Warrior" xml:space="preserve">
+    <value>Guerrier</value>
+  </data>
+  <data name="Rank_WingLeader" xml:space="preserve">
+    <value>Leader de l’aile</value>
+  </data>
+  <data name="Skill_Akhaeh" xml:space="preserve">
+    <value>Akhaeh</value>
+  </data>
+  <data name="Skill_EakhyasearHuntersRifle" xml:space="preserve">
+    <value>Eakhyasear (chasseurs fusil)</value>
+  </data>
+  <data name="Skill_Fierah" xml:space="preserve">
+    <value>Fierah</value>
+  </data>
+  <data name="Skill_GunCombat" xml:space="preserve">
+    <value>Pistolet Combat</value>
+  </data>
+  <data name="Skill_KhaifealateMachinePistol" xml:space="preserve">
+    <value>Khaifealate (pistolet-mitrailleur)</value>
+  </data>
+  <data name="Skill_KhaihtePistol" xml:space="preserve">
+    <value>Khaihte (pistolet)</value>
+  </data>
+  <data name="Skill_PersonalWeapons" xml:space="preserve">
+    <value>Armes individuelles</value>
+  </data>
+  <data name="Skill_Spear" xml:space="preserve">
+    <value>Spear</value>
+  </data>
+  <data name="Skill_TakhealLongRifle" xml:space="preserve">
+    <value>Takheal (Long Rifle)</value>
+  </data>
+  <data name="Skill_TakhestahLongPistol" xml:space="preserve">
+    <value>Takhestah (Long Pistol)</value>
+  </data>
+  <data name="Skill_TriluealikheLaserCarbine" xml:space="preserve">
+    <value>Triluealikhe (carabine Laser)</value>
+  </data>
+  <data name="Skill_TrolitakhealLaserRifle" xml:space="preserve">
+    <value>Trolitakheal (fusil Laser)</value>
+  </data>
+  <data name="Skill_UealikheCarbine" xml:space="preserve">
+    <value>Uealikhe (carabine)</value>
+  </data>
+  <data name="Skill_YehealAutomaticRifle" xml:space="preserve">
+    <value>Yeheal (fusil automatique)</value>
+  </data>
+  <data name="Skill_Yurletya" xml:space="preserve">
+    <value>Yurletya</value>
+  </data>
+  <data name="Table_AdvancedServiceSkills" xml:space="preserve">
+    <value>Compétences de Service avancé</value>
+  </data>
+  <data name="Table_Experience" xml:space="preserve">
+    <value>Expérience</value>
+  </data>
+  <data name="Table_PersonalDevelopment" xml:space="preserve">
+    <value>Développement personnel</value>
+  </data>
+  <data name="Table_ServiceSkills" xml:space="preserve">
+    <value>Aptitudes pour le service</value>
+  </data>
+  <data name="Table_ServiceSkillsFemale" xml:space="preserve">
+    <value>Aptitudes pour le service (femelle)</value>
+  </data>
+  <data name="Table_ServiceSkillsMale" xml:space="preserve">
+    <value>Aptitudes pour le service (mâle)</value>
+  </data>
+</root>

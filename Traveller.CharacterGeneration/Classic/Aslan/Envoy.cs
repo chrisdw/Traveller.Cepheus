@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
     {
         protected override void CommsionSkill()
         {
-            Name = "Envoy";
+            Name = Resources.Career_Envoy;
             hasRanks = false;
 
             enlistment = 11;
@@ -22,7 +22,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Independance;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -33,7 +33,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Int;
             skills[1] = CharacterGeneration.SkillLibrary.Liason;
@@ -44,7 +44,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Advanced Service Skills";
+            table.Name = Resources.Table_AdvancedServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Liason;
             skills[1] = CharacterGeneration.SkillLibrary.Liason;
@@ -55,7 +55,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "Experience";
+            table.Name = Resources.Table_Experience;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Vehicle;
             skills[1] = CharacterGeneration.SkillLibrary.Hunting;
@@ -81,7 +81,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             Cash[5] = 10000;
             Cash[6] = 20000;
 
-            Ranks[0] = "Envoy";
+            Ranks[0] = Resources.Rank_Envoy;
         }
 
         /// <summary>

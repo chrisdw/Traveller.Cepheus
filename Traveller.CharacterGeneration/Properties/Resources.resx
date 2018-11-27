@@ -621,4 +621,19 @@
   <data name="Sex_Random" xml:space="preserve">
     <value>Random</value>
   </data>
+  <data name="Benefit_Corporation" xml:space="preserve">
+    <value>Corporation</value>
+  </data>
+  <data name="Benefit_Land" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="Ship_Courier" xml:space="preserve">
+    <value>Courier</value>
+  </data>
+  <data name="Ship_Escort" xml:space="preserve">
+    <value>Escort</value>
+  </data>
+  <data name="Ship_Researcher" xml:space="preserve">
+    <value>Researcher</value>
+  </data>
 </root>

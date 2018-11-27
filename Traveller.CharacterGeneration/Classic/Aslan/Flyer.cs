@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 {
     public class Flyer : Career
     {
         protected override void CommsionSkill()
         {
-            Name = "Flyer";
+            Name = Resources.Career_Flyer;
             TermSkills = 2;
 
             enlistment = 11;
@@ -26,7 +22,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Independance;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -37,7 +33,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Dex;
             skills[1] = CharacterGeneration.SkillLibrary.Aircraft;
@@ -48,7 +44,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Advanced Service Skills";
+            table.Name = Resources.Table_AdvancedServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.ShipTactics;
             skills[1] = CharacterGeneration.SkillLibrary.Aircraft;
@@ -59,7 +55,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "Experience";
+            table.Name = Resources.Table_Experience;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Aircraft;
             skills[1] = CharacterGeneration.SkillLibrary.ShipsBoat;
@@ -85,13 +81,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             Cash[5] = 20000;
             Cash[6] = 50000;
 
-            Ranks[0] = "Flyer";
-            Ranks[1] = "Pilot";
-            Ranks[2] = "Flight Commandant";
-            Ranks[3] = "Squadron Leader";
-            Ranks[4] = "Wing Leader";
-            Ranks[5] = "Group Leader";
-            Ranks[6] = "Air Marshal";
+            Ranks[0] = Resources.Rank_Flyer;
+            Ranks[1] = Resources.Rank_Pilot;
+            Ranks[2] = Resources.Rank_FlightCommandant;
+            Ranks[3] = Resources.Rank_SquadronLeader;
+            Ranks[4] = Resources.Rank_WingLeader;
+            Ranks[5] = Resources.Rank_GroupLeader;
+            Ranks[6] = Resources.Rank_AirMarshal;
         }
 
         protected override void EnlistSkill()

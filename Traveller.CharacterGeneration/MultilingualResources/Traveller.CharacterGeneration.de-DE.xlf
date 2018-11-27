@@ -676,7 +676,27 @@
         </trans-unit>
         <trans-unit id="Sex_Random" translate="yes" xml:space="preserve">
           <source>Random</source>
-          <target state="new">Random</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zufällige</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Corporation" translate="yes" xml:space="preserve">
+          <source>Corporation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Corporation</target>
+        </trans-unit>
+        <trans-unit id="Benefit_Land" translate="yes" xml:space="preserve">
+          <source>Land</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Land</target>
+        </trans-unit>
+        <trans-unit id="Ship_Courier" translate="yes" xml:space="preserve">
+          <source>Courier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kurier</target>
+        </trans-unit>
+        <trans-unit id="Ship_Escort" translate="yes" xml:space="preserve">
+          <source>Escort</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Escort</target>
+        </trans-unit>
+        <trans-unit id="Ship_Researcher" translate="yes" xml:space="preserve">
+          <source>Researcher</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Forscher</target>
         </trans-unit>
       </group>
     </body>
@@ -1576,6 +1596,323 @@
         <trans-unit id="Rank_WorldConsul" translate="yes" xml:space="preserve">
           <source>World Consul</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Welt-Konsul</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en-GB" target-language="de-DE" original="TRAVELLER.CHARACTERGENERATION/CLASSIC/ASLAN/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.CHARACTERGENERATION/CLASSIC/ASLAN/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Career_Belter" translate="yes" xml:space="preserve">
+          <source>Belter</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Belter</target>
+        </trans-unit>
+        <trans-unit id="Career_Envoy" translate="yes" xml:space="preserve">
+          <source>Envoy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Envoy</target>
+        </trans-unit>
+        <trans-unit id="Career_Flyer" translate="yes" xml:space="preserve">
+          <source>Flyer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flyer</target>
+        </trans-unit>
+        <trans-unit id="Career_Management" translate="yes" xml:space="preserve">
+          <source>Management</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Management</target>
+        </trans-unit>
+        <trans-unit id="Career_Medic" translate="yes" xml:space="preserve">
+          <source>Medic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Medic</target>
+        </trans-unit>
+        <trans-unit id="Career_Military" translate="yes" xml:space="preserve">
+          <source>Military</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Militärische</target>
+        </trans-unit>
+        <trans-unit id="Career_Outcast" translate="yes" xml:space="preserve">
+          <source>Outcast</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Outcast</target>
+        </trans-unit>
+        <trans-unit id="Career_Pirate" translate="yes" xml:space="preserve">
+          <source>Pirate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pirat</target>
+        </trans-unit>
+        <trans-unit id="Career_Scientist" translate="yes" xml:space="preserve">
+          <source>Scientist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wissenschaftler</target>
+        </trans-unit>
+        <trans-unit id="Career_Space" translate="yes" xml:space="preserve">
+          <source>Space</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Raum</target>
+        </trans-unit>
+        <trans-unit id="Career_Wanderer" translate="yes" xml:space="preserve">
+          <source>Wanderer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wanderer</target>
+        </trans-unit>
+        <trans-unit id="Career_MilitaryOfficer" translate="yes" xml:space="preserve">
+          <source>Military Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Militär-Offizier</target>
+        </trans-unit>
+        <trans-unit id="Career_SpaceOfficer" translate="yes" xml:space="preserve">
+          <source>Space Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Raum-Officer</target>
+        </trans-unit>
+        <trans-unit id="Msg_Commision" translate="yes" xml:space="preserve">
+          <source>SOC Raised to 9 due to being commissioned.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">SOC angehoben bis 9 wegen in Auftrag gegeben.</target>
+        </trans-unit>
+        <trans-unit id="Msg_ROPScore" translate="yes" xml:space="preserve">
+          <source>Rite of Passage Score is {0}.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rite de Passage Ergebnis ist {0}.</target>
+        </trans-unit>
+        <trans-unit id="Rank_Adminstrator" translate="yes" xml:space="preserve">
+          <source>Adminstrator</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Adminstrator</target>
+        </trans-unit>
+        <trans-unit id="Rank_Admiral" translate="yes" xml:space="preserve">
+          <source>Admiral</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Admiral</target>
+        </trans-unit>
+        <trans-unit id="Rank_AirMarshal" translate="yes" xml:space="preserve">
+          <source>Air Marshal</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Air Marshal</target>
+        </trans-unit>
+        <trans-unit id="Rank_Belter" translate="yes" xml:space="preserve">
+          <source>Belter</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Belter</target>
+        </trans-unit>
+        <trans-unit id="Rank_Cadet" translate="yes" xml:space="preserve">
+          <source>Cadet</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jüngsterer Sohn</target>
+        </trans-unit>
+        <trans-unit id="Rank_Captain" translate="yes" xml:space="preserve">
+          <source>Captain</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kapitän</target>
+        </trans-unit>
+        <trans-unit id="Rank_ChiefOfStaff" translate="yes" xml:space="preserve">
+          <source>Chief of Staff</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef des Stabes</target>
+        </trans-unit>
+        <trans-unit id="Rank_Clerk" translate="yes" xml:space="preserve">
+          <source>Clerk</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schreiber</target>
+        </trans-unit>
+        <trans-unit id="Rank_Commandant" translate="yes" xml:space="preserve">
+          <source>Commandant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kommandant</target>
+        </trans-unit>
+        <trans-unit id="Rank_CommandantLieutenant" translate="yes" xml:space="preserve">
+          <source>Commandant Lieutenant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kommandant Lieutenant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Director" translate="yes" xml:space="preserve">
+          <source>Director</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Regisseur</target>
+        </trans-unit>
+        <trans-unit id="Rank_Doctor" translate="yes" xml:space="preserve">
+          <source>Doctor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Arzt</target>
+        </trans-unit>
+        <trans-unit id="Rank_Envoy" translate="yes" xml:space="preserve">
+          <source>Envoy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Envoy</target>
+        </trans-unit>
+        <trans-unit id="Rank_Executive" translate="yes" xml:space="preserve">
+          <source>Executive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Exekutive</target>
+        </trans-unit>
+        <trans-unit id="Rank_ExecutiveLieutenant" translate="yes" xml:space="preserve">
+          <source>Executive Lieutenant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Executive-Leutnant</target>
+        </trans-unit>
+        <trans-unit id="Rank_FlightCommandant" translate="yes" xml:space="preserve">
+          <source>Flight Commandant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flug-Kommandant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Flyer" translate="yes" xml:space="preserve">
+          <source>Flyer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flyer</target>
+        </trans-unit>
+        <trans-unit id="Rank_General" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Allgemeine</target>
+        </trans-unit>
+        <trans-unit id="Rank_GroupLeader" translate="yes" xml:space="preserve">
+          <source>Group Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gruppenleiter</target>
+        </trans-unit>
+        <trans-unit id="Rank_Intendant" translate="yes" xml:space="preserve">
+          <source>Intendant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Intendant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Lieutenant" translate="yes" xml:space="preserve">
+          <source>Lieutenant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Leutnant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Manager" translate="yes" xml:space="preserve">
+          <source>Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Manager</target>
+        </trans-unit>
+        <trans-unit id="Rank_Medic" translate="yes" xml:space="preserve">
+          <source>Medic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Medic</target>
+        </trans-unit>
+        <trans-unit id="Rank_Officer" translate="yes" xml:space="preserve">
+          <source>Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Offizier</target>
+        </trans-unit>
+        <trans-unit id="Rank_Outcast" translate="yes" xml:space="preserve">
+          <source>Outcast</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Outcast</target>
+        </trans-unit>
+        <trans-unit id="Rank_Pilot" translate="yes" xml:space="preserve">
+          <source>Pilot</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pilot</target>
+        </trans-unit>
+        <trans-unit id="Rank_Pirate" translate="yes" xml:space="preserve">
+          <source>Pirate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pirat</target>
+        </trans-unit>
+        <trans-unit id="Rank_Scientist" translate="yes" xml:space="preserve">
+          <source>Scientist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wissenschaftler</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorCommandant" translate="yes" xml:space="preserve">
+          <source>Senior Commandant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior-Kommandant</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorExecutive" translate="yes" xml:space="preserve">
+          <source>Senior Executive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Leitender Angestellter</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorLieutenant" translate="yes" xml:space="preserve">
+          <source>Senior Lieutenant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Oberleutnant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Soldier" translate="yes" xml:space="preserve">
+          <source>Soldier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Soldat</target>
+        </trans-unit>
+        <trans-unit id="Rank_Spacer" translate="yes" xml:space="preserve">
+          <source>Spacer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abstandhalter</target>
+        </trans-unit>
+        <trans-unit id="Rank_SquadronLeader" translate="yes" xml:space="preserve">
+          <source>Squadron Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geschwader-Führer</target>
+        </trans-unit>
+        <trans-unit id="Rank_Supervisor" translate="yes" xml:space="preserve">
+          <source>Supervisor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Supervisor</target>
+        </trans-unit>
+        <trans-unit id="Rank_Surgeon" translate="yes" xml:space="preserve">
+          <source>Surgeon</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chirurg</target>
+        </trans-unit>
+        <trans-unit id="Rank_Trooper" translate="yes" xml:space="preserve">
+          <source>Trooper</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trooper</target>
+        </trans-unit>
+        <trans-unit id="Rank_Veteran" translate="yes" xml:space="preserve">
+          <source>Veteran</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Veteran</target>
+        </trans-unit>
+        <trans-unit id="Rank_Wanderer" translate="yes" xml:space="preserve">
+          <source>Wanderer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wanderer</target>
+        </trans-unit>
+        <trans-unit id="Rank_Warrior" translate="yes" xml:space="preserve">
+          <source>Warrior</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Krieger</target>
+        </trans-unit>
+        <trans-unit id="Rank_WingLeader" translate="yes" xml:space="preserve">
+          <source>Wing Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flügel-Führer</target>
+        </trans-unit>
+        <trans-unit id="Skill_Akhaeh" translate="yes" xml:space="preserve">
+          <source>Akhaeh</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Akhaeh</target>
+        </trans-unit>
+        <trans-unit id="Skill_EakhyasearHuntersRifle" translate="yes" xml:space="preserve">
+          <source>Eakhyasear (Hunters Rifle)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eakhyasear (Jäger-Gewehr)</target>
+        </trans-unit>
+        <trans-unit id="Skill_Fierah" translate="yes" xml:space="preserve">
+          <source>Fierah</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fierah</target>
+        </trans-unit>
+        <trans-unit id="Skill_GunCombat" translate="yes" xml:space="preserve">
+          <source>Gun Combat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pistole Combat</target>
+        </trans-unit>
+        <trans-unit id="Skill_KhaifealateMachinePistol" translate="yes" xml:space="preserve">
+          <source>Khaifealate (Machine Pistol)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Khaifealate (Maschinenpistole)</target>
+        </trans-unit>
+        <trans-unit id="Skill_KhaihtePistol" translate="yes" xml:space="preserve">
+          <source>Khaihte (Pistol)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Khaihte (Pistole)</target>
+        </trans-unit>
+        <trans-unit id="Skill_PersonalWeapons" translate="yes" xml:space="preserve">
+          <source>Personal Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Persönliche Waffen</target>
+        </trans-unit>
+        <trans-unit id="Skill_Spear" translate="yes" xml:space="preserve">
+          <source>Spear</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Speer</target>
+        </trans-unit>
+        <trans-unit id="Skill_TakhealLongRifle" translate="yes" xml:space="preserve">
+          <source>Takheal (Long Rifle)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Takheal (Long Rifle)</target>
+        </trans-unit>
+        <trans-unit id="Skill_TakhestahLongPistol" translate="yes" xml:space="preserve">
+          <source>Takhestah (Long Pistol)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Takhestah (lange Pistole)</target>
+        </trans-unit>
+        <trans-unit id="Skill_TriluealikheLaserCarbine" translate="yes" xml:space="preserve">
+          <source>Triluealikhe (Laser Carbine)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Triluealikhe (Laser Carbine)</target>
+        </trans-unit>
+        <trans-unit id="Skill_TrolitakhealLaserRifle" translate="yes" xml:space="preserve">
+          <source>Trolitakheal (Laser Rifle)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trolitakheal (Lasergewehr)</target>
+        </trans-unit>
+        <trans-unit id="Skill_UealikheCarbine" translate="yes" xml:space="preserve">
+          <source>Uealikhe (Carbine)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uealikhe (Karabiner)</target>
+        </trans-unit>
+        <trans-unit id="Skill_YehealAutomaticRifle" translate="yes" xml:space="preserve">
+          <source>Yeheal (Automatic Rifle)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Yeheal (automatisches Gewehr)</target>
+        </trans-unit>
+        <trans-unit id="Skill_Yurletya" translate="yes" xml:space="preserve">
+          <source>Yurletya</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Yurletya</target>
+        </trans-unit>
+        <trans-unit id="Table_AdvancedServiceSkills" translate="yes" xml:space="preserve">
+          <source>Advanced Service Skills</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Erweiterte Fähigkeiten</target>
+        </trans-unit>
+        <trans-unit id="Table_Experience" translate="yes" xml:space="preserve">
+          <source>Experience</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Erfahrung</target>
+        </trans-unit>
+        <trans-unit id="Table_PersonalDevelopment" translate="yes" xml:space="preserve">
+          <source>Personal Development</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Persönliche Entwicklung</target>
+        </trans-unit>
+        <trans-unit id="Table_ServiceSkills" translate="yes" xml:space="preserve">
+          <source>Service Skills</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Servicekompetenz</target>
+        </trans-unit>
+        <trans-unit id="Table_ServiceSkillsFemale" translate="yes" xml:space="preserve">
+          <source>Service Skills (Female)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Servicekompetenz (weiblich)</target>
+        </trans-unit>
+        <trans-unit id="Table_ServiceSkillsMale" translate="yes" xml:space="preserve">
+          <source>Service Skills (Male)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Servicekompetenz (männlich)</target>
         </trans-unit>
       </group>
     </body>

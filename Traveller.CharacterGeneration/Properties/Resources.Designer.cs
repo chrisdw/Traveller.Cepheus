@@ -88,6 +88,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Corporation.
+        /// </summary>
+        public static string Benefit_Corporation {
+            get {
+                return ResourceManager.GetString("Benefit_Corporation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gun.
         /// </summary>
         public static string Benefit_Gun {
@@ -111,6 +120,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         public static string Benefit_Instruments {
             get {
                 return ResourceManager.GetString("Benefit_Instruments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Land.
+        /// </summary>
+        public static string Benefit_Land {
+            get {
+                return ResourceManager.GetString("Benefit_Land", resourceCulture);
             }
         }
         
@@ -430,6 +448,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Courier.
+        /// </summary>
+        public static string Ship_Courier {
+            get {
+                return ResourceManager.GetString("Ship_Courier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escort.
+        /// </summary>
+        public static string Ship_Escort {
+            get {
+                return ResourceManager.GetString("Ship_Escort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lab Ship.
         /// </summary>
         public static string Ship_LabShip {
@@ -444,6 +480,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         public static string Ship_Merchant {
             get {
                 return ResourceManager.GetString("Ship_Merchant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Researcher.
+        /// </summary>
+        public static string Ship_Researcher {
+            get {
+                return ResourceManager.GetString("Ship_Researcher", resourceCulture);
             }
         }
         

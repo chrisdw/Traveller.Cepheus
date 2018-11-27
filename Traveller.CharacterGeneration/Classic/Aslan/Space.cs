@@ -6,7 +6,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
     {
         public Space()
         {
-            Name = "Space";
+            Name = Resources.Career_Space;
             TermSkills = 2;
 
             Array.Resize(ref skillTables, 8);
@@ -14,7 +14,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             // Spacer tables
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Independance;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -25,7 +25,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Gunnery;
             skills[1] = CharacterGeneration.SkillLibrary.VaccSuit;
@@ -36,7 +36,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Service Skills (Female)";
+            table.Name = Resources.Table_ServiceSkillsFemale;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Computer;
             skills[1] = CharacterGeneration.SkillLibrary.Mechanical;
@@ -47,7 +47,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "Service Skills (Male)";
+            table.Name = Resources.Table_ServiceSkillsMale;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Gunnery;
             skills[1] = CharacterGeneration.SkillLibrary.ShipsBoat;
@@ -59,7 +59,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             // Space officer tables
             table = new SkillTable();
             SkillTables[4] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Independance;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -70,7 +70,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[5] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Pilot;
             skills[1] = CharacterGeneration.SkillLibrary.VaccSuit;
@@ -81,7 +81,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[6] = table;
-            table.Name = "Service Skills (Female)";
+            table.Name = Resources.Table_ServiceSkillsFemale;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Computer;
             skills[1] = CharacterGeneration.SkillLibrary.Tolerance;
@@ -92,7 +92,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[7] = table;
-            table.Name = "Service Skills (Male)";
+            table.Name = Resources.Table_ServiceSkillsMale;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Gunnery;
             skills[1] = CharacterGeneration.SkillLibrary.Pilot;
@@ -112,7 +112,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             if (Owner.Profile.Soc.Value < 9)
             {
                 Owner.Profile.Soc.Value = 9;
-                Owner.Journal.Add("SOC Raised to 9 due to commission");
+                Owner.Journal.Add(Resources.Msg_Commision);
             }
             if (Owner.Sex.Equals(Properties.Resources.Sex_Male))
             {
@@ -158,22 +158,22 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             {
                 base.Owner = value;
 
-                Ranks[0] = "Spacer";
-                Ranks[1] = "Intendant";
-                Ranks[2] = "Lieutenant";
-                Ranks[3] = "Senior Lieutenant";
+                Ranks[0] = Resources.Rank_Spacer;
+                Ranks[1] = Resources.Rank_Intendant;
+                Ranks[2] = Resources.Rank_Lieutenant;
+                Ranks[3] = Resources.Rank_SeniorLieutenant;
 
                 if (Owner.Sex.Equals(Properties.Resources.Sex_Female))
                 {
-                    Ranks[4] = "Executive Lieutenant";
-                    Ranks[5] = "Executive";
-                    Ranks[6] = "Chief of Staff";
+                    Ranks[4] = Resources.Rank_ExecutiveLieutenant;
+                    Ranks[5] = Resources.Rank_Executive;
+                    Ranks[6] = Resources.Rank_ChiefOfStaff;
                 }
                 else
                 {
-                    Ranks[4] = "Commandant Lieutenant";
-                    Ranks[5] = "Captain";
-                    Ranks[6] = "Admiral";
+                    Ranks[4] = Resources.Rank_CommandantLieutenant;
+                    Ranks[5] = Resources.Rank_Captain;
+                    Ranks[6] = Resources.Rank_Admiral;
                 }
 
                 Reconfigure();

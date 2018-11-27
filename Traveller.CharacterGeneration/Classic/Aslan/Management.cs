@@ -6,7 +6,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
     {
         public Management()
         {
-            Name = "Management";
+            Name = Resources.Career_Management;
             TermSkills = 2;
 
             Array.Resize(ref skillTables, 3);
@@ -26,7 +26,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = null;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -37,7 +37,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = null;
             skills[1] = CharacterGeneration.SkillLibrary.Broker;
@@ -48,7 +48,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Service Skills (Female)";
+            table.Name = Resources.Table_ServiceSkillsFemale;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Admin;
             skills[1] = CharacterGeneration.SkillLibrary.Bribery;
@@ -73,13 +73,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             Cash[5] = 40000;
             Cash[6] = 100000;
 
-            Ranks[0] = "Clerk";
-            Ranks[1] = "Adminstrator";
-            Ranks[2] = "Supervisor";
-            Ranks[3] = "Manager";
-            Ranks[4] = "Executive";
-            Ranks[5] = "Officer";
-            Ranks[6] = "Director";
+            Ranks[0] = Resources.Rank_Clerk;
+            Ranks[1] = Resources.Rank_Adminstrator;
+            Ranks[2] = Resources.Rank_Supervisor;
+            Ranks[3] = Resources.Rank_Manager;
+            Ranks[4] = Resources.Rank_Executive;
+            Ranks[5] = Resources.Rank_Officer;
+            Ranks[6] = Resources.Rank_Director;
         }
 
         protected override void CommsionSkill()

@@ -31,35 +31,35 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Classic_Traveller:
-                    careers.Add("Space", CharacterGeneration.Career.CareerType.Aslan_Space);
+                    careers.Add(Resources.Career_Space, CharacterGeneration.Career.CareerType.Aslan_Space);
                     if (character.Profile.Soc.Value > 9)
                     {
-                        careers.Add("Space Officer", CharacterGeneration.Career.CareerType.Aslan_Space_Officer);
+                        careers.Add(Resources.Career_SpaceOfficer, CharacterGeneration.Career.CareerType.Aslan_Space_Officer);
                     }
-                    careers.Add("Military", CharacterGeneration.Career.CareerType.Aslan_Military);
+                    careers.Add(Resources.Career_Military, CharacterGeneration.Career.CareerType.Aslan_Military);
                     if (character.Profile.Soc.Value > 9)
                     {
-                        careers.Add("Military Officer", CharacterGeneration.Career.CareerType.Aslan_Military_Officer);
+                        careers.Add(Resources.Career_MilitaryOfficer, CharacterGeneration.Career.CareerType.Aslan_Military_Officer);
                     }
-                    if (character.Careers.Any(c => c.Name.Equals("Outcast")))
+                    if (character.Careers.Any(c => c.Name.Equals(Resources.Career_Outcast)))
                     {
-                        careers.Add("Pirate", CharacterGeneration.Career.CareerType.Aslan_Pirate);
+                        careers.Add(Resources.Career_Pirate, CharacterGeneration.Career.CareerType.Aslan_Pirate);
                     }
                     if (character.Sex.Equals(Properties.Resources.Sex_Male))
                     {
-                        careers.Add("Wanderer", CharacterGeneration.Career.CareerType.Aslan_Wanderer);
-                        careers.Add("Flyer", CharacterGeneration.Career.CareerType.Aslan_Flyer);
+                        careers.Add(Resources.Career_Wanderer, CharacterGeneration.Career.CareerType.Aslan_Wanderer);
+                        careers.Add(Resources.Career_Flyer, CharacterGeneration.Career.CareerType.Aslan_Flyer);
                         if (character.Profile.Soc.Value > 10)
                         {
-                            careers.Add("Envoy", CharacterGeneration.Career.CareerType.Aslan_Envoy);
+                            careers.Add(Resources.Career_Envoy, CharacterGeneration.Career.CareerType.Aslan_Envoy);
                         }
                     }
                     else
                     {
-                        careers.Add("Management", CharacterGeneration.Career.CareerType.Aslan_Management);
-                        careers.Add("Scientist", CharacterGeneration.Career.CareerType.Aslan_Scientist);
-                        careers.Add("Medic", CharacterGeneration.Career.CareerType.Aslan_Medic);
-                        careers.Add("Belter", CharacterGeneration.Career.CareerType.Aslan_Belter);
+                        careers.Add(Resources.Career_Management, CharacterGeneration.Career.CareerType.Aslan_Management);
+                        careers.Add(Resources.Career_Scientist, CharacterGeneration.Career.CareerType.Aslan_Scientist);
+                        careers.Add(Resources.Career_Medic, CharacterGeneration.Career.CareerType.Aslan_Medic);
+                        careers.Add(Resources.Career_Belter, CharacterGeneration.Career.CareerType.Aslan_Belter);
                     }
                     break;
             }
@@ -185,10 +185,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
         public int TableModifier(Character character, CharacterGeneration.Career career, SkillTable table)
         {
-            if (career.Name.Equals("Space") || career.Name.Equals("Military") || career.Name.Equals("Outcast")
-                || career.Name.Equals("Management") || career.Name.Equals("Wanderer"))
+            if (career.Name.Equals(Resources.Career_Space) 
+                || career.Name.Equals(Resources.Career_Military) 
+                || career.Name.Equals(Resources.Career_Outcast)
+                || career.Name.Equals(Resources.Career_Management) 
+                || career.Name.Equals(Resources.Career_Wanderer))
             {
-                if (table.Name.Equals("Personal Development") || table.Name.Equals("Service Skills"))
+                if (table.Name.Equals(Resources.Table_PersonalDevelopment) 
+                    || table.Name.Equals(Resources.Table_ServiceSkills))
                 {
                     if (character.Sex.Equals(Properties.Resources.Sex_Male))
                     {
@@ -200,7 +204,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
                     }
                 }
             }
-            else if (career.Name.Equals("Pirate"))
+            else if (career.Name.Equals(Resources.Career_Pirate))
             {
                 if (character.Sex.Equals(Properties.Resources.Sex_Male))
                 {

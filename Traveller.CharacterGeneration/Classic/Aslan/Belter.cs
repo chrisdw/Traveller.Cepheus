@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
     {
         protected override void CommsionSkill()
         {
-            Name = "Belter";
+            Name = Resources.Career_Belter;
             hasRanks = false;
 
             RankNumber = 0;
@@ -23,7 +23,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.End;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -34,7 +34,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Prospecting;
             skills[1] = CharacterGeneration.SkillLibrary.Broker;
@@ -45,7 +45,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Advanced Service Skills";
+            table.Name = Resources.Table_AdvancedServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Prospecting;
             skills[1] = CharacterGeneration.SkillLibrary.Prospecting;
@@ -56,7 +56,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "Experience";
+            table.Name = Resources.Table_Experience;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Computer;
             skills[1] = CharacterGeneration.SkillLibrary.ShipsBoat;
@@ -81,7 +81,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             Cash[5] = 100000;
             Cash[6] = 100000;
 
-            Ranks[0] = "Belter";
+            Ranks[0] = Resources.Rank_Belter;
         }
 
         /// <summary>

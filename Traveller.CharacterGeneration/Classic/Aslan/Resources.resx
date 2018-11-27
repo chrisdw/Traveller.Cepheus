@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Career_Belter" xml:space="preserve">
+    <value>Belter</value>
+  </data>
+  <data name="Career_Envoy" xml:space="preserve">
+    <value>Envoy</value>
+  </data>
+  <data name="Career_Flyer" xml:space="preserve">
+    <value>Flyer</value>
+  </data>
+  <data name="Career_Management" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="Career_Medic" xml:space="preserve">
+    <value>Medic</value>
+  </data>
+  <data name="Career_Military" xml:space="preserve">
+    <value>Military</value>
+  </data>
+  <data name="Career_MilitaryOfficer" xml:space="preserve">
+    <value>Military Officer</value>
+  </data>
+  <data name="Career_Outcast" xml:space="preserve">
+    <value>Outcast</value>
+  </data>
+  <data name="Career_Pirate" xml:space="preserve">
+    <value>Pirate</value>
+  </data>
+  <data name="Career_Scientist" xml:space="preserve">
+    <value>Scientist</value>
+  </data>
+  <data name="Career_Space" xml:space="preserve">
+    <value>Space</value>
+  </data>
+  <data name="Career_SpaceOfficer" xml:space="preserve">
+    <value>Space Officer</value>
+  </data>
+  <data name="Career_Wanderer" xml:space="preserve">
+    <value>Wanderer</value>
+  </data>
+  <data name="Msg_Commision" xml:space="preserve">
+    <value>SOC Raised to 9 due to being commissioned.</value>
+  </data>
+  <data name="Msg_ROPScore" xml:space="preserve">
+    <value>Rite of Passage Score is {0}.</value>
+  </data>
+  <data name="Rank_Adminstrator" xml:space="preserve">
+    <value>Adminstrator</value>
+  </data>
+  <data name="Rank_Admiral" xml:space="preserve">
+    <value>Admiral</value>
+  </data>
+  <data name="Rank_AirMarshal" xml:space="preserve">
+    <value>Air Marshal</value>
+  </data>
+  <data name="Rank_Belter" xml:space="preserve">
+    <value>Belter</value>
+  </data>
+  <data name="Rank_Cadet" xml:space="preserve">
+    <value>Cadet</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Captain</value>
+  </data>
+  <data name="Rank_ChiefOfStaff" xml:space="preserve">
+    <value>Chief of Staff</value>
+  </data>
+  <data name="Rank_Clerk" xml:space="preserve">
+    <value>Clerk</value>
+  </data>
+  <data name="Rank_Commandant" xml:space="preserve">
+    <value>Commandant</value>
+  </data>
+  <data name="Rank_CommandantLieutenant" xml:space="preserve">
+    <value>Commandant Lieutenant</value>
+  </data>
+  <data name="Rank_Director" xml:space="preserve">
+    <value>Director</value>
+  </data>
+  <data name="Rank_Doctor" xml:space="preserve">
+    <value>Doctor</value>
+  </data>
+  <data name="Rank_Envoy" xml:space="preserve">
+    <value>Envoy</value>
+  </data>
+  <data name="Rank_Executive" xml:space="preserve">
+    <value>Executive</value>
+  </data>
+  <data name="Rank_ExecutiveLieutenant" xml:space="preserve">
+    <value>Executive Lieutenant</value>
+  </data>
+  <data name="Rank_FlightCommandant" xml:space="preserve">
+    <value>Flight Commandant</value>
+  </data>
+  <data name="Rank_Flyer" xml:space="preserve">
+    <value>Flyer</value>
+  </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Rank_GroupLeader" xml:space="preserve">
+    <value>Group Leader</value>
+  </data>
+  <data name="Rank_Intendant" xml:space="preserve">
+    <value>Intendant</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_Manager" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="Rank_Medic" xml:space="preserve">
+    <value>Medic</value>
+  </data>
+  <data name="Rank_Officer" xml:space="preserve">
+    <value>Officer</value>
+  </data>
+  <data name="Rank_Outcast" xml:space="preserve">
+    <value>Outcast</value>
+  </data>
+  <data name="Rank_Pilot" xml:space="preserve">
+    <value>Pilot</value>
+  </data>
+  <data name="Rank_Pirate" xml:space="preserve">
+    <value>Pirate</value>
+  </data>
+  <data name="Rank_Scientist" xml:space="preserve">
+    <value>Scientist</value>
+  </data>
+  <data name="Rank_SeniorCommandant" xml:space="preserve">
+    <value>Senior Commandant</value>
+  </data>
+  <data name="Rank_SeniorExecutive" xml:space="preserve">
+    <value>Senior Executive</value>
+  </data>
+  <data name="Rank_SeniorLieutenant" xml:space="preserve">
+    <value>Senior Lieutenant</value>
+  </data>
+  <data name="Rank_Soldier" xml:space="preserve">
+    <value>Soldier</value>
+  </data>
+  <data name="Rank_Spacer" xml:space="preserve">
+    <value>Spacer</value>
+  </data>
+  <data name="Rank_SquadronLeader" xml:space="preserve">
+    <value>Squadron Leader</value>
+  </data>
+  <data name="Rank_Supervisor" xml:space="preserve">
+    <value>Supervisor</value>
+  </data>
+  <data name="Rank_Surgeon" xml:space="preserve">
+    <value>Surgeon</value>
+  </data>
+  <data name="Rank_Trooper" xml:space="preserve">
+    <value>Trooper</value>
+  </data>
+  <data name="Rank_Veteran" xml:space="preserve">
+    <value>Veteran</value>
+  </data>
+  <data name="Rank_Wanderer" xml:space="preserve">
+    <value>Wanderer</value>
+  </data>
+  <data name="Rank_Warrior" xml:space="preserve">
+    <value>Warrior</value>
+  </data>
+  <data name="Rank_WingLeader" xml:space="preserve">
+    <value>Wing Leader</value>
+  </data>
+  <data name="Skill_Akhaeh" xml:space="preserve">
+    <value>Akhaeh</value>
+  </data>
+  <data name="Skill_EakhyasearHuntersRifle" xml:space="preserve">
+    <value>Eakhyasear (Hunters Rifle)</value>
+  </data>
+  <data name="Skill_Fierah" xml:space="preserve">
+    <value>Fierah</value>
+  </data>
+  <data name="Skill_GunCombat" xml:space="preserve">
+    <value>Gun Combat</value>
+  </data>
+  <data name="Skill_KhaifealateMachinePistol" xml:space="preserve">
+    <value>Khaifealate (Machine Pistol)</value>
+  </data>
+  <data name="Skill_KhaihtePistol" xml:space="preserve">
+    <value>Khaihte (Pistol)</value>
+  </data>
+  <data name="Skill_PersonalWeapons" xml:space="preserve">
+    <value>Personal Weapons</value>
+  </data>
+  <data name="Skill_Spear" xml:space="preserve">
+    <value>Spear</value>
+  </data>
+  <data name="Skill_TakhealLongRifle" xml:space="preserve">
+    <value>Takheal (Long Rifle)</value>
+  </data>
+  <data name="Skill_TakhestahLongPistol" xml:space="preserve">
+    <value>Takhestah (Long Pistol)</value>
+  </data>
+  <data name="Skill_TriluealikheLaserCarbine" xml:space="preserve">
+    <value>Triluealikhe (Laser Carbine)</value>
+  </data>
+  <data name="Skill_TrolitakhealLaserRifle" xml:space="preserve">
+    <value>Trolitakheal (Laser Rifle)</value>
+  </data>
+  <data name="Skill_UealikheCarbine" xml:space="preserve">
+    <value>Uealikhe (Carbine)</value>
+  </data>
+  <data name="Skill_YehealAutomaticRifle" xml:space="preserve">
+    <value>Yeheal (Automatic Rifle)</value>
+  </data>
+  <data name="Skill_Yurletya" xml:space="preserve">
+    <value>Yurletya</value>
+  </data>
+  <data name="Table_AdvancedServiceSkills" xml:space="preserve">
+    <value>Advanced Service Skills</value>
+  </data>
+  <data name="Table_Experience" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="Table_PersonalDevelopment" xml:space="preserve">
+    <value>Personal Development</value>
+  </data>
+  <data name="Table_ServiceSkills" xml:space="preserve">
+    <value>Service Skills</value>
+  </data>
+  <data name="Table_ServiceSkillsFemale" xml:space="preserve">
+    <value>Service Skills (Female)</value>
+  </data>
+  <data name="Table_ServiceSkillsMale" xml:space="preserve">
+    <value>Service Skills (Male)</value>
+  </data>
+</root>

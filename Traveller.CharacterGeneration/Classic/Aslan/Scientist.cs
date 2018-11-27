@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 {
     public class Scientist : Career
     {
         public Scientist()
         {
-            Name = "Scientist";
+            Name = Resources.Career_Scientist;
             hasRanks = false;
 
             enlistment = 6;
@@ -22,7 +18,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             var table = new SkillTable();
             SkillTables[0] = table;
-            table.Name = "Personal Development";
+            table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Edu;
             skills[1] = CharacterGeneration.SkillLibrary.Str;
@@ -33,7 +29,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[1] = table;
-            table.Name = "Service Skills";
+            table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Electronics;
             skills[1] = CharacterGeneration.SkillLibrary.Mechanical;
@@ -44,7 +40,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = "Advanced Service Skills";
+            table.Name = Resources.Table_AdvancedServiceSkills;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Electronics;
             skills[1] = CharacterGeneration.SkillLibrary.Electronics;
@@ -55,7 +51,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
 
             table = new SkillTable();
             SkillTables[3] = table;
-            table.Name = "Experience";
+            table.Name = Resources.Table_Experience;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.JackOfTrades;
             skills[1] = CharacterGeneration.SkillLibrary.Medic;
@@ -80,7 +76,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             Cash[5] = 40000;
             Cash[6] = 70000;
 
-            Ranks[0] = "Scientist";
+            Ranks[0] = Resources.Rank_Scientist;
         }
         protected override void CommsionSkill()
         {
