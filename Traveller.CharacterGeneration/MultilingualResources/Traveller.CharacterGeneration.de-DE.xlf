@@ -674,6 +674,10 @@
           <source>Human (Zhodani)</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Menschen (Zhodani)</target>
         </trans-unit>
+        <trans-unit id="Sex_Random" translate="yes" xml:space="preserve">
+          <source>Random</source>
+          <target state="new">Random</target>
+        </trans-unit>
       </group>
     </body>
   </file>

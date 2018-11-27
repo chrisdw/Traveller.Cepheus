@@ -61,7 +61,6 @@
             skills[4] = CharacterGeneration.SkillLibrary.DewClaw;
             skills[5] = CharacterGeneration.SkillLibrary.JackOfTrades;
 
-
             Material.Add(BenefitLibrary.LowPsg);
             Material.Add(BenefitLibrary.Int);
             Material.Add(BenefitLibrary.Edu);

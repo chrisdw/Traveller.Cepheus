@@ -10,9 +10,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
             TermSkills = 2;
 
             Array.Resize(ref skillTables, 8);
-            enlistment1attr = string.Empty;
-            enlistment2attr = string.Empty;
-            enlistment3attr = string.Empty;
 
             // Spacer tables
             var table = new SkillTable();

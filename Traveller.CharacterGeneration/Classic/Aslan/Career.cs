@@ -5,12 +5,16 @@
         public Career()
         {
             survival2attr = string.Empty;
+            enlistment1attr = string.Empty;
+            enlistment2attr = string.Empty;
+            enlistment3attr = string.Empty;
         }
 
         public override Character Owner { get => base.Owner;
             set 
             {
                 base.Owner = value;
+                Owner.Age = 16;
                 var ac = Culture as Aslan.Culture;
                 if (ac.ROPScore == 0)
                 {
@@ -49,7 +53,7 @@
         {
             Term += 1;
             TermsServed += 1;
-            Owner.Age += 4;
+            Owner.Age += 8;
             TermSkills = 2;
             if (dice.roll(2) < Owner.Profile.Edu.Value)
             {

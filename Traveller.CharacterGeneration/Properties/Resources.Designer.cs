@@ -22,7 +22,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("org.DownesWard.Traveller.CharacterGeneration.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Blade.
         /// </summary>
-        internal static string Benefit_Blade {
+        public static string Benefit_Blade {
             get {
                 return ResourceManager.GetString("Benefit_Blade", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Bow.
         /// </summary>
-        internal static string Benefit_Bow {
+        public static string Benefit_Bow {
             get {
                 return ResourceManager.GetString("Benefit_Bow", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Cash.
         /// </summary>
-        internal static string Benefit_Cash {
+        public static string Benefit_Cash {
             get {
                 return ResourceManager.GetString("Benefit_Cash", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Gun.
         /// </summary>
-        internal static string Benefit_Gun {
+        public static string Benefit_Gun {
             get {
                 return ResourceManager.GetString("Benefit_Gun", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to High Psg.
         /// </summary>
-        internal static string Benefit_HighPsg {
+        public static string Benefit_HighPsg {
             get {
                 return ResourceManager.GetString("Benefit_HighPsg", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Instruments.
         /// </summary>
-        internal static string Benefit_Instruments {
+        public static string Benefit_Instruments {
             get {
                 return ResourceManager.GetString("Benefit_Instruments", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Legion.
         /// </summary>
-        internal static string Benefit_Legion {
+        public static string Benefit_Legion {
             get {
                 return ResourceManager.GetString("Benefit_Legion", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Low Psg.
         /// </summary>
-        internal static string Benefit_LowPsg {
+        public static string Benefit_LowPsg {
             get {
                 return ResourceManager.GetString("Benefit_LowPsg", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Mid Psg.
         /// </summary>
-        internal static string Benefit_MidPsg {
+        public static string Benefit_MidPsg {
             get {
                 return ResourceManager.GetString("Benefit_MidPsg", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Nothing.
         /// </summary>
-        internal static string Benefit_Nothing {
+        public static string Benefit_Nothing {
             get {
                 return ResourceManager.GetString("Benefit_Nothing", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Retirement Pay.
         /// </summary>
-        internal static string Benefit_RetirementPay {
+        public static string Benefit_RetirementPay {
             get {
                 return ResourceManager.GetString("Benefit_RetirementPay", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Travellers.
         /// </summary>
-        internal static string Benefit_Travellers {
+        public static string Benefit_Travellers {
             get {
                 return ResourceManager.GetString("Benefit_Travellers", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Verbalization.
         /// </summary>
-        internal static string Benefit_Verbalization {
+        public static string Benefit_Verbalization {
             get {
                 return ResourceManager.GetString("Benefit_Verbalization", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Voucher.
         /// </summary>
-        internal static string Benefit_Voucher {
+        public static string Benefit_Voucher {
             get {
                 return ResourceManager.GetString("Benefit_Voucher", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Waldo Set.
         /// </summary>
-        internal static string Benefit_WaldoSet {
+        public static string Benefit_WaldoSet {
             get {
                 return ResourceManager.GetString("Benefit_WaldoSet", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Watch.
         /// </summary>
-        internal static string Benefit_Watch {
+        public static string Benefit_Watch {
             get {
                 return ResourceManager.GetString("Benefit_Watch", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Weapon.
         /// </summary>
-        internal static string Benefit_Weapon {
+        public static string Benefit_Weapon {
             get {
                 return ResourceManager.GetString("Benefit_Weapon", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Army.
         /// </summary>
-        internal static string Career_Army {
+        public static string Career_Army {
             get {
                 return ResourceManager.GetString("Career_Army", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Marines.
         /// </summary>
-        internal static string Career_Marines {
+        public static string Career_Marines {
             get {
                 return ResourceManager.GetString("Career_Marines", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Merchants.
         /// </summary>
-        internal static string Career_Merchants {
+        public static string Career_Merchants {
             get {
                 return ResourceManager.GetString("Career_Merchants", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Navy.
         /// </summary>
-        internal static string Career_Navy {
+        public static string Career_Navy {
             get {
                 return ResourceManager.GetString("Career_Navy", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Other.
         /// </summary>
-        internal static string Career_Other {
+        public static string Career_Other {
             get {
                 return ResourceManager.GetString("Career_Other", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Scouts.
         /// </summary>
-        internal static string Career_Scouts {
+        public static string Career_Scouts {
             get {
                 return ResourceManager.GetString("Career_Scouts", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to {0} reduced by {1} due to aging.
         /// </summary>
-        internal static string Msg_Aging {
+        public static string Msg_Aging {
             get {
                 return ResourceManager.GetString("Msg_Aging", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Not allowed to receive {0} value {1} as a benefit.
         /// </summary>
-        internal static string Msg_BenefitNotAllowed {
+        public static string Msg_BenefitNotAllowed {
             get {
                 return ResourceManager.GetString("Msg_BenefitNotAllowed", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Dismissed from service at end of term {0}.
         /// </summary>
-        internal static string Msg_Dismissed {
+        public static string Msg_Dismissed {
             get {
                 return ResourceManager.GetString("Msg_Dismissed", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enlistment in {0} refused at age {1}.
         /// </summary>
-        internal static string Msg_Enlist_Refused {
+        public static string Msg_Enlist_Refused {
             get {
                 return ResourceManager.GetString("Msg_Enlist_Refused", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enlisted in {0} at age {1}.
         /// </summary>
-        internal static string Msg_Enlist_Success {
+        public static string Msg_Enlist_Success {
             get {
                 return ResourceManager.GetString("Msg_Enlist_Success", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to You were ill for {0} months due to aging..
         /// </summary>
-        internal static string Msg_Ill {
+        public static string Msg_Ill {
             get {
                 return ResourceManager.GetString("Msg_Ill", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Forced to remain in {0} at end of term {1}.
         /// </summary>
-        internal static string Msg_MustRenlist {
+        public static string Msg_MustRenlist {
             get {
                 return ResourceManager.GetString("Msg_MustRenlist", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Received benefit {0} of value {1}.
         /// </summary>
-        internal static string Msg_RececivedBenefit {
+        public static string Msg_RececivedBenefit {
             get {
                 return ResourceManager.GetString("Msg_RececivedBenefit", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Received an uplift to {0} of value {1}.
         /// </summary>
-        internal static string Msg_ReceivedAttribute {
+        public static string Msg_ReceivedAttribute {
             get {
                 return ResourceManager.GetString("Msg_ReceivedAttribute", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Received skill {0} at level {1}.
         /// </summary>
-        internal static string Msg_ReceivedSkill {
+        public static string Msg_ReceivedSkill {
             get {
                 return ResourceManager.GetString("Msg_ReceivedSkill", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Re-enlistment refused at end of term {0}.
         /// </summary>
-        internal static string Msg_Refused {
+        public static string Msg_Refused {
             get {
                 return ResourceManager.GetString("Msg_Refused", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Left {0} at end of term {1}.
         /// </summary>
-        internal static string Msg_Renlist_Fail {
+        public static string Msg_Renlist_Fail {
             get {
                 return ResourceManager.GetString("Msg_Renlist_Fail", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Remained in {0} at end of term {1}.
         /// </summary>
-        internal static string Msg_Renlist_Success {
+        public static string Msg_Renlist_Success {
             get {
                 return ResourceManager.GetString("Msg_Renlist_Success", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Re-enlistment refused due to age at end of term {0}.
         /// </summary>
-        internal static string Msg_RenlistRefused {
+        public static string Msg_RenlistRefused {
             get {
                 return ResourceManager.GetString("Msg_RenlistRefused", resourceCulture);
             }
@@ -396,7 +396,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Female.
         /// </summary>
-        internal static string Sex_Female {
+        public static string Sex_Female {
             get {
                 return ResourceManager.GetString("Sex_Female", resourceCulture);
             }
@@ -405,16 +405,25 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Male.
         /// </summary>
-        internal static string Sex_Male {
+        public static string Sex_Male {
             get {
                 return ResourceManager.GetString("Sex_Male", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Random.
+        /// </summary>
+        public static string Sex_Random {
+            get {
+                return ResourceManager.GetString("Sex_Random", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Corsair.
         /// </summary>
-        internal static string Ship_Corsair {
+        public static string Ship_Corsair {
             get {
                 return ResourceManager.GetString("Ship_Corsair", resourceCulture);
             }
@@ -423,7 +432,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Lab Ship.
         /// </summary>
-        internal static string Ship_LabShip {
+        public static string Ship_LabShip {
             get {
                 return ResourceManager.GetString("Ship_LabShip", resourceCulture);
             }
@@ -432,7 +441,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Merchant.
         /// </summary>
-        internal static string Ship_Merchant {
+        public static string Ship_Merchant {
             get {
                 return ResourceManager.GetString("Ship_Merchant", resourceCulture);
             }
@@ -441,7 +450,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Safari Ship.
         /// </summary>
-        internal static string Ship_SafariShip {
+        public static string Ship_SafariShip {
             get {
                 return ResourceManager.GetString("Ship_SafariShip", resourceCulture);
             }
@@ -450,7 +459,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Scout.
         /// </summary>
-        internal static string Ship_Scout {
+        public static string Ship_Scout {
             get {
                 return ResourceManager.GetString("Ship_Scout", resourceCulture);
             }
@@ -459,7 +468,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Seeker.
         /// </summary>
-        internal static string Ship_Seeker {
+        public static string Ship_Seeker {
             get {
                 return ResourceManager.GetString("Ship_Seeker", resourceCulture);
             }
@@ -468,7 +477,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Trader.
         /// </summary>
-        internal static string Ship_Trader {
+        public static string Ship_Trader {
             get {
                 return ResourceManager.GetString("Ship_Trader", resourceCulture);
             }
@@ -477,7 +486,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Yacht.
         /// </summary>
-        internal static string Ship_Yacht {
+        public static string Ship_Yacht {
             get {
                 return ResourceManager.GetString("Ship_Yacht", resourceCulture);
             }
@@ -486,7 +495,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Admin.
         /// </summary>
-        internal static string Skill_Admin {
+        public static string Skill_Admin {
             get {
                 return ResourceManager.GetString("Skill_Admin", resourceCulture);
             }
@@ -495,7 +504,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Aircraft.
         /// </summary>
-        internal static string Skill_Aircraft {
+        public static string Skill_Aircraft {
             get {
                 return ResourceManager.GetString("Skill_Aircraft", resourceCulture);
             }
@@ -504,7 +513,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Air/Raft.
         /// </summary>
-        internal static string Skill_AirRaft {
+        public static string Skill_AirRaft {
             get {
                 return ResourceManager.GetString("Skill_AirRaft", resourceCulture);
             }
@@ -513,7 +522,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to ATV.
         /// </summary>
-        internal static string Skill_ATV {
+        public static string Skill_ATV {
             get {
                 return ResourceManager.GetString("Skill_ATV", resourceCulture);
             }
@@ -522,7 +531,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Automatic Pistol.
         /// </summary>
-        internal static string Skill_AutomaticPistol {
+        public static string Skill_AutomaticPistol {
             get {
                 return ResourceManager.GetString("Skill_AutomaticPistol", resourceCulture);
             }
@@ -531,7 +540,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Automatic Rifle.
         /// </summary>
-        internal static string Skill_AutomaticRifle {
+        public static string Skill_AutomaticRifle {
             get {
                 return ResourceManager.GetString("Skill_AutomaticRifle", resourceCulture);
             }
@@ -540,7 +549,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Awareness.
         /// </summary>
-        internal static string Skill_Awareness {
+        public static string Skill_Awareness {
             get {
                 return ResourceManager.GetString("Skill_Awareness", resourceCulture);
             }
@@ -549,7 +558,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Battle Dress.
         /// </summary>
-        internal static string Skill_BattleDress {
+        public static string Skill_BattleDress {
             get {
                 return ResourceManager.GetString("Skill_BattleDress", resourceCulture);
             }
@@ -558,7 +567,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Bayonet.
         /// </summary>
-        internal static string Skill_Bayonet {
+        public static string Skill_Bayonet {
             get {
                 return ResourceManager.GetString("Skill_Bayonet", resourceCulture);
             }
@@ -567,7 +576,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Blade.
         /// </summary>
-        internal static string Skill_Blade {
+        public static string Skill_Blade {
             get {
                 return ResourceManager.GetString("Skill_Blade", resourceCulture);
             }
@@ -576,7 +585,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Blade Combat.
         /// </summary>
-        internal static string Skill_BladeCombat {
+        public static string Skill_BladeCombat {
             get {
                 return ResourceManager.GetString("Skill_BladeCombat", resourceCulture);
             }
@@ -585,7 +594,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Body Pistol.
         /// </summary>
-        internal static string Skill_BodyPistol {
+        public static string Skill_BodyPistol {
             get {
                 return ResourceManager.GetString("Skill_BodyPistol", resourceCulture);
             }
@@ -594,7 +603,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Bow Combat.
         /// </summary>
-        internal static string Skill_BowCombat {
+        public static string Skill_BowCombat {
             get {
                 return ResourceManager.GetString("Skill_BowCombat", resourceCulture);
             }
@@ -603,7 +612,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Brawling.
         /// </summary>
-        internal static string Skill_Brawling {
+        public static string Skill_Brawling {
             get {
                 return ResourceManager.GetString("Skill_Brawling", resourceCulture);
             }
@@ -612,7 +621,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Bribery.
         /// </summary>
-        internal static string Skill_Bribery {
+        public static string Skill_Bribery {
             get {
                 return ResourceManager.GetString("Skill_Bribery", resourceCulture);
             }
@@ -621,7 +630,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Broadsword.
         /// </summary>
-        internal static string Skill_Broadsword {
+        public static string Skill_Broadsword {
             get {
                 return ResourceManager.GetString("Skill_Broadsword", resourceCulture);
             }
@@ -630,7 +639,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Broker.
         /// </summary>
-        internal static string Skill_Broker {
+        public static string Skill_Broker {
             get {
                 return ResourceManager.GetString("Skill_Broker", resourceCulture);
             }
@@ -639,7 +648,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Carbine.
         /// </summary>
-        internal static string Skill_Carbine {
+        public static string Skill_Carbine {
             get {
                 return ResourceManager.GetString("Skill_Carbine", resourceCulture);
             }
@@ -648,7 +657,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Carousing.
         /// </summary>
-        internal static string Skill_Carousing {
+        public static string Skill_Carousing {
             get {
                 return ResourceManager.GetString("Skill_Carousing", resourceCulture);
             }
@@ -657,7 +666,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Clairvoyance.
         /// </summary>
-        internal static string Skill_Clairvoyance {
+        public static string Skill_Clairvoyance {
             get {
                 return ResourceManager.GetString("Skill_Clairvoyance", resourceCulture);
             }
@@ -666,7 +675,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Combat Engineering.
         /// </summary>
-        internal static string Skill_CombatEngineering {
+        public static string Skill_CombatEngineering {
             get {
                 return ResourceManager.GetString("Skill_CombatEngineering", resourceCulture);
             }
@@ -675,7 +684,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Communications.
         /// </summary>
-        internal static string Skill_Communications {
+        public static string Skill_Communications {
             get {
                 return ResourceManager.GetString("Skill_Communications", resourceCulture);
             }
@@ -684,7 +693,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Computer.
         /// </summary>
-        internal static string Skill_Computer {
+        public static string Skill_Computer {
             get {
                 return ResourceManager.GetString("Skill_Computer", resourceCulture);
             }
@@ -693,7 +702,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Cudgel.
         /// </summary>
-        internal static string Skill_Cudgel {
+        public static string Skill_Cudgel {
             get {
                 return ResourceManager.GetString("Skill_Cudgel", resourceCulture);
             }
@@ -702,7 +711,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Cutlass.
         /// </summary>
-        internal static string Skill_Cutlass {
+        public static string Skill_Cutlass {
             get {
                 return ResourceManager.GetString("Skill_Cutlass", resourceCulture);
             }
@@ -711,7 +720,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Dagger.
         /// </summary>
-        internal static string Skill_Dagger {
+        public static string Skill_Dagger {
             get {
                 return ResourceManager.GetString("Skill_Dagger", resourceCulture);
             }
@@ -720,7 +729,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Demolitions.
         /// </summary>
-        internal static string Skill_Demolitions {
+        public static string Skill_Demolitions {
             get {
                 return ResourceManager.GetString("Skill_Demolitions", resourceCulture);
             }
@@ -729,7 +738,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Dew Claw.
         /// </summary>
-        internal static string Skill_DewClaw {
+        public static string Skill_DewClaw {
             get {
                 return ResourceManager.GetString("Skill_DewClaw", resourceCulture);
             }
@@ -738,7 +747,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Electronics.
         /// </summary>
-        internal static string Skill_Electronics {
+        public static string Skill_Electronics {
             get {
                 return ResourceManager.GetString("Skill_Electronics", resourceCulture);
             }
@@ -747,7 +756,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Engineering.
         /// </summary>
-        internal static string Skill_Engineering {
+        public static string Skill_Engineering {
             get {
                 return ResourceManager.GetString("Skill_Engineering", resourceCulture);
             }
@@ -756,7 +765,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Foil.
         /// </summary>
-        internal static string Skill_Foil {
+        public static string Skill_Foil {
             get {
                 return ResourceManager.GetString("Skill_Foil", resourceCulture);
             }
@@ -765,7 +774,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Forgery.
         /// </summary>
-        internal static string Skill_Forgery {
+        public static string Skill_Forgery {
             get {
                 return ResourceManager.GetString("Skill_Forgery", resourceCulture);
             }
@@ -774,7 +783,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Forward Observer.
         /// </summary>
-        internal static string Skill_ForwardObserver {
+        public static string Skill_ForwardObserver {
             get {
                 return ResourceManager.GetString("Skill_ForwardObserver", resourceCulture);
             }
@@ -783,7 +792,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Gambling.
         /// </summary>
-        internal static string Skill_Gambling {
+        public static string Skill_Gambling {
             get {
                 return ResourceManager.GetString("Skill_Gambling", resourceCulture);
             }
@@ -792,7 +801,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Gravitics.
         /// </summary>
-        internal static string Skill_Gravitics {
+        public static string Skill_Gravitics {
             get {
                 return ResourceManager.GetString("Skill_Gravitics", resourceCulture);
             }
@@ -801,7 +810,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Grav Vehicle.
         /// </summary>
-        internal static string Skill_GravVehicle {
+        public static string Skill_GravVehicle {
             get {
                 return ResourceManager.GetString("Skill_GravVehicle", resourceCulture);
             }
@@ -810,7 +819,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Ground Vehicle.
         /// </summary>
-        internal static string Skill_GroundVehicle {
+        public static string Skill_GroundVehicle {
             get {
                 return ResourceManager.GetString("Skill_GroundVehicle", resourceCulture);
             }
@@ -819,7 +828,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Gun Combat.
         /// </summary>
-        internal static string Skill_GunCombat {
+        public static string Skill_GunCombat {
             get {
                 return ResourceManager.GetString("Skill_GunCombat", resourceCulture);
             }
@@ -828,7 +837,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Gunnery.
         /// </summary>
-        internal static string Skill_Gunnery {
+        public static string Skill_Gunnery {
             get {
                 return ResourceManager.GetString("Skill_Gunnery", resourceCulture);
             }
@@ -837,7 +846,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Halberd.
         /// </summary>
-        internal static string Skill_Halberd {
+        public static string Skill_Halberd {
             get {
                 return ResourceManager.GetString("Skill_Halberd", resourceCulture);
             }
@@ -846,7 +855,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Helicopters.
         /// </summary>
-        internal static string Skill_Helicopters {
+        public static string Skill_Helicopters {
             get {
                 return ResourceManager.GetString("Skill_Helicopters", resourceCulture);
             }
@@ -855,7 +864,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Herding.
         /// </summary>
-        internal static string Skill_Herding {
+        public static string Skill_Herding {
             get {
                 return ResourceManager.GetString("Skill_Herding", resourceCulture);
             }
@@ -864,7 +873,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hovercraft.
         /// </summary>
-        internal static string Skill_Hovercraft {
+        public static string Skill_Hovercraft {
             get {
                 return ResourceManager.GetString("Skill_Hovercraft", resourceCulture);
             }
@@ -873,7 +882,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Hunting.
         /// </summary>
-        internal static string Skill_Hunting {
+        public static string Skill_Hunting {
             get {
                 return ResourceManager.GetString("Skill_Hunting", resourceCulture);
             }
@@ -882,7 +891,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Independance.
         /// </summary>
-        internal static string Skill_Independance {
+        public static string Skill_Independance {
             get {
                 return ResourceManager.GetString("Skill_Independance", resourceCulture);
             }
@@ -891,7 +900,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Infighting.
         /// </summary>
-        internal static string Skill_Infighting {
+        public static string Skill_Infighting {
             get {
                 return ResourceManager.GetString("Skill_Infighting", resourceCulture);
             }
@@ -900,7 +909,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Instruction.
         /// </summary>
-        internal static string Skill_Instruction {
+        public static string Skill_Instruction {
             get {
                 return ResourceManager.GetString("Skill_Instruction", resourceCulture);
             }
@@ -909,7 +918,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Interrogation.
         /// </summary>
-        internal static string Skill_Interrogation {
+        public static string Skill_Interrogation {
             get {
                 return ResourceManager.GetString("Skill_Interrogation", resourceCulture);
             }
@@ -918,7 +927,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Jack-Of-Trades.
         /// </summary>
-        internal static string Skill_JackOfTrades {
+        public static string Skill_JackOfTrades {
             get {
                 return ResourceManager.GetString("Skill_JackOfTrades", resourceCulture);
             }
@@ -927,7 +936,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Jet Propelled Fixed Wing Aircraft.
         /// </summary>
-        internal static string Skill_JetAircraft {
+        public static string Skill_JetAircraft {
             get {
                 return ResourceManager.GetString("Skill_JetAircraft", resourceCulture);
             }
@@ -936,7 +945,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Large Watercraft.
         /// </summary>
-        internal static string Skill_LargeWatercraft {
+        public static string Skill_LargeWatercraft {
             get {
                 return ResourceManager.GetString("Skill_LargeWatercraft", resourceCulture);
             }
@@ -945,7 +954,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Laser Carbine.
         /// </summary>
-        internal static string Skill_LaserCarbine {
+        public static string Skill_LaserCarbine {
             get {
                 return ResourceManager.GetString("Skill_LaserCarbine", resourceCulture);
             }
@@ -954,7 +963,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Laser Rifle.
         /// </summary>
-        internal static string Skill_LaserRifle {
+        public static string Skill_LaserRifle {
             get {
                 return ResourceManager.GetString("Skill_LaserRifle", resourceCulture);
             }
@@ -963,7 +972,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Leader.
         /// </summary>
-        internal static string Skill_Leader {
+        public static string Skill_Leader {
             get {
                 return ResourceManager.GetString("Skill_Leader", resourceCulture);
             }
@@ -972,7 +981,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Liason.
         /// </summary>
-        internal static string Skill_Liason {
+        public static string Skill_Liason {
             get {
                 return ResourceManager.GetString("Skill_Liason", resourceCulture);
             }
@@ -981,7 +990,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Long Bow.
         /// </summary>
-        internal static string Skill_LongBow {
+        public static string Skill_LongBow {
             get {
                 return ResourceManager.GetString("Skill_LongBow", resourceCulture);
             }
@@ -990,7 +999,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Lighter than Air Craft.
         /// </summary>
-        internal static string Skill_LTA {
+        public static string Skill_LTA {
             get {
                 return ResourceManager.GetString("Skill_LTA", resourceCulture);
             }
@@ -999,7 +1008,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Mechanical.
         /// </summary>
-        internal static string Skill_Mechanical {
+        public static string Skill_Mechanical {
             get {
                 return ResourceManager.GetString("Skill_Mechanical", resourceCulture);
             }
@@ -1008,7 +1017,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Medic.
         /// </summary>
-        internal static string Skill_Medic {
+        public static string Skill_Medic {
             get {
                 return ResourceManager.GetString("Skill_Medic", resourceCulture);
             }
@@ -1017,7 +1026,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Military Crossbow.
         /// </summary>
-        internal static string Skill_MilitaryCrossbow {
+        public static string Skill_MilitaryCrossbow {
             get {
                 return ResourceManager.GetString("Skill_MilitaryCrossbow", resourceCulture);
             }
@@ -1026,7 +1035,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Navigation.
         /// </summary>
-        internal static string Skill_Navigation {
+        public static string Skill_Navigation {
             get {
                 return ResourceManager.GetString("Skill_Navigation", resourceCulture);
             }
@@ -1035,7 +1044,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Non-verbal Communication.
         /// </summary>
-        internal static string Skill_NonVerbalComms {
+        public static string Skill_NonVerbalComms {
             get {
                 return ResourceManager.GetString("Skill_NonVerbalComms", resourceCulture);
             }
@@ -1044,7 +1053,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Pike.
         /// </summary>
-        internal static string Skill_Pike {
+        public static string Skill_Pike {
             get {
                 return ResourceManager.GetString("Skill_Pike", resourceCulture);
             }
@@ -1053,7 +1062,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Pilot.
         /// </summary>
-        internal static string Skill_Pilot {
+        public static string Skill_Pilot {
             get {
                 return ResourceManager.GetString("Skill_Pilot", resourceCulture);
             }
@@ -1062,7 +1071,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Prole.
         /// </summary>
-        internal static string Skill_Prole {
+        public static string Skill_Prole {
             get {
                 return ResourceManager.GetString("Skill_Prole", resourceCulture);
             }
@@ -1071,7 +1080,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Propeller Driven Fixed Wing Aircraft.
         /// </summary>
-        internal static string Skill_PropellerAircraft {
+        public static string Skill_PropellerAircraft {
             get {
                 return ResourceManager.GetString("Skill_PropellerAircraft", resourceCulture);
             }
@@ -1080,7 +1089,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Prospecting.
         /// </summary>
-        internal static string Skill_Prospecting {
+        public static string Skill_Prospecting {
             get {
                 return ResourceManager.GetString("Skill_Prospecting", resourceCulture);
             }
@@ -1089,7 +1098,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Psychology.
         /// </summary>
-        internal static string Skill_Psychology {
+        public static string Skill_Psychology {
             get {
                 return ResourceManager.GetString("Skill_Psychology", resourceCulture);
             }
@@ -1098,7 +1107,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Recon.
         /// </summary>
-        internal static string Skill_Recon {
+        public static string Skill_Recon {
             get {
                 return ResourceManager.GetString("Skill_Recon", resourceCulture);
             }
@@ -1107,7 +1116,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Recruiting.
         /// </summary>
-        internal static string Skill_Recruiting {
+        public static string Skill_Recruiting {
             get {
                 return ResourceManager.GetString("Skill_Recruiting", resourceCulture);
             }
@@ -1116,7 +1125,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Repeating Crossbow.
         /// </summary>
-        internal static string Skill_RepeatingCrossbow {
+        public static string Skill_RepeatingCrossbow {
             get {
                 return ResourceManager.GetString("Skill_RepeatingCrossbow", resourceCulture);
             }
@@ -1125,7 +1134,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Revolver.
         /// </summary>
-        internal static string Skill_Revolver {
+        public static string Skill_Revolver {
             get {
                 return ResourceManager.GetString("Skill_Revolver", resourceCulture);
             }
@@ -1134,7 +1143,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Rifle.
         /// </summary>
-        internal static string Skill_Rifle {
+        public static string Skill_Rifle {
             get {
                 return ResourceManager.GetString("Skill_Rifle", resourceCulture);
             }
@@ -1143,7 +1152,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Ships Boat.
         /// </summary>
-        internal static string Skill_ShipsBoat {
+        public static string Skill_ShipsBoat {
             get {
                 return ResourceManager.GetString("Skill_ShipsBoat", resourceCulture);
             }
@@ -1152,7 +1161,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Ship Tactics.
         /// </summary>
-        internal static string Skill_ShipTactics {
+        public static string Skill_ShipTactics {
             get {
                 return ResourceManager.GetString("Skill_ShipTactics", resourceCulture);
             }
@@ -1161,7 +1170,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Short Bow.
         /// </summary>
-        internal static string Skill_ShortBow {
+        public static string Skill_ShortBow {
             get {
                 return ResourceManager.GetString("Skill_ShortBow", resourceCulture);
             }
@@ -1170,7 +1179,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Shotgun.
         /// </summary>
-        internal static string Skill_Shotgun {
+        public static string Skill_Shotgun {
             get {
                 return ResourceManager.GetString("Skill_Shotgun", resourceCulture);
             }
@@ -1179,7 +1188,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Sling.
         /// </summary>
-        internal static string Skill_Sling {
+        public static string Skill_Sling {
             get {
                 return ResourceManager.GetString("Skill_Sling", resourceCulture);
             }
@@ -1188,7 +1197,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Small Watercraft.
         /// </summary>
-        internal static string Skill_SmallWatercraft {
+        public static string Skill_SmallWatercraft {
             get {
                 return ResourceManager.GetString("Skill_SmallWatercraft", resourceCulture);
             }
@@ -1197,7 +1206,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Special.
         /// </summary>
-        internal static string Skill_Special {
+        public static string Skill_Special {
             get {
                 return ResourceManager.GetString("Skill_Special", resourceCulture);
             }
@@ -1206,7 +1215,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Sporting Crossbow.
         /// </summary>
-        internal static string Skill_SportingCrossbow {
+        public static string Skill_SportingCrossbow {
             get {
                 return ResourceManager.GetString("Skill_SportingCrossbow", resourceCulture);
             }
@@ -1215,7 +1224,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Steward.
         /// </summary>
-        internal static string Skill_Steward {
+        public static string Skill_Steward {
             get {
                 return ResourceManager.GetString("Skill_Steward", resourceCulture);
             }
@@ -1224,7 +1233,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Streetwise.
         /// </summary>
-        internal static string Skill_Streetwise {
+        public static string Skill_Streetwise {
             get {
                 return ResourceManager.GetString("Skill_Streetwise", resourceCulture);
             }
@@ -1233,7 +1242,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Submachine Gun.
         /// </summary>
-        internal static string Skill_SubmachineGun {
+        public static string Skill_SubmachineGun {
             get {
                 return ResourceManager.GetString("Skill_SubmachineGun", resourceCulture);
             }
@@ -1242,7 +1251,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Submersibles.
         /// </summary>
-        internal static string Skill_Submersibles {
+        public static string Skill_Submersibles {
             get {
                 return ResourceManager.GetString("Skill_Submersibles", resourceCulture);
             }
@@ -1251,7 +1260,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Survival.
         /// </summary>
-        internal static string Skill_Survival {
+        public static string Skill_Survival {
             get {
                 return ResourceManager.GetString("Skill_Survival", resourceCulture);
             }
@@ -1260,7 +1269,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Sword.
         /// </summary>
-        internal static string Skill_Sword {
+        public static string Skill_Sword {
             get {
                 return ResourceManager.GetString("Skill_Sword", resourceCulture);
             }
@@ -1269,7 +1278,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Tactics.
         /// </summary>
-        internal static string Skill_Tactics {
+        public static string Skill_Tactics {
             get {
                 return ResourceManager.GetString("Skill_Tactics", resourceCulture);
             }
@@ -1278,7 +1287,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Talent.
         /// </summary>
-        internal static string Skill_Talent {
+        public static string Skill_Talent {
             get {
                 return ResourceManager.GetString("Skill_Talent", resourceCulture);
             }
@@ -1287,7 +1296,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Telekinesis.
         /// </summary>
-        internal static string Skill_Telekinesis {
+        public static string Skill_Telekinesis {
             get {
                 return ResourceManager.GetString("Skill_Telekinesis", resourceCulture);
             }
@@ -1296,7 +1305,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Telepathy.
         /// </summary>
-        internal static string Skill_Telepathy {
+        public static string Skill_Telepathy {
             get {
                 return ResourceManager.GetString("Skill_Telepathy", resourceCulture);
             }
@@ -1305,7 +1314,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Teleportation.
         /// </summary>
-        internal static string Skill_Teleportation {
+        public static string Skill_Teleportation {
             get {
                 return ResourceManager.GetString("Skill_Teleportation", resourceCulture);
             }
@@ -1314,7 +1323,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Tolerance.
         /// </summary>
-        internal static string Skill_Tolerance {
+        public static string Skill_Tolerance {
             get {
                 return ResourceManager.GetString("Skill_Tolerance", resourceCulture);
             }
@@ -1323,7 +1332,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Tracked Vehicle.
         /// </summary>
-        internal static string Skill_TrackedVehicle {
+        public static string Skill_TrackedVehicle {
             get {
                 return ResourceManager.GetString("Skill_TrackedVehicle", resourceCulture);
             }
@@ -1332,7 +1341,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Trader.
         /// </summary>
-        internal static string Skill_Trader {
+        public static string Skill_Trader {
             get {
                 return ResourceManager.GetString("Skill_Trader", resourceCulture);
             }
@@ -1341,7 +1350,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Vacc Suit.
         /// </summary>
-        internal static string Skill_VaccSuit {
+        public static string Skill_VaccSuit {
             get {
                 return ResourceManager.GetString("Skill_VaccSuit", resourceCulture);
             }
@@ -1350,7 +1359,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Vehicle.
         /// </summary>
-        internal static string Skill_Vehicle {
+        public static string Skill_Vehicle {
             get {
                 return ResourceManager.GetString("Skill_Vehicle", resourceCulture);
             }
@@ -1359,7 +1368,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Verbalization.
         /// </summary>
-        internal static string Skill_Verbalization {
+        public static string Skill_Verbalization {
             get {
                 return ResourceManager.GetString("Skill_Verbalization", resourceCulture);
             }
@@ -1368,7 +1377,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Waldo Ops.
         /// </summary>
-        internal static string Skill_WaldoOps {
+        public static string Skill_WaldoOps {
             get {
                 return ResourceManager.GetString("Skill_WaldoOps", resourceCulture);
             }
@@ -1377,7 +1386,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Watercraft.
         /// </summary>
-        internal static string Skill_Watercraft {
+        public static string Skill_Watercraft {
             get {
                 return ResourceManager.GetString("Skill_Watercraft", resourceCulture);
             }
@@ -1386,7 +1395,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Wheeled Vehicle.
         /// </summary>
-        internal static string Skill_WheeledVehicle {
+        public static string Skill_WheeledVehicle {
             get {
                 return ResourceManager.GetString("Skill_WheeledVehicle", resourceCulture);
             }
@@ -1395,7 +1404,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Zero-G Combat.
         /// </summary>
-        internal static string Skill_ZeroGCombat {
+        public static string Skill_ZeroGCombat {
             get {
                 return ResourceManager.GetString("Skill_ZeroGCombat", resourceCulture);
             }
@@ -1404,7 +1413,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Ael Yael.
         /// </summary>
-        internal static string Species_AelYael {
+        public static string Species_AelYael {
             get {
                 return ResourceManager.GetString("Species_AelYael", resourceCulture);
             }
@@ -1413,7 +1422,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Aslan.
         /// </summary>
-        internal static string Species_Aslan {
+        public static string Species_Aslan {
             get {
                 return ResourceManager.GetString("Species_Aslan", resourceCulture);
             }
@@ -1422,7 +1431,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Bwap.
         /// </summary>
-        internal static string Species_Bwap {
+        public static string Species_Bwap {
             get {
                 return ResourceManager.GetString("Species_Bwap", resourceCulture);
             }
@@ -1431,7 +1440,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Dolphin.
         /// </summary>
-        internal static string Species_Dolphin {
+        public static string Species_Dolphin {
             get {
                 return ResourceManager.GetString("Species_Dolphin", resourceCulture);
             }
@@ -1440,7 +1449,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Human.
         /// </summary>
-        internal static string Species_Human {
+        public static string Species_Human {
             get {
                 return ResourceManager.GetString("Species_Human", resourceCulture);
             }
@@ -1449,7 +1458,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Human (Darrian).
         /// </summary>
-        internal static string Species_Human_Darrian {
+        public static string Species_Human_Darrian {
             get {
                 return ResourceManager.GetString("Species_Human_Darrian", resourceCulture);
             }
@@ -1458,7 +1467,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Human (Dynchia).
         /// </summary>
-        internal static string Species_Human_Dynchia {
+        public static string Species_Human_Dynchia {
             get {
                 return ResourceManager.GetString("Species_Human_Dynchia", resourceCulture);
             }
@@ -1467,7 +1476,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Human (Solomani).
         /// </summary>
-        internal static string Species_Human_Solomani {
+        public static string Species_Human_Solomani {
             get {
                 return ResourceManager.GetString("Species_Human_Solomani", resourceCulture);
             }
@@ -1476,7 +1485,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Human (Sword Worlds).
         /// </summary>
-        internal static string Species_Human_SwordWorlds {
+        public static string Species_Human_SwordWorlds {
             get {
                 return ResourceManager.GetString("Species_Human_SwordWorlds", resourceCulture);
             }
@@ -1485,7 +1494,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Human (Zhodani).
         /// </summary>
-        internal static string Species_Human_Zhodani {
+        public static string Species_Human_Zhodani {
             get {
                 return ResourceManager.GetString("Species_Human_Zhodani", resourceCulture);
             }
@@ -1494,7 +1503,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Vargr.
         /// </summary>
-        internal static string Species_Vargr {
+        public static string Species_Vargr {
             get {
                 return ResourceManager.GetString("Species_Vargr", resourceCulture);
             }
@@ -1503,7 +1512,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Vegan.
         /// </summary>
-        internal static string Species_Vegan {
+        public static string Species_Vegan {
             get {
                 return ResourceManager.GetString("Species_Vegan", resourceCulture);
             }
@@ -1512,7 +1521,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Virushi.
         /// </summary>
-        internal static string Species_Virushi {
+        public static string Species_Virushi {
             get {
                 return ResourceManager.GetString("Species_Virushi", resourceCulture);
             }
@@ -1521,7 +1530,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Advaned Eduation.
         /// </summary>
-        internal static string Table_AdvancedEducation {
+        public static string Table_AdvancedEducation {
             get {
                 return ResourceManager.GetString("Table_AdvancedEducation", resourceCulture);
             }
@@ -1530,7 +1539,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Education.
         /// </summary>
-        internal static string Table_Education {
+        public static string Table_Education {
             get {
                 return ResourceManager.GetString("Table_Education", resourceCulture);
             }
@@ -1539,7 +1548,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Noble/Intendant Education.
         /// </summary>
-        internal static string Table_NobleIntendant {
+        public static string Table_NobleIntendant {
             get {
                 return ResourceManager.GetString("Table_NobleIntendant", resourceCulture);
             }
@@ -1548,7 +1557,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Personal Development.
         /// </summary>
-        internal static string Table_PersonalDevelopment {
+        public static string Table_PersonalDevelopment {
             get {
                 return ResourceManager.GetString("Table_PersonalDevelopment", resourceCulture);
             }
@@ -1557,7 +1566,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Service Skills.
         /// </summary>
-        internal static string Table_ServiceSkills {
+        public static string Table_ServiceSkills {
             get {
                 return ResourceManager.GetString("Table_ServiceSkills", resourceCulture);
             }

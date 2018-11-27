@@ -127,6 +127,20 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
                     return new Pirate { Culture = this };
                 case CharacterGeneration.Career.CareerType.Aslan_Outcast:
                     return new Outcast { Culture = this };
+                case CharacterGeneration.Career.CareerType.Aslan_Management:
+                    return new Management { Culture = this };
+                case CharacterGeneration.Career.CareerType.Aslan_Wanderer:
+                    return new Wanderer { Culture = this };
+                case CharacterGeneration.Career.CareerType.Aslan_Scientist:
+                    return new Scientist { Culture = this };
+                case CharacterGeneration.Career.CareerType.Aslan_Envoy:
+                    return new Envoy { Culture = this };
+                case CharacterGeneration.Career.CareerType.Aslan_Medic:
+                    return new Medic { Culture = this };
+                case CharacterGeneration.Career.CareerType.Aslan_Flyer:
+                    return new Flyer { Culture = this };
+                case CharacterGeneration.Career.CareerType.Aslan_Belter:
+                    return new Belter { Culture = this };
                 default:
                     return new Space { Culture = this, Officer = false };
             }
@@ -172,7 +186,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Aslan
         public int TableModifier(Character character, CharacterGeneration.Career career, SkillTable table)
         {
             if (career.Name.Equals("Space") || career.Name.Equals("Military") || career.Name.Equals("Outcast")
-                || career.Name.Equals("Management"))
+                || career.Name.Equals("Management") || career.Name.Equals("Wanderer"))
             {
                 if (table.Name.Equals("Personal Development") || table.Name.Equals("Service Skills"))
                 {

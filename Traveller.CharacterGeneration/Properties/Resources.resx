@@ -618,4 +618,7 @@
   <data name="Species_Human_Zhodani" xml:space="preserve">
     <value>Human (Zhodani)</value>
   </data>
+  <data name="Sex_Random" xml:space="preserve">
+    <value>Random</value>
+  </data>
 </root>

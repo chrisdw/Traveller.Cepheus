@@ -8,12 +8,10 @@
             TermSkills = 2;
 
             enlistment = 8;
-            enlistment1attr = string.Empty;
-            enlistment2attr = string.Empty;
-            enlistment3attr = string.Empty;
+
             survival = 9;
-            survival2attr = "INT";
-            survival2val = 8;
+            survival3attr = "INT";
+            survival3val = 8;
             position = 9;
             position1attr = "STR";
             position1val = 10;
@@ -67,7 +65,6 @@
             skills[3] = CharacterGeneration.SkillLibrary.VaccSuit;
             skills[4] = CharacterGeneration.SkillLibrary.JackOfTrades;
             skills[5] = CharacterGeneration.SkillLibrary.Streetwise;
-
 
             Material.Add(BenefitLibrary.LowPsg);
             Material.Add(BenefitLibrary.Int);

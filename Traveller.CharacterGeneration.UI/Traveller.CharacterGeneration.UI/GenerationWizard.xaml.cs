@@ -271,9 +271,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             }
             switch (species)
             {
+                case Character.Species.Aslan:
+                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Male);
+                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Female);
+                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Random);
+                    break;
                 default:
-                    Sexes.Add("Male");
-                    Sexes.Add("Female");
+                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Male);
+                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Female);
                     break;
             }
         }
