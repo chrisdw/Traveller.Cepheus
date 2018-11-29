@@ -85,12 +85,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
         protected override void EnlistSkill()
         {
-            throw new NotImplementedException();
+            Owner.AddSkill(SkillLibrary.Athletics);
         }
 
         protected override void RankSkill()
         {
-            Owner.AddSkill(SkillLibrary.Athletics);
+            
         }
     }
 }
