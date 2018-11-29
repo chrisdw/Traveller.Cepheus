@@ -73,7 +73,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Athlete,
             Cepheus_Aerospace_Defence,
             Cepheus_Drifter,
-            Cepheus_Marine
+            Cepheus_Marine,
+            Cepheus_Maritime_Defence
         }
 
         [Flags]

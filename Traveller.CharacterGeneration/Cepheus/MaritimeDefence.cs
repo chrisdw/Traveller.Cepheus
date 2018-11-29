@@ -4,19 +4,19 @@ using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
-    public class AerospaceDefence : Career
+    public class MaritimeDefence : Career
     {
-        public AerospaceDefence()
+        public MaritimeDefence()
         {
-            Name = "Aerospace Defence";
+            Name = "Maritime Defence";
             hasRanks = true;
 
             enlistment = 5;
             enlistmentattr = "END";
             survival = 5;
-            survivalattr = "DEX";
+            survivalattr = "END";
             position = 6;
-            positionattr = "EDU";
+            positionattr = "INT";
             promotion = 7;
             promotionattr = "EDU";
             reenlist = 5;
@@ -58,47 +58,46 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[2] = SkillLibrary.Gunnery;
             skills[3] = SkillLibrary.MeleeCombat;
             skills[4] = CharacterGeneration.SkillLibrary.Survival;
-            skills[5] = SkillLibrary.Aircraft;
+            skills[5] = SkillLibrary.Watercraft;
 
             table = new SkillTable();
             SkillTables[2] = table;
             table.Name = Resources.Table_Education;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Communications;
-            skills[1] = CharacterGeneration.SkillLibrary.Computer;
-            skills[2] = CharacterGeneration.SkillLibrary.Electronics;
-            skills[3] = SkillLibrary.Gunnery;
+            skills[1] = CharacterGeneration.SkillLibrary.Electronics;
+            skills[2] = SkillLibrary.GunCombat;
+            skills[3] = CharacterGeneration.SkillLibrary.Demolitions;
             skills[4] = CharacterGeneration.SkillLibrary.Recon;
-            skills[5] = CharacterGeneration.SkillLibrary.Pilot;
+            skills[5] = SkillLibrary.Watercraft;
 
             table = new SkillTable();
             SkillTables[3] = table;
             table.Name = Resources.Table_AdvancedEducation;
             skills = table.Skills;
             skills[0] = SkillLibrary.Advocate;
-            skills[1] = CharacterGeneration.SkillLibrary.Gravitics;
+            skills[1] = CharacterGeneration.SkillLibrary.Computer;
             skills[2] = CharacterGeneration.SkillLibrary.JackOfTrades;
             skills[3] = CharacterGeneration.SkillLibrary.Medic;
             skills[4] = CharacterGeneration.SkillLibrary.Leader;
             skills[5] = CharacterGeneration.SkillLibrary.Tactics;
 
-            Ranks[0] = "Airman";
-            Ranks[1] = "Flight Officer";
-            Ranks[2] = "Flight Lieutenant";
-            Ranks[3] = "Squadron Leader";
-            Ranks[4] = "Wing Commander";
-            Ranks[5] = "Group Captain";
-            Ranks[6] = "Air Commodore";
+            Ranks[0] = "Seaman";
+            Ranks[1] = "Ensign";
+            Ranks[2] = "Lieutenant";
+            Ranks[3] = "Lt. Commander";
+            Ranks[4] = "Commander";
+            Ranks[5] = "Captain";
+            Ranks[6] = "Admiral";
         }
-
         protected override void CommsionSkill()
         {
-            
+            throw new NotImplementedException();
         }
 
         protected override void EnlistSkill()
         {
-            OnSkillOffered(SkillLibrary.Aircraft);
+            OnSkillOffered(SkillLibrary.Watercraft);
         }
 
         protected override void RankSkill()

@@ -92,14 +92,28 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         private async void Generate_Clicked(object sender, EventArgs e)
         {
             Analytics.TrackEvent("Character Generator");
+            Character character = null;
 
-            Character character = new Character
+            if (GenerationConfiguration.Ruleset.Equals("Cepheus Engine"))
             {
-                Culture = selectedCulture.Id,
-                Sex = GenerationConfiguration.Sex,
-                Style = generationStyle,
-                CharacterSpecies = species
-            };
+                character = new Cepheus.Character
+                {
+                    Culture = selectedCulture.Id,
+                    Sex = GenerationConfiguration.Sex,
+                    Style = generationStyle,
+                    CharacterSpecies = species
+                };
+            }
+            else
+            {
+                character = new Character
+                {
+                    Culture = selectedCulture.Id,
+                    Sex = GenerationConfiguration.Sex,
+                    Style = generationStyle,
+                    CharacterSpecies = species
+                };
+            }
             character.Generate();
 
             var keepgoing = false;
@@ -131,6 +145,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         // Aslan don't do draft - go straight to outcast
                         career = selectedCulture.GetBasicCareer(Career.CareerType.Aslan_Outcast);
+                        career.Owner = character;
+                        character.Careers.Add(career);
                         await ResolveBasicCareer(character, career);
                     }
                     else
@@ -157,6 +173,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         {
                             // In Cepheus if you don't submit to draft you end up as a drifter
                             career = selectedCulture.GetBasicCareer(Career.CareerType.Cepheus_Drifter);
+                            career.Owner = character;
+                            character.Careers.Add(career);
                             await ResolveBasicCareer(character, career);
                         }
                     }

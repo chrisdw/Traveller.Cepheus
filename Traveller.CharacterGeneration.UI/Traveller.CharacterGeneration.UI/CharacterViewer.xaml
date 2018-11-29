@@ -25,6 +25,7 @@
                 <Label Text="Age" WidthRequest="160"/>
                 <Label Text="{Binding Age}"/>
             </StackLayout>
+            <ListView x:Name="Traits" ItemsSource="{Binding Traits}" />
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Personal History">
