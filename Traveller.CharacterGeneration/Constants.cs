@@ -34,7 +34,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Darrian,
             Vilani,
             Domain_Of_Deneb,
-            Reformation_Coalition
+            Reformation_Coalition,
+            Cepheus_Generic
         }
     }
 }

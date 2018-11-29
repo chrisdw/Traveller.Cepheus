@@ -1917,4 +1917,37 @@
       </group>
     </body>
   </file>
+  <file datatype="xml" source-language="en-GB" target-language="de-DE" original="TRAVELLER.CHARACTERGENERATION/CEPHEUS/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.CHARACTERGENERATION/CEPHEUS/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Prompt_Commissioned" translate="yes" xml:space="preserve">
+          <source>Commissioned as {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Im Auftrag als {0}</target>
+        </trans-unit>
+        <trans-unit id="Prompt_Promoted" translate="yes" xml:space="preserve">
+          <source>Promoted to {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} gefördert</target>
+        </trans-unit>
+        <trans-unit id="Table_AdvancedEducation" translate="yes" xml:space="preserve">
+          <source>Advaned Eduation</source>
+          <target state="new">Advaned Eduation</target>
+        </trans-unit>
+        <trans-unit id="Table_Education" translate="yes" xml:space="preserve">
+          <source>Education</source>
+          <target state="new">Education</target>
+        </trans-unit>
+        <trans-unit id="Table_PersonalDevelopment" translate="yes" xml:space="preserve">
+          <source>Personal Development</source>
+          <target state="new">Personal Development</target>
+        </trans-unit>
+        <trans-unit id="Table_ServiceSkills" translate="yes" xml:space="preserve">
+          <source>Service Skills</source>
+          <target state="new">Service Skills</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
 </xliff>

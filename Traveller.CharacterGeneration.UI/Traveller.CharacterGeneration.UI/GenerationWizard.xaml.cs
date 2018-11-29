@@ -220,6 +220,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     //Cultures.Add("Droyne");
                     Cultures.Add("Dynchia");
                     break;
+                case "Generic":
+                    Cultures.Add("Generic");
+                    break;
             }
         }
 

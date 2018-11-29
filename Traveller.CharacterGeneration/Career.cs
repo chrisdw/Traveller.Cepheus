@@ -69,7 +69,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Aslan_Envoy,
             Aslan_Medic,
             Aslan_Flyer,
-            Aslan_Belter
+            Aslan_Belter,
+            Cepheus_Athlete
         }
 
         [Flags]
