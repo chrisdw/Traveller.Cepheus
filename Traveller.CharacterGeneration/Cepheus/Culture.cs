@@ -1,11 +1,13 @@
-﻿using System;
+﻿using org.DownesWard.Utilities;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Culture : ICulture
     {
+        private Dice dice = new Dice(6);
+
         public Constants.CultureType Id => Constants.CultureType.Cepheus_Generic;
 
         public bool MultipleCareers => true;
@@ -22,6 +24,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
                     careers.Add("Athlete", CharacterGeneration.Career.CareerType.Cepheus_Athlete);
+                    careers.Add("Aerospace Defence", CharacterGeneration.Career.CareerType.Cepheus_Aerospace_Defence);
                     break;
             }
             return careers;
@@ -34,6 +37,16 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
         public BasicCareer Drafted(Character character)
         {
+            switch (dice.roll(1))
+            {
+                case 1:
+                    return new AerospaceDefence() { Culture = this };
+                    //case 2: Marine
+                    //case 3: Maritime defence
+                    //case 4: Navy
+                    //case 5: Scout
+                    //case 6: Surface Defence
+            }
             throw new NotImplementedException();
         }
 
@@ -43,6 +56,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             {
                 case CharacterGeneration.Career.CareerType.Cepheus_Athlete:
                     return new Athlete { Culture = this };
+                case CharacterGeneration.Career.CareerType.Cepheus_Aerospace_Defence:
+                    return new AerospaceDefence { Culture = this };
                 default:
                     return new Athlete { Culture = this };
             }
@@ -54,7 +69,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             switch (generationStyle)
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
-                    list.Add(Properties.Resources.Species_Human, Character.Species.Human_Imperial);
+                    list.Add(Properties.Resources.Species_Human, Character.Species.Human);
                     break;
             }
 

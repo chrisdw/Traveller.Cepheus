@@ -19,7 +19,6 @@
         // Simple skills
         public static Skill Admin = new Skill(Properties.Resources.Skill_Admin, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill AirRaft = new Skill(Properties.Resources.Skill_AirRaft, Skill.SkillClass.None, 1);
-        public static Skill Athletics = new Skill("Athletics", Skill.SkillClass.None, 1);
         public static Skill ATV = new Skill(Properties.Resources.Skill_ATV, Skill.SkillClass.None, 1);
         public static Skill BattleDress = new Skill(Properties.Resources.Skill_BattleDress, Skill.SkillClass.Military, 1);
         public static Skill Brawling = new Skill(Properties.Resources.Skill_Brawling, Skill.SkillClass.None, 1);

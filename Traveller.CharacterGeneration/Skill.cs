@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
 {
-    public class Skill : INotifyPropertyChanged
+    public class Skill : INotifyPropertyChanged, IEquatable<Skill>
     {
         public enum SkillClass
         {
@@ -167,6 +167,23 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 Level = int.Parse(element.GetAttribute("Level"))
             };
             return skill;
+        }
+
+        public bool Equals(Skill other)
+        {
+            return other.Name.Equals(Name) && other.Level == Level;
+        }
+
+        public override int GetHashCode()
+        {
+            //Get hash code for the Name field if it is not null. 
+            int hashSkillName = Name == null ? 0 : Name.GetHashCode();
+
+            //Get hash code for the Level field. 
+            int hashSkillLevel = Level.GetHashCode();
+
+            //Calculate the hash code for the product. 
+            return hashSkillName ^ hashSkillLevel;
         }
     }
 }

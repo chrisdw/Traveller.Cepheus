@@ -20,7 +20,6 @@
 
         // Other benefits
         public static Benefit Corporation = new Benefit(Properties.Resources.Benefit_Corporation, 1, Benefit.BenefitType.Material);
-        public static Benefit ExplorersSociety = new Benefit("Explorers Society", 1, Benefit.BenefitType.Material);
         public static Benefit Land = new Benefit(Properties.Resources.Benefit_Land, 1, Benefit.BenefitType.Material);
         public static Benefit Legion = new Benefit(Properties.Resources.Benefit_Legion, 1, Benefit.BenefitType.Material);
         public static Benefit Independance = new Benefit(Properties.Resources.Skill_Independance, 1, Benefit.BenefitType.Skill);

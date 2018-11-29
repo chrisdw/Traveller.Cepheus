@@ -253,6 +253,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 case "Aslan":
                     selectedCulture = new Classic.Aslan.Culture();
                     break;
+                case "Generic":
+                    selectedCulture = new Cepheus.Culture();
+                    break;
             }
             if (selectedCulture != null)
             {

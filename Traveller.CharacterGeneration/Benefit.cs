@@ -6,7 +6,7 @@ using System.Xml;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
 {
-    public class Benefit
+    public class Benefit : IEquatable<Benefit>
     {
 
         public enum BenefitType
@@ -94,6 +94,26 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Enum.TryParse(element.GetAttribute("Type"), out BenefitType benefitType);
             benefit.TypeOfBenefit = benefitType;
             return benefit;
+        }
+
+        public bool Equals(Benefit other)
+        {
+            return other.Name.Equals(Name) && other.Value == Value && other.TypeOfBenefit == TypeOfBenefit;
+        }
+
+        public override int GetHashCode()
+        {
+            //Get hash code for the Name field if it is not null. 
+            int hashBenefitName = Name == null ? 0 : Name.GetHashCode();
+
+            //Get hash code for the Value field. 
+            int hashBenefitValue = Value.GetHashCode();
+
+            //Get hash code for the Value field. 
+            int hashBenefitType = TypeOfBenefit.GetHashCode();
+
+            //Calculate the hash code for the product. 
+            return hashBenefitName ^ hashBenefitValue ^ hashBenefitType;
         }
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Athlete : Career
     {
@@ -17,12 +13,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             survivalattr = "DEX";
             reenlist = 6;
 
-            Material.Add(BenefitLibrary.LowPsg);
-            Material.Add(BenefitLibrary.Int);
-            Material.Add(BenefitLibrary.Weapon);
-            Material.Add(BenefitLibrary.HighPsg);
+            Material.Add(CharacterGeneration.BenefitLibrary.LowPsg);
+            Material.Add(CharacterGeneration.BenefitLibrary.Int);
+            Material.Add(CharacterGeneration.BenefitLibrary.Weapon);
+            Material.Add(CharacterGeneration.BenefitLibrary.HighPsg);
             Material.Add(BenefitLibrary.ExplorersSociety);
-            Material.Add(BenefitLibrary.HighPsg);
+            Material.Add(CharacterGeneration.BenefitLibrary.HighPsg);
 
             Cash[0] = 2000;
             Cash[1] = 10000;
@@ -36,45 +32,45 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             SkillTables[0] = table;
             table.Name = Resources.Table_PersonalDevelopment;
             var skills = table.Skills;
-            skills[0] = SkillLibrary.Dex;
-            skills[1] = SkillLibrary.Int;
-            skills[2] = SkillLibrary.End;
-            skills[3] = SkillLibrary.Soc;
-            skills[4] = SkillLibrary.Carousing;
-            skills[5] = SkillLibrary.Brawling; // TODO: Make Melee Combat
+            skills[0] = CharacterGeneration.SkillLibrary.Dex;
+            skills[1] = CharacterGeneration.SkillLibrary.Int;
+            skills[2] = CharacterGeneration.SkillLibrary.End;
+            skills[3] = CharacterGeneration.SkillLibrary.Soc;
+            skills[4] = CharacterGeneration.SkillLibrary.Carousing;
+            skills[5] = SkillLibrary.MeleeCombat;
 
             table = new SkillTable();
             SkillTables[1] = table;
             table.Name = Resources.Table_ServiceSkills;
             skills = table.Skills;
             skills[0] = SkillLibrary.Athletics;
-            skills[1] = SkillLibrary.Admin;
-            skills[2] = SkillLibrary.Carousing;
-            skills[3] = SkillLibrary.Computer;
-            skills[4] = SkillLibrary.Gambling;
-            skills[5] = SkillLibrary.Vehicle;
+            skills[1] = CharacterGeneration.SkillLibrary.Admin;
+            skills[2] = CharacterGeneration.SkillLibrary.Carousing;
+            skills[3] = CharacterGeneration.SkillLibrary.Computer;
+            skills[4] = CharacterGeneration.SkillLibrary.Gambling;
+            skills[5] = CharacterGeneration.SkillLibrary.Vehicle;
 
             table = new SkillTable();
             SkillTables[2] = table;
             table.Name = Resources.Table_Education;
             skills = table.Skills;
-            skills[0] = SkillLibrary.ZeroGCombat;
+            skills[0] = CharacterGeneration.SkillLibrary.ZeroGCombat;
             skills[1] = SkillLibrary.Athletics;
             skills[2] = SkillLibrary.Athletics;
-            skills[3] = SkillLibrary.Computer;
-            skills[4] = SkillLibrary.Leader;
-            skills[5] = SkillLibrary.Gambling;
+            skills[3] = CharacterGeneration.SkillLibrary.Computer;
+            skills[4] = CharacterGeneration.SkillLibrary.Leader;
+            skills[5] = CharacterGeneration.SkillLibrary.Gambling;
 
             table = new SkillTable();
             SkillTables[3] = table;
             table.Name = Resources.Table_AdvancedEducation;
             skills = table.Skills;
-            skills[0] = SkillLibrary.Admin; // TODO: Make Advocate
-            skills[1] = SkillLibrary.Computer;
-            skills[2] = SkillLibrary.Liason;
-            skills[3] = SkillLibrary.Computer; // TODO: Make linguistics
-            skills[4] = SkillLibrary.Medic;
-            skills[5] = SkillLibrary.JackOfTrades; // TODI: Make Sciences
+            skills[0] = SkillLibrary.Advocate;
+            skills[1] = CharacterGeneration.SkillLibrary.Computer;
+            skills[2] = CharacterGeneration.SkillLibrary.Liason;
+            skills[3] = SkillLibrary.Linguistics;
+            skills[4] = CharacterGeneration.SkillLibrary.Medic;
+            skills[5] = SkillLibrary.Sciences;
 
             Ranks[0] ="Athlete";
         }

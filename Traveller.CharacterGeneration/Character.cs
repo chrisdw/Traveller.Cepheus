@@ -33,7 +33,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Virushi,
             Bwap,
             Ithulkur,
-            Vegan
+            Vegan,
+            Human
         }
 
         public string Sex { get; set; }
@@ -60,9 +61,34 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 case Constants.GenerationStyle.Classic_Traveller:
                     GenerateClassic();
                     break;
+                case Constants.GenerationStyle.Cepheus_Engine:
+                    GenerateCepheus();
+                    break;
             }
         }
 
+        private void GenerateCepheus()
+        {
+            var dice = new Dice(6);
+            switch (Culture)
+            {
+                case Constants.CultureType.Cepheus_Generic:
+                    switch (CharacterSpecies)
+                    {
+                        case Species.Human:
+                            // use the standard UPP
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            break;
+                    }
+                    break;
+            }
+        }
         private void GenerateClassic()
         {
             var dice = new Dice(6);

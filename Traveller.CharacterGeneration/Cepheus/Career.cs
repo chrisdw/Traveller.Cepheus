@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Linq;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
@@ -72,6 +70,31 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             if (enlist)
             {
                 EnlistSkill();
+                if (Owner.Careers.Count == 0)
+                {
+                    // Get everything in the service skills table at level 0
+                    var skills = SkillTables[1].Skills.Distinct();
+                    foreach (var skill in skills)
+                    {
+                        var toAdd = skill.Clone();
+                        toAdd.Level = 0;
+                        Owner.AddSkill(toAdd);
+                    }
+                }
+                else
+                {
+                    // offer the skills in the service skill table at level 0
+                    var training = new Skill();
+                    training.Name = "Basic Training";
+                    var skills = SkillTables[1].Skills.Distinct();
+                    foreach (var skill in skills)
+                    {
+                        var toAdd = skill.Clone();
+                        toAdd.Level = 0;
+                        skill.Cascade.Add(toAdd);
+                    }
+                    OnSkillOffered(training);
+                }
             }
             return enlist;
         }
