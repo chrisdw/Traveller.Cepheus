@@ -187,9 +187,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
         }
 
 
-        public override bool Survival()
+        public override SurvivalResult Survival()
         {
-            var survive = false;
+            var survive = SurvivalResult.Died;
 
             if (!doneGames && Owner.Profile.Soc.Value == 10)
             {
@@ -203,7 +203,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
             if (doingGames)
             {
                 ResoveGames();
-                survive = true;
+                survive = SurvivalResult.Survived;
                 TermSkills = 0;
             }
             else
@@ -216,7 +216,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani
                 }
                 if (dice.roll(2) >= target)
                 {
-                    survive = true;
+                    survive = SurvivalResult.Survived;
                 }
             }
             return survive;

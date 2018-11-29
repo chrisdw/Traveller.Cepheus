@@ -88,8 +88,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 else
                 {
                     // offer the skills in the service skill table at level 0
-                    var training = new Skill();
-                    training.Name = "Basic Training";
+                    var training = new Skill
+                    {
+                        Name = "Basic Training"
+                    };
                     var skills = SkillTables[1].Skills.Distinct();
                     foreach (var skill in skills)
                     {
@@ -150,20 +152,20 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 return 0;
             }
         }
-        public override bool Survival()
+        public override SurvivalResult Survival()
         {
-            var survive = false;
+            var survive = SurvivalResult.Died;
 
             var target = survival;
             target += Owner.Profile[survivalattr].Modifier;
 
             if (dice.roll(2) >= target)
             {
-                survive = true;
+                survive = SurvivalResult.Survived;
             }
             else if (Mishaps)
             {
-                survive = true;
+                survive = SurvivalResult.Survived;
                 switch (dice.roll(1))
                 {
                     case 1:
@@ -172,6 +174,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                         break;
                     case 2:
                         Owner.Journal.Add("Honourably discharged from the service.");
+                        survive = SurvivalResult.Discharged;
                         break;
                     case 3:
                         Owner.Journal.Add("Honourably discharged from the service after a legal battle.");
@@ -182,19 +185,23 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                                 TypeOfBenefit = Benefit.BenefitType.Cash,
                                 Value = -10000 }
                             );
+                        survive = SurvivalResult.Discharged;
                         break;
                     case 4:
                         Owner.Journal.Add("Dishonourably discharged from the service.");
                         lostBenefits = true;
+                        survive = SurvivalResult.Discharged;
                         break;
                     case 5:
                         Owner.Journal.Add("Dishonourably discharged from the service. Serve 4 years in prison");
                         Owner.Age += 4;
                         lostBenefits = true;
+                        survive = SurvivalResult.Discharged;
                         break;
                     case 6:
                         Owner.Journal.Add("Medically discharged from the service.");
                         ResolveInjury(0);
+                        survive = SurvivalResult.Discharged;
                         break;
                 }
             }
@@ -207,64 +214,120 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             {
                 roll = dice.roll(1);
             }
+            var paid = 0;
+            var loss = 0;
+            var bill = 0;
             switch (roll)
             {
                 case 1:
                     Owner.Journal.Add("Nearly Killed");
-                    switch (dice.roll())
+                    paid = MedicalBills();
+                    loss = dice.roll();
+                    bill = (loss + 4) * 5000;
+
+                    if (paid != 100)
                     {
-                        case 1:
-                        case 2:
-                            Owner.Profile.Str.Value -= dice.roll();
-                            Owner.Profile.Dex.Value -= 2;
-                            Owner.Profile.End.Value -= 2;
-                            break;
-                        case 3:
-                        case 4:
-                            Owner.Profile.Dex.Value -= dice.roll();
-                            Owner.Profile.Str.Value -= 2;
-                            Owner.Profile.End.Value -= 2;
-                            break;
-                        case 5:
-                        case 6:
-                            Owner.Profile.End.Value -= dice.roll();
-                            Owner.Profile.Str.Value -= 2;
-                            Owner.Profile.Dex.Value -= 2;
-                            break;
+                        switch (dice.roll())
+                        {
+                            case 1:
+                            case 2:
+                                Owner.Profile.Str.Value -= loss;
+                                Owner.Profile.Dex.Value -= 2;
+                                Owner.Profile.End.Value -= 2;
+                                break;
+                            case 3:
+                            case 4:
+                                Owner.Profile.Dex.Value -= dice.roll();
+                                Owner.Profile.Str.Value -= 2;
+                                Owner.Profile.End.Value -= 2;
+                                break;
+                            case 5:
+                            case 6:
+                                Owner.Profile.End.Value -= dice.roll();
+                                Owner.Profile.Str.Value -= 2;
+                                Owner.Profile.Dex.Value -= 2;
+                                break;
+                        }
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
                     }
-                    MedicalBills();
+                    else
+                    {
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                    }
                     break;
                 case 2:
                     Owner.Journal.Add("Severly Injured");
-                    ReduceOneCharacteristic(dice.roll());
-                    MedicalBills();
+                    paid = MedicalBills();
+                    loss = dice.roll();
+                    bill = loss * 5000;
+                    if (paid != 100)
+                    {
+                        ReduceOneCharacteristic(loss);
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
+                    }
+                    else
+                    {
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                    }
                     break;
                 case 3:
                     Owner.Journal.Add("Missing Eye or Limb");
-                    switch (dice.roll())
+                    paid = MedicalBills();
+                    loss = dice.roll();
+                    bill = 2 * 5000;
+
+                    if (paid != 100)
                     {
-                        case 1:
-                        case 2:
-                        case 3:
-                            Owner.Profile.Str.Value -= 2;
-                            break;
-                        case 4:
-                        case 5:
-                        case 6:
-                            Owner.Profile.Dex.Value -= 2;
-                            break;
+                        switch (dice.roll())
+                        {
+                            case 1:
+                            case 2:
+                            case 3:
+                                Owner.Profile.Str.Value -= 2;
+                                break;
+                            case 4:
+                            case 5:
+                            case 6:
+                                Owner.Profile.Dex.Value -= 2;
+                                break;
+                        }
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
                     }
-                    MedicalBills();
+                    else
+                    {
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                    }
                     break;
                 case 4:
                     Owner.Journal.Add("Scarred");
-                    ReduceOneCharacteristic(2);
-                    MedicalBills();
+                    paid = MedicalBills();
+                    loss = dice.roll();
+                    bill = 2 * 5000;
+
+                    if (paid != 100)
+                    {
+                        ReduceOneCharacteristic(2);
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
+                    }
+                    else
+                    {
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                    }
                     break;
                 case 5:
                     Owner.Journal.Add("Injured");
-                    ReduceOneCharacteristic(1);
-                    MedicalBills();
+                    paid = MedicalBills();
+                    loss = dice.roll();
+                    bill = 5000;
+                    if (paid != 100)
+                    {
+                        ReduceOneCharacteristic(1);
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
+                    }
+                    else
+                    {
+                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                    }
                     break;
                 case 6:
                     Owner.Journal.Add("Lightly Injured: No permanent effect");
@@ -294,7 +357,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             }
         }
 
-        private void MedicalBills()
+        private int MedicalBills()
         {
             var roll = dice.roll(2) + RankNumber;
             var paid = 0;
@@ -341,6 +404,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             }
 
             Owner.Journal.Add(string.Format("Your employer pays {0}% of your medical bills", paid));
+            return paid;
         }
     }
 }

@@ -179,9 +179,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             return promote;
         }
 
-        public override bool Survival()
+        public override SurvivalResult Survival()
         {
-            var survive = false;
+            var survive = SurvivalResult.Died;
 
             var target = 5;
             if (Owner.CharacterSpecies == Character.Species.Aslan)
@@ -202,7 +202,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial
             }
             if (dice.roll(2) >= target)
             {
-                survive = true;
+                survive = SurvivalResult.Survived;
             }
             return survive;
         }

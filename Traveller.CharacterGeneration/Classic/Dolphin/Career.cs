@@ -64,9 +64,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic
             BaseRenlist(renlisted);
         }
 
-        public override bool Survival()
+        public override SurvivalResult Survival()
         {
-            return true;
+            return SurvivalResult.Survived;
         }
 
         public override void CheckTableAvailablity()

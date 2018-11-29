@@ -354,19 +354,26 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             var keepGoing = true;
             do
             {
-                if (career.Survival())
+                var survivalResult = career.Survival();
+                if (survivalResult == BasicCareer.SurvivalResult.Survived)
                 {
                     if (career.Commission())
                     {
                         career.Promotion();
                     }
                 }
-                else
+                else if (survivalResult == BasicCareer.SurvivalResult.Died)
                 {
                     character.Died = true;
                     character.Journal.Add(string.Format(Properties.Resources.Jrn_Killed, character.Age));
                     await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Killed, character.Age), Properties.Resources.Button_OK);
                     keepGoing = false;
+                    break;
+                }
+                else
+                {
+                    character.Journal.Add(string.Format("Discharged at age {0}", character.Age));
+                    await DisplayAlert(Properties.Resources.Title_App, string.Format("Discharged at age {0}", character.Age), Properties.Resources.Button_OK);
                     break;
                 }
 

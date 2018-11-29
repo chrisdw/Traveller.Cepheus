@@ -133,13 +133,13 @@
             return enlist;
         }
 
-        public override bool Survival()
+        public override SurvivalResult Survival()
         {
             var target = survival;
-            var survive = false;
+            var survive = SurvivalResult.Died;
             if (dice.roll(2) >= target)
             {
-                survive = true;
+                survive = SurvivalResult.Survived;
             }
             return survive;
         }

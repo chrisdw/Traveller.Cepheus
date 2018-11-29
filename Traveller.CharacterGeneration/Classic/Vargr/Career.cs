@@ -152,9 +152,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             }
             return !dismissed;
         }
-        public override bool Survival()
+        public override SurvivalResult Survival()
         {
-            var survive = false;
+            var survive = SurvivalResult.Died;
 
             var target = survival;
 
@@ -164,7 +164,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Vargr
             }
             if (dice.roll(2) >= target)
             {
-                survive = true;
+                survive = SurvivalResult.Survived;
             }
             return survive;
         }

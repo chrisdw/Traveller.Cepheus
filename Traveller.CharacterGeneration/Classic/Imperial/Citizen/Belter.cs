@@ -88,9 +88,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
         /// any attribute
         /// </summary>
         /// <returns></returns>
-        public override bool Survival()
+        public override SurvivalResult Survival()
         {
-            var survive = false;
+            var survive = SurvivalResult.Died;
 
             var target = 9;
 
@@ -98,7 +98,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Classic.Imperial.Citizen
 
             if (dice.roll(2) >= target)
             {
-                survive = true;
+                survive = SurvivalResult.Survived;
             }
             return survive;
         }

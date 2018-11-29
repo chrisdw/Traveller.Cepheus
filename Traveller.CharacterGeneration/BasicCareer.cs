@@ -14,7 +14,13 @@
         public virtual bool Drafted { get; set; }
 
         abstract public bool Enlist();
-        abstract public bool Survival();
+        public enum SurvivalResult
+        {
+            Survived,
+            Died,
+            Discharged
+        }
+        abstract public SurvivalResult Survival();
         abstract public bool Commission();
         abstract public bool Promotion();
         public enum Renlistment
