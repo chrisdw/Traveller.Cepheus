@@ -106,7 +106,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             do
             {
                 var clist = selectedCulture.Careers(character);
-                var careerList = clist.Keys.Except(character.Careers.Select(c => c.Name));
+                // You can't do the same career twice execpt for outcast and drifter - unless forced via the draft
+                var careerList = clist.Keys.Except(character.Careers
+                    .Where(c => !(c.Name.Equals("Outcast") || c.Name.Equals("Drifter")))
+                    .Select(c => c.Name));
                 var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Career, null, null, careerList.ToArray());
                 if (!string.IsNullOrEmpty(selected))
                 { 
@@ -122,6 +125,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     if (career.Enlist())
                     {
                         character.Careers.Add(career);
+                        await ResolveBasicCareer(character, career);
+                    }
+                    else if (selectedCulture.Id == Constants.CultureType.Aslan)
+                    {
+                        // Aslan don't do draft - go straight to outcast
+                        career = selectedCulture.GetBasicCareer(Career.CareerType.Aslan_Outcast);
                         await ResolveBasicCareer(character, career);
                     }
                     else
@@ -142,6 +151,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                             character.Journal.Add(string.Format(Properties.Resources.Jrn_Drafted, career.Name));
                             await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Drafted, career.Name), Properties.Resources.Button_OK);
                             character.Careers.Add(career);
+                            await ResolveBasicCareer(character, career);
+                        }
+                        else if (selectedCulture.Id == Constants.CultureType.Cepheus_Generic)
+                        {
+                            // In Cepheus if you don't submit to draft you end up as a drifter
+                            career = selectedCulture.GetBasicCareer(Career.CareerType.Cepheus_Drifter);
                             await ResolveBasicCareer(character, career);
                         }
                     }
@@ -202,6 +217,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             }
 
             Citizens.IsVisible = (generationStyle == Constants.GenerationStyle.Classic_Traveller);
+            Mishaps.IsVisible = (generationStyle == Constants.GenerationStyle.Cepheus_Engine);
         }
 
         private void Campaign_SelectedIndexChanged(object sender, EventArgs e)
@@ -254,7 +270,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     selectedCulture = new Classic.Aslan.Culture();
                     break;
                 case "Generic":
-                    selectedCulture = new Cepheus.Culture();
+                    selectedCulture = new Cepheus.Culture()
+                    {
+                        UseMishaps = GenerationConfiguration.UseMishaps
+                    };
                     break;
             }
             if (selectedCulture != null)

@@ -12,6 +12,7 @@
             survival = 5;
             survivalattr = "DEX";
             reenlist = 6;
+            medicalBand = 2;
 
             Material.Add(CharacterGeneration.BenefitLibrary.LowPsg);
             Material.Add(CharacterGeneration.BenefitLibrary.Int);

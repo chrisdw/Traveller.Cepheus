@@ -106,6 +106,23 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             }
         }
 
+        private bool useMishaps = true;
+        public bool UseMishaps
+        {
+            get
+            {
+                return useMishaps;
+            }
+            set
+            {
+                if (value != useMishaps)
+                {
+                    useMishaps = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public bool ConfigurationComplete
         {
             get

@@ -12,6 +12,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
         public bool MultipleCareers => true;
 
+        public bool UseMishaps { get; set; }
+
         public bool BenefitAllowed(Character character, Benefit benefit)
         {
             return true;
@@ -25,6 +27,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 case Constants.GenerationStyle.Cepheus_Engine:
                     careers.Add("Athlete", CharacterGeneration.Career.CareerType.Cepheus_Athlete);
                     careers.Add("Aerospace Defence", CharacterGeneration.Career.CareerType.Cepheus_Aerospace_Defence);
+                    careers.Add("Drifter", CharacterGeneration.Career.CareerType.Cepheus_Drifter);
                     break;
             }
             return careers;
@@ -41,7 +44,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             {
                 case 1:
                     return new AerospaceDefence() { Culture = this };
-                    //case 2: Marine
+                case 2:
+                    return new Marine() { Culture = this };
+
                     //case 3: Maritime defence
                     //case 4: Navy
                     //case 5: Scout
@@ -55,11 +60,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             switch (career)
             {
                 case CharacterGeneration.Career.CareerType.Cepheus_Athlete:
-                    return new Athlete { Culture = this };
+                    return new Athlete { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Cepheus_Aerospace_Defence:
-                    return new AerospaceDefence { Culture = this };
+                    return new AerospaceDefence { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Cepheus_Drifter:
+                    return new Drifter { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Cepheus_Marine:
+                    return new Marine { Culture = this, Mishaps = UseMishaps };
                 default:
-                    return new Athlete { Culture = this };
+                    return new Athlete { Culture = this, Mishaps = UseMishaps };
             }
         }
 

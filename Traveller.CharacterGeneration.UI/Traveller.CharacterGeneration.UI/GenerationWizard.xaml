@@ -11,6 +11,10 @@
                 <Label Text="Should the extra careers from Citizens of the Imperium be used?"/>
                 <Switch IsToggled="{Binding GenerationConfiguration.UseCitizens}" />
             </StackLayout>
+            <StackLayout x:Name="Mishaps" Orientation="Horizontal" IsVisible="False">
+                <Label Text="Should the optional mishaps rule be used?"/>
+                <Switch IsToggled="{Binding GenerationConfiguration.UseMishaps}" />
+            </StackLayout>            
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Step 2: Select the campaign" x:Name="SelectCampaign">
