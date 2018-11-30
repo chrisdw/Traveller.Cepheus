@@ -2,6 +2,7 @@
 using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Xml;
 
@@ -10,6 +11,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
     public class Character : CharacterGeneration.Character
     {
         public List<string> Traits { get; } = new List<string>();
+
+        private Dice dice = new Dice(6);
 
         public override void Generate()
         {
@@ -27,7 +30,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
         private void GenerateCepheus()
         {
-            var dice = new Dice(6);
             switch (Culture)
             {
                 case Constants.CultureType.Cepheus_Generic:
@@ -106,18 +108,200 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             }
         }
 
+        public override bool AgingCheck()
+        {
+            var result = true;
+            switch (CharacterSpecies)
+            {
+                case Species.Avian:
+                    if (Age >= 46)
+                    {
+                        PerformAging();
+                    }
+                    break;
+                case Species.Reptilians:
+                    if (Age >= 42)
+                    {
+                        PerformAging();
+                    }
+                    break;
+                default:
+                    if (Age >= 34)
+                    {
+                        PerformAging();
+                    }
+                    break;
+            }
+            return result;
+        }
+
+        private void PerformAging()
+        {
+            var roll = dice.roll(2) - Careers.Select(c => c.TermsServed).Sum();
+            if (roll <= 0)
+            {
+                switch (roll)
+                {
+                    case 0:
+                        ReduceOnePhysicalCharacteristic(1);
+                        break;
+                    case -1:
+                        ReduceOnePhysicalCharacteristic(1);
+                        ReduceOnePhysicalCharacteristic(1);
+                        break;
+                    case -2:
+                        ReduceOnePhysicalCharacteristic(1);
+                        ReduceOnePhysicalCharacteristic(1);
+                        ReduceOnePhysicalCharacteristic(1);
+                        break;
+                    case -3:
+                        ReduceOnePhysicalCharacteristic(2);
+                        ReduceOnePhysicalCharacteristic(1);
+                        ReduceOnePhysicalCharacteristic(1);
+                        break;
+                    case -4:
+                        ReduceOnePhysicalCharacteristic(2);
+                        ReduceOnePhysicalCharacteristic(2);
+                        ReduceOnePhysicalCharacteristic(1);
+                        break;
+                    case -5:
+                        ReduceOnePhysicalCharacteristic(2);
+                        ReduceOnePhysicalCharacteristic(2);
+                        ReduceOnePhysicalCharacteristic(2);
+                        break;
+                    case -6:
+                        ReduceOnePhysicalCharacteristic(2);
+                        ReduceOnePhysicalCharacteristic(2);
+                        ReduceOnePhysicalCharacteristic(2);
+                        ReduceOneMentalCharacteristic(1);
+                        break;
+                }
+            }
+        }
+
         public override void SaveXML(XmlDocument doc)
         {
             base.SaveXML(doc);
             var character = doc.GetElementsByTagName("Character")[0];
-            var traits = doc.OwnerDocument.CreateElement("Traits");
-            foreach (var item in Journal)
+            var traits = character.OwnerDocument.CreateElement("Traits");
+            foreach (var item in Traits)
             {
                 var child = character.OwnerDocument.CreateElement("TraitItem");
                 child.AppendChild(child.OwnerDocument.CreateTextNode(item));
                 traits.AppendChild(child);
             }
             character.AppendChild(traits);
+        }
+
+        private void ReduceOnePhysicalCharacteristic(int by)
+        {
+            switch (dice.roll())
+            {
+                case 1:
+                case 2:
+                    Journal.Add(string.Format("STR reduced by {0} due to aging", by));
+                    Profile.Str.Value -= by;
+                    break;
+                case 3:
+                case 4:
+                    Journal.Add(string.Format("DEX reduced by {0} due to aging", by));
+                    Profile.Dex.Value -= by;
+                    break;
+                case 5:
+                case 6:
+                    Journal.Add(string.Format("END reduced by {0} due to aging", by));
+                    Profile.End.Value -= by;
+                    break;
+            }
+        }
+
+        private void ReduceOneMentalCharacteristic(int by)
+        {
+            switch (dice.roll())
+            {
+                case 1:
+                case 2:
+                case 3:
+                    Journal.Add(string.Format("INT reduced by {0} due to aging", by));
+                    Profile.Int.Value -= by;
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    Journal.Add(string.Format("EDU reduced by {0} due to aging", by));
+                    Profile.Edu.Value -= by;
+                    break;
+            }
+        }
+
+        public new static Character Load(XmlDocument doc)
+        {
+            var styleStr = doc.GetElementsByTagName("System")[0].InnerText;
+            var character = new Character();
+            Enum.TryParse(styleStr, out Constants.GenerationStyle style);
+            character.Style = style;
+
+            var cultureStr = doc.GetElementsByTagName("Culture")[0].InnerText;
+            Enum.TryParse(cultureStr, out Constants.CultureType culture);
+            character.Culture = culture;
+
+            var speciesStr = doc.GetElementsByTagName("Species")[0].InnerText;
+            Enum.TryParse(speciesStr, out Species species);
+            character.CharacterSpecies = species;
+
+            character.Sex = doc.GetElementsByTagName("Sex")[0].InnerText;
+            character.Name = doc.GetElementsByTagName("Name")[0].InnerText;
+            character.Age = int.Parse(doc.GetElementsByTagName("Age")[0].InnerText);
+
+            // Now have enough to generate the correct profile
+            switch (character.CharacterSpecies)
+            {
+                case Species.Human:
+                    // use the standard UPP
+                    character.Profile = new UPP();
+                    break;
+                default:
+                    character.Profile = new UPP();
+                    break;
+            }
+
+            var attribs = doc.GetElementsByTagName("Attributes")[0] as XmlElement;
+            character.Profile.LoadXML(attribs);
+
+            var journalItems = doc.GetElementsByTagName("JournalItem");
+            foreach (var item in journalItems)
+            {
+                var journal = item as XmlElement;
+                character.Journal.Add(journal.InnerText);
+            }
+            var careers = doc.GetElementsByTagName("Career");
+            foreach (var item in careers)
+            {
+                var career = item as XmlElement;
+                character.Careers.Add(Career.Load(career));
+            }
+
+            var skills = doc.GetElementsByTagName("Skill");
+            foreach (var item in skills)
+            {
+                var skill = item as XmlElement;
+                character.AddSkill(Skill.Load(skill));
+            }
+
+            var benefits = doc.GetElementsByTagName("Benefit");
+            foreach (var item in benefits)
+            {
+                var benefit = item as XmlElement;
+                character.AddBenefit(Benefit.Load(benefit));
+            }
+
+            var traitItems = doc.GetElementsByTagName("TraitItem");
+            foreach (var item in traitItems)
+            {
+                var trait = item as XmlElement;
+                character.Traits.Add(trait.InnerText);
+            }
+            return character;
         }
     }
 }

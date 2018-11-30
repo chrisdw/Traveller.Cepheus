@@ -30,6 +30,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     careers.Add("Drifter", CharacterGeneration.Career.CareerType.Cepheus_Drifter);
                     careers.Add("Marine", CharacterGeneration.Career.CareerType.Cepheus_Marine);
                     careers.Add("Maritime Defence", CharacterGeneration.Career.CareerType.Cepheus_Maritime_Defence);
+                    careers.Add("Navy", CharacterGeneration.Career.CareerType.Cepheus_Navy);
                     break;
             }
             return careers;
@@ -50,8 +51,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     return new Marine() { Culture = this };
                 case 3:
                     return new MaritimeDefence() { Culture = this };
+                case 4:
+                    return new Navy() { Culture = this };
 
-                    //case 4: Navy
                     //case 5: Scout
                     //case 6: Surface Defence
             }

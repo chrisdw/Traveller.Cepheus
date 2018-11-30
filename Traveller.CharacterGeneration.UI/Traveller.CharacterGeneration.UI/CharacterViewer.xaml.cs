@@ -76,12 +76,23 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     var reader = XmlReader.Create(pathname);
                     var doc = new XmlDocument();
                     doc.Load(reader);
-                    // Get XML and look to see what the base character we need is
-                    // Load the character from that XML
-                    var character = Character.Load(doc);
-                    BindingContext = character;
-                    SkillsView.ItemsSource = character.Skills.Values.OrderBy(s => s.Name);
-                    BenefitsView.ItemsSource = character.Benefits.Values.OrderBy(b => b.Name);
+                    var styleStr = doc.GetElementsByTagName("System")[0].InnerText;
+                    if (styleStr.Contains("Cepheus"))
+                    {
+                        var character = Cepheus.Character.Load(doc);
+                        BindingContext = character;
+                        SkillsView.ItemsSource = character.Skills.Values.OrderBy(s => s.Name);
+                        BenefitsView.ItemsSource = character.Benefits.Values.OrderBy(b => b.Name);
+                    }
+                    else
+                    {
+                        // Get XML and look to see what the base character we need is
+                        // Load the character from that XML
+                        var character = Character.Load(doc);
+                        BindingContext = character;
+                        SkillsView.ItemsSource = character.Skills.Values.OrderBy(s => s.Name);
+                        BenefitsView.ItemsSource = character.Benefits.Values.OrderBy(b => b.Name);
+                    }
                 }
             });
         }

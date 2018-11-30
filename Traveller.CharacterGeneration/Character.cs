@@ -340,7 +340,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Profile[attribute].Value += value;
         }
 
-        public bool AgingCheck()
+        public virtual bool AgingCheck()
         {
             var result = true;
             switch (CharacterSpecies)

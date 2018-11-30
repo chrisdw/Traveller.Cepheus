@@ -74,7 +74,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Aerospace_Defence,
             Cepheus_Drifter,
             Cepheus_Marine,
-            Cepheus_Maritime_Defence
+            Cepheus_Maritime_Defence,
+            Cepheus_Navy
         }
 
         [Flags]

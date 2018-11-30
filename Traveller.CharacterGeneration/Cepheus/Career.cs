@@ -231,18 +231,21 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                         {
                             case 1:
                             case 2:
+                                Owner.Journal.Add(string.Format("STR reduced by {0}, DEX and END reduced by 2", loss));
                                 Owner.Profile.Str.Value -= loss;
                                 Owner.Profile.Dex.Value -= 2;
                                 Owner.Profile.End.Value -= 2;
                                 break;
                             case 3:
                             case 4:
+                                Owner.Journal.Add(string.Format("DEX reduced by {0}, STR and END reduced by 2", loss));
                                 Owner.Profile.Dex.Value -= dice.roll();
                                 Owner.Profile.Str.Value -= 2;
                                 Owner.Profile.End.Value -= 2;
                                 break;
                             case 5:
                             case 6:
+                                Owner.Journal.Add(string.Format("END reduced by {0}, DEX and STR reduced by 2", loss));
                                 Owner.Profile.End.Value -= dice.roll();
                                 Owner.Profile.Str.Value -= 2;
                                 Owner.Profile.Dex.Value -= 2;
@@ -283,11 +286,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             case 1:
                             case 2:
                             case 3:
+                                Owner.Journal.Add(string.Format("STR reduced by 2"));
                                 Owner.Profile.Str.Value -= 2;
                                 break;
                             case 4:
                             case 5:
                             case 6:
+                                Owner.Journal.Add(string.Format("DEX reduced by 2"));
                                 Owner.Profile.Dex.Value -= 2;
                                 break;
                         }
