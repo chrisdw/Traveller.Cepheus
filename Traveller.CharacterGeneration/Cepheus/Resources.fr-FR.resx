@@ -384,12 +384,6 @@
   <data name="Species_Repltilians" xml:space="preserve">
     <value>Repltilians</value>
   </data>
-  <data name="Species_UplifitedApe" xml:space="preserve">
-    <value>Uplifited singe</value>
-  </data>
-  <data name="Species_UplifitedDolphin" xml:space="preserve">
-    <value>Dolphin Uplifited</value>
-  </data>
   <data name="Trait_Amphibious" xml:space="preserve">
     <value>Amphibie</value>
   </data>
@@ -455,5 +449,32 @@
   </data>
   <data name="Trait_WaterDependant" xml:space="preserve">
     <value>Personne à charge de l’eau</value>
+  </data>
+  <data name="Career_Bureaucrat" xml:space="preserve">
+    <value>Bureaucrate</value>
+  </data>
+  <data name="Rank_Assistant" xml:space="preserve">
+    <value>Assistant</value>
+  </data>
+  <data name="Rank_Chief" xml:space="preserve">
+    <value>Chef</value>
+  </data>
+  <data name="Rank_Clerk" xml:space="preserve">
+    <value>Greffier</value>
+  </data>
+  <data name="Rank_Manager" xml:space="preserve">
+    <value>Gestionnaire</value>
+  </data>
+  <data name="Rank_Minister" xml:space="preserve">
+    <value>Ministre</value>
+  </data>
+  <data name="Rank_Supervisor" xml:space="preserve">
+    <value>Superviseur</value>
+  </data>
+  <data name="Species_UpliftedApe" xml:space="preserve">
+    <value>Ape surélevée</value>
+  </data>
+  <data name="Species_UpliftedDolphin" xml:space="preserve">
+    <value>Dolphin surélevée</value>
   </data>
 </root>

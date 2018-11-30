@@ -477,11 +477,11 @@
   <data name="Species_Repltilians" xml:space="preserve">
     <value>Repltilians</value>
   </data>
-  <data name="Species_UplifitedApe" xml:space="preserve">
-    <value>Uplifited Ape</value>
+  <data name="Species_UpliftedApe" xml:space="preserve">
+    <value>Uplifted Ape</value>
   </data>
-  <data name="Species_UplifitedDolphin" xml:space="preserve">
-    <value>Uplifited Dolphin</value>
+  <data name="Species_UpliftedDolphin" xml:space="preserve">
+    <value>Uplifted Dolphin</value>
   </data>
   <data name="Table_AdvancedEducation" xml:space="preserve">
     <value>Advanced Education</value>
@@ -560,5 +560,26 @@
   </data>
   <data name="Trait_WaterDependant" xml:space="preserve">
     <value>Water Dependant</value>
+  </data>
+  <data name="Career_Bureaucrat" xml:space="preserve">
+    <value>Bureaucrat</value>
+  </data>
+  <data name="Rank_Assistant" xml:space="preserve">
+    <value>Assistant</value>
+  </data>
+  <data name="Rank_Chief" xml:space="preserve">
+    <value>Chief</value>
+  </data>
+  <data name="Rank_Clerk" xml:space="preserve">
+    <value>Clerk</value>
+  </data>
+  <data name="Rank_Manager" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="Rank_Minister" xml:space="preserve">
+    <value>Minister</value>
+  </data>
+  <data name="Rank_Supervisor" xml:space="preserve">
+    <value>Supervisor</value>
   </data>
 </root>

@@ -797,7 +797,7 @@
         </trans-unit>
         <trans-unit id="Rank_Major" translate="yes" xml:space="preserve">
           <source>Major</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Hauptversion</target>
+          <target state="translated" state-qualifier="tm-suggestion">Major</target>
         </trans-unit>
         <trans-unit id="Rank_SpaceHand" translate="yes" xml:space="preserve">
           <source>Space Hand</source>
@@ -1000,7 +1000,7 @@
         </trans-unit>
         <trans-unit id="Rank_Major" translate="yes" xml:space="preserve">
           <source>Major</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Hauptversion</target>
+          <target state="translated" state-qualifier="tm-suggestion">Major</target>
         </trans-unit>
         <trans-unit id="Rank_Marine" translate="yes" xml:space="preserve">
           <source>Marine</source>
@@ -1346,7 +1346,7 @@
         </trans-unit>
         <trans-unit id="Rank_Major" translate="yes" xml:space="preserve">
           <source>Major</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Großen</target>
+          <target state="translated" state-qualifier="mt-suggestion">Major</target>
         </trans-unit>
         <trans-unit id="Rank_Trooper" translate="yes" xml:space="preserve">
           <source>Trooper</source>
@@ -1451,7 +1451,7 @@
         </trans-unit>
         <trans-unit id="Rank_Major" translate="yes" xml:space="preserve">
           <source>Major</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Hauptversion</target>
+          <target state="translated" state-qualifier="tm-suggestion">Major</target>
         </trans-unit>
         <trans-unit id="Rank_Subaltern" translate="yes" xml:space="preserve">
           <source>Subaltern</source>
@@ -2173,7 +2173,7 @@
         </trans-unit>
         <trans-unit id="Rank_Major" translate="yes" xml:space="preserve">
           <source>Major</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Großen</target>
+          <target state="translated" state-qualifier="mt-suggestion">Major</target>
         </trans-unit>
         <trans-unit id="Rank_Midshipman" translate="yes" xml:space="preserve">
           <source>Midshipman</source>
@@ -2419,14 +2419,6 @@
           <source>Repltilians</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Repltilians</target>
         </trans-unit>
-        <trans-unit id="Species_UplifitedApe" translate="yes" xml:space="preserve">
-          <source>Uplifited Ape</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uplifited Affe</target>
-        </trans-unit>
-        <trans-unit id="Species_UplifitedDolphin" translate="yes" xml:space="preserve">
-          <source>Uplifited Dolphin</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uplifited Delphin</target>
-        </trans-unit>
         <trans-unit id="Trait_Amphibious" translate="yes" xml:space="preserve">
           <source>Amphibious</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Amphibische</target>
@@ -2514,6 +2506,42 @@
         <trans-unit id="Trait_WaterDependant" translate="yes" xml:space="preserve">
           <source>Water Dependant</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Wasser abhängig</target>
+        </trans-unit>
+        <trans-unit id="Career_Bureaucrat" translate="yes" xml:space="preserve">
+          <source>Bureaucrat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bürokrat</target>
+        </trans-unit>
+        <trans-unit id="Rank_Assistant" translate="yes" xml:space="preserve">
+          <source>Assistant</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Assistent</target>
+        </trans-unit>
+        <trans-unit id="Rank_Chief" translate="yes" xml:space="preserve">
+          <source>Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chief</target>
+        </trans-unit>
+        <trans-unit id="Rank_Clerk" translate="yes" xml:space="preserve">
+          <source>Clerk</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schreiber</target>
+        </trans-unit>
+        <trans-unit id="Rank_Manager" translate="yes" xml:space="preserve">
+          <source>Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Manager</target>
+        </trans-unit>
+        <trans-unit id="Rank_Minister" translate="yes" xml:space="preserve">
+          <source>Minister</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Minister</target>
+        </trans-unit>
+        <trans-unit id="Rank_Supervisor" translate="yes" xml:space="preserve">
+          <source>Supervisor</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Supervisor</target>
+        </trans-unit>
+        <trans-unit id="Species_UpliftedApe" translate="yes" xml:space="preserve">
+          <source>Uplifted Ape</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Erhobenen Ape</target>
+        </trans-unit>
+        <trans-unit id="Species_UpliftedDolphin" translate="yes" xml:space="preserve">
+          <source>Uplifted Dolphin</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Erhobenen Dolphin</target>
         </trans-unit>
       </group>
     </body>

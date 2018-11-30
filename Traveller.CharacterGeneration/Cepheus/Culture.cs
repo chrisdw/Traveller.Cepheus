@@ -29,6 +29,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     careers.Add(Resources.Career_Agent, CharacterGeneration.Career.CareerType.Cepheus_Agent);
                     careers.Add(Resources.Career_Athlete, CharacterGeneration.Career.CareerType.Cepheus_Athlete);
                     careers.Add(Resources.Career_Barbarian, CharacterGeneration.Career.CareerType.Cepheus_Barbarian);
+                    careers.Add(Resources.Career_Bureaucrat, CharacterGeneration.Career.CareerType.Cepheus_Bureaucrat);
+                    careers.Add(Resources.Career_Drifter, CharacterGeneration.Career.CareerType.Cepheus_Drifter);
                     careers.Add(Resources.Career_Drifter, CharacterGeneration.Career.CareerType.Cepheus_Drifter);
                     careers.Add(Resources.Career_Marine, CharacterGeneration.Career.CareerType.Cepheus_Marine);
                     careers.Add(Resources.Career_MaritimeDefence, CharacterGeneration.Career.CareerType.Cepheus_Maritime_Defence);
@@ -89,6 +91,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     return new Agent { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Cepheus_Barbarian:
                     return new Barbarian { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Cepheus_Bureaucrat:
+                    return new Bureaucrat { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Athlete { Culture = this, Mishaps = UseMishaps };
             }
@@ -105,8 +109,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     list.Add(Resources.Species_Insectans, CharacterGeneration.Character.Species.Insectans);
                     list.Add(Resources.Species_Merfolk, CharacterGeneration.Character.Species.Merfolk);
                     list.Add(Resources.Species_Repltilians, CharacterGeneration.Character.Species.Reptilians);
-                    list.Add(Resources.Species_UplifitedDolphin, CharacterGeneration.Character.Species.Dolphin);
-                    list.Add(Resources.Species_UplifitedApe, CharacterGeneration.Character.Species.Uplifited_Ape);
+                    list.Add(Resources.Species_UpliftedDolphin, CharacterGeneration.Character.Species.Dolphin);
+                    list.Add(Resources.Species_UpliftedApe, CharacterGeneration.Character.Species.Uplifted_Ape);
                     break;
             }
 

@@ -79,7 +79,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Scout,
             Cepheus_Surface_Defence,
             Cepheus_Agent,
-            Cepheus_Barbarian
+            Cepheus_Barbarian,
+            Cepheus_Bureaucrat
         }
 
         [Flags]

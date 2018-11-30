@@ -115,7 +115,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Traits.Add(Resources.Trait_NoFineManipulators);
                             Traits.Add(Resources.Trait_Uplifited);
                             break;
-                        case Species.Uplifited_Ape:
+                        case Species.Uplifted_Ape:
                             Profile = new UPP();
                             Profile.Str.Value = dice.roll(2) + 2;
                             Profile.Dex.Value = dice.roll(2) - 2;

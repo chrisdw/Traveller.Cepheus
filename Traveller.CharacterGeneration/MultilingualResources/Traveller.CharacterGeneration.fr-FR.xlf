@@ -2419,14 +2419,6 @@
           <source>Repltilians</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Repltilians</target>
         </trans-unit>
-        <trans-unit id="Species_UplifitedApe" translate="yes" xml:space="preserve">
-          <source>Uplifited Ape</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uplifited singe</target>
-        </trans-unit>
-        <trans-unit id="Species_UplifitedDolphin" translate="yes" xml:space="preserve">
-          <source>Uplifited Dolphin</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dolphin Uplifited</target>
-        </trans-unit>
         <trans-unit id="Trait_Amphibious" translate="yes" xml:space="preserve">
           <source>Amphibious</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Amphibie</target>
@@ -2514,6 +2506,42 @@
         <trans-unit id="Trait_WaterDependant" translate="yes" xml:space="preserve">
           <source>Water Dependant</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Personne à charge de l’eau</target>
+        </trans-unit>
+        <trans-unit id="Career_Bureaucrat" translate="yes" xml:space="preserve">
+          <source>Bureaucrat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bureaucrate</target>
+        </trans-unit>
+        <trans-unit id="Rank_Assistant" translate="yes" xml:space="preserve">
+          <source>Assistant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Assistant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Chief" translate="yes" xml:space="preserve">
+          <source>Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef</target>
+        </trans-unit>
+        <trans-unit id="Rank_Clerk" translate="yes" xml:space="preserve">
+          <source>Clerk</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Greffier</target>
+        </trans-unit>
+        <trans-unit id="Rank_Manager" translate="yes" xml:space="preserve">
+          <source>Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gestionnaire</target>
+        </trans-unit>
+        <trans-unit id="Rank_Minister" translate="yes" xml:space="preserve">
+          <source>Minister</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ministre</target>
+        </trans-unit>
+        <trans-unit id="Rank_Supervisor" translate="yes" xml:space="preserve">
+          <source>Supervisor</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Superviseur</target>
+        </trans-unit>
+        <trans-unit id="Species_UpliftedApe" translate="yes" xml:space="preserve">
+          <source>Uplifted Ape</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ape surélevée</target>
+        </trans-unit>
+        <trans-unit id="Species_UpliftedDolphin" translate="yes" xml:space="preserve">
+          <source>Uplifted Dolphin</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dolphin surélevée</target>
         </trans-unit>
       </group>
     </body>

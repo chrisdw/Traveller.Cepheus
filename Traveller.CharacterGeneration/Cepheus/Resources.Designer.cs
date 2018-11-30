@@ -115,6 +115,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bureaucrat.
+        /// </summary>
+        internal static string Career_Bureaucrat {
+            get {
+                return ResourceManager.GetString("Career_Bureaucrat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Drifter.
         /// </summary>
         internal static string Career_Drifter {
@@ -421,6 +430,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Assistant.
+        /// </summary>
+        internal static string Rank_Assistant {
+            get {
+                return ResourceManager.GetString("Rank_Assistant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Assistant Director.
         /// </summary>
         internal static string Rank_AssistantDirector {
@@ -462,6 +480,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Rank_Captain {
             get {
                 return ResourceManager.GetString("Rank_Captain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chief.
+        /// </summary>
+        internal static string Rank_Chief {
+            get {
+                return ResourceManager.GetString("Rank_Chief", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clerk.
+        /// </summary>
+        internal static string Rank_Clerk {
+            get {
+                return ResourceManager.GetString("Rank_Clerk", resourceCulture);
             }
         }
         
@@ -592,11 +628,29 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Manager.
+        /// </summary>
+        internal static string Rank_Manager {
+            get {
+                return ResourceManager.GetString("Rank_Manager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Midshipman.
         /// </summary>
         internal static string Rank_Midshipman {
             get {
                 return ResourceManager.GetString("Rank_Midshipman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minister.
+        /// </summary>
+        internal static string Rank_Minister {
+            get {
+                return ResourceManager.GetString("Rank_Minister", resourceCulture);
             }
         }
         
@@ -669,6 +723,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Rank_Starman {
             get {
                 return ResourceManager.GetString("Rank_Starman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Supervisor.
+        /// </summary>
+        internal static string Rank_Supervisor {
+            get {
+                return ResourceManager.GetString("Rank_Supervisor", resourceCulture);
             }
         }
         
@@ -1141,20 +1204,20 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uplifited Ape.
+        ///   Looks up a localized string similar to Uplifted Ape.
         /// </summary>
-        internal static string Species_UplifitedApe {
+        internal static string Species_UpliftedApe {
             get {
-                return ResourceManager.GetString("Species_UplifitedApe", resourceCulture);
+                return ResourceManager.GetString("Species_UpliftedApe", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Uplifited Dolphin.
+        ///   Looks up a localized string similar to Uplifted Dolphin.
         /// </summary>
-        internal static string Species_UplifitedDolphin {
+        internal static string Species_UpliftedDolphin {
             get {
-                return ResourceManager.GetString("Species_UplifitedDolphin", resourceCulture);
+                return ResourceManager.GetString("Species_UpliftedDolphin", resourceCulture);
             }
         }
         
