@@ -31,6 +31,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     careers.Add("Marine", CharacterGeneration.Career.CareerType.Cepheus_Marine);
                     careers.Add("Maritime Defence", CharacterGeneration.Career.CareerType.Cepheus_Maritime_Defence);
                     careers.Add("Navy", CharacterGeneration.Career.CareerType.Cepheus_Navy);
+                    careers.Add("Scout", CharacterGeneration.Career.CareerType.Cepheus_Scout);
+                    careers.Add("Surface Defence", CharacterGeneration.Career.CareerType.Cepheus_Surface_Defence);
                     break;
             }
             return careers;
@@ -46,18 +48,19 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             switch (dice.roll(1))
             {
                 case 1:
-                    return new AerospaceDefence() { Culture = this };
+                    return new AerospaceDefence() { Culture = this, Mishaps = UseMishaps };
                 case 2:
-                    return new Marine() { Culture = this };
+                    return new Marine() { Culture = this, Mishaps = UseMishaps };
                 case 3:
-                    return new MaritimeDefence() { Culture = this };
+                    return new MaritimeDefence() { Culture = this, Mishaps = UseMishaps };
                 case 4:
-                    return new Navy() { Culture = this };
-
-                    //case 5: Scout
-                    //case 6: Surface Defence
+                    return new Navy() { Culture = this, Mishaps = UseMishaps };
+                case 5:
+                    return new Scout() { Culture = this, Mishaps = UseMishaps };
+                case 6:
+                    return new SurfaceDefence() { Culture = this, Mishaps = UseMishaps };
             }
-            throw new NotImplementedException();
+            return new SurfaceDefence() { Culture = this, Mishaps = UseMishaps };
         }
 
         public BasicCareer GetBasicCareer(CharacterGeneration.Career.CareerType career)
@@ -74,6 +77,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     return new Marine { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Cepheus_Maritime_Defence:
                     return new MaritimeDefence { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Cepheus_Navy:
+                    return new Navy { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Cepheus_Scout:
+                    return new Scout { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Cepheus_Surface_Defence:
+                    return new SurfaceDefence { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Athlete { Culture = this, Mishaps = UseMishaps };
             }
