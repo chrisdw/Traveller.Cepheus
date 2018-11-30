@@ -31,7 +31,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     careers.Add(Resources.Career_Barbarian, CharacterGeneration.Career.CareerType.Cepheus_Barbarian);
                     careers.Add(Resources.Career_Bureaucrat, CharacterGeneration.Career.CareerType.Cepheus_Bureaucrat);
                     careers.Add(Resources.Career_Drifter, CharacterGeneration.Career.CareerType.Cepheus_Drifter);
-                    careers.Add(Resources.Career_Drifter, CharacterGeneration.Career.CareerType.Cepheus_Drifter);
                     careers.Add(Resources.Career_Marine, CharacterGeneration.Career.CareerType.Cepheus_Marine);
                     careers.Add(Resources.Career_MaritimeDefence, CharacterGeneration.Career.CareerType.Cepheus_Maritime_Defence);
                     careers.Add(Resources.Career_Navy, CharacterGeneration.Career.CareerType.Cepheus_Navy);

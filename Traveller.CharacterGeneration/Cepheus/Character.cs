@@ -3,14 +3,16 @@ using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Xml;
+using static org.DownesWard.Traveller.CharacterGeneration.Career;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Character : CharacterGeneration.Character
     {
         public List<string> Traits { get; } = new List<string>();
+
+        public event EventHandler<SkillOfferedEventArgs> SkillOffered;
 
         private Dice dice = new Dice(6);
 
@@ -125,6 +127,31 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Soc.Value = dice.roll(2) - 2;
                             Traits.Add(Resources.Trait_Uplifited);
                             break;
+                    }
+                    var backgroundSkills = 3 + Profile.Edu.Modifier;
+                    var skillList = new Skill()
+                    {
+                        Name = "Background Skills",
+                        Level = 0,
+                        Cascade =
+                        {
+                            CharacterGeneration.SkillLibrary.Admin,
+                            SkillLibrary.Advocate,
+                            SkillLibrary.Animals,
+                            CharacterGeneration.SkillLibrary.Carousing,
+                            CharacterGeneration.SkillLibrary.Communications,
+                            CharacterGeneration.SkillLibrary.Computer,
+                            CharacterGeneration.SkillLibrary.Electronics,
+                            CharacterGeneration.SkillLibrary.Engineering,
+                            SkillLibrary.Linguistics,
+                            CharacterGeneration.SkillLibrary.Mechanical,
+                            CharacterGeneration.SkillLibrary.Medic,
+                            SkillLibrary.Sciences,
+                        }
+                    };
+                    for (var i = 0; i < backgroundSkills; i++)
+                    {
+                        OnSkillOffered(skillList);
                     }
                     break;
             }
@@ -254,6 +281,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     Profile.Edu.Value -= by;
                     break;
             }
+        }
+
+        protected virtual void OnSkillOffered(Skill skill)
+        {
+            var e = new SkillOfferedEventArgs() { OfferedSkill = skill, Owner = this };
+            SkillOffered?.Invoke(this, e);
         }
 
         public new static Character Load(XmlDocument doc)

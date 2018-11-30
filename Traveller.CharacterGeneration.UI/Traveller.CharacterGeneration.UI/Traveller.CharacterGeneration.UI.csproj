@@ -58,6 +58,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="CharacterViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="GenerationWizard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
     <None Update="Languages\Classic\Aslan.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -84,6 +93,12 @@
     </None>
     <None Update="Languages\Real\Norsk.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="SkillView.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </None>
   </ItemGroup>
 </Project>
