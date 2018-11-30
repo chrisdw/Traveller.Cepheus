@@ -1932,20 +1932,588 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Promu à {0}</target>
         </trans-unit>
         <trans-unit id="Table_AdvancedEducation" translate="yes" xml:space="preserve">
-          <source>Advaned Eduation</source>
-          <target state="new">Advaned Eduation</target>
-        </trans-unit>
-        <trans-unit id="Table_Education" translate="yes" xml:space="preserve">
-          <source>Education</source>
-          <target state="new">Education</target>
+          <source>Advanced Education</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Enseignement postsecondaire</target>
         </trans-unit>
         <trans-unit id="Table_PersonalDevelopment" translate="yes" xml:space="preserve">
           <source>Personal Development</source>
-          <target state="new">Personal Development</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Développement personnel</target>
         </trans-unit>
         <trans-unit id="Table_ServiceSkills" translate="yes" xml:space="preserve">
           <source>Service Skills</source>
-          <target state="new">Service Skills</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aptitudes pour le service</target>
+        </trans-unit>
+        <trans-unit id="Table_Specialist" translate="yes" xml:space="preserve">
+          <source>Specialist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Spécialiste</target>
+        </trans-unit>
+        <trans-unit id="Benefit_CourierVessel" translate="yes" xml:space="preserve">
+          <source>Courier Vessel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bateau de service de messagerie</target>
+        </trans-unit>
+        <trans-unit id="Benefit_ExplorersSociety" translate="yes" xml:space="preserve">
+          <source>Explorers Society</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Société des explorateurs</target>
+        </trans-unit>
+        <trans-unit id="Career_AerospaceDefence" translate="yes" xml:space="preserve">
+          <source>Aerospace Defence</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Défense aérospatiale</target>
+        </trans-unit>
+        <trans-unit id="Career_Agent" translate="yes" xml:space="preserve">
+          <source>Agent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent de</target>
+        </trans-unit>
+        <trans-unit id="Career_Athlete" translate="yes" xml:space="preserve">
+          <source>Athlete</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Athlète</target>
+        </trans-unit>
+        <trans-unit id="Career_Barbarian" translate="yes" xml:space="preserve">
+          <source>Barbarian</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Barbare</target>
+        </trans-unit>
+        <trans-unit id="Career_Drifter" translate="yes" xml:space="preserve">
+          <source>Drifter</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Drifter</target>
+        </trans-unit>
+        <trans-unit id="Career_Marine" translate="yes" xml:space="preserve">
+          <source>Marine</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marine</target>
+        </trans-unit>
+        <trans-unit id="Career_MaritimeDefence" translate="yes" xml:space="preserve">
+          <source>Maritime Defence</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Défense maritime</target>
+        </trans-unit>
+        <trans-unit id="Career_Navy" translate="yes" xml:space="preserve">
+          <source>Navy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marine</target>
+        </trans-unit>
+        <trans-unit id="Career_Scout" translate="yes" xml:space="preserve">
+          <source>Scout</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scout</target>
+        </trans-unit>
+        <trans-unit id="Career_SurfaceDefence" translate="yes" xml:space="preserve">
+          <source>Surface Defence</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Défense de surface</target>
+        </trans-unit>
+        <trans-unit id="Msg_AgingReduction" translate="yes" xml:space="preserve">
+          <source>{0} reduced by {1} due to aging</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} réduit de {1} dus au vieillissement</target>
+        </trans-unit>
+        <trans-unit id="Msg_BillAllPaid" translate="yes" xml:space="preserve">
+          <source>You incurred a medical bill of {0}cr, {1}% was paid for you</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Que vous avez engagée une nomenclature médicale cr {0}, {1} % ont été versés pour vous</target>
+        </trans-unit>
+        <trans-unit id="Msg_BillSomePaid" translate="yes" xml:space="preserve">
+          <source>You incurred a medical bill of {0}cr, {1}% will be paid for you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Que vous avez engagée une nomenclature médicale cr {0}, {1} % seront payés pour vous.</target>
+        </trans-unit>
+        <trans-unit id="Msg_DEXReduced" translate="yes" xml:space="preserve">
+          <source>DEX reduced by {0}, STR and END reduced by 2.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">DEX réduit par {0}, STR et fin réduit par 2.</target>
+        </trans-unit>
+        <trans-unit id="Msg_DEXReduced2" translate="yes" xml:space="preserve">
+          <source>DEX reduced by 2.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">DEX réduit par 2.</target>
+        </trans-unit>
+        <trans-unit id="Msg_DishonourablyDischarged" translate="yes" xml:space="preserve">
+          <source>Dishonourably discharged from the service.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ont libéré du service.</target>
+        </trans-unit>
+        <trans-unit id="Msg_DishonourablyDischargedPrison" translate="yes" xml:space="preserve">
+          <source>Dishonourably discharged from the service. Serve 4 years in prison.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ont libéré du service. Purger les 4 ans de prison.</target>
+        </trans-unit>
+        <trans-unit id="Msg_EmployerPays" translate="yes" xml:space="preserve">
+          <source>Your employer pays {0}% of your medical bills.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Votre employeur paie {0} % de vos frais médicaux.</target>
+        </trans-unit>
+        <trans-unit id="Msg_ENDReduced" translate="yes" xml:space="preserve">
+          <source>END reduced by {0}, DEX and STR reduced by 2.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">FIN réduit par {0}, DEX et STR réduit par 2.</target>
+        </trans-unit>
+        <trans-unit id="Msg_HonourablyDischarged" translate="yes" xml:space="preserve">
+          <source>Honourably discharged from the service.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Honorablement du service.</target>
+        </trans-unit>
+        <trans-unit id="Msg_HonourablyDischargedLegal" translate="yes" xml:space="preserve">
+          <source>Honourably discharged from the service after a legal battle.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Honorablement du service après une bataille juridique.</target>
+        </trans-unit>
+        <trans-unit id="Msg_Injured" translate="yes" xml:space="preserve">
+          <source>Injured.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Blessé.</target>
+        </trans-unit>
+        <trans-unit id="Msg_InjuredInAction" translate="yes" xml:space="preserve">
+          <source>Injured in action.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Blessé au combat.</target>
+        </trans-unit>
+        <trans-unit id="Msg_LightlyInjured" translate="yes" xml:space="preserve">
+          <source>Lightly Injured: No permanent effect.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Légèrement blessés : Aucun effet permanent.</target>
+        </trans-unit>
+        <trans-unit id="Msg_MedicallyDischarged" translate="yes" xml:space="preserve">
+          <source>Medically discharged from the service.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Médicalement déchargé de la fonction.</target>
+        </trans-unit>
+        <trans-unit id="Msg_MissingEyeOrLimb" translate="yes" xml:space="preserve">
+          <source>Missing Eye or Limb.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Œil manquant ou un membre.</target>
+        </trans-unit>
+        <trans-unit id="Msg_NearlyKilled" translate="yes" xml:space="preserve">
+          <source>Nearly Killed.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Presque tué.</target>
+        </trans-unit>
+        <trans-unit id="Msg_ReducedX" translate="yes" xml:space="preserve">
+          <source>{0} reduced by {1}.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">{0} réduit par {1}.</target>
+        </trans-unit>
+        <trans-unit id="Msg_Scarred" translate="yes" xml:space="preserve">
+          <source>Scarred.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Portant des cicatrices.</target>
+        </trans-unit>
+        <trans-unit id="Msg_SeverlyInjured" translate="yes" xml:space="preserve">
+          <source>Severly Injured.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sévèrement blessé.</target>
+        </trans-unit>
+        <trans-unit id="Msg_STRReduced" translate="yes" xml:space="preserve">
+          <source>STR reduced by {0}, DEX and END reduced by 2.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">STR réduit par {0}, DEX et fin réduit par 2.</target>
+        </trans-unit>
+        <trans-unit id="Msg_STRReduced2" translate="yes" xml:space="preserve">
+          <source>STR reduced by 2.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">STR a réduit de 2.</target>
+        </trans-unit>
+        <trans-unit id="Rank_Admiral" translate="yes" xml:space="preserve">
+          <source>Admiral</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Amiral</target>
+        </trans-unit>
+        <trans-unit id="Rank_Agent" translate="yes" xml:space="preserve">
+          <source>Agent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent de</target>
+        </trans-unit>
+        <trans-unit id="Rank_AirCommodore" translate="yes" xml:space="preserve">
+          <source>Air Commodore</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Commodore de l’air</target>
+        </trans-unit>
+        <trans-unit id="Rank_Airman" translate="yes" xml:space="preserve">
+          <source>Airman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aviateur</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantDirector" translate="yes" xml:space="preserve">
+          <source>Assistant Director</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Assistant-réalisateur</target>
+        </trans-unit>
+        <trans-unit id="Rank_Athlete" translate="yes" xml:space="preserve">
+          <source>Athlete</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Athlète</target>
+        </trans-unit>
+        <trans-unit id="Rank_Barbarian" translate="yes" xml:space="preserve">
+          <source>Barbarian</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Barbare</target>
+        </trans-unit>
+        <trans-unit id="Rank_Brigadier" translate="yes" xml:space="preserve">
+          <source>Brigadier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Général de brigade</target>
+        </trans-unit>
+        <trans-unit id="Rank_Captain" translate="yes" xml:space="preserve">
+          <source>Captain</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Capitaine</target>
+        </trans-unit>
+        <trans-unit id="Rank_Colonel" translate="yes" xml:space="preserve">
+          <source>Colonel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colonel</target>
+        </trans-unit>
+        <trans-unit id="Rank_Commander" translate="yes" xml:space="preserve">
+          <source>Commander</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Commandant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Commodore" translate="yes" xml:space="preserve">
+          <source>Commodore</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Commodore</target>
+        </trans-unit>
+        <trans-unit id="Rank_Director" translate="yes" xml:space="preserve">
+          <source>Director</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Directeur</target>
+        </trans-unit>
+        <trans-unit id="Rank_Drifter" translate="yes" xml:space="preserve">
+          <source>Drifter</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Drifter</target>
+        </trans-unit>
+        <trans-unit id="Rank_Ensign" translate="yes" xml:space="preserve">
+          <source>Ensign</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ensign</target>
+        </trans-unit>
+        <trans-unit id="Rank_FlightLieutenant" translate="yes" xml:space="preserve">
+          <source>Flight Lieutenant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Capitaine d’aviation</target>
+        </trans-unit>
+        <trans-unit id="Rank_FlightOfficer" translate="yes" xml:space="preserve">
+          <source>Flight Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Officier de vol</target>
+        </trans-unit>
+        <trans-unit id="Rank_General" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Générales</target>
+        </trans-unit>
+        <trans-unit id="Rank_GroupCaptain" translate="yes" xml:space="preserve">
+          <source>Group Captain</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le colonel d’aviation</target>
+        </trans-unit>
+        <trans-unit id="Rank_Lieutenant" translate="yes" xml:space="preserve">
+          <source>Lieutenant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lieutenant</target>
+        </trans-unit>
+        <trans-unit id="Rank_LtColonel" translate="yes" xml:space="preserve">
+          <source>Lt. Colonel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le Lieutenant Colonel</target>
+        </trans-unit>
+        <trans-unit id="Rank_LtCommander" translate="yes" xml:space="preserve">
+          <source>Lt. Commander</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le lieutenant commandant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Major" translate="yes" xml:space="preserve">
+          <source>Major</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Principaux</target>
+        </trans-unit>
+        <trans-unit id="Rank_Midshipman" translate="yes" xml:space="preserve">
+          <source>Midshipman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aspirant de marine</target>
+        </trans-unit>
+        <trans-unit id="Rank_Private" translate="yes" xml:space="preserve">
+          <source>Private</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Privé</target>
+        </trans-unit>
+        <trans-unit id="Rank_Scout" translate="yes" xml:space="preserve">
+          <source>Scout</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scout</target>
+        </trans-unit>
+        <trans-unit id="Rank_Seaman" translate="yes" xml:space="preserve">
+          <source>Seaman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seaman</target>
+        </trans-unit>
+        <trans-unit id="Rank_SectionChief" translate="yes" xml:space="preserve">
+          <source>Section Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef de section</target>
+        </trans-unit>
+        <trans-unit id="Rank_SpecialAgent" translate="yes" xml:space="preserve">
+          <source>Special Agent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent spécial</target>
+        </trans-unit>
+        <trans-unit id="Rank_SpecialAgentInCharge" translate="yes" xml:space="preserve">
+          <source>Special Agent in Charge</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent spécial en Charge</target>
+        </trans-unit>
+        <trans-unit id="Rank_SquadronLeader" translate="yes" xml:space="preserve">
+          <source>Squadron Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef d’Escadron</target>
+        </trans-unit>
+        <trans-unit id="Rank_Starman" translate="yes" xml:space="preserve">
+          <source>Starman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Starman</target>
+        </trans-unit>
+        <trans-unit id="Rank_Trooper" translate="yes" xml:space="preserve">
+          <source>Trooper</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trooper</target>
+        </trans-unit>
+        <trans-unit id="Rank_UnitChief" translate="yes" xml:space="preserve">
+          <source>Unit Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef d’unité</target>
+        </trans-unit>
+        <trans-unit id="Rank_WingCommander" translate="yes" xml:space="preserve">
+          <source>Wing Commander</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Commandant de l’Escadre</target>
+        </trans-unit>
+        <trans-unit id="Skill_Advocate" translate="yes" xml:space="preserve">
+          <source>Advocate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avocat</target>
+        </trans-unit>
+        <trans-unit id="Skill_Aircraft" translate="yes" xml:space="preserve">
+          <source>Aircraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avion</target>
+        </trans-unit>
+        <trans-unit id="Skill_Animals" translate="yes" xml:space="preserve">
+          <source>Animals</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Animaux</target>
+        </trans-unit>
+        <trans-unit id="Skill_Archery" translate="yes" xml:space="preserve">
+          <source>Archery</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tir à l’arc</target>
+        </trans-unit>
+        <trans-unit id="Skill_Athletics" translate="yes" xml:space="preserve">
+          <source>Athletics</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Athlétisme aux Jeux</target>
+        </trans-unit>
+        <trans-unit id="Skill_BasicTraining" translate="yes" xml:space="preserve">
+          <source>Basic Training</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Formation de base</target>
+        </trans-unit>
+        <trans-unit id="Skill_BayWeapons" translate="yes" xml:space="preserve">
+          <source>Bay Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Baie d’armes</target>
+        </trans-unit>
+        <trans-unit id="Skill_BludgeoningWeapons" translate="yes" xml:space="preserve">
+          <source>Bludgeoning Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Matraquage des armes</target>
+        </trans-unit>
+        <trans-unit id="Skill_EnergyPistol" translate="yes" xml:space="preserve">
+          <source>Energy Pistol</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pistolet d’énergie</target>
+        </trans-unit>
+        <trans-unit id="Skill_EnergyRifle" translate="yes" xml:space="preserve">
+          <source>Energy Rifle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fusil de l’énergie</target>
+        </trans-unit>
+        <trans-unit id="Skill_Farming" translate="yes" xml:space="preserve">
+          <source>Farming</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agriculture</target>
+        </trans-unit>
+        <trans-unit id="Skill_GravVehicle" translate="yes" xml:space="preserve">
+          <source>Grav Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule de grav</target>
+        </trans-unit>
+        <trans-unit id="Skill_GroundVehicle" translate="yes" xml:space="preserve">
+          <source>Ground Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule terrestre</target>
+        </trans-unit>
+        <trans-unit id="Skill_GunCombat" translate="yes" xml:space="preserve">
+          <source>Gun Combat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pistolet Combat</target>
+        </trans-unit>
+        <trans-unit id="Skill_Gunnery" translate="yes" xml:space="preserve">
+          <source>Gunnery</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Artillerie</target>
+        </trans-unit>
+        <trans-unit id="Skill_HeavyWeapons" translate="yes" xml:space="preserve">
+          <source>Heavy Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Armes lourdes</target>
+        </trans-unit>
+        <trans-unit id="Skill_LifeSciences" translate="yes" xml:space="preserve">
+          <source>Life Sciences</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sciences de la vie</target>
+        </trans-unit>
+        <trans-unit id="Skill_Linguistics" translate="yes" xml:space="preserve">
+          <source>Linguistics</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Linguistique</target>
+        </trans-unit>
+        <trans-unit id="Skill_MeleeCombat" translate="yes" xml:space="preserve">
+          <source>Melee Combat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Combat de mêlée</target>
+        </trans-unit>
+        <trans-unit id="Skill_Mole" translate="yes" xml:space="preserve">
+          <source>Mole</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mole</target>
+        </trans-unit>
+        <trans-unit id="Skill_Motorboats" translate="yes" xml:space="preserve">
+          <source>Motorboats</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bateaux à moteur</target>
+        </trans-unit>
+        <trans-unit id="Skill_NaturalWeapons" translate="yes" xml:space="preserve">
+          <source>Natural Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Armes naturelles</target>
+        </trans-unit>
+        <trans-unit id="Skill_OceanShips" translate="yes" xml:space="preserve">
+          <source>Ocean Ships</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Navires océaniques</target>
+        </trans-unit>
+        <trans-unit id="Skill_PhysicalSciences" translate="yes" xml:space="preserve">
+          <source>Physical Sciences</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sciences physiques</target>
+        </trans-unit>
+        <trans-unit id="Skill_PiercingWeapons" translate="yes" xml:space="preserve">
+          <source>Piercing Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Piercing armes</target>
+        </trans-unit>
+        <trans-unit id="Skill_Riding" translate="yes" xml:space="preserve">
+          <source>Riding</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Circ.</target>
+        </trans-unit>
+        <trans-unit id="Skill_RotorAircraft" translate="yes" xml:space="preserve">
+          <source>Rotor Aircraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avion de rotor</target>
+        </trans-unit>
+        <trans-unit id="Skill_SailingShips" translate="yes" xml:space="preserve">
+          <source>Sailing Ships</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bateaux à voile</target>
+        </trans-unit>
+        <trans-unit id="Skill_Sciences" translate="yes" xml:space="preserve">
+          <source>Sciences</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sciences</target>
+        </trans-unit>
+        <trans-unit id="Skill_Screens" translate="yes" xml:space="preserve">
+          <source>Screens</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Écrans</target>
+        </trans-unit>
+        <trans-unit id="Skill_Shotgun" translate="yes" xml:space="preserve">
+          <source>Shotgun</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fusil de chasse</target>
+        </trans-unit>
+        <trans-unit id="Skill_SlashingWeapons" translate="yes" xml:space="preserve">
+          <source>Slashing Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Débroussaillage des armes</target>
+        </trans-unit>
+        <trans-unit id="Skill_SlugPistol" translate="yes" xml:space="preserve">
+          <source>Slug Pistol</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pistolet de limace</target>
+        </trans-unit>
+        <trans-unit id="Skill_SlugRifle" translate="yes" xml:space="preserve">
+          <source>Slug Rifle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fusil Slug</target>
+        </trans-unit>
+        <trans-unit id="Skill_SocialSciences" translate="yes" xml:space="preserve">
+          <source>Social Sciences</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sciences sociales</target>
+        </trans-unit>
+        <trans-unit id="Skill_SpaceSciences" translate="yes" xml:space="preserve">
+          <source>Space Sciences</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sciences de l’espace</target>
+        </trans-unit>
+        <trans-unit id="Skill_SpinalMounts" translate="yes" xml:space="preserve">
+          <source>Spinal Mounts</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Supports de la colonne vertébrale</target>
+        </trans-unit>
+        <trans-unit id="Skill_Submarines" translate="yes" xml:space="preserve">
+          <source>Submarines</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">U-boote</target>
+        </trans-unit>
+        <trans-unit id="Skill_TrackedVehicle" translate="yes" xml:space="preserve">
+          <source>Tracked Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule à chenilles</target>
+        </trans-unit>
+        <trans-unit id="Skill_TurretWeapons" translate="yes" xml:space="preserve">
+          <source>Turret Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Armes de la tourelle</target>
+        </trans-unit>
+        <trans-unit id="Skill_Vehicle" translate="yes" xml:space="preserve">
+          <source>Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule</target>
+        </trans-unit>
+        <trans-unit id="Skill_VetinaryMedicine" translate="yes" xml:space="preserve">
+          <source>Vetinary Medicine</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Médecine vétérinaire</target>
+        </trans-unit>
+        <trans-unit id="Skill_Watercraft" translate="yes" xml:space="preserve">
+          <source>Watercraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Embarcation</target>
+        </trans-unit>
+        <trans-unit id="Skill_WheeledVehicle" translate="yes" xml:space="preserve">
+          <source>Wheeled Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Véhicule à roues</target>
+        </trans-unit>
+        <trans-unit id="Skill_WingedAircraft" translate="yes" xml:space="preserve">
+          <source>Winged Aircraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ailes d’avion</target>
+        </trans-unit>
+        <trans-unit id="Species_Avians" translate="yes" xml:space="preserve">
+          <source>Avians</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Avians</target>
+        </trans-unit>
+        <trans-unit id="Species_Insectans" translate="yes" xml:space="preserve">
+          <source>Insectans</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Insectans</target>
+        </trans-unit>
+        <trans-unit id="Species_Merfolk" translate="yes" xml:space="preserve">
+          <source>Merfolk</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ondin et</target>
+        </trans-unit>
+        <trans-unit id="Species_Repltilians" translate="yes" xml:space="preserve">
+          <source>Repltilians</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Repltilians</target>
+        </trans-unit>
+        <trans-unit id="Species_UplifitedApe" translate="yes" xml:space="preserve">
+          <source>Uplifited Ape</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uplifited singe</target>
+        </trans-unit>
+        <trans-unit id="Species_UplifitedDolphin" translate="yes" xml:space="preserve">
+          <source>Uplifited Dolphin</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dolphin Uplifited</target>
+        </trans-unit>
+        <trans-unit id="Trait_Amphibious" translate="yes" xml:space="preserve">
+          <source>Amphibious</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Amphibie</target>
+        </trans-unit>
+        <trans-unit id="Trait_AntiPsionic" translate="yes" xml:space="preserve">
+          <source>Anti-Psionic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Anti-psionique</target>
+        </trans-unit>
+        <trans-unit id="Trait_Aquatic" translate="yes" xml:space="preserve">
+          <source>Aquatic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aquatique</target>
+        </trans-unit>
+        <trans-unit id="Trait_Armoured" translate="yes" xml:space="preserve">
+          <source>Armoured</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Blindé</target>
+        </trans-unit>
+        <trans-unit id="Trait_BadFirstImpression" translate="yes" xml:space="preserve">
+          <source>Bad First Impression</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mauvaise première Impression</target>
+        </trans-unit>
+        <trans-unit id="Trait_Caste" translate="yes" xml:space="preserve">
+          <source>Caste</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Caste</target>
+        </trans-unit>
+        <trans-unit id="Trait_ColdBlooded" translate="yes" xml:space="preserve">
+          <source>Cold Blooded</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cold Blooded</target>
+        </trans-unit>
+        <trans-unit id="Trait_FastSpeed" translate="yes" xml:space="preserve">
+          <source>Fast Speed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vitesse rapide</target>
+        </trans-unit>
+        <trans-unit id="Trait_Flyer" translate="yes" xml:space="preserve">
+          <source>Flyer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flyer</target>
+        </trans-unit>
+        <trans-unit id="Trait_GreatLeaper" translate="yes" xml:space="preserve">
+          <source>Great Leaper</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Grande Leaper</target>
+        </trans-unit>
+        <trans-unit id="Trait_HeatEndurance" translate="yes" xml:space="preserve">
+          <source>Heat Endurance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Endurance de chaleur</target>
+        </trans-unit>
+        <trans-unit id="Trait_HiveMentaility" translate="yes" xml:space="preserve">
+          <source>Hive Mentaility</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ruche Mentaility</target>
+        </trans-unit>
+        <trans-unit id="Trait_LowGravityAdaptation" translate="yes" xml:space="preserve">
+          <source>Low Gravity Adaptation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Adaptation de faible gravité</target>
+        </trans-unit>
+        <trans-unit id="Trait_LowLightVision" translate="yes" xml:space="preserve">
+          <source>Low-Light Vision</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vision de faible luminosité</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalPilot" translate="yes" xml:space="preserve">
+          <source>Natural Pilot</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pilote naturel</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalSwimmer" translate="yes" xml:space="preserve">
+          <source>Natural Swimmer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nageur naturel</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalWeapons" translate="yes" xml:space="preserve">
+          <source>Natural Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Armes naturelles</target>
+        </trans-unit>
+        <trans-unit id="Trait_NoFineManipulators" translate="yes" xml:space="preserve">
+          <source>No Fine Manipulators</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aucune amende manipulateurs</target>
+        </trans-unit>
+        <trans-unit id="Trait_SlowSpeed" translate="yes" xml:space="preserve">
+          <source>Slow Speed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vitesse lente</target>
+        </trans-unit>
+        <trans-unit id="Trait_Small" translate="yes" xml:space="preserve">
+          <source>Small</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Petit</target>
+        </trans-unit>
+        <trans-unit id="Trait_Uplifited" translate="yes" xml:space="preserve">
+          <source>Uplifited</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uplifited</target>
+        </trans-unit>
+        <trans-unit id="Trait_WaterDependant" translate="yes" xml:space="preserve">
+          <source>Water Dependant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Personne à charge de l’eau</target>
         </trans-unit>
       </group>
     </body>

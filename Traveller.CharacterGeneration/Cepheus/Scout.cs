@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Scout : Career
     {
         public Scout()
         {
-            Name = "Scout";
+            Name = Resources.Career_Scout;
             hasRanks = false;
 
             enlistment = 6;
@@ -57,7 +53,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = Resources.Table_Education;
+            table.Name = Resources.Table_Specialist;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Engineering;
             skills[1] = SkillLibrary.Gunnery;
@@ -77,7 +73,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[4] = CharacterGeneration.SkillLibrary.Navigation;
             skills[5] = CharacterGeneration.SkillLibrary.Tactics;
 
-            Ranks[0] = "Scout";
+            Ranks[0] = Resources.Rank_Scout;
         }
         protected override void CommsionSkill()
         {

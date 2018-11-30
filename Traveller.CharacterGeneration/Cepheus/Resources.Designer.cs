@@ -61,6 +61,312 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Courier Vessel.
+        /// </summary>
+        internal static string Benefit_CourierVessel {
+            get {
+                return ResourceManager.GetString("Benefit_CourierVessel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Explorers Society.
+        /// </summary>
+        internal static string Benefit_ExplorersSociety {
+            get {
+                return ResourceManager.GetString("Benefit_ExplorersSociety", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aerospace Defence.
+        /// </summary>
+        internal static string Career_AerospaceDefence {
+            get {
+                return ResourceManager.GetString("Career_AerospaceDefence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agent.
+        /// </summary>
+        internal static string Career_Agent {
+            get {
+                return ResourceManager.GetString("Career_Agent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Athlete.
+        /// </summary>
+        internal static string Career_Athlete {
+            get {
+                return ResourceManager.GetString("Career_Athlete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Barbarian.
+        /// </summary>
+        internal static string Career_Barbarian {
+            get {
+                return ResourceManager.GetString("Career_Barbarian", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drifter.
+        /// </summary>
+        internal static string Career_Drifter {
+            get {
+                return ResourceManager.GetString("Career_Drifter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marine.
+        /// </summary>
+        internal static string Career_Marine {
+            get {
+                return ResourceManager.GetString("Career_Marine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maritime Defence.
+        /// </summary>
+        internal static string Career_MaritimeDefence {
+            get {
+                return ResourceManager.GetString("Career_MaritimeDefence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Navy.
+        /// </summary>
+        internal static string Career_Navy {
+            get {
+                return ResourceManager.GetString("Career_Navy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scout.
+        /// </summary>
+        internal static string Career_Scout {
+            get {
+                return ResourceManager.GetString("Career_Scout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Surface Defence.
+        /// </summary>
+        internal static string Career_SurfaceDefence {
+            get {
+                return ResourceManager.GetString("Career_SurfaceDefence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} reduced by {1} due to aging.
+        /// </summary>
+        internal static string Msg_AgingReduction {
+            get {
+                return ResourceManager.GetString("Msg_AgingReduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You incurred a medical bill of {0}cr, {1}% was paid for you.
+        /// </summary>
+        internal static string Msg_BillAllPaid {
+            get {
+                return ResourceManager.GetString("Msg_BillAllPaid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You incurred a medical bill of {0}cr, {1}% will be paid for you..
+        /// </summary>
+        internal static string Msg_BillSomePaid {
+            get {
+                return ResourceManager.GetString("Msg_BillSomePaid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DEX reduced by {0}, STR and END reduced by 2..
+        /// </summary>
+        internal static string Msg_DEXReduced {
+            get {
+                return ResourceManager.GetString("Msg_DEXReduced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DEX reduced by 2..
+        /// </summary>
+        internal static string Msg_DEXReduced2 {
+            get {
+                return ResourceManager.GetString("Msg_DEXReduced2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dishonourably discharged from the service..
+        /// </summary>
+        internal static string Msg_DishonourablyDischarged {
+            get {
+                return ResourceManager.GetString("Msg_DishonourablyDischarged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dishonourably discharged from the service. Serve 4 years in prison..
+        /// </summary>
+        internal static string Msg_DishonourablyDischargedPrison {
+            get {
+                return ResourceManager.GetString("Msg_DishonourablyDischargedPrison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your employer pays {0}% of your medical bills..
+        /// </summary>
+        internal static string Msg_EmployerPays {
+            get {
+                return ResourceManager.GetString("Msg_EmployerPays", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to END reduced by {0}, DEX and STR reduced by 2..
+        /// </summary>
+        internal static string Msg_ENDReduced {
+            get {
+                return ResourceManager.GetString("Msg_ENDReduced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Honourably discharged from the service..
+        /// </summary>
+        internal static string Msg_HonourablyDischarged {
+            get {
+                return ResourceManager.GetString("Msg_HonourablyDischarged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Honourably discharged from the service after a legal battle..
+        /// </summary>
+        internal static string Msg_HonourablyDischargedLegal {
+            get {
+                return ResourceManager.GetString("Msg_HonourablyDischargedLegal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Injured..
+        /// </summary>
+        internal static string Msg_Injured {
+            get {
+                return ResourceManager.GetString("Msg_Injured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Injured in action..
+        /// </summary>
+        internal static string Msg_InjuredInAction {
+            get {
+                return ResourceManager.GetString("Msg_InjuredInAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lightly Injured: No permanent effect..
+        /// </summary>
+        internal static string Msg_LightlyInjured {
+            get {
+                return ResourceManager.GetString("Msg_LightlyInjured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medically discharged from the service..
+        /// </summary>
+        internal static string Msg_MedicallyDischarged {
+            get {
+                return ResourceManager.GetString("Msg_MedicallyDischarged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Missing Eye or Limb..
+        /// </summary>
+        internal static string Msg_MissingEyeOrLimb {
+            get {
+                return ResourceManager.GetString("Msg_MissingEyeOrLimb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nearly Killed..
+        /// </summary>
+        internal static string Msg_NearlyKilled {
+            get {
+                return ResourceManager.GetString("Msg_NearlyKilled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} reduced by {1}..
+        /// </summary>
+        internal static string Msg_ReducedX {
+            get {
+                return ResourceManager.GetString("Msg_ReducedX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scarred..
+        /// </summary>
+        internal static string Msg_Scarred {
+            get {
+                return ResourceManager.GetString("Msg_Scarred", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Severly Injured..
+        /// </summary>
+        internal static string Msg_SeverlyInjured {
+            get {
+                return ResourceManager.GetString("Msg_SeverlyInjured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to STR reduced by {0}, DEX and END reduced by 2..
+        /// </summary>
+        internal static string Msg_STRReduced {
+            get {
+                return ResourceManager.GetString("Msg_STRReduced", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to STR reduced by 2..
+        /// </summary>
+        internal static string Msg_STRReduced2 {
+            get {
+                return ResourceManager.GetString("Msg_STRReduced2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Commissioned as {0}.
         /// </summary>
         internal static string Prompt_Commissioned {
@@ -79,20 +385,785 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Advaned Eduation.
+        ///   Looks up a localized string similar to Admiral.
         /// </summary>
-        internal static string Table_AdvancedEducation {
+        internal static string Rank_Admiral {
             get {
-                return ResourceManager.GetString("Table_AdvancedEducation", resourceCulture);
+                return ResourceManager.GetString("Rank_Admiral", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Education.
+        ///   Looks up a localized string similar to Agent.
         /// </summary>
-        internal static string Table_Education {
+        internal static string Rank_Agent {
             get {
-                return ResourceManager.GetString("Table_Education", resourceCulture);
+                return ResourceManager.GetString("Rank_Agent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Air Commodore.
+        /// </summary>
+        internal static string Rank_AirCommodore {
+            get {
+                return ResourceManager.GetString("Rank_AirCommodore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Airman.
+        /// </summary>
+        internal static string Rank_Airman {
+            get {
+                return ResourceManager.GetString("Rank_Airman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assistant Director.
+        /// </summary>
+        internal static string Rank_AssistantDirector {
+            get {
+                return ResourceManager.GetString("Rank_AssistantDirector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Athlete.
+        /// </summary>
+        internal static string Rank_Athlete {
+            get {
+                return ResourceManager.GetString("Rank_Athlete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Barbarian.
+        /// </summary>
+        internal static string Rank_Barbarian {
+            get {
+                return ResourceManager.GetString("Rank_Barbarian", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Brigadier.
+        /// </summary>
+        internal static string Rank_Brigadier {
+            get {
+                return ResourceManager.GetString("Rank_Brigadier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Captain.
+        /// </summary>
+        internal static string Rank_Captain {
+            get {
+                return ResourceManager.GetString("Rank_Captain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colonel.
+        /// </summary>
+        internal static string Rank_Colonel {
+            get {
+                return ResourceManager.GetString("Rank_Colonel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commander.
+        /// </summary>
+        internal static string Rank_Commander {
+            get {
+                return ResourceManager.GetString("Rank_Commander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commodore.
+        /// </summary>
+        internal static string Rank_Commodore {
+            get {
+                return ResourceManager.GetString("Rank_Commodore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Director.
+        /// </summary>
+        internal static string Rank_Director {
+            get {
+                return ResourceManager.GetString("Rank_Director", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Drifter.
+        /// </summary>
+        internal static string Rank_Drifter {
+            get {
+                return ResourceManager.GetString("Rank_Drifter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ensign.
+        /// </summary>
+        internal static string Rank_Ensign {
+            get {
+                return ResourceManager.GetString("Rank_Ensign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flight Lieutenant.
+        /// </summary>
+        internal static string Rank_FlightLieutenant {
+            get {
+                return ResourceManager.GetString("Rank_FlightLieutenant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flight Officer.
+        /// </summary>
+        internal static string Rank_FlightOfficer {
+            get {
+                return ResourceManager.GetString("Rank_FlightOfficer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        internal static string Rank_General {
+            get {
+                return ResourceManager.GetString("Rank_General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Group Captain.
+        /// </summary>
+        internal static string Rank_GroupCaptain {
+            get {
+                return ResourceManager.GetString("Rank_GroupCaptain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lieutenant.
+        /// </summary>
+        internal static string Rank_Lieutenant {
+            get {
+                return ResourceManager.GetString("Rank_Lieutenant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lt. Colonel.
+        /// </summary>
+        internal static string Rank_LtColonel {
+            get {
+                return ResourceManager.GetString("Rank_LtColonel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lt. Commander.
+        /// </summary>
+        internal static string Rank_LtCommander {
+            get {
+                return ResourceManager.GetString("Rank_LtCommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string Rank_Major {
+            get {
+                return ResourceManager.GetString("Rank_Major", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Midshipman.
+        /// </summary>
+        internal static string Rank_Midshipman {
+            get {
+                return ResourceManager.GetString("Rank_Midshipman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Private.
+        /// </summary>
+        internal static string Rank_Private {
+            get {
+                return ResourceManager.GetString("Rank_Private", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scout.
+        /// </summary>
+        internal static string Rank_Scout {
+            get {
+                return ResourceManager.GetString("Rank_Scout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seaman.
+        /// </summary>
+        internal static string Rank_Seaman {
+            get {
+                return ResourceManager.GetString("Rank_Seaman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Section Chief.
+        /// </summary>
+        internal static string Rank_SectionChief {
+            get {
+                return ResourceManager.GetString("Rank_SectionChief", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Agent.
+        /// </summary>
+        internal static string Rank_SpecialAgent {
+            get {
+                return ResourceManager.GetString("Rank_SpecialAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Special Agent in Charge.
+        /// </summary>
+        internal static string Rank_SpecialAgentInCharge {
+            get {
+                return ResourceManager.GetString("Rank_SpecialAgentInCharge", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Squadron Leader.
+        /// </summary>
+        internal static string Rank_SquadronLeader {
+            get {
+                return ResourceManager.GetString("Rank_SquadronLeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starman.
+        /// </summary>
+        internal static string Rank_Starman {
+            get {
+                return ResourceManager.GetString("Rank_Starman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trooper.
+        /// </summary>
+        internal static string Rank_Trooper {
+            get {
+                return ResourceManager.GetString("Rank_Trooper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit Chief.
+        /// </summary>
+        internal static string Rank_UnitChief {
+            get {
+                return ResourceManager.GetString("Rank_UnitChief", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wing Commander.
+        /// </summary>
+        internal static string Rank_WingCommander {
+            get {
+                return ResourceManager.GetString("Rank_WingCommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advocate.
+        /// </summary>
+        internal static string Skill_Advocate {
+            get {
+                return ResourceManager.GetString("Skill_Advocate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aircraft.
+        /// </summary>
+        internal static string Skill_Aircraft {
+            get {
+                return ResourceManager.GetString("Skill_Aircraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Animals.
+        /// </summary>
+        internal static string Skill_Animals {
+            get {
+                return ResourceManager.GetString("Skill_Animals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Archery.
+        /// </summary>
+        internal static string Skill_Archery {
+            get {
+                return ResourceManager.GetString("Skill_Archery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Athletics.
+        /// </summary>
+        internal static string Skill_Athletics {
+            get {
+                return ResourceManager.GetString("Skill_Athletics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basic Training.
+        /// </summary>
+        internal static string Skill_BasicTraining {
+            get {
+                return ResourceManager.GetString("Skill_BasicTraining", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bay Weapons.
+        /// </summary>
+        internal static string Skill_BayWeapons {
+            get {
+                return ResourceManager.GetString("Skill_BayWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bludgeoning Weapons.
+        /// </summary>
+        internal static string Skill_BludgeoningWeapons {
+            get {
+                return ResourceManager.GetString("Skill_BludgeoningWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Energy Pistol.
+        /// </summary>
+        internal static string Skill_EnergyPistol {
+            get {
+                return ResourceManager.GetString("Skill_EnergyPistol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Energy Rifle.
+        /// </summary>
+        internal static string Skill_EnergyRifle {
+            get {
+                return ResourceManager.GetString("Skill_EnergyRifle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Farming.
+        /// </summary>
+        internal static string Skill_Farming {
+            get {
+                return ResourceManager.GetString("Skill_Farming", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Grav Vehicle.
+        /// </summary>
+        internal static string Skill_GravVehicle {
+            get {
+                return ResourceManager.GetString("Skill_GravVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ground Vehicle.
+        /// </summary>
+        internal static string Skill_GroundVehicle {
+            get {
+                return ResourceManager.GetString("Skill_GroundVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gun Combat.
+        /// </summary>
+        internal static string Skill_GunCombat {
+            get {
+                return ResourceManager.GetString("Skill_GunCombat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gunnery.
+        /// </summary>
+        internal static string Skill_Gunnery {
+            get {
+                return ResourceManager.GetString("Skill_Gunnery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heavy Weapons.
+        /// </summary>
+        internal static string Skill_HeavyWeapons {
+            get {
+                return ResourceManager.GetString("Skill_HeavyWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Life Sciences.
+        /// </summary>
+        internal static string Skill_LifeSciences {
+            get {
+                return ResourceManager.GetString("Skill_LifeSciences", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Linguistics.
+        /// </summary>
+        internal static string Skill_Linguistics {
+            get {
+                return ResourceManager.GetString("Skill_Linguistics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Melee Combat.
+        /// </summary>
+        internal static string Skill_MeleeCombat {
+            get {
+                return ResourceManager.GetString("Skill_MeleeCombat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mole.
+        /// </summary>
+        internal static string Skill_Mole {
+            get {
+                return ResourceManager.GetString("Skill_Mole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Motorboats.
+        /// </summary>
+        internal static string Skill_Motorboats {
+            get {
+                return ResourceManager.GetString("Skill_Motorboats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Natural Weapons.
+        /// </summary>
+        internal static string Skill_NaturalWeapons {
+            get {
+                return ResourceManager.GetString("Skill_NaturalWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ocean Ships.
+        /// </summary>
+        internal static string Skill_OceanShips {
+            get {
+                return ResourceManager.GetString("Skill_OceanShips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Physical Sciences.
+        /// </summary>
+        internal static string Skill_PhysicalSciences {
+            get {
+                return ResourceManager.GetString("Skill_PhysicalSciences", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Piercing Weapons.
+        /// </summary>
+        internal static string Skill_PiercingWeapons {
+            get {
+                return ResourceManager.GetString("Skill_PiercingWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Riding.
+        /// </summary>
+        internal static string Skill_Riding {
+            get {
+                return ResourceManager.GetString("Skill_Riding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rotor Aircraft.
+        /// </summary>
+        internal static string Skill_RotorAircraft {
+            get {
+                return ResourceManager.GetString("Skill_RotorAircraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sailing Ships.
+        /// </summary>
+        internal static string Skill_SailingShips {
+            get {
+                return ResourceManager.GetString("Skill_SailingShips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sciences.
+        /// </summary>
+        internal static string Skill_Sciences {
+            get {
+                return ResourceManager.GetString("Skill_Sciences", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Screens.
+        /// </summary>
+        internal static string Skill_Screens {
+            get {
+                return ResourceManager.GetString("Skill_Screens", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shotgun.
+        /// </summary>
+        internal static string Skill_Shotgun {
+            get {
+                return ResourceManager.GetString("Skill_Shotgun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slashing Weapons.
+        /// </summary>
+        internal static string Skill_SlashingWeapons {
+            get {
+                return ResourceManager.GetString("Skill_SlashingWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slug Pistol.
+        /// </summary>
+        internal static string Skill_SlugPistol {
+            get {
+                return ResourceManager.GetString("Skill_SlugPistol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slug Rifle.
+        /// </summary>
+        internal static string Skill_SlugRifle {
+            get {
+                return ResourceManager.GetString("Skill_SlugRifle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Social Sciences.
+        /// </summary>
+        internal static string Skill_SocialSciences {
+            get {
+                return ResourceManager.GetString("Skill_SocialSciences", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Space Sciences.
+        /// </summary>
+        internal static string Skill_SpaceSciences {
+            get {
+                return ResourceManager.GetString("Skill_SpaceSciences", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spinal Mounts.
+        /// </summary>
+        internal static string Skill_SpinalMounts {
+            get {
+                return ResourceManager.GetString("Skill_SpinalMounts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submarines.
+        /// </summary>
+        internal static string Skill_Submarines {
+            get {
+                return ResourceManager.GetString("Skill_Submarines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tracked Vehicle.
+        /// </summary>
+        internal static string Skill_TrackedVehicle {
+            get {
+                return ResourceManager.GetString("Skill_TrackedVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turret Weapons.
+        /// </summary>
+        internal static string Skill_TurretWeapons {
+            get {
+                return ResourceManager.GetString("Skill_TurretWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle.
+        /// </summary>
+        internal static string Skill_Vehicle {
+            get {
+                return ResourceManager.GetString("Skill_Vehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vetinary Medicine.
+        /// </summary>
+        internal static string Skill_VetinaryMedicine {
+            get {
+                return ResourceManager.GetString("Skill_VetinaryMedicine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Watercraft.
+        /// </summary>
+        internal static string Skill_Watercraft {
+            get {
+                return ResourceManager.GetString("Skill_Watercraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wheeled Vehicle.
+        /// </summary>
+        internal static string Skill_WheeledVehicle {
+            get {
+                return ResourceManager.GetString("Skill_WheeledVehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Winged Aircraft.
+        /// </summary>
+        internal static string Skill_WingedAircraft {
+            get {
+                return ResourceManager.GetString("Skill_WingedAircraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Avians.
+        /// </summary>
+        internal static string Species_Avians {
+            get {
+                return ResourceManager.GetString("Species_Avians", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insectans.
+        /// </summary>
+        internal static string Species_Insectans {
+            get {
+                return ResourceManager.GetString("Species_Insectans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Merfolk.
+        /// </summary>
+        internal static string Species_Merfolk {
+            get {
+                return ResourceManager.GetString("Species_Merfolk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repltilians.
+        /// </summary>
+        internal static string Species_Repltilians {
+            get {
+                return ResourceManager.GetString("Species_Repltilians", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uplifited Ape.
+        /// </summary>
+        internal static string Species_UplifitedApe {
+            get {
+                return ResourceManager.GetString("Species_UplifitedApe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uplifited Dolphin.
+        /// </summary>
+        internal static string Species_UplifitedDolphin {
+            get {
+                return ResourceManager.GetString("Species_UplifitedDolphin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Advanced Education.
+        /// </summary>
+        internal static string Table_AdvancedEducation {
+            get {
+                return ResourceManager.GetString("Table_AdvancedEducation", resourceCulture);
             }
         }
         
@@ -111,6 +1182,213 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Table_ServiceSkills {
             get {
                 return ResourceManager.GetString("Table_ServiceSkills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specialist.
+        /// </summary>
+        internal static string Table_Specialist {
+            get {
+                return ResourceManager.GetString("Table_Specialist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amphibious.
+        /// </summary>
+        internal static string Trait_Amphibious {
+            get {
+                return ResourceManager.GetString("Trait_Amphibious", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anti-Psionic.
+        /// </summary>
+        internal static string Trait_AntiPsionic {
+            get {
+                return ResourceManager.GetString("Trait_AntiPsionic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aquatic.
+        /// </summary>
+        internal static string Trait_Aquatic {
+            get {
+                return ResourceManager.GetString("Trait_Aquatic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Armoured.
+        /// </summary>
+        internal static string Trait_Armoured {
+            get {
+                return ResourceManager.GetString("Trait_Armoured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bad First Impression.
+        /// </summary>
+        internal static string Trait_BadFirstImpression {
+            get {
+                return ResourceManager.GetString("Trait_BadFirstImpression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caste.
+        /// </summary>
+        internal static string Trait_Caste {
+            get {
+                return ResourceManager.GetString("Trait_Caste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold Blooded.
+        /// </summary>
+        internal static string Trait_ColdBlooded {
+            get {
+                return ResourceManager.GetString("Trait_ColdBlooded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fast Speed.
+        /// </summary>
+        internal static string Trait_FastSpeed {
+            get {
+                return ResourceManager.GetString("Trait_FastSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flyer.
+        /// </summary>
+        internal static string Trait_Flyer {
+            get {
+                return ResourceManager.GetString("Trait_Flyer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Great Leaper.
+        /// </summary>
+        internal static string Trait_GreatLeaper {
+            get {
+                return ResourceManager.GetString("Trait_GreatLeaper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heat Endurance.
+        /// </summary>
+        internal static string Trait_HeatEndurance {
+            get {
+                return ResourceManager.GetString("Trait_HeatEndurance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hive Mentaility.
+        /// </summary>
+        internal static string Trait_HiveMentaility {
+            get {
+                return ResourceManager.GetString("Trait_HiveMentaility", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Low Gravity Adaptation.
+        /// </summary>
+        internal static string Trait_LowGravityAdaptation {
+            get {
+                return ResourceManager.GetString("Trait_LowGravityAdaptation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Low-Light Vision.
+        /// </summary>
+        internal static string Trait_LowLightVision {
+            get {
+                return ResourceManager.GetString("Trait_LowLightVision", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Natural Pilot.
+        /// </summary>
+        internal static string Trait_NaturalPilot {
+            get {
+                return ResourceManager.GetString("Trait_NaturalPilot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Natural Swimmer.
+        /// </summary>
+        internal static string Trait_NaturalSwimmer {
+            get {
+                return ResourceManager.GetString("Trait_NaturalSwimmer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Natural Weapons.
+        /// </summary>
+        internal static string Trait_NaturalWeapons {
+            get {
+                return ResourceManager.GetString("Trait_NaturalWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Fine Manipulators.
+        /// </summary>
+        internal static string Trait_NoFineManipulators {
+            get {
+                return ResourceManager.GetString("Trait_NoFineManipulators", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slow Speed.
+        /// </summary>
+        internal static string Trait_SlowSpeed {
+            get {
+                return ResourceManager.GetString("Trait_SlowSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Small.
+        /// </summary>
+        internal static string Trait_Small {
+            get {
+                return ResourceManager.GetString("Trait_Small", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uplifited.
+        /// </summary>
+        internal static string Trait_Uplifited {
+            get {
+                return ResourceManager.GetString("Trait_Uplifited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Water Dependant.
+        /// </summary>
+        internal static string Trait_WaterDependant {
+            get {
+                return ResourceManager.GetString("Trait_WaterDependant", resourceCulture);
             }
         }
     }

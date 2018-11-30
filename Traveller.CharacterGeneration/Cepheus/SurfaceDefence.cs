@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class SurfaceDefence : Career
     {
         public SurfaceDefence()
         {
-            Name = "Surface Defence";
+            Name = Resources.Career_SurfaceDefence;
             hasRanks = true;
 
             enlistment = 5;
@@ -22,13 +18,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             reenlist = 5;
             medicalBand = 1;
 
-            Ranks[0] = "Private";
-            Ranks[1] = "Lieutenant";
-            Ranks[2] = "Captain";
-            Ranks[3] = "Major";
-            Ranks[4] = "Lt. Colonel";
-            Ranks[5] = "Colonel";
-            Ranks[6] = "General";
+            Ranks[0] = Resources.Rank_Private;
+            Ranks[1] = Resources.Rank_Lieutenant;
+            Ranks[2] = Resources.Rank_Captain;
+            Ranks[3] = Resources.Rank_Major;
+            Ranks[4] = Resources.Rank_LtColonel;
+            Ranks[5] = Resources.Rank_Colonel;
+            Ranks[6] = Resources.Rank_General;
 
             Material.Add(CharacterGeneration.BenefitLibrary.LowPsg);
             Material.Add(CharacterGeneration.BenefitLibrary.Int);
@@ -70,7 +66,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = Resources.Table_Education;
+            table.Name = Resources.Table_Specialist;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Communications;
             skills[1] = CharacterGeneration.SkillLibrary.Demolitions;

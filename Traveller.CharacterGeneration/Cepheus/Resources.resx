@@ -117,22 +117,448 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Benefit_CourierVessel" xml:space="preserve">
+    <value>Courier Vessel</value>
+  </data>
+  <data name="Benefit_ExplorersSociety" xml:space="preserve">
+    <value>Explorers Society</value>
+  </data>
+  <data name="Career_AerospaceDefence" xml:space="preserve">
+    <value>Aerospace Defence</value>
+  </data>
+  <data name="Career_Agent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Career_Athlete" xml:space="preserve">
+    <value>Athlete</value>
+  </data>
+  <data name="Career_Barbarian" xml:space="preserve">
+    <value>Barbarian</value>
+  </data>
+  <data name="Career_Drifter" xml:space="preserve">
+    <value>Drifter</value>
+  </data>
+  <data name="Career_Marine" xml:space="preserve">
+    <value>Marine</value>
+  </data>
+  <data name="Career_MaritimeDefence" xml:space="preserve">
+    <value>Maritime Defence</value>
+  </data>
+  <data name="Career_Navy" xml:space="preserve">
+    <value>Navy</value>
+  </data>
+  <data name="Career_Scout" xml:space="preserve">
+    <value>Scout</value>
+  </data>
+  <data name="Career_SurfaceDefence" xml:space="preserve">
+    <value>Surface Defence</value>
+  </data>
+  <data name="Msg_AgingReduction" xml:space="preserve">
+    <value>{0} reduced by {1} due to aging</value>
+  </data>
+  <data name="Msg_BillAllPaid" xml:space="preserve">
+    <value>You incurred a medical bill of {0}cr, {1}% was paid for you</value>
+  </data>
+  <data name="Msg_BillSomePaid" xml:space="preserve">
+    <value>You incurred a medical bill of {0}cr, {1}% will be paid for you.</value>
+  </data>
+  <data name="Msg_DEXReduced" xml:space="preserve">
+    <value>DEX reduced by {0}, STR and END reduced by 2.</value>
+  </data>
+  <data name="Msg_DEXReduced2" xml:space="preserve">
+    <value>DEX reduced by 2.</value>
+  </data>
+  <data name="Msg_DishonourablyDischarged" xml:space="preserve">
+    <value>Dishonourably discharged from the service.</value>
+  </data>
+  <data name="Msg_DishonourablyDischargedPrison" xml:space="preserve">
+    <value>Dishonourably discharged from the service. Serve 4 years in prison.</value>
+  </data>
+  <data name="Msg_EmployerPays" xml:space="preserve">
+    <value>Your employer pays {0}% of your medical bills.</value>
+  </data>
+  <data name="Msg_ENDReduced" xml:space="preserve">
+    <value>END reduced by {0}, DEX and STR reduced by 2.</value>
+  </data>
+  <data name="Msg_HonourablyDischarged" xml:space="preserve">
+    <value>Honourably discharged from the service.</value>
+  </data>
+  <data name="Msg_HonourablyDischargedLegal" xml:space="preserve">
+    <value>Honourably discharged from the service after a legal battle.</value>
+  </data>
+  <data name="Msg_Injured" xml:space="preserve">
+    <value>Injured.</value>
+  </data>
+  <data name="Msg_InjuredInAction" xml:space="preserve">
+    <value>Injured in action.</value>
+  </data>
+  <data name="Msg_LightlyInjured" xml:space="preserve">
+    <value>Lightly Injured: No permanent effect.</value>
+  </data>
+  <data name="Msg_MedicallyDischarged" xml:space="preserve">
+    <value>Medically discharged from the service.</value>
+  </data>
+  <data name="Msg_MissingEyeOrLimb" xml:space="preserve">
+    <value>Missing Eye or Limb.</value>
+  </data>
+  <data name="Msg_NearlyKilled" xml:space="preserve">
+    <value>Nearly Killed.</value>
+  </data>
+  <data name="Msg_ReducedX" xml:space="preserve">
+    <value>{0} reduced by {1}.</value>
+  </data>
+  <data name="Msg_Scarred" xml:space="preserve">
+    <value>Scarred.</value>
+  </data>
+  <data name="Msg_SeverlyInjured" xml:space="preserve">
+    <value>Severly Injured.</value>
+  </data>
+  <data name="Msg_STRReduced" xml:space="preserve">
+    <value>STR reduced by {0}, DEX and END reduced by 2.</value>
+  </data>
+  <data name="Msg_STRReduced2" xml:space="preserve">
+    <value>STR reduced by 2.</value>
+  </data>
   <data name="Prompt_Commissioned" xml:space="preserve">
     <value>Commissioned as {0}</value>
   </data>
   <data name="Prompt_Promoted" xml:space="preserve">
     <value>Promoted to {0}</value>
   </data>
-  <data name="Table_AdvancedEducation" xml:space="preserve">
-    <value>Advaned Eduation</value>
+  <data name="Rank_Admiral" xml:space="preserve">
+    <value>Admiral</value>
   </data>
-  <data name="Table_Education" xml:space="preserve">
-    <value>Education</value>
+  <data name="Rank_Agent" xml:space="preserve">
+    <value>Agent</value>
+  </data>
+  <data name="Rank_AirCommodore" xml:space="preserve">
+    <value>Air Commodore</value>
+  </data>
+  <data name="Rank_Airman" xml:space="preserve">
+    <value>Airman</value>
+  </data>
+  <data name="Rank_AssistantDirector" xml:space="preserve">
+    <value>Assistant Director</value>
+  </data>
+  <data name="Rank_Athlete" xml:space="preserve">
+    <value>Athlete</value>
+  </data>
+  <data name="Rank_Barbarian" xml:space="preserve">
+    <value>Barbarian</value>
+  </data>
+  <data name="Rank_Brigadier" xml:space="preserve">
+    <value>Brigadier</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Captain</value>
+  </data>
+  <data name="Rank_Colonel" xml:space="preserve">
+    <value>Colonel</value>
+  </data>
+  <data name="Rank_Commander" xml:space="preserve">
+    <value>Commander</value>
+  </data>
+  <data name="Rank_Commodore" xml:space="preserve">
+    <value>Commodore</value>
+  </data>
+  <data name="Rank_Director" xml:space="preserve">
+    <value>Director</value>
+  </data>
+  <data name="Rank_Drifter" xml:space="preserve">
+    <value>Drifter</value>
+  </data>
+  <data name="Rank_Ensign" xml:space="preserve">
+    <value>Ensign</value>
+  </data>
+  <data name="Rank_FlightLieutenant" xml:space="preserve">
+    <value>Flight Lieutenant</value>
+  </data>
+  <data name="Rank_FlightOfficer" xml:space="preserve">
+    <value>Flight Officer</value>
+  </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Rank_GroupCaptain" xml:space="preserve">
+    <value>Group Captain</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_LtColonel" xml:space="preserve">
+    <value>Lt. Colonel</value>
+  </data>
+  <data name="Rank_LtCommander" xml:space="preserve">
+    <value>Lt. Commander</value>
+  </data>
+  <data name="Rank_Major" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="Rank_Midshipman" xml:space="preserve">
+    <value>Midshipman</value>
+  </data>
+  <data name="Rank_Private" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="Rank_Scout" xml:space="preserve">
+    <value>Scout</value>
+  </data>
+  <data name="Rank_Seaman" xml:space="preserve">
+    <value>Seaman</value>
+  </data>
+  <data name="Rank_SectionChief" xml:space="preserve">
+    <value>Section Chief</value>
+  </data>
+  <data name="Rank_SpecialAgent" xml:space="preserve">
+    <value>Special Agent</value>
+  </data>
+  <data name="Rank_SpecialAgentInCharge" xml:space="preserve">
+    <value>Special Agent in Charge</value>
+  </data>
+  <data name="Rank_SquadronLeader" xml:space="preserve">
+    <value>Squadron Leader</value>
+  </data>
+  <data name="Rank_Starman" xml:space="preserve">
+    <value>Starman</value>
+  </data>
+  <data name="Rank_Trooper" xml:space="preserve">
+    <value>Trooper</value>
+  </data>
+  <data name="Rank_UnitChief" xml:space="preserve">
+    <value>Unit Chief</value>
+  </data>
+  <data name="Rank_WingCommander" xml:space="preserve">
+    <value>Wing Commander</value>
+  </data>
+  <data name="Skill_Advocate" xml:space="preserve">
+    <value>Advocate</value>
+  </data>
+  <data name="Skill_Aircraft" xml:space="preserve">
+    <value>Aircraft</value>
+  </data>
+  <data name="Skill_Animals" xml:space="preserve">
+    <value>Animals</value>
+  </data>
+  <data name="Skill_Archery" xml:space="preserve">
+    <value>Archery</value>
+  </data>
+  <data name="Skill_Athletics" xml:space="preserve">
+    <value>Athletics</value>
+  </data>
+  <data name="Skill_BasicTraining" xml:space="preserve">
+    <value>Basic Training</value>
+  </data>
+  <data name="Skill_BayWeapons" xml:space="preserve">
+    <value>Bay Weapons</value>
+  </data>
+  <data name="Skill_BludgeoningWeapons" xml:space="preserve">
+    <value>Bludgeoning Weapons</value>
+  </data>
+  <data name="Skill_EnergyPistol" xml:space="preserve">
+    <value>Energy Pistol</value>
+  </data>
+  <data name="Skill_EnergyRifle" xml:space="preserve">
+    <value>Energy Rifle</value>
+  </data>
+  <data name="Skill_Farming" xml:space="preserve">
+    <value>Farming</value>
+  </data>
+  <data name="Skill_GravVehicle" xml:space="preserve">
+    <value>Grav Vehicle</value>
+  </data>
+  <data name="Skill_GroundVehicle" xml:space="preserve">
+    <value>Ground Vehicle</value>
+  </data>
+  <data name="Skill_GunCombat" xml:space="preserve">
+    <value>Gun Combat</value>
+  </data>
+  <data name="Skill_Gunnery" xml:space="preserve">
+    <value>Gunnery</value>
+  </data>
+  <data name="Skill_HeavyWeapons" xml:space="preserve">
+    <value>Heavy Weapons</value>
+  </data>
+  <data name="Skill_LifeSciences" xml:space="preserve">
+    <value>Life Sciences</value>
+  </data>
+  <data name="Skill_Linguistics" xml:space="preserve">
+    <value>Linguistics</value>
+  </data>
+  <data name="Skill_MeleeCombat" xml:space="preserve">
+    <value>Melee Combat</value>
+  </data>
+  <data name="Skill_Mole" xml:space="preserve">
+    <value>Mole</value>
+  </data>
+  <data name="Skill_Motorboats" xml:space="preserve">
+    <value>Motorboats</value>
+  </data>
+  <data name="Skill_NaturalWeapons" xml:space="preserve">
+    <value>Natural Weapons</value>
+  </data>
+  <data name="Skill_OceanShips" xml:space="preserve">
+    <value>Ocean Ships</value>
+  </data>
+  <data name="Skill_PhysicalSciences" xml:space="preserve">
+    <value>Physical Sciences</value>
+  </data>
+  <data name="Skill_PiercingWeapons" xml:space="preserve">
+    <value>Piercing Weapons</value>
+  </data>
+  <data name="Skill_Riding" xml:space="preserve">
+    <value>Riding</value>
+  </data>
+  <data name="Skill_RotorAircraft" xml:space="preserve">
+    <value>Rotor Aircraft</value>
+  </data>
+  <data name="Skill_SailingShips" xml:space="preserve">
+    <value>Sailing Ships</value>
+  </data>
+  <data name="Skill_Sciences" xml:space="preserve">
+    <value>Sciences</value>
+  </data>
+  <data name="Skill_Screens" xml:space="preserve">
+    <value>Screens</value>
+  </data>
+  <data name="Skill_Shotgun" xml:space="preserve">
+    <value>Shotgun</value>
+  </data>
+  <data name="Skill_SlashingWeapons" xml:space="preserve">
+    <value>Slashing Weapons</value>
+  </data>
+  <data name="Skill_SlugPistol" xml:space="preserve">
+    <value>Slug Pistol</value>
+  </data>
+  <data name="Skill_SlugRifle" xml:space="preserve">
+    <value>Slug Rifle</value>
+  </data>
+  <data name="Skill_SocialSciences" xml:space="preserve">
+    <value>Social Sciences</value>
+  </data>
+  <data name="Skill_SpaceSciences" xml:space="preserve">
+    <value>Space Sciences</value>
+  </data>
+  <data name="Skill_SpinalMounts" xml:space="preserve">
+    <value>Spinal Mounts</value>
+  </data>
+  <data name="Skill_Submarines" xml:space="preserve">
+    <value>Submarines</value>
+  </data>
+  <data name="Skill_TrackedVehicle" xml:space="preserve">
+    <value>Tracked Vehicle</value>
+  </data>
+  <data name="Skill_TurretWeapons" xml:space="preserve">
+    <value>Turret Weapons</value>
+  </data>
+  <data name="Skill_Vehicle" xml:space="preserve">
+    <value>Vehicle</value>
+  </data>
+  <data name="Skill_VetinaryMedicine" xml:space="preserve">
+    <value>Vetinary Medicine</value>
+  </data>
+  <data name="Skill_Watercraft" xml:space="preserve">
+    <value>Watercraft</value>
+  </data>
+  <data name="Skill_WheeledVehicle" xml:space="preserve">
+    <value>Wheeled Vehicle</value>
+  </data>
+  <data name="Skill_WingedAircraft" xml:space="preserve">
+    <value>Winged Aircraft</value>
+  </data>
+  <data name="Species_Avians" xml:space="preserve">
+    <value>Avians</value>
+  </data>
+  <data name="Species_Insectans" xml:space="preserve">
+    <value>Insectans</value>
+  </data>
+  <data name="Species_Merfolk" xml:space="preserve">
+    <value>Merfolk</value>
+  </data>
+  <data name="Species_Repltilians" xml:space="preserve">
+    <value>Repltilians</value>
+  </data>
+  <data name="Species_UplifitedApe" xml:space="preserve">
+    <value>Uplifited Ape</value>
+  </data>
+  <data name="Species_UplifitedDolphin" xml:space="preserve">
+    <value>Uplifited Dolphin</value>
+  </data>
+  <data name="Table_AdvancedEducation" xml:space="preserve">
+    <value>Advanced Education</value>
   </data>
   <data name="Table_PersonalDevelopment" xml:space="preserve">
     <value>Personal Development</value>
   </data>
   <data name="Table_ServiceSkills" xml:space="preserve">
     <value>Service Skills</value>
+  </data>
+  <data name="Table_Specialist" xml:space="preserve">
+    <value>Specialist</value>
+  </data>
+  <data name="Trait_Amphibious" xml:space="preserve">
+    <value>Amphibious</value>
+  </data>
+  <data name="Trait_AntiPsionic" xml:space="preserve">
+    <value>Anti-Psionic</value>
+  </data>
+  <data name="Trait_Aquatic" xml:space="preserve">
+    <value>Aquatic</value>
+  </data>
+  <data name="Trait_Armoured" xml:space="preserve">
+    <value>Armoured</value>
+  </data>
+  <data name="Trait_BadFirstImpression" xml:space="preserve">
+    <value>Bad First Impression</value>
+  </data>
+  <data name="Trait_Caste" xml:space="preserve">
+    <value>Caste</value>
+  </data>
+  <data name="Trait_ColdBlooded" xml:space="preserve">
+    <value>Cold Blooded</value>
+  </data>
+  <data name="Trait_FastSpeed" xml:space="preserve">
+    <value>Fast Speed</value>
+  </data>
+  <data name="Trait_Flyer" xml:space="preserve">
+    <value>Flyer</value>
+  </data>
+  <data name="Trait_GreatLeaper" xml:space="preserve">
+    <value>Great Leaper</value>
+  </data>
+  <data name="Trait_HeatEndurance" xml:space="preserve">
+    <value>Heat Endurance</value>
+  </data>
+  <data name="Trait_HiveMentaility" xml:space="preserve">
+    <value>Hive Mentaility</value>
+  </data>
+  <data name="Trait_LowGravityAdaptation" xml:space="preserve">
+    <value>Low Gravity Adaptation</value>
+  </data>
+  <data name="Trait_LowLightVision" xml:space="preserve">
+    <value>Low-Light Vision</value>
+  </data>
+  <data name="Trait_NaturalPilot" xml:space="preserve">
+    <value>Natural Pilot</value>
+  </data>
+  <data name="Trait_NaturalSwimmer" xml:space="preserve">
+    <value>Natural Swimmer</value>
+  </data>
+  <data name="Trait_NaturalWeapons" xml:space="preserve">
+    <value>Natural Weapons</value>
+  </data>
+  <data name="Trait_NoFineManipulators" xml:space="preserve">
+    <value>No Fine Manipulators</value>
+  </data>
+  <data name="Trait_SlowSpeed" xml:space="preserve">
+    <value>Slow Speed</value>
+  </data>
+  <data name="Trait_Small" xml:space="preserve">
+    <value>Small</value>
+  </data>
+  <data name="Trait_Uplifited" xml:space="preserve">
+    <value>Uplifited</value>
+  </data>
+  <data name="Trait_WaterDependant" xml:space="preserve">
+    <value>Water Dependant</value>
   </data>
 </root>

@@ -39,7 +39,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Insectans,
             Merfolk,
             Reptilians,
-            Espers
+            Espers,
+            Uplifited_Ape
         }
 
         public string Sex { get; set; }

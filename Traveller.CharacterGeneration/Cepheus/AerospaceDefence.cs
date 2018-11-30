@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
     {
         public AerospaceDefence()
         {
-            Name = "Aerospace Defence";
+            Name = Resources.Career_AerospaceDefence;
             hasRanks = true;
 
             enlistment = 5;
@@ -62,7 +62,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = Resources.Table_Education;
+            table.Name = Resources.Table_Specialist;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Communications;
             skills[1] = CharacterGeneration.SkillLibrary.Computer;
@@ -82,13 +82,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[4] = CharacterGeneration.SkillLibrary.Leader;
             skills[5] = CharacterGeneration.SkillLibrary.Tactics;
 
-            Ranks[0] = "Airman";
-            Ranks[1] = "Flight Officer";
-            Ranks[2] = "Flight Lieutenant";
-            Ranks[3] = "Squadron Leader";
-            Ranks[4] = "Wing Commander";
-            Ranks[5] = "Group Captain";
-            Ranks[6] = "Air Commodore";
+            Ranks[0] = Resources.Rank_Airman;
+            Ranks[1] = Resources.Rank_FlightOfficer;
+            Ranks[2] = Resources.Rank_FlightLieutenant;
+            Ranks[3] = Resources.Rank_SquadronLeader;
+            Ranks[4] = Resources.Rank_WingCommander;
+            Ranks[5] = Resources.Rank_GroupCaptain;
+            Ranks[6] = Resources.Rank_AirCommodore;
         }
 
         protected override void CommsionSkill()

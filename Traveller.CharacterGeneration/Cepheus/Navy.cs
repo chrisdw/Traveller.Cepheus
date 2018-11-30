@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
     {
         public Navy()
         {
-            Name = "Navy";
+            Name = Resources.Career_Navy;
             hasRanks = true;
 
             enlistment = 6;
@@ -62,7 +62,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = Resources.Table_Education;
+            table.Name = Resources.Table_Specialist;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Gravitics;
             skills[1] = CharacterGeneration.SkillLibrary.JackOfTrades;
@@ -82,13 +82,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[4] = CharacterGeneration.SkillLibrary.Navigation;
             skills[5] = CharacterGeneration.SkillLibrary.Tactics;
 
-            Ranks[0] = "Starman";
-            Ranks[1] = "Midshipman";
-            Ranks[2] = "Lieutenant";
-            Ranks[3] = "Lt. Commander";
-            Ranks[4] = "Commander";
-            Ranks[5] = "Captain";
-            Ranks[6] = "Commodore";
+            Ranks[0] = Resources.Rank_Starman;
+            Ranks[1] = Resources.Rank_Midshipman;
+            Ranks[2] = Resources.Rank_Lieutenant;
+            Ranks[3] = Resources.Rank_LtCommander;
+            Ranks[4] = Resources.Rank_Commander;
+            Ranks[5] = Resources.Rank_Captain;
+            Ranks[6] = Resources.Rank_Commodore;
         }
         protected override void CommsionSkill()
         {

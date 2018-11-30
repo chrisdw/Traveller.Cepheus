@@ -90,7 +90,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     // offer the skills in the service skill table at level 0
                     var training = new Skill
                     {
-                        Name = "Basic Training"
+                        Name = Resources.Skill_BasicTraining
                     };
                     var skills = SkillTables[1].Skills.Distinct();
                     foreach (var skill in skills)
@@ -169,37 +169,37 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 switch (dice.roll(1))
                 {
                     case 1:
-                        Owner.Journal.Add("Injured in action");
+                        Owner.Journal.Add(Resources.Msg_InjuredInAction);
                         ResolveInjury(2);
                         break;
                     case 2:
-                        Owner.Journal.Add("Honourably discharged from the service.");
+                        Owner.Journal.Add(Resources.Msg_HonourablyDischarged);
                         survive = SurvivalResult.Discharged;
                         break;
                     case 3:
-                        Owner.Journal.Add("Honourably discharged from the service after a legal battle.");
+                        Owner.Journal.Add(Resources.Msg_HonourablyDischargedLegal);
                         Owner.AddBenefit(
                             new Benefit()
                             {
-                                Name = "Cash",
+                                Name = Properties.Resources.Benefit_Cash,
                                 TypeOfBenefit = Benefit.BenefitType.Cash,
                                 Value = -10000 }
                             );
                         survive = SurvivalResult.Discharged;
                         break;
                     case 4:
-                        Owner.Journal.Add("Dishonourably discharged from the service.");
+                        Owner.Journal.Add(Resources.Msg_DishonourablyDischarged);
                         lostBenefits = true;
                         survive = SurvivalResult.Discharged;
                         break;
                     case 5:
-                        Owner.Journal.Add("Dishonourably discharged from the service. Serve 4 years in prison");
+                        Owner.Journal.Add(Resources.Msg_DishonourablyDischargedPrison);
                         Owner.Age += 4;
                         lostBenefits = true;
                         survive = SurvivalResult.Discharged;
                         break;
                     case 6:
-                        Owner.Journal.Add("Medically discharged from the service.");
+                        Owner.Journal.Add(Resources.Msg_MedicallyDischarged);
                         ResolveInjury(0);
                         survive = SurvivalResult.Discharged;
                         break;
@@ -220,7 +220,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             switch (roll)
             {
                 case 1:
-                    Owner.Journal.Add("Nearly Killed");
+                    Owner.Journal.Add(Resources.Msg_NearlyKilled);
                     paid = MedicalBills();
                     loss = dice.roll();
                     bill = (loss + 4) * 5000;
@@ -231,50 +231,50 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                         {
                             case 1:
                             case 2:
-                                Owner.Journal.Add(string.Format("STR reduced by {0}, DEX and END reduced by 2", loss));
+                                Owner.Journal.Add(string.Format(Resources.Msg_STRReduced, loss));
                                 Owner.Profile.Str.Value -= loss;
                                 Owner.Profile.Dex.Value -= 2;
                                 Owner.Profile.End.Value -= 2;
                                 break;
                             case 3:
                             case 4:
-                                Owner.Journal.Add(string.Format("DEX reduced by {0}, STR and END reduced by 2", loss));
+                                Owner.Journal.Add(string.Format(Resources.Msg_DEXReduced, loss));
                                 Owner.Profile.Dex.Value -= dice.roll();
                                 Owner.Profile.Str.Value -= 2;
                                 Owner.Profile.End.Value -= 2;
                                 break;
                             case 5:
                             case 6:
-                                Owner.Journal.Add(string.Format("END reduced by {0}, DEX and STR reduced by 2", loss));
+                                Owner.Journal.Add(string.Format(Resources.Msg_ENDReduced, loss));
                                 Owner.Profile.End.Value -= dice.roll();
                                 Owner.Profile.Str.Value -= 2;
                                 Owner.Profile.Dex.Value -= 2;
                                 break;
                         }
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillSomePaid, bill, paid));
                     }
                     else
                     {
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillAllPaid, bill, paid));
                     }
                     break;
                 case 2:
-                    Owner.Journal.Add("Severly Injured");
+                    Owner.Journal.Add(Resources.Msg_SeverlyInjured);
                     paid = MedicalBills();
                     loss = dice.roll();
                     bill = loss * 5000;
                     if (paid != 100)
                     {
                         ReduceOneCharacteristic(loss);
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillSomePaid, bill, paid));
                     }
                     else
                     {
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillAllPaid, bill, paid));
                     }
                     break;
                 case 3:
-                    Owner.Journal.Add("Missing Eye or Limb");
+                    Owner.Journal.Add(Resources.Msg_MissingEyeOrLimb);
                     paid = MedicalBills();
                     loss = dice.roll();
                     bill = 2 * 5000;
@@ -286,25 +286,25 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             case 1:
                             case 2:
                             case 3:
-                                Owner.Journal.Add(string.Format("STR reduced by 2"));
+                                Owner.Journal.Add(Resources.Msg_STRReduced2);
                                 Owner.Profile.Str.Value -= 2;
                                 break;
                             case 4:
                             case 5:
                             case 6:
-                                Owner.Journal.Add(string.Format("DEX reduced by 2"));
+                                Owner.Journal.Add(Resources.Msg_DEXReduced2);
                                 Owner.Profile.Dex.Value -= 2;
                                 break;
                         }
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillSomePaid, bill, paid));
                     }
                     else
                     {
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillAllPaid, bill, paid));
                     }
                     break;
                 case 4:
-                    Owner.Journal.Add("Scarred");
+                    Owner.Journal.Add(Resources.Msg_Scarred);
                     paid = MedicalBills();
                     loss = dice.roll();
                     bill = 2 * 5000;
@@ -312,30 +312,30 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     if (paid != 100)
                     {
                         ReduceOneCharacteristic(2);
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillSomePaid, bill, paid));
                     }
                     else
                     {
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillAllPaid, bill, paid));
                     }
                     break;
                 case 5:
-                    Owner.Journal.Add("Injured");
+                    Owner.Journal.Add(Resources.Msg_Injured);
                     paid = MedicalBills();
                     loss = dice.roll();
                     bill = 5000;
                     if (paid != 100)
                     {
                         ReduceOneCharacteristic(1);
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% will be paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillSomePaid, bill, paid));
                     }
                     else
                     {
-                        Owner.Journal.Add(string.Format("You incurred a bill of {0}cr, {1}% was paid for you", bill, paid));
+                        Owner.Journal.Add(string.Format(Resources.Msg_BillAllPaid, bill, paid));
                     }
                     break;
                 case 6:
-                    Owner.Journal.Add("Lightly Injured: No permanent effect");
+                    Owner.Journal.Add(Resources.Msg_LightlyInjured);
                     break;
             }
         }
@@ -346,17 +346,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             {
                 case 1:
                 case 2:
-                    Owner.Journal.Add(string.Format("STR reduced by {0}", by));
+                    Owner.Journal.Add(string.Format(Resources.Msg_ReducedX, "STR", by));
                     Owner.Profile.Str.Value -= by;
                     break;
                 case 3:
                 case 4:
-                    Owner.Journal.Add(string.Format("DEX reduced by {0}", by));
+                    Owner.Journal.Add(string.Format(Resources.Msg_ReducedX, "DEX", by));
                     Owner.Profile.Dex.Value -= by;
                     break;
                 case 5:
                 case 6:
-                    Owner.Journal.Add(string.Format("END reduced by {0}", by));
+                    Owner.Journal.Add(string.Format(Resources.Msg_ReducedX, "END", by));
                     Owner.Profile.End.Value -= by;
                     break;
             }
@@ -408,7 +408,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     break;
             }
 
-            Owner.Journal.Add(string.Format("Your employer pays {0}% of your medical bills", paid));
+            Owner.Journal.Add(string.Format(Resources.Msg_EmployerPays, paid));
             return paid;
         }
     }

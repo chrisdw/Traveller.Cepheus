@@ -53,11 +53,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
-                            Traits.Add("Flyer");
-                            Traits.Add("Low Gravity Adaptation");
-                            Traits.Add("Natural Pilot");
-                            Traits.Add("Slow Speed");
-                            Traits.Add("Small");
+                            Traits.Add(Resources.Trait_Flyer);
+                            Traits.Add(Resources.Trait_LowGravityAdaptation);
+                            Traits.Add(Resources.Trait_NaturalPilot);
+                            Traits.Add(Resources.Trait_SlowSpeed);
+                            Traits.Add(Resources.Trait_Small);
                             break;
                         case Species.Insectans:
                             Profile = new UPP();
@@ -67,13 +67,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
-                            Traits.Add("Armoured");
-                            Traits.Add("Bad First Impression");
-                            Traits.Add("Caste");
-                            Traits.Add("Cold Blooded");
-                            Traits.Add("Fast Speed");
-                            Traits.Add("Great Leaper");
-                            Traits.Add("Hive Mentaility");
+                            Traits.Add(Resources.Trait_Armoured);
+                            Traits.Add(Resources.Trait_BadFirstImpression);
+                            Traits.Add(Resources.Trait_Caste);
+                            Traits.Add(Resources.Trait_ColdBlooded);
+                            Traits.Add(Resources.Trait_FastSpeed);
+                            Traits.Add(Resources.Trait_GreatLeaper);
+                            Traits.Add(Resources.Trait_HiveMentaility);
                             break;
                         case Species.Merfolk:
                             Profile = new UPP();
@@ -83,10 +83,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
-                            Traits.Add("Amphibious");
-                            Traits.Add("Aquatic");
-                            Traits.Add("Natural Swimmer");
-                            Traits.Add("Water Dependant");
+                            Traits.Add(Resources.Trait_Amphibious);
+                            Traits.Add(Resources.Trait_Aquatic);
+                            Traits.Add(Resources.Trait_NaturalSwimmer);
+                            Traits.Add(Resources.Trait_WaterDependant);
                             break;
                         case Species.Reptilians:
                             Profile = new UPP();
@@ -96,12 +96,34 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
-                            Traits.Add("Anti-Psionic");
-                            Traits.Add("Fast Speed");
-                            Traits.Add("Heat Endurance");
-                            Traits.Add("Low-Light Vision");
-                            Traits.Add("Natural Weapons");
-                            Traits.Add("Low Gravity Adaptation");
+                            Traits.Add(Resources.Trait_AntiPsionic);
+                            Traits.Add(Resources.Trait_FastSpeed);
+                            Traits.Add(Resources.Trait_HeatEndurance);
+                            Traits.Add(Resources.Trait_LowLightVision);
+                            Traits.Add(Resources.Trait_NaturalWeapons);
+                            Traits.Add(Resources.Trait_LowGravityAdaptation);
+                            break;
+                        case Species.Dolphin:
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2) + 4;
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2) + 2;
+                            Profile.Int.Value = dice.roll(2) - 2;
+                            Profile.Edu.Value = dice.roll(2) - 2;
+                            Profile.Soc.Value = dice.roll(2) - 2;
+                            Traits.Add(Resources.Trait_Aquatic);
+                            Traits.Add(Resources.Trait_NoFineManipulators);
+                            Traits.Add(Resources.Trait_Uplifited);
+                            break;
+                        case Species.Uplifited_Ape:
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2) + 2;
+                            Profile.Dex.Value = dice.roll(2) - 2;
+                            Profile.End.Value = dice.roll(2) + 2;
+                            Profile.Int.Value = dice.roll(2) - 2;
+                            Profile.Edu.Value = dice.roll(2) - 2;
+                            Profile.Soc.Value = dice.roll(2) - 2;
+                            Traits.Add(Resources.Trait_Uplifited);
                             break;
                     }
                     break;
@@ -199,17 +221,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             {
                 case 1:
                 case 2:
-                    Journal.Add(string.Format("STR reduced by {0} due to aging", by));
+                    Journal.Add(string.Format(Resources.Msg_AgingReduction, "STR", by));
                     Profile.Str.Value -= by;
                     break;
                 case 3:
                 case 4:
-                    Journal.Add(string.Format("DEX reduced by {0} due to aging", by));
+                    Journal.Add(string.Format(Resources.Msg_AgingReduction, "DEX", by));
                     Profile.Dex.Value -= by;
                     break;
                 case 5:
                 case 6:
-                    Journal.Add(string.Format("END reduced by {0} due to aging", by));
+                    Journal.Add(string.Format(Resources.Msg_AgingReduction, "END", by));
                     Profile.End.Value -= by;
                     break;
             }
@@ -222,13 +244,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 case 1:
                 case 2:
                 case 3:
-                    Journal.Add(string.Format("INT reduced by {0} due to aging", by));
+                    Journal.Add(string.Format(Resources.Msg_AgingReduction, "INT", by));
                     Profile.Int.Value -= by;
                     break;
                 case 4:
                 case 5:
                 case 6:
-                    Journal.Add(string.Format("EDU reduced by {0} due to aging", by));
+                    Journal.Add(string.Format(Resources.Msg_AgingReduction, "EDU", by));
                     Profile.Edu.Value -= by;
                     break;
             }

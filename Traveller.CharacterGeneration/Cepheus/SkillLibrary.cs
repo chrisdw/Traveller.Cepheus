@@ -2,82 +2,94 @@
 {
     public static class SkillLibrary
     {
-        public static Skill Advocate = new Skill("Advocate", Skill.SkillClass.None, 1);
-        public static Skill Athletics = new Skill("Athletics", Skill.SkillClass.None, 1);
-        public static Skill Linguistics = new Skill("Linguistics", Skill.SkillClass.None, 1);
+        public static Skill Advocate = new Skill(Resources.Skill_Advocate, Skill.SkillClass.None, 1);
+        public static Skill Athletics = new Skill(Resources.Skill_Athletics, Skill.SkillClass.None, 1);
+        public static Skill Linguistics = new Skill(Resources.Skill_Linguistics, Skill.SkillClass.None, 1);
 
-        public static Skill Aircraft = new Skill("Aircraft", Skill.SkillClass.None, 1)
+        public static Skill Aircraft = new Skill(Resources.Skill_Aircraft, Skill.SkillClass.None, 1)
         {
             Cascade =
             {
-                 new Skill("Grav Vehicle", Skill.SkillClass.None, 1),
-                 new Skill("Rotor Aircraft", Skill.SkillClass.None, 1),
-                 new Skill("Winged Aircraft", Skill.SkillClass.None, 1)
+                 new Skill(Resources.Skill_GravVehicle, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_RotorAircraft, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_WingedAircraft, Skill.SkillClass.None, 1)
             }
         };
-        public static Skill GroundVehicle = new Skill("Ground Vehicle", Skill.SkillClass.None, 1)
+
+        public static Skill Animals = new Skill(Resources.Skill_Animals, Skill.SkillClass.None, 1)
         {
             Cascade =
             {
-                 new Skill("Mole", Skill.SkillClass.None, 1),
-                 new Skill("Tracked Vehicle", Skill.SkillClass.None, 1),
-                 new Skill("Wheeled Vehicle", Skill.SkillClass.None, 1)
+                 new Skill(Resources.Skill_Farming, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_Riding, Skill.SkillClass.None, 1),
+                 CharacterGeneration.SkillLibrary.Survival,
+                 new Skill(Resources.Skill_VetinaryMedicine, Skill.SkillClass.None, 1),
             }
         };
-        public static Skill GunCombat = new Skill("Gun Combat", Skill.SkillClass.None, 1)
+
+        public static Skill GroundVehicle = new Skill(Resources.Skill_GroundVehicle, Skill.SkillClass.None, 1)
         {
             Cascade =
             {
-                new Skill("Archery", Skill.SkillClass.None, 1),
-                new Skill("Energy Pistol", Skill.SkillClass.None, 1),
-                new Skill("Energy Rifle", Skill.SkillClass.None, 1),
-                new Skill("Shotgun", Skill.SkillClass.None, 1),
-                new Skill("Slug Pistol", Skill.SkillClass.None, 1),
-                new Skill("Slug Rifle", Skill.SkillClass.None, 1)
+                 new Skill(Resources.Skill_Mole, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_TrackedVehicle, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_WheeledVehicle, Skill.SkillClass.None, 1)
             }
         };
-        public static Skill Gunnery = new Skill("Gunnery", Skill.SkillClass.None, 1)
+        public static Skill GunCombat = new Skill(Resources.Skill_GunCombat, Skill.SkillClass.None, 1)
         {
             Cascade =
             {
-                new Skill("Bay Weapons", Skill.SkillClass.None, 1),
-                new Skill("Heavy Weapons", Skill.SkillClass.None, 1),
-                new Skill("Screens", Skill.SkillClass.None, 1),
-                new Skill("Spinal Mounts", Skill.SkillClass.None, 1),
-                new Skill("Turret Weapons", Skill.SkillClass.None, 1)
+                new Skill(Resources.Skill_Archery, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_EnergyPistol, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_EnergyRifle, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_Shotgun, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_SlugPistol, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_SlugRifle, Skill.SkillClass.None, 1)
             }
         };
-        public static Skill MeleeCombat = new Skill("Melee Combat", Skill.SkillClass.None, 1)
+        public static Skill Gunnery = new Skill(Resources.Skill_Gunnery, Skill.SkillClass.None, 1)
         {
             Cascade =
             {
-                new Skill("Bludgeoning Weapons", Skill.SkillClass.None, 1),
-                new Skill("Natural Weapons", Skill.SkillClass.None, 1),
-                new Skill("Piercing Weapons", Skill.SkillClass.None, 1),
-                new Skill("Slashing Weapons", Skill.SkillClass.None, 1)
+                new Skill(Resources.Skill_BayWeapons, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_HeavyWeapons, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_Screens, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_SpinalMounts, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_TurretWeapons, Skill.SkillClass.None, 1)
             }
         };
-        public static Skill Sciences = new Skill("Sciences", Skill.SkillClass.None, 1)
+        public static Skill MeleeCombat = new Skill(Resources.Skill_MeleeCombat, Skill.SkillClass.None, 1)
         {
             Cascade =
             {
-                 new Skill("Life Sciences", Skill.SkillClass.None, 1),
-                 new Skill("Physical Sciences", Skill.SkillClass.None, 1),
-                 new Skill("Social Sciences", Skill.SkillClass.None, 1),
-                 new Skill("Space Sciences", Skill.SkillClass.None, 1)
+                new Skill(Resources.Skill_BludgeoningWeapons, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_NaturalWeapons, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_PiercingWeapons, Skill.SkillClass.None, 1),
+                new Skill(Resources.Skill_SlashingWeapons, Skill.SkillClass.None, 1)
             }
         };
-        public static Skill Watercraft = new Skill("Watercraft", Skill.SkillClass.None, 1)
+        public static Skill Sciences = new Skill(Resources.Skill_Sciences, Skill.SkillClass.None, 1)
         {
             Cascade =
             {
-                 new Skill("Motorboats", Skill.SkillClass.None, 1),
-                 new Skill("Ocean Ships", Skill.SkillClass.None, 1),
-                 new Skill("Sailing Ships", Skill.SkillClass.None, 1),
-                 new Skill("Submarines", Skill.SkillClass.None, 1)
+                 new Skill(Resources.Skill_LifeSciences, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_PhysicalSciences, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_SocialSciences, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_SpaceSciences, Skill.SkillClass.None, 1)
             }
         };
-        public static Skill Vehicle = new Skill("Vehicle", Skill.SkillClass.None, 1)
+        public static Skill Watercraft = new Skill(Resources.Skill_Watercraft, Skill.SkillClass.None, 1)
+        {
+            Cascade =
+            {
+                 new Skill(Resources.Skill_Motorboats, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_OceanShips, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_SailingShips, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_Submarines, Skill.SkillClass.None, 1)
+            }
+        };
+        public static Skill Vehicle = new Skill(Resources.Skill_Vehicle, Skill.SkillClass.None, 1)
         {
             Cascade =
             {

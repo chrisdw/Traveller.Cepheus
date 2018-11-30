@@ -4,7 +4,7 @@
     {
         public Athlete()
         {
-            Name = "Athlete";
+            Name = Resources.Career_Athlete;
             hasRanks = false;
 
             enlistment = 8;
@@ -53,7 +53,7 @@
 
             table = new SkillTable();
             SkillTables[2] = table;
-            table.Name = Resources.Table_Education;
+            table.Name = Resources.Table_Specialist;
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.ZeroGCombat;
             skills[1] = SkillLibrary.Athletics;
@@ -73,7 +73,7 @@
             skills[4] = CharacterGeneration.SkillLibrary.Medic;
             skills[5] = SkillLibrary.Sciences;
 
-            Ranks[0] ="Athlete";
+            Ranks[0] = Resources.Rank_Athlete;
         }
         protected override void CommsionSkill()
         {
