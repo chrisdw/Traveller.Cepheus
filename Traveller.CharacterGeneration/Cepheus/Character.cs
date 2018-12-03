@@ -15,6 +15,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
         public event EventHandler<SkillOfferedEventArgs> SkillOffered;
 
         private Dice dice = new Dice(6);
+        private Dice d3 = new Dice(3);
 
         public override void Generate()
         {
@@ -152,6 +153,29 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     for (var i = 0; i < backgroundSkills; i++)
                     {
                         OnSkillOffered(skillList);
+                    }
+                    break;
+                case Constants.CultureType.Cepheus_Hostile:
+                    switch (CharacterSpecies)
+                    {
+                        case Species.Human:
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            break;
+                        case Species.Android:
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(1) + 5;
+                            Profile.Dex.Value = dice.roll(1) + 3;
+                            Profile.End.Value = dice.roll(1) + 8;
+                            Profile.Int.Value = d3.roll(1) + 5;
+                            Profile.Edu.Value = d3.roll(1) + 9;
+                            Profile.Soc.Value = 7;
+                            break;
                     }
                     break;
             }

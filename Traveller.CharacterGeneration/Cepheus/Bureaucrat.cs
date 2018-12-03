@@ -77,7 +77,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[2] = SkillLibrary.Advocate;
             skills[3] = CharacterGeneration.SkillLibrary.Leader;
             skills[4] = CharacterGeneration.SkillLibrary.Steward;
-            skills[5] = CharacterGeneration.SkillLibrary.Vehicle;
+            skills[5] = SkillLibrary.Vehicle;
 
             table = new SkillTable();
             SkillTables[3] = table;

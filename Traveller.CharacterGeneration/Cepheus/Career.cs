@@ -165,50 +165,69 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             }
             else if (Mishaps)
             {
-                survive = SurvivalResult.Survived;
-                switch (dice.roll(1))
-                {
-                    case 1:
-                        Owner.Journal.Add(Resources.Msg_InjuredInAction);
-                        ResolveInjury(2);
-                        break;
-                    case 2:
-                        Owner.Journal.Add(Resources.Msg_HonourablyDischarged);
-                        survive = SurvivalResult.Discharged;
-                        break;
-                    case 3:
-                        Owner.Journal.Add(Resources.Msg_HonourablyDischargedLegal);
-                        Owner.AddBenefit(
-                            new Benefit()
-                            {
-                                Name = Properties.Resources.Benefit_Cash,
-                                TypeOfBenefit = Benefit.BenefitType.Cash,
-                                Value = -10000 }
-                            );
-                        survive = SurvivalResult.Discharged;
-                        break;
-                    case 4:
-                        Owner.Journal.Add(Resources.Msg_DishonourablyDischarged);
-                        lostBenefits = true;
-                        survive = SurvivalResult.Discharged;
-                        break;
-                    case 5:
-                        Owner.Journal.Add(Resources.Msg_DishonourablyDischargedPrison);
-                        Owner.Age += 4;
-                        lostBenefits = true;
-                        survive = SurvivalResult.Discharged;
-                        break;
-                    case 6:
-                        Owner.Journal.Add(Resources.Msg_MedicallyDischarged);
-                        ResolveInjury(0);
-                        survive = SurvivalResult.Discharged;
-                        break;
-                }
+                survive = ResolveMishap();
             }
             return survive;
         }
 
-        private void ResolveInjury(int roll)
+
+        /// <summary>
+        /// Default mishap implmentation, other careers and genre's can
+        /// override this for specific mishap effects
+        /// </summary>
+        /// <returns></returns>
+        protected virtual SurvivalResult ResolveMishap()
+        {
+            SurvivalResult survive = SurvivalResult.Survived;
+            switch (dice.roll(1))
+            {
+                case 1:
+                    Owner.Journal.Add(Resources.Msg_InjuredInAction);
+                    ResolveInjury(2);
+                    break;
+                case 2:
+                    Owner.Journal.Add(Resources.Msg_HonourablyDischarged);
+                    survive = SurvivalResult.Discharged;
+                    break;
+                case 3:
+                    Owner.Journal.Add(Resources.Msg_HonourablyDischargedLegal);
+                    Owner.AddBenefit(
+                        new Benefit()
+                        {
+                            Name = Properties.Resources.Benefit_Cash,
+                            TypeOfBenefit = Benefit.BenefitType.Cash,
+                            Value = -10000
+                        }
+                        );
+                    survive = SurvivalResult.Discharged;
+                    break;
+                case 4:
+                    Owner.Journal.Add(Resources.Msg_DishonourablyDischarged);
+                    lostBenefits = true;
+                    survive = SurvivalResult.Discharged;
+                    break;
+                case 5:
+                    Owner.Journal.Add(Resources.Msg_DishonourablyDischargedPrison);
+                    Owner.Age += 4;
+                    lostBenefits = true;
+                    survive = SurvivalResult.Discharged;
+                    break;
+                case 6:
+                    Owner.Journal.Add(Resources.Msg_MedicallyDischarged);
+                    ResolveInjury(0);
+                    survive = SurvivalResult.Discharged;
+                    break;
+            }
+
+            return survive;
+        }
+
+        /// <summary>
+        /// Default injury implmentation, can be called from custom mishap
+        /// implmentations
+        /// </summary>
+        /// <param name="roll">Specify a particular 1D6 result, or 0 for a random one.</param>
+        protected virtual void ResolveInjury(int roll)
         {
             if (roll == 0)
             {
@@ -340,7 +359,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             }
         }
 
-        private void ReduceOneCharacteristic(int by)
+        protected void ReduceOneCharacteristic(int by)
         {
             switch (dice.roll())
             {
@@ -362,7 +381,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             }
         }
 
-        private int MedicalBills()
+        protected int MedicalBills()
         {
             var roll = dice.roll(2) + RankNumber;
             var paid = 0;

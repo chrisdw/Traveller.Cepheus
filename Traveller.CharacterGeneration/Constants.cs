@@ -35,7 +35,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Vilani,
             Domain_Of_Deneb,
             Reformation_Coalition,
-            Cepheus_Generic
+            Cepheus_Generic,
+            Cepheus_Hostile
         }
     }
 }

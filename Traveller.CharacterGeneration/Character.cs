@@ -40,7 +40,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Merfolk,
             Reptilians,
             Espers,
-            Uplifted_Ape
+            Uplifted_Ape,
+            Android
         }
 
         public string Sex { get; set; }

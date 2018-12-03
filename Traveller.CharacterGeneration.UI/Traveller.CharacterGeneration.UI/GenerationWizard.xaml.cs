@@ -104,7 +104,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     CharacterSpecies = species
                 };
                 var cc = character as Cepheus.Character;
-                //cc.SkillOffered += SkillOffered;
+                cc.SkillOffered += SkillOffered;
             }
             else
             {
@@ -259,6 +259,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 case "Generic":
                     Cultures.Add("Generic");
                     break;
+                case "Hostile":
+                    Cultures.Add("Hostile");
+                    break;
             }
         }
 
@@ -291,6 +294,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     break;
                 case "Generic":
                     selectedCulture = new Cepheus.Culture()
+                    {
+                        UseMishaps = GenerationConfiguration.UseMishaps
+                    };
+                    break;
+                case "Hostile":
+                    selectedCulture = new Cepheus.Hostile.Culture()
                     {
                         UseMishaps = GenerationConfiguration.UseMishaps
                     };

@@ -16,6 +16,8 @@
             }
         };
 
+        public static Skill VetinaryMedicine = new Skill(Resources.Skill_VetinaryMedicine, Skill.SkillClass.None, 1);
+
         public static Skill Animals = new Skill(Resources.Skill_Animals, Skill.SkillClass.None, 1)
         {
             Cascade =
@@ -23,7 +25,7 @@
                  new Skill(Resources.Skill_Farming, Skill.SkillClass.None, 1),
                  new Skill(Resources.Skill_Riding, Skill.SkillClass.None, 1),
                  CharacterGeneration.SkillLibrary.Survival,
-                 new Skill(Resources.Skill_VetinaryMedicine, Skill.SkillClass.None, 1),
+                 VetinaryMedicine
             }
         };
 
