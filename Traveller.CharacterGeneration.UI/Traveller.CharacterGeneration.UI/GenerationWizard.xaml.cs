@@ -59,7 +59,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 if (skills.Count > 1)
                 {
                     var names = skills.Select(s => s.Name).Distinct().OrderBy(s => s);
-                    var result = await DisplayActionSheet(Properties.Resources.Prompt_Select_Skill, null, null, names.ToArray());
+                    var result = await DisplayActionSheet(string.Format("Select a cascade skill for {0}", skill.Name), null, null, names.ToArray());
                     skill = skills.Where(s => s.Name == result).First();
                 }
                 else
