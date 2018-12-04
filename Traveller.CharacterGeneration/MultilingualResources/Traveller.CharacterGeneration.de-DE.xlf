@@ -698,6 +698,22 @@
           <source>Researcher</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Forscher</target>
         </trans-unit>
+        <trans-unit id="Sex_Drone" translate="yes" xml:space="preserve">
+          <source>Drone</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Drohne</target>
+        </trans-unit>
+        <trans-unit id="Sex_Queen" translate="yes" xml:space="preserve">
+          <source>Queen</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Königin</target>
+        </trans-unit>
+        <trans-unit id="Sex_Soldier" translate="yes" xml:space="preserve">
+          <source>Soldier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Soldat</target>
+        </trans-unit>
+        <trans-unit id="Sex_Worker" translate="yes" xml:space="preserve">
+          <source>Worker</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Arbeiter</target>
+        </trans-unit>
       </group>
     </body>
   </file>

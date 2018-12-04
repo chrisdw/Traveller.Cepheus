@@ -33,6 +33,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
         private void GenerateCepheus()
         {
+            if (Sex.Equals(Properties.Resources.Sex_Random))
+            {
+                Sex = CharacterGeneration.Species.ResolveRandom(CharacterSpecies);
+            }
+
             switch (Culture)
             {
                 case Constants.CultureType.Cepheus_Generic:

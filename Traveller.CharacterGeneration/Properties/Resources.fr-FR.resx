@@ -531,4 +531,16 @@
   <data name="Ship_Researcher" xml:space="preserve">
     <value>Chercheur</value>
   </data>
+  <data name="Sex_Drone" xml:space="preserve">
+    <value>Drone</value>
+  </data>
+  <data name="Sex_Queen" xml:space="preserve">
+    <value>Reine</value>
+  </data>
+  <data name="Sex_Soldier" xml:space="preserve">
+    <value>Soldat</value>
+  </data>
+  <data name="Sex_Worker" xml:space="preserve">
+    <value>Travailleur</value>
+  </data>
 </root>

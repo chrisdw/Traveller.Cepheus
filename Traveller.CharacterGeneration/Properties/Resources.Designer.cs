@@ -412,6 +412,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Drone.
+        /// </summary>
+        public static string Sex_Drone {
+            get {
+                return ResourceManager.GetString("Sex_Drone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Female.
         /// </summary>
         public static string Sex_Female {
@@ -430,11 +439,38 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Queen.
+        /// </summary>
+        public static string Sex_Queen {
+            get {
+                return ResourceManager.GetString("Sex_Queen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Random.
         /// </summary>
         public static string Sex_Random {
             get {
                 return ResourceManager.GetString("Sex_Random", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soldier.
+        /// </summary>
+        public static string Sex_Soldier {
+            get {
+                return ResourceManager.GetString("Sex_Soldier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Worker.
+        /// </summary>
+        public static string Sex_Worker {
+            get {
+                return ResourceManager.GetString("Sex_Worker", resourceCulture);
             }
         }
         

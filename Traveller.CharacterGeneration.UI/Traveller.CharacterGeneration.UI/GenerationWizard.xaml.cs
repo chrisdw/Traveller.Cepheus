@@ -37,10 +37,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             {
                 Generate.IsEnabled = GenerationConfiguration.ConfigurationComplete;
             };
-            Rulesets.Add("Classic");
-            Rulesets.Add("Mega Traveller");
-            Rulesets.Add("Mongoose");
-            Rulesets.Add("Cepheus Engine");
+            var list = Ruleset.GetSupportRulesets();
+            foreach (var item in list)
+            {
+                Rulesets.Add(item);
+            }
         }
 
         private async void SkillOffered(object sender, Career.SkillOfferedEventArgs e)
@@ -218,21 +219,21 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         private void Ruleset_SelectedIndexChanged(object sender, EventArgs e)
         {
             Campaigns.Clear();
+            var list = Campaign.GetCampaignForRuleset(GenerationConfiguration.Ruleset);
+            foreach (var item in list)
+            {
+                Campaigns.Add(item);
+            }
             switch (GenerationConfiguration.Ruleset)
             {
                 case "Classic":
-                    Campaigns.Add("3rd Imperium");
                     generationStyle = Constants.GenerationStyle.Classic_Traveller;
                     break;
                 case "Mega Traveller":
                     generationStyle = Constants.GenerationStyle.Mega_Traveller;
-                    Campaigns.Add("The Rebellion");
                     break;
                 case "Cepheus Engine":
                     generationStyle = Constants.GenerationStyle.Cepheus_Engine;
-                    Campaigns.Add("Generic");
-                    Campaigns.Add("Hostile");
-                    Campaigns.Add("Orbital");
                     break;
             }
 
@@ -243,67 +244,20 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         private void Campaign_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cultures.Clear();
-            switch (GenerationConfiguration.Campaign)
+            var list = Culture.GetCulturesForCampaign(GenerationConfiguration.Campaign);
+            foreach (var item in list)
             {
-                case "3rd Imperium":
-                    Cultures.Add("Imperial");
-                    Cultures.Add("Zhodani");
-                    //Cultures.Add("Solomani");
-                    Cultures.Add("Aslan");
-                    Cultures.Add("Vargr");
-                    Cultures.Add("Darrian");
-                    Cultures.Add("Sword Worlds");
-                    //Cultures.Add("Droyne");
-                    Cultures.Add("Dynchia");
-                    break;
-                case "Generic":
-                    Cultures.Add("Generic");
-                    break;
-                case "Hostile":
-                    Cultures.Add("Hostile");
-                    break;
+                Cultures.Add(item);
             }
         }
 
         private void Culture_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (GenerationConfiguration.Culture)
+            selectedCulture = Culture.CreateCulture(GenerationConfiguration.Culture, GenerationConfiguration.UseCitizens, GenerationConfiguration.UseMishaps);
+            if (selectedCulture is Classic.Zhodani.Culture)
             {
-                case "Imperial":
-                    selectedCulture = new Classic.Imperial.Culture()
-                    {
-                        UseCitizenRules = GenerationConfiguration.UseCitizens
-                    };
-                    break;
-                case "Darrian":
-                    selectedCulture = new Classic.Darrian.Culture();
-                    break;
-                case "Dynchia":
-                    selectedCulture = new Classic.Dynchia.Culture();
-                    break;
-                case "Sword Worlds":
-                    selectedCulture = new Classic.SwordWorlds.Culture();
-                    break;
-                case "Zhodani":
-                    selectedCulture = new Classic.Zhodani.Culture();
-                    // Psionic training and the like are handled at the "Culture" level
-                    ((Classic.Zhodani.Culture)selectedCulture).SkillOffered += SkillOffered;
-                    break;
-                case "Aslan":
-                    selectedCulture = new Classic.Aslan.Culture();
-                    break;
-                case "Generic":
-                    selectedCulture = new Cepheus.Culture()
-                    {
-                        UseMishaps = GenerationConfiguration.UseMishaps
-                    };
-                    break;
-                case "Hostile":
-                    selectedCulture = new Cepheus.Hostile.Culture()
-                    {
-                        UseMishaps = GenerationConfiguration.UseMishaps
-                    };
-                    break;
+                // Psionic training and the like are handled at the "Culture" level
+                ((Classic.Zhodani.Culture)selectedCulture).SkillOffered += SkillOffered;
             }
             if (selectedCulture != null)
             {
@@ -323,17 +277,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
             {
                 species = selectedCulture.Species(generationStyle)[GenerationConfiguration.Species];
             }
-            switch (species)
+            var list = CharacterGeneration.Species.SexList(species);
+            foreach (var item in list)
             {
-                case Character.Species.Aslan:
-                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Male);
-                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Female);
-                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Random);
-                    break;
-                default:
-                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Male);
-                    Sexes.Add(CharacterGeneration.Properties.Resources.Sex_Female);
-                    break;
+                Sexes.Add(item);
             }
         }
 

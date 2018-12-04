@@ -76,6 +76,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
         {
             var dice = new Dice(6);
 
+            if (Sex.Equals(Properties.Resources.Sex_Random))
+            {
+                Sex = CharacterGeneration.Species.ResolveRandom(CharacterSpecies);
+            }
+
             switch (Culture)
             {
                 case Constants.CultureType.Imperial:
@@ -108,18 +113,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
-                            if (Sex.Equals(Properties.Resources.Sex_Random))
-                            {
-                                // Sex is by die roll
-                                if (dice.roll(2) <= 5)
-                                {
-                                    Sex = Properties.Resources.Sex_Male;
-                                }
-                                else
-                                {
-                                    Sex = Properties.Resources.Sex_Female;
-                                }
-                            }
                             // Imperial Aslan get some automatic skills
                             AddSkill(SkillLibrary.Tolerance);
                             if (Sex.Equals(Properties.Resources.Sex_Male))
@@ -180,18 +173,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             Profile.Str.Value = dice.roll(2) + 1;
                             Profile.Dex.Value = dice.roll(2) - 1;
                             Profile.End.Value = dice.roll(2) + 1;
-                            if (Sex.Equals(Properties.Resources.Sex_Random))
-                            {
-                                // Sex is by die roll
-                                if (dice.roll(2) <= 5)
-                                {
-                                    Sex = Properties.Resources.Sex_Male;
-                                }
-                                else
-                                {
-                                    Sex = Properties.Resources.Sex_Female;
-                                }
-                            }
                             break;
                         case Species.Human_Solomani:
                             Profile = new UPP();
@@ -284,18 +265,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                             Profile.Str.Value = dice.roll(2) + 1;
                             Profile.Dex.Value = dice.roll(2) - 1;
                             Profile.End.Value = dice.roll(2) + 1;
-                            if (Sex.Equals(Properties.Resources.Sex_Random))
-                            {
-                                // Sex is by die roll
-                                if (dice.roll(2) <= 5)
-                                {
-                                    Sex = Properties.Resources.Sex_Male;
-                                }
-                                else
-                                {
-                                    Sex = Properties.Resources.Sex_Female;
-                                }
-                            }
                             break;
                         case Species.Human_Solomani:
                             Profile = new UPP();
