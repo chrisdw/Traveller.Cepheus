@@ -138,6 +138,10 @@
           <source>Do you want to attend the psionic games?</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous voulez assister aux jeux psionique ?</target>
         </trans-unit>
+        <trans-unit id="Prompt_Select_Cascade" translate="yes" xml:space="preserve">
+          <source>Select a cascade skill for {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sélectionnez une compétence de cascade pour {0}</target>
+        </trans-unit>
       </group>
     </body>
   </file>

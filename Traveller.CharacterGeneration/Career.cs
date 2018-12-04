@@ -82,7 +82,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Barbarian,
             Cepheus_Bureaucrat,
             Cepheus_Colonist,
-            Hostile_Colonist
+            Hostile_Colonist,
+            Cepheus_Diplomat
         }
 
         [Flags]

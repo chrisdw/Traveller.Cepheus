@@ -582,4 +582,49 @@
   <data name="Rank_Supervisor" xml:space="preserve">
     <value>Supervisor</value>
   </data>
+  <data name="Career_Colonist" xml:space="preserve">
+    <value>Colonist</value>
+  </data>
+  <data name="Rank_Citizen" xml:space="preserve">
+    <value>Citizen</value>
+  </data>
+  <data name="Rank_CouncilAdvisor" xml:space="preserve">
+    <value>Council Advisor</value>
+  </data>
+  <data name="Rank_Councilor" xml:space="preserve">
+    <value>Councilor</value>
+  </data>
+  <data name="Rank_DistrictDelegate" xml:space="preserve">
+    <value>District Delegate</value>
+  </data>
+  <data name="Rank_DistrictLeader" xml:space="preserve">
+    <value>District Leader</value>
+  </data>
+  <data name="Rank_Governor" xml:space="preserve">
+    <value>Governor</value>
+  </data>
+  <data name="Rank_LieutenantGovernor" xml:space="preserve">
+    <value>Lieutenant Governor</value>
+  </data>
+  <data name="Career_Diplomat" xml:space="preserve">
+    <value>Diplomat</value>
+  </data>
+  <data name="Rank_Ambassador" xml:space="preserve">
+    <value>Ambassador</value>
+  </data>
+  <data name="Rank_Attache" xml:space="preserve">
+    <value>Attache</value>
+  </data>
+  <data name="Rank_Counselor" xml:space="preserve">
+    <value>Counselor</value>
+  </data>
+  <data name="Rank_FirstSecretary" xml:space="preserve">
+    <value>First Secretary</value>
+  </data>
+  <data name="Rank_SecondSecretary" xml:space="preserve">
+    <value>Second Secretary</value>
+  </data>
+  <data name="Rank_ThirdSecretary" xml:space="preserve">
+    <value>Third Secretary</value>
+  </data>
 </root>

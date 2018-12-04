@@ -111,4 +111,7 @@
   <data name="Prompt_PsionicGames" xml:space="preserve">
     <value>Vous voulez assister aux jeux psionique ?</value>
   </data>
+  <data name="Prompt_Select_Cascade" xml:space="preserve">
+    <value>Sélectionnez une compétence de cascade pour {0}</value>
+  </data>
 </root>

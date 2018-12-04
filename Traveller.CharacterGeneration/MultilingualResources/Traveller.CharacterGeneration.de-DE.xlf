@@ -2543,6 +2543,131 @@
           <source>Uplifted Dolphin</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Erhobenen Dolphin</target>
         </trans-unit>
+        <trans-unit id="Career_Colonist" translate="yes" xml:space="preserve">
+          <source>Colonist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kolonist</target>
+        </trans-unit>
+        <trans-unit id="Rank_Citizen" translate="yes" xml:space="preserve">
+          <source>Citizen</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bürger</target>
+        </trans-unit>
+        <trans-unit id="Rank_CouncilAdvisor" translate="yes" xml:space="preserve">
+          <source>Council Advisor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Des Rates Berater</target>
+        </trans-unit>
+        <trans-unit id="Rank_Councilor" translate="yes" xml:space="preserve">
+          <source>Councilor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ratsherr</target>
+        </trans-unit>
+        <trans-unit id="Rank_DistrictDelegate" translate="yes" xml:space="preserve">
+          <source>District Delegate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bezirk-Delegierter</target>
+        </trans-unit>
+        <trans-unit id="Rank_DistrictLeader" translate="yes" xml:space="preserve">
+          <source>District Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kreisleiter</target>
+        </trans-unit>
+        <trans-unit id="Rank_Governor" translate="yes" xml:space="preserve">
+          <source>Governor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gouverneur</target>
+        </trans-unit>
+        <trans-unit id="Rank_LieutenantGovernor" translate="yes" xml:space="preserve">
+          <source>Lieutenant Governor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vizegouverneur</target>
+        </trans-unit>
+        <trans-unit id="Career_Diplomat" translate="yes" xml:space="preserve">
+          <source>Diplomat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Diplomat</target>
+        </trans-unit>
+        <trans-unit id="Rank_Ambassador" translate="yes" xml:space="preserve">
+          <source>Ambassador</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Botschafter</target>
+        </trans-unit>
+        <trans-unit id="Rank_Attache" translate="yes" xml:space="preserve">
+          <source>Attache</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attaché</target>
+        </trans-unit>
+        <trans-unit id="Rank_Counselor" translate="yes" xml:space="preserve">
+          <source>Counselor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ratgeber</target>
+        </trans-unit>
+        <trans-unit id="Rank_FirstSecretary" translate="yes" xml:space="preserve">
+          <source>First Secretary</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Erster Sekretär</target>
+        </trans-unit>
+        <trans-unit id="Rank_SecondSecretary" translate="yes" xml:space="preserve">
+          <source>Second Secretary</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zweiter Sekretär</target>
+        </trans-unit>
+        <trans-unit id="Rank_ThirdSecretary" translate="yes" xml:space="preserve">
+          <source>Third Secretary</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dritter Sekretär</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en-GB" target-language="de-DE" original="TRAVELLER.CHARACTERGENERATION/CEPHEUS/HOSTILE/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.CHARACTERGENERATION/CEPHEUS/HOSTILE/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Benefit_EliteTicket" translate="yes" xml:space="preserve">
+          <source>Elite Ticket</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Elite-Ticket</target>
+        </trans-unit>
+        <trans-unit id="Benefit_StandardTicket" translate="yes" xml:space="preserve">
+          <source>Standard Ticket</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Standard-Ticket</target>
+        </trans-unit>
+        <trans-unit id="Benefit_StarEnvoyClubMember" translate="yes" xml:space="preserve">
+          <source>Star Envoy Club Member</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sterne Envoy Club-Mitglied</target>
+        </trans-unit>
+        <trans-unit id="Career_Colonist" translate="yes" xml:space="preserve">
+          <source>Colonist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kolonist</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantOperationsManager" translate="yes" xml:space="preserve">
+          <source>Assistant Operations Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Betriebsleiter-Assistent</target>
+        </trans-unit>
+        <trans-unit id="Rank_ColonialAdministrator" translate="yes" xml:space="preserve">
+          <source>Colonial Administrator</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kolonial-Administrator</target>
+        </trans-unit>
+        <trans-unit id="Rank_Colonist" translate="yes" xml:space="preserve">
+          <source>Colonist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kolonist</target>
+        </trans-unit>
+        <trans-unit id="Rank_DepartmentChief" translate="yes" xml:space="preserve">
+          <source>Department Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Abteilungsleiter</target>
+        </trans-unit>
+        <trans-unit id="Rank_OperationsManager" translate="yes" xml:space="preserve">
+          <source>Operations Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Operations Manager</target>
+        </trans-unit>
+        <trans-unit id="Rank_Supervisor" translate="yes" xml:space="preserve">
+          <source>Supervisor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Supervisor</target>
+        </trans-unit>
+        <trans-unit id="Rank_TeamLeader" translate="yes" xml:space="preserve">
+          <source>Team Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Teamleiter</target>
+        </trans-unit>
+        <trans-unit id="Skill_Agriculture" translate="yes" xml:space="preserve">
+          <source>Agriculture</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Landwirtschaft</target>
+        </trans-unit>
+        <trans-unit id="Skill_Loader" translate="yes" xml:space="preserve">
+          <source>Loader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lader</target>
+        </trans-unit>
+        <trans-unit id="Species_Android" translate="yes" xml:space="preserve">
+          <source>Android</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Android</target>
+        </trans-unit>
       </group>
     </body>
   </file>

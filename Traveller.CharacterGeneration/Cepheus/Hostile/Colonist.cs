@@ -8,16 +8,16 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
     {
         public Colonist()
         {
-            Name = "Colonist";
+            Name = Resources.Career_Colonist;
             hasRanks = true;
 
-            Ranks[0] = "Colonist";
-            Ranks[1] = "Team Leader";
-            Ranks[2] = "Supervisor";
-            Ranks[3] = "Department Chief";
-            Ranks[4] = "Assistant Operations Manager";
-            Ranks[5] = "Operations Manager";
-            Ranks[6] = "Colonial Administrator";
+            Ranks[0] = Resources.Rank_Colonist;
+            Ranks[1] = Resources.Rank_TeamLeader;
+            Ranks[2] = Resources.Rank_Supervisor;
+            Ranks[3] = Resources.Rank_DepartmentChief;
+            Ranks[4] = Resources.Rank_AssistantOperationsManager;
+            Ranks[5] = Resources.Rank_OperationsManager;
+            Ranks[6] = Resources.Rank_ColonialAdministrator;
 
             Cash[0] = 500;
             Cash[1] = 1000;

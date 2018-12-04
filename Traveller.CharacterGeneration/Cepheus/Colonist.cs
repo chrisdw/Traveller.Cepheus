@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
     {
         public Colonist()
         {
-            Name = "Colonist";
+            Name = Resources.Career_Colonist;
             hasRanks = true;
 
             enlistment = 5;
@@ -22,13 +22,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             reenlist = 5;
             medicalBand = 3;
 
-            Ranks[0] = "Citizen";
-            Ranks[1] = "District Leader";
-            Ranks[2] = "District Delegate";
-            Ranks[3] = "Council Advisor";
-            Ranks[4] = "Councilor";
-            Ranks[5] = "Lieutenant Governor";
-            Ranks[6] = "Governor";
+            Ranks[0] = Resources.Rank_Citizen;
+            Ranks[1] = Resources.Rank_DistrictLeader;
+            Ranks[2] = Resources.Rank_DistrictDelegate;
+            Ranks[3] = Resources.Rank_CouncilAdvisor;
+            Ranks[4] = Resources.Rank_Councilor;
+            Ranks[5] = Resources.Rank_LieutenantGovernor;
+            Ranks[6] = Resources.Rank_Governor;
 
             Material.Add(CharacterGeneration.BenefitLibrary.LowPsg);
             Material.Add(CharacterGeneration.BenefitLibrary.Int);

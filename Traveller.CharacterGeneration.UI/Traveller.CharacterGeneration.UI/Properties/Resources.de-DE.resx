@@ -111,4 +111,7 @@
   <data name="Prompt_PsionicGames" xml:space="preserve">
     <value>Möchten Sie die PSI-Spielen teilnehmen?</value>
   </data>
+  <data name="Prompt_Select_Cascade" xml:space="preserve">
+    <value>Wählen Sie eine Kaskade-Fähigkeit für {0}</value>
+  </data>
 </root>

@@ -26,7 +26,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
-                    careers.Add("Colonist", CharacterGeneration.Career.CareerType.Hostile_Colonist);
+                    careers.Add(Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Hostile_Colonist);
                     break;
             }
             return careers;
@@ -72,7 +72,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
                     list.Add(Properties.Resources.Species_Human, CharacterGeneration.Character.Species.Human);
-                    list.Add("Android", CharacterGeneration.Character.Species.Android);
+                    list.Add(Resources.Species_Android, CharacterGeneration.Character.Species.Android);
                     break;
             }
 

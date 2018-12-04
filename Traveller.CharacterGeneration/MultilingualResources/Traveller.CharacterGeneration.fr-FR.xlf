@@ -2543,6 +2543,131 @@
           <source>Uplifted Dolphin</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Dolphin surélevée</target>
         </trans-unit>
+        <trans-unit id="Career_Colonist" translate="yes" xml:space="preserve">
+          <source>Colonist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colon</target>
+        </trans-unit>
+        <trans-unit id="Rank_Citizen" translate="yes" xml:space="preserve">
+          <source>Citizen</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Citoyen</target>
+        </trans-unit>
+        <trans-unit id="Rank_CouncilAdvisor" translate="yes" xml:space="preserve">
+          <source>Council Advisor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Conseiller du Conseil</target>
+        </trans-unit>
+        <trans-unit id="Rank_Councilor" translate="yes" xml:space="preserve">
+          <source>Councilor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Conseiller</target>
+        </trans-unit>
+        <trans-unit id="Rank_DistrictDelegate" translate="yes" xml:space="preserve">
+          <source>District Delegate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Délégué de quartier</target>
+        </trans-unit>
+        <trans-unit id="Rank_DistrictLeader" translate="yes" xml:space="preserve">
+          <source>District Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef de district</target>
+        </trans-unit>
+        <trans-unit id="Rank_Governor" translate="yes" xml:space="preserve">
+          <source>Governor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gouverneur</target>
+        </trans-unit>
+        <trans-unit id="Rank_LieutenantGovernor" translate="yes" xml:space="preserve">
+          <source>Lieutenant Governor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lieutenant-gouverneur</target>
+        </trans-unit>
+        <trans-unit id="Career_Diplomat" translate="yes" xml:space="preserve">
+          <source>Diplomat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Diplomate</target>
+        </trans-unit>
+        <trans-unit id="Rank_Ambassador" translate="yes" xml:space="preserve">
+          <source>Ambassador</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ambassadeur</target>
+        </trans-unit>
+        <trans-unit id="Rank_Attache" translate="yes" xml:space="preserve">
+          <source>Attache</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Attaché</target>
+        </trans-unit>
+        <trans-unit id="Rank_Counselor" translate="yes" xml:space="preserve">
+          <source>Counselor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Conseiller</target>
+        </trans-unit>
+        <trans-unit id="Rank_FirstSecretary" translate="yes" xml:space="preserve">
+          <source>First Secretary</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Premier Secrétaire</target>
+        </trans-unit>
+        <trans-unit id="Rank_SecondSecretary" translate="yes" xml:space="preserve">
+          <source>Second Secretary</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deuxième Secrétaire</target>
+        </trans-unit>
+        <trans-unit id="Rank_ThirdSecretary" translate="yes" xml:space="preserve">
+          <source>Third Secretary</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Troisième Secrétaire</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en-GB" target-language="fr-FR" original="TRAVELLER.CHARACTERGENERATION/CEPHEUS/HOSTILE/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.CHARACTERGENERATION/CEPHEUS/HOSTILE/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Benefit_EliteTicket" translate="yes" xml:space="preserve">
+          <source>Elite Ticket</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Billet d’élite</target>
+        </trans-unit>
+        <trans-unit id="Benefit_StandardTicket" translate="yes" xml:space="preserve">
+          <source>Standard Ticket</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Billet standard</target>
+        </trans-unit>
+        <trans-unit id="Benefit_StarEnvoyClubMember" translate="yes" xml:space="preserve">
+          <source>Star Envoy Club Member</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Membre du Club envoyé étoiles</target>
+        </trans-unit>
+        <trans-unit id="Career_Colonist" translate="yes" xml:space="preserve">
+          <source>Colonist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colon</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantOperationsManager" translate="yes" xml:space="preserve">
+          <source>Assistant Operations Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Directeur des opérations adjoint</target>
+        </trans-unit>
+        <trans-unit id="Rank_ColonialAdministrator" translate="yes" xml:space="preserve">
+          <source>Colonial Administrator</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Administrateur colonial</target>
+        </trans-unit>
+        <trans-unit id="Rank_Colonist" translate="yes" xml:space="preserve">
+          <source>Colonist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colon</target>
+        </trans-unit>
+        <trans-unit id="Rank_DepartmentChief" translate="yes" xml:space="preserve">
+          <source>Department Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef de département</target>
+        </trans-unit>
+        <trans-unit id="Rank_OperationsManager" translate="yes" xml:space="preserve">
+          <source>Operations Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Directeur des opérations</target>
+        </trans-unit>
+        <trans-unit id="Rank_Supervisor" translate="yes" xml:space="preserve">
+          <source>Supervisor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Superviseur</target>
+        </trans-unit>
+        <trans-unit id="Rank_TeamLeader" translate="yes" xml:space="preserve">
+          <source>Team Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef d’équipe</target>
+        </trans-unit>
+        <trans-unit id="Skill_Agriculture" translate="yes" xml:space="preserve">
+          <source>Agriculture</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agriculture</target>
+        </trans-unit>
+        <trans-unit id="Skill_Loader" translate="yes" xml:space="preserve">
+          <source>Loader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chargeur</target>
+        </trans-unit>
+        <trans-unit id="Species_Android" translate="yes" xml:space="preserve">
+          <source>Android</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Androïde</target>
+        </trans-unit>
       </group>
     </body>
   </file>

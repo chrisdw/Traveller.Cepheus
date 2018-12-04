@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Benefit_EliteTicket" xml:space="preserve">
+    <value>Billet d’élite</value>
+  </data>
+  <data name="Benefit_StandardTicket" xml:space="preserve">
+    <value>Billet standard</value>
+  </data>
+  <data name="Benefit_StarEnvoyClubMember" xml:space="preserve">
+    <value>Membre du Club envoyé étoiles</value>
+  </data>
+  <data name="Career_Colonist" xml:space="preserve">
+    <value>Colon</value>
+  </data>
+  <data name="Rank_AssistantOperationsManager" xml:space="preserve">
+    <value>Directeur des opérations adjoint</value>
+  </data>
+  <data name="Rank_ColonialAdministrator" xml:space="preserve">
+    <value>Administrateur colonial</value>
+  </data>
+  <data name="Rank_Colonist" xml:space="preserve">
+    <value>Colon</value>
+  </data>
+  <data name="Rank_DepartmentChief" xml:space="preserve">
+    <value>Chef de département</value>
+  </data>
+  <data name="Rank_OperationsManager" xml:space="preserve">
+    <value>Directeur des opérations</value>
+  </data>
+  <data name="Rank_Supervisor" xml:space="preserve">
+    <value>Superviseur</value>
+  </data>
+  <data name="Rank_TeamLeader" xml:space="preserve">
+    <value>Chef d’équipe</value>
+  </data>
+  <data name="Skill_Agriculture" xml:space="preserve">
+    <value>Agriculture</value>
+  </data>
+  <data name="Skill_Loader" xml:space="preserve">
+    <value>Chargeur</value>
+  </data>
+  <data name="Species_Android" xml:space="preserve">
+    <value>Androïde</value>
+  </data>
+</root>

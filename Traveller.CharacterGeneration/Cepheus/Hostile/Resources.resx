@@ -117,106 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Benefit_Cash" xml:space="preserve">
-    <value>Cash</value>
+  <data name="Benefit_EliteTicket" xml:space="preserve">
+    <value>Elite Ticket</value>
   </data>
-  <data name="Benefit_Material" xml:space="preserve">
-    <value>Material</value>
+  <data name="Benefit_StandardTicket" xml:space="preserve">
+    <value>Standard Ticket</value>
   </data>
-  <data name="Button_Cancel" xml:space="preserve">
-    <value>Cancel</value>
+  <data name="Benefit_StarEnvoyClubMember" xml:space="preserve">
+    <value>Star Envoy Club Member</value>
   </data>
-  <data name="Button_No" xml:space="preserve">
-    <value>No</value>
+  <data name="Career_Colonist" xml:space="preserve">
+    <value>Colonist</value>
   </data>
-  <data name="Button_OK" xml:space="preserve">
-    <value>OK</value>
+  <data name="Rank_AssistantOperationsManager" xml:space="preserve">
+    <value>Assistant Operations Manager</value>
   </data>
-  <data name="Button_Yes" xml:space="preserve">
-    <value>Yes</value>
+  <data name="Rank_ColonialAdministrator" xml:space="preserve">
+    <value>Colonial Administrator</value>
   </data>
-  <data name="Jrn_Died" xml:space="preserve">
-    <value>Died at age {0}</value>
+  <data name="Rank_Colonist" xml:space="preserve">
+    <value>Colonist</value>
   </data>
-  <data name="Jrn_Drafted" xml:space="preserve">
-    <value>Drafted into {0}</value>
+  <data name="Rank_DepartmentChief" xml:space="preserve">
+    <value>Department Chief</value>
   </data>
-  <data name="Jrn_Killed" xml:space="preserve">
-    <value>Killed at age {0}</value>
+  <data name="Rank_OperationsManager" xml:space="preserve">
+    <value>Operations Manager</value>
   </data>
-  <data name="Msg_Attribute_Raised" xml:space="preserve">
-    <value>Attribute {0} raised by {1}.</value>
+  <data name="Rank_Supervisor" xml:space="preserve">
+    <value>Supervisor</value>
   </data>
-  <data name="Msg_Died" xml:space="preserve">
-    <value>Your character died of old age at {0}.</value>
+  <data name="Rank_TeamLeader" xml:space="preserve">
+    <value>Team Leader</value>
   </data>
-  <data name="Msg_Drafted" xml:space="preserve">
-    <value>You where drafted into the {0}.</value>
+  <data name="Skill_Agriculture" xml:space="preserve">
+    <value>Agriculture</value>
   </data>
-  <data name="Msg_Killed" xml:space="preserve">
-    <value>Your character was killed at age {0}.</value>
+  <data name="Skill_Loader" xml:space="preserve">
+    <value>Loader</value>
   </data>
-  <data name="Msg_Psionic_Training" xml:space="preserve">
-    <value>Received Psionic Training</value>
-  </data>
-  <data name="Msg_Skill_Received" xml:space="preserve">
-    <value>Received skill {0} level {1}.</value>
-  </data>
-  <data name="Msg_Skill_Total" xml:space="preserve">
-    <value>Your skill total exeeds the sum of INT and EDU, you need to reduce them.</value>
-  </data>
-  <data name="Prompt_Another_Career" xml:space="preserve">
-    <value>Do you wish to persue another career?</value>
-  </data>
-  <data name="Prompt_Benefit_Rolls" xml:space="preserve">
-    <value>You have {0} benefits rolls, no more than {1} can be on the cash table</value>
-  </data>
-  <data name="Prompt_CharacterName" xml:space="preserve">
-    <value>Please supply a character name.</value>
-  </data>
-  <data name="Prompt_Draft" xml:space="preserve">
-    <value>You could not enlist. Submit to the draft?</value>
-  </data>
-  <data name="Prompt_FileExists" xml:space="preserve">
-    <value>File already exists. Overwrite?</value>
-  </data>
-  <data name="Prompt_PsionicGames" xml:space="preserve">
-    <value>Do you want to attend the psionic games?</value>
-  </data>
-  <data name="Prompt_Renlist" xml:space="preserve">
-    <value>You are now {0}. Do you want to re-enlist?</value>
-  </data>
-  <data name="Prompt_SelectCharacter" xml:space="preserve">
-    <value>Select a character</value>
-  </data>
-  <data name="Prompt_SelectLanguage" xml:space="preserve">
-    <value>Select a language</value>
-  </data>
-  <data name="Prompt_Select_Benefit_Table" xml:space="preserve">
-    <value>Select a benefit table</value>
-  </data>
-  <data name="Prompt_Select_Career" xml:space="preserve">
-    <value>Select a career</value>
-  </data>
-  <data name="Prompt_Select_Cascade" xml:space="preserve">
-    <value>Select a cascade skill for {0}</value>
-  </data>
-  <data name="Prompt_Select_Psionic" xml:space="preserve">
-    <value>Select a psionic talent</value>
-  </data>
-  <data name="Prompt_Select_Skill" xml:space="preserve">
-    <value>Select a skill</value>
-  </data>
-  <data name="Prompt_Select_Skill_Table" xml:space="preserve">
-    <value>Select a skill table</value>
-  </data>
-  <data name="Prompt_Select_Weapon" xml:space="preserve">
-    <value>Select a weapon</value>
-  </data>
-  <data name="Prompt_Weapon_Skill" xml:space="preserve">
-    <value>You have received a weapon benefit, do you wish to take it as a skill instead?</value>
-  </data>
-  <data name="Title_App" xml:space="preserve">
-    <value>Traveller Career Generation</value>
+  <data name="Species_Android" xml:space="preserve">
+    <value>Android</value>
   </data>
 </root>

@@ -477,4 +477,49 @@
   <data name="Species_UpliftedDolphin" xml:space="preserve">
     <value>Dolphin surélevée</value>
   </data>
+  <data name="Career_Colonist" xml:space="preserve">
+    <value>Colon</value>
+  </data>
+  <data name="Rank_Citizen" xml:space="preserve">
+    <value>Citoyen</value>
+  </data>
+  <data name="Rank_CouncilAdvisor" xml:space="preserve">
+    <value>Conseiller du Conseil</value>
+  </data>
+  <data name="Rank_Councilor" xml:space="preserve">
+    <value>Conseiller</value>
+  </data>
+  <data name="Rank_DistrictDelegate" xml:space="preserve">
+    <value>Délégué de quartier</value>
+  </data>
+  <data name="Rank_DistrictLeader" xml:space="preserve">
+    <value>Chef de district</value>
+  </data>
+  <data name="Rank_Governor" xml:space="preserve">
+    <value>Gouverneur</value>
+  </data>
+  <data name="Rank_LieutenantGovernor" xml:space="preserve">
+    <value>Lieutenant-gouverneur</value>
+  </data>
+  <data name="Career_Diplomat" xml:space="preserve">
+    <value>Diplomate</value>
+  </data>
+  <data name="Rank_Ambassador" xml:space="preserve">
+    <value>Ambassadeur</value>
+  </data>
+  <data name="Rank_Attache" xml:space="preserve">
+    <value>Attaché</value>
+  </data>
+  <data name="Rank_Counselor" xml:space="preserve">
+    <value>Conseiller</value>
+  </data>
+  <data name="Rank_FirstSecretary" xml:space="preserve">
+    <value>Premier Secrétaire</value>
+  </data>
+  <data name="Rank_SecondSecretary" xml:space="preserve">
+    <value>Deuxième Secrétaire</value>
+  </data>
+  <data name="Rank_ThirdSecretary" xml:space="preserve">
+    <value>Troisième Secrétaire</value>
+  </data>
 </root>

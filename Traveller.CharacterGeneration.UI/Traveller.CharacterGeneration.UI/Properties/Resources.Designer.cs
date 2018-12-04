@@ -286,6 +286,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select a cascade skill for {0}.
+        /// </summary>
+        internal static string Prompt_Select_Cascade {
+            get {
+                return ResourceManager.GetString("Prompt_Select_Cascade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select a psionic talent.
         /// </summary>
         internal static string Prompt_Select_Psionic {
