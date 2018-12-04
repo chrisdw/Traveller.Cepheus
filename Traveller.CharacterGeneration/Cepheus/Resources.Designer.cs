@@ -151,6 +151,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Entertainer.
+        /// </summary>
+        internal static string Career_Entertainer {
+            get {
+                return ResourceManager.GetString("Career_Entertainer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hunter.
+        /// </summary>
+        internal static string Career_Hunter {
+            get {
+                return ResourceManager.GetString("Career_Hunter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Marine.
         /// </summary>
         internal static string Career_Marine {

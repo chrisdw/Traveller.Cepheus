@@ -522,4 +522,10 @@
   <data name="Rank_ThirdSecretary" xml:space="preserve">
     <value>Troisième Secrétaire</value>
   </data>
+  <data name="Career_Entertainer" xml:space="preserve">
+    <value>Artiste du spectacle</value>
+  </data>
+  <data name="Career_Hunter" xml:space="preserve">
+    <value>Hunter</value>
+  </data>
 </root>

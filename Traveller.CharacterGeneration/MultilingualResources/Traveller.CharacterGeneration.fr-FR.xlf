@@ -2603,6 +2603,14 @@
           <source>Third Secretary</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Troisième Secrétaire</target>
         </trans-unit>
+        <trans-unit id="Career_Entertainer" translate="yes" xml:space="preserve">
+          <source>Entertainer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Artiste du spectacle</target>
+        </trans-unit>
+        <trans-unit id="Career_Hunter" translate="yes" xml:space="preserve">
+          <source>Hunter</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hunter</target>
+        </trans-unit>
       </group>
     </body>
   </file>
