@@ -44,6 +44,16 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Android
         }
 
+        public class Configuration
+        {
+            public string Ruleset { get; set; }
+            public string Campaign { get; set; }
+            public Constants.CultureType Culture { get; set; }
+            public string Sex { get; set; }
+            public Constants.GenerationStyle Style { get; set; }
+            public Species CharacterSpecies { get; set; }
+        }
+
         public string Sex { get; set; }
         public int Age { get; set; }
         public string Name { get; set; }
@@ -598,6 +608,47 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 var benefit = item as XmlElement;
                 character.AddBenefit(Benefit.Load(benefit));
             }
+            return character;
+        }
+
+        public static Character CreateCharacter(Configuration configuration)
+        {
+            Character character;
+
+            if (configuration.Ruleset.Equals("Cepheus Engine"))
+            {
+                if (configuration.Campaign.Equals("Hostile"))
+                {
+                    character = new Cepheus.Hostile.Character
+                    {
+                        Culture = configuration.Culture,
+                        Sex = configuration.Sex,
+                        Style = configuration.Style,
+                        CharacterSpecies = configuration.CharacterSpecies
+                    };
+                }
+                else
+                {
+                    character = new Cepheus.Character
+                    {
+                        Culture = configuration.Culture,
+                        Sex = configuration.Sex,
+                        Style = configuration.Style,
+                        CharacterSpecies = configuration.CharacterSpecies
+                    };
+                }
+            }
+            else
+            {
+                character = new Character
+                {
+                    Culture = configuration.Culture,
+                    Sex = configuration.Sex,
+                    Style = configuration.Style,
+                    CharacterSpecies = configuration.CharacterSpecies
+                };
+            }
+
             return character;
         }
     }

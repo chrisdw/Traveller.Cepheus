@@ -94,42 +94,22 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         {
             Analytics.TrackEvent("Character Generator");
             Character character = null;
-
-            if (GenerationConfiguration.Ruleset.Equals("Cepheus Engine"))
+            var config = new Character.Configuration()
             {
-                if (GenerationConfiguration.Campaign.Equals("Hostile"))
-                {
-                    character = new Cepheus.Hostile.Character
-                    {
-                        Culture = selectedCulture.Id,
-                        Sex = GenerationConfiguration.Sex,
-                        Style = generationStyle,
-                        CharacterSpecies = species
-                    };
-                }
-                else
-                {
-                    character = new Cepheus.Character
-                    {
-                        Culture = selectedCulture.Id,
-                        Sex = GenerationConfiguration.Sex,
-                        Style = generationStyle,
-                        CharacterSpecies = species
-                    };
-                }
+                Ruleset = GenerationConfiguration.Ruleset,
+                Campaign = GenerationConfiguration.Campaign,
+                Culture = selectedCulture.Id,
+                Sex = GenerationConfiguration.Sex,
+                Style = generationStyle,
+                CharacterSpecies = species
+            };
+            character = Character.CreateCharacter(config);
+            if (character is Cepheus.Character)
+            {
                 var cc = character as Cepheus.Character;
                 cc.SkillOffered += SkillOffered;
             }
-            else
-            {
-                character = new Character
-                {
-                    Culture = selectedCulture.Id,
-                    Sex = GenerationConfiguration.Sex,
-                    Style = generationStyle,
-                    CharacterSpecies = species
-                };
-            }
+
             character.Generate();
 
             var keepgoing = false;
