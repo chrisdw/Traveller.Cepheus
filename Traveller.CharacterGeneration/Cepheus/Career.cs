@@ -187,10 +187,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     break;
                 case 2:
                     Owner.Journal.Add(Resources.Msg_HonourablyDischarged);
+                    Owner.Age += 4;
                     survive = SurvivalResult.Discharged;
                     break;
                 case 3:
                     Owner.Journal.Add(Resources.Msg_HonourablyDischargedLegal);
+                    Owner.Age += 4;
                     Owner.AddBenefit(
                         new Benefit()
                         {
@@ -204,16 +206,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 case 4:
                     Owner.Journal.Add(Resources.Msg_DishonourablyDischarged);
                     lostBenefits = true;
+                    Owner.Age += 4;
                     survive = SurvivalResult.Discharged;
                     break;
                 case 5:
                     Owner.Journal.Add(Resources.Msg_DishonourablyDischargedPrison);
-                    Owner.Age += 4;
+                    Owner.Age += 8;
                     lostBenefits = true;
                     survive = SurvivalResult.Discharged;
                     break;
                 case 6:
                     Owner.Journal.Add(Resources.Msg_MedicallyDischarged);
+                    Owner.Age += 2;
                     ResolveInjury(0);
                     survive = SurvivalResult.Discharged;
                     break;
