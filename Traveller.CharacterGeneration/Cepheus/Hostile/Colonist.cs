@@ -72,6 +72,22 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     Owner.Journal.Add("Your colony is struck by disaster and you took some of the blame.");
                     survive = SurvivalResult.Discharged;
                     break;
+                case 3:
+                    Owner.Journal.Add("New colonial leaders decided you and your crew were troublemakers.");
+                    survive = SurvivalResult.Discharged;
+                    break;
+                case 4:
+                    Owner.Journal.Add("A civil disturbance was put down by the corporation.");
+                    ResolveInjury(0);
+                    break;
+                case 5:
+                    Owner.Journal.Add("You outgrew the colony. You didn’t fit in anymore.");
+                    survive = SurvivalResult.Discharged;
+                    break;
+                case 6:
+                    Owner.Journal.Add("Your ideas are revolutionary and unpopular - colonists attacked you and your settlement.");
+                    survive = SurvivalResult.Discharged;
+                    break;
             }
             return survive;
         }

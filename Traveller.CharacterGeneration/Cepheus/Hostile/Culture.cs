@@ -42,6 +42,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             switch (dice.roll(1))
             {
                 case 1:
+                    // ranger
                     return new AerospaceDefence() { Culture = this, Mishaps = UseMishaps };
                 case 2:
                 case 3:
@@ -49,6 +50,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     return new Colonist() { Culture = this, Mishaps = UseMishaps };
                 case 5:
                 case 6:
+                    // roughneck
                     return new SurfaceDefence() { Culture = this, Mishaps = UseMishaps };
             }
             return new Colonist() { Culture = this, Mishaps = UseMishaps };

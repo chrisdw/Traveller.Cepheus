@@ -14,8 +14,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
         public event EventHandler<SkillOfferedEventArgs> SkillOffered;
 
-        private Dice dice = new Dice(6);
-        private Dice d3 = new Dice(3);
+        protected Dice dice = new Dice(6);
+        protected Dice d3 = new Dice(3);
 
         public override void Generate()
         {
@@ -135,26 +135,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             break;
                     }
                     var backgroundSkills = 3 + Profile.Edu.Modifier;
-                    var skillList = new Skill()
-                    {
-                        Name = "Background Skills",
-                        Level = 0,
-                        Cascade =
-                        {
-                            CharacterGeneration.SkillLibrary.Admin,
-                            SkillLibrary.Advocate,
-                            SkillLibrary.Animals,
-                            CharacterGeneration.SkillLibrary.Carousing,
-                            CharacterGeneration.SkillLibrary.Communications,
-                            CharacterGeneration.SkillLibrary.Computer,
-                            CharacterGeneration.SkillLibrary.Electronics,
-                            CharacterGeneration.SkillLibrary.Engineering,
-                            SkillLibrary.Linguistics,
-                            CharacterGeneration.SkillLibrary.Mechanical,
-                            CharacterGeneration.SkillLibrary.Medic,
-                            SkillLibrary.Sciences,
-                        }
-                    };
+                    Skill skillList = GetBackgroundSkillList();
                     for (var i = 0; i < backgroundSkills; i++)
                     {
                         OnSkillOffered(skillList);
@@ -184,6 +165,30 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     }
                     break;
             }
+        }
+
+        protected virtual Skill GetBackgroundSkillList()
+        {
+            return new Skill()
+            {
+                Name = "Background Skills",
+                Level = 0,
+                Cascade =
+                        {
+                            CharacterGeneration.SkillLibrary.Admin,
+                            SkillLibrary.Advocate,
+                            SkillLibrary.Animals,
+                            CharacterGeneration.SkillLibrary.Carousing,
+                            CharacterGeneration.SkillLibrary.Communications,
+                            CharacterGeneration.SkillLibrary.Computer,
+                            CharacterGeneration.SkillLibrary.Electronics,
+                            CharacterGeneration.SkillLibrary.Engineering,
+                            SkillLibrary.Linguistics,
+                            CharacterGeneration.SkillLibrary.Mechanical,
+                            CharacterGeneration.SkillLibrary.Medic,
+                            SkillLibrary.Sciences,
+                        }
+            };
         }
 
         public override bool AgingCheck()

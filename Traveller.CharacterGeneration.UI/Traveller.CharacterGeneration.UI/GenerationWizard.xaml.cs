@@ -97,13 +97,26 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
             if (GenerationConfiguration.Ruleset.Equals("Cepheus Engine"))
             {
-                character = new Cepheus.Character
+                if (GenerationConfiguration.Campaign.Equals("Hostile"))
                 {
-                    Culture = selectedCulture.Id,
-                    Sex = GenerationConfiguration.Sex,
-                    Style = generationStyle,
-                    CharacterSpecies = species
-                };
+                    character = new Cepheus.Hostile.Character
+                    {
+                        Culture = selectedCulture.Id,
+                        Sex = GenerationConfiguration.Sex,
+                        Style = generationStyle,
+                        CharacterSpecies = species
+                    };
+                }
+                else
+                {
+                    character = new Cepheus.Character
+                    {
+                        Culture = selectedCulture.Id,
+                        Sex = GenerationConfiguration.Sex,
+                        Style = generationStyle,
+                        CharacterSpecies = species
+                    };
+                }
                 var cc = character as Cepheus.Character;
                 cc.SkillOffered += SkillOffered;
             }
