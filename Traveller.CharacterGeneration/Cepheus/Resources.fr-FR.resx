@@ -528,4 +528,7 @@
   <data name="Career_Hunter" xml:space="preserve">
     <value>Hunter</value>
   </data>
+  <data name="Career_Mercenary" xml:space="preserve">
+    <value>Mercenaire</value>
+  </data>
 </root>

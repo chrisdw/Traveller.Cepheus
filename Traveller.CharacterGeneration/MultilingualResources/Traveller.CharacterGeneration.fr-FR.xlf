@@ -2627,6 +2627,10 @@
           <source>Hunter</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hunter</target>
         </trans-unit>
+        <trans-unit id="Career_Mercenary" translate="yes" xml:space="preserve">
+          <source>Mercenary</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mercenaire</target>
+        </trans-unit>
       </group>
     </body>
   </file>
