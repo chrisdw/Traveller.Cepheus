@@ -1,7 +1,5 @@
 ﻿using org.DownesWard.Utilities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
 {
@@ -27,6 +25,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
                     careers.Add(Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Hostile_Colonist);
+                    careers.Add(Resources.Career_Ranger, CharacterGeneration.Career.CareerType.Hostile_Ranger);
                     break;
             }
             return careers;
@@ -42,8 +41,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             switch (dice.roll(1))
             {
                 case 1:
-                    // ranger
-                    return new AerospaceDefence() { Culture = this, Mishaps = UseMishaps };
+                    return new Ranger() { Culture = this, Mishaps = UseMishaps };
                 case 2:
                 case 3:
                 case 4:
@@ -62,6 +60,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             {
                 case CharacterGeneration.Career.CareerType.Hostile_Colonist:
                     return new Colonist { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_Ranger:
+                    return new Ranger { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Athlete { Culture = this, Mishaps = UseMishaps };
             }

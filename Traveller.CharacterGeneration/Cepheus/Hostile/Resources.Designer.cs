@@ -97,11 +97,47 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ranger.
+        /// </summary>
+        internal static string Career_Ranger {
+            get {
+                return ResourceManager.GetString("Career_Ranger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Area Commander.
+        /// </summary>
+        internal static string Rank_AreaCommander {
+            get {
+                return ResourceManager.GetString("Rank_AreaCommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Assistant Operations Manager.
         /// </summary>
         internal static string Rank_AssistantOperationsManager {
             get {
                 return ResourceManager.GetString("Rank_AssistantOperationsManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assistant Team Leader.
+        /// </summary>
+        internal static string Rank_AssistantTeamLeader {
+            get {
+                return ResourceManager.GetString("Rank_AssistantTeamLeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chief Ranger.
+        /// </summary>
+        internal static string Rank_ChiefRanger {
+            get {
+                return ResourceManager.GetString("Rank_ChiefRanger", resourceCulture);
             }
         }
         
@@ -133,11 +169,38 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deputy Chief Ranger.
+        /// </summary>
+        internal static string Rank_DeputyChiefRanger {
+            get {
+                return ResourceManager.GetString("Rank_DeputyChiefRanger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to District Commander.
+        /// </summary>
+        internal static string Rank_DistrictCommander {
+            get {
+                return ResourceManager.GetString("Rank_DistrictCommander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Operations Manager.
         /// </summary>
         internal static string Rank_OperationsManager {
             get {
                 return ResourceManager.GetString("Rank_OperationsManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ranger.
+        /// </summary>
+        internal static string Rank_Ranger {
+            get {
+                return ResourceManager.GetString("Rank_Ranger", resourceCulture);
             }
         }
         

@@ -2884,6 +2884,34 @@
           <source>Android</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Android</target>
         </trans-unit>
+        <trans-unit id="Career_Ranger" translate="yes" xml:space="preserve">
+          <source>Ranger</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ranger</target>
+        </trans-unit>
+        <trans-unit id="Rank_AreaCommander" translate="yes" xml:space="preserve">
+          <source>Area Commander</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bereich Commander</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantTeamLeader" translate="yes" xml:space="preserve">
+          <source>Assistant Team Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Assistentin Teamleiter</target>
+        </trans-unit>
+        <trans-unit id="Rank_ChiefRanger" translate="yes" xml:space="preserve">
+          <source>Chief Ranger</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chief Ranger</target>
+        </trans-unit>
+        <trans-unit id="Rank_DeputyChiefRanger" translate="yes" xml:space="preserve">
+          <source>Deputy Chief Ranger</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deputy Chief Ranger</target>
+        </trans-unit>
+        <trans-unit id="Rank_DistrictCommander" translate="yes" xml:space="preserve">
+          <source>District Commander</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bezirkskommandant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Ranger" translate="yes" xml:space="preserve">
+          <source>Ranger</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ranger</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -54,4 +54,25 @@
   <data name="Species_Android" xml:space="preserve">
     <value>Androïde</value>
   </data>
+  <data name="Career_Ranger" xml:space="preserve">
+    <value>Ranger</value>
+  </data>
+  <data name="Rank_AreaCommander" xml:space="preserve">
+    <value>Commandant de la région</value>
+  </data>
+  <data name="Rank_AssistantTeamLeader" xml:space="preserve">
+    <value>Chef d’équipe adjoint</value>
+  </data>
+  <data name="Rank_ChiefRanger" xml:space="preserve">
+    <value>Chief Ranger</value>
+  </data>
+  <data name="Rank_DeputyChiefRanger" xml:space="preserve">
+    <value>Chef adjoint Ranger</value>
+  </data>
+  <data name="Rank_DistrictCommander" xml:space="preserve">
+    <value>Commandant de district</value>
+  </data>
+  <data name="Rank_Ranger" xml:space="preserve">
+    <value>Ranger</value>
+  </data>
 </root>

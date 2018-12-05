@@ -129,8 +129,20 @@
   <data name="Career_Colonist" xml:space="preserve">
     <value>Colonist</value>
   </data>
+  <data name="Career_Ranger" xml:space="preserve">
+    <value>Ranger</value>
+  </data>
+  <data name="Rank_AreaCommander" xml:space="preserve">
+    <value>Area Commander</value>
+  </data>
   <data name="Rank_AssistantOperationsManager" xml:space="preserve">
     <value>Assistant Operations Manager</value>
+  </data>
+  <data name="Rank_AssistantTeamLeader" xml:space="preserve">
+    <value>Assistant Team Leader</value>
+  </data>
+  <data name="Rank_ChiefRanger" xml:space="preserve">
+    <value>Chief Ranger</value>
   </data>
   <data name="Rank_ColonialAdministrator" xml:space="preserve">
     <value>Colonial Administrator</value>
@@ -141,8 +153,17 @@
   <data name="Rank_DepartmentChief" xml:space="preserve">
     <value>Department Chief</value>
   </data>
+  <data name="Rank_DeputyChiefRanger" xml:space="preserve">
+    <value>Deputy Chief Ranger</value>
+  </data>
+  <data name="Rank_DistrictCommander" xml:space="preserve">
+    <value>District Commander</value>
+  </data>
   <data name="Rank_OperationsManager" xml:space="preserve">
     <value>Operations Manager</value>
+  </data>
+  <data name="Rank_Ranger" xml:space="preserve">
+    <value>Ranger</value>
   </data>
   <data name="Rank_Supervisor" xml:space="preserve">
     <value>Supervisor</value>

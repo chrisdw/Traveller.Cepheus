@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
 {
     public static class SkillLibrary
     {
@@ -10,6 +6,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
         public static Skill Aircraft = new Skill(Cepheus.Resources.Skill_Aircraft, Skill.SkillClass.None, 1);
         public static Skill BladeCombat = new Skill("Blade Combat", Skill.SkillClass.None, 1);
         public static Skill GroundVehicle = new Skill(Cepheus.Resources.Skill_GroundVehicle, Skill.SkillClass.None, 1);
+        public static Skill GunCombat = new Skill("Gun Combat", Skill.SkillClass.None, 1);
         public static Skill Investigate = new Skill("Investigate", Skill.SkillClass.None, 1);
         public static Skill Loader = new Skill(Resources.Skill_Loader, Skill.SkillClass.None, 1);
         public static Skill Watercraft = new Skill(Cepheus.Resources.Skill_Watercraft, Skill.SkillClass.None, 1);
