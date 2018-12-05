@@ -223,6 +223,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Physician.
+        /// </summary>
+        internal static string Career_Physician {
+            get {
+                return ResourceManager.GetString("Career_Physician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Scout.
         /// </summary>
         internal static string Career_Scout {
@@ -583,6 +592,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attending Physician.
+        /// </summary>
+        internal static string Rank_AttendingPhysician {
+            get {
+                return ResourceManager.GetString("Rank_AttendingPhysician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Barbarian.
         /// </summary>
         internal static string Rank_Barbarian {
@@ -624,6 +642,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Rank_Chief {
             get {
                 return ResourceManager.GetString("Rank_Chief", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chief Resident.
+        /// </summary>
+        internal static string Rank_ChiefResident {
+            get {
+                return ResourceManager.GetString("Rank_ChiefResident", resourceCulture);
             }
         }
         
@@ -844,6 +871,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hospital Adminstrator.
+        /// </summary>
+        internal static string Rank_HospitalAdminstrator {
+            get {
+                return ResourceManager.GetString("Rank_HospitalAdminstrator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Intern.
+        /// </summary>
+        internal static string Rank_Intern {
+            get {
+                return ResourceManager.GetString("Rank_Intern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Knight.
         /// </summary>
         internal static string Rank_Knight {
@@ -943,6 +988,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resident.
+        /// </summary>
+        internal static string Rank_Resident {
+            get {
+                return ResourceManager.GetString("Rank_Resident", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Scout.
         /// </summary>
         internal static string Rank_Scout {
@@ -975,6 +1029,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Rank_SectionChief {
             get {
                 return ResourceManager.GetString("Rank_SectionChief", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senior Resident.
+        /// </summary>
+        internal static string Rank_SeniorResident {
+            get {
+                return ResourceManager.GetString("Rank_SeniorResident", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service Chief.
+        /// </summary>
+        internal static string Rank_ServiceChief {
+            get {
+                return ResourceManager.GetString("Rank_ServiceChief", resourceCulture);
             }
         }
         

@@ -576,4 +576,28 @@
   <data name="Rank_Marquis" xml:space="preserve">
     <value>Marquis</value>
   </data>
+  <data name="Career_Physician" xml:space="preserve">
+    <value>Arzt</value>
+  </data>
+  <data name="Rank_AttendingPhysician" xml:space="preserve">
+    <value>Behandelnden Arzt</value>
+  </data>
+  <data name="Rank_ChiefResident" xml:space="preserve">
+    <value>Chief Resident</value>
+  </data>
+  <data name="Rank_HospitalAdminstrator" xml:space="preserve">
+    <value>Krankenhaus-Administrator</value>
+  </data>
+  <data name="Rank_Intern" xml:space="preserve">
+    <value>Intern</value>
+  </data>
+  <data name="Rank_Resident" xml:space="preserve">
+    <value>Resident</value>
+  </data>
+  <data name="Rank_SeniorResident" xml:space="preserve">
+    <value>Senior Resident</value>
+  </data>
+  <data name="Rank_ServiceChief" xml:space="preserve">
+    <value>Service-Chef</value>
+  </data>
 </root>

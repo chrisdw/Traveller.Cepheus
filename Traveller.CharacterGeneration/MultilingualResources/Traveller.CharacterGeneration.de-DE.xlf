@@ -2691,6 +2691,38 @@
           <source>Marquis</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Marquis</target>
         </trans-unit>
+        <trans-unit id="Career_Physician" translate="yes" xml:space="preserve">
+          <source>Physician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Arzt</target>
+        </trans-unit>
+        <trans-unit id="Rank_AttendingPhysician" translate="yes" xml:space="preserve">
+          <source>Attending Physician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Behandelnden Arzt</target>
+        </trans-unit>
+        <trans-unit id="Rank_ChiefResident" translate="yes" xml:space="preserve">
+          <source>Chief Resident</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chief Resident</target>
+        </trans-unit>
+        <trans-unit id="Rank_HospitalAdminstrator" translate="yes" xml:space="preserve">
+          <source>Hospital Adminstrator</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Krankenhaus-Administrator</target>
+        </trans-unit>
+        <trans-unit id="Rank_Intern" translate="yes" xml:space="preserve">
+          <source>Intern</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Intern</target>
+        </trans-unit>
+        <trans-unit id="Rank_Resident" translate="yes" xml:space="preserve">
+          <source>Resident</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Resident</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorResident" translate="yes" xml:space="preserve">
+          <source>Senior Resident</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior Resident</target>
+        </trans-unit>
+        <trans-unit id="Rank_ServiceChief" translate="yes" xml:space="preserve">
+          <source>Service Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Service-Chef</target>
+        </trans-unit>
       </group>
     </body>
   </file>
