@@ -531,4 +531,49 @@
   <data name="Career_Mercenary" xml:space="preserve">
     <value>Söldner</value>
   </data>
+  <data name="Career_Merchant" xml:space="preserve">
+    <value>Kaufmann</value>
+  </data>
+  <data name="Rank_1stOfficer" xml:space="preserve">
+    <value>Erster Offizier</value>
+  </data>
+  <data name="Rank_2ndOfficer" xml:space="preserve">
+    <value>Zweiter Offizier</value>
+  </data>
+  <data name="Rank_3rdOfficer" xml:space="preserve">
+    <value>Dritter Offizier</value>
+  </data>
+  <data name="Rank_4thOfficer" xml:space="preserve">
+    <value>Vierter Offizier</value>
+  </data>
+  <data name="Rank_Crewman" xml:space="preserve">
+    <value>Crewman</value>
+  </data>
+  <data name="Rank_DeckCadet" xml:space="preserve">
+    <value>Deck Cadet</value>
+  </data>
+  <data name="Career_Noble" xml:space="preserve">
+    <value>Edle</value>
+  </data>
+  <data name="Rank_Archduke" xml:space="preserve">
+    <value>Erzherzog</value>
+  </data>
+  <data name="Rank_Baron" xml:space="preserve">
+    <value>Baron</value>
+  </data>
+  <data name="Rank_Count" xml:space="preserve">
+    <value>Graf</value>
+  </data>
+  <data name="Rank_Courtier" xml:space="preserve">
+    <value>Höfling</value>
+  </data>
+  <data name="Rank_Duke" xml:space="preserve">
+    <value>Herzog</value>
+  </data>
+  <data name="Rank_Knight" xml:space="preserve">
+    <value>Ritter</value>
+  </data>
+  <data name="Rank_Marquis" xml:space="preserve">
+    <value>Marquis</value>
+  </data>
 </root>

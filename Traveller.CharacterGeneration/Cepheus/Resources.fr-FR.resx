@@ -531,4 +531,49 @@
   <data name="Career_Mercenary" xml:space="preserve">
     <value>Mercenaire</value>
   </data>
+  <data name="Career_Merchant" xml:space="preserve">
+    <value>Marchand</value>
+  </data>
+  <data name="Rank_1stOfficer" xml:space="preserve">
+    <value>Premier officier</value>
+  </data>
+  <data name="Rank_2ndOfficer" xml:space="preserve">
+    <value>Second officier</value>
+  </data>
+  <data name="Rank_3rdOfficer" xml:space="preserve">
+    <value>Troisième officier</value>
+  </data>
+  <data name="Rank_4thOfficer" xml:space="preserve">
+    <value>Quatrième lieutenant</value>
+  </data>
+  <data name="Rank_Crewman" xml:space="preserve">
+    <value>Membre d’équipage</value>
+  </data>
+  <data name="Rank_DeckCadet" xml:space="preserve">
+    <value>Cadet de pont</value>
+  </data>
+  <data name="Career_Noble" xml:space="preserve">
+    <value>Noble</value>
+  </data>
+  <data name="Rank_Archduke" xml:space="preserve">
+    <value>Archiduc</value>
+  </data>
+  <data name="Rank_Baron" xml:space="preserve">
+    <value>Baron</value>
+  </data>
+  <data name="Rank_Count" xml:space="preserve">
+    <value>Comte</value>
+  </data>
+  <data name="Rank_Courtier" xml:space="preserve">
+    <value>Courtisan</value>
+  </data>
+  <data name="Rank_Duke" xml:space="preserve">
+    <value>Duc</value>
+  </data>
+  <data name="Rank_Knight" xml:space="preserve">
+    <value>Chevalier</value>
+  </data>
+  <data name="Rank_Marquis" xml:space="preserve">
+    <value>Marquis</value>
+  </data>
 </root>

@@ -38,7 +38,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     careers.Add(Resources.Career_Marine, CharacterGeneration.Career.CareerType.Cepheus_Marine);
                     careers.Add(Resources.Career_MaritimeDefence, CharacterGeneration.Career.CareerType.Cepheus_Maritime_Defence);
                     careers.Add(Resources.Career_Mercenary, CharacterGeneration.Career.CareerType.Cepheus_Mercenary);
+                    careers.Add(Resources.Career_Merchant, CharacterGeneration.Career.CareerType.Cepheus_Merchant);
                     careers.Add(Resources.Career_Navy, CharacterGeneration.Career.CareerType.Cepheus_Navy);
+                    careers.Add(Resources.Career_Noble, CharacterGeneration.Career.CareerType.Cepheus_Noble);
                     careers.Add(Resources.Career_Scout, CharacterGeneration.Career.CareerType.Cepheus_Scout);
                     careers.Add(Resources.Career_SurfaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Surface_Defence);
                     break;
@@ -107,6 +109,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     return new Hunter { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Cepheus_Mercenary:
                     return new Mercenary { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Cepheus_Merchant:
+                    return new Merchant { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Cepheus_Noble:
+                    return new Noble { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Athlete { Culture = this, Mishaps = UseMishaps };
             }

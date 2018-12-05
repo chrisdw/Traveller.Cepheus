@@ -2631,6 +2631,66 @@
           <source>Mercenary</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mercenaire</target>
         </trans-unit>
+        <trans-unit id="Career_Merchant" translate="yes" xml:space="preserve">
+          <source>Merchant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marchand</target>
+        </trans-unit>
+        <trans-unit id="Rank_1stOfficer" translate="yes" xml:space="preserve">
+          <source>First Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Premier officier</target>
+        </trans-unit>
+        <trans-unit id="Rank_2ndOfficer" translate="yes" xml:space="preserve">
+          <source>Second Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Second officier</target>
+        </trans-unit>
+        <trans-unit id="Rank_3rdOfficer" translate="yes" xml:space="preserve">
+          <source>Third Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Troisième officier</target>
+        </trans-unit>
+        <trans-unit id="Rank_4thOfficer" translate="yes" xml:space="preserve">
+          <source>Fourth Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Quatrième lieutenant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Crewman" translate="yes" xml:space="preserve">
+          <source>Crewman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Membre d’équipage</target>
+        </trans-unit>
+        <trans-unit id="Rank_DeckCadet" translate="yes" xml:space="preserve">
+          <source>Deck Cadet</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cadet de pont</target>
+        </trans-unit>
+        <trans-unit id="Career_Noble" translate="yes" xml:space="preserve">
+          <source>Noble</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Noble</target>
+        </trans-unit>
+        <trans-unit id="Rank_Archduke" translate="yes" xml:space="preserve">
+          <source>Archduke</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Archiduc</target>
+        </trans-unit>
+        <trans-unit id="Rank_Baron" translate="yes" xml:space="preserve">
+          <source>Baron</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Baron</target>
+        </trans-unit>
+        <trans-unit id="Rank_Count" translate="yes" xml:space="preserve">
+          <source>Count</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Comte</target>
+        </trans-unit>
+        <trans-unit id="Rank_Courtier" translate="yes" xml:space="preserve">
+          <source>Courtier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Courtisan</target>
+        </trans-unit>
+        <trans-unit id="Rank_Duke" translate="yes" xml:space="preserve">
+          <source>Duke</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Duc</target>
+        </trans-unit>
+        <trans-unit id="Rank_Knight" translate="yes" xml:space="preserve">
+          <source>Knight</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chevalier</target>
+        </trans-unit>
+        <trans-unit id="Rank_Marquis" translate="yes" xml:space="preserve">
+          <source>Marquis</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marquis</target>
+        </trans-unit>
       </group>
     </body>
   </file>
