@@ -657,4 +657,19 @@
   <data name="Rank_ResearchProfessor" xml:space="preserve">
     <value>Professeur-chercheur</value>
   </data>
+  <data name="Career_Technician" xml:space="preserve">
+    <value>Technicien</value>
+  </data>
+  <data name="Rank_ExecutiveOfficer" xml:space="preserve">
+    <value>De la direction</value>
+  </data>
+  <data name="Rank_TeamLead" xml:space="preserve">
+    <value>Chef d’équipe</value>
+  </data>
+  <data name="Rank_Technician" xml:space="preserve">
+    <value>Technicien</value>
+  </data>
+  <data name="Rank_VicePresident" xml:space="preserve">
+    <value>Vice Président</value>
+  </data>
 </root>

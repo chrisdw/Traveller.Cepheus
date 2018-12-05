@@ -1,10 +1,10 @@
 ﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
-    public class Scientist : Career
+    public class Technician : Career
     {
-        public Scientist()
+        public Technician()
         {
-            Name = Resources.Career_Scientist;
+            Name = Resources.Career_Technician;
             hasRanks = true;
 
             enlistment = 6;
@@ -18,21 +18,21 @@
             reenlist = 5;
             medicalBand = 2;
 
-            Ranks[0] = Resources.Rank_Instructor;
-            Ranks[1] = Resources.Rank_AdjunctProfessor;
-            Ranks[2] = Resources.Rank_ResearchProfessor;
-            Ranks[3] = Resources.Rank_AssistantProfessor;
-            Ranks[4] = Resources.Rank_AssociateProfessor;
-            Ranks[5] = Resources.Rank_Professor;
-            Ranks[6] = Resources.Rank_DistinguishedProfessor;
+            Ranks[0] = Resources.Rank_Technician;
+            Ranks[1] = Resources.Rank_TeamLead;
+            Ranks[2] = Resources.Rank_Supervisor;
+            Ranks[3] = Resources.Rank_Manager;
+            Ranks[4] = Resources.Rank_Director;
+            Ranks[5] = Resources.Rank_VicePresident;
+            Ranks[6] = Resources.Rank_ExecutiveOfficer;
 
             Material.Add(CharacterGeneration.BenefitLibrary.LowPsg);
             Material.Add(CharacterGeneration.BenefitLibrary.Edu);
             Material.Add(CharacterGeneration.BenefitLibrary.Int);
             Material.Add(CharacterGeneration.BenefitLibrary.MidPsg);
-            Material.Add(CharacterGeneration.BenefitLibrary.Soc);
+            Material.Add(CharacterGeneration.BenefitLibrary.MidPsg);
             Material.Add(CharacterGeneration.BenefitLibrary.HighPsg);
-            Material.Add(BenefitLibrary.ResearchVessel);
+            Material.Add(CharacterGeneration.BenefitLibrary.Soc);
 
             Cash[0] = 1000;
             Cash[1] = 5000;
@@ -59,21 +59,21 @@
             skills = table.Skills;
             skills[0] = CharacterGeneration.SkillLibrary.Admin;
             skills[1] = CharacterGeneration.SkillLibrary.Computer;
-            skills[2] = CharacterGeneration.SkillLibrary.Electronics;
+            skills[2] = CharacterGeneration.SkillLibrary.Mechanical;
             skills[3] = CharacterGeneration.SkillLibrary.Medic;
-            skills[4] = CharacterGeneration.SkillLibrary.Bribery;
+            skills[4] = CharacterGeneration.SkillLibrary.Electronics;
             skills[5] = SkillLibrary.Sciences;
 
             table = new SkillTable();
             SkillTables[2] = table;
             table.Name = Resources.Table_Specialist;
             skills = table.Skills;
-            skills[0] = CharacterGeneration.SkillLibrary.Navigation;
-            skills[1] = CharacterGeneration.SkillLibrary.Admin;
-            skills[2] = SkillLibrary.Sciences;
-            skills[3] = SkillLibrary.Sciences;
-            skills[4] = SkillLibrary.Animals;
-            skills[5] = SkillLibrary.Vehicle;
+            skills[0] = CharacterGeneration.SkillLibrary.Computer;
+            skills[1] = CharacterGeneration.SkillLibrary.Electronics;
+            skills[2] = CharacterGeneration.SkillLibrary.Gravitics;
+            skills[3] = SkillLibrary.Linguistics;
+            skills[4] = CharacterGeneration.SkillLibrary.Engineering;
+            skills[5] = SkillLibrary.Animals;
 
             table = new SkillTable();
             SkillTables[3] = table;
@@ -86,16 +86,17 @@
             skills[4] = CharacterGeneration.SkillLibrary.Medic;
             skills[5] = SkillLibrary.Sciences;
         }
+
         protected override void EnlistSkill()
         {
-            OnSkillOffered(SkillLibrary.Sciences);
+            Owner.AddSkill(CharacterGeneration.SkillLibrary.Computer);
         }
 
         protected override void RankSkill()
         {
-            if (RankNumber == 3)
+            if (RankNumber == 4)
             {
-                Owner.AddSkill(CharacterGeneration.SkillLibrary.Computer);
+                Owner.AddSkill(CharacterGeneration.SkillLibrary.Admin);
             }
         }
     }

@@ -295,6 +295,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Technician.
+        /// </summary>
+        internal static string Career_Technician {
+            get {
+                return ResourceManager.GetString("Career_Technician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} reduced by {1} due to aging.
         /// </summary>
         internal static string Msg_AgingReduction {
@@ -934,6 +943,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Executive Officer.
+        /// </summary>
+        internal static string Rank_ExecutiveOfficer {
+            get {
+                return ResourceManager.GetString("Rank_ExecutiveOfficer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to First Secretary.
         /// </summary>
         internal static string Rank_FirstSecretary {
@@ -1258,6 +1276,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Team Lead.
+        /// </summary>
+        internal static string Rank_TeamLead {
+            get {
+                return ResourceManager.GetString("Rank_TeamLead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Technician.
+        /// </summary>
+        internal static string Rank_Technician {
+            get {
+                return ResourceManager.GetString("Rank_Technician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Third Secretary.
         /// </summary>
         internal static string Rank_ThirdSecretary {
@@ -1290,6 +1326,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Rank_UnitChief {
             get {
                 return ResourceManager.GetString("Rank_UnitChief", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vice President.
+        /// </summary>
+        internal static string Rank_VicePresident {
+            get {
+                return ResourceManager.GetString("Rank_VicePresident", resourceCulture);
             }
         }
         

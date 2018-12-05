@@ -2799,6 +2799,26 @@
           <source>Research Professor</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Forschungsprofessor</target>
         </trans-unit>
+        <trans-unit id="Career_Technician" translate="yes" xml:space="preserve">
+          <source>Technician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Techniker</target>
+        </trans-unit>
+        <trans-unit id="Rank_ExecutiveOfficer" translate="yes" xml:space="preserve">
+          <source>Executive Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Executive Officer</target>
+        </trans-unit>
+        <trans-unit id="Rank_TeamLead" translate="yes" xml:space="preserve">
+          <source>Team Lead</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Teamleiter</target>
+        </trans-unit>
+        <trans-unit id="Rank_Technician" translate="yes" xml:space="preserve">
+          <source>Technician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Techniker</target>
+        </trans-unit>
+        <trans-unit id="Rank_VicePresident" translate="yes" xml:space="preserve">
+          <source>Vice President</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vice President</target>
+        </trans-unit>
       </group>
     </body>
   </file>
