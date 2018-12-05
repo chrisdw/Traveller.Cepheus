@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     class Physician : Career
     {
@@ -13,7 +9,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 
             enlistment = 6;
             enlistmentattr = "EDU";
-            survival = 54;
+            survival = 4;
             survivalattr = "INT";
             position = 5;
             positionattr = "INT";
@@ -89,10 +85,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[3] = SkillLibrary.Linguistics;
             skills[4] = CharacterGeneration.SkillLibrary.Medic;
             skills[5] = SkillLibrary.Sciences;
-        }
-        protected override void CommsionSkill()
-        {
-            
         }
 
         protected override void EnlistSkill()

@@ -705,4 +705,10 @@
   <data name="Rank_ServiceChief" xml:space="preserve">
     <value>Service Chief</value>
   </data>
+  <data name="Career_Pirate" xml:space="preserve">
+    <value>Pirate</value>
+  </data>
+  <data name="Rank_Corporal" xml:space="preserve">
+    <value>Corporal</value>
+  </data>
 </root>

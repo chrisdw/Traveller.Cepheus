@@ -2723,6 +2723,14 @@
           <source>Service Chief</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Service-Chef</target>
         </trans-unit>
+        <trans-unit id="Career_Pirate" translate="yes" xml:space="preserve">
+          <source>Pirate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pirat</target>
+        </trans-unit>
+        <trans-unit id="Rank_Corporal" translate="yes" xml:space="preserve">
+          <source>Corporal</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Unteroffizier</target>
+        </trans-unit>
       </group>
     </body>
   </file>

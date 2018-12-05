@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Noble : Career
     {
@@ -89,10 +85,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[3] = SkillLibrary.Linguistics;
             skills[4] = CharacterGeneration.SkillLibrary.Medic;
             skills[5] = SkillLibrary.Sciences;
-        }
-        protected override void CommsionSkill()
-        {
-          
         }
 
         protected override void EnlistSkill()

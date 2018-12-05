@@ -23,8 +23,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
         protected abstract void EnlistSkill();
         protected abstract void RankSkill();
 
-        protected abstract void CommsionSkill();
-
         public override bool Commission()
         {
             if (!hasRanks)
@@ -45,7 +43,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     if (dice.roll(2) >= target)
                     {
                         RankNumber = 1;
-                        CommsionSkill();
                         TermSkills += 1;
                         Owner.Journal.Add(string.Format(Resources.Prompt_Commissioned, Ranks[RankNumber]));
                         return true;

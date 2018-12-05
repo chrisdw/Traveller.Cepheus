@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Merchant : Career
     {
@@ -89,10 +85,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[3] = CharacterGeneration.SkillLibrary.Navigation;
             skills[4] = SkillLibrary.Sciences;
             skills[5] = CharacterGeneration.SkillLibrary.Tactics;
-        }
-        protected override void CommsionSkill()
-        {
-            
         }
 
         protected override void EnlistSkill()

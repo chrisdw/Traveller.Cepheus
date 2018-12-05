@@ -86,10 +86,6 @@
             skills[4] = CharacterGeneration.SkillLibrary.Leader;
             skills[5] = CharacterGeneration.SkillLibrary.Tactics;
         }
-        protected override void CommsionSkill()
-        {
-            
-        }
 
         protected override void EnlistSkill()
         {

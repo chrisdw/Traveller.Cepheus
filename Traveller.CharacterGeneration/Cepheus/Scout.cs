@@ -75,10 +75,6 @@
 
             Ranks[0] = Resources.Rank_Scout;
         }
-        protected override void CommsionSkill()
-        {
-            
-        }
 
         protected override void EnlistSkill()
         {

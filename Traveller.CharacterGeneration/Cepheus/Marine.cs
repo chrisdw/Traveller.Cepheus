@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Marine : Career
     {
@@ -90,10 +86,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             Ranks[5] = Resources.Rank_Colonel;
             Ranks[6] = Resources.Rank_Brigadier;
 
-        }
-        protected override void CommsionSkill()
-        {
-            
         }
 
         protected override void EnlistSkill()

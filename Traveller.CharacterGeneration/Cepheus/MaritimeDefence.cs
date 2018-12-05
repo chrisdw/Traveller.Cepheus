@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class MaritimeDefence : Career
     {
@@ -89,10 +85,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             Ranks[4] = Resources.Rank_Commander;
             Ranks[5] = Resources.Rank_Captain;
             Ranks[6] = Resources.Rank_Admiral;
-        }
-        protected override void CommsionSkill()
-        {
-            throw new NotImplementedException();
         }
 
         protected override void EnlistSkill()

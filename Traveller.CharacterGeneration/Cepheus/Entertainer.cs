@@ -76,11 +76,6 @@
             skills[5] = SkillLibrary.Sciences;
         }
 
-        protected override void CommsionSkill()
-        {
-
-        }
-
         protected override void EnlistSkill()
         {
             Owner.AddSkill(CharacterGeneration.SkillLibrary.Carousing);

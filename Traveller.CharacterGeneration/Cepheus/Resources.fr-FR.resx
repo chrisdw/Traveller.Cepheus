@@ -600,4 +600,10 @@
   <data name="Rank_ServiceChief" xml:space="preserve">
     <value>Chef de service</value>
   </data>
+  <data name="Career_Pirate" xml:space="preserve">
+    <value>Pirate</value>
+  </data>
+  <data name="Rank_Corporal" xml:space="preserve">
+    <value>Caporal</value>
+  </data>
 </root>

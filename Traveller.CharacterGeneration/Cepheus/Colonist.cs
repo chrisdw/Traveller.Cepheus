@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Colonist : Career
     {
@@ -91,14 +87,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[5] = SkillLibrary.VetinaryMedicine;
         }
 
-        protected override void CommsionSkill()
-        {
-            Owner.AddSkill(CharacterGeneration.SkillLibrary.Survival);
-        }
-
         protected override void EnlistSkill()
         {
-
+            Owner.AddSkill(CharacterGeneration.SkillLibrary.Survival);
         }
 
         protected override void RankSkill()

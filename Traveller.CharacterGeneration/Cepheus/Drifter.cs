@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Drifter : Career
     {
@@ -79,11 +75,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[5] = CharacterGeneration.SkillLibrary.Tactics;
 
             Ranks[0] = Resources.Rank_Drifter;
-        }
-
-        protected override void CommsionSkill()
-        {
-
         }
 
         protected override void EnlistSkill()

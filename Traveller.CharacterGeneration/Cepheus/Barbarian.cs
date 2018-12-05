@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
     public class Barbarian : Career
     {
@@ -78,10 +74,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             skills[3] = CharacterGeneration.SkillLibrary.Leader;
             skills[4] = CharacterGeneration.SkillLibrary.Tactics;
             skills[5] = CharacterGeneration.SkillLibrary.Broker;
-        }
-        protected override void CommsionSkill()
-        {
-            
         }
 
         protected override void EnlistSkill()

@@ -232,6 +232,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pirate.
+        /// </summary>
+        internal static string Career_Pirate {
+            get {
+                return ResourceManager.GetString("Career_Pirate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Scout.
         /// </summary>
         internal static string Career_Scout {
@@ -696,6 +705,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Rank_Commodore {
             get {
                 return ResourceManager.GetString("Rank_Commodore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Corporal.
+        /// </summary>
+        internal static string Rank_Corporal {
+            get {
+                return ResourceManager.GetString("Rank_Corporal", resourceCulture);
             }
         }
         
