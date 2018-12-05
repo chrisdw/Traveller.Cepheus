@@ -44,6 +44,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     careers.Add(Resources.Career_Physician, CharacterGeneration.Career.CareerType.Cepheus_Physician);
                     careers.Add(Resources.Career_Pirate, CharacterGeneration.Career.CareerType.Cepheus_Pirate);
                     careers.Add(Resources.Career_Rogue, CharacterGeneration.Career.CareerType.Cepheus_Rogue);
+                    careers.Add(Resources.Career_Scientist, CharacterGeneration.Career.CareerType.Cepheus_Scientist);
                     careers.Add(Resources.Career_Scout, CharacterGeneration.Career.CareerType.Cepheus_Scout);
                     careers.Add(Resources.Career_SurfaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Surface_Defence);
                     break;
@@ -122,6 +123,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     return new Pirate { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Cepheus_Rogue:
                     return new Rogue { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Cepheus_Scientist:
+                    return new Scientist { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Athlete { Culture = this, Mishaps = UseMishaps };
             }

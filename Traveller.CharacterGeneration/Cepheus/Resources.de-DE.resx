@@ -627,4 +627,34 @@
   <data name="Rank_Underboss" xml:space="preserve">
     <value>Underboss</value>
   </data>
+  <data name="Benefit_ResearchVessel" xml:space="preserve">
+    <value>Forschungsschiff</value>
+  </data>
+  <data name="Benefit_ShipShares" xml:space="preserve">
+    <value>1D 6 Schiff Aktien</value>
+  </data>
+  <data name="Career_Scientist" xml:space="preserve">
+    <value>Wissenschaftler</value>
+  </data>
+  <data name="Rank_AdjunctProfessor" xml:space="preserve">
+    <value>Adjunct Professor</value>
+  </data>
+  <data name="Rank_AssistantProfessor" xml:space="preserve">
+    <value>Assistant Professor</value>
+  </data>
+  <data name="Rank_AssociateProfessor" xml:space="preserve">
+    <value>Außerordentlicher Professor</value>
+  </data>
+  <data name="Rank_DistinguishedProfessor" xml:space="preserve">
+    <value>Distinguished Professor</value>
+  </data>
+  <data name="Rank_Instructor" xml:space="preserve">
+    <value>Kursleiter</value>
+  </data>
+  <data name="Rank_Professor" xml:space="preserve">
+    <value>Professor</value>
+  </data>
+  <data name="Rank_ResearchProfessor" xml:space="preserve">
+    <value>Forschungsprofessor</value>
+  </data>
 </root>

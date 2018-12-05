@@ -2759,6 +2759,46 @@
           <source>Underboss</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Sous-boss</target>
         </trans-unit>
+        <trans-unit id="Benefit_ResearchVessel" translate="yes" xml:space="preserve">
+          <source>Research Vessel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Navire de recherche</target>
+        </trans-unit>
+        <trans-unit id="Benefit_ShipShares" translate="yes" xml:space="preserve">
+          <source>1D6 Ship Shares</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">1d6 navire partage</target>
+        </trans-unit>
+        <trans-unit id="Career_Scientist" translate="yes" xml:space="preserve">
+          <source>Scientist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scientifique</target>
+        </trans-unit>
+        <trans-unit id="Rank_AdjunctProfessor" translate="yes" xml:space="preserve">
+          <source>Adjunct Professor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Professeur auxiliaire</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantProfessor" translate="yes" xml:space="preserve">
+          <source>Assistant Professor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Professeur adjoint</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssociateProfessor" translate="yes" xml:space="preserve">
+          <source>Associate Professor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Professeur agrégé</target>
+        </trans-unit>
+        <trans-unit id="Rank_DistinguishedProfessor" translate="yes" xml:space="preserve">
+          <source>Distinguished Professor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Professeur émérite</target>
+        </trans-unit>
+        <trans-unit id="Rank_Instructor" translate="yes" xml:space="preserve">
+          <source>Instructor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Instructeur</target>
+        </trans-unit>
+        <trans-unit id="Rank_Professor" translate="yes" xml:space="preserve">
+          <source>Professor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Professeur</target>
+        </trans-unit>
+        <trans-unit id="Rank_ResearchProfessor" translate="yes" xml:space="preserve">
+          <source>Research Professor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Professeur-chercheur</target>
+        </trans-unit>
       </group>
     </body>
   </file>

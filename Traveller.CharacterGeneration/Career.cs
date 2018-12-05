@@ -91,7 +91,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Noble,
             Cepheus_Physician,
             Cepheus_Pirate,
-            Cepheus_Rogue
+            Cepheus_Rogue,
+            Cepheus_Scientist
         }
 
         [Flags]

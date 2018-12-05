@@ -79,6 +79,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Research Vessel.
+        /// </summary>
+        internal static string Benefit_ResearchVessel {
+            get {
+                return ResourceManager.GetString("Benefit_ResearchVessel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1D6 Ship Shares.
+        /// </summary>
+        internal static string Benefit_ShipShares {
+            get {
+                return ResourceManager.GetString("Benefit_ShipShares", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Aerospace Defence.
         /// </summary>
         internal static string Career_AerospaceDefence {
@@ -246,6 +264,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Career_Rogue {
             get {
                 return ResourceManager.GetString("Career_Rogue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scientist.
+        /// </summary>
+        internal static string Career_Scientist {
+            get {
+                return ResourceManager.GetString("Career_Scientist", resourceCulture);
             }
         }
         
@@ -520,6 +547,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adjunct Professor.
+        /// </summary>
+        internal static string Rank_AdjunctProfessor {
+            get {
+                return ResourceManager.GetString("Rank_AdjunctProfessor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Admiral.
         /// </summary>
         internal static string Rank_Admiral {
@@ -592,11 +628,29 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Assistant Professor.
+        /// </summary>
+        internal static string Rank_AssistantProfessor {
+            get {
+                return ResourceManager.GetString("Rank_AssistantProfessor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Associate.
         /// </summary>
         internal static string Rank_Associate {
             get {
                 return ResourceManager.GetString("Rank_Associate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Associate Professor.
+        /// </summary>
+        internal static string Rank_AssociateProfessor {
+            get {
+                return ResourceManager.GetString("Rank_AssociateProfessor", resourceCulture);
             }
         }
         
@@ -826,6 +880,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Distinguished Professor.
+        /// </summary>
+        internal static string Rank_DistinguishedProfessor {
+            get {
+                return ResourceManager.GetString("Rank_DistinguishedProfessor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to District Delegate.
         /// </summary>
         internal static string Rank_DistrictDelegate {
@@ -943,6 +1006,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Instructor.
+        /// </summary>
+        internal static string Rank_Instructor {
+            get {
+                return ResourceManager.GetString("Rank_Instructor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Intern.
         /// </summary>
         internal static string Rank_Intern {
@@ -1047,6 +1119,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Rank_Private {
             get {
                 return ResourceManager.GetString("Rank_Private", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Professor.
+        /// </summary>
+        internal static string Rank_Professor {
+            get {
+                return ResourceManager.GetString("Rank_Professor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Research Professor.
+        /// </summary>
+        internal static string Rank_ResearchProfessor {
+            get {
+                return ResourceManager.GetString("Rank_ResearchProfessor", resourceCulture);
             }
         }
         
