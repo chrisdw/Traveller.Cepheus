@@ -65,27 +65,27 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             switch (dice.roll(1))
             {
                 case 1:
-                    Owner.Journal.Add("A colony accident left you injured.");
+                    Owner.Journal.Add(Resources.Mishap_ColonyAccident);
                     ResolveInjury(0);
                     break;
                 case 2:
-                    Owner.Journal.Add("Your colony is struck by disaster and you took some of the blame.");
+                    Owner.Journal.Add(Resources.Mishap_ColonyDisaster);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 3:
-                    Owner.Journal.Add("New colonial leaders decided you and your crew were troublemakers.");
+                    Owner.Journal.Add(Resources.Mishap_NewColonyLeaders);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 4:
-                    Owner.Journal.Add("A civil disturbance was put down by the corporation.");
+                    Owner.Journal.Add(Resources.Mishap_ColonyDisturbance);
                     ResolveInjury(0);
                     break;
                 case 5:
-                    Owner.Journal.Add("You outgrew the colony. You didn’t fit in anymore.");
+                    Owner.Journal.Add(Resources.Mishap_ColonyOutgrown);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 6:
-                    Owner.Journal.Add("Your ideas are revolutionary and unpopular - colonists attacked you and your settlement.");
+                    Owner.Journal.Add(Resources.Mishap_ColonyUnpopular);
                     survive = SurvivalResult.Discharged;
                     break;
             }

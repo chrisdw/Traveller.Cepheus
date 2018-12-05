@@ -75,4 +75,52 @@
   <data name="Rank_Ranger" xml:space="preserve">
     <value>Ranger</value>
   </data>
+  <data name="Career_Roughneck" xml:space="preserve">
+    <value>Raufbold</value>
+  </data>
+  <data name="Mishap_InjuredAtWork" xml:space="preserve">
+    <value>Bei der Arbeit verletzt.</value>
+  </data>
+  <data name="Rank_AssistantDriller" xml:space="preserve">
+    <value>Assistant Driller</value>
+  </data>
+  <data name="Rank_Driller" xml:space="preserve">
+    <value>Driller</value>
+  </data>
+  <data name="Rank_Floorhand" xml:space="preserve">
+    <value>Floorhand</value>
+  </data>
+  <data name="Rank_GeneralManager" xml:space="preserve">
+    <value>General Manager</value>
+  </data>
+  <data name="Rank_Roustabout" xml:space="preserve">
+    <value>Roustabout</value>
+  </data>
+  <data name="Rank_Superintendant" xml:space="preserve">
+    <value>Superintendant</value>
+  </data>
+  <data name="Rank_Toolpusher" xml:space="preserve">
+    <value>Toolpusher</value>
+  </data>
+  <data name="Mishap_ColonyAccident" xml:space="preserve">
+    <value>Eine Kolonie Unfall links, die Sie verletzt.</value>
+  </data>
+  <data name="Mishap_ColonyDisaster" xml:space="preserve">
+    <value>Ihre Kolonie ist von Katastrophen getroffen und Sie nahm einen Teil der Schuld.</value>
+  </data>
+  <data name="Mishap_ColonyDisturbance" xml:space="preserve">
+    <value>Von der Corporation wurde ein Unruhen niedergeschlagen.</value>
+  </data>
+  <data name="Mishap_ColonyOutgrown" xml:space="preserve">
+    <value>Sie entwachsen die Kolonie. Sie passte nicht mehr.</value>
+  </data>
+  <data name="Mishap_ColonyUnpopular" xml:space="preserve">
+    <value>Ihre Ideen sind revolutionär und unbeliebt - Kolonisten Griffen Sie und Ihrer Siedlung.</value>
+  </data>
+  <data name="Mishap_InjuredOnDuty" xml:space="preserve">
+    <value>Auf Pflicht verletzt.</value>
+  </data>
+  <data name="Mishap_NewColonyLeaders" xml:space="preserve">
+    <value>Neue koloniale Staats-und Regierungschefs beschlossen, dass Sie und Ihre Crew waren Störenfriede.</value>
+  </data>
 </root>

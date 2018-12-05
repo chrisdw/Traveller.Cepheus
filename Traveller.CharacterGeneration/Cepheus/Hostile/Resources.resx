@@ -132,8 +132,38 @@
   <data name="Career_Ranger" xml:space="preserve">
     <value>Ranger</value>
   </data>
+  <data name="Career_Roughneck" xml:space="preserve">
+    <value>Roughneck</value>
+  </data>
+  <data name="Mishap_ColonyAccident" xml:space="preserve">
+    <value>A colony accident left you injured.</value>
+  </data>
+  <data name="Mishap_ColonyDisaster" xml:space="preserve">
+    <value>Your colony is struck by disaster and you took some of the blame.</value>
+  </data>
+  <data name="Mishap_ColonyDisturbance" xml:space="preserve">
+    <value>A civil disturbance was put down by the corporation.</value>
+  </data>
+  <data name="Mishap_ColonyOutgrown" xml:space="preserve">
+    <value>You outgrew the colony. You didn’t fit in anymore.</value>
+  </data>
+  <data name="Mishap_ColonyUnpopular" xml:space="preserve">
+    <value>Your ideas are revolutionary and unpopular - colonists attacked you and your settlement.</value>
+  </data>
+  <data name="Mishap_InjuredAtWork" xml:space="preserve">
+    <value>Injured at work.</value>
+  </data>
+  <data name="Mishap_InjuredOnDuty" xml:space="preserve">
+    <value>Injured on duty.</value>
+  </data>
+  <data name="Mishap_NewColonyLeaders" xml:space="preserve">
+    <value>New colonial leaders decided you and your crew were troublemakers.</value>
+  </data>
   <data name="Rank_AreaCommander" xml:space="preserve">
     <value>Area Commander</value>
+  </data>
+  <data name="Rank_AssistantDriller" xml:space="preserve">
+    <value>Assistant Driller</value>
   </data>
   <data name="Rank_AssistantOperationsManager" xml:space="preserve">
     <value>Assistant Operations Manager</value>
@@ -159,17 +189,35 @@
   <data name="Rank_DistrictCommander" xml:space="preserve">
     <value>District Commander</value>
   </data>
+  <data name="Rank_Driller" xml:space="preserve">
+    <value>Driller</value>
+  </data>
+  <data name="Rank_Floorhand" xml:space="preserve">
+    <value>Floorhand</value>
+  </data>
+  <data name="Rank_GeneralManager" xml:space="preserve">
+    <value>General Manager</value>
+  </data>
   <data name="Rank_OperationsManager" xml:space="preserve">
     <value>Operations Manager</value>
   </data>
   <data name="Rank_Ranger" xml:space="preserve">
     <value>Ranger</value>
   </data>
+  <data name="Rank_Roustabout" xml:space="preserve">
+    <value>Roustabout</value>
+  </data>
+  <data name="Rank_Superintendant" xml:space="preserve">
+    <value>Superintendant</value>
+  </data>
   <data name="Rank_Supervisor" xml:space="preserve">
     <value>Supervisor</value>
   </data>
   <data name="Rank_TeamLeader" xml:space="preserve">
     <value>Team Leader</value>
+  </data>
+  <data name="Rank_Toolpusher" xml:space="preserve">
+    <value>Toolpusher</value>
   </data>
   <data name="Skill_Agriculture" xml:space="preserve">
     <value>Agriculture</value>

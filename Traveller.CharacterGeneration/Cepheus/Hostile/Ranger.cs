@@ -99,5 +99,38 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
         {
             
         }
+
+        protected override SurvivalResult ResolveMishap()
+        {
+            SurvivalResult survive = SurvivalResult.Survived;
+            switch (dice.roll(1))
+            {
+                case 1:
+                    Owner.Journal.Add(Resources.Mishap_InjuredOnDuty);
+                    ResolveInjury(0);
+                    break;
+                case 2:
+                    Owner.Journal.Add("Your team locates a valiable resource, but a rival group siezes the site and claims it for their corporation.");
+                    survive = SurvivalResult.Discharged;
+                    break;
+                case 3:
+                    Owner.Journal.Add("An expedition ends in disaster, people are killed.");
+                    survive = SurvivalResult.Discharged;
+                    break;
+                case 4:
+                    Owner.Journal.Add("Attacked by dangerous alien exomorph.");
+                    ResolveInjury(0);
+                    break;
+                case 5:
+                    Owner.Journal.Add("You were lost in the wilderness and suffered exposure, after vehicle crash.");
+                    survive = SurvivalResult.Discharged;
+                    break;
+                case 6:
+                    Owner.Journal.Add("Your team fails to rescue a high status casualty stranded in the wilds.");
+                    survive = SurvivalResult.Discharged;
+                    break;
+            }
+            return survive;
+        }
     }
 }

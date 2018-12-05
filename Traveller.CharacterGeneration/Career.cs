@@ -82,7 +82,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Barbarian,
             Cepheus_Bureaucrat,
             Cepheus_Colonist,
-            Hostile_Colonist,
             Cepheus_Diplomat,
             Cepheus_Entertainer,
             Cepheus_Hunter,
@@ -94,7 +93,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Rogue,
             Cepheus_Scientist,
             Cepheus_Technician,
-            Hostile_Ranger
+            Hostile_Colonist,
+            Hostile_Ranger,
+            Hostile_Roughneck
         }
 
         [Flags]

@@ -75,4 +75,52 @@
   <data name="Rank_Ranger" xml:space="preserve">
     <value>Ranger</value>
   </data>
+  <data name="Career_Roughneck" xml:space="preserve">
+    <value>Roughneck</value>
+  </data>
+  <data name="Mishap_InjuredAtWork" xml:space="preserve">
+    <value>Blessés au travail.</value>
+  </data>
+  <data name="Rank_AssistantDriller" xml:space="preserve">
+    <value>Assistant foreur</value>
+  </data>
+  <data name="Rank_Driller" xml:space="preserve">
+    <value>Foreur</value>
+  </data>
+  <data name="Rank_Floorhand" xml:space="preserve">
+    <value>Annoncer</value>
+  </data>
+  <data name="Rank_GeneralManager" xml:space="preserve">
+    <value>Directeur général</value>
+  </data>
+  <data name="Rank_Roustabout" xml:space="preserve">
+    <value>Homme à tout faire</value>
+  </data>
+  <data name="Rank_Superintendant" xml:space="preserve">
+    <value>Surintendant</value>
+  </data>
+  <data name="Rank_Toolpusher" xml:space="preserve">
+    <value>Toolpusher</value>
+  </data>
+  <data name="Mishap_ColonyAccident" xml:space="preserve">
+    <value>Une gauche d’accident colonie que vous blesser.</value>
+  </data>
+  <data name="Mishap_ColonyDisaster" xml:space="preserve">
+    <value>Votre colonie est frappée par la catastrophe et vous avez pris à partie du blâme.</value>
+  </data>
+  <data name="Mishap_ColonyDisturbance" xml:space="preserve">
+    <value>Une perturbation civile fut réprimée par la société.</value>
+  </data>
+  <data name="Mishap_ColonyOutgrown" xml:space="preserve">
+    <value>Vous devenu trop grand pour la colonie. Vous ne correspondez pas plus.</value>
+  </data>
+  <data name="Mishap_ColonyUnpopular" xml:space="preserve">
+    <value>Vos idées sont révolutionnaires et impopulaire - colons attaqués de vous et votre règlement.</value>
+  </data>
+  <data name="Mishap_InjuredOnDuty" xml:space="preserve">
+    <value>Blessés en service.</value>
+  </data>
+  <data name="Mishap_NewColonyLeaders" xml:space="preserve">
+    <value>Les nouveaux dirigeants colonies a décidé de que vous et votre équipage étaient des fauteurs de troubles.</value>
+  </data>
 </root>

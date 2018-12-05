@@ -9,6 +9,7 @@
         public static Skill GunCombat = new Skill("Gun Combat", Skill.SkillClass.None, 1);
         public static Skill Investigate = new Skill("Investigate", Skill.SkillClass.None, 1);
         public static Skill Loader = new Skill(Resources.Skill_Loader, Skill.SkillClass.None, 1);
+        public static Skill Mining = new Skill("Mining", Skill.SkillClass.None, 1);
         public static Skill Watercraft = new Skill(Cepheus.Resources.Skill_Watercraft, Skill.SkillClass.None, 1);
 
         public static Skill Vehicle = new Skill(Properties.Resources.Skill_Vehicle, Skill.SkillClass.None, 1)

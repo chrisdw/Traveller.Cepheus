@@ -2912,6 +2912,70 @@
           <source>Ranger</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Ranger</target>
         </trans-unit>
+        <trans-unit id="Career_Roughneck" translate="yes" xml:space="preserve">
+          <source>Roughneck</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Roughneck</target>
+        </trans-unit>
+        <trans-unit id="Mishap_InjuredAtWork" translate="yes" xml:space="preserve">
+          <source>Injured at work.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Blessés au travail.</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantDriller" translate="yes" xml:space="preserve">
+          <source>Assistant Driller</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Assistant foreur</target>
+        </trans-unit>
+        <trans-unit id="Rank_Driller" translate="yes" xml:space="preserve">
+          <source>Driller</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Foreur</target>
+        </trans-unit>
+        <trans-unit id="Rank_Floorhand" translate="yes" xml:space="preserve">
+          <source>Floorhand</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Annoncer</target>
+        </trans-unit>
+        <trans-unit id="Rank_GeneralManager" translate="yes" xml:space="preserve">
+          <source>General Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Directeur général</target>
+        </trans-unit>
+        <trans-unit id="Rank_Roustabout" translate="yes" xml:space="preserve">
+          <source>Roustabout</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Homme à tout faire</target>
+        </trans-unit>
+        <trans-unit id="Rank_Superintendant" translate="yes" xml:space="preserve">
+          <source>Superintendant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Surintendant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Toolpusher" translate="yes" xml:space="preserve">
+          <source>Toolpusher</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Toolpusher</target>
+        </trans-unit>
+        <trans-unit id="Mishap_ColonyAccident" translate="yes" xml:space="preserve">
+          <source>A colony accident left you injured.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Une gauche d’accident colonie que vous blesser.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_ColonyDisaster" translate="yes" xml:space="preserve">
+          <source>Your colony is struck by disaster and you took some of the blame.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Votre colonie est frappée par la catastrophe et vous avez pris à partie du blâme.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_ColonyDisturbance" translate="yes" xml:space="preserve">
+          <source>A civil disturbance was put down by the corporation.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Une perturbation civile fut réprimée par la société.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_ColonyOutgrown" translate="yes" xml:space="preserve">
+          <source>You outgrew the colony. You didn’t fit in anymore.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous devenu trop grand pour la colonie. Vous ne correspondez pas plus.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_ColonyUnpopular" translate="yes" xml:space="preserve">
+          <source>Your ideas are revolutionary and unpopular - colonists attacked you and your settlement.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vos idées sont révolutionnaires et impopulaire - colons attaqués de vous et votre règlement.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_InjuredOnDuty" translate="yes" xml:space="preserve">
+          <source>Injured on duty.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Blessés en service.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_NewColonyLeaders" translate="yes" xml:space="preserve">
+          <source>New colonial leaders decided you and your crew were troublemakers.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Les nouveaux dirigeants colonies a décidé de que vous et votre équipage étaient des fauteurs de troubles.</target>
+        </trans-unit>
       </group>
     </body>
   </file>

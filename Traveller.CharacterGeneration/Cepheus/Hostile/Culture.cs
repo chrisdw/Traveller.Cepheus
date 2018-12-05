@@ -26,6 +26,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                 case Constants.GenerationStyle.Cepheus_Engine:
                     careers.Add(Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Hostile_Colonist);
                     careers.Add(Resources.Career_Ranger, CharacterGeneration.Career.CareerType.Hostile_Ranger);
+                    careers.Add(Resources.Career_Roughneck, CharacterGeneration.Career.CareerType.Hostile_Roughneck);
                     break;
             }
             return careers;
@@ -48,8 +49,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     return new Colonist() { Culture = this, Mishaps = UseMishaps };
                 case 5:
                 case 6:
-                    // roughneck
-                    return new SurfaceDefence() { Culture = this, Mishaps = UseMishaps };
+                    return new Roughneck() { Culture = this, Mishaps = UseMishaps };
             }
             return new Colonist() { Culture = this, Mishaps = UseMishaps };
         }
