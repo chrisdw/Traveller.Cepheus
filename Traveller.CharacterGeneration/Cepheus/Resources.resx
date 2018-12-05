@@ -711,4 +711,25 @@
   <data name="Rank_Corporal" xml:space="preserve">
     <value>Corporal</value>
   </data>
+  <data name="Career_Rogue" xml:space="preserve">
+    <value>Rogue</value>
+  </data>
+  <data name="Rank_Associate" xml:space="preserve">
+    <value>Associate</value>
+  </data>
+  <data name="Rank_Boss" xml:space="preserve">
+    <value>Boss</value>
+  </data>
+  <data name="Rank_Consigliere" xml:space="preserve">
+    <value>Consigliere</value>
+  </data>
+  <data name="Rank_Independant" xml:space="preserve">
+    <value>Independant</value>
+  </data>
+  <data name="Rank_Soldier" xml:space="preserve">
+    <value>Soldier</value>
+  </data>
+  <data name="Rank_Underboss" xml:space="preserve">
+    <value>Underboss</value>
+  </data>
 </root>

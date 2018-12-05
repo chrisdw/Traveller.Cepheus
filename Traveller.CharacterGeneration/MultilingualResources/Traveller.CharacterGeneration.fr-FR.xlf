@@ -2731,6 +2731,34 @@
           <source>Corporal</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Caporal</target>
         </trans-unit>
+        <trans-unit id="Career_Rogue" translate="yes" xml:space="preserve">
+          <source>Rogue</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voyous</target>
+        </trans-unit>
+        <trans-unit id="Rank_Associate" translate="yes" xml:space="preserve">
+          <source>Associate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Associé</target>
+        </trans-unit>
+        <trans-unit id="Rank_Boss" translate="yes" xml:space="preserve">
+          <source>Boss</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Patron</target>
+        </trans-unit>
+        <trans-unit id="Rank_Consigliere" translate="yes" xml:space="preserve">
+          <source>Consigliere</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consigliere</target>
+        </trans-unit>
+        <trans-unit id="Rank_Independant" translate="yes" xml:space="preserve">
+          <source>Independant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Independant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Soldier" translate="yes" xml:space="preserve">
+          <source>Soldier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Soldat</target>
+        </trans-unit>
+        <trans-unit id="Rank_Underboss" translate="yes" xml:space="preserve">
+          <source>Underboss</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sous-boss</target>
+        </trans-unit>
       </group>
     </body>
   </file>

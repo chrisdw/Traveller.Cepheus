@@ -43,6 +43,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     if (dice.roll(2) >= target)
                     {
                         RankNumber = 1;
+                        RankSkill();
                         TermSkills += 1;
                         Owner.Journal.Add(string.Format(Resources.Prompt_Commissioned, Ranks[RankNumber]));
                         return true;

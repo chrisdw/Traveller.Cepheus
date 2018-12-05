@@ -606,4 +606,25 @@
   <data name="Rank_Corporal" xml:space="preserve">
     <value>Caporal</value>
   </data>
+  <data name="Career_Rogue" xml:space="preserve">
+    <value>Voyous</value>
+  </data>
+  <data name="Rank_Associate" xml:space="preserve">
+    <value>Associé</value>
+  </data>
+  <data name="Rank_Boss" xml:space="preserve">
+    <value>Patron</value>
+  </data>
+  <data name="Rank_Consigliere" xml:space="preserve">
+    <value>Consigliere</value>
+  </data>
+  <data name="Rank_Independant" xml:space="preserve">
+    <value>Independant</value>
+  </data>
+  <data name="Rank_Soldier" xml:space="preserve">
+    <value>Soldat</value>
+  </data>
+  <data name="Rank_Underboss" xml:space="preserve">
+    <value>Sous-boss</value>
+  </data>
 </root>
