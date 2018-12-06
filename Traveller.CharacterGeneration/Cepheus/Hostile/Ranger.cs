@@ -110,23 +110,23 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     ResolveInjury(0);
                     break;
                 case 2:
-                    Owner.Journal.Add("Your team locates a valiable resource, but a rival group siezes the site and claims it for their corporation.");
+                    Owner.Journal.Add(Resources.Mishap_RangerRivalGroup);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 3:
-                    Owner.Journal.Add("An expedition ends in disaster, people are killed.");
+                    Owner.Journal.Add(Resources.Mishap_RangerDisaster);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 4:
-                    Owner.Journal.Add("Attacked by dangerous alien exomorph.");
+                    Owner.Journal.Add(Resources.Mishap_RangerAttacked);
                     ResolveInjury(0);
                     break;
                 case 5:
-                    Owner.Journal.Add("You were lost in the wilderness and suffered exposure, after vehicle crash.");
+                    Owner.Journal.Add(Resources.Mishap_RangerLost);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 6:
-                    Owner.Journal.Add("Your team fails to rescue a high status casualty stranded in the wilds.");
+                    Owner.Journal.Add(Resources.Mishap_RangerRescueFailed);
                     survive = SurvivalResult.Discharged;
                     break;
             }

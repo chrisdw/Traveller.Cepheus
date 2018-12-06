@@ -123,4 +123,31 @@
   <data name="Mishap_NewColonyLeaders" xml:space="preserve">
     <value>Les nouveaux dirigeants colonies a décidé de que vous et votre équipage étaient des fauteurs de troubles.</value>
   </data>
+  <data name="Mishap_RangerAttacked" xml:space="preserve">
+    <value>Attaqué par exomorph exotique dangereux.</value>
+  </data>
+  <data name="Mishap_RangerDisaster" xml:space="preserve">
+    <value>Une expédition se termine en catastrophe, les personnes sont tuées.</value>
+  </data>
+  <data name="Mishap_RangerLost" xml:space="preserve">
+    <value>Vous ont été perdus dans le désert et a souffert de l’exposition, après l’accident.</value>
+  </data>
+  <data name="Mishap_RangerRescueFailed" xml:space="preserve">
+    <value>Votre équipe ne parvient pas à sauver un blessé de statut élevé échoué dans les déserts.</value>
+  </data>
+  <data name="Mishap_RangerRivalGroup" xml:space="preserve">
+    <value>Votre équipe localise une ressource valiable, mais un groupe rival siezes le site et il réclame de leur société.</value>
+  </data>
+  <data name="Mishap_RoughneckAccident" xml:space="preserve">
+    <value>Un accident est blâmé sur vous, et vous sont renvoyés.</value>
+  </data>
+  <data name="Mishap_RoughneckBadBoss" xml:space="preserve">
+    <value>Vous entrer en conflit avec votre patron, ce qui rend la vie trop difficile pour vous de continuer.</value>
+  </data>
+  <data name="Mishap_RoughneckFired" xml:space="preserve">
+    <value>Vous êtes tiré sur une charge de foi vers le haut, juste pour parler de vos camarades.</value>
+  </data>
+  <data name="Mishap_RoughneckIllness" xml:space="preserve">
+    <value>Vous souffrez d’une maladie causée par votre travail.</value>
+  </data>
 </root>

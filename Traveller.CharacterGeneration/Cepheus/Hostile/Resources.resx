@@ -159,6 +159,33 @@
   <data name="Mishap_NewColonyLeaders" xml:space="preserve">
     <value>New colonial leaders decided you and your crew were troublemakers.</value>
   </data>
+  <data name="Mishap_RangerAttacked" xml:space="preserve">
+    <value>Attacked by dangerous alien exomorph.</value>
+  </data>
+  <data name="Mishap_RangerDisaster" xml:space="preserve">
+    <value>An expedition ends in disaster, people are killed.</value>
+  </data>
+  <data name="Mishap_RangerLost" xml:space="preserve">
+    <value>You were lost in the wilderness and suffered exposure, after vehicle crash.</value>
+  </data>
+  <data name="Mishap_RangerRescueFailed" xml:space="preserve">
+    <value>Your team fails to rescue a high status casualty stranded in the wilds.</value>
+  </data>
+  <data name="Mishap_RangerRivalGroup" xml:space="preserve">
+    <value>Your team locates a valiable resource, but a rival group siezes the site and claims it for their corporation.</value>
+  </data>
+  <data name="Mishap_RoughneckAccident" xml:space="preserve">
+    <value>An accident is blamed on you, and you are fired.</value>
+  </data>
+  <data name="Mishap_RoughneckBadBoss" xml:space="preserve">
+    <value>You clash with your boss, who makes life too tough for you to continue.</value>
+  </data>
+  <data name="Mishap_RoughneckFired" xml:space="preserve">
+    <value>You are fired on a trumped up charge, just for speaking up for your comrades.</value>
+  </data>
+  <data name="Mishap_RoughneckIllness" xml:space="preserve">
+    <value>You suffer from illness caused by your work.</value>
+  </data>
   <data name="Rank_AreaCommander" xml:space="preserve">
     <value>Area Commander</value>
   </data>

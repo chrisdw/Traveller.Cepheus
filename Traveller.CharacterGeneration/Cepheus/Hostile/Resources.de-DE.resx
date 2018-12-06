@@ -123,4 +123,31 @@
   <data name="Mishap_NewColonyLeaders" xml:space="preserve">
     <value>Neue koloniale Staats-und Regierungschefs beschlossen, dass Sie und Ihre Crew waren Störenfriede.</value>
   </data>
+  <data name="Mishap_RangerAttacked" xml:space="preserve">
+    <value>Von gefährlichen fremden Exomorph angegriffen.</value>
+  </data>
+  <data name="Mishap_RangerDisaster" xml:space="preserve">
+    <value>Eine Expedition endet in einer Katastrophe, Menschen kommen ums Leben.</value>
+  </data>
+  <data name="Mishap_RangerLost" xml:space="preserve">
+    <value>Sie waren in der Wildnis verloren und Exposition, nach Fahrzeuganprall erlitten.</value>
+  </data>
+  <data name="Mishap_RangerRescueFailed" xml:space="preserve">
+    <value>Ihr Team keinen hohen Status Unfall gestrandet in der Wildnis zu retten.</value>
+  </data>
+  <data name="Mishap_RangerRivalGroup" xml:space="preserve">
+    <value>Ihr Team sucht eine Valiable Ressource, sondern einer rivalisierenden Gruppe packt die Website und behauptet, es für ihr Unternehmen.</value>
+  </data>
+  <data name="Mishap_RoughneckAccident" xml:space="preserve">
+    <value>Ein Unfall ist die Schuld auf dich, und du bist gefeuert.</value>
+  </data>
+  <data name="Mishap_RoughneckBadBoss" xml:space="preserve">
+    <value>Sie kollidieren mit Ihrem Chef, wer macht das Leben zu hart für Sie weiter.</value>
+  </data>
+  <data name="Mishap_RoughneckFired" xml:space="preserve">
+    <value>Sie werden auf einen erfundenen kostenlos, nur für Ihre Kameraden zu Wort ausgelöst.</value>
+  </data>
+  <data name="Mishap_RoughneckIllness" xml:space="preserve">
+    <value>Sie leiden an Krankheiten, die durch Ihre Arbeit verursacht.</value>
+  </data>
 </root>

@@ -103,14 +103,15 @@
             switch (dice.roll(1))
             {
                 case 1:
-                    Owner.Journal.Add("You suffer from illness caused by your work.");
+                    Owner.Journal.Add(Resources.Mishap_RoughneckIllness);
                     break;
                 case 2:
-                    Owner.Journal.Add("You are fired on a trumped up charge, just for speaking up for your comrades.");
+                    Owner.Journal.Add(Resources.Mishap_RoughneckFired);
                     survive = SurvivalResult.Discharged;
+                    lostBenefits = true;
                     break;
                 case 3:
-                    Owner.Journal.Add("An accident is blamed on you, and you are fired.");
+                    Owner.Journal.Add(Resources.Mishap_RoughneckAccident);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 4:
@@ -118,7 +119,7 @@
                     ResolveInjury(0);
                     break;
                 case 5:
-                    Owner.Journal.Add("You clash with your boss, who makes life too tough for you to continue.");
+                    Owner.Journal.Add(Resources.Mishap_RoughneckBadBoss);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 6:

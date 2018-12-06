@@ -187,6 +187,87 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attacked by dangerous alien exomorph..
+        /// </summary>
+        internal static string Mishap_RangerAttacked {
+            get {
+                return ResourceManager.GetString("Mishap_RangerAttacked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An expedition ends in disaster, people are killed..
+        /// </summary>
+        internal static string Mishap_RangerDisaster {
+            get {
+                return ResourceManager.GetString("Mishap_RangerDisaster", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You were lost in the wilderness and suffered exposure, after vehicle crash..
+        /// </summary>
+        internal static string Mishap_RangerLost {
+            get {
+                return ResourceManager.GetString("Mishap_RangerLost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your team fails to rescue a high status casualty stranded in the wilds..
+        /// </summary>
+        internal static string Mishap_RangerRescueFailed {
+            get {
+                return ResourceManager.GetString("Mishap_RangerRescueFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your team locates a valiable resource, but a rival group siezes the site and claims it for their corporation..
+        /// </summary>
+        internal static string Mishap_RangerRivalGroup {
+            get {
+                return ResourceManager.GetString("Mishap_RangerRivalGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An accident is blamed on you, and you are fired..
+        /// </summary>
+        internal static string Mishap_RoughneckAccident {
+            get {
+                return ResourceManager.GetString("Mishap_RoughneckAccident", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You clash with your boss, who makes life too tough for you to continue..
+        /// </summary>
+        internal static string Mishap_RoughneckBadBoss {
+            get {
+                return ResourceManager.GetString("Mishap_RoughneckBadBoss", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are fired on a trumped up charge, just for speaking up for your comrades..
+        /// </summary>
+        internal static string Mishap_RoughneckFired {
+            get {
+                return ResourceManager.GetString("Mishap_RoughneckFired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You suffer from illness caused by your work..
+        /// </summary>
+        internal static string Mishap_RoughneckIllness {
+            get {
+                return ResourceManager.GetString("Mishap_RoughneckIllness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Area Commander.
         /// </summary>
         internal static string Rank_AreaCommander {

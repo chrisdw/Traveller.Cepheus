@@ -2976,6 +2976,42 @@
           <source>New colonial leaders decided you and your crew were troublemakers.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Neue koloniale Staats-und Regierungschefs beschlossen, dass Sie und Ihre Crew waren Störenfriede.</target>
         </trans-unit>
+        <trans-unit id="Mishap_RangerAttacked" translate="yes" xml:space="preserve">
+          <source>Attacked by dangerous alien exomorph.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Von gefährlichen fremden Exomorph angegriffen.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_RangerDisaster" translate="yes" xml:space="preserve">
+          <source>An expedition ends in disaster, people are killed.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eine Expedition endet in einer Katastrophe, Menschen kommen ums Leben.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_RangerLost" translate="yes" xml:space="preserve">
+          <source>You were lost in the wilderness and suffered exposure, after vehicle crash.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie waren in der Wildnis verloren und Exposition, nach Fahrzeuganprall erlitten.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_RangerRescueFailed" translate="yes" xml:space="preserve">
+          <source>Your team fails to rescue a high status casualty stranded in the wilds.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ihr Team keinen hohen Status Unfall gestrandet in der Wildnis zu retten.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_RangerRivalGroup" translate="yes" xml:space="preserve">
+          <source>Your team locates a valiable resource, but a rival group siezes the site and claims it for their corporation.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ihr Team sucht eine Valiable Ressource, sondern einer rivalisierenden Gruppe packt die Website und behauptet, es für ihr Unternehmen.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_RoughneckAccident" translate="yes" xml:space="preserve">
+          <source>An accident is blamed on you, and you are fired.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ein Unfall ist die Schuld auf dich, und du bist gefeuert.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_RoughneckBadBoss" translate="yes" xml:space="preserve">
+          <source>You clash with your boss, who makes life too tough for you to continue.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie kollidieren mit Ihrem Chef, wer macht das Leben zu hart für Sie weiter.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_RoughneckFired" translate="yes" xml:space="preserve">
+          <source>You are fired on a trumped up charge, just for speaking up for your comrades.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie werden auf einen erfundenen kostenlos, nur für Ihre Kameraden zu Wort ausgelöst.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_RoughneckIllness" translate="yes" xml:space="preserve">
+          <source>You suffer from illness caused by your work.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie leiden an Krankheiten, die durch Ihre Arbeit verursacht.</target>
+        </trans-unit>
       </group>
     </body>
   </file>
