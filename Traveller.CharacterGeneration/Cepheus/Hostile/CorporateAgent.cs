@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
     {
         public CorporateAgent()
         {
-            Name = "Corporate Agent";
+            Name = Resources.Career_CorporateAgent;
             hasRanks = true;
 
             enlistment = 6;
@@ -22,13 +22,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             reenlist = 5;
             medicalBand = 2;
 
-            Ranks[0] = "Agent";
-            Ranks[1] = "Senior Agent";
+            Ranks[0] = Resources.Rank_Agent;
+            Ranks[1] = Resources.Rank_SeniorAgent;
             Ranks[2] = Resources.Rank_Supervisor;
-            Ranks[3] = "Assistant Project Leader";
-            Ranks[4] = "Project Leader";
-            Ranks[5] = "Assistant Division Chief";
-            Ranks[6] = "Division Chief";
+            Ranks[3] = Resources.Rank_AssistantProjectLeader;
+            Ranks[4] = Resources.Rank_ProjectLeader;
+            Ranks[5] = Resources.Rank_AssistantDivisionChief;
+            Ranks[6] = Resources.Rank_DivisionChief;
 
             Material.Add(CharacterGeneration.BenefitLibrary.Weapon);
             Material.Add(BenefitLibrary.StandardTicket);
@@ -106,27 +106,27 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             switch (dice.roll(1))
             {
                 case 1:
-                    Owner.Journal.Add("A corporate defection went wrong and you were wounded.");
+                    Owner.Journal.Add(Resources.Mishap_Agent1);
                     ResolveInjury(0);
                     break;
                 case 2:
-                    Owner.Journal.Add("Your team was annihilated in a double-cross.");
+                    Owner.Journal.Add(Resources.Mishap_Agent2);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 3:
-                    Owner.Journal.Add("A rival corporation killed members of your family and wounded you.");
+                    Owner.Journal.Add(Resources.Mishap_Agent3);
                     ResolveInjury(0);
                     break;
                 case 4:
-                    Owner.Journal.Add("You learnt a secret about your employer and had to get out – fast.");
+                    Owner.Journal.Add(Resources.Mishap_Agent4);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 5:
-                    Owner.Journal.Add("An investigation uncovered government corruption, but you were forced to step down.");
+                    Owner.Journal.Add(Resources.Mishap_Agent5);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 6:
-                    Owner.Journal.Add("You failed to stop damage/disease/worker unrest at an Off-World outpost");
+                    Owner.Journal.Add(Resources.Mishap_Agent6);
                     survive = SurvivalResult.Discharged;
                     break;
             }

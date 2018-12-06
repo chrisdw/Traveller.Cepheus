@@ -150,4 +150,55 @@
   <data name="Mishap_RoughneckIllness" xml:space="preserve">
     <value>Vous souffrez d’une maladie causée par votre travail.</value>
   </data>
+  <data name="Rank_1stOfficer" xml:space="preserve">
+    <value>Premier officier</value>
+  </data>
+  <data name="Rank_2ndOfficer" xml:space="preserve">
+    <value>Second officier</value>
+  </data>
+  <data name="Rank_3rdOfficer" xml:space="preserve">
+    <value>Troisième officier</value>
+  </data>
+  <data name="Rank_4thOfficer" xml:space="preserve">
+    <value>Quatrième lieutenant</value>
+  </data>
+  <data name="Career_CorporateAgent" xml:space="preserve">
+    <value>Agent de l’entreprise</value>
+  </data>
+  <data name="Mishap_Agent1" xml:space="preserve">
+    <value>Une désinscription entreprise n’allait pas et vous ont été blessés.</value>
+  </data>
+  <data name="Mishap_Agent2" xml:space="preserve">
+    <value>Votre équipe a été anéanti dans un appears.</value>
+  </data>
+  <data name="Mishap_Agent3" xml:space="preserve">
+    <value>Une société rivale tué des membres de votre famille et vous blessé.</value>
+  </data>
+  <data name="Mishap_Agent4" xml:space="preserve">
+    <value>Vous appris un secret sur votre employeur et a dû sortir – rapide.</value>
+  </data>
+  <data name="Mishap_Agent5" xml:space="preserve">
+    <value>Une enquête a la corruption des gouvernements, mais vous avez été forcé de démissionner.</value>
+  </data>
+  <data name="Mishap_Agent6" xml:space="preserve">
+    <value>Vous n’avez pas cessé de dommages/maladie/travailleur troubles à un avant-poste de l’Off-World</value>
+  </data>
+  <data name="Rank_Agent" xml:space="preserve">
+    <value>Agent de</value>
+  </data>
+  <data name="Rank_AssistantDivisionChief" xml:space="preserve">
+    <value>Chef de Division adjoint</value>
+  </data>
+  <data name="Rank_AssistantProjectLeader" xml:space="preserve">
+    <value>Chef de projet adjoint</value>
+  </data>
+  <data name="Rank_DivisionChief" xml:space="preserve">
+    <value>Chef de division</value>
+  </data>
+  <data name="Rank_ProjectLeader" xml:space="preserve">
+    <value>Chef de projet</value>
+  </data>
+  <data name="Rank_SeniorAgent" xml:space="preserve">
+    <value>Agent principal</value>
+  </data>
 </root>

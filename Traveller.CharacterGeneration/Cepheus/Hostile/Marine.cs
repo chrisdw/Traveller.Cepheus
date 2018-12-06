@@ -151,7 +151,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     survive = SurvivalResult.Discharged;
                     break;
                 case 6:
-                    Owner.Journal.Add("Fighting hostile alien exomorphs, you save colonists, but are injured.Roll on the Injury Table.");
+                    Owner.Journal.Add("Fighting hostile alien exomorphs, you save colonists, but are injured.");
                     ResolveInjury(0);
                     break;
             }

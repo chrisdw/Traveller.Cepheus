@@ -3014,19 +3014,71 @@
         </trans-unit>
         <trans-unit id="Rank_1stOfficer" translate="yes" xml:space="preserve">
           <source>First Officer</source>
-          <target state="new">First Officer</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Premier officier</target>
         </trans-unit>
         <trans-unit id="Rank_2ndOfficer" translate="yes" xml:space="preserve">
           <source>Second Officer</source>
-          <target state="new">Second Officer</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Second officier</target>
         </trans-unit>
         <trans-unit id="Rank_3rdOfficer" translate="yes" xml:space="preserve">
           <source>Third Officer</source>
-          <target state="new">Third Officer</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Troisième officier</target>
         </trans-unit>
         <trans-unit id="Rank_4thOfficer" translate="yes" xml:space="preserve">
           <source>Fourth Officer</source>
-          <target state="new">Fourth Officer</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Quatrième lieutenant</target>
+        </trans-unit>
+        <trans-unit id="Career_CorporateAgent" translate="yes" xml:space="preserve">
+          <source>Corporate Agent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent de l’entreprise</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Agent1" translate="yes" xml:space="preserve">
+          <source>A corporate defection went wrong and you were wounded.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Une désinscription entreprise n’allait pas et vous ont été blessés.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Agent2" translate="yes" xml:space="preserve">
+          <source>Your team was annihilated in a double-cross.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Votre équipe a été anéanti dans un appears.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Agent3" translate="yes" xml:space="preserve">
+          <source>A rival corporation killed members of your family and wounded you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Une société rivale tué des membres de votre famille et vous blessé.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Agent4" translate="yes" xml:space="preserve">
+          <source>You learnt a secret about your employer and had to get out – fast.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous appris un secret sur votre employeur et a dû sortir – rapide.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Agent5" translate="yes" xml:space="preserve">
+          <source>An investigation uncovered government corruption, but you were forced to step down.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Une enquête a la corruption des gouvernements, mais vous avez été forcé de démissionner.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Agent6" translate="yes" xml:space="preserve">
+          <source>You failed to stop damage/disease/worker unrest at an Off-World outpost</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous n’avez pas cessé de dommages/maladie/travailleur troubles à un avant-poste de l’Off-World</target>
+        </trans-unit>
+        <trans-unit id="Rank_Agent" translate="yes" xml:space="preserve">
+          <source>Agent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent de</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantDivisionChief" translate="yes" xml:space="preserve">
+          <source>Assistant Division Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef de Division adjoint</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantProjectLeader" translate="yes" xml:space="preserve">
+          <source>Assistant Project Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef de projet adjoint</target>
+        </trans-unit>
+        <trans-unit id="Rank_DivisionChief" translate="yes" xml:space="preserve">
+          <source>Division Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef de division</target>
+        </trans-unit>
+        <trans-unit id="Rank_ProjectLeader" translate="yes" xml:space="preserve">
+          <source>Project Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef de projet</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorAgent" translate="yes" xml:space="preserve">
+          <source>Senior Agent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent principal</target>
         </trans-unit>
       </group>
     </body>
