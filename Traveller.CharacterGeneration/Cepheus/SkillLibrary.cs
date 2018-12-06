@@ -50,12 +50,15 @@
                 new Skill(Resources.Skill_SlugRifle, Skill.SkillClass.None, 1)
             }
         };
+
+        public static Skill HeavyWeapons = new Skill(Resources.Skill_HeavyWeapons, Skill.SkillClass.None, 1);
+
         public static Skill Gunnery = new Skill(Resources.Skill_Gunnery, Skill.SkillClass.None, 1)
         {
             Cascade =
             {
                 new Skill(Resources.Skill_BayWeapons, Skill.SkillClass.None, 1),
-                new Skill(Resources.Skill_HeavyWeapons, Skill.SkillClass.None, 1),
+                HeavyWeapons,
                 new Skill(Resources.Skill_Screens, Skill.SkillClass.None, 1),
                 new Skill(Resources.Skill_SpinalMounts, Skill.SkillClass.None, 1),
                 new Skill(Resources.Skill_TurretWeapons, Skill.SkillClass.None, 1)

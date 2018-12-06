@@ -28,6 +28,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     careers.Add("Commercial Spacer", CharacterGeneration.Career.CareerType.Hostile_CommercialSpacer);
                     careers.Add("Corporate Agent", CharacterGeneration.Career.CareerType.Hostile_CorporateAgent);
                     careers.Add("Corporate Executive", CharacterGeneration.Career.CareerType.Hostile_CorporateExec);
+                    careers.Add("Marine", CharacterGeneration.Career.CareerType.Hostile_Marine);
                     careers.Add(Resources.Career_Ranger, CharacterGeneration.Career.CareerType.Hostile_Ranger);
                     careers.Add(Resources.Career_Roughneck, CharacterGeneration.Career.CareerType.Hostile_Roughneck);
                     break;
@@ -73,6 +74,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     return new CorporateExec { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Hostile_CommercialSpacer:
                     return new CommericalSpacer { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_Marine:
+                    return new Marine { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Colonist { Culture = this, Mishaps = UseMishaps };
             }
