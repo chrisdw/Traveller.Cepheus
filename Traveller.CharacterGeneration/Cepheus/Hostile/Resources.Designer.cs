@@ -268,6 +268,42 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First Officer.
+        /// </summary>
+        internal static string Rank_1stOfficer {
+            get {
+                return ResourceManager.GetString("Rank_1stOfficer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Second Officer.
+        /// </summary>
+        internal static string Rank_2ndOfficer {
+            get {
+                return ResourceManager.GetString("Rank_2ndOfficer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Third Officer.
+        /// </summary>
+        internal static string Rank_3rdOfficer {
+            get {
+                return ResourceManager.GetString("Rank_3rdOfficer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fourth Officer.
+        /// </summary>
+        internal static string Rank_4thOfficer {
+            get {
+                return ResourceManager.GetString("Rank_4thOfficer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Area Commander.
         /// </summary>
         internal static string Rank_AreaCommander {

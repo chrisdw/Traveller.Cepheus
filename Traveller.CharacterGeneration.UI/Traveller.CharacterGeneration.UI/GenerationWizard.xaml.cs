@@ -112,6 +112,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
 
             character.Generate();
 
+            // Let the user see theie stats so they can make a more informed choice about
+            // which career to select
+            await DisplayAlert("Profile", string.Format("Your UPP is {0}", character.Profile.Display), Properties.Resources.Button_OK);
+
             var keepgoing = false;
             do
             {

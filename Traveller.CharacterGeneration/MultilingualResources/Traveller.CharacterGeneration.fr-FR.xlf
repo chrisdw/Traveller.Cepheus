@@ -3012,6 +3012,22 @@
           <source>You suffer from illness caused by your work.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous souffrez d’une maladie causée par votre travail.</target>
         </trans-unit>
+        <trans-unit id="Rank_1stOfficer" translate="yes" xml:space="preserve">
+          <source>First Officer</source>
+          <target state="new">First Officer</target>
+        </trans-unit>
+        <trans-unit id="Rank_2ndOfficer" translate="yes" xml:space="preserve">
+          <source>Second Officer</source>
+          <target state="new">Second Officer</target>
+        </trans-unit>
+        <trans-unit id="Rank_3rdOfficer" translate="yes" xml:space="preserve">
+          <source>Third Officer</source>
+          <target state="new">Third Officer</target>
+        </trans-unit>
+        <trans-unit id="Rank_4thOfficer" translate="yes" xml:space="preserve">
+          <source>Fourth Officer</source>
+          <target state="new">Fourth Officer</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -186,6 +186,18 @@
   <data name="Mishap_RoughneckIllness" xml:space="preserve">
     <value>You suffer from illness caused by your work.</value>
   </data>
+  <data name="Rank_1stOfficer" xml:space="preserve">
+    <value>First Officer</value>
+  </data>
+  <data name="Rank_2ndOfficer" xml:space="preserve">
+    <value>Second Officer</value>
+  </data>
+  <data name="Rank_3rdOfficer" xml:space="preserve">
+    <value>Third Officer</value>
+  </data>
+  <data name="Rank_4thOfficer" xml:space="preserve">
+    <value>Fourth Officer</value>
+  </data>
   <data name="Rank_AreaCommander" xml:space="preserve">
     <value>Area Commander</value>
   </data>

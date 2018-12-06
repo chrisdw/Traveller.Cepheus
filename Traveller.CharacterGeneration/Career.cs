@@ -95,7 +95,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Technician,
             Hostile_Colonist,
             Hostile_Ranger,
-            Hostile_Roughneck
+            Hostile_Roughneck,
+            Hostile_CorporateAgent,
+            Hostile_CorporateExec,
+            Hostile_CommercialSpacer
         }
 
         [Flags]

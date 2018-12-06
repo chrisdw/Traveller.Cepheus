@@ -25,6 +25,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
                     careers.Add(Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Hostile_Colonist);
+                    careers.Add("Commercial Spacer", CharacterGeneration.Career.CareerType.Hostile_CommercialSpacer);
+                    careers.Add("Corporate Agent", CharacterGeneration.Career.CareerType.Hostile_CorporateAgent);
+                    careers.Add("Corporate Executive", CharacterGeneration.Career.CareerType.Hostile_CorporateExec);
                     careers.Add(Resources.Career_Ranger, CharacterGeneration.Career.CareerType.Hostile_Ranger);
                     careers.Add(Resources.Career_Roughneck, CharacterGeneration.Career.CareerType.Hostile_Roughneck);
                     break;
@@ -62,8 +65,16 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     return new Colonist { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Hostile_Ranger:
                     return new Ranger { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_Roughneck:
+                    return new Roughneck { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_CorporateAgent:
+                    return new CorporateAgent { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_CorporateExec:
+                    return new CorporateExec { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_CommercialSpacer:
+                    return new CommericalSpacer { Culture = this, Mishaps = UseMishaps };
                 default:
-                    return new Athlete { Culture = this, Mishaps = UseMishaps };
+                    return new Colonist { Culture = this, Mishaps = UseMishaps };
             }
         }
 
