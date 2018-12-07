@@ -106,6 +106,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Corporate Executive.
+        /// </summary>
+        internal static string Career_CorporateExecutuve {
+            get {
+                return ResourceManager.GetString("Career_CorporateExecutuve", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ranger.
         /// </summary>
         internal static string Career_Ranger {
@@ -219,6 +228,51 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Mishap_ColonyUnpopular {
             get {
                 return ResourceManager.GetString("Mishap_ColonyUnpopular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your private hit team messes up, implicating you in a dirty black ops strike..
+        /// </summary>
+        internal static string Mishap_Exec1 {
+            get {
+                return ResourceManager.GetString("Mishap_Exec1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A rival exec conducted a smear campaign against you, forcing you out of a job..
+        /// </summary>
+        internal static string Mishap_Exec2 {
+            get {
+                return ResourceManager.GetString("Mishap_Exec2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your orders to a mining outpost got a lot of the workers killed..
+        /// </summary>
+        internal static string Mishap_Exec3 {
+            get {
+                return ResourceManager.GetString("Mishap_Exec3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your ties to the underworld unravel – and you must leave the company..
+        /// </summary>
+        internal static string Mishap_Exec4 {
+            get {
+                return ResourceManager.GetString("Mishap_Exec4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The corporation rationalizes your department and you are ‘let go’..
+        /// </summary>
+        internal static string Mishap_Exec5 {
+            get {
+                return ResourceManager.GetString("Mishap_Exec5", resourceCulture);
             }
         }
         
@@ -475,6 +529,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Director.
+        /// </summary>
+        internal static string Rank_Director {
+            get {
+                return ResourceManager.GetString("Rank_Director", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to District Commander.
         /// </summary>
         internal static string Rank_DistrictCommander {
@@ -502,6 +565,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Executive Consultant.
+        /// </summary>
+        internal static string Rank_ExecutiveConsultant {
+            get {
+                return ResourceManager.GetString("Rank_ExecutiveConsultant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executive Senior Vice President.
+        /// </summary>
+        internal static string Rank_ExecutiveSeniorVicePresident {
+            get {
+                return ResourceManager.GetString("Rank_ExecutiveSeniorVicePresident", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Floorhand.
         /// </summary>
         internal static string Rank_Floorhand {
@@ -525,6 +606,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_OperationsManager {
             get {
                 return ResourceManager.GetString("Rank_OperationsManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to President.
+        /// </summary>
+        internal static string Rank_President {
+            get {
+                return ResourceManager.GetString("Rank_President", resourceCulture);
             }
         }
         
@@ -565,6 +655,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Senior Executive Vice President.
+        /// </summary>
+        internal static string Rank_SeniorExecutiveVicePresident {
+            get {
+                return ResourceManager.GetString("Rank_SeniorExecutiveVicePresident", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senior Vice President.
+        /// </summary>
+        internal static string Rank_SeniorVicePresident {
+            get {
+                return ResourceManager.GetString("Rank_SeniorVicePresident", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Superintendant.
         /// </summary>
         internal static string Rank_Superintendant {
@@ -597,6 +705,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_Toolpusher {
             get {
                 return ResourceManager.GetString("Rank_Toolpusher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vice President.
+        /// </summary>
+        internal static string Rank_VicePresident {
+            get {
+                return ResourceManager.GetString("Rank_VicePresident", resourceCulture);
             }
         }
         

@@ -4,7 +4,7 @@
     {
         public CorporateExec()
         {
-            Name = "Corporate Exec";
+            Name = Resources.Career_CorporateExecutuve;
             hasRanks = true;
 
             enlistment = 8;
@@ -18,13 +18,13 @@
             reenlist = 5;
             medicalBand = 2;
 
-            Ranks[0] = "Executive Consultant";
-            Ranks[1] = "Vice President";
-            Ranks[2] = "Senior Vice President";
-            Ranks[3] = "Executive Senior Vice President";
-            Ranks[4] = "Senior Executive Vice President";
-            Ranks[5] = "Director";
-            Ranks[6] = "President";
+            Ranks[0] = Resources.Rank_ExecutiveConsultant;
+            Ranks[1] = Resources.Rank_VicePresident;
+            Ranks[2] = Resources.Rank_SeniorVicePresident;
+            Ranks[3] = Resources.Rank_ExecutiveSeniorVicePresident;
+            Ranks[4] = Resources.Rank_SeniorExecutiveVicePresident;
+            Ranks[5] = Resources.Rank_Director;
+            Ranks[6] = Resources.Rank_President;
 
             Material.Add(BenefitLibrary.EliteTicket);
             Material.Add(CharacterGeneration.BenefitLibrary.Edu);
@@ -106,23 +106,23 @@
             switch (dice.roll(1))
             {
                 case 1:
-                    Owner.Journal.Add("Your private hit team messes up, implicating you in a dirty black ops strike.");
+                    Owner.Journal.Add(Resources.Mishap_Exec1);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 2:
-                    Owner.Journal.Add("A rival exec conducted a smear campaign against you, forcing you out of a job.");
+                    Owner.Journal.Add(Resources.Mishap_Exec2);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 3:
-                    Owner.Journal.Add("Your orders to a mining outpost got a lot of the workers killed.");
+                    Owner.Journal.Add(Resources.Mishap_Exec3);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 4:
-                    Owner.Journal.Add("Your ties to the underworld unravel – and you must leave the company.");
+                    Owner.Journal.Add(Resources.Mishap_Exec4);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 5:
-                    Owner.Journal.Add("The corporation rationalizes your department and you are ‘let go’.");
+                    Owner.Journal.Add(Resources.Mishap_Exec5);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 6:

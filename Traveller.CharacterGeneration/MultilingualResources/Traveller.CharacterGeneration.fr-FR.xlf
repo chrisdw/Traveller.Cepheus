@@ -3080,6 +3080,58 @@
           <source>Senior Agent</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent principal</target>
         </trans-unit>
+        <trans-unit id="Career_CorporateExecutuve" translate="yes" xml:space="preserve">
+          <source>Corporate Executive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dirigeant d’entreprise</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Exec1" translate="yes" xml:space="preserve">
+          <source>Your private hit team messes up, implicating you in a dirty black ops strike.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Votre private frappé équipe mess vers le haut, en vous impliquant dans une grève ops noir sale.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Exec2" translate="yes" xml:space="preserve">
+          <source>A rival exec conducted a smear campaign against you, forcing you out of a job.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Un exec rival mené une campagne de dénigrement contre vous, vous forçant sans emploi.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Exec3" translate="yes" xml:space="preserve">
+          <source>Your orders to a mining outpost got a lot of the workers killed.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vos ordres à un avant-poste de l’exploitation minière a beaucoup des travailleurs tués.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Exec4" translate="yes" xml:space="preserve">
+          <source>Your ties to the underworld unravel – and you must leave the company.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vos liens avec la pègre démêler – et vous devez quitter la société.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Exec5" translate="yes" xml:space="preserve">
+          <source>The corporation rationalizes your department and you are ‘let go’.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">La société rationalise votre département et vous êtes « lâcher ».</target>
+        </trans-unit>
+        <trans-unit id="Rank_Director" translate="yes" xml:space="preserve">
+          <source>Director</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Directeur</target>
+        </trans-unit>
+        <trans-unit id="Rank_ExecutiveConsultant" translate="yes" xml:space="preserve">
+          <source>Executive Consultant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Expert-conseil exécutif</target>
+        </trans-unit>
+        <trans-unit id="Rank_ExecutiveSeniorVicePresident" translate="yes" xml:space="preserve">
+          <source>Executive Senior Vice President</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vice-Président exécutif Senior</target>
+        </trans-unit>
+        <trans-unit id="Rank_President" translate="yes" xml:space="preserve">
+          <source>President</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Président</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorExecutiveVicePresident" translate="yes" xml:space="preserve">
+          <source>Senior Executive Vice President</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vice Président exécutif</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorVicePresident" translate="yes" xml:space="preserve">
+          <source>Senior Vice President</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior Vice President</target>
+        </trans-unit>
+        <trans-unit id="Rank_VicePresident" translate="yes" xml:space="preserve">
+          <source>Vice President</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vice Président</target>
+        </trans-unit>
       </group>
     </body>
   </file>

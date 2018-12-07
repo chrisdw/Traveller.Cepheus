@@ -132,6 +132,9 @@
   <data name="Career_CorporateAgent" xml:space="preserve">
     <value>Corporate Agent</value>
   </data>
+  <data name="Career_CorporateExecutuve" xml:space="preserve">
+    <value>Corporate Executive</value>
+  </data>
   <data name="Career_Ranger" xml:space="preserve">
     <value>Ranger</value>
   </data>
@@ -170,6 +173,21 @@
   </data>
   <data name="Mishap_ColonyUnpopular" xml:space="preserve">
     <value>Your ideas are revolutionary and unpopular - colonists attacked you and your settlement.</value>
+  </data>
+  <data name="Mishap_Exec1" xml:space="preserve">
+    <value>Your private hit team messes up, implicating you in a dirty black ops strike.</value>
+  </data>
+  <data name="Mishap_Exec2" xml:space="preserve">
+    <value>A rival exec conducted a smear campaign against you, forcing you out of a job.</value>
+  </data>
+  <data name="Mishap_Exec3" xml:space="preserve">
+    <value>Your orders to a mining outpost got a lot of the workers killed.</value>
+  </data>
+  <data name="Mishap_Exec4" xml:space="preserve">
+    <value>Your ties to the underworld unravel – and you must leave the company.</value>
+  </data>
+  <data name="Mishap_Exec5" xml:space="preserve">
+    <value>The corporation rationalizes your department and you are ‘let go’.</value>
   </data>
   <data name="Mishap_InjuredAtWork" xml:space="preserve">
     <value>Injured at work.</value>
@@ -255,6 +273,9 @@
   <data name="Rank_DeputyChiefRanger" xml:space="preserve">
     <value>Deputy Chief Ranger</value>
   </data>
+  <data name="Rank_Director" xml:space="preserve">
+    <value>Director</value>
+  </data>
   <data name="Rank_DistrictCommander" xml:space="preserve">
     <value>District Commander</value>
   </data>
@@ -264,6 +285,12 @@
   <data name="Rank_Driller" xml:space="preserve">
     <value>Driller</value>
   </data>
+  <data name="Rank_ExecutiveConsultant" xml:space="preserve">
+    <value>Executive Consultant</value>
+  </data>
+  <data name="Rank_ExecutiveSeniorVicePresident" xml:space="preserve">
+    <value>Executive Senior Vice President</value>
+  </data>
   <data name="Rank_Floorhand" xml:space="preserve">
     <value>Floorhand</value>
   </data>
@@ -272,6 +299,9 @@
   </data>
   <data name="Rank_OperationsManager" xml:space="preserve">
     <value>Operations Manager</value>
+  </data>
+  <data name="Rank_President" xml:space="preserve">
+    <value>President</value>
   </data>
   <data name="Rank_ProjectLeader" xml:space="preserve">
     <value>Project Leader</value>
@@ -285,6 +315,12 @@
   <data name="Rank_SeniorAgent" xml:space="preserve">
     <value>Senior Agent</value>
   </data>
+  <data name="Rank_SeniorExecutiveVicePresident" xml:space="preserve">
+    <value>Senior Executive Vice President</value>
+  </data>
+  <data name="Rank_SeniorVicePresident" xml:space="preserve">
+    <value>Senior Vice President</value>
+  </data>
   <data name="Rank_Superintendant" xml:space="preserve">
     <value>Superintendant</value>
   </data>
@@ -296,6 +332,9 @@
   </data>
   <data name="Rank_Toolpusher" xml:space="preserve">
     <value>Toolpusher</value>
+  </data>
+  <data name="Rank_VicePresident" xml:space="preserve">
+    <value>Vice President</value>
   </data>
   <data name="Skill_Agriculture" xml:space="preserve">
     <value>Agriculture</value>
