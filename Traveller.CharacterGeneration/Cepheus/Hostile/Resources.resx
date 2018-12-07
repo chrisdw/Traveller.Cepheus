@@ -120,6 +120,9 @@
   <data name="Benefit_EliteTicket" xml:space="preserve">
     <value>Elite Ticket</value>
   </data>
+  <data name="Benefit_SilverStar" xml:space="preserve">
+    <value>Silver Star</value>
+  </data>
   <data name="Benefit_StandardTicket" xml:space="preserve">
     <value>Standard Ticket</value>
   </data>
@@ -417,8 +420,23 @@
   <data name="Skill_Agriculture" xml:space="preserve">
     <value>Agriculture</value>
   </data>
+  <data name="Skill_BladeCombat" xml:space="preserve">
+    <value>Blade Combat</value>
+  </data>
+  <data name="Skill_GunCombat" xml:space="preserve">
+    <value>Gun Combat</value>
+  </data>
+  <data name="Skill_Investigate" xml:space="preserve">
+    <value>Investigate</value>
+  </data>
   <data name="Skill_Loader" xml:space="preserve">
     <value>Loader</value>
+  </data>
+  <data name="Skill_Mining" xml:space="preserve">
+    <value>Mining</value>
+  </data>
+  <data name="Skill_Security" xml:space="preserve">
+    <value>Security</value>
   </data>
   <data name="Species_Android" xml:space="preserve">
     <value>Android</value>

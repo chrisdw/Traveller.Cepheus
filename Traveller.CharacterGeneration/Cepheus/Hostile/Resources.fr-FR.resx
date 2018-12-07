@@ -318,4 +318,22 @@
   <data name="Rank_SeniorCaptain" xml:space="preserve">
     <value>Capitaine principal</value>
   </data>
+  <data name="Benefit_SilverStar" xml:space="preserve">
+    <value>Silver Star</value>
+  </data>
+  <data name="Skill_BladeCombat" xml:space="preserve">
+    <value>Combat de lame</value>
+  </data>
+  <data name="Skill_GunCombat" xml:space="preserve">
+    <value>Pistolet Combat</value>
+  </data>
+  <data name="Skill_Investigate" xml:space="preserve">
+    <value>Enquêter sur</value>
+  </data>
+  <data name="Skill_Mining" xml:space="preserve">
+    <value>Exploitation minière</value>
+  </data>
+  <data name="Skill_Security" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
 </root>

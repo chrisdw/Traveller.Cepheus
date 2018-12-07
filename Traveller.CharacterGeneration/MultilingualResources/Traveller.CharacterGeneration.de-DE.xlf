@@ -3236,6 +3236,30 @@
           <source>Senior Captain</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior Captain</target>
         </trans-unit>
+        <trans-unit id="Benefit_SilverStar" translate="yes" xml:space="preserve">
+          <source>Silver Star</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Silver Star</target>
+        </trans-unit>
+        <trans-unit id="Skill_BladeCombat" translate="yes" xml:space="preserve">
+          <source>Blade Combat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Klinge-Kampf</target>
+        </trans-unit>
+        <trans-unit id="Skill_GunCombat" translate="yes" xml:space="preserve">
+          <source>Gun Combat</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pistole Combat</target>
+        </trans-unit>
+        <trans-unit id="Skill_Investigate" translate="yes" xml:space="preserve">
+          <source>Investigate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Untersuchen</target>
+        </trans-unit>
+        <trans-unit id="Skill_Mining" translate="yes" xml:space="preserve">
+          <source>Mining</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Bergbau</target>
+        </trans-unit>
+        <trans-unit id="Skill_Security" translate="yes" xml:space="preserve">
+          <source>Security</source>
+          <target state="needs-review-translation" state-qualifier="exact-match">Sicherheit</target>
+        </trans-unit>
       </group>
     </body>
   </file>

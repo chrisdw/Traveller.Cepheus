@@ -70,6 +70,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Silver Star.
+        /// </summary>
+        internal static string Benefit_SilverStar {
+            get {
+                return ResourceManager.GetString("Benefit_SilverStar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Standard Ticket.
         /// </summary>
         internal static string Benefit_StandardTicket {
@@ -961,11 +970,56 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Blade Combat.
+        /// </summary>
+        internal static string Skill_BladeCombat {
+            get {
+                return ResourceManager.GetString("Skill_BladeCombat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gun Combat.
+        /// </summary>
+        internal static string Skill_GunCombat {
+            get {
+                return ResourceManager.GetString("Skill_GunCombat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Investigate.
+        /// </summary>
+        internal static string Skill_Investigate {
+            get {
+                return ResourceManager.GetString("Skill_Investigate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loader.
         /// </summary>
         internal static string Skill_Loader {
             get {
                 return ResourceManager.GetString("Skill_Loader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mining.
+        /// </summary>
+        internal static string Skill_Mining {
+            get {
+                return ResourceManager.GetString("Skill_Mining", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Security.
+        /// </summary>
+        internal static string Skill_Security {
+            get {
+                return ResourceManager.GetString("Skill_Security", resourceCulture);
             }
         }
         
