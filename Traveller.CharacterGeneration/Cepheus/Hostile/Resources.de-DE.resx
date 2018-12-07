@@ -294,4 +294,28 @@
   <data name="Rank_StaffSergeant" xml:space="preserve">
     <value>Stabsfeldwebel</value>
   </data>
+  <data name="Career_CommercialSpacer" xml:space="preserve">
+    <value>Kommerzielle Spacer</value>
+  </data>
+  <data name="Mishap_CommSpace1" xml:space="preserve">
+    <value>Gefangen, Schmuggel illegale waren; Sie nehmen die Schuld für Ihr Starline und gebrannt.</value>
+  </data>
+  <data name="Mishap_CommSpace2" xml:space="preserve">
+    <value>Dein Raumschiff wird verschrottet und Ihre Mannschaft zurückgezogen.</value>
+  </data>
+  <data name="Mishap_CommSpace3" xml:space="preserve">
+    <value>Ihr Schiff wird zerstört und Sie erhalten als der einzigen Überlebende, die Schuld.</value>
+  </data>
+  <data name="Mishap_CommSpace4" xml:space="preserve">
+    <value>Substance Abuse zerstört Ihre Karriere.</value>
+  </data>
+  <data name="Mishap_CommSpace5" xml:space="preserve">
+    <value>Dein Schiff wird entführt und Ihre Crew sind alle schlecht behandelt.</value>
+  </data>
+  <data name="Rank_Crewman" xml:space="preserve">
+    <value>Crewman</value>
+  </data>
+  <data name="Rank_SeniorCaptain" xml:space="preserve">
+    <value>Senior Captain</value>
+  </data>
 </root>

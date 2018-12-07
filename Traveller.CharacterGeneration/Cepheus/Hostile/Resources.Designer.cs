@@ -97,6 +97,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Commercial Spacer.
+        /// </summary>
+        internal static string Career_CommercialSpacer {
+            get {
+                return ResourceManager.GetString("Career_CommercialSpacer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Corporate Agent.
         /// </summary>
         internal static string Career_CorporateAgent {
@@ -237,6 +246,51 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Mishap_ColonyUnpopular {
             get {
                 return ResourceManager.GetString("Mishap_ColonyUnpopular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Caught smuggling illegal goods; you take the blame for your starline and are fired..
+        /// </summary>
+        internal static string Mishap_CommSpace1 {
+            get {
+                return ResourceManager.GetString("Mishap_CommSpace1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your starship is being scrapped and your crew retired..
+        /// </summary>
+        internal static string Mishap_CommSpace2 {
+            get {
+                return ResourceManager.GetString("Mishap_CommSpace2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your ship is destroyed and as the only survivor, you receive the blame..
+        /// </summary>
+        internal static string Mishap_CommSpace3 {
+            get {
+                return ResourceManager.GetString("Mishap_CommSpace3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Substance abuse destroys your career..
+        /// </summary>
+        internal static string Mishap_CommSpace4 {
+            get {
+                return ResourceManager.GetString("Mishap_CommSpace4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your ship is hijacked and your crew are all badly treated..
+        /// </summary>
+        internal static string Mishap_CommSpace5 {
+            get {
+                return ResourceManager.GetString("Mishap_CommSpace5", resourceCulture);
             }
         }
         
@@ -583,6 +637,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Crewman.
+        /// </summary>
+        internal static string Rank_Crewman {
+            get {
+                return ResourceManager.GetString("Rank_Crewman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Department Chief.
         /// </summary>
         internal static string Rank_DepartmentChief {
@@ -795,6 +858,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_SeniorAgent {
             get {
                 return ResourceManager.GetString("Rank_SeniorAgent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senior Captain.
+        /// </summary>
+        internal static string Rank_SeniorCaptain {
+            get {
+                return ResourceManager.GetString("Rank_SeniorCaptain", resourceCulture);
             }
         }
         

@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
     {
         public CommericalSpacer()
         {
-            Name = "Commercial Spacer";
+            Name = Resources.Career_CommercialSpacer;
             hasRanks = true;
 
             enlistment = 4;
@@ -22,13 +22,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             reenlist = 4;
             medicalBand = 2;
 
-            Ranks[0] = "Crewman";
+            Ranks[0] = Resources.Rank_Crewman;
             Ranks[1] = Resources.Rank_4thOfficer;
             Ranks[2] = Resources.Rank_3rdOfficer;
             Ranks[3] = Resources.Rank_2ndOfficer;
             Ranks[4] = Resources.Rank_1stOfficer;
-            Ranks[5] = "Captain";
-            Ranks[6] = "Senior Captain";
+            Ranks[5] = Resources.Rank_Captain;
+            Ranks[6] = Resources.Rank_SeniorCaptain;
 
             Material.Add(BenefitLibrary.StandardTicket);
             Material.Add(CharacterGeneration.BenefitLibrary.Edu);
@@ -110,23 +110,23 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             switch (dice.roll(1))
             {
                 case 1:
-                    Owner.Journal.Add("Caught smuggling illegal goods; you take the blame for your starline and are fired.");
+                    Owner.Journal.Add(Resources.Mishap_CommSpace1);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 2:
-                    Owner.Journal.Add("Your starship is being scrapped and your crew retired.");
+                    Owner.Journal.Add(Resources.Mishap_CommSpace2);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 3:
-                    Owner.Journal.Add("Your ship is destroyed and as the only survivor, you receive the blame.");
+                    Owner.Journal.Add(Resources.Mishap_CommSpace3);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 4:
-                    Owner.Journal.Add("Substance abuse destroys your career.");
+                    Owner.Journal.Add(Resources.Mishap_CommSpace4);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 5:
-                    Owner.Journal.Add("Your ship is hijacked and your crew are all badly treated.");
+                    Owner.Journal.Add(Resources.Mishap_CommSpace5);
                     ResolveInjury(0);
                     break;
                 case 6:

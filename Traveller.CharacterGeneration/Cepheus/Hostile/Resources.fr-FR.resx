@@ -294,4 +294,28 @@
   <data name="Rank_StaffSergeant" xml:space="preserve">
     <value>Sergent d’état-major</value>
   </data>
+  <data name="Career_CommercialSpacer" xml:space="preserve">
+    <value>Entretoise commercial</value>
+  </data>
+  <data name="Mishap_CommSpace1" xml:space="preserve">
+    <value>Pris la contrebande des marchandises illégales ; vous prenez la responsabilité de votre starline et sont déclenchés.</value>
+  </data>
+  <data name="Mishap_CommSpace2" xml:space="preserve">
+    <value>Votre vaisseau est être mis au rebut et votre équipage à la retraite.</value>
+  </data>
+  <data name="Mishap_CommSpace3" xml:space="preserve">
+    <value>Votre vaisseau est détruit et que le seul survivant, vous recevez le blâme.</value>
+  </data>
+  <data name="Mishap_CommSpace4" xml:space="preserve">
+    <value>L’abus de substances détruit votre carrière.</value>
+  </data>
+  <data name="Mishap_CommSpace5" xml:space="preserve">
+    <value>Votre navire est détourné et votre équipage est tous mal traitée.</value>
+  </data>
+  <data name="Rank_Crewman" xml:space="preserve">
+    <value>Membre d’équipage</value>
+  </data>
+  <data name="Rank_SeniorCaptain" xml:space="preserve">
+    <value>Capitaine principal</value>
+  </data>
 </root>

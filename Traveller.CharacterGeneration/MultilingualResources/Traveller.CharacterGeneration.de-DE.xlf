@@ -3204,6 +3204,38 @@
           <source>Staff Sergeant</source>
           <target state="translated">Stabsfeldwebel</target>
         </trans-unit>
+        <trans-unit id="Career_CommercialSpacer" translate="yes" xml:space="preserve">
+          <source>Commercial Spacer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kommerzielle Spacer</target>
+        </trans-unit>
+        <trans-unit id="Mishap_CommSpace1" translate="yes" xml:space="preserve">
+          <source>Caught smuggling illegal goods; you take the blame for your starline and are fired.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gefangen, Schmuggel illegale waren; Sie nehmen die Schuld für Ihr Starline und gebrannt.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_CommSpace2" translate="yes" xml:space="preserve">
+          <source>Your starship is being scrapped and your crew retired.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dein Raumschiff wird verschrottet und Ihre Mannschaft zurückgezogen.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_CommSpace3" translate="yes" xml:space="preserve">
+          <source>Your ship is destroyed and as the only survivor, you receive the blame.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ihr Schiff wird zerstört und Sie erhalten als der einzigen Überlebende, die Schuld.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_CommSpace4" translate="yes" xml:space="preserve">
+          <source>Substance abuse destroys your career.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Substance Abuse zerstört Ihre Karriere.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_CommSpace5" translate="yes" xml:space="preserve">
+          <source>Your ship is hijacked and your crew are all badly treated.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dein Schiff wird entführt und Ihre Crew sind alle schlecht behandelt.</target>
+        </trans-unit>
+        <trans-unit id="Rank_Crewman" translate="yes" xml:space="preserve">
+          <source>Crewman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Crewman</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorCaptain" translate="yes" xml:space="preserve">
+          <source>Senior Captain</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior Captain</target>
+        </trans-unit>
       </group>
     </body>
   </file>

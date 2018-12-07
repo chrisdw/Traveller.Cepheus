@@ -129,6 +129,9 @@
   <data name="Career_Colonist" xml:space="preserve">
     <value>Colonist</value>
   </data>
+  <data name="Career_CommercialSpacer" xml:space="preserve">
+    <value>Commercial Spacer</value>
+  </data>
   <data name="Career_CorporateAgent" xml:space="preserve">
     <value>Corporate Agent</value>
   </data>
@@ -176,6 +179,21 @@
   </data>
   <data name="Mishap_ColonyUnpopular" xml:space="preserve">
     <value>Your ideas are revolutionary and unpopular - colonists attacked you and your settlement.</value>
+  </data>
+  <data name="Mishap_CommSpace1" xml:space="preserve">
+    <value>Caught smuggling illegal goods; you take the blame for your starline and are fired.</value>
+  </data>
+  <data name="Mishap_CommSpace2" xml:space="preserve">
+    <value>Your starship is being scrapped and your crew retired.</value>
+  </data>
+  <data name="Mishap_CommSpace3" xml:space="preserve">
+    <value>Your ship is destroyed and as the only survivor, you receive the blame.</value>
+  </data>
+  <data name="Mishap_CommSpace4" xml:space="preserve">
+    <value>Substance abuse destroys your career.</value>
+  </data>
+  <data name="Mishap_CommSpace5" xml:space="preserve">
+    <value>Your ship is hijacked and your crew are all badly treated.</value>
   </data>
   <data name="Mishap_Exec1" xml:space="preserve">
     <value>Your private hit team messes up, implicating you in a dirty black ops strike.</value>
@@ -291,6 +309,9 @@
   <data name="Rank_Corporal" xml:space="preserve">
     <value>Corporal</value>
   </data>
+  <data name="Rank_Crewman" xml:space="preserve">
+    <value>Crewman</value>
+  </data>
   <data name="Rank_DepartmentChief" xml:space="preserve">
     <value>Department Chief</value>
   </data>
@@ -362,6 +383,9 @@
   </data>
   <data name="Rank_SeniorAgent" xml:space="preserve">
     <value>Senior Agent</value>
+  </data>
+  <data name="Rank_SeniorCaptain" xml:space="preserve">
+    <value>Senior Captain</value>
   </data>
   <data name="Rank_SeniorExecutiveVicePresident" xml:space="preserve">
     <value>Senior Executive Vice President</value>
