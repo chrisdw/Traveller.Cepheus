@@ -4,7 +4,7 @@
     {
         public CorporateExec()
         {
-            Name = Resources.Career_CorporateExecutuve;
+            Name = Resources.Career_CorporateExecutive;
             hasRanks = true;
 
             enlistment = 8;

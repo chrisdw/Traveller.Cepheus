@@ -201,9 +201,6 @@
   <data name="Rank_SeniorAgent" xml:space="preserve">
     <value>Agent principal</value>
   </data>
-  <data name="Career_CorporateExecutuve" xml:space="preserve">
-    <value>Dirigeant d’entreprise</value>
-  </data>
   <data name="Mishap_Exec1" xml:space="preserve">
     <value>Votre private frappé équipe mess vers le haut, en vous impliquant dans une grève ops noir sale.</value>
   </data>
@@ -239,5 +236,62 @@
   </data>
   <data name="Rank_VicePresident" xml:space="preserve">
     <value>Vice Président</value>
+  </data>
+  <data name="Career_CorporateExecutive" xml:space="preserve">
+    <value>Dirigeant d’entreprise</value>
+  </data>
+  <data name="Career_Marine" xml:space="preserve">
+    <value>Marine</value>
+  </data>
+  <data name="Mishap_Marine1" xml:space="preserve">
+    <value>Lors d’une mission, vous êtes capturé et blessé, relâchant vous êtes honorablement.</value>
+  </data>
+  <data name="Mishap_Marine2" xml:space="preserve">
+    <value>Discuter avec un officier supérieur qui vous conduit sur les Marines.</value>
+  </data>
+  <data name="Mishap_Marine5" xml:space="preserve">
+    <value>Vous avez participé à une opération non conforme, votre conscience vous force à démissionner.</value>
+  </data>
+  <data name="Mishap_Marine6" xml:space="preserve">
+    <value>Combats exomorphs extraterrestre hostile, vous enregistrez les colons, mais sont blessés.</value>
+  </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Capitaine</value>
+  </data>
+  <data name="Rank_Colonel" xml:space="preserve">
+    <value>Colonel</value>
+  </data>
+  <data name="Rank_Corporal" xml:space="preserve">
+    <value>Caporal</value>
+  </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>Générales</value>
+  </data>
+  <data name="Rank_GunnerySergeant" xml:space="preserve">
+    <value>Le sergent</value>
+  </data>
+  <data name="Rank_LanceCorporal" xml:space="preserve">
+    <value>Caporal suppléant</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_LtColonel" xml:space="preserve">
+    <value>Le Lieutenant Colonel</value>
+  </data>
+  <data name="Rank_Major" xml:space="preserve">
+    <value>Principaux</value>
+  </data>
+  <data name="Rank_MasterSergeant" xml:space="preserve">
+    <value>Master Sergeant</value>
+  </data>
+  <data name="Rank_Private" xml:space="preserve">
+    <value>Privé</value>
+  </data>
+  <data name="Rank_Sergeant" xml:space="preserve">
+    <value>Sergent</value>
+  </data>
+  <data name="Rank_StaffSergeant" xml:space="preserve">
+    <value>Sergent d’état-major</value>
   </data>
 </root>

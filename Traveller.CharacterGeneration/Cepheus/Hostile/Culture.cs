@@ -26,9 +26,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                 case Constants.GenerationStyle.Cepheus_Engine:
                     careers.Add(Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Hostile_Colonist);
                     careers.Add("Commercial Spacer", CharacterGeneration.Career.CareerType.Hostile_CommercialSpacer);
-                    careers.Add("Corporate Agent", CharacterGeneration.Career.CareerType.Hostile_CorporateAgent);
-                    careers.Add("Corporate Executive", CharacterGeneration.Career.CareerType.Hostile_CorporateExec);
-                    careers.Add("Marine", CharacterGeneration.Career.CareerType.Hostile_Marine);
+                    careers.Add(Resources.Career_CorporateAgent, CharacterGeneration.Career.CareerType.Hostile_CorporateAgent);
+                    careers.Add(Resources.Career_CorporateExecutive, CharacterGeneration.Career.CareerType.Hostile_CorporateExec);
+                    careers.Add(Resources.Career_Marine, CharacterGeneration.Career.CareerType.Hostile_Marine);
                     careers.Add(Resources.Career_Ranger, CharacterGeneration.Career.CareerType.Hostile_Ranger);
                     careers.Add(Resources.Career_Roughneck, CharacterGeneration.Career.CareerType.Hostile_Roughneck);
                     break;

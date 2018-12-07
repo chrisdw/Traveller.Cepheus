@@ -132,8 +132,11 @@
   <data name="Career_CorporateAgent" xml:space="preserve">
     <value>Corporate Agent</value>
   </data>
-  <data name="Career_CorporateExecutuve" xml:space="preserve">
+  <data name="Career_CorporateExecutive" xml:space="preserve">
     <value>Corporate Executive</value>
+  </data>
+  <data name="Career_Marine" xml:space="preserve">
+    <value>Marine</value>
   </data>
   <data name="Career_Ranger" xml:space="preserve">
     <value>Ranger</value>
@@ -194,6 +197,18 @@
   </data>
   <data name="Mishap_InjuredOnDuty" xml:space="preserve">
     <value>Injured on duty.</value>
+  </data>
+  <data name="Mishap_Marine1" xml:space="preserve">
+    <value>During a mission you are captured and injured, when released you are honourably discharged.</value>
+  </data>
+  <data name="Mishap_Marine2" xml:space="preserve">
+    <value>You argue with a senior officer who drives you out of the Marines.</value>
+  </data>
+  <data name="Mishap_Marine5" xml:space="preserve">
+    <value>You were involved in an illegal operation, your conscience forces you to resign.</value>
+  </data>
+  <data name="Mishap_Marine6" xml:space="preserve">
+    <value>Fighting hostile alien exomorphs, you save colonists, but are injured.</value>
   </data>
   <data name="Mishap_NewColonyLeaders" xml:space="preserve">
     <value>New colonial leaders decided you and your crew were troublemakers.</value>
@@ -258,14 +273,23 @@
   <data name="Rank_AssistantTeamLeader" xml:space="preserve">
     <value>Assistant Team Leader</value>
   </data>
+  <data name="Rank_Captain" xml:space="preserve">
+    <value>Captain</value>
+  </data>
   <data name="Rank_ChiefRanger" xml:space="preserve">
     <value>Chief Ranger</value>
+  </data>
+  <data name="Rank_Colonel" xml:space="preserve">
+    <value>Colonel</value>
   </data>
   <data name="Rank_ColonialAdministrator" xml:space="preserve">
     <value>Colonial Administrator</value>
   </data>
   <data name="Rank_Colonist" xml:space="preserve">
     <value>Colonist</value>
+  </data>
+  <data name="Rank_Corporal" xml:space="preserve">
+    <value>Corporal</value>
   </data>
   <data name="Rank_DepartmentChief" xml:space="preserve">
     <value>Department Chief</value>
@@ -294,14 +318,38 @@
   <data name="Rank_Floorhand" xml:space="preserve">
     <value>Floorhand</value>
   </data>
+  <data name="Rank_General" xml:space="preserve">
+    <value>General</value>
+  </data>
   <data name="Rank_GeneralManager" xml:space="preserve">
     <value>General Manager</value>
+  </data>
+  <data name="Rank_GunnerySergeant" xml:space="preserve">
+    <value>Gunnery Sergeant</value>
+  </data>
+  <data name="Rank_LanceCorporal" xml:space="preserve">
+    <value>Lance Corporal</value>
+  </data>
+  <data name="Rank_Lieutenant" xml:space="preserve">
+    <value>Lieutenant</value>
+  </data>
+  <data name="Rank_LtColonel" xml:space="preserve">
+    <value>Lt. Colonel</value>
+  </data>
+  <data name="Rank_Major" xml:space="preserve">
+    <value>Major</value>
+  </data>
+  <data name="Rank_MasterSergeant" xml:space="preserve">
+    <value>Master Sergeant</value>
   </data>
   <data name="Rank_OperationsManager" xml:space="preserve">
     <value>Operations Manager</value>
   </data>
   <data name="Rank_President" xml:space="preserve">
     <value>President</value>
+  </data>
+  <data name="Rank_Private" xml:space="preserve">
+    <value>Private</value>
   </data>
   <data name="Rank_ProjectLeader" xml:space="preserve">
     <value>Project Leader</value>
@@ -320,6 +368,12 @@
   </data>
   <data name="Rank_SeniorVicePresident" xml:space="preserve">
     <value>Senior Vice President</value>
+  </data>
+  <data name="Rank_Sergeant" xml:space="preserve">
+    <value>Sergeant</value>
+  </data>
+  <data name="Rank_StaffSergeant" xml:space="preserve">
+    <value>Staff Sergeant</value>
   </data>
   <data name="Rank_Superintendant" xml:space="preserve">
     <value>Superintendant</value>

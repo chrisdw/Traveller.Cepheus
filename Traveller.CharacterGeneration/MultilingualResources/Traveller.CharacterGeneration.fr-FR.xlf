@@ -3080,10 +3080,6 @@
           <source>Senior Agent</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Agent principal</target>
         </trans-unit>
-        <trans-unit id="Career_CorporateExecutuve" translate="yes" xml:space="preserve">
-          <source>Corporate Executive</source>
-          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dirigeant d’entreprise</target>
-        </trans-unit>
         <trans-unit id="Mishap_Exec1" translate="yes" xml:space="preserve">
           <source>Your private hit team messes up, implicating you in a dirty black ops strike.</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Votre private frappé équipe mess vers le haut, en vous impliquant dans une grève ops noir sale.</target>
@@ -3131,6 +3127,82 @@
         <trans-unit id="Rank_VicePresident" translate="yes" xml:space="preserve">
           <source>Vice President</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Vice Président</target>
+        </trans-unit>
+        <trans-unit id="Career_CorporateExecutive" translate="yes" xml:space="preserve">
+          <source>Corporate Executive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dirigeant d’entreprise</target>
+        </trans-unit>
+        <trans-unit id="Career_Marine" translate="yes" xml:space="preserve">
+          <source>Marine</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marine</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Marine1" translate="yes" xml:space="preserve">
+          <source>During a mission you are captured and injured, when released you are honourably discharged.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lors d’une mission, vous êtes capturé et blessé, relâchant vous êtes honorablement.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Marine2" translate="yes" xml:space="preserve">
+          <source>You argue with a senior officer who drives you out of the Marines.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Discuter avec un officier supérieur qui vous conduit sur les Marines.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Marine5" translate="yes" xml:space="preserve">
+          <source>You were involved in an illegal operation, your conscience forces you to resign.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous avez participé à une opération non conforme, votre conscience vous force à démissionner.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Marine6" translate="yes" xml:space="preserve">
+          <source>Fighting hostile alien exomorphs, you save colonists, but are injured.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Combats exomorphs extraterrestre hostile, vous enregistrez les colons, mais sont blessés.</target>
+        </trans-unit>
+        <trans-unit id="Rank_Captain" translate="yes" xml:space="preserve">
+          <source>Captain</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Capitaine</target>
+        </trans-unit>
+        <trans-unit id="Rank_Colonel" translate="yes" xml:space="preserve">
+          <source>Colonel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Colonel</target>
+        </trans-unit>
+        <trans-unit id="Rank_Corporal" translate="yes" xml:space="preserve">
+          <source>Corporal</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Caporal</target>
+        </trans-unit>
+        <trans-unit id="Rank_General" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Générales</target>
+        </trans-unit>
+        <trans-unit id="Rank_GunnerySergeant" translate="yes" xml:space="preserve">
+          <source>Gunnery Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le sergent</target>
+        </trans-unit>
+        <trans-unit id="Rank_LanceCorporal" translate="yes" xml:space="preserve">
+          <source>Lance Corporal</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Caporal suppléant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Lieutenant" translate="yes" xml:space="preserve">
+          <source>Lieutenant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lieutenant</target>
+        </trans-unit>
+        <trans-unit id="Rank_LtColonel" translate="yes" xml:space="preserve">
+          <source>Lt. Colonel</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Le Lieutenant Colonel</target>
+        </trans-unit>
+        <trans-unit id="Rank_Major" translate="yes" xml:space="preserve">
+          <source>Major</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Principaux</target>
+        </trans-unit>
+        <trans-unit id="Rank_MasterSergeant" translate="yes" xml:space="preserve">
+          <source>Master Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Master Sergeant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Private" translate="yes" xml:space="preserve">
+          <source>Private</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Privé</target>
+        </trans-unit>
+        <trans-unit id="Rank_Sergeant" translate="yes" xml:space="preserve">
+          <source>Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sergent</target>
+        </trans-unit>
+        <trans-unit id="Rank_StaffSergeant" translate="yes" xml:space="preserve">
+          <source>Staff Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sergent d’état-major</target>
         </trans-unit>
       </group>
     </body>

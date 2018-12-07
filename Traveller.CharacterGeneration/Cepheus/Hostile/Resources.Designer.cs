@@ -108,9 +108,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         /// <summary>
         ///   Looks up a localized string similar to Corporate Executive.
         /// </summary>
-        internal static string Career_CorporateExecutuve {
+        internal static string Career_CorporateExecutive {
             get {
-                return ResourceManager.GetString("Career_CorporateExecutuve", resourceCulture);
+                return ResourceManager.GetString("Career_CorporateExecutive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marine.
+        /// </summary>
+        internal static string Career_Marine {
+            get {
+                return ResourceManager.GetString("Career_Marine", resourceCulture);
             }
         }
         
@@ -291,6 +300,42 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Mishap_InjuredOnDuty {
             get {
                 return ResourceManager.GetString("Mishap_InjuredOnDuty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to During a mission you are captured and injured, when released you are honourably discharged..
+        /// </summary>
+        internal static string Mishap_Marine1 {
+            get {
+                return ResourceManager.GetString("Mishap_Marine1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You argue with a senior officer who drives you out of the Marines..
+        /// </summary>
+        internal static string Mishap_Marine2 {
+            get {
+                return ResourceManager.GetString("Mishap_Marine2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You were involved in an illegal operation, your conscience forces you to resign..
+        /// </summary>
+        internal static string Mishap_Marine5 {
+            get {
+                return ResourceManager.GetString("Mishap_Marine5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fighting hostile alien exomorphs, you save colonists, but are injured..
+        /// </summary>
+        internal static string Mishap_Marine6 {
+            get {
+                return ResourceManager.GetString("Mishap_Marine6", resourceCulture);
             }
         }
         
@@ -484,11 +529,29 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Captain.
+        /// </summary>
+        internal static string Rank_Captain {
+            get {
+                return ResourceManager.GetString("Rank_Captain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Chief Ranger.
         /// </summary>
         internal static string Rank_ChiefRanger {
             get {
                 return ResourceManager.GetString("Rank_ChiefRanger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colonel.
+        /// </summary>
+        internal static string Rank_Colonel {
+            get {
+                return ResourceManager.GetString("Rank_Colonel", resourceCulture);
             }
         }
         
@@ -507,6 +570,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_Colonist {
             get {
                 return ResourceManager.GetString("Rank_Colonist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Corporal.
+        /// </summary>
+        internal static string Rank_Corporal {
+            get {
+                return ResourceManager.GetString("Rank_Corporal", resourceCulture);
             }
         }
         
@@ -592,11 +664,74 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        internal static string Rank_General {
+            get {
+                return ResourceManager.GetString("Rank_General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to General Manager.
         /// </summary>
         internal static string Rank_GeneralManager {
             get {
                 return ResourceManager.GetString("Rank_GeneralManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gunnery Sergeant.
+        /// </summary>
+        internal static string Rank_GunnerySergeant {
+            get {
+                return ResourceManager.GetString("Rank_GunnerySergeant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lance Corporal.
+        /// </summary>
+        internal static string Rank_LanceCorporal {
+            get {
+                return ResourceManager.GetString("Rank_LanceCorporal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lieutenant.
+        /// </summary>
+        internal static string Rank_Lieutenant {
+            get {
+                return ResourceManager.GetString("Rank_Lieutenant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lt. Colonel.
+        /// </summary>
+        internal static string Rank_LtColonel {
+            get {
+                return ResourceManager.GetString("Rank_LtColonel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Major.
+        /// </summary>
+        internal static string Rank_Major {
+            get {
+                return ResourceManager.GetString("Rank_Major", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Master Sergeant.
+        /// </summary>
+        internal static string Rank_MasterSergeant {
+            get {
+                return ResourceManager.GetString("Rank_MasterSergeant", resourceCulture);
             }
         }
         
@@ -615,6 +750,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_President {
             get {
                 return ResourceManager.GetString("Rank_President", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Private.
+        /// </summary>
+        internal static string Rank_Private {
+            get {
+                return ResourceManager.GetString("Rank_Private", resourceCulture);
             }
         }
         
@@ -669,6 +813,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_SeniorVicePresident {
             get {
                 return ResourceManager.GetString("Rank_SeniorVicePresident", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sergeant.
+        /// </summary>
+        internal static string Rank_Sergeant {
+            get {
+                return ResourceManager.GetString("Rank_Sergeant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Staff Sergeant.
+        /// </summary>
+        internal static string Rank_StaffSergeant {
+            get {
+                return ResourceManager.GetString("Rank_StaffSergeant", resourceCulture);
             }
         }
         

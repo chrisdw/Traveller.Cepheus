@@ -8,7 +8,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
 
         public Marine()
         {
-            Name = "Marine";
+            Name = Resources.Career_Marine;
             hasRanks = true;
 
             enlistment = 4;
@@ -22,21 +22,21 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             reenlist = 6;
             medicalBand = 1;
 
-            Ranks[0] = "Private";
-            Ranks[1] = "Lieutenant";
-            Ranks[2] = "Captain";
-            Ranks[3] = "Major";
-            Ranks[4] = "Lt. Colonel";
-            Ranks[5] = "Colonel";
-            Ranks[6] = "General";
+            Ranks[0] = Resources.Rank_Private;
+            Ranks[1] = Resources.Rank_Lieutenant;
+            Ranks[2] = Resources.Rank_Captain;
+            Ranks[3] = Resources.Rank_Major;
+            Ranks[4] = Resources.Rank_LtColonel;
+            Ranks[5] = Resources.Rank_Colonel;
+            Ranks[6] = Resources.Rank_General;
 
-            NCORanks[0] = "Private";
-            NCORanks[1] = "Lance Corporal";
-            NCORanks[2] = "Corporal";
-            NCORanks[3] = "Sergeant";
-            NCORanks[4] = "Staff Sergeant";
-            NCORanks[5] = "Gunnery Sergeant";
-            NCORanks[6] = "Master Sergeant";
+            NCORanks[0] = Resources.Rank_Private;
+            NCORanks[1] = Resources.Rank_LanceCorporal;
+            NCORanks[2] = Resources.Rank_Corporal;
+            NCORanks[3] = Resources.Rank_Sergeant;
+            NCORanks[4] = Resources.Rank_StaffSergeant;
+            NCORanks[5] = Resources.Rank_GunnerySergeant;
+            NCORanks[6] = Resources.Rank_MasterSergeant;
 
             Material.Add(BenefitLibrary.StandardTicket);
             Material.Add(BenefitLibrary.SilverStar);
@@ -128,12 +128,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             switch (dice.roll(1))
             {
                 case 1:
-                    Owner.Journal.Add("During a mission you are captured and injured, when released you are honourably discharged.");
+                    Owner.Journal.Add(Resources.Mishap_Marine1);
                     ResolveInjury(0);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 2:
-                    Owner.Journal.Add("You argue with a senior officer who drives you out of the Marines.");
+                    Owner.Journal.Add(Resources.Mishap_Marine2);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 3:
@@ -147,11 +147,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     survive = SurvivalResult.Discharged;
                     break;
                 case 5:
-                    Owner.Journal.Add("You were involved in an illegal operation, your conscience forces you to resign.");
+                    Owner.Journal.Add(Resources.Mishap_Marine5);
                     survive = SurvivalResult.Discharged;
                     break;
                 case 6:
-                    Owner.Journal.Add("Fighting hostile alien exomorphs, you save colonists, but are injured.");
+                    Owner.Journal.Add(Resources.Mishap_Marine6);
                     ResolveInjury(0);
                     break;
             }
