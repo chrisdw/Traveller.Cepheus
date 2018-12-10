@@ -36,7 +36,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Domain_Of_Deneb,
             Reformation_Coalition,
             Cepheus_Generic,
-            Cepheus_Hostile
+            Cepheus_Hostile,
+            Cepheus_Bughunters
         }
     }
 }

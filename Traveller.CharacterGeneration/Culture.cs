@@ -28,6 +28,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 case "Hostile":
                     list.Add("Hostile");
                     break;
+                case "Bughunters":
+                    list.Add("United Terra");
+                    list.Add("Ancients");
+                    list.Add("Others");
+                    break;
             }
             return list;
         }
@@ -60,6 +65,24 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     return new Cepheus.Hostile.Culture()
                     {
                         UseMishaps = useMishaps
+                    };
+                case "United Terra":
+                    return new Cepheus.Bughunters.Culture()
+                    {
+                        UseMishaps = useMishaps,
+                        Mode = 0
+                    };
+                case "Ancients":
+                    return new Cepheus.Bughunters.Culture()
+                    {
+                        UseMishaps = useMishaps,
+                        Mode = 1
+                    };
+                case "Others":
+                    return new Cepheus.Bughunters.Culture()
+                    {
+                        UseMishaps = useMishaps,
+                        Mode = 2
                     };
                 default:
                     return new Classic.Imperial.Culture()

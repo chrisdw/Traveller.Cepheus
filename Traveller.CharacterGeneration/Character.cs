@@ -41,7 +41,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Reptilians,
             Espers,
             Uplifted_Ape,
-            Android
+            Android,
+            Synner,
+            Quarm,
+            Tazzim,
+            Wraither,
+            Articifer,
+            Shaper
         }
 
         public class Configuration
@@ -568,6 +574,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     character.Profile = new UPP();
                     break;
                 case Species.Human_Zhodani:
+                case Species.Articifer:
                     character.Profile = new ZhodaniUPP();
                     break;
                 case Species.Human:

@@ -1,4 +1,5 @@
-﻿using org.DownesWard.Traveller.Shared;
+﻿using org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani;
+using org.DownesWard.Traveller.Shared;
 using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
@@ -168,6 +169,81 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Edu.Value = d3.roll(1) + 9;
                             Profile.Soc.Value = 7;
                             break;
+                    }
+                    break;
+                case Constants.CultureType.Cepheus_Bughunters:
+                    switch (CharacterSpecies)
+                    {
+                        case Species.Human:
+                            // use the standard UPP
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            break;
+                        case Species.Synner:
+                            // use the standard UPP
+                            Profile = new UPP();
+                            Profile.Str.Value = (dice.roll(2) + 1).Clamp(9, 15);
+                            Profile.Dex.Value = (dice.roll(2) + 1).Clamp(9, 15);
+                            Profile.End.Value = (dice.roll(2) + 1).Clamp(9, 15);
+                            Profile.Int.Value = (dice.roll(2) + 1).Clamp(7, 15);
+                            Profile.Edu.Value = dice.roll(2).Clamp(7, 15);
+                            Profile.Soc.Value = dice.roll(2) - 2;
+                            Traits.Add("Issler Immunity");
+                            Traits.Add("Engineered");
+                            break;
+                        case Species.Tazzim:
+                            // use the standard UPP
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2) - 1;
+                            Profile.Dex.Value = dice.roll(2) + 1;
+                            Profile.End.Value = dice.roll(2) - 1;
+                            Profile.Int.Value = dice.roll(2) + 1;
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            break;
+                        case Species.Quarm:
+                            // use the standard UPP
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2) + 1;
+                            Profile.Dex.Value = dice.roll(2) - 1;
+                            Profile.End.Value = dice.roll(2) + 1;
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2) - 2;
+                            Profile.Soc.Value = dice.roll(2);
+                            break;
+                        case Species.Wraither:
+                            // use the standard UPP
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2) - 1;
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2) + 2;
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            Traits.Add("Total Pacifist");
+                            break;
+                        case Species.Articifer:
+                            // use the Zhodani UPP
+                            Profile = new ZhodaniUPP();
+                            Profile.Str.Value = dice.roll(2) - 1;
+                            Profile.Dex.Value = dice.roll(2) + 1;
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2) + 1;
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            Profile["PSI"].Value = dice.roll(2);
+                            break;
+                    }
+                    backgroundSkills = 3 + Profile.Edu.Modifier;
+                    skillList = GetBackgroundSkillList();
+                    for (var i = 0; i < backgroundSkills; i++)
+                    {
+                        OnSkillOffered(skillList);
                     }
                     break;
             }
