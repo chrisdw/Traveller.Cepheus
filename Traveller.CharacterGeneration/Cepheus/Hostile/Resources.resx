@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Benefit_DFC" xml:space="preserve">
+    <value>Distinguished Flying Cross</value>
+  </data>
   <data name="Benefit_EliteTicket" xml:space="preserve">
     <value>Elite Ticket</value>
   </data>
@@ -143,6 +146,12 @@
   </data>
   <data name="Career_Marine" xml:space="preserve">
     <value>Marine</value>
+  </data>
+  <data name="Career_Marshal" xml:space="preserve">
+    <value>Marshal</value>
+  </data>
+  <data name="Career_MilitarySpacer" xml:space="preserve">
+    <value>Military Spacer</value>
   </data>
   <data name="Career_Ranger" xml:space="preserve">
     <value>Ranger</value>
@@ -231,6 +240,36 @@
   <data name="Mishap_Marine6" xml:space="preserve">
     <value>Fighting hostile alien exomorphs, you save colonists, but are injured.</value>
   </data>
+  <data name="Mishap_Marshal1" xml:space="preserve">
+    <value>A riot or disturbance breaks out and several marshals are injured.</value>
+  </data>
+  <data name="Mishap_Marshal2" xml:space="preserve">
+    <value>A deputy in the team works for a crime boss and sets you up</value>
+  </data>
+  <data name="Mishap_Marshal3" xml:space="preserve">
+    <value>You uncover a drugs ring at an outpost, but the manager is in on it and tries to have you killed.</value>
+  </data>
+  <data name="Mishap_Marshal4" xml:space="preserve">
+    <value>A crime-lord bought off your team, forcing you to quit.</value>
+  </data>
+  <data name="Mishap_Marshal5" xml:space="preserve">
+    <value>Your team were killed in a fouled mission – and it was your fault.</value>
+  </data>
+  <data name="Mishap_MilSpace1" xml:space="preserve">
+    <value>An accident is blamed on you. Several crewmen were killed and you were discharged.</value>
+  </data>
+  <data name="Mishap_MilSpace2" xml:space="preserve">
+    <value>Your starship attacks a civilian ship by mistake, tarnishing the careers of all the crew involved.</value>
+  </data>
+  <data name="Mishap_MilSpace3" xml:space="preserve">
+    <value>You argue with a senior officer who drives you out of Space Command.</value>
+  </data>
+  <data name="Mishap_MilSpace5" xml:space="preserve">
+    <value>A deadly alien infestation on-board ship that you survive is covered up by Space Command.</value>
+  </data>
+  <data name="Mishap_MilSpace6" xml:space="preserve">
+    <value>You are wounded during an interstellar battle.</value>
+  </data>
   <data name="Mishap_NewColonyLeaders" xml:space="preserve">
     <value>New colonial leaders decided you and your crew were troublemakers.</value>
   </data>
@@ -261,6 +300,12 @@
   <data name="Mishap_RoughneckIllness" xml:space="preserve">
     <value>You suffer from illness caused by your work.</value>
   </data>
+  <data name="Msg_BornOffWorld" xml:space="preserve">
+    <value>Born on an Off-world colony</value>
+  </data>
+  <data name="Msg_BornOnEarth" xml:space="preserve">
+    <value>Born on Earth</value>
+  </data>
   <data name="Rank_1stOfficer" xml:space="preserve">
     <value>First Officer</value>
   </data>
@@ -276,8 +321,17 @@
   <data name="Rank_Agent" xml:space="preserve">
     <value>Agent</value>
   </data>
+  <data name="Rank_Airman" xml:space="preserve">
+    <value>Airman</value>
+  </data>
+  <data name="Rank_AirmanFirstClass" xml:space="preserve">
+    <value>Airman First Class</value>
+  </data>
   <data name="Rank_AreaCommander" xml:space="preserve">
     <value>Area Commander</value>
+  </data>
+  <data name="Rank_AssistantChief" xml:space="preserve">
+    <value>Assistant Chief</value>
   </data>
   <data name="Rank_AssistantDivisionChief" xml:space="preserve">
     <value>Assistant Division Chief</value>
@@ -296,6 +350,9 @@
   </data>
   <data name="Rank_Captain" xml:space="preserve">
     <value>Captain</value>
+  </data>
+  <data name="Rank_ChiefDeputy" xml:space="preserve">
+    <value>Chief Deputy</value>
   </data>
   <data name="Rank_ChiefRanger" xml:space="preserve">
     <value>Chief Ranger</value>
@@ -317,6 +374,9 @@
   </data>
   <data name="Rank_DepartmentChief" xml:space="preserve">
     <value>Department Chief</value>
+  </data>
+  <data name="Rank_Deputy" xml:space="preserve">
+    <value>Deputy</value>
   </data>
   <data name="Rank_DeputyChiefRanger" xml:space="preserve">
     <value>Deputy Chief Ranger</value>
@@ -363,6 +423,9 @@
   <data name="Rank_Major" xml:space="preserve">
     <value>Major</value>
   </data>
+  <data name="Rank_Marshal" xml:space="preserve">
+    <value>Marshal</value>
+  </data>
   <data name="Rank_MasterSergeant" xml:space="preserve">
     <value>Master Sergeant</value>
   </data>
@@ -387,8 +450,14 @@
   <data name="Rank_SeniorAgent" xml:space="preserve">
     <value>Senior Agent</value>
   </data>
+  <data name="Rank_SeniorAirman" xml:space="preserve">
+    <value>Senior Airman</value>
+  </data>
   <data name="Rank_SeniorCaptain" xml:space="preserve">
     <value>Senior Captain</value>
+  </data>
+  <data name="Rank_SeniorDeputy" xml:space="preserve">
+    <value>Senior Deputy</value>
   </data>
   <data name="Rank_SeniorExecutiveVicePresident" xml:space="preserve">
     <value>Senior Executive Vice President</value>
@@ -408,8 +477,14 @@
   <data name="Rank_Supervisor" xml:space="preserve">
     <value>Supervisor</value>
   </data>
+  <data name="Rank_SupervisoryDeputy" xml:space="preserve">
+    <value>Supervisory Deputy</value>
+  </data>
   <data name="Rank_TeamLeader" xml:space="preserve">
     <value>Team Leader</value>
+  </data>
+  <data name="Rank_TechnicalSergeant" xml:space="preserve">
+    <value>Technical Sergeant</value>
   </data>
   <data name="Rank_Toolpusher" xml:space="preserve">
     <value>Toolpusher</value>
@@ -419,6 +494,9 @@
   </data>
   <data name="Skill_Agriculture" xml:space="preserve">
     <value>Agriculture</value>
+  </data>
+  <data name="Skill_Background" xml:space="preserve">
+    <value>Background Skills</value>
   </data>
   <data name="Skill_BladeCombat" xml:space="preserve">
     <value>Blade Combat</value>

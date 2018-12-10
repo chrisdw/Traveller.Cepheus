@@ -3260,6 +3260,110 @@
           <source>Security</source>
           <target state="needs-review-translation" state-qualifier="exact-match">Sicherheit</target>
         </trans-unit>
+        <trans-unit id="Benefit_DFC" translate="yes" xml:space="preserve">
+          <source>Distinguished Flying Cross</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Distinguished Flying Cross</target>
+        </trans-unit>
+        <trans-unit id="Career_Marshal" translate="yes" xml:space="preserve">
+          <source>Marshal</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marschall</target>
+        </trans-unit>
+        <trans-unit id="Career_MilitarySpacer" translate="yes" xml:space="preserve">
+          <source>Military Spacer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Militärische Spacer</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Marshal1" translate="yes" xml:space="preserve">
+          <source>A riot or disturbance breaks out and several marshals are injured.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ein Aufruhr oder Störung ausbricht und mehrere Streckenposten verletzt werden.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Marshal2" translate="yes" xml:space="preserve">
+          <source>A deputy in the team works for a crime boss and sets you up</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mitglied im Team arbeitet für einen Gangsterboss und setzt dich</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Marshal3" translate="yes" xml:space="preserve">
+          <source>You uncover a drugs ring at an outpost, but the manager is in on it and tries to have you killed.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie entdecken einen Drogen-Ring am Außenposten, aber der Manager ist und versucht, Sie getötet zu haben.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Marshal4" translate="yes" xml:space="preserve">
+          <source>A crime-lord bought off your team, forcing you to quit.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ein Gangsterboss kaufte aus Ihrem Team, zwingt Sie zu beenden.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Marshal5" translate="yes" xml:space="preserve">
+          <source>Your team were killed in a fouled mission – and it was your fault.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ihr Team in einer Gefoulte Mission – getötet wurden und es war Ihre Schuld.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_MilSpace1" translate="yes" xml:space="preserve">
+          <source>An accident is blamed on you. Several crewmen were killed and you were discharged.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ein Unfall ist auf Sie zurückgeführt. Mehrere Besatzungsmitglieder wurden getötet, und Sie wurden entlassen.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_MilSpace2" translate="yes" xml:space="preserve">
+          <source>Your starship attacks a civilian ship by mistake, tarnishing the careers of all the crew involved.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Dein Raumschiff greift eine zivile Schiff aus versehen die Karrieren von allen Beteiligten Crew anlaufen.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_MilSpace3" translate="yes" xml:space="preserve">
+          <source>You argue with a senior officer who drives you out of Space Command.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie argumentieren mit einem leitenden Offizier, der Sie aus Space Command fährt.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_MilSpace5" translate="yes" xml:space="preserve">
+          <source>A deadly alien infestation on-board ship that you survive is covered up by Space Command.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eine tödliche alien Befall an Bord Schiff, das Sie überleben ist Gegenstand Space Command.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_MilSpace6" translate="yes" xml:space="preserve">
+          <source>You are wounded during an interstellar battle.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie sind bei einem interstellaren Kampf verwundet.</target>
+        </trans-unit>
+        <trans-unit id="Msg_BornOffWorld" translate="yes" xml:space="preserve">
+          <source>Born on an Off-world colony</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Geboren am eine Off-Welt-Kolonie</target>
+        </trans-unit>
+        <trans-unit id="Msg_BornOnEarth" translate="yes" xml:space="preserve">
+          <source>Born on Earth</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Auf der Erde geboren</target>
+        </trans-unit>
+        <trans-unit id="Rank_Airman" translate="yes" xml:space="preserve">
+          <source>Airman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flieger</target>
+        </trans-unit>
+        <trans-unit id="Rank_AirmanFirstClass" translate="yes" xml:space="preserve">
+          <source>Airman First Class</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Airman First Class</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantChief" translate="yes" xml:space="preserve">
+          <source>Assistant Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Assistant Chief</target>
+        </trans-unit>
+        <trans-unit id="Rank_ChiefDeputy" translate="yes" xml:space="preserve">
+          <source>Chief Deputy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stellvertreter</target>
+        </trans-unit>
+        <trans-unit id="Rank_Deputy" translate="yes" xml:space="preserve">
+          <source>Deputy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stellvertretende</target>
+        </trans-unit>
+        <trans-unit id="Rank_Marshal" translate="yes" xml:space="preserve">
+          <source>Marshal</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marschall</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorAirman" translate="yes" xml:space="preserve">
+          <source>Senior Airman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior Airman</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorDeputy" translate="yes" xml:space="preserve">
+          <source>Senior Deputy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior-Stellvertreter</target>
+        </trans-unit>
+        <trans-unit id="Rank_SupervisoryDeputy" translate="yes" xml:space="preserve">
+          <source>Supervisory Deputy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aufsichtsrat Stellvertreter</target>
+        </trans-unit>
+        <trans-unit id="Rank_TechnicalSergeant" translate="yes" xml:space="preserve">
+          <source>Technical Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Technical Sergeant</target>
+        </trans-unit>
+        <trans-unit id="Skill_Background" translate="yes" xml:space="preserve">
+          <source>Background Skills</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hintergrund-Fähigkeiten</target>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -29,6 +29,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     careers.Add(Resources.Career_CorporateAgent, CharacterGeneration.Career.CareerType.Hostile_CorporateAgent);
                     careers.Add(Resources.Career_CorporateExecutive, CharacterGeneration.Career.CareerType.Hostile_CorporateExec);
                     careers.Add(Resources.Career_Marine, CharacterGeneration.Career.CareerType.Hostile_Marine);
+                    careers.Add(Resources.Career_Marshal, CharacterGeneration.Career.CareerType.Hostile_Marshall);
+                    careers.Add(Resources.Career_MilitarySpacer, CharacterGeneration.Career.CareerType.Hostile_MilitarySpacer);
                     careers.Add(Resources.Career_Ranger, CharacterGeneration.Career.CareerType.Hostile_Ranger);
                     careers.Add(Resources.Career_Roughneck, CharacterGeneration.Career.CareerType.Hostile_Roughneck);
                     break;
@@ -76,6 +78,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     return new CommericalSpacer { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Hostile_Marine:
                     return new Marine { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_Marshall:
+                    return new Marshal { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_MilitarySpacer:
+                    return new MilitarySpacer { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Colonist { Culture = this, Mishaps = UseMishaps };
             }

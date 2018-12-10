@@ -336,4 +336,82 @@
   <data name="Skill_Security" xml:space="preserve">
     <value>Sécurité</value>
   </data>
+  <data name="Benefit_DFC" xml:space="preserve">
+    <value>Croix du service distingué</value>
+  </data>
+  <data name="Career_Marshal" xml:space="preserve">
+    <value>Maréchal</value>
+  </data>
+  <data name="Career_MilitarySpacer" xml:space="preserve">
+    <value>Entretoise militaire</value>
+  </data>
+  <data name="Mishap_Marshal1" xml:space="preserve">
+    <value>Une émeute ou une perturbation éclate et plusieurs commissaires sont blessés.</value>
+  </data>
+  <data name="Mishap_Marshal2" xml:space="preserve">
+    <value>Un adjoint dans l’équipe travaille pour un patron du crime et vous met en place</value>
+  </data>
+  <data name="Mishap_Marshal3" xml:space="preserve">
+    <value>Vous découvrez un anneau de médicaments à un avant-poste, mais le gestionnaire est en dessus et essaie de vous avoir tué.</value>
+  </data>
+  <data name="Mishap_Marshal4" xml:space="preserve">
+    <value>Un Seigneur du crime-acheté en dehors de votre équipe, vous forçant à cesser de fumer.</value>
+  </data>
+  <data name="Mishap_Marshal5" xml:space="preserve">
+    <value>Votre équipe ont été tué lors d’une mission gumène – et c’est votre faute.</value>
+  </data>
+  <data name="Mishap_MilSpace1" xml:space="preserve">
+    <value>Un accident vous est attribué. Plusieurs membres de l’équipage ont été tués et vous ont été déversés.</value>
+  </data>
+  <data name="Mishap_MilSpace2" xml:space="preserve">
+    <value>Votre vaisseau s’attaque un navire civil par erreur, ternir la carrière de tout l’équipage impliqué.</value>
+  </data>
+  <data name="Mishap_MilSpace3" xml:space="preserve">
+    <value>Discuter avec un officier supérieur qui vous conduit de la commande de l’espace.</value>
+  </data>
+  <data name="Mishap_MilSpace5" xml:space="preserve">
+    <value>Un navire de bord infestation alien mortel qui vous survivez est recouvert par le commandement spatial.</value>
+  </data>
+  <data name="Mishap_MilSpace6" xml:space="preserve">
+    <value>Vous êtes blessé lors d’une bataille interstellaire.</value>
+  </data>
+  <data name="Msg_BornOffWorld" xml:space="preserve">
+    <value>Né dans une colonie de Off-world</value>
+  </data>
+  <data name="Msg_BornOnEarth" xml:space="preserve">
+    <value>Né sur la terre</value>
+  </data>
+  <data name="Rank_Airman" xml:space="preserve">
+    <value>Aviateur</value>
+  </data>
+  <data name="Rank_AirmanFirstClass" xml:space="preserve">
+    <value>Aviateur de première classe</value>
+  </data>
+  <data name="Rank_AssistantChief" xml:space="preserve">
+    <value>Directeur général adjoint</value>
+  </data>
+  <data name="Rank_ChiefDeputy" xml:space="preserve">
+    <value>Chef adjoint</value>
+  </data>
+  <data name="Rank_Deputy" xml:space="preserve">
+    <value>Adjoint</value>
+  </data>
+  <data name="Rank_Marshal" xml:space="preserve">
+    <value>Maréchal</value>
+  </data>
+  <data name="Rank_SeniorAirman" xml:space="preserve">
+    <value>Senior Airman</value>
+  </data>
+  <data name="Rank_SeniorDeputy" xml:space="preserve">
+    <value>Principal adjoint</value>
+  </data>
+  <data name="Rank_SupervisoryDeputy" xml:space="preserve">
+    <value>Adjoint de surveillance</value>
+  </data>
+  <data name="Rank_TechnicalSergeant" xml:space="preserve">
+    <value>Sergent technique</value>
+  </data>
+  <data name="Skill_Background" xml:space="preserve">
+    <value>Compétences de fond</value>
+  </data>
 </root>

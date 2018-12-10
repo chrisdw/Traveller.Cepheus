@@ -12,10 +12,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             var res = dice.roll(2);
             if (res <= 9)
             {
-                Journal.Add("Born on Earth");
+                Journal.Add(Resources.Msg_BornOnEarth);
                 return new Skill()
                 {
-                    Name = "Background Skills",
+                    Name = Resources.Skill_Background,
                     Level = 0,
                     Cascade =
                         {
@@ -39,10 +39,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             }
             else
             {
-                Journal.Add("Born on an Off-world colony");
+                Journal.Add(Resources.Msg_BornOffWorld);
                 return new Skill()
                 {
-                    Name = "Background Skills",
+                    Name = Resources.Skill_Background,
                     Level = 0,
                     Cascade =
                         {

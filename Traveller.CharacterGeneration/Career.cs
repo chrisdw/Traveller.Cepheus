@@ -99,7 +99,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Hostile_CorporateAgent,
             Hostile_CorporateExec,
             Hostile_CommercialSpacer,
-            Hostile_Marine
+            Hostile_Marine,
+            Hostile_Marshall,
+            Hostile_MilitarySpacer
         }
 
         [Flags]

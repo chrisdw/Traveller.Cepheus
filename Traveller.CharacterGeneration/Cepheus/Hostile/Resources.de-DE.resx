@@ -336,4 +336,82 @@
   <data name="Skill_Security" xml:space="preserve">
     <value>Sicherheit</value>
   </data>
+  <data name="Benefit_DFC" xml:space="preserve">
+    <value>Distinguished Flying Cross</value>
+  </data>
+  <data name="Career_Marshal" xml:space="preserve">
+    <value>Marschall</value>
+  </data>
+  <data name="Career_MilitarySpacer" xml:space="preserve">
+    <value>Militärische Spacer</value>
+  </data>
+  <data name="Mishap_Marshal1" xml:space="preserve">
+    <value>Ein Aufruhr oder Störung ausbricht und mehrere Streckenposten verletzt werden.</value>
+  </data>
+  <data name="Mishap_Marshal2" xml:space="preserve">
+    <value>Mitglied im Team arbeitet für einen Gangsterboss und setzt dich</value>
+  </data>
+  <data name="Mishap_Marshal3" xml:space="preserve">
+    <value>Sie entdecken einen Drogen-Ring am Außenposten, aber der Manager ist und versucht, Sie getötet zu haben.</value>
+  </data>
+  <data name="Mishap_Marshal4" xml:space="preserve">
+    <value>Ein Gangsterboss kaufte aus Ihrem Team, zwingt Sie zu beenden.</value>
+  </data>
+  <data name="Mishap_Marshal5" xml:space="preserve">
+    <value>Ihr Team in einer Gefoulte Mission – getötet wurden und es war Ihre Schuld.</value>
+  </data>
+  <data name="Mishap_MilSpace1" xml:space="preserve">
+    <value>Ein Unfall ist auf Sie zurückgeführt. Mehrere Besatzungsmitglieder wurden getötet, und Sie wurden entlassen.</value>
+  </data>
+  <data name="Mishap_MilSpace2" xml:space="preserve">
+    <value>Dein Raumschiff greift eine zivile Schiff aus versehen die Karrieren von allen Beteiligten Crew anlaufen.</value>
+  </data>
+  <data name="Mishap_MilSpace3" xml:space="preserve">
+    <value>Sie argumentieren mit einem leitenden Offizier, der Sie aus Space Command fährt.</value>
+  </data>
+  <data name="Mishap_MilSpace5" xml:space="preserve">
+    <value>Eine tödliche alien Befall an Bord Schiff, das Sie überleben ist Gegenstand Space Command.</value>
+  </data>
+  <data name="Mishap_MilSpace6" xml:space="preserve">
+    <value>Sie sind bei einem interstellaren Kampf verwundet.</value>
+  </data>
+  <data name="Msg_BornOffWorld" xml:space="preserve">
+    <value>Geboren am eine Off-Welt-Kolonie</value>
+  </data>
+  <data name="Msg_BornOnEarth" xml:space="preserve">
+    <value>Auf der Erde geboren</value>
+  </data>
+  <data name="Rank_Airman" xml:space="preserve">
+    <value>Flieger</value>
+  </data>
+  <data name="Rank_AirmanFirstClass" xml:space="preserve">
+    <value>Airman First Class</value>
+  </data>
+  <data name="Rank_AssistantChief" xml:space="preserve">
+    <value>Assistant Chief</value>
+  </data>
+  <data name="Rank_ChiefDeputy" xml:space="preserve">
+    <value>Stellvertreter</value>
+  </data>
+  <data name="Rank_Deputy" xml:space="preserve">
+    <value>Stellvertretende</value>
+  </data>
+  <data name="Rank_Marshal" xml:space="preserve">
+    <value>Marschall</value>
+  </data>
+  <data name="Rank_SeniorAirman" xml:space="preserve">
+    <value>Senior Airman</value>
+  </data>
+  <data name="Rank_SeniorDeputy" xml:space="preserve">
+    <value>Senior-Stellvertreter</value>
+  </data>
+  <data name="Rank_SupervisoryDeputy" xml:space="preserve">
+    <value>Aufsichtsrat Stellvertreter</value>
+  </data>
+  <data name="Rank_TechnicalSergeant" xml:space="preserve">
+    <value>Technical Sergeant</value>
+  </data>
+  <data name="Skill_Background" xml:space="preserve">
+    <value>Hintergrund-Fähigkeiten</value>
+  </data>
 </root>

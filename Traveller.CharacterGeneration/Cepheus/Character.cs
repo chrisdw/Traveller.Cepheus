@@ -152,6 +152,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
+                            backgroundSkills = 3 + Profile.Edu.Modifier;
+                            skillList = GetBackgroundSkillList();
+                            for (var i = 0; i < backgroundSkills; i++)
+                            {
+                                OnSkillOffered(skillList);
+                            }
                             break;
                         case Species.Android:
                             Profile = new UPP();
