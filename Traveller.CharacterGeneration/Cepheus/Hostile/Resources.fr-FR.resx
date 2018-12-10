@@ -414,4 +414,46 @@
   <data name="Skill_Background" xml:space="preserve">
     <value>Compétences de fond</value>
   </data>
+  <data name="Benefit_TraumaKit" xml:space="preserve">
+    <value>Kit de trauma</value>
+  </data>
+  <data name="Career_Physician" xml:space="preserve">
+    <value>Médecin</value>
+  </data>
+  <data name="Mishap_Physician1" xml:space="preserve">
+    <value>Votre travail est saboté et noirci par une tierce partie.</value>
+  </data>
+  <data name="Mishap_Physician2" xml:space="preserve">
+    <value>Une catastrophe avec plusieurs victimes vous est attribuée.</value>
+  </data>
+  <data name="Mishap_Physician3" xml:space="preserve">
+    <value>Vous êtes impliqué dans la recherche illégale et rumeurs sont propagent sur vous. SOC réduit de 1.</value>
+  </data>
+  <data name="Mishap_Physician4" xml:space="preserve">
+    <value>Vous gagnez une poursuite pour faute professionnelle, mais sont obligés de quitter la profession.</value>
+  </data>
+  <data name="Mishap_Physician5" xml:space="preserve">
+    <value>Vous êtes responsable de la mort de plusieurs personnes, servez plusieurs mois en prison et sont ensuite libérés.</value>
+  </data>
+  <data name="Mishap_Physician6" xml:space="preserve">
+    <value>Une société rivale s’attaque à votre installation/utilisation.</value>
+  </data>
+  <data name="Rank_Consultant" xml:space="preserve">
+    <value>Expert-conseil</value>
+  </data>
+  <data name="Rank_Doctor" xml:space="preserve">
+    <value>Médecin</value>
+  </data>
+  <data name="Rank_Intern" xml:space="preserve">
+    <value>Stagiaire</value>
+  </data>
+  <data name="Rank_JuniorDoctor" xml:space="preserve">
+    <value>Médecin junior</value>
+  </data>
+  <data name="Rank_MedicalStudent" xml:space="preserve">
+    <value>Étudiant en médecine</value>
+  </data>
+  <data name="Rank_SeniorConsultant" xml:space="preserve">
+    <value>Consultant Senior</value>
+  </data>
 </root>

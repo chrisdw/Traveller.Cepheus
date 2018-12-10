@@ -132,6 +132,9 @@
   <data name="Benefit_StarEnvoyClubMember" xml:space="preserve">
     <value>Star Envoy Club Member</value>
   </data>
+  <data name="Benefit_TraumaKit" xml:space="preserve">
+    <value>Trauma Kit</value>
+  </data>
   <data name="Career_Colonist" xml:space="preserve">
     <value>Colonist</value>
   </data>
@@ -152,6 +155,9 @@
   </data>
   <data name="Career_MilitarySpacer" xml:space="preserve">
     <value>Military Spacer</value>
+  </data>
+  <data name="Career_Physician" xml:space="preserve">
+    <value>Physician</value>
   </data>
   <data name="Career_Ranger" xml:space="preserve">
     <value>Ranger</value>
@@ -273,6 +279,24 @@
   <data name="Mishap_NewColonyLeaders" xml:space="preserve">
     <value>New colonial leaders decided you and your crew were troublemakers.</value>
   </data>
+  <data name="Mishap_Physician1" xml:space="preserve">
+    <value>Your work is sabotaged and blackened by a third party.</value>
+  </data>
+  <data name="Mishap_Physician2" xml:space="preserve">
+    <value>A disaster with several casualties is blamed on you.</value>
+  </data>
+  <data name="Mishap_Physician3" xml:space="preserve">
+    <value>You are involved in illegal research and rumours are spread about you. SOC reduced by 1.</value>
+  </data>
+  <data name="Mishap_Physician4" xml:space="preserve">
+    <value>You win a malpractice suit, but are forced to leave the profession.</value>
+  </data>
+  <data name="Mishap_Physician5" xml:space="preserve">
+    <value>You are responsible for several deaths, serve several months in prison and are then released.</value>
+  </data>
+  <data name="Mishap_Physician6" xml:space="preserve">
+    <value>A rival corporation attacks your facility/operation.</value>
+  </data>
   <data name="Mishap_RangerAttacked" xml:space="preserve">
     <value>Attacked by dangerous alien exomorph.</value>
   </data>
@@ -366,6 +390,9 @@
   <data name="Rank_Colonist" xml:space="preserve">
     <value>Colonist</value>
   </data>
+  <data name="Rank_Consultant" xml:space="preserve">
+    <value>Consultant</value>
+  </data>
   <data name="Rank_Corporal" xml:space="preserve">
     <value>Corporal</value>
   </data>
@@ -390,6 +417,9 @@
   <data name="Rank_DivisionChief" xml:space="preserve">
     <value>Division Chief</value>
   </data>
+  <data name="Rank_Doctor" xml:space="preserve">
+    <value>Doctor</value>
+  </data>
   <data name="Rank_Driller" xml:space="preserve">
     <value>Driller</value>
   </data>
@@ -411,6 +441,12 @@
   <data name="Rank_GunnerySergeant" xml:space="preserve">
     <value>Gunnery Sergeant</value>
   </data>
+  <data name="Rank_Intern" xml:space="preserve">
+    <value>Intern</value>
+  </data>
+  <data name="Rank_JuniorDoctor" xml:space="preserve">
+    <value>Junior Doctor</value>
+  </data>
   <data name="Rank_LanceCorporal" xml:space="preserve">
     <value>Lance Corporal</value>
   </data>
@@ -428,6 +464,9 @@
   </data>
   <data name="Rank_MasterSergeant" xml:space="preserve">
     <value>Master Sergeant</value>
+  </data>
+  <data name="Rank_MedicalStudent" xml:space="preserve">
+    <value>Medical Student</value>
   </data>
   <data name="Rank_OperationsManager" xml:space="preserve">
     <value>Operations Manager</value>
@@ -455,6 +494,9 @@
   </data>
   <data name="Rank_SeniorCaptain" xml:space="preserve">
     <value>Senior Captain</value>
+  </data>
+  <data name="Rank_SeniorConsultant" xml:space="preserve">
+    <value>Senior Consultant</value>
   </data>
   <data name="Rank_SeniorDeputy" xml:space="preserve">
     <value>Senior Deputy</value>

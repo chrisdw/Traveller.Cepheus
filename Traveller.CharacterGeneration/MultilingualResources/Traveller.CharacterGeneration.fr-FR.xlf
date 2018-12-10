@@ -3364,6 +3364,62 @@
           <source>Background Skills</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Compétences de fond</target>
         </trans-unit>
+        <trans-unit id="Benefit_TraumaKit" translate="yes" xml:space="preserve">
+          <source>Trauma Kit</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kit de trauma</target>
+        </trans-unit>
+        <trans-unit id="Career_Physician" translate="yes" xml:space="preserve">
+          <source>Physician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Médecin</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Physician1" translate="yes" xml:space="preserve">
+          <source>Your work is sabotaged and blackened by a third party.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Votre travail est saboté et noirci par une tierce partie.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Physician2" translate="yes" xml:space="preserve">
+          <source>A disaster with several casualties is blamed on you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Une catastrophe avec plusieurs victimes vous est attribuée.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Physician3" translate="yes" xml:space="preserve">
+          <source>You are involved in illegal research and rumours are spread about you. SOC reduced by 1.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous êtes impliqué dans la recherche illégale et rumeurs sont propagent sur vous. SOC réduit de 1.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Physician4" translate="yes" xml:space="preserve">
+          <source>You win a malpractice suit, but are forced to leave the profession.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous gagnez une poursuite pour faute professionnelle, mais sont obligés de quitter la profession.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Physician5" translate="yes" xml:space="preserve">
+          <source>You are responsible for several deaths, serve several months in prison and are then released.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous êtes responsable de la mort de plusieurs personnes, servez plusieurs mois en prison et sont ensuite libérés.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Physician6" translate="yes" xml:space="preserve">
+          <source>A rival corporation attacks your facility/operation.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Une société rivale s’attaque à votre installation/utilisation.</target>
+        </trans-unit>
+        <trans-unit id="Rank_Consultant" translate="yes" xml:space="preserve">
+          <source>Consultant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Expert-conseil</target>
+        </trans-unit>
+        <trans-unit id="Rank_Doctor" translate="yes" xml:space="preserve">
+          <source>Doctor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Médecin</target>
+        </trans-unit>
+        <trans-unit id="Rank_Intern" translate="yes" xml:space="preserve">
+          <source>Intern</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stagiaire</target>
+        </trans-unit>
+        <trans-unit id="Rank_JuniorDoctor" translate="yes" xml:space="preserve">
+          <source>Junior Doctor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Médecin junior</target>
+        </trans-unit>
+        <trans-unit id="Rank_MedicalStudent" translate="yes" xml:space="preserve">
+          <source>Medical Student</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Étudiant en médecine</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorConsultant" translate="yes" xml:space="preserve">
+          <source>Senior Consultant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Consultant Senior</target>
+        </trans-unit>
       </group>
     </body>
   </file>

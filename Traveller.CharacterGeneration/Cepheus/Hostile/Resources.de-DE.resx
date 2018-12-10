@@ -414,4 +414,46 @@
   <data name="Skill_Background" xml:space="preserve">
     <value>Hintergrund-Fähigkeiten</value>
   </data>
+  <data name="Benefit_TraumaKit" xml:space="preserve">
+    <value>Trauma-Kit</value>
+  </data>
+  <data name="Career_Physician" xml:space="preserve">
+    <value>Arzt</value>
+  </data>
+  <data name="Mishap_Physician1" xml:space="preserve">
+    <value>Ihre Arbeit wird sabotiert und durch eine dritte Partei geschwärzt.</value>
+  </data>
+  <data name="Mishap_Physician2" xml:space="preserve">
+    <value>Sie ist eine Katastrophe mit mehreren Verletzten angelastet.</value>
+  </data>
+  <data name="Mishap_Physician3" xml:space="preserve">
+    <value>Sie sind illegal Forschung beteiligt und Gerüchte über Sie verbreitet werden. SOC um 1 reduziert.</value>
+  </data>
+  <data name="Mishap_Physician4" xml:space="preserve">
+    <value>Sie gewinnen einen Kunstfehler-Anzug, aber gezwungen sind, den Beruf zu verlassen.</value>
+  </data>
+  <data name="Mishap_Physician5" xml:space="preserve">
+    <value>Sie sind verantwortlich für mehrere Todesfälle, dienen mehrere Monate im Gefängnis und dann freigegeben.</value>
+  </data>
+  <data name="Mishap_Physician6" xml:space="preserve">
+    <value>Eine rivalisierende Corporation greift Ihr Gebäudebetrieb.</value>
+  </data>
+  <data name="Rank_Consultant" xml:space="preserve">
+    <value>Berater</value>
+  </data>
+  <data name="Rank_Doctor" xml:space="preserve">
+    <value>Arzt</value>
+  </data>
+  <data name="Rank_Intern" xml:space="preserve">
+    <value>Intern</value>
+  </data>
+  <data name="Rank_JuniorDoctor" xml:space="preserve">
+    <value>Junior-Arzt</value>
+  </data>
+  <data name="Rank_MedicalStudent" xml:space="preserve">
+    <value>Medizinstudent</value>
+  </data>
+  <data name="Rank_SeniorConsultant" xml:space="preserve">
+    <value>Senior Consultant</value>
+  </data>
 </root>

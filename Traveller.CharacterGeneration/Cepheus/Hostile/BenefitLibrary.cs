@@ -12,5 +12,6 @@
         public static Benefit DistinguishedFlyingCross = new Benefit(Resources.Benefit_DFC, 1, Benefit.BenefitType.Material);
         public static Benefit SilverStar = new Benefit(Resources.Benefit_SilverStar, 1, Benefit.BenefitType.Material);
         public static Benefit StarEnvoyClubMember = new Benefit(Resources.Benefit_StarEnvoyClubMember, 1, Benefit.BenefitType.Material);
+        public static Benefit TraumaKit = new Benefit(Resources.Benefit_TraumaKit, 1, Benefit.BenefitType.Material);
     }
 }
