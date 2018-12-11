@@ -80,7 +80,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     {
                         var toAdd = skill.Clone();
                         toAdd.Level = 0;
-                        Owner.AddSkill(toAdd);
+                        if (toAdd.Cascade.Count == 0)
+                        {
+                            Owner.AddSkill(toAdd);
+                        }
+                        else
+                        {
+                            OnSkillOffered(toAdd);
+                        }
                     }
                 }
                 else

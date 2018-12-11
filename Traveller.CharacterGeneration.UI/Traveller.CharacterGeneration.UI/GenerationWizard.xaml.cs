@@ -61,7 +61,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 {
                     var names = skills.Select(s => s.Name).Distinct().OrderBy(s => s);
                     var result = await DisplayActionSheet(string.Format(Properties.Resources.Prompt_Select_Cascade, skill.Name), null, null, names.ToArray());
-                    skill = skills.Where(s => s.Name == result).First();
+                    if (!string.IsNullOrEmpty(result))
+                    {
+                        skill = skills.Where(s => s.Name == result).First();
+                    }
                 }
                 else
                 {

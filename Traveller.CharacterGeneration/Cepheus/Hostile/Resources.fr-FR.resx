@@ -596,4 +596,22 @@ grièvement blessé. Il menace de tout blâme sur vous.</value>
   <data name="Rank_Technician" xml:space="preserve">
     <value>Technicien</value>
   </data>
+  <data name="Mishap_Android1" xml:space="preserve">
+    <value>Après avoir été endommagée dans un accident, la compagnie vous laisse aller.</value>
+  </data>
+  <data name="Mishap_Android2" xml:space="preserve">
+    <value>Vous ont été forcés à commettre des actes illicites, a brisé votre programmation et s’enfuit.</value>
+  </data>
+  <data name="Mishap_Android3" xml:space="preserve">
+    <value>Vous ne savez pas ce qui s’est passé pour vous. Il y a une lacune dans votre mémoire. Que s'est-il passé ?</value>
+  </data>
+  <data name="Mishap_Android4" xml:space="preserve">
+    <value>Vous ont été reprogrammé par pont jockeys et n’avez maintenant aucune loyauté à votre entreprise.</value>
+  </data>
+  <data name="Mishap_Android6" xml:space="preserve">
+    <value>Vous avez passé voyous, assassiné votre employeur et été blessés au cours de l’évasion.</value>
+  </data>
+  <data name="Career_Android" xml:space="preserve">
+    <value>Android</value>
+  </data>
 </root>

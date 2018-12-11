@@ -596,4 +596,22 @@ schwer verletzt. Er droht, alles auf Sie zu tadeln.</value>
   <data name="Rank_Technician" xml:space="preserve">
     <value>Techniker</value>
   </data>
+  <data name="Mishap_Android1" xml:space="preserve">
+    <value>Nach der bei einem Unfall beschädigt wird, lassen das Unternehmen dich gehen.</value>
+  </data>
+  <data name="Mishap_Android2" xml:space="preserve">
+    <value>Sie wurden gezwungen, um rechtswidrige Handlungen zu begehen, brach Ihre Programmierung und floh.</value>
+  </data>
+  <data name="Mishap_Android3" xml:space="preserve">
+    <value>Sie wissen nicht, was mit Ihnen geschehen ist. Es gibt eine Lücke in Ihrem Gedächtnis. Was ist passiert?</value>
+  </data>
+  <data name="Mishap_Android4" xml:space="preserve">
+    <value>Sie wurden vom Deck Jockeys umprogrammiert und haben jetzt keine Loyalität zu Ihrem Unternehmen.</value>
+  </data>
+  <data name="Mishap_Android6" xml:space="preserve">
+    <value>Sie haben gegangen Schelm, ermordet Ihr Arbeitgeber und bei der Flucht verletzt worden.</value>
+  </data>
+  <data name="Career_Android" xml:space="preserve">
+    <value>Android</value>
+  </data>
 </root>
