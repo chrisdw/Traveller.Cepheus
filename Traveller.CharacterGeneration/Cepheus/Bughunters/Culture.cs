@@ -36,6 +36,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Bughunters
                         careers.Add(Cepheus.Resources.Career_AerospaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Aerospace_Defence);
                         careers.Add(Cepheus.Resources.Career_Marine, CharacterGeneration.Career.CareerType.Cepheus_Marine);
                         careers.Add(Cepheus.Resources.Career_MaritimeDefence, CharacterGeneration.Career.CareerType.Cepheus_Maritime_Defence);
+                        careers.Add(Cepheus.Resources.Career_Navy, CharacterGeneration.Career.CareerType.Cepheus_Navy);
                         careers.Add(Cepheus.Resources.Career_Scout, CharacterGeneration.Career.CareerType.Cepheus_Scout);
                         careers.Add(Cepheus.Resources.Career_SurfaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Surface_Defence);
                     }
