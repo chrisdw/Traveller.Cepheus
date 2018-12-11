@@ -106,7 +106,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Hostile_Rogue,
             Hostile_Scientist,
             Hostile_SurveyScout,
-            Hostile_Technician
+            Hostile_Technician,
+            Hostile_Android
         }
 
         [Flags]

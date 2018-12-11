@@ -135,6 +135,9 @@
   <data name="Benefit_TraumaKit" xml:space="preserve">
     <value>Trauma Kit</value>
   </data>
+  <data name="Career_Android" xml:space="preserve">
+    <value>Android</value>
+  </data>
   <data name="Career_Colonist" xml:space="preserve">
     <value>Colonist</value>
   </data>
@@ -194,6 +197,21 @@
   </data>
   <data name="Mishap_Agent6" xml:space="preserve">
     <value>You failed to stop damage/disease/worker unrest at an Off-World outpost</value>
+  </data>
+  <data name="Mishap_Android1" xml:space="preserve">
+    <value>After being damaged in an accident, the company let you go.</value>
+  </data>
+  <data name="Mishap_Android2" xml:space="preserve">
+    <value>You were forced to commit illegal acts, broke your programming and fled.</value>
+  </data>
+  <data name="Mishap_Android3" xml:space="preserve">
+    <value>You don’t know what has happened to you. There is a gap in your memory. What happened?</value>
+  </data>
+  <data name="Mishap_Android4" xml:space="preserve">
+    <value>You were reprogrammed by deck jockeys and now have no loyalties to your company.</value>
+  </data>
+  <data name="Mishap_Android6" xml:space="preserve">
+    <value>You have gone rogue, murdered your employer and been injured during the escape.</value>
   </data>
   <data name="Mishap_ColonyAccident" xml:space="preserve">
     <value>A colony accident left you injured.</value>

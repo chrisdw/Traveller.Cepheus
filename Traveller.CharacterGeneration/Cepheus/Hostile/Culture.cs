@@ -24,20 +24,27 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
-                    careers.Add(Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Hostile_Colonist);
-                    careers.Add(Resources.Career_CommercialSpacer, CharacterGeneration.Career.CareerType.Hostile_CommercialSpacer);
-                    careers.Add(Resources.Career_CorporateAgent, CharacterGeneration.Career.CareerType.Hostile_CorporateAgent);
-                    careers.Add(Resources.Career_CorporateExecutive, CharacterGeneration.Career.CareerType.Hostile_CorporateExec);
-                    careers.Add(Resources.Career_Marine, CharacterGeneration.Career.CareerType.Hostile_Marine);
-                    careers.Add(Resources.Career_Marshal, CharacterGeneration.Career.CareerType.Hostile_Marshall);
-                    careers.Add(Resources.Career_MilitarySpacer, CharacterGeneration.Career.CareerType.Hostile_MilitarySpacer);
-                    careers.Add(Resources.Career_Physician, CharacterGeneration.Career.CareerType.Hostile_Physician);
-                    careers.Add(Resources.Career_Ranger, CharacterGeneration.Career.CareerType.Hostile_Ranger);
-                    careers.Add(Resources.Career_Rogue, CharacterGeneration.Career.CareerType.Hostile_Rogue);
-                    careers.Add(Resources.Career_Roughneck, CharacterGeneration.Career.CareerType.Hostile_Roughneck);
-                    careers.Add(Resources.Career_Scientist, CharacterGeneration.Career.CareerType.Hostile_Scientist);
-                    careers.Add(Resources.Career_SurveyScout, CharacterGeneration.Career.CareerType.Hostile_SurveyScout);
-                    careers.Add(Resources.Career_Technician, CharacterGeneration.Career.CareerType.Hostile_Technician);
+                    if (character.CharacterSpecies == CharacterGeneration.Character.Species.Android)
+                    {
+                        careers.Add(Resources.Career_Android, CharacterGeneration.Career.CareerType.Hostile_Android);
+                    }
+                    else
+                    {
+                        careers.Add(Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Hostile_Colonist);
+                        careers.Add(Resources.Career_CommercialSpacer, CharacterGeneration.Career.CareerType.Hostile_CommercialSpacer);
+                        careers.Add(Resources.Career_CorporateAgent, CharacterGeneration.Career.CareerType.Hostile_CorporateAgent);
+                        careers.Add(Resources.Career_CorporateExecutive, CharacterGeneration.Career.CareerType.Hostile_CorporateExec);
+                        careers.Add(Resources.Career_Marine, CharacterGeneration.Career.CareerType.Hostile_Marine);
+                        careers.Add(Resources.Career_Marshal, CharacterGeneration.Career.CareerType.Hostile_Marshall);
+                        careers.Add(Resources.Career_MilitarySpacer, CharacterGeneration.Career.CareerType.Hostile_MilitarySpacer);
+                        careers.Add(Resources.Career_Physician, CharacterGeneration.Career.CareerType.Hostile_Physician);
+                        careers.Add(Resources.Career_Ranger, CharacterGeneration.Career.CareerType.Hostile_Ranger);
+                        careers.Add(Resources.Career_Rogue, CharacterGeneration.Career.CareerType.Hostile_Rogue);
+                        careers.Add(Resources.Career_Roughneck, CharacterGeneration.Career.CareerType.Hostile_Roughneck);
+                        careers.Add(Resources.Career_Scientist, CharacterGeneration.Career.CareerType.Hostile_Scientist);
+                        careers.Add(Resources.Career_SurveyScout, CharacterGeneration.Career.CareerType.Hostile_SurveyScout);
+                        careers.Add(Resources.Career_Technician, CharacterGeneration.Career.CareerType.Hostile_Technician);
+                    }
                     break;
             }
             return careers;
@@ -97,6 +104,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     return new SurveyScout { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Hostile_Technician:
                     return new Technician { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_Android:
+                    return new Android { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Colonist { Culture = this, Mishaps = UseMishaps };
             }

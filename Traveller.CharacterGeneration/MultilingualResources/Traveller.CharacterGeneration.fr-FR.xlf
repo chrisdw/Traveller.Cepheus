@@ -3608,6 +3608,30 @@ grièvement blessé. Il menace de tout blâme sur vous.</target>
           <source>Technician</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Technicien</target>
         </trans-unit>
+        <trans-unit id="Mishap_Android1" translate="yes" xml:space="preserve">
+          <source>After being damaged in an accident, the company let you go.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Après avoir été endommagée dans un accident, la compagnie vous laisse aller.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Android2" translate="yes" xml:space="preserve">
+          <source>You were forced to commit illegal acts, broke your programming and fled.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous ont été forcés à commettre des actes illicites, a brisé votre programmation et s’enfuit.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Android3" translate="yes" xml:space="preserve">
+          <source>You don’t know what has happened to you. There is a gap in your memory. What happened?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous ne savez pas ce qui s’est passé pour vous. Il y a une lacune dans votre mémoire. Que s'est-il passé ?</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Android4" translate="yes" xml:space="preserve">
+          <source>You were reprogrammed by deck jockeys and now have no loyalties to your company.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous ont été reprogrammé par pont jockeys et n’avez maintenant aucune loyauté à votre entreprise.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Android6" translate="yes" xml:space="preserve">
+          <source>You have gone rogue, murdered your employer and been injured during the escape.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous avez passé voyous, assassiné votre employeur et été blessés au cours de l’évasion.</target>
+        </trans-unit>
+        <trans-unit id="Career_Android" translate="yes" xml:space="preserve">
+          <source>Android</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Android</target>
+        </trans-unit>
       </group>
     </body>
   </file>

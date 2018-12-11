@@ -124,7 +124,20 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                 var careerList = clist.Keys.Except(character.Careers
                     .Where(c => !(c.Name.Equals("Outcast") || c.Name.Equals("Drifter")))
                     .Select(c => c.Name));
-                var selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Career, null, null, careerList.ToArray());
+                var selected = string.Empty;
+                if (careerList.Count() == 1)
+                {
+                    selected = careerList.ToArray()[0];
+                }
+                else if (careerList.Count() > 1)
+                {
+                    selected = await DisplayActionSheet(Properties.Resources.Prompt_Select_Career, null, null, careerList.ToArray());
+                }
+                else
+                {
+                    // No careers left to to do - exit
+                    keepgoing = false;
+                }
                 if (!string.IsNullOrEmpty(selected))
                 { 
                     var career = selectedCulture.GetBasicCareer(clist[selected]);
@@ -179,7 +192,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                         }
                     }
                 }
-                if (selectedCulture.MultipleCareers && !character.Died && !(character.Careers.Sum(c => c.TermsServed) > 6))
+                if (selectedCulture.MultipleCareers && 
+                    !character.Died && 
+                    !(character.Careers.Sum(c => c.TermsServed) > 6) &&
+                    keepgoing)
                 {
                     var doagain = await DisplayAlert(Properties.Resources.Title_App,
                         Properties.Resources.Prompt_Another_Career,

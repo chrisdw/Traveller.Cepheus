@@ -13,5 +13,8 @@
         public static Benefit SilverStar = new Benefit(Resources.Benefit_SilverStar, 1, Benefit.BenefitType.Material);
         public static Benefit StarEnvoyClubMember = new Benefit(Resources.Benefit_StarEnvoyClubMember, 1, Benefit.BenefitType.Material);
         public static Benefit TraumaKit = new Benefit(Resources.Benefit_TraumaKit, 1, Benefit.BenefitType.Material);
+
+        public static Benefit OneThousandCredits = new Benefit(Properties.Resources.Benefit_Cash, 1000, Benefit.BenefitType.Cash);
+        public static Benefit FiveThousandCredits = new Benefit(Properties.Resources.Benefit_Cash, 5000, Benefit.BenefitType.Cash);
     }
 }

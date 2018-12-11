@@ -3608,6 +3608,30 @@ schwer verletzt. Er droht, alles auf Sie zu tadeln.</target>
           <source>Technician</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Techniker</target>
         </trans-unit>
+        <trans-unit id="Mishap_Android1" translate="yes" xml:space="preserve">
+          <source>After being damaged in an accident, the company let you go.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nach der bei einem Unfall beschädigt wird, lassen das Unternehmen dich gehen.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Android2" translate="yes" xml:space="preserve">
+          <source>You were forced to commit illegal acts, broke your programming and fled.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie wurden gezwungen, um rechtswidrige Handlungen zu begehen, brach Ihre Programmierung und floh.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Android3" translate="yes" xml:space="preserve">
+          <source>You don’t know what has happened to you. There is a gap in your memory. What happened?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie wissen nicht, was mit Ihnen geschehen ist. Es gibt eine Lücke in Ihrem Gedächtnis. Was ist passiert?</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Android4" translate="yes" xml:space="preserve">
+          <source>You were reprogrammed by deck jockeys and now have no loyalties to your company.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie wurden vom Deck Jockeys umprogrammiert und haben jetzt keine Loyalität zu Ihrem Unternehmen.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Android6" translate="yes" xml:space="preserve">
+          <source>You have gone rogue, murdered your employer and been injured during the escape.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie haben gegangen Schelm, ermordet Ihr Arbeitgeber und bei der Flucht verletzt worden.</target>
+        </trans-unit>
+        <trans-unit id="Career_Android" translate="yes" xml:space="preserve">
+          <source>Android</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Android</target>
+        </trans-unit>
       </group>
     </body>
   </file>

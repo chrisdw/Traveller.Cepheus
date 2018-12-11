@@ -115,6 +115,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Android.
+        /// </summary>
+        internal static string Career_Android {
+            get {
+                return ResourceManager.GetString("Career_Android", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Colonist.
         /// </summary>
         internal static string Career_Colonist {
@@ -291,6 +300,51 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Mishap_Agent6 {
             get {
                 return ResourceManager.GetString("Mishap_Agent6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to After being damaged in an accident, the company let you go..
+        /// </summary>
+        internal static string Mishap_Android1 {
+            get {
+                return ResourceManager.GetString("Mishap_Android1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You were forced to commit illegal acts, broke your programming and fled..
+        /// </summary>
+        internal static string Mishap_Android2 {
+            get {
+                return ResourceManager.GetString("Mishap_Android2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You don’t know what has happened to you. There is a gap in your memory. What happened?.
+        /// </summary>
+        internal static string Mishap_Android3 {
+            get {
+                return ResourceManager.GetString("Mishap_Android3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You were reprogrammed by deck jockeys and now have no loyalties to your company..
+        /// </summary>
+        internal static string Mishap_Android4 {
+            get {
+                return ResourceManager.GetString("Mishap_Android4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have gone rogue, murdered your employer and been injured during the escape..
+        /// </summary>
+        internal static string Mishap_Android6 {
+            get {
+                return ResourceManager.GetString("Mishap_Android6", resourceCulture);
             }
         }
         
