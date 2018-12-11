@@ -1,4 +1,5 @@
-﻿using org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani;
+﻿using org.DownesWard.Traveller.CharacterGeneration.Cepheus;
+using org.DownesWard.Traveller.CharacterGeneration.Classic.Zhodani;
 using org.DownesWard.Traveller.Shared;
 using org.DownesWard.Traveller.Shared.Classic;
 using org.DownesWard.Traveller.Shared.Classsic;
@@ -574,8 +575,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     character.Profile = new UPP();
                     break;
                 case Species.Human_Zhodani:
-                case Species.Articifer:
                     character.Profile = new ZhodaniUPP();
+                    break;
+                case Species.Articifer:
+                    character.Profile = new EsperUPP();
                     break;
                 case Species.Human:
                     // use the standard UPP

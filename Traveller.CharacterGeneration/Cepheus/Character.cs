@@ -205,6 +205,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2) + 1;
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
+                            Traits.Add("Issler Immunity");
                             break;
                         case Species.Quarm:
                             // use the standard UPP
@@ -215,6 +216,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2) - 2;
                             Profile.Soc.Value = dice.roll(2);
+                            Traits.Add("Issler Immunity");
                             break;
                         case Species.Wraither:
                             // use the standard UPP
@@ -225,11 +227,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2) + 2;
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
+                            Traits.Add("Issler Immunity");
                             Traits.Add("Total Pacifist");
                             break;
-                        case Species.Articifer:
-                            // use the Zhodani UPP
-                            Profile = new ZhodaniUPP();
+                        case Species.Shaper:
+                            // use the Esper UPP
+                            Profile = new EsperUPP();
                             Profile.Str.Value = dice.roll(2) - 1;
                             Profile.Dex.Value = dice.roll(2) + 1;
                             Profile.End.Value = dice.roll(2);
@@ -237,6 +240,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
                             Profile["PSI"].Value = dice.roll(2);
+                            Traits.Add("Issler Immunity");
+                            break;
+                        case Species.Articifer:
+                            // use the standard UPP
+                            Profile = new UPP();
+                            Profile.Str.Value = dice.roll(2) - 1;
+                            Profile.Dex.Value = dice.roll(2) + 1;
+                            Profile.End.Value = dice.roll(2) + 1;
+                            Profile.Int.Value = dice.roll(2) + 1;
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            Traits.Add("Issler Immunity");
                             break;
                     }
                     backgroundSkills = 3 + Profile.Edu.Modifier;

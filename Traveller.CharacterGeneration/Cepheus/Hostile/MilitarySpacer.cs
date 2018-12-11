@@ -46,13 +46,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             Material.Add(BenefitLibrary.EliteTicket);
             Material.Add(BenefitLibrary.StarEnvoyClubMember);
 
-            Cash[0] = 500;
-            Cash[1] = 1000;
-            Cash[2] = 1000;
-            Cash[3] = 5000;
-            Cash[4] = 8000;
-            Cash[5] = 10000;
-            Cash[6] = 20000;
+            Hostile.Culture.InitCashBenefits(this);
 
             var table = new SkillTable();
             SkillTables[0] = table;

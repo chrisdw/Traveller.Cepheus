@@ -3420,6 +3420,102 @@
           <source>Senior Consultant</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Consultant Senior</target>
         </trans-unit>
+        <trans-unit id="Career_Rogue" translate="yes" xml:space="preserve">
+          <source>Rogue</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voyous</target>
+        </trans-unit>
+        <trans-unit id="Rank_Cholo" translate="yes" xml:space="preserve">
+          <source>Cholo</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cholo</target>
+        </trans-unit>
+        <trans-unit id="Rank_RightHand" translate="yes" xml:space="preserve">
+          <source>Right Hand</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Main droite</target>
+        </trans-unit>
+        <trans-unit id="Rank_Soldier" translate="yes" xml:space="preserve">
+          <source>Soldier</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Soldat</target>
+        </trans-unit>
+        <trans-unit id="Rank_Veteran" translate="yes" xml:space="preserve">
+          <source>Veteran</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ancien combattant</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Rogue1" translate="yes" xml:space="preserve">
+          <source>A job goes horribly wrong, you get the blame.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Un travail va horriblement mal, vous obtenez le blâme.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Rogue2" translate="yes" xml:space="preserve">
+          <source>Arrested and convicted.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Arrêtés et condamnés.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Rogue3" translate="yes" xml:space="preserve">
+          <source>Criminal successes are followed by violent retaliations from a rival gang.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Réussites criminelles sont suivis de représailles violentes d’un gang rival.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Rogue4" translate="yes" xml:space="preserve">
+          <source>Your crew make a bitter enemy, a police officer, and must lay low.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Votre équipe faire un ennemi amer, un officier de police et doit mettre bas.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Rogue5" translate="yes" xml:space="preserve">
+          <source>A gang rival forces you out of the organization.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Un rival de gang vous force hors de l’organisation.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Rogue6" translate="yes" xml:space="preserve">
+          <source>Injured in a gang battle.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Blessé lors d’une bataille de gang.</target>
+        </trans-unit>
+        <trans-unit id="Career_Scientist" translate="yes" xml:space="preserve">
+          <source>Scientist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scientifique</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Science1" translate="yes" xml:space="preserve">
+          <source>Your work is sabotaged and blackened by a third party.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Votre travail est saboté et noirci par une tierce partie.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Science2" translate="yes" xml:space="preserve">
+          <source>A rival corp attempts to kidnap you and steal your research; you must flee.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Un rival corp tente de vous kidnapper et voler votre recherche ; vous devez fuir.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Science3" translate="yes" xml:space="preserve">
+          <source>You are involved in illegal research and rumours are spread about you. Soc reduced by 1.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous êtes impliqué dans la recherche illégale et rumeurs sont propagent sur vous. SOC réduit de 1.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Science4" translate="yes" xml:space="preserve">
+          <source>An expedition goes wrong, resulting in several deaths.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Une expédition va mal, qui ont fait plusieurs morts.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Science5" translate="yes" xml:space="preserve">
+          <source>Your experiments have unpredictable results, and the project is shut down for good.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vos expériences ont des résultats imprévisibles, et le projet est arrêté pour de bon.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Science6" translate="yes" xml:space="preserve">
+          <source>rival corporation attacks your facility/operation.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">la société rivale attaque votre installation/fonctionnement.</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantDirector" translate="yes" xml:space="preserve">
+          <source>Assistant Director</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Assistant-réalisateur</target>
+        </trans-unit>
+        <trans-unit id="Rank_DeputyScienceLeader" translate="yes" xml:space="preserve">
+          <source>Deputy Science Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sous-chef de la Science</target>
+        </trans-unit>
+        <trans-unit id="Rank_Researcher" translate="yes" xml:space="preserve">
+          <source>Researcher</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chercheur</target>
+        </trans-unit>
+        <trans-unit id="Rank_ScienceLeader" translate="yes" xml:space="preserve">
+          <source>Science Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Leader de la science</target>
+        </trans-unit>
+        <trans-unit id="Rank_Scientist" translate="yes" xml:space="preserve">
+          <source>Scientist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scientifique</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorScientist" translate="yes" xml:space="preserve">
+          <source>Senior Scientist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Scientifique principal</target>
+        </trans-unit>
       </group>
     </body>
   </file>

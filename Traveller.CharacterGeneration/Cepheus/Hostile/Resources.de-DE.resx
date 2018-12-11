@@ -456,4 +456,76 @@
   <data name="Rank_SeniorConsultant" xml:space="preserve">
     <value>Senior Consultant</value>
   </data>
+  <data name="Career_Rogue" xml:space="preserve">
+    <value>Schurke</value>
+  </data>
+  <data name="Rank_Cholo" xml:space="preserve">
+    <value>Cholo</value>
+  </data>
+  <data name="Rank_RightHand" xml:space="preserve">
+    <value>Rechte Hand</value>
+  </data>
+  <data name="Rank_Soldier" xml:space="preserve">
+    <value>Soldat</value>
+  </data>
+  <data name="Rank_Veteran" xml:space="preserve">
+    <value>Veteran</value>
+  </data>
+  <data name="Mishap_Rogue1" xml:space="preserve">
+    <value>Ein Job schrecklich schief geht, erhalten Sie die Schuld.</value>
+  </data>
+  <data name="Mishap_Rogue2" xml:space="preserve">
+    <value>Verhaftet und verurteilt.</value>
+  </data>
+  <data name="Mishap_Rogue3" xml:space="preserve">
+    <value>Kriminellen Erfolge folgen gewaltsame Vergeltungsmaßnahmen von einer rivalisierenden Gang.</value>
+  </data>
+  <data name="Mishap_Rogue4" xml:space="preserve">
+    <value>Deine Crew machen einen bitteren Feind, ein Polizist, und niedrig legen muss.</value>
+  </data>
+  <data name="Mishap_Rogue5" xml:space="preserve">
+    <value>Eine Bande Konkurrenz zwingt Sie aus der Organisation.</value>
+  </data>
+  <data name="Mishap_Rogue6" xml:space="preserve">
+    <value>Bei einer Bande Schlacht verletzt.</value>
+  </data>
+  <data name="Career_Scientist" xml:space="preserve">
+    <value>Wissenschaftler</value>
+  </data>
+  <data name="Mishap_Science1" xml:space="preserve">
+    <value>Ihre Arbeit wird sabotiert und durch eine dritte Partei geschwärzt.</value>
+  </data>
+  <data name="Mishap_Science2" xml:space="preserve">
+    <value>Eine rivalisierende corp versucht, Sie zu entführen und zu stehlen Ihre Forschung; Sie müssen fliehen.</value>
+  </data>
+  <data name="Mishap_Science3" xml:space="preserve">
+    <value>Sie sind illegal Forschung beteiligt und Gerüchte über Sie verbreitet werden. SOC um 1 reduziert.</value>
+  </data>
+  <data name="Mishap_Science4" xml:space="preserve">
+    <value>Eine Expedition geht schief, was zu mehreren Todesfällen.</value>
+  </data>
+  <data name="Mishap_Science5" xml:space="preserve">
+    <value>Ihre Experimente haben unvorhersehbare Ergebnisse, und das Projekt ist für eine gute heruntergefahren.</value>
+  </data>
+  <data name="Mishap_Science6" xml:space="preserve">
+    <value>konkurrierende Unternehmen greift Ihr Gebäudebetrieb.</value>
+  </data>
+  <data name="Rank_AssistantDirector" xml:space="preserve">
+    <value>Stellvertretender Direktor</value>
+  </data>
+  <data name="Rank_DeputyScienceLeader" xml:space="preserve">
+    <value>Stellvertretender Parteiführer Wissenschaft</value>
+  </data>
+  <data name="Rank_Researcher" xml:space="preserve">
+    <value>Forscher</value>
+  </data>
+  <data name="Rank_ScienceLeader" xml:space="preserve">
+    <value>Wissenschaft-Führer</value>
+  </data>
+  <data name="Rank_Scientist" xml:space="preserve">
+    <value>Wissenschaftler</value>
+  </data>
+  <data name="Rank_SeniorScientist" xml:space="preserve">
+    <value>Senior Scientist</value>
+  </data>
 </root>

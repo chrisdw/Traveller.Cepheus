@@ -33,7 +33,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     careers.Add(Resources.Career_MilitarySpacer, CharacterGeneration.Career.CareerType.Hostile_MilitarySpacer);
                     careers.Add(Resources.Career_Physician, CharacterGeneration.Career.CareerType.Hostile_Physician);
                     careers.Add(Resources.Career_Ranger, CharacterGeneration.Career.CareerType.Hostile_Ranger);
+                    careers.Add(Resources.Career_Rogue, CharacterGeneration.Career.CareerType.Hostile_Rogue);
                     careers.Add(Resources.Career_Roughneck, CharacterGeneration.Career.CareerType.Hostile_Roughneck);
+                    careers.Add(Resources.Career_Scientist, CharacterGeneration.Career.CareerType.Hostile_Scientist);
                     break;
             }
             return careers;
@@ -85,6 +87,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     return new MilitarySpacer { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Hostile_Physician:
                     return new Physician { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_Rogue:
+                    return new Rogue { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_Scientist:
+                    return new Scientist { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Colonist { Culture = this, Mishaps = UseMishaps };
             }
@@ -107,6 +113,17 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
         public int TableModifier(CharacterGeneration.Character character, CharacterGeneration.Career career, SkillTable table)
         {
             return 0;
+        }
+
+        public static void InitCashBenefits(Career career)
+        {
+            career.Cash[0] = 500;
+            career.Cash[1] = 1000;
+            career.Cash[2] = 1000;
+            career.Cash[3] = 5000;
+            career.Cash[4] = 8000;
+            career.Cash[5] = 10000;
+            career.Cash[6] = 20000;
         }
     }
 }

@@ -196,11 +196,29 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rogue.
+        /// </summary>
+        internal static string Career_Rogue {
+            get {
+                return ResourceManager.GetString("Career_Rogue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Roughneck.
         /// </summary>
         internal static string Career_Roughneck {
             get {
                 return ResourceManager.GetString("Career_Roughneck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scientist.
+        /// </summary>
+        internal static string Career_Scientist {
+            get {
+                return ResourceManager.GetString("Career_Scientist", resourceCulture);
             }
         }
         
@@ -646,6 +664,60 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A job goes horribly wrong, you get the blame..
+        /// </summary>
+        internal static string Mishap_Rogue1 {
+            get {
+                return ResourceManager.GetString("Mishap_Rogue1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arrested and convicted..
+        /// </summary>
+        internal static string Mishap_Rogue2 {
+            get {
+                return ResourceManager.GetString("Mishap_Rogue2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Criminal successes are followed by violent retaliations from a rival gang..
+        /// </summary>
+        internal static string Mishap_Rogue3 {
+            get {
+                return ResourceManager.GetString("Mishap_Rogue3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your crew make a bitter enemy, a police officer, and must lay low..
+        /// </summary>
+        internal static string Mishap_Rogue4 {
+            get {
+                return ResourceManager.GetString("Mishap_Rogue4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A gang rival forces you out of the organization..
+        /// </summary>
+        internal static string Mishap_Rogue5 {
+            get {
+                return ResourceManager.GetString("Mishap_Rogue5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Injured in a gang battle..
+        /// </summary>
+        internal static string Mishap_Rogue6 {
+            get {
+                return ResourceManager.GetString("Mishap_Rogue6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An accident is blamed on you, and you are fired..
         /// </summary>
         internal static string Mishap_RoughneckAccident {
@@ -678,6 +750,60 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Mishap_RoughneckIllness {
             get {
                 return ResourceManager.GetString("Mishap_RoughneckIllness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your work is sabotaged and blackened by a third party..
+        /// </summary>
+        internal static string Mishap_Science1 {
+            get {
+                return ResourceManager.GetString("Mishap_Science1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A rival corp attempts to kidnap you and steal your research; you must flee..
+        /// </summary>
+        internal static string Mishap_Science2 {
+            get {
+                return ResourceManager.GetString("Mishap_Science2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You are involved in illegal research and rumours are spread about you. Soc reduced by 1..
+        /// </summary>
+        internal static string Mishap_Science3 {
+            get {
+                return ResourceManager.GetString("Mishap_Science3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An expedition goes wrong, resulting in several deaths..
+        /// </summary>
+        internal static string Mishap_Science4 {
+            get {
+                return ResourceManager.GetString("Mishap_Science4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your experiments have unpredictable results, and the project is shut down for good..
+        /// </summary>
+        internal static string Mishap_Science5 {
+            get {
+                return ResourceManager.GetString("Mishap_Science5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to rival corporation attacks your facility/operation..
+        /// </summary>
+        internal static string Mishap_Science6 {
+            get {
+                return ResourceManager.GetString("Mishap_Science6", resourceCulture);
             }
         }
         
@@ -781,6 +907,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Assistant Director.
+        /// </summary>
+        internal static string Rank_AssistantDirector {
+            get {
+                return ResourceManager.GetString("Rank_AssistantDirector", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Assistant Division Chief.
         /// </summary>
         internal static string Rank_AssistantDivisionChief {
@@ -849,6 +984,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_ChiefRanger {
             get {
                 return ResourceManager.GetString("Rank_ChiefRanger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cholo.
+        /// </summary>
+        internal static string Rank_Cholo {
+            get {
+                return ResourceManager.GetString("Rank_Cholo", resourceCulture);
             }
         }
         
@@ -930,6 +1074,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_DeputyChiefRanger {
             get {
                 return ResourceManager.GetString("Rank_DeputyChiefRanger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deputy Science Leader.
+        /// </summary>
+        internal static string Rank_DeputyScienceLeader {
+            get {
+                return ResourceManager.GetString("Rank_DeputyScienceLeader", resourceCulture);
             }
         }
         
@@ -1159,11 +1312,47 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Researcher.
+        /// </summary>
+        internal static string Rank_Researcher {
+            get {
+                return ResourceManager.GetString("Rank_Researcher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Right Hand.
+        /// </summary>
+        internal static string Rank_RightHand {
+            get {
+                return ResourceManager.GetString("Rank_RightHand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Roustabout.
         /// </summary>
         internal static string Rank_Roustabout {
             get {
                 return ResourceManager.GetString("Rank_Roustabout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Science Leader.
+        /// </summary>
+        internal static string Rank_ScienceLeader {
+            get {
+                return ResourceManager.GetString("Rank_ScienceLeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scientist.
+        /// </summary>
+        internal static string Rank_Scientist {
+            get {
+                return ResourceManager.GetString("Rank_Scientist", resourceCulture);
             }
         }
         
@@ -1222,6 +1411,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Senior Scientist.
+        /// </summary>
+        internal static string Rank_SeniorScientist {
+            get {
+                return ResourceManager.GetString("Rank_SeniorScientist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Senior Vice President.
         /// </summary>
         internal static string Rank_SeniorVicePresident {
@@ -1236,6 +1434,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_Sergeant {
             get {
                 return ResourceManager.GetString("Rank_Sergeant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Soldier.
+        /// </summary>
+        internal static string Rank_Soldier {
+            get {
+                return ResourceManager.GetString("Rank_Soldier", resourceCulture);
             }
         }
         
@@ -1299,6 +1506,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile {
         internal static string Rank_Toolpusher {
             get {
                 return ResourceManager.GetString("Rank_Toolpusher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veteran.
+        /// </summary>
+        internal static string Rank_Veteran {
+            get {
+                return ResourceManager.GetString("Rank_Veteran", resourceCulture);
             }
         }
         

@@ -102,7 +102,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Hostile_Marine,
             Hostile_Marshall,
             Hostile_MilitarySpacer,
-            Hostile_Physician
+            Hostile_Physician,
+            Hostile_Rogue,
+            Hostile_Scientist
         }
 
         [Flags]

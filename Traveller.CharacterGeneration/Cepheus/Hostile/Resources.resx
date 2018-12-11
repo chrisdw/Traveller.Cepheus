@@ -162,8 +162,14 @@
   <data name="Career_Ranger" xml:space="preserve">
     <value>Ranger</value>
   </data>
+  <data name="Career_Rogue" xml:space="preserve">
+    <value>Rogue</value>
+  </data>
   <data name="Career_Roughneck" xml:space="preserve">
     <value>Roughneck</value>
+  </data>
+  <data name="Career_Scientist" xml:space="preserve">
+    <value>Scientist</value>
   </data>
   <data name="Mishap_Agent1" xml:space="preserve">
     <value>A corporate defection went wrong and you were wounded.</value>
@@ -312,6 +318,24 @@
   <data name="Mishap_RangerRivalGroup" xml:space="preserve">
     <value>Your team locates a valiable resource, but a rival group siezes the site and claims it for their corporation.</value>
   </data>
+  <data name="Mishap_Rogue1" xml:space="preserve">
+    <value>A job goes horribly wrong, you get the blame.</value>
+  </data>
+  <data name="Mishap_Rogue2" xml:space="preserve">
+    <value>Arrested and convicted.</value>
+  </data>
+  <data name="Mishap_Rogue3" xml:space="preserve">
+    <value>Criminal successes are followed by violent retaliations from a rival gang.</value>
+  </data>
+  <data name="Mishap_Rogue4" xml:space="preserve">
+    <value>Your crew make a bitter enemy, a police officer, and must lay low.</value>
+  </data>
+  <data name="Mishap_Rogue5" xml:space="preserve">
+    <value>A gang rival forces you out of the organization.</value>
+  </data>
+  <data name="Mishap_Rogue6" xml:space="preserve">
+    <value>Injured in a gang battle.</value>
+  </data>
   <data name="Mishap_RoughneckAccident" xml:space="preserve">
     <value>An accident is blamed on you, and you are fired.</value>
   </data>
@@ -323,6 +347,24 @@
   </data>
   <data name="Mishap_RoughneckIllness" xml:space="preserve">
     <value>You suffer from illness caused by your work.</value>
+  </data>
+  <data name="Mishap_Science1" xml:space="preserve">
+    <value>Your work is sabotaged and blackened by a third party.</value>
+  </data>
+  <data name="Mishap_Science2" xml:space="preserve">
+    <value>A rival corp attempts to kidnap you and steal your research; you must flee.</value>
+  </data>
+  <data name="Mishap_Science3" xml:space="preserve">
+    <value>You are involved in illegal research and rumours are spread about you. Soc reduced by 1.</value>
+  </data>
+  <data name="Mishap_Science4" xml:space="preserve">
+    <value>An expedition goes wrong, resulting in several deaths.</value>
+  </data>
+  <data name="Mishap_Science5" xml:space="preserve">
+    <value>Your experiments have unpredictable results, and the project is shut down for good.</value>
+  </data>
+  <data name="Mishap_Science6" xml:space="preserve">
+    <value>rival corporation attacks your facility/operation.</value>
   </data>
   <data name="Msg_BornOffWorld" xml:space="preserve">
     <value>Born on an Off-world colony</value>
@@ -357,6 +399,9 @@
   <data name="Rank_AssistantChief" xml:space="preserve">
     <value>Assistant Chief</value>
   </data>
+  <data name="Rank_AssistantDirector" xml:space="preserve">
+    <value>Assistant Director</value>
+  </data>
   <data name="Rank_AssistantDivisionChief" xml:space="preserve">
     <value>Assistant Division Chief</value>
   </data>
@@ -380,6 +425,9 @@
   </data>
   <data name="Rank_ChiefRanger" xml:space="preserve">
     <value>Chief Ranger</value>
+  </data>
+  <data name="Rank_Cholo" xml:space="preserve">
+    <value>Cholo</value>
   </data>
   <data name="Rank_Colonel" xml:space="preserve">
     <value>Colonel</value>
@@ -407,6 +455,9 @@
   </data>
   <data name="Rank_DeputyChiefRanger" xml:space="preserve">
     <value>Deputy Chief Ranger</value>
+  </data>
+  <data name="Rank_DeputyScienceLeader" xml:space="preserve">
+    <value>Deputy Science Leader</value>
   </data>
   <data name="Rank_Director" xml:space="preserve">
     <value>Director</value>
@@ -483,8 +534,20 @@
   <data name="Rank_Ranger" xml:space="preserve">
     <value>Ranger</value>
   </data>
+  <data name="Rank_Researcher" xml:space="preserve">
+    <value>Researcher</value>
+  </data>
+  <data name="Rank_RightHand" xml:space="preserve">
+    <value>Right Hand</value>
+  </data>
   <data name="Rank_Roustabout" xml:space="preserve">
     <value>Roustabout</value>
+  </data>
+  <data name="Rank_ScienceLeader" xml:space="preserve">
+    <value>Science Leader</value>
+  </data>
+  <data name="Rank_Scientist" xml:space="preserve">
+    <value>Scientist</value>
   </data>
   <data name="Rank_SeniorAgent" xml:space="preserve">
     <value>Senior Agent</value>
@@ -504,11 +567,17 @@
   <data name="Rank_SeniorExecutiveVicePresident" xml:space="preserve">
     <value>Senior Executive Vice President</value>
   </data>
+  <data name="Rank_SeniorScientist" xml:space="preserve">
+    <value>Senior Scientist</value>
+  </data>
   <data name="Rank_SeniorVicePresident" xml:space="preserve">
     <value>Senior Vice President</value>
   </data>
   <data name="Rank_Sergeant" xml:space="preserve">
     <value>Sergeant</value>
+  </data>
+  <data name="Rank_Soldier" xml:space="preserve">
+    <value>Soldier</value>
   </data>
   <data name="Rank_StaffSergeant" xml:space="preserve">
     <value>Staff Sergeant</value>
@@ -530,6 +599,9 @@
   </data>
   <data name="Rank_Toolpusher" xml:space="preserve">
     <value>Toolpusher</value>
+  </data>
+  <data name="Rank_Veteran" xml:space="preserve">
+    <value>Veteran</value>
   </data>
   <data name="Rank_VicePresident" xml:space="preserve">
     <value>Vice President</value>

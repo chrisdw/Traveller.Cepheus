@@ -17,6 +17,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Bughunters
 
         public bool BenefitAllowed(CharacterGeneration.Character character, Benefit benefit)
         {
+            if (benefit.Name.Equals(CharacterGeneration.BenefitLibrary.Weapon) &&
+                character.CharacterSpecies == CharacterGeneration.Character.Species.Wraither)
+            {
+                return false;
+            }
             return true;
         }
 

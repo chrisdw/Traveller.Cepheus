@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
+﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
 {
     public class Colonist : Cepheus.Colonist
     {
@@ -19,13 +15,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
             Ranks[5] = Resources.Rank_OperationsManager;
             Ranks[6] = Resources.Rank_ColonialAdministrator;
 
-            Cash[0] = 500;
-            Cash[1] = 1000;
-            Cash[2] = 1000;
-            Cash[3] = 5000;
-            Cash[4] = 8000;
-            Cash[5] = 10000;
-            Cash[6] = 20000;
+            Hostile.Culture.InitCashBenefits(this);
 
             Material[0] = BenefitLibrary.StandardTicket;
             Material[3] = BenefitLibrary.StandardTicket;
