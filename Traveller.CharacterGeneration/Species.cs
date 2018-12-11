@@ -14,6 +14,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             var sexes = new List<string>();
             switch (species)
             {
+                case Character.Species.Froog:
+                    sexes.Add("Leader");
+                    sexes.Add("Technician");
+                    sexes.Add("Warrior");
+                    break;
                 case Character.Species.Insectans:
                     sexes.Add(Properties.Resources.Sex_Worker);
                     sexes.Add(Properties.Resources.Sex_Soldier);

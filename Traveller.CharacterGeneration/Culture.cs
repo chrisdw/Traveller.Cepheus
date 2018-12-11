@@ -33,6 +33,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     list.Add("Ancients");
                     list.Add("Others");
                     break;
+                case "Commonwealtj":
+                    list.Add("K'Hiff");
+                    break;
             }
             return list;
         }
@@ -83,6 +86,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     {
                         UseMishaps = useMishaps,
                         Mode = 2
+                    };
+                case "K'Hiff":
+                    return new Cepheus.Commonwealth.Khiff.Culture()
+                    {
+                        UseMishaps = useMishaps
                     };
                 default:
                     return new Classic.Imperial.Culture()

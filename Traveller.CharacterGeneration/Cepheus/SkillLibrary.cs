@@ -2,9 +2,10 @@
 {
     public static class SkillLibrary
     {
-        public static Skill Advocate = new Skill(Resources.Skill_Advocate, Skill.SkillClass.None, 1);
+        public static Skill Advocate = new Skill(Resources.Skill_Advocate, Skill.SkillClass.None, 1, Skill.SkillSex.Female);
         public static Skill Athletics = new Skill(Resources.Skill_Athletics, Skill.SkillClass.None, 1);
         public static Skill Linguistics = new Skill(Resources.Skill_Linguistics, Skill.SkillClass.None, 1);
+        public static Skill NaturalWeapons = new Skill("Natural Weapons", Skill.SkillClass.None, 1);
 
         public static Skill Aircraft = new Skill(Resources.Skill_Aircraft, Skill.SkillClass.None, 1)
         {
@@ -22,7 +23,7 @@
         {
             Cascade =
             {
-                 new Skill(Resources.Skill_Farming, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_Farming, Skill.SkillClass.None, 1, Skill.SkillSex.Female),
                  new Skill(Resources.Skill_Riding, Skill.SkillClass.None, 1),
                  CharacterGeneration.SkillLibrary.Survival,
                  VetinaryMedicine

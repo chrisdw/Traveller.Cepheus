@@ -134,6 +134,70 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Soc.Value = dice.roll(2) - 2;
                             Traits.Add(Resources.Trait_Uplifited);
                             break;
+                        case Species.Commonwealth_Human:
+                            Profile = new EsperUPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            Profile["PSI"].Value = dice.roll();
+                            break;
+                        case Species.Shanthaa:
+                            Profile = new EsperUPP();
+                            Profile.Str.Value = dice.roll(2) - 1;
+                            Profile.Dex.Value = dice.roll(2) + 2;
+                            Profile.End.Value = dice.roll(2) - 1;
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            Profile["PSI"].Value = dice.roll();
+                            break;
+                        case Species.Khiff:
+                            Profile = new EsperUPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll();
+                            Profile.Soc.Value = dice.roll(2);
+                            Profile["PSI"].Value = dice.roll();
+                            Traits.Add("Feral");
+                            Traits.Add("Natural Weapons");
+                            AddSkill(SkillLibrary.NaturalWeapons);
+                            break;
+                        case Species.Froog:
+                            Profile = new EsperUPP();
+                            switch (Sex)
+                            {
+                                case "Leader":
+                                    Profile.Str.Value = dice.roll(2) + 1;
+                                    Profile.Dex.Value = dice.roll(2) - 1;
+                                    Profile.End.Value = dice.roll(2) - 1;
+                                    Profile.Int.Value = dice.roll(2) + 1;
+                                    Profile.Edu.Value = dice.roll(2) + 1;
+                                    Profile.Soc.Value = dice.roll(2) + 1;
+                                    break;
+                                case "Warrior":
+                                    Profile.Str.Value = dice.roll(2) + 1;
+                                    Profile.Dex.Value = dice.roll(2) + 1;
+                                    Profile.End.Value = dice.roll(2) + 1;
+                                    Profile.Int.Value = dice.roll(2) - 1;
+                                    Profile.Edu.Value = dice.roll(2) - 1;
+                                    Profile.Soc.Value = dice.roll(2) - 1;
+                                    break;
+                                case "Technician":
+                                    Profile.Str.Value = dice.roll(2) - 1;
+                                    Profile.Dex.Value = dice.roll(2) + 1;
+                                    Profile.End.Value = dice.roll(2) - 1;
+                                    Profile.Int.Value = dice.roll(2) + 1;
+                                    Profile.Edu.Value = dice.roll(2) + 1;
+                                    Profile.Soc.Value = dice.roll(2) - 1;
+                                    break;
+                            }
+                            Profile["PSI"].Value = dice.roll();
+                            break;
                     }
                     var backgroundSkills = 3 + Profile.Edu.Modifier;
                     Skill skillList = GetBackgroundSkillList();

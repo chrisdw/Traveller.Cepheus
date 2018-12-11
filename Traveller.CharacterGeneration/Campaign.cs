@@ -22,6 +22,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     list.Add("Hostile");
                     list.Add("Orbital");
                     list.Add("Bughunters");
+                    list.Add("Commonwealth");
                     break;
             }
             return list;

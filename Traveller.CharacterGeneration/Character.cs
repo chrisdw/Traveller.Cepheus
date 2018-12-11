@@ -48,7 +48,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Tazzim,
             Wraither,
             Articifer,
-            Shaper
+            Shaper,
+            Khiff,
+            Froog,
+            Shanthaa,
+            Commonwealth_Human
         }
 
         public class Configuration

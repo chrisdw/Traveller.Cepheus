@@ -37,7 +37,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Reformation_Coalition,
             Cepheus_Generic,
             Cepheus_Hostile,
-            Cepheus_Bughunters
+            Cepheus_Bughunters,
+            Cepheus_Khiff
         }
     }
 }
