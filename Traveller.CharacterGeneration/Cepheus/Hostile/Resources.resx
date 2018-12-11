@@ -174,6 +174,9 @@
   <data name="Career_SurveyScout" xml:space="preserve">
     <value>Survey Scout</value>
   </data>
+  <data name="Career_Technician" xml:space="preserve">
+    <value>Technician</value>
+  </data>
   <data name="Mishap_Agent1" xml:space="preserve">
     <value>A corporate defection went wrong and you were wounded.</value>
   </data>
@@ -386,6 +389,21 @@ corporation.</value>
     <value>You are sent to a location by an corporate exec, but he knows it is dangerous, and your crew are
 badly injured. He threatens to blame everything on you.</value>
   </data>
+  <data name="Mishap_Tech2" xml:space="preserve">
+    <value>Catastrophic fire is caused by your negligence.</value>
+  </data>
+  <data name="Mishap_Tech3" xml:space="preserve">
+    <value>A rival takes all the credit for your 'big project'.</value>
+  </data>
+  <data name="Mishap_Tech4" xml:space="preserve">
+    <value>You achieve great things during a terrible disaster.</value>
+  </data>
+  <data name="Mishap_Tech5" xml:space="preserve">
+    <value>You miscalculate and an important project fails.</value>
+  </data>
+  <data name="Mishap_Tech6" xml:space="preserve">
+    <value>You clash with your boss, who makes life too tough for you to continue.</value>
+  </data>
   <data name="Msg_BornOffWorld" xml:space="preserve">
     <value>Born on an Off-world colony</value>
   </data>
@@ -403,6 +421,9 @@ badly injured. He threatens to blame everything on you.</value>
   </data>
   <data name="Rank_4thOfficer" xml:space="preserve">
     <value>Fourth Officer</value>
+  </data>
+  <data name="Rank_Administrator" xml:space="preserve">
+    <value>Administrator</value>
   </data>
   <data name="Rank_Agent" xml:space="preserve">
     <value>Agent</value>
@@ -436,6 +457,9 @@ badly injured. He threatens to blame everything on you.</value>
   </data>
   <data name="Rank_AssistantTeamLeader" xml:space="preserve">
     <value>Assistant Team Leader</value>
+  </data>
+  <data name="Rank_AssistantTechnicalManager" xml:space="preserve">
+    <value>Assistant Technical Manager</value>
   </data>
   <data name="Rank_Captain" xml:space="preserve">
     <value>Captain</value>
@@ -632,8 +656,14 @@ badly injured. He threatens to blame everything on you.</value>
   <data name="Rank_TeamLeader" xml:space="preserve">
     <value>Team Leader</value>
   </data>
+  <data name="Rank_TechnicalManager" xml:space="preserve">
+    <value>Technical Manager</value>
+  </data>
   <data name="Rank_TechnicalSergeant" xml:space="preserve">
     <value>Technical Sergeant</value>
+  </data>
+  <data name="Rank_Technician" xml:space="preserve">
+    <value>Technician</value>
   </data>
   <data name="Rank_Toolpusher" xml:space="preserve">
     <value>Toolpusher</value>

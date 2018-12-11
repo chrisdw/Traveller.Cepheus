@@ -3568,6 +3568,46 @@ grièvement blessé. Il menace de tout blâme sur vous.</target>
           <source>Senior Scout</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Scout senior</target>
         </trans-unit>
+        <trans-unit id="Career_Technician" translate="yes" xml:space="preserve">
+          <source>Technician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Technicien</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech2" translate="yes" xml:space="preserve">
+          <source>Catastrophic fire is caused by your negligence.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Incendie catastrophique est causée par votre faute.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech3" translate="yes" xml:space="preserve">
+          <source>A rival takes all the credit for your 'big project'.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Un rival prend tout le mérite de votre « grand projet ».</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech4" translate="yes" xml:space="preserve">
+          <source>You achieve great things during a terrible disaster.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous accomplir de grandes choses au cours d’une terrible catastrophe.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech5" translate="yes" xml:space="preserve">
+          <source>You miscalculate and an important project fails.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous faire un calcul erroné et un important projet échoue.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech6" translate="yes" xml:space="preserve">
+          <source>You clash with your boss, who makes life too tough for you to continue.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous entrer en conflit avec votre patron, ce qui rend la vie trop difficile pour vous de continuer.</target>
+        </trans-unit>
+        <trans-unit id="Rank_Administrator" translate="yes" xml:space="preserve">
+          <source>Administrator</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Administrateur</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantTechnicalManager" translate="yes" xml:space="preserve">
+          <source>Assistant Technical Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Directeur technique adjoint</target>
+        </trans-unit>
+        <trans-unit id="Rank_TechnicalManager" translate="yes" xml:space="preserve">
+          <source>Technical Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Responsable technique</target>
+        </trans-unit>
+        <trans-unit id="Rank_Technician" translate="yes" xml:space="preserve">
+          <source>Technician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Technicien</target>
+        </trans-unit>
       </group>
     </body>
   </file>

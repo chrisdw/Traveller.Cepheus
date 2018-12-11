@@ -37,6 +37,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     careers.Add(Resources.Career_Roughneck, CharacterGeneration.Career.CareerType.Hostile_Roughneck);
                     careers.Add(Resources.Career_Scientist, CharacterGeneration.Career.CareerType.Hostile_Scientist);
                     careers.Add(Resources.Career_SurveyScout, CharacterGeneration.Career.CareerType.Hostile_SurveyScout);
+                    careers.Add(Resources.Career_Technician, CharacterGeneration.Career.CareerType.Hostile_Technician);
                     break;
             }
             return careers;
@@ -94,6 +95,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Hostile
                     return new Scientist { Culture = this, Mishaps = UseMishaps };
                 case CharacterGeneration.Career.CareerType.Hostile_SurveyScout:
                     return new SurveyScout { Culture = this, Mishaps = UseMishaps };
+                case CharacterGeneration.Career.CareerType.Hostile_Technician:
+                    return new Technician { Culture = this, Mishaps = UseMishaps };
                 default:
                     return new Colonist { Culture = this, Mishaps = UseMishaps };
             }

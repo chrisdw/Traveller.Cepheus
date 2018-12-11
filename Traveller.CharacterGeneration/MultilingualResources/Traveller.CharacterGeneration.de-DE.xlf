@@ -3568,6 +3568,46 @@ schwer verletzt. Er droht, alles auf Sie zu tadeln.</target>
           <source>Senior Scout</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior-Scout</target>
         </trans-unit>
+        <trans-unit id="Career_Technician" translate="yes" xml:space="preserve">
+          <source>Technician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Techniker</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech2" translate="yes" xml:space="preserve">
+          <source>Catastrophic fire is caused by your negligence.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Brandkatastrophe ist durch Ihre Fahrlässigkeit verursacht.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech3" translate="yes" xml:space="preserve">
+          <source>A rival takes all the credit for your 'big project'.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ein Rivale nimmt den Kredit für Ihre "Großprojekt".</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech4" translate="yes" xml:space="preserve">
+          <source>You achieve great things during a terrible disaster.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie erreichen große Dinge, während eine schreckliche Katastrophe.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech5" translate="yes" xml:space="preserve">
+          <source>You miscalculate and an important project fails.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie verrechnen und ein wichtiges Projekt schlägt fehl.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Tech6" translate="yes" xml:space="preserve">
+          <source>You clash with your boss, who makes life too tough for you to continue.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie kollidieren mit Ihrem Chef, wer macht das Leben zu hart für Sie weiter.</target>
+        </trans-unit>
+        <trans-unit id="Rank_Administrator" translate="yes" xml:space="preserve">
+          <source>Administrator</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Administrator</target>
+        </trans-unit>
+        <trans-unit id="Rank_AssistantTechnicalManager" translate="yes" xml:space="preserve">
+          <source>Assistant Technical Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Assistent technischer Leiter</target>
+        </trans-unit>
+        <trans-unit id="Rank_TechnicalManager" translate="yes" xml:space="preserve">
+          <source>Technical Manager</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Technischer Leiter</target>
+        </trans-unit>
+        <trans-unit id="Rank_Technician" translate="yes" xml:space="preserve">
+          <source>Technician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Techniker</target>
+        </trans-unit>
       </group>
     </body>
   </file>

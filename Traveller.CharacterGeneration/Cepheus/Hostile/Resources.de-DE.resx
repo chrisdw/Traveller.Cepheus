@@ -566,4 +566,34 @@ schwer verletzt. Er droht, alles auf Sie zu tadeln.</value>
   <data name="Rank_SeniorScout" xml:space="preserve">
     <value>Senior-Scout</value>
   </data>
+  <data name="Career_Technician" xml:space="preserve">
+    <value>Techniker</value>
+  </data>
+  <data name="Mishap_Tech2" xml:space="preserve">
+    <value>Brandkatastrophe ist durch Ihre Fahrlässigkeit verursacht.</value>
+  </data>
+  <data name="Mishap_Tech3" xml:space="preserve">
+    <value>Ein Rivale nimmt den Kredit für Ihre "Großprojekt".</value>
+  </data>
+  <data name="Mishap_Tech4" xml:space="preserve">
+    <value>Sie erreichen große Dinge, während eine schreckliche Katastrophe.</value>
+  </data>
+  <data name="Mishap_Tech5" xml:space="preserve">
+    <value>Sie verrechnen und ein wichtiges Projekt schlägt fehl.</value>
+  </data>
+  <data name="Mishap_Tech6" xml:space="preserve">
+    <value>Sie kollidieren mit Ihrem Chef, wer macht das Leben zu hart für Sie weiter.</value>
+  </data>
+  <data name="Rank_Administrator" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="Rank_AssistantTechnicalManager" xml:space="preserve">
+    <value>Assistent technischer Leiter</value>
+  </data>
+  <data name="Rank_TechnicalManager" xml:space="preserve">
+    <value>Technischer Leiter</value>
+  </data>
+  <data name="Rank_Technician" xml:space="preserve">
+    <value>Techniker</value>
+  </data>
 </root>

@@ -566,4 +566,34 @@ grièvement blessé. Il menace de tout blâme sur vous.</value>
   <data name="Rank_SeniorScout" xml:space="preserve">
     <value>Scout senior</value>
   </data>
+  <data name="Career_Technician" xml:space="preserve">
+    <value>Technicien</value>
+  </data>
+  <data name="Mishap_Tech2" xml:space="preserve">
+    <value>Incendie catastrophique est causée par votre faute.</value>
+  </data>
+  <data name="Mishap_Tech3" xml:space="preserve">
+    <value>Un rival prend tout le mérite de votre « grand projet ».</value>
+  </data>
+  <data name="Mishap_Tech4" xml:space="preserve">
+    <value>Vous accomplir de grandes choses au cours d’une terrible catastrophe.</value>
+  </data>
+  <data name="Mishap_Tech5" xml:space="preserve">
+    <value>Vous faire un calcul erroné et un important projet échoue.</value>
+  </data>
+  <data name="Mishap_Tech6" xml:space="preserve">
+    <value>Vous entrer en conflit avec votre patron, ce qui rend la vie trop difficile pour vous de continuer.</value>
+  </data>
+  <data name="Rank_Administrator" xml:space="preserve">
+    <value>Administrateur</value>
+  </data>
+  <data name="Rank_AssistantTechnicalManager" xml:space="preserve">
+    <value>Directeur technique adjoint</value>
+  </data>
+  <data name="Rank_TechnicalManager" xml:space="preserve">
+    <value>Responsable technique</value>
+  </data>
+  <data name="Rank_Technician" xml:space="preserve">
+    <value>Technicien</value>
+  </data>
 </root>
