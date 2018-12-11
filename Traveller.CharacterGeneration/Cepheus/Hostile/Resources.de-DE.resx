@@ -528,4 +528,42 @@
   <data name="Rank_SeniorScientist" xml:space="preserve">
     <value>Senior Scientist</value>
   </data>
+  <data name="Career_SurveyScout" xml:space="preserve">
+    <value>Umfrage-Scout</value>
+  </data>
+  <data name="Mishap_Scout2" xml:space="preserve">
+    <value>Absturz auf entfernten Planeten.</value>
+  </data>
+  <data name="Mishap_Scout3" xml:space="preserve">
+    <value>Ihr Team sucht eine Valiable Ressource, sondern einer rivalisierenden Gruppe packt die Website und behauptet, es für ihre
+Corporation.</value>
+  </data>
+  <data name="Mishap_Scout4" xml:space="preserve">
+    <value>Eine Expedition in einer Katastrophe endet und Sie werden dafür verantwortlich gemacht.</value>
+  </data>
+  <data name="Mishap_Scout5" xml:space="preserve">
+    <value>Von gefährlichen fremden Exomorph angegriffen.</value>
+  </data>
+  <data name="Mishap_Scout6" xml:space="preserve">
+    <value>Sie sind an einen Ort durch ein corporate Exec gesendet, aber er weiß, es ist gefährlich, und Ihre Crew sind
+schwer verletzt. Er droht, alles auf Sie zu tadeln.</value>
+  </data>
+  <data name="Rank_MissionChief" xml:space="preserve">
+    <value>Mission-Chief</value>
+  </data>
+  <data name="Rank_MissionSpecialist" xml:space="preserve">
+    <value>Missionsspezialist</value>
+  </data>
+  <data name="Rank_OperationsChief" xml:space="preserve">
+    <value>Chef Operationen</value>
+  </data>
+  <data name="Rank_Scout" xml:space="preserve">
+    <value>Pfadfinder</value>
+  </data>
+  <data name="Rank_SeniorMissionSpecialist" xml:space="preserve">
+    <value>Senior Missionsspezialist</value>
+  </data>
+  <data name="Rank_SeniorScout" xml:space="preserve">
+    <value>Senior-Scout</value>
+  </data>
 </root>

@@ -171,6 +171,9 @@
   <data name="Career_Scientist" xml:space="preserve">
     <value>Scientist</value>
   </data>
+  <data name="Career_SurveyScout" xml:space="preserve">
+    <value>Survey Scout</value>
+  </data>
   <data name="Mishap_Agent1" xml:space="preserve">
     <value>A corporate defection went wrong and you were wounded.</value>
   </data>
@@ -366,6 +369,23 @@
   <data name="Mishap_Science6" xml:space="preserve">
     <value>rival corporation attacks your facility/operation.</value>
   </data>
+  <data name="Mishap_Scout2" xml:space="preserve">
+    <value>Crash on remote planet.</value>
+  </data>
+  <data name="Mishap_Scout3" xml:space="preserve">
+    <value>Your team locates a valiable resource, but a rival group siezes the site and claims it for their
+corporation.</value>
+  </data>
+  <data name="Mishap_Scout4" xml:space="preserve">
+    <value>An expedition ends in disaster and you are blamed for it.</value>
+  </data>
+  <data name="Mishap_Scout5" xml:space="preserve">
+    <value>Attacked by dangerous alien exomorph.</value>
+  </data>
+  <data name="Mishap_Scout6" xml:space="preserve">
+    <value>You are sent to a location by an corporate exec, but he knows it is dangerous, and your crew are
+badly injured. He threatens to blame everything on you.</value>
+  </data>
   <data name="Msg_BornOffWorld" xml:space="preserve">
     <value>Born on an Off-world colony</value>
   </data>
@@ -519,6 +539,15 @@
   <data name="Rank_MedicalStudent" xml:space="preserve">
     <value>Medical Student</value>
   </data>
+  <data name="Rank_MissionChief" xml:space="preserve">
+    <value>Mission Chief</value>
+  </data>
+  <data name="Rank_MissionSpecialist" xml:space="preserve">
+    <value>Mission Specialist</value>
+  </data>
+  <data name="Rank_OperationsChief" xml:space="preserve">
+    <value>Operations Chief</value>
+  </data>
   <data name="Rank_OperationsManager" xml:space="preserve">
     <value>Operations Manager</value>
   </data>
@@ -549,6 +578,9 @@
   <data name="Rank_Scientist" xml:space="preserve">
     <value>Scientist</value>
   </data>
+  <data name="Rank_Scout" xml:space="preserve">
+    <value>Scout</value>
+  </data>
   <data name="Rank_SeniorAgent" xml:space="preserve">
     <value>Senior Agent</value>
   </data>
@@ -567,8 +599,14 @@
   <data name="Rank_SeniorExecutiveVicePresident" xml:space="preserve">
     <value>Senior Executive Vice President</value>
   </data>
+  <data name="Rank_SeniorMissionSpecialist" xml:space="preserve">
+    <value>Senior Mission Specialist</value>
+  </data>
   <data name="Rank_SeniorScientist" xml:space="preserve">
     <value>Senior Scientist</value>
+  </data>
+  <data name="Rank_SeniorScout" xml:space="preserve">
+    <value>Senior Scout</value>
   </data>
   <data name="Rank_SeniorVicePresident" xml:space="preserve">
     <value>Senior Vice President</value>

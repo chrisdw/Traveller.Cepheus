@@ -528,4 +528,42 @@
   <data name="Rank_SeniorScientist" xml:space="preserve">
     <value>Scientifique principal</value>
   </data>
+  <data name="Career_SurveyScout" xml:space="preserve">
+    <value>Survey Scout</value>
+  </data>
+  <data name="Mishap_Scout2" xml:space="preserve">
+    <value>Crash sur une planète éloignée.</value>
+  </data>
+  <data name="Mishap_Scout3" xml:space="preserve">
+    <value>Votre équipe localise une ressource valiable, mais un groupe rival siezes le site et il réclame de leur société de
+.</value>
+  </data>
+  <data name="Mishap_Scout4" xml:space="preserve">
+    <value>Une expédition se termine en catastrophe et vous sont blâmés pour elle.</value>
+  </data>
+  <data name="Mishap_Scout5" xml:space="preserve">
+    <value>Attaqué par exomorph exotique dangereux.</value>
+  </data>
+  <data name="Mishap_Scout6" xml:space="preserve">
+    <value>Vous sont envoyés à un emplacement par un entreprise exec, mais il sait que c’est dangereux, et votre équipe êtes
+grièvement blessé. Il menace de tout blâme sur vous.</value>
+  </data>
+  <data name="Rank_MissionChief" xml:space="preserve">
+    <value>Chef de mission</value>
+  </data>
+  <data name="Rank_MissionSpecialist" xml:space="preserve">
+    <value>Spécialiste de mission</value>
+  </data>
+  <data name="Rank_OperationsChief" xml:space="preserve">
+    <value>Chef des opérations</value>
+  </data>
+  <data name="Rank_Scout" xml:space="preserve">
+    <value>Scout</value>
+  </data>
+  <data name="Rank_SeniorMissionSpecialist" xml:space="preserve">
+    <value>Spécialiste de Mission senior</value>
+  </data>
+  <data name="Rank_SeniorScout" xml:space="preserve">
+    <value>Scout senior</value>
+  </data>
 </root>

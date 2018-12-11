@@ -3516,6 +3516,91 @@
           <source>Senior Scientist</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior Scientist</target>
         </trans-unit>
+        <trans-unit id="Career_SurveyScout" translate="yes" xml:space="preserve">
+          <source>Survey Scout</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Umfrage-Scout</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Scout2" translate="yes" xml:space="preserve">
+          <source>Crash on remote planet.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Absturz auf entfernten Planeten.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Scout3" translate="yes" xml:space="preserve">
+          <source>Your team locates a valiable resource, but a rival group siezes the site and claims it for their
+corporation.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ihr Team sucht eine Valiable Ressource, sondern einer rivalisierenden Gruppe packt die Website und behauptet, es für ihre
+Corporation.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Scout4" translate="yes" xml:space="preserve">
+          <source>An expedition ends in disaster and you are blamed for it.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Eine Expedition in einer Katastrophe endet und Sie werden dafür verantwortlich gemacht.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Scout5" translate="yes" xml:space="preserve">
+          <source>Attacked by dangerous alien exomorph.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Von gefährlichen fremden Exomorph angegriffen.</target>
+        </trans-unit>
+        <trans-unit id="Mishap_Scout6" translate="yes" xml:space="preserve">
+          <source>You are sent to a location by an corporate exec, but he knows it is dangerous, and your crew are
+badly injured. He threatens to blame everything on you.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sie sind an einen Ort durch ein corporate Exec gesendet, aber er weiß, es ist gefährlich, und Ihre Crew sind
+schwer verletzt. Er droht, alles auf Sie zu tadeln.</target>
+        </trans-unit>
+        <trans-unit id="Rank_MissionChief" translate="yes" xml:space="preserve">
+          <source>Mission Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mission-Chief</target>
+        </trans-unit>
+        <trans-unit id="Rank_MissionSpecialist" translate="yes" xml:space="preserve">
+          <source>Mission Specialist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Missionsspezialist</target>
+        </trans-unit>
+        <trans-unit id="Rank_OperationsChief" translate="yes" xml:space="preserve">
+          <source>Operations Chief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chef Operationen</target>
+        </trans-unit>
+        <trans-unit id="Rank_Scout" translate="yes" xml:space="preserve">
+          <source>Scout</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Pfadfinder</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorMissionSpecialist" translate="yes" xml:space="preserve">
+          <source>Senior Mission Specialist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior Missionsspezialist</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorScout" translate="yes" xml:space="preserve">
+          <source>Senior Scout</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior-Scout</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en-GB" target-language="de-DE" original="TRAVELLER.CHARACTERGENERATION/CEPHEUS/BUGHUNTERS/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.CHARACTERGENERATION/CEPHEUS/BUGHUNTERS/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Species_Articifer" translate="yes" xml:space="preserve">
+          <source>Articifer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Articifer</target>
+        </trans-unit>
+        <trans-unit id="Species_Quarm" translate="yes" xml:space="preserve">
+          <source>Quarm</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Quarm</target>
+        </trans-unit>
+        <trans-unit id="Species_Shaper" translate="yes" xml:space="preserve">
+          <source>Shaper</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Shaper</target>
+        </trans-unit>
+        <trans-unit id="Species_Synnner" translate="yes" xml:space="preserve">
+          <source>Synner</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Synner</target>
+        </trans-unit>
+        <trans-unit id="Species_Tazzim" translate="yes" xml:space="preserve">
+          <source>Tazzim</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tazzim</target>
+        </trans-unit>
+        <trans-unit id="Species_Wraither" translate="yes" xml:space="preserve">
+          <source>Wraither</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Spukgestalt</target>
+        </trans-unit>
       </group>
     </body>
   </file>
