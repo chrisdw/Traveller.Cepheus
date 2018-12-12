@@ -61,6 +61,240 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Bughunters {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Able Seaman.
+        /// </summary>
+        internal static string Rank_AbleSeaman {
+            get {
+                return ResourceManager.GetString("Rank_AbleSeaman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Able Starman.
+        /// </summary>
+        internal static string Rank_AbleStarman {
+            get {
+                return ResourceManager.GetString("Rank_AbleStarman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aircraftman.
+        /// </summary>
+        internal static string Rank_Aircraftman {
+            get {
+                return ResourceManager.GetString("Rank_Aircraftman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Airman.
+        /// </summary>
+        internal static string Rank_Airman {
+            get {
+                return ResourceManager.GetString("Rank_Airman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Airman First Class.
+        /// </summary>
+        internal static string Rank_AirmanFirstClass {
+            get {
+                return ResourceManager.GetString("Rank_AirmanFirstClass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chief Petty Officer.
+        /// </summary>
+        internal static string Rank_ChiefPettyOfficer {
+            get {
+                return ResourceManager.GetString("Rank_ChiefPettyOfficer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Company Sergeant Major.
+        /// </summary>
+        internal static string Rank_CompanySergeantMajor {
+            get {
+                return ResourceManager.GetString("Rank_CompanySergeantMajor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Corporal.
+        /// </summary>
+        internal static string Rank_Corporal {
+            get {
+                return ResourceManager.GetString("Rank_Corporal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flight Sergeant.
+        /// </summary>
+        internal static string Rank_FlightSergeant {
+            get {
+                return ResourceManager.GetString("Rank_FlightSergeant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gunnery Sergeant.
+        /// </summary>
+        internal static string Rank_GunnerySergeant {
+            get {
+                return ResourceManager.GetString("Rank_GunnerySergeant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lance Corporal.
+        /// </summary>
+        internal static string Rank_LanceCorporal {
+            get {
+                return ResourceManager.GetString("Rank_LanceCorporal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leading Seaman.
+        /// </summary>
+        internal static string Rank_LeadingSeaman {
+            get {
+                return ResourceManager.GetString("Rank_LeadingSeaman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leading Starman.
+        /// </summary>
+        internal static string Rank_LeadingStarman {
+            get {
+                return ResourceManager.GetString("Rank_LeadingStarman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Marine.
+        /// </summary>
+        internal static string Rank_Marine {
+            get {
+                return ResourceManager.GetString("Rank_Marine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Master Sergeant.
+        /// </summary>
+        internal static string Rank_MasterSergeant {
+            get {
+                return ResourceManager.GetString("Rank_MasterSergeant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Petty Officer.
+        /// </summary>
+        internal static string Rank_PettyOfficer {
+            get {
+                return ResourceManager.GetString("Rank_PettyOfficer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Private.
+        /// </summary>
+        internal static string Rank_Private {
+            get {
+                return ResourceManager.GetString("Rank_Private", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Regimental Sergeant Major.
+        /// </summary>
+        internal static string Rank_RegimentalSergeantMajor {
+            get {
+                return ResourceManager.GetString("Rank_RegimentalSergeantMajor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seaman.
+        /// </summary>
+        internal static string Rank_Seaman {
+            get {
+                return ResourceManager.GetString("Rank_Seaman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senior Aircraftman.
+        /// </summary>
+        internal static string Rank_SeniorAircraftman {
+            get {
+                return ResourceManager.GetString("Rank_SeniorAircraftman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senior Airman.
+        /// </summary>
+        internal static string Rank_SeniorAirman {
+            get {
+                return ResourceManager.GetString("Rank_SeniorAirman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sergeant.
+        /// </summary>
+        internal static string Rank_Sergeant {
+            get {
+                return ResourceManager.GetString("Rank_Sergeant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Staff Sergeant.
+        /// </summary>
+        internal static string Rank_StaffSergeant {
+            get {
+                return ResourceManager.GetString("Rank_StaffSergeant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starman.
+        /// </summary>
+        internal static string Rank_Starman {
+            get {
+                return ResourceManager.GetString("Rank_Starman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Technical Sergeant.
+        /// </summary>
+        internal static string Rank_TechnicalSergeant {
+            get {
+                return ResourceManager.GetString("Rank_TechnicalSergeant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrant Officer.
+        /// </summary>
+        internal static string Rank_WarrantOfficer {
+            get {
+                return ResourceManager.GetString("Rank_WarrantOfficer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Articifer.
         /// </summary>
         internal static string Species_Articifer {

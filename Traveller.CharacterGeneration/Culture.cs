@@ -33,7 +33,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     list.Add("Ancients");
                     list.Add("Others");
                     break;
-                case "Commonwealtj":
+                case "Commonwealth":
                     list.Add("K'Hiff");
                     break;
             }

@@ -3665,6 +3665,110 @@ schwer verletzt. Er droht, alles auf Sie zu tadeln.</target>
           <source>Wraither</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Spukgestalt</target>
         </trans-unit>
+        <trans-unit id="Rank_AbleSeaman" translate="yes" xml:space="preserve">
+          <source>Able Seaman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Able Seaman</target>
+        </trans-unit>
+        <trans-unit id="Rank_AbleStarman" translate="yes" xml:space="preserve">
+          <source>Able Starman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">In der Lage Starman</target>
+        </trans-unit>
+        <trans-unit id="Rank_Aircraftman" translate="yes" xml:space="preserve">
+          <source>Aircraftman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aircraftsman</target>
+        </trans-unit>
+        <trans-unit id="Rank_Airman" translate="yes" xml:space="preserve">
+          <source>Airman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flieger</target>
+        </trans-unit>
+        <trans-unit id="Rank_AirmanFirstClass" translate="yes" xml:space="preserve">
+          <source>Airman First Class</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Airman First Class</target>
+        </trans-unit>
+        <trans-unit id="Rank_ChiefPettyOfficer" translate="yes" xml:space="preserve">
+          <source>Chief Petty Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Chief Petty Officer</target>
+        </trans-unit>
+        <trans-unit id="Rank_CompanySergeantMajor" translate="yes" xml:space="preserve">
+          <source>Company Sergeant Major</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Firma-Sergeant-Major</target>
+        </trans-unit>
+        <trans-unit id="Rank_Corporal" translate="yes" xml:space="preserve">
+          <source>Corporal</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Unteroffizier</target>
+        </trans-unit>
+        <trans-unit id="Rank_FlightSergeant" translate="yes" xml:space="preserve">
+          <source>Flight Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flug-Sergeant</target>
+        </trans-unit>
+        <trans-unit id="Rank_GunnerySergeant" translate="yes" xml:space="preserve">
+          <source>Gunnery Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gunnery Sergeant</target>
+        </trans-unit>
+        <trans-unit id="Rank_LanceCorporal" translate="yes" xml:space="preserve">
+          <source>Lance Corporal</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lanze-Obergefreites</target>
+        </trans-unit>
+        <trans-unit id="Rank_LeadingSeaman" translate="yes" xml:space="preserve">
+          <source>Leading Seaman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Führenden Seemann</target>
+        </trans-unit>
+        <trans-unit id="Rank_LeadingStarman" translate="yes" xml:space="preserve">
+          <source>Leading Starman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Führenden Starman</target>
+        </trans-unit>
+        <trans-unit id="Rank_Marine" translate="yes" xml:space="preserve">
+          <source>Marine</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Marine</target>
+        </trans-unit>
+        <trans-unit id="Rank_MasterSergeant" translate="yes" xml:space="preserve">
+          <source>Master Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Oberfeldwebel</target>
+        </trans-unit>
+        <trans-unit id="Rank_PettyOfficer" translate="yes" xml:space="preserve">
+          <source>Petty Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Petty Officer</target>
+        </trans-unit>
+        <trans-unit id="Rank_Private" translate="yes" xml:space="preserve">
+          <source>Private</source>
+          <target state="needs-review-translation" state-qualifier="exact-match">Privat</target>
+        </trans-unit>
+        <trans-unit id="Rank_RegimentalSergeantMajor" translate="yes" xml:space="preserve">
+          <source>Regimental Sergeant Major</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Regiments-Hauptfeldwebel</target>
+        </trans-unit>
+        <trans-unit id="Rank_Seaman" translate="yes" xml:space="preserve">
+          <source>Seaman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Seemann</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorAircraftman" translate="yes" xml:space="preserve">
+          <source>Senior Aircraftman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior Aircraftsman</target>
+        </trans-unit>
+        <trans-unit id="Rank_SeniorAirman" translate="yes" xml:space="preserve">
+          <source>Senior Airman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Senior Airman</target>
+        </trans-unit>
+        <trans-unit id="Rank_Sergeant" translate="yes" xml:space="preserve">
+          <source>Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Feldwebel</target>
+        </trans-unit>
+        <trans-unit id="Rank_StaffSergeant" translate="yes" xml:space="preserve">
+          <source>Staff Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Staff Sergeant</target>
+        </trans-unit>
+        <trans-unit id="Rank_Starman" translate="yes" xml:space="preserve">
+          <source>Starman</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Starman</target>
+        </trans-unit>
+        <trans-unit id="Rank_TechnicalSergeant" translate="yes" xml:space="preserve">
+          <source>Technical Sergeant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Technical Sergeant</target>
+        </trans-unit>
+        <trans-unit id="Rank_WarrantOfficer" translate="yes" xml:space="preserve">
+          <source>Warrant Officer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Warrant Officer</target>
+        </trans-unit>
       </group>
     </body>
   </file>

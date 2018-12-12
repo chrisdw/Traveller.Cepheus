@@ -30,4 +30,82 @@
   <data name="Species_Wraither" xml:space="preserve">
     <value>Spukgestalt</value>
   </data>
+  <data name="Rank_AbleSeaman" xml:space="preserve">
+    <value>Able Seaman</value>
+  </data>
+  <data name="Rank_AbleStarman" xml:space="preserve">
+    <value>In der Lage Starman</value>
+  </data>
+  <data name="Rank_Aircraftman" xml:space="preserve">
+    <value>Aircraftsman</value>
+  </data>
+  <data name="Rank_Airman" xml:space="preserve">
+    <value>Flieger</value>
+  </data>
+  <data name="Rank_AirmanFirstClass" xml:space="preserve">
+    <value>Airman First Class</value>
+  </data>
+  <data name="Rank_ChiefPettyOfficer" xml:space="preserve">
+    <value>Chief Petty Officer</value>
+  </data>
+  <data name="Rank_CompanySergeantMajor" xml:space="preserve">
+    <value>Firma-Sergeant-Major</value>
+  </data>
+  <data name="Rank_Corporal" xml:space="preserve">
+    <value>Unteroffizier</value>
+  </data>
+  <data name="Rank_FlightSergeant" xml:space="preserve">
+    <value>Flug-Sergeant</value>
+  </data>
+  <data name="Rank_GunnerySergeant" xml:space="preserve">
+    <value>Gunnery Sergeant</value>
+  </data>
+  <data name="Rank_LanceCorporal" xml:space="preserve">
+    <value>Lanze-Obergefreites</value>
+  </data>
+  <data name="Rank_LeadingSeaman" xml:space="preserve">
+    <value>Führenden Seemann</value>
+  </data>
+  <data name="Rank_LeadingStarman" xml:space="preserve">
+    <value>Führenden Starman</value>
+  </data>
+  <data name="Rank_Marine" xml:space="preserve">
+    <value>Marine</value>
+  </data>
+  <data name="Rank_MasterSergeant" xml:space="preserve">
+    <value>Oberfeldwebel</value>
+  </data>
+  <data name="Rank_PettyOfficer" xml:space="preserve">
+    <value>Petty Officer</value>
+  </data>
+  <data name="Rank_Private" xml:space="preserve">
+    <value>Privat</value>
+  </data>
+  <data name="Rank_RegimentalSergeantMajor" xml:space="preserve">
+    <value>Regiments-Hauptfeldwebel</value>
+  </data>
+  <data name="Rank_Seaman" xml:space="preserve">
+    <value>Seemann</value>
+  </data>
+  <data name="Rank_SeniorAircraftman" xml:space="preserve">
+    <value>Senior Aircraftsman</value>
+  </data>
+  <data name="Rank_SeniorAirman" xml:space="preserve">
+    <value>Senior Airman</value>
+  </data>
+  <data name="Rank_Sergeant" xml:space="preserve">
+    <value>Feldwebel</value>
+  </data>
+  <data name="Rank_StaffSergeant" xml:space="preserve">
+    <value>Staff Sergeant</value>
+  </data>
+  <data name="Rank_Starman" xml:space="preserve">
+    <value>Starman</value>
+  </data>
+  <data name="Rank_TechnicalSergeant" xml:space="preserve">
+    <value>Technical Sergeant</value>
+  </data>
+  <data name="Rank_WarrantOfficer" xml:space="preserve">
+    <value>Warrant Officer</value>
+  </data>
 </root>
