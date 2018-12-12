@@ -1393,6 +1393,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Awareness.
+        /// </summary>
+        internal static string Skill_Awareness {
+            get {
+                return ResourceManager.GetString("Skill_Awareness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basic Training.
         /// </summary>
         internal static string Skill_BasicTraining {
@@ -1416,6 +1425,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Skill_BludgeoningWeapons {
             get {
                 return ResourceManager.GetString("Skill_BludgeoningWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clairvoyance.
+        /// </summary>
+        internal static string Skill_Clairvoyance {
+            get {
+                return ResourceManager.GetString("Skill_Clairvoyance", resourceCulture);
             }
         }
         
@@ -1573,6 +1591,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Psionics.
+        /// </summary>
+        internal static string Skill_Psionics {
+            get {
+                return ResourceManager.GetString("Skill_Psionics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Riding.
         /// </summary>
         internal static string Skill_Riding {
@@ -1686,6 +1713,33 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Skill_Submarines {
             get {
                 return ResourceManager.GetString("Skill_Submarines", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telekinesis.
+        /// </summary>
+        internal static string Skill_Telekinesis {
+            get {
+                return ResourceManager.GetString("Skill_Telekinesis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telepathy.
+        /// </summary>
+        internal static string Skill_Telepathy {
+            get {
+                return ResourceManager.GetString("Skill_Telepathy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teleportation.
+        /// </summary>
+        internal static string Skill_Teleportation {
+            get {
+                return ResourceManager.GetString("Skill_Teleportation", resourceCulture);
             }
         }
         

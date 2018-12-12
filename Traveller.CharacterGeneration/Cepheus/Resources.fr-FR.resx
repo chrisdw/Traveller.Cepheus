@@ -672,4 +672,22 @@
   <data name="Rank_VicePresident" xml:space="preserve">
     <value>Vice Président</value>
   </data>
+  <data name="Skill_Awareness" xml:space="preserve">
+    <value>Prise de conscience</value>
+  </data>
+  <data name="Skill_Clairvoyance" xml:space="preserve">
+    <value>Voyance</value>
+  </data>
+  <data name="Skill_Psionics" xml:space="preserve">
+    <value>Psionique</value>
+  </data>
+  <data name="Skill_Telekinesis" xml:space="preserve">
+    <value>Télékinésie</value>
+  </data>
+  <data name="Skill_Telepathy" xml:space="preserve">
+    <value>Télépathie</value>
+  </data>
+  <data name="Skill_Teleportation" xml:space="preserve">
+    <value>Téléportation</value>
+  </data>
 </root>

@@ -35,6 +35,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     break;
                 case "Commonwealth":
                     list.Add("K'Hiff");
+                    list.Add("Terran Commonwealth");
                     break;
             }
             return list;
@@ -89,6 +90,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     };
                 case "K'Hiff":
                     return new Cepheus.Commonwealth.Khiff.Culture()
+                    {
+                        UseMishaps = useMishaps
+                    };
+                case "Terran Commonwealth":
+                    return new Cepheus.Commonwealth.Terran.Culture()
                     {
                         UseMishaps = useMishaps
                     };

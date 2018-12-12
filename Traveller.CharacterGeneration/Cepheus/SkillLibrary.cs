@@ -104,5 +104,24 @@
                 Watercraft
             }
         };
+
+        // Psionic skills
+        public static Skill Awareness = new Skill(Resources.Skill_Awareness, Skill.SkillClass.Psionic, 1);
+        public static Skill Clairvoyance = new Skill(Resources.Skill_Clairvoyance, Skill.SkillClass.Psionic, 1);
+        public static Skill Telekinesis = new Skill(Resources.Skill_Telekinesis, Skill.SkillClass.Psionic, 1);
+        public static Skill Telepathy = new Skill(Resources.Skill_Telepathy, Skill.SkillClass.Psionic, 1);
+        public static Skill Teleportation = new Skill(Resources.Skill_Teleportation, Skill.SkillClass.Psionic, 1);
+
+        public static Skill Psionics = new Skill(Resources.Skill_Psionics, Skill.SkillClass.Psionic, 1)
+        {
+            Cascade =
+            {
+                Awareness,
+                Clairvoyance,
+                Telekinesis,
+                Telepathy,
+                Teleportation
+            }
+        };
     }
 }

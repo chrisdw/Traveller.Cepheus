@@ -17,6 +17,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
         protected int maxRank = 6;
         protected bool lostBenefits = false;
         protected int medicalBand = 1;
+        protected bool psionicTrained = false;
 
         public bool Mishaps { get; set; }
 
@@ -175,7 +176,18 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
             return survive;
         }
 
-
+        public override void EndTerm()
+        {
+            base.EndTerm();
+            if (!psionicTrained)
+            {
+                // Drop owners PSI by 1 if they have it
+                if (Owner.Profile is EsperUPP)
+                {
+                    Owner.Profile["PSI"].Value--;
+                }
+            }
+        }
         /// <summary>
         /// Default mishap implmentation, other careers and genre's can
         /// override this for specific mishap effects

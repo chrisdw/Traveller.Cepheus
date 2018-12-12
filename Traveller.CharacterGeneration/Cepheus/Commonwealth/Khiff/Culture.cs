@@ -23,10 +23,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Khif
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
-                    careers.Add(Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Cepheus_Colonist);
-                    careers.Add(Resources.Career_Hunter, CharacterGeneration.Career.CareerType.Cepheus_Hunter);
-                    careers.Add(Resources.Career_Mercenary, CharacterGeneration.Career.CareerType.Cepheus_Mercenary);
-                    careers.Add(Resources.Career_SurfaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Surface_Defence);
+                    careers.Add(Cepheus.Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Cepheus_Colonist);
+                    careers.Add(Cepheus.Resources.Career_Hunter, CharacterGeneration.Career.CareerType.Cepheus_Hunter);
+                    careers.Add(Cepheus.Resources.Career_Mercenary, CharacterGeneration.Career.CareerType.Cepheus_Mercenary);
+                    careers.Add(Cepheus.Resources.Career_SurfaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Surface_Defence);
                     break;
             }
             return careers;
@@ -73,7 +73,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Khif
             switch (generationStyle)
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
-                    list.Add("K'Hiff", CharacterGeneration.Character.Species.Khiff);
+                    list.Add(Resources.Species_Khiff, CharacterGeneration.Character.Species.Khiff);
                     break;
             }
 

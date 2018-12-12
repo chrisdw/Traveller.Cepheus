@@ -38,7 +38,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Generic,
             Cepheus_Hostile,
             Cepheus_Bughunters,
-            Cepheus_Khiff
+            Cepheus_Khiff,
+            Cepheus_TerranCommonwealth
         }
     }
 }

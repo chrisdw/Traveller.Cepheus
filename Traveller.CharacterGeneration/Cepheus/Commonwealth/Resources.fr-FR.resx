@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Rank_AbleSeaman" xml:space="preserve">
+    <value>Matelot</value>
+  </data>
+  <data name="Rank_AbleStarman" xml:space="preserve">
+    <value>Starman capable</value>
+  </data>
+  <data name="Rank_Aircraftman" xml:space="preserve">
+    <value>Aviateur-chef</value>
+  </data>
+  <data name="Rank_Airman" xml:space="preserve">
+    <value>Aviateur</value>
+  </data>
+  <data name="Rank_AirmanFirstClass" xml:space="preserve">
+    <value>Aviateur de première classe</value>
+  </data>
+  <data name="Rank_ChiefPettyOfficer" xml:space="preserve">
+    <value>Chief Petty Officer</value>
+  </data>
+  <data name="Rank_CompanySergeantMajor" xml:space="preserve">
+    <value>Sergent-major de compagnie</value>
+  </data>
+  <data name="Rank_Corporal" xml:space="preserve">
+    <value>Caporal</value>
+  </data>
+  <data name="Rank_FlightSergeant" xml:space="preserve">
+    <value>Sergent</value>
+  </data>
+  <data name="Rank_GunnerySergeant" xml:space="preserve">
+    <value>Le sergent</value>
+  </data>
+  <data name="Rank_LanceCorporal" xml:space="preserve">
+    <value>Caporal suppléant</value>
+  </data>
+  <data name="Rank_LeadingSeaman" xml:space="preserve">
+    <value>Matelot</value>
+  </data>
+  <data name="Rank_LeadingStarman" xml:space="preserve">
+    <value>Starman leader</value>
+  </data>
+  <data name="Rank_Marine" xml:space="preserve">
+    <value>Marine</value>
+  </data>
+  <data name="Rank_MasterSergeant" xml:space="preserve">
+    <value>Master Sergeant</value>
+  </data>
+  <data name="Rank_PettyOfficer" xml:space="preserve">
+    <value>Petty Officer</value>
+  </data>
+  <data name="Rank_Private" xml:space="preserve">
+    <value>Privé</value>
+  </data>
+  <data name="Rank_RegimentalSergeantMajor" xml:space="preserve">
+    <value>Sergent-major régimentaire</value>
+  </data>
+  <data name="Rank_Seaman" xml:space="preserve">
+    <value>Seaman</value>
+  </data>
+  <data name="Rank_SeniorAircraftman" xml:space="preserve">
+    <value>Aviateur-chef principal</value>
+  </data>
+  <data name="Rank_SeniorAirman" xml:space="preserve">
+    <value>Senior Airman</value>
+  </data>
+  <data name="Rank_Sergeant" xml:space="preserve">
+    <value>Sergent</value>
+  </data>
+  <data name="Rank_StaffSergeant" xml:space="preserve">
+    <value>Sergent d’état-major</value>
+  </data>
+  <data name="Rank_Starman" xml:space="preserve">
+    <value>Starman</value>
+  </data>
+  <data name="Rank_TechnicalSergeant" xml:space="preserve">
+    <value>Sergent technique</value>
+  </data>
+  <data name="Rank_WarrantOfficer" xml:space="preserve">
+    <value>Adjudant-maître</value>
+  </data>
+  <data name="Species_Khiff" xml:space="preserve">
+    <value>K'Hiff</value>
+  </data>
+  <data name="Species_Froog" xml:space="preserve">
+    <value>Froog</value>
+  </data>
+  <data name="Career_MilitaryWitch" xml:space="preserve">
+    <value>Sorcière militaire</value>
+  </data>
+  <data name="Career_RogueWitch" xml:space="preserve">
+    <value>Sorcière de voyous</value>
+  </data>
+  <data name="Career_LicencedWitch" xml:space="preserve">
+    <value>Sorcière licence</value>
+  </data>
+  <data name="Rank_AreaLeader" xml:space="preserve">
+    <value>Chef de zone</value>
+  </data>
+  <data name="Rank_AssistantCovenLeader" xml:space="preserve">
+    <value>Coven assistant chef</value>
+  </data>
+  <data name="Rank_CovenLeader" xml:space="preserve">
+    <value>Coven chef</value>
+  </data>
+  <data name="Rank_SectorLeader" xml:space="preserve">
+    <value>Chef de secteur</value>
+  </data>
+  <data name="Rank_SeniorWitch" xml:space="preserve">
+    <value>Sorcière senior</value>
+  </data>
+  <data name="Rank_TraineeWitch" xml:space="preserve">
+    <value>Sorcière stagiaire</value>
+  </data>
+  <data name="Rank_Witch" xml:space="preserve">
+    <value>Sorcière</value>
+  </data>
+</root>
