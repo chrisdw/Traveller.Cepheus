@@ -2843,6 +2843,26 @@
           <source>Teleportation</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Téléportation</target>
         </trans-unit>
+        <trans-unit id="Skill_BackgroundSkills" translate="yes" xml:space="preserve">
+          <source>Background Skills</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Compétences de fond</target>
+        </trans-unit>
+        <trans-unit id="Trait_Engineered" translate="yes" xml:space="preserve">
+          <source>Engineered</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">D’ingénierie</target>
+        </trans-unit>
+        <trans-unit id="Trait_Feral" translate="yes" xml:space="preserve">
+          <source>Feral</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Feral</target>
+        </trans-unit>
+        <trans-unit id="Trait_IsslerImmunity" translate="yes" xml:space="preserve">
+          <source>Issler Immunity</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Immunité Issler</target>
+        </trans-unit>
+        <trans-unit id="Trait_TotalPacifist" translate="yes" xml:space="preserve">
+          <source>Total Pacifist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pacifiste total</target>
+        </trans-unit>
       </group>
     </body>
   </file>

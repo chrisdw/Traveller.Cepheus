@@ -690,4 +690,19 @@
   <data name="Skill_Teleportation" xml:space="preserve">
     <value>Teleportation</value>
   </data>
+  <data name="Skill_BackgroundSkills" xml:space="preserve">
+    <value>Hintergrund-Fähigkeiten</value>
+  </data>
+  <data name="Trait_Engineered" xml:space="preserve">
+    <value>Entwickelt</value>
+  </data>
+  <data name="Trait_Feral" xml:space="preserve">
+    <value>Feral</value>
+  </data>
+  <data name="Trait_IsslerImmunity" xml:space="preserve">
+    <value>Issler Immunität</value>
+  </data>
+  <data name="Trait_TotalPacifist" xml:space="preserve">
+    <value>Insgesamt Pazifist</value>
+  </data>
 </root>

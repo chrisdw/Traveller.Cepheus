@@ -134,70 +134,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Soc.Value = dice.roll(2) - 2;
                             Traits.Add(Resources.Trait_Uplifited);
                             break;
-                        case Species.Commonwealth_Human:
-                            Profile = new EsperUPP();
-                            Profile.Str.Value = dice.roll(2);
-                            Profile.Dex.Value = dice.roll(2);
-                            Profile.End.Value = dice.roll(2);
-                            Profile.Int.Value = dice.roll(2);
-                            Profile.Edu.Value = dice.roll(2);
-                            Profile.Soc.Value = dice.roll(2);
-                            Profile["PSI"].Value = dice.roll();
-                            break;
-                        case Species.Shanthaa:
-                            Profile = new EsperUPP();
-                            Profile.Str.Value = dice.roll(2) - 1;
-                            Profile.Dex.Value = dice.roll(2) + 2;
-                            Profile.End.Value = dice.roll(2) - 1;
-                            Profile.Int.Value = dice.roll(2);
-                            Profile.Edu.Value = dice.roll(2);
-                            Profile.Soc.Value = dice.roll(2);
-                            Profile["PSI"].Value = dice.roll();
-                            break;
-                        case Species.Khiff:
-                            Profile = new EsperUPP();
-                            Profile.Str.Value = dice.roll(2);
-                            Profile.Dex.Value = dice.roll(2);
-                            Profile.End.Value = dice.roll(2);
-                            Profile.Int.Value = dice.roll(2);
-                            Profile.Edu.Value = dice.roll();
-                            Profile.Soc.Value = dice.roll(2);
-                            Profile["PSI"].Value = dice.roll();
-                            Traits.Add("Feral");
-                            Traits.Add("Natural Weapons");
-                            AddSkill(SkillLibrary.NaturalWeapons);
-                            break;
-                        case Species.Froog:
-                            Profile = new EsperUPP();
-                            switch (Sex)
-                            {
-                                case "Leader":
-                                    Profile.Str.Value = dice.roll(2) + 1;
-                                    Profile.Dex.Value = dice.roll(2) - 1;
-                                    Profile.End.Value = dice.roll(2) - 1;
-                                    Profile.Int.Value = dice.roll(2) + 1;
-                                    Profile.Edu.Value = dice.roll(2) + 1;
-                                    Profile.Soc.Value = dice.roll(2) + 1;
-                                    break;
-                                case "Warrior":
-                                    Profile.Str.Value = dice.roll(2) + 1;
-                                    Profile.Dex.Value = dice.roll(2) + 1;
-                                    Profile.End.Value = dice.roll(2) + 1;
-                                    Profile.Int.Value = dice.roll(2) - 1;
-                                    Profile.Edu.Value = dice.roll(2) - 1;
-                                    Profile.Soc.Value = dice.roll(2) - 1;
-                                    break;
-                                case "Technician":
-                                    Profile.Str.Value = dice.roll(2) - 1;
-                                    Profile.Dex.Value = dice.roll(2) + 1;
-                                    Profile.End.Value = dice.roll(2) - 1;
-                                    Profile.Int.Value = dice.roll(2) + 1;
-                                    Profile.Edu.Value = dice.roll(2) + 1;
-                                    Profile.Soc.Value = dice.roll(2) - 1;
-                                    break;
-                            }
-                            Profile["PSI"].Value = dice.roll();
-                            break;
                     }
                     var backgroundSkills = 3 + Profile.Edu.Modifier;
                     Skill skillList = GetBackgroundSkillList();
@@ -257,8 +193,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = (dice.roll(2) + 1).Clamp(7, 15);
                             Profile.Edu.Value = dice.roll(2).Clamp(7, 15);
                             Profile.Soc.Value = dice.roll(2) - 2;
-                            Traits.Add("Issler Immunity");
-                            Traits.Add("Engineered");
+                            Traits.Add(Resources.Trait_IsslerImmunity);
+                            Traits.Add(Resources.Trait_Engineered);
                             break;
                         case Species.Tazzim:
                             // use the standard UPP
@@ -269,7 +205,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2) + 1;
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
-                            Traits.Add("Issler Immunity");
+                            Traits.Add(Resources.Trait_IsslerImmunity);
                             break;
                         case Species.Quarm:
                             // use the standard UPP
@@ -280,7 +216,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2) - 2;
                             Profile.Soc.Value = dice.roll(2);
-                            Traits.Add("Issler Immunity");
+                            Traits.Add(Resources.Trait_IsslerImmunity);
                             break;
                         case Species.Wraither:
                             // use the standard UPP
@@ -291,8 +227,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2) + 2;
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
-                            Traits.Add("Issler Immunity");
-                            Traits.Add("Total Pacifist");
+                            Traits.Add(Resources.Trait_IsslerImmunity);
+                            Traits.Add(Resources.Trait_TotalPacifist);
                             break;
                         case Species.Shaper:
                             // use the Esper UPP
@@ -304,7 +240,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
                             Profile["PSI"].Value = dice.roll(2);
-                            Traits.Add("Issler Immunity");
+                            Traits.Add(Resources.Trait_IsslerImmunity);
                             break;
                         case Species.Articifer:
                             // use the standard UPP
@@ -315,7 +251,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2) + 1;
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
-                            Traits.Add("Issler Immunity");
+                            Traits.Add(Resources.Trait_IsslerImmunity);
                             break;
                     }
                     backgroundSkills = 3 + Profile.Edu.Modifier;
@@ -325,6 +261,75 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                         OnSkillOffered(skillList);
                     }
                     break;
+                case Constants.CultureType.Cepheus_TerranCommonwealth:
+                    switch (CharacterSpecies)
+                    {
+                        case Species.Commonwealth_Human:
+                            Profile = new EsperUPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            Profile["PSI"].Value = dice.roll();
+                            break;
+                        case Species.Shanthaa:
+                            Profile = new EsperUPP();
+                            Profile.Str.Value = dice.roll(2) - 1;
+                            Profile.Dex.Value = dice.roll(2) + 2;
+                            Profile.End.Value = dice.roll(2) - 1;
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll(2);
+                            Profile.Soc.Value = dice.roll(2);
+                            Profile["PSI"].Value = dice.roll();
+                            break;
+                        case Species.Khiff:
+                            Profile = new EsperUPP();
+                            Profile.Str.Value = dice.roll(2);
+                            Profile.Dex.Value = dice.roll(2);
+                            Profile.End.Value = dice.roll(2);
+                            Profile.Int.Value = dice.roll(2);
+                            Profile.Edu.Value = dice.roll();
+                            Profile.Soc.Value = dice.roll(2);
+                            Profile["PSI"].Value = dice.roll();
+                            Traits.Add(Resources.Trait_Feral);
+                            Traits.Add(Resources.Trait_NaturalWeapons);
+                            AddSkill(SkillLibrary.NaturalWeapons);
+                            break;
+                        case Species.Froog:
+                            Profile = new EsperUPP();
+                            switch (Sex)
+                            {
+                                case "Leader":
+                                    Profile.Str.Value = dice.roll(2) + 1;
+                                    Profile.Dex.Value = dice.roll(2) - 1;
+                                    Profile.End.Value = dice.roll(2) - 1;
+                                    Profile.Int.Value = dice.roll(2) + 1;
+                                    Profile.Edu.Value = dice.roll(2) + 1;
+                                    Profile.Soc.Value = dice.roll(2) + 1;
+                                    break;
+                                case "Warrior":
+                                    Profile.Str.Value = dice.roll(2) + 1;
+                                    Profile.Dex.Value = dice.roll(2) + 1;
+                                    Profile.End.Value = dice.roll(2) + 1;
+                                    Profile.Int.Value = dice.roll(2) - 1;
+                                    Profile.Edu.Value = dice.roll(2) - 1;
+                                    Profile.Soc.Value = dice.roll(2) - 1;
+                                    break;
+                                case "Technician":
+                                    Profile.Str.Value = dice.roll(2) - 1;
+                                    Profile.Dex.Value = dice.roll(2) + 1;
+                                    Profile.End.Value = dice.roll(2) - 1;
+                                    Profile.Int.Value = dice.roll(2) + 1;
+                                    Profile.Edu.Value = dice.roll(2) + 1;
+                                    Profile.Soc.Value = dice.roll(2) - 1;
+                                    break;
+                            }
+                            Profile["PSI"].Value = dice.roll();
+                            break;
+                    }
+                    break;
             }
         }
 
@@ -332,7 +337,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
         {
             return new Skill()
             {
-                Name = "Background Skills",
+                Name = Resources.Skill_BackgroundSkills,
                 Level = 0,
                 Cascade =
                         {

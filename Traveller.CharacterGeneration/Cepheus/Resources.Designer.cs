@@ -1402,6 +1402,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Background Skills.
+        /// </summary>
+        internal static string Skill_BackgroundSkills {
+            get {
+                return ResourceManager.GetString("Skill_BackgroundSkills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Basic Training.
         /// </summary>
         internal static string Skill_BasicTraining {
@@ -1960,11 +1969,29 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Engineered.
+        /// </summary>
+        internal static string Trait_Engineered {
+            get {
+                return ResourceManager.GetString("Trait_Engineered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fast Speed.
         /// </summary>
         internal static string Trait_FastSpeed {
             get {
                 return ResourceManager.GetString("Trait_FastSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feral.
+        /// </summary>
+        internal static string Trait_Feral {
+            get {
+                return ResourceManager.GetString("Trait_Feral", resourceCulture);
             }
         }
         
@@ -2001,6 +2028,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Trait_HiveMentaility {
             get {
                 return ResourceManager.GetString("Trait_HiveMentaility", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Issler Immunity.
+        /// </summary>
+        internal static string Trait_IsslerImmunity {
+            get {
+                return ResourceManager.GetString("Trait_IsslerImmunity", resourceCulture);
             }
         }
         
@@ -2073,6 +2109,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus {
         internal static string Trait_Small {
             get {
                 return ResourceManager.GetString("Trait_Small", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total Pacifist.
+        /// </summary>
+        internal static string Trait_TotalPacifist {
+            get {
+                return ResourceManager.GetString("Trait_TotalPacifist", resourceCulture);
             }
         }
         
