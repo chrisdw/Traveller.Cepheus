@@ -1,6 +1,6 @@
 ﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
 {
-    class Physician : Career
+    public class Physician : Career
     {
         public Physician()
         {

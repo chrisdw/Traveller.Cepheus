@@ -5,7 +5,7 @@
         public Entertainer()
         {
             Name = Resources.Career_Entertainer;
-            hasRanks = true;
+            hasRanks = false;
 
             enlistment = 5;
             enlistmentattr = "SOC";
