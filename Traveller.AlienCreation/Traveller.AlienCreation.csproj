@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>org.DownesWard.Traveller.AlienCreation</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Traveller.SystemGeneration\Traveller.SystemGeneration.csproj" />
+  </ItemGroup>
+
+</Project>
