@@ -135,12 +135,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Traits.Add(Resources.Trait_Uplifited);
                             break;
                     }
-                    var backgroundSkills = 3 + Profile.Edu.Modifier;
-                    Skill skillList = GetBackgroundSkillList();
-                    for (var i = 0; i < backgroundSkills; i++)
-                    {
-                        //OnSkillOffered(skillList);
-                    }
+                    ResolveRandomBackgroundSkills();
                     break;
                 case Constants.CultureType.Cepheus_Hostile:
                     switch (CharacterSpecies)
@@ -153,12 +148,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
-                            backgroundSkills = 3 + Profile.Edu.Modifier;
-                            skillList = GetBackgroundSkillList();
-                            for (var i = 0; i < backgroundSkills; i++)
-                            {
-                                //OnSkillOffered(skillList);
-                            }
+                            ResolveRandomBackgroundSkills();
                             break;
                         case Species.Android:
                             Profile = new UPP();
@@ -254,14 +244,12 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Traits.Add(Resources.Trait_IsslerImmunity);
                             break;
                     }
-                    backgroundSkills = 3 + Profile.Edu.Modifier;
-                    skillList = GetBackgroundSkillList();
-                    for (var i = 0; i < backgroundSkills; i++)
-                    {
-                        //OnSkillOffered(skillList);
-                    }
+                    ResolveRandomBackgroundSkills();
                     break;
                 case Constants.CultureType.Cepheus_TerranCommonwealth:
+                case Constants.CultureType.Cepheus_Covenant:
+                case Constants.CultureType.Cepheus_Lucerne:
+                case Constants.CultureType.Cepheus_Khiff:
                     switch (CharacterSpecies)
                     {
                         case Species.Commonwealth_Human:
@@ -329,8 +317,25 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             Profile["PSI"].Value = dice.roll();
                             break;
                     }
+                    ResolveRandomBackgroundSkills();
                     break;
             }
+        }
+
+        private void ResolveRandomBackgroundSkills()
+        {
+            int backgroundSkills = 3 + Profile.Edu.Modifier;
+            var list = GetBackgroundSkillList().ResolveSkill();
+            for (var i = 0; i < backgroundSkills; i++)
+            {
+                var dice = new Dice(list.Count);
+                var roll = dice.roll() - 1;
+                var skill = list[roll];
+                skill.Level = 0;
+                AddSkill(skill);
+                list.RemoveAt(roll);
+            }
+
         }
 
         protected virtual Skill GetBackgroundSkillList()
@@ -340,20 +345,20 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 Name = Resources.Skill_BackgroundSkills,
                 Level = 0,
                 Cascade =
-                        {
-                            CharacterGeneration.SkillLibrary.Admin,
-                            SkillLibrary.Advocate,
-                            SkillLibrary.Animals,
-                            CharacterGeneration.SkillLibrary.Carousing,
-                            CharacterGeneration.SkillLibrary.Communications,
-                            CharacterGeneration.SkillLibrary.Computer,
-                            CharacterGeneration.SkillLibrary.Electronics,
-                            CharacterGeneration.SkillLibrary.Engineering,
-                            SkillLibrary.Linguistics,
-                            CharacterGeneration.SkillLibrary.Mechanical,
-                            CharacterGeneration.SkillLibrary.Medic,
-                            SkillLibrary.Sciences,
-                        }
+                {
+                    CharacterGeneration.SkillLibrary.Admin,
+                    SkillLibrary.Advocate,
+                    SkillLibrary.Animals,
+                    CharacterGeneration.SkillLibrary.Carousing,
+                    CharacterGeneration.SkillLibrary.Communications,
+                    CharacterGeneration.SkillLibrary.Computer,
+                    CharacterGeneration.SkillLibrary.Electronics,
+                    CharacterGeneration.SkillLibrary.Engineering,
+                    SkillLibrary.Linguistics,
+                    CharacterGeneration.SkillLibrary.Mechanical,
+                    CharacterGeneration.SkillLibrary.Medic,
+                    SkillLibrary.Sciences,
+                }
             };
         }
 
