@@ -6,6 +6,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth
         public LicencedWitch()
         {
             Name = Resources.Career_LicencedWitch;
+            psionicTrained = true;
 
             enlistment = 6;
             enlistmentattr = "PSI";
@@ -93,7 +94,10 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth
 
         protected override void RankSkill()
         {
-            throw new System.NotImplementedException();
+            if (RankNumber == 5)
+            {
+                Owner.AddSkill(CharacterGeneration.SkillLibrary.Admin);
+            }
         }
     }
 }

@@ -36,6 +36,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                 case "Commonwealth":
                     list.Add("K'Hiff");
                     list.Add("Terran Commonwealth");
+                    list.Add("Covenant of the Lord");
+                    list.Add("Lucerne Compact");
                     break;
             }
             return list;
@@ -95,6 +97,16 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     };
                 case "Terran Commonwealth":
                     return new Cepheus.Commonwealth.Terran.Culture()
+                    {
+                        UseMishaps = useMishaps
+                    };
+                case "Covenant of the Lord":
+                    return new Cepheus.Commonwealth.Covenant.Culture()
+                    {
+                        UseMishaps = useMishaps
+                    };
+                case "Lucerne Compact":
+                    return new Cepheus.Commonwealth.Lucerne.Culture()
                     {
                         UseMishaps = useMishaps
                     };

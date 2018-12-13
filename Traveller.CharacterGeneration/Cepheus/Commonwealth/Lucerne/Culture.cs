@@ -1,17 +1,19 @@
 ﻿using org.DownesWard.Utilities;
+using System;
 using System.Collections.Generic;
 
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Terran
+namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Lucerne
 {
     public class Culture : ICulture
     {
         private Dice dice = new Dice(6);
 
-        public Constants.CultureType Id => Constants.CultureType.Cepheus_TerranCommonwealth;
+        public Constants.CultureType Id => Constants.CultureType.Cepheus_Lucerne;
 
         public bool MultipleCareers => true;
+
         public bool UseMishaps { get; set; }
-        
+
         public bool BenefitAllowed(CharacterGeneration.Character character, Benefit benefit)
         {
             return true;
@@ -144,8 +146,6 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Terr
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
                     list.Add(Properties.Resources.Species_Human, CharacterGeneration.Character.Species.Commonwealth_Human);
-                    list.Add(Resources.Species_Khiff, CharacterGeneration.Character.Species.Khiff);
-                    list.Add(Resources.Species_Froog, CharacterGeneration.Character.Species.Froog);
                     list.Add(Cepheus.Resources.Species_UpliftedDolphin, CharacterGeneration.Character.Species.Dolphin);
                     list.Add(Cepheus.Resources.Species_UpliftedApe, CharacterGeneration.Character.Species.Uplifted_Ape);
                     break;

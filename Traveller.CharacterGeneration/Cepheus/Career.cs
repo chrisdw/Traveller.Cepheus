@@ -185,6 +185,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 if (Owner.Profile is EsperUPP)
                 {
                     Owner.Profile["PSI"].Value--;
+                    Owner.Journal.Add(string.Format(Resources.Msg_AgingReduction, "PSI", 1));
                 }
             }
         }

@@ -47,6 +47,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
         private async void SkillOffered(object sender, Career.SkillOfferedEventArgs e)
         {
             var skill = e.OfferedSkill;
+            var level = skill.Level;
             var skills = e.OfferedSkill.ResolveSkill();
 
             // TODO: Work out why this is needed
@@ -76,7 +77,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Attribute_Raised, skill.Name, skill.Level), Properties.Resources.Button_OK);
                     }
-                    e.Owner.AddAttribute(skill.Name, skill.Level);
+                    e.Owner.AddAttribute(skill.Name, level);
                 }
                 else
                 {
@@ -84,6 +85,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration.UI
                     {
                         await DisplayAlert(Properties.Resources.Title_App, string.Format(Properties.Resources.Msg_Skill_Received, skill.Name, skill.Level), Properties.Resources.Button_OK);
                     }
+                    // Make sure that when resolving a cascade the added skill is
+                    // at the level of the top level skill
+                    skill.Level = level;
                     e.Owner.AddSkill(skill);
                 }
             }

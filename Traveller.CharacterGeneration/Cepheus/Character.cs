@@ -139,7 +139,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     Skill skillList = GetBackgroundSkillList();
                     for (var i = 0; i < backgroundSkills; i++)
                     {
-                        OnSkillOffered(skillList);
+                        //OnSkillOffered(skillList);
                     }
                     break;
                 case Constants.CultureType.Cepheus_Hostile:
@@ -157,7 +157,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             skillList = GetBackgroundSkillList();
                             for (var i = 0; i < backgroundSkills; i++)
                             {
-                                OnSkillOffered(skillList);
+                                //OnSkillOffered(skillList);
                             }
                             break;
                         case Species.Android:
@@ -258,7 +258,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                     skillList = GetBackgroundSkillList();
                     for (var i = 0; i < backgroundSkills; i++)
                     {
-                        OnSkillOffered(skillList);
+                        //OnSkillOffered(skillList);
                     }
                     break;
                 case Constants.CultureType.Cepheus_TerranCommonwealth:
