@@ -3974,6 +3974,10 @@ grièvement blessé. Il menace de tout blâme sur vous.</target>
           <source>Witch</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Sorcière</target>
         </trans-unit>
+        <trans-unit id="Species_Shanthaa" translate="yes" xml:space="preserve">
+          <source>Shanthaa</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Shanthaa</target>
+        </trans-unit>
       </group>
     </body>
   </file>

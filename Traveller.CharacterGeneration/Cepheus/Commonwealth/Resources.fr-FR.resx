@@ -126,4 +126,7 @@
   <data name="Rank_Witch" xml:space="preserve">
     <value>Sorcière</value>
   </data>
+  <data name="Species_Shanthaa" xml:space="preserve">
+    <value>Shanthaa</value>
+  </data>
 </root>

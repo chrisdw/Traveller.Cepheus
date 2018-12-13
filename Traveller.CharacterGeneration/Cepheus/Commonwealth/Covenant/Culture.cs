@@ -194,6 +194,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Cove
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
                     list.Add(Properties.Resources.Species_Human, CharacterGeneration.Character.Species.Commonwealth_Human);
+                    list.Add(Resources.Species_Khiff, CharacterGeneration.Character.Species.Khiff);
                     break;
             }
 

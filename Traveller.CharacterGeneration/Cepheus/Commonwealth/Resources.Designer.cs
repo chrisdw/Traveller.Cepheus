@@ -401,5 +401,14 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth {
                 return ResourceManager.GetString("Species_Khiff", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shanthaa.
+        /// </summary>
+        internal static string Species_Shanthaa {
+            get {
+                return ResourceManager.GetString("Species_Shanthaa", resourceCulture);
+            }
+        }
     }
 }

@@ -41,7 +41,8 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             Cepheus_Khiff,
             Cepheus_TerranCommonwealth,
             Cepheus_Covenant,
-            Cepheus_Lucerne
+            Cepheus_Lucerne,
+            Cepheus_Shanthaa
         }
     }
 }

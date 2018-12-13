@@ -250,6 +250,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 case Constants.CultureType.Cepheus_Covenant:
                 case Constants.CultureType.Cepheus_Lucerne:
                 case Constants.CultureType.Cepheus_Khiff:
+                case Constants.CultureType.Cepheus_Shanthaa:
                     switch (CharacterSpecies)
                     {
                         case Species.Commonwealth_Human:
@@ -264,13 +265,15 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             break;
                         case Species.Shanthaa:
                             Profile = new EsperUPP();
-                            Profile.Str.Value = dice.roll(2) - 1;
+                            Profile.Str.Value = (dice.roll(2) - 2).Clamp(1, 10);
                             Profile.Dex.Value = dice.roll(2) + 2;
-                            Profile.End.Value = dice.roll(2) - 1;
+                            Profile.End.Value = (dice.roll(2) - 2).Clamp(1, 10);
                             Profile.Int.Value = dice.roll(2);
                             Profile.Edu.Value = dice.roll(2);
                             Profile.Soc.Value = dice.roll(2);
                             Profile["PSI"].Value = dice.roll();
+                            Traits.Add(Resources.Trait_NaturalWeapons);
+                            AddSkill(SkillLibrary.NaturalWeapons);
                             break;
                         case Species.Khiff:
                             Profile = new EsperUPP();

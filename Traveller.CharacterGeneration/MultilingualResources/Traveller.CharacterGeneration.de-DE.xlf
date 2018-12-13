@@ -3974,6 +3974,10 @@ schwer verletzt. Er droht, alles auf Sie zu tadeln.</target>
           <source>Witch</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hexe</target>
         </trans-unit>
+        <trans-unit id="Species_Shanthaa" translate="yes" xml:space="preserve">
+          <source>Shanthaa</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Shanthaa</target>
+        </trans-unit>
       </group>
     </body>
   </file>

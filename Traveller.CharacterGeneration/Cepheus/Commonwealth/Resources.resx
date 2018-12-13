@@ -231,4 +231,7 @@
   <data name="Species_Khiff" xml:space="preserve">
     <value>K'Hiff</value>
   </data>
+  <data name="Species_Shanthaa" xml:space="preserve">
+    <value>Shanthaa</value>
+  </data>
 </root>
