@@ -39,6 +39,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     list.Add("Covenant of the Lord");
                     list.Add("Lucerne Compact");
                     list.Add("Shanthaa");
+                    list.Add("Froog");
                     break;
             }
             return list;
@@ -113,6 +114,11 @@ namespace org.DownesWard.Traveller.CharacterGeneration
                     };
                 case "Shanthaa":
                     return new Cepheus.Commonwealth.Shanthaa.Culture()
+                    {
+                        UseMishaps = useMishaps
+                    };
+                case "Froog":
+                    return new Cepheus.Commonwealth.Froog.Culture()
                     {
                         UseMishaps = useMishaps
                     };

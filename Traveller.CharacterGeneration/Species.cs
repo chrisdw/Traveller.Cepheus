@@ -1,7 +1,5 @@
 ﻿using org.DownesWard.Utilities;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace org.DownesWard.Traveller.CharacterGeneration
 {
@@ -15,9 +13,9 @@ namespace org.DownesWard.Traveller.CharacterGeneration
             switch (species)
             {
                 case Character.Species.Froog:
-                    sexes.Add("Leader");
-                    sexes.Add("Technician");
-                    sexes.Add("Warrior");
+                    sexes.Add(Cepheus.Commonwealth.Resources.Sex_Leader);
+                    sexes.Add(Cepheus.Commonwealth.Resources.Sex_Technician);
+                    sexes.Add(Cepheus.Commonwealth.Resources.Sex_Warrior);
                     break;
                 case Character.Species.Insectans:
                     sexes.Add(Properties.Resources.Sex_Worker);

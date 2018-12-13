@@ -10,7 +10,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Khif
 
         public Constants.CultureType Id => Constants.CultureType.Cepheus_Khiff;
 
-        public bool MultipleCareers => false;
+        public bool MultipleCareers => true;
 
         public bool BenefitAllowed(CharacterGeneration.Character character, Benefit benefit)
         {

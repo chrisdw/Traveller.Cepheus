@@ -129,4 +129,13 @@
   <data name="Species_Shanthaa" xml:space="preserve">
     <value>Shanthaa</value>
   </data>
+  <data name="Sex_Leader" xml:space="preserve">
+    <value>Chef de file</value>
+  </data>
+  <data name="Sex_Technician" xml:space="preserve">
+    <value>Technicien</value>
+  </data>
+  <data name="Sex_Warrior" xml:space="preserve">
+    <value>Guerrier</value>
+  </data>
 </root>

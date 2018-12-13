@@ -3,17 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Covenant
+namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Froog
 {
     public class Culture : ICulture
     {
         private Dice dice = new Dice(6);
 
-        public Constants.CultureType Id =>  Constants.CultureType.Cepheus_Covenant;
+        public bool UseMishaps { get; set; }
+        public Constants.CultureType Id => Constants.CultureType.Cepheus_Froog;
 
         public bool MultipleCareers => true;
-
-        public bool UseMishaps { get; set; }
 
         public bool BenefitAllowed(CharacterGeneration.Character character, Benefit benefit)
         {
@@ -26,47 +25,41 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Cove
             switch (character.Style)
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
-                    if (character.Sex.Equals(Properties.Resources.Sex_Female))
+                    careers.Add(Cepheus.Resources.Career_AerospaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Aerospace_Defence);
+                    careers.Add(Cepheus.Resources.Career_Agent, CharacterGeneration.Career.CareerType.Cepheus_Agent);
+                    careers.Add(Cepheus.Resources.Career_Athlete, CharacterGeneration.Career.CareerType.Cepheus_Athlete);
+                    careers.Add(Cepheus.Resources.Career_Bureaucrat, CharacterGeneration.Career.CareerType.Cepheus_Bureaucrat);
+                    careers.Add(Cepheus.Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Cepheus_Colonist);
+                    if (character.Sex.Equals(Resources.Sex_Leader))
                     {
-                        careers.Add(Cepheus.Resources.Career_Agent, CharacterGeneration.Career.CareerType.Cepheus_Agent);
-                        careers.Add(Cepheus.Resources.Career_Athlete, CharacterGeneration.Career.CareerType.Cepheus_Athlete);
-                        careers.Add(Cepheus.Resources.Career_Bureaucrat, CharacterGeneration.Career.CareerType.Cepheus_Bureaucrat);
-                        careers.Add(Cepheus.Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Cepheus_Colonist);
                         careers.Add(Cepheus.Resources.Career_Diplomat, CharacterGeneration.Career.CareerType.Cepheus_Diplomat);
-                        careers.Add(Cepheus.Resources.Career_Drifter, CharacterGeneration.Career.CareerType.Cepheus_Drifter);
-                        careers.Add(Cepheus.Resources.Career_Entertainer, CharacterGeneration.Career.CareerType.Cepheus_Entertainer);
-                        careers.Add(Cepheus.Resources.Career_Merchant, CharacterGeneration.Career.CareerType.Cepheus_Merchant);
-                        careers.Add(Cepheus.Resources.Career_Physician, CharacterGeneration.Career.CareerType.Cepheus_Physician);
-                        careers.Add(Cepheus.Resources.Career_Pirate, CharacterGeneration.Career.CareerType.Cepheus_Pirate);
-                        careers.Add(Cepheus.Resources.Career_Rogue, CharacterGeneration.Career.CareerType.Cepheus_Rogue);
-                        careers.Add(Resources.Career_RogueWitch, CharacterGeneration.Career.CareerType.Commonwealth_RogueWitch);
-                        careers.Add(Cepheus.Resources.Career_Scientist, CharacterGeneration.Career.CareerType.Cepheus_Scientist);
-                        careers.Add(Cepheus.Resources.Career_Technician, CharacterGeneration.Career.CareerType.Cepheus_Technician);
                     }
-                    else
+                    careers.Add(Cepheus.Resources.Career_Entertainer, CharacterGeneration.Career.CareerType.Cepheus_Entertainer);
+                    careers.Add(Cepheus.Resources.Career_Hunter, CharacterGeneration.Career.CareerType.Cepheus_Hunter);
+                    careers.Add(Resources.Career_LicencedWitch, CharacterGeneration.Career.CareerType.Commonwealth_LicencedWitch);
+                    careers.Add(Cepheus.Resources.Career_Marine, CharacterGeneration.Career.CareerType.Cepheus_Marine);
+                    careers.Add(Cepheus.Resources.Career_MaritimeDefence, CharacterGeneration.Career.CareerType.Cepheus_Maritime_Defence);
+                    careers.Add(Cepheus.Resources.Career_Mercenary, CharacterGeneration.Career.CareerType.Cepheus_Mercenary);
+                    careers.Add(Cepheus.Resources.Career_Merchant, CharacterGeneration.Career.CareerType.Cepheus_Merchant);
+                    careers.Add(Resources.Career_MilitaryWitch, CharacterGeneration.Career.CareerType.Commonwealth_MilitaryWitch);
+                    careers.Add(Cepheus.Resources.Career_Navy, CharacterGeneration.Career.CareerType.Cepheus_Navy);
+                    if (character.Sex.Equals(Resources.Sex_Leader))
                     {
-                        careers.Add(Cepheus.Resources.Career_AerospaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Aerospace_Defence);
-                        careers.Add(Cepheus.Resources.Career_Agent, CharacterGeneration.Career.CareerType.Cepheus_Agent);
-                        careers.Add(Cepheus.Resources.Career_Athlete, CharacterGeneration.Career.CareerType.Cepheus_Athlete);
-                         careers.Add(Cepheus.Resources.Career_Bureaucrat, CharacterGeneration.Career.CareerType.Cepheus_Bureaucrat);
-                        careers.Add(Cepheus.Resources.Career_Colonist, CharacterGeneration.Career.CareerType.Cepheus_Colonist);
-                        careers.Add(Cepheus.Resources.Career_Diplomat, CharacterGeneration.Career.CareerType.Cepheus_Diplomat);
-                        careers.Add(Cepheus.Resources.Career_Drifter, CharacterGeneration.Career.CareerType.Cepheus_Drifter);
-                        careers.Add(Cepheus.Resources.Career_Entertainer, CharacterGeneration.Career.CareerType.Cepheus_Entertainer);
-                        careers.Add(Cepheus.Resources.Career_Hunter, CharacterGeneration.Career.CareerType.Cepheus_Hunter);
-                        careers.Add(Cepheus.Resources.Career_Marine, CharacterGeneration.Career.CareerType.Cepheus_Marine);
-                        careers.Add(Cepheus.Resources.Career_MaritimeDefence, CharacterGeneration.Career.CareerType.Cepheus_Maritime_Defence);
-                        careers.Add(Cepheus.Resources.Career_Mercenary, CharacterGeneration.Career.CareerType.Cepheus_Mercenary);
-                        careers.Add(Cepheus.Resources.Career_Merchant, CharacterGeneration.Career.CareerType.Cepheus_Merchant);
-                        careers.Add(Cepheus.Resources.Career_Navy, CharacterGeneration.Career.CareerType.Cepheus_Navy);
                         careers.Add(Cepheus.Resources.Career_Noble, CharacterGeneration.Career.CareerType.Cepheus_Noble);
+                    }
+                    if (character.Sex.Equals(Resources.Sex_Technician))
+                    {
                         careers.Add(Cepheus.Resources.Career_Physician, CharacterGeneration.Career.CareerType.Cepheus_Physician);
-                        careers.Add(Cepheus.Resources.Career_Pirate, CharacterGeneration.Career.CareerType.Cepheus_Pirate);
-                        careers.Add(Cepheus.Resources.Career_Rogue, CharacterGeneration.Career.CareerType.Cepheus_Rogue);
-                        careers.Add(Resources.Career_RogueWitch, CharacterGeneration.Career.CareerType.Commonwealth_RogueWitch);
+                    }
+                    careers.Add(Cepheus.Resources.Career_Pirate, CharacterGeneration.Career.CareerType.Cepheus_Pirate);
+                    if (character.Sex.Equals(Resources.Sex_Technician))
+                    {
                         careers.Add(Cepheus.Resources.Career_Scientist, CharacterGeneration.Career.CareerType.Cepheus_Scientist);
-                        careers.Add(Cepheus.Resources.Career_Scout, CharacterGeneration.Career.CareerType.Cepheus_Scout);
-                        careers.Add(Cepheus.Resources.Career_SurfaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Surface_Defence);
+                    }
+                    careers.Add(Cepheus.Resources.Career_Scout, CharacterGeneration.Career.CareerType.Cepheus_Scout);
+                    careers.Add(Cepheus.Resources.Career_SurfaceDefence, CharacterGeneration.Career.CareerType.Cepheus_Surface_Defence);
+                    if (character.Sex.Equals(Resources.Sex_Technician))
+                    {
                         careers.Add(Cepheus.Resources.Career_Technician, CharacterGeneration.Career.CareerType.Cepheus_Technician);
                     }
                     break;
@@ -76,11 +69,13 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Cove
 
         public bool CheckSkill(CharacterGeneration.Character character, Skill skill, int count)
         {
-            if (character.Sex.Equals(Properties.Resources.Sex_Male) && skill.SexApplicabilty == Skill.SkillSex.Female)
+            // Only leaders can lead
+            if (skill.Name.Equals(Properties.Resources.Skill_Leader) && !character.Sex.Equals(Resources.Sex_Leader))
             {
                 return false;
             }
-            if (character.Sex.Equals(Properties.Resources.Sex_Female) && skill.SexApplicabilty == Skill.SkillSex.Male)
+            // Only technicians have the flexibilty to be J-o-T
+            if (skill.Name.Equals(Properties.Resources.Skill_JackOfTrades) && !character.Sex.Equals(Resources.Sex_Technician))
             {
                 return false;
             }
@@ -89,41 +84,19 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Cove
 
         public BasicCareer Drafted(CharacterGeneration.Character character)
         {
-            if (character.Sex.Equals(Properties.Resources.Sex_Female))
+            switch (dice.roll(1))
             {
-                switch (dice.roll(1))
-                {
-                    case 1:
-                        return new Agent() { Culture = this, Mishaps = UseMishaps };
-                    case 2:
-                        return new Colonist() { Culture = this, Mishaps = UseMishaps };
-                    case 3:
-                        return new Entertainer() { Culture = this, Mishaps = UseMishaps };
-                    case 4:
-                        return new Merchant() { Culture = this, Mishaps = UseMishaps };
-                    case 5:
-                        return new Scientist() { Culture = this, Mishaps = UseMishaps };
-                    case 6:
-                        return new Technician() { Culture = this, Mishaps = UseMishaps };
-                }
-            }
-            else
-            {
-                switch (dice.roll(1))
-                {
-                    case 1:
-                        return new AerospaceDefence() { Culture = this, Mishaps = UseMishaps };
-                    case 2:
-                        return new Marine() { Culture = this, Mishaps = UseMishaps };
-                    case 3:
-                        return new MaritimeDefence() { Culture = this, Mishaps = UseMishaps };
-                    case 4:
-                        return new Navy() { Culture = this, Mishaps = UseMishaps };
-                    case 5:
-                        return new Scout() { Culture = this, Mishaps = UseMishaps };
-                    case 6:
-                        return new SurfaceDefence() { Culture = this, Mishaps = UseMishaps };
-                }
+                case 1:
+                    return new AerospaceDefence() { Culture = this, Mishaps = UseMishaps };
+                case 2:
+                    return new Marine() { Culture = this, Mishaps = UseMishaps };
+                case 3:
+                    return new MaritimeDefence() { Culture = this, Mishaps = UseMishaps };
+                case 4:
+                    return new Navy() { Culture = this, Mishaps = UseMishaps };
+                case 5:
+                case 6:
+                    return new SurfaceDefence() { Culture = this, Mishaps = UseMishaps };
             }
             return new SurfaceDefence() { Culture = this, Mishaps = UseMishaps };
         }
@@ -183,7 +156,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Cove
                 case CharacterGeneration.Career.CareerType.Commonwealth_LicencedWitch:
                     return new LicencedWitch { Culture = this, Mishaps = UseMishaps };
                 default:
-                    return new Athlete { Culture = this, Mishaps = UseMishaps };
+                    return new SurfaceDefence { Culture = this, Mishaps = UseMishaps };
             }
         }
 
@@ -194,7 +167,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Cove
             {
                 case Constants.GenerationStyle.Cepheus_Engine:
                     list.Add(Properties.Resources.Species_Human, CharacterGeneration.Character.Species.Commonwealth_Human);
-                    list.Add(Resources.Species_Khiff, CharacterGeneration.Character.Species.Khiff);
+                    list.Add(Resources.Species_Froog, CharacterGeneration.Character.Species.Froog);
                     break;
             }
 

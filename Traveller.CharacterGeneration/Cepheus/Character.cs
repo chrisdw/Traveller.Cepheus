@@ -251,6 +251,7 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                 case Constants.CultureType.Cepheus_Lucerne:
                 case Constants.CultureType.Cepheus_Khiff:
                 case Constants.CultureType.Cepheus_Shanthaa:
+                case Constants.CultureType.Cepheus_Froog:
                     switch (CharacterSpecies)
                     {
                         case Species.Commonwealth_Human:
@@ -290,32 +291,32 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus
                             break;
                         case Species.Froog:
                             Profile = new EsperUPP();
-                            switch (Sex)
+                            if (Sex.Equals(Commonwealth.Resources.Sex_Leader))
                             {
-                                case "Leader":
-                                    Profile.Str.Value = dice.roll(2) + 1;
-                                    Profile.Dex.Value = dice.roll(2) - 1;
-                                    Profile.End.Value = dice.roll(2) - 1;
-                                    Profile.Int.Value = dice.roll(2) + 1;
-                                    Profile.Edu.Value = dice.roll(2) + 1;
-                                    Profile.Soc.Value = dice.roll(2) + 1;
-                                    break;
-                                case "Warrior":
-                                    Profile.Str.Value = dice.roll(2) + 1;
-                                    Profile.Dex.Value = dice.roll(2) + 1;
-                                    Profile.End.Value = dice.roll(2) + 1;
-                                    Profile.Int.Value = dice.roll(2) - 1;
-                                    Profile.Edu.Value = dice.roll(2) - 1;
-                                    Profile.Soc.Value = dice.roll(2) - 1;
-                                    break;
-                                case "Technician":
-                                    Profile.Str.Value = dice.roll(2) - 1;
-                                    Profile.Dex.Value = dice.roll(2) + 1;
-                                    Profile.End.Value = dice.roll(2) - 1;
-                                    Profile.Int.Value = dice.roll(2) + 1;
-                                    Profile.Edu.Value = dice.roll(2) + 1;
-                                    Profile.Soc.Value = dice.roll(2) - 1;
-                                    break;
+                                Profile.Str.Value = dice.roll(2) + 1;
+                                Profile.Dex.Value = dice.roll(2) - 1;
+                                Profile.End.Value = dice.roll(2) - 1;
+                                Profile.Int.Value = dice.roll(2) + 1;
+                                Profile.Edu.Value = dice.roll(2) + 1;
+                                Profile.Soc.Value = dice.roll(2) + 1;
+                            }
+                            else if (Sex.Equals(Commonwealth.Resources.Sex_Warrior))
+                            {
+                                Profile.Str.Value = dice.roll(2) + 1;
+                                Profile.Dex.Value = dice.roll(2) + 1;
+                                Profile.End.Value = dice.roll(2) + 1;
+                                Profile.Int.Value = dice.roll(2) - 1;
+                                Profile.Edu.Value = dice.roll(2) - 1;
+                                Profile.Soc.Value = dice.roll(2) - 1;
+                            }
+                            else // Tech
+                            {
+                                Profile.Str.Value = dice.roll(2) - 1;
+                                Profile.Dex.Value = dice.roll(2) + 1;
+                                Profile.End.Value = dice.roll(2) - 1;
+                                Profile.Int.Value = dice.roll(2) + 1;
+                                Profile.Edu.Value = dice.roll(2) + 1;
+                                Profile.Soc.Value = dice.roll(2) - 1;
                             }
                             Profile["PSI"].Value = dice.roll();
                             break;

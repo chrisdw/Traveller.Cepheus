@@ -225,6 +225,15 @@
   <data name="Rank_Witch" xml:space="preserve">
     <value>Witch</value>
   </data>
+  <data name="Sex_Leader" xml:space="preserve">
+    <value>Leader</value>
+  </data>
+  <data name="Sex_Technician" xml:space="preserve">
+    <value>Technician</value>
+  </data>
+  <data name="Sex_Warrior" xml:space="preserve">
+    <value>Warrior</value>
+  </data>
   <data name="Species_Froog" xml:space="preserve">
     <value>Froog</value>
   </data>

@@ -385,6 +385,33 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Leader.
+        /// </summary>
+        internal static string Sex_Leader {
+            get {
+                return ResourceManager.GetString("Sex_Leader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Technician.
+        /// </summary>
+        internal static string Sex_Technician {
+            get {
+                return ResourceManager.GetString("Sex_Technician", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warrior.
+        /// </summary>
+        internal static string Sex_Warrior {
+            get {
+                return ResourceManager.GetString("Sex_Warrior", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Froog.
         /// </summary>
         internal static string Species_Froog {

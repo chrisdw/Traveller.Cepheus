@@ -3978,6 +3978,18 @@ schwer verletzt. Er droht, alles auf Sie zu tadeln.</target>
           <source>Shanthaa</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Shanthaa</target>
         </trans-unit>
+        <trans-unit id="Sex_Leader" translate="yes" xml:space="preserve">
+          <source>Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Führendes Unternehmen</target>
+        </trans-unit>
+        <trans-unit id="Sex_Technician" translate="yes" xml:space="preserve">
+          <source>Technician</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Techniker</target>
+        </trans-unit>
+        <trans-unit id="Sex_Warrior" translate="yes" xml:space="preserve">
+          <source>Warrior</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Krieger</target>
+        </trans-unit>
       </group>
     </body>
   </file>
