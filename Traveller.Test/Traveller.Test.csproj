@@ -41,13 +41,26 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlienCreationTests.cs" />
     <Compile Include="LanguageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Traveller.AlienCreation\Traveller.AlienCreation.csproj">
+      <Project>{83965960-1FC4-4F8F-8DC9-C9C176C29E63}</Project>
+      <Name>Traveller.AlienCreation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Traveller.Language\Traveller.Language.csproj">
       <Project>{4F368FD4-C244-49F6-ADCE-59E9FC14BFA6}</Project>
       <Name>Traveller.Language</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Traveller.Shared\Traveller.Shared.csproj">
+      <Project>{9C2EA826-B92D-4F1B-810D-48CD952F3428}</Project>
+      <Name>Traveller.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Traveller.SystemGeneration\Traveller.SystemGeneration.csproj">
+      <Project>{87B33F7E-BCAC-48CB-8E3D-85C3440B6AE8}</Project>
+      <Name>Traveller.SystemGeneration</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
