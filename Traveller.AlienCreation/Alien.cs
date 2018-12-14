@@ -82,6 +82,11 @@ namespace org.DownesWard.Traveller.AlienCreation
             Fast
         }
 
+        public class Attribute
+        {
+            public int dice;
+            public int modifier;
+        }
         public EcologicalTypes EcologicalType { get; private set; }
         public EcologicalSubtypes EcologicalSubtype { get; private set; }
         public Metabolisms Metabolism { get; private set; }
@@ -89,9 +94,12 @@ namespace org.DownesWard.Traveller.AlienCreation
         public int NumGenders { get; private set; }
         public ReproductionMethods ReproductionMethod { get; private set; }
         public Sizes Size { get; private set; }
-        public int STRDie { get; private set; }
-        public int DEXDie { get; private set; }
-        public int ENDDie { get; private set; }
+        public Attribute STR { get; private set; } = new Attribute();
+        public Attribute DEX { get; private set; } = new Attribute();
+        public Attribute END { get; private set; } = new Attribute();
+        public Attribute INT { get; private set; } = new Attribute();
+        public Attribute EDU { get; private set; } = new Attribute();
+        public Attribute SOC { get; private set; } = new Attribute();
         public int AttackDM { get; private set; }
         public Symmetries Symmetry { get; private set; }
         public int LimbCount { get; private set; }
@@ -122,6 +130,18 @@ namespace org.DownesWard.Traveller.AlienCreation
             GenerateSize(homeworld);
             GenerateLimbs();
             GenerateMovement();
+        }
+
+        public UPP Generate()
+        {
+            var upp = new UPP();
+            upp.Str.Value = dice.roll(STR.dice) + STR.modifier;
+            upp.Dex.Value = dice.roll(DEX.dice) + DEX.modifier;
+            upp.End.Value = dice.roll(END.dice) + END.modifier;
+            upp.Int.Value = dice.roll(INT.dice) + INT.modifier;
+            upp.Edu.Value = dice.roll(EDU.dice) + EDU.modifier;
+            upp.Soc.Value = dice.roll(SOC.dice) + SOC.modifier;
+            return upp;
         }
 
         private void GenerateMovement()
@@ -755,42 +775,42 @@ namespace org.DownesWard.Traveller.AlienCreation
             {
                 case 2:
                     Size = Sizes.Tiny;
-                    STRDie = 1;
-                    ENDDie = 1;
-                    DEXDie = 3;
+                    STR.dice = 1;
+                    END.dice = 1;
+                    DEX.dice = 3;
                     AttackDM = -1;
                     break;
                 case 3:
                 case 4:
                     Size = Sizes.Small;
-                    STRDie = 1;
-                    ENDDie = 1;
-                    DEXDie = 3;
+                    STR.dice = 1;
+                    END.dice = 1;
+                    DEX.dice = 3;
                     AttackDM = 0;
                     break;
                 case 11:
                 case 12:
                 case 13:
                     Size = Sizes.Large;
-                    STRDie = 3;
-                    ENDDie = 3;
-                    DEXDie = 1;
+                    STR.dice = 3;
+                    END.dice = 3;
+                    DEX.dice = 1;
                     AttackDM = 0;
                     Traits.Add("Increased Life Support");
                     break;
                 case 14:
                     Size = Sizes.Huge;
-                    STRDie = 4;
-                    ENDDie = 4;
-                    DEXDie = 1;
+                    STR.dice = 4;
+                    END.dice = 4;
+                    DEX.dice = 1;
                     AttackDM = 1;
                     Traits.Add("Increased Life Support");
                     break;
                 default:
                     Size = Sizes.Medium;
-                    STRDie = 2;
-                    ENDDie = 2;
-                    DEXDie = 2;
+                    STR.dice = 2;
+                    END.dice = 2;
+                    DEX.dice = 2;
                     AttackDM = 0;
                     break;
             }
