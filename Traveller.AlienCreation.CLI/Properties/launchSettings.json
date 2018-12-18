@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Traveller.AlienCreation.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": "A-867A69-F 20 False"
+    }
+  }
+}

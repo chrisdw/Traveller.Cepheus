@@ -44,6 +44,37 @@ namespace org.DownesWard.Traveller.AlienCreation
         public int StartingAge { get; private set; }
         public int AgingBegins { get; private set; }
         public int AgingModifier { get; private set; }
+        public int BaseHeight { get; private set; }
+        public string HeightModifier { get; private set; }
+        public int BaseWeight { get; private set; }
+        public string WeightModifier { get; private set; }
+
+        private int[,] BaseHeights = new int[5, 11]
+        {
+            { 28, 30, 32, 36, 38, 40, 42, 44, 48, 50, 52 },
+            { 55, 60, 65, 70, 75, 80, 85, 90, 100, 105, 110 },
+            { 110, 120, 125, 130, 140, 145, 150, 160, 165, 170, 180 },
+            { 220, 230, 245, 260, 275, 290, 305, 320, 335, 350, 360 },
+            { 440, 460, 490, 520, 550, 580, 610, 640, 670, 700, 720 }
+        };
+
+        private int[,] BaseWeights = new int[5, 11]
+        {
+            { 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2 },
+            { 6, 8, 10, 10, 12, 12, 14, 14, 16, 18, 20 },
+            { 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80 },
+            { 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320 },
+            { 550, 650, 750, 850, 950, 1050, 1150, 1250, 1350, 1450, 1550 }
+        };
+
+        private string[,] WeightModifiers = new string[5, 11]
+        {
+            { "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6" },
+            { "2D6", "2D6", "2D6", "2D6", "2D6", "2D6", "2D6", "2D6", "2D6 (x2)", "2D6 (x2)", "2D6 (x2)" },
+            { "2D6 (x4)", "2D6 (x4)", "2D6 (x4)", "2D6 (x5)", "2D6 (x5)", "2D6 (x5)", "2D6 (x5)", "2D6 (x5)", "2D6 (x6)", "2D6 (x6)", "2D6 (x6)" },
+            { "4D6 (x4)", "4D6 (x4)", "4D6 (x4)", "4D6 (x5)", "4D6 (x5)", "4D6 (x5)", "4D6 (x5)", "4D6 (x5)", "4D6 (x6)", "4D6 (x6)", "4D6 (x6)" },
+            { "4D6 (x8)", "4D6 (x8)", "4D6 (x8)", "4D6 (x10)", "4D6 (x10)", "4D6 (x10)", "4D6 (x5)", "4D6 (x10)", "4D6 (x15)", "4D6 (x15)", "4D6 (x15)"}
+        };
 
         public void Generate(Planet homeworld)
         {
@@ -69,6 +100,126 @@ namespace org.DownesWard.Traveller.AlienCreation
             GenerateSpecialSenses();
             GenerateTraits();
             GenerateAgingProfile();
+            GenerateHeight(homeworld);
+            GenerateWeight(homeworld);
+        }
+
+        private void GenerateWeight(Planet homeworld)
+        {
+            var result = dice.roll(2) - 2;
+            if (homeworld.Normal.Size.Value == 0)
+            {
+                result += 3;
+            }
+            else if (homeworld.Normal.Size.Value >= 1 && homeworld.Normal.Size.Value <= 3)
+            {
+                result += 2;
+            }
+            else if (homeworld.Normal.Size.Value >= 4 && homeworld.Normal.Size.Value <= 6)
+            {
+                result += 1;
+            }
+            else if (homeworld.Normal.Size.Value >= 10)
+            {
+                result -= 3;
+            }
+            result = result.Clamp(0, 10);
+            switch (Size)
+            {
+                case Sizes.Tiny:
+                    BaseWeight = BaseWeights[0, result];
+                    break;
+                case Sizes.Small:
+                    BaseWeight = BaseWeights[1, result];
+                    break;
+                case Sizes.Medium:
+                    BaseWeight = BaseWeights[2, result];
+                    break;
+                case Sizes.Large:
+                    BaseWeight = BaseWeights[3, result];
+                    break;
+                case Sizes.Huge:
+                    BaseWeight = BaseWeights[4, result];
+                    break;
+            }
+            result = dice.roll(2) - 2;
+            switch (Size)
+            {
+                case Sizes.Tiny:
+                    WeightModifier = WeightModifiers[0, result];
+                    break;
+                case Sizes.Small:
+                    WeightModifier = WeightModifiers[1, result];
+                    break;
+                case Sizes.Medium:
+                    WeightModifier = WeightModifiers[2, result];
+                    break;
+                case Sizes.Large:
+                    WeightModifier = WeightModifiers[3, result];
+                    break;
+                case Sizes.Huge:
+                    WeightModifier = WeightModifiers[4, result];
+                    break;
+            }
+        }
+
+        private void GenerateHeight(Planet homeworld)
+        {
+            var result = dice.roll(2);
+
+            if (homeworld.Normal.Size.Value == 0)
+            {
+                result += 3;
+            }
+            else if (homeworld.Normal.Size.Value >= 1 && homeworld.Normal.Size.Value <= 3)
+            {
+                result += 2;
+            }
+            else if (homeworld.Normal.Size.Value >= 4 && homeworld.Normal.Size.Value <= 6)
+            {
+                result += 1;
+            }
+            else if (homeworld.Normal.Size.Value >= 10)
+            {
+                result -= 3;
+            }
+            result = result.Clamp(2, 12);
+            switch (Size)
+            {
+                case Sizes.Tiny:
+                    BaseHeight = BaseHeights[0, result];
+                    break;
+                case Sizes.Small:
+                    BaseHeight = BaseHeights[1, result];
+                    break;
+                case Sizes.Medium:
+                    BaseHeight = BaseHeights[2, result];
+                    break;
+                case Sizes.Large:
+                    BaseHeight = BaseHeights[3, result];
+                    break;
+                case Sizes.Huge:
+                    BaseHeight = BaseHeights[4, result];
+                    break;
+            }
+            switch (Size)
+            {
+                case Sizes.Tiny:
+                    HeightModifier = "1D6";
+                    break;
+                case Sizes.Small:
+                    HeightModifier = "2D6 (x2)";
+                    break;
+                case Sizes.Medium:
+                    HeightModifier = "2D6 (x5)";
+                    break;
+                case Sizes.Large:
+                    HeightModifier = "4D6 (x5)";
+                    break;
+                case Sizes.Huge:
+                    HeightModifier = "4D6 (x10)";
+                    break;
+            }
         }
 
         private void GenerateAgingProfile()

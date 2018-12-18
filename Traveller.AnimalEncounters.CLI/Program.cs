@@ -34,15 +34,15 @@ namespace org.DownesWard.Traveller.AnimalEncounters.CLI
                         // it's a UPP
                         if (arg.Length > 1)
                         {
-                            uwp.Size.Value = int.Parse(arg[0].ToString());
+                            uwp.Size.Value = int.Parse(arg[0].ToString(), System.Globalization.NumberStyles.HexNumber);
                         }
                         if (arg.Length > 2)
                         {
-                            uwp.Atmosphere.Value = int.Parse(arg[1].ToString());
+                            uwp.Atmosphere.Value = int.Parse(arg[1].ToString(), System.Globalization.NumberStyles.HexNumber);
                         }
                         if (arg.Length > 3)
                         {
-                            uwp.Hydro.Value = int.Parse(arg[2].ToString());
+                            uwp.Hydro.Value = int.Parse(arg[2].ToString(), System.Globalization.NumberStyles.HexNumber);
                         }
                     }
                 }
