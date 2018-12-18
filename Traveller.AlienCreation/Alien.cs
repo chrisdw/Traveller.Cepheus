@@ -11,82 +11,6 @@ namespace org.DownesWard.Traveller.AlienCreation
         private Dice dice = new Dice(6);
         private Dice d3 = new Dice(3);
 
-        public enum EcologicalTypes
-        {
-            Scavenger,
-            Herbivore,
-            Omnivore,
-            Carnivore
-        }
-
-        public enum EcologicalSubtypes
-        {
-            Filter,
-            Intermittent,
-            Grazer,
-            Gatherer,
-            Hunter,
-            Eater,
-            Pouncer,
-            Trapper,
-            Chaser,
-            Siren,
-            Killer,
-            Reducer,
-            Hijacker,
-            Intimidator,
-            CarrionEater
-        }
-
-        public enum Metabolisms
-        {
-            WarmBlooded,
-            ColdBlooded
-        }
-        public enum Genders
-        {
-            Asexual,
-            Hermaphroditic,
-            BiGender,
-            MultiGender
-        }
-
-        public enum ReproductionMethods
-        {
-            ExternalBudding,
-            LiveBearing,
-            EggLaying
-        }
-
-        public enum Sizes
-        {
-            Tiny,
-            Small,
-            Medium,
-            Large,
-            Huge
-        }
-
-        public enum Symmetries
-        {
-            Trilateral,
-            Bilateral,
-            Radial
-        }
-
-        public enum MovementRates
-        {
-            None,
-            Slow,
-            Average,
-            Fast
-        }
-
-        public class Attribute
-        {
-            public int dice;
-            public int modifier;
-        }
         public EcologicalTypes EcologicalType { get; private set; }
         public EcologicalSubtypes EcologicalSubtype { get; private set; }
         public Metabolisms Metabolism { get; private set; }
@@ -130,17 +54,207 @@ namespace org.DownesWard.Traveller.AlienCreation
             GenerateSize(homeworld);
             GenerateLimbs();
             GenerateMovement();
+            GenerateAttributes(homeworld);
+        }
+
+        private void GenerateAttributes(Planet homeworld)
+        {
+            int strchange, dexchange, endchange, educhange, socchange, intchange;
+            GenetateSTR(homeworld, out strchange);
+            GenerateDEX(homeworld, strchange, out dexchange);
+            GenerateEND(homeworld, strchange, dexchange, out endchange);
+            GenerateEDU(homeworld, strchange, dexchange, endchange, out educhange);
+            GenerateSOC(homeworld, strchange, dexchange, endchange, educhange, out socchange);
+            GenerateINT(strchange, dexchange, endchange, educhange, socchange, out intchange);
+        }
+
+        private void GenerateINT(int strchange, int dexchange, int endchange, int educhange, int socchange, out int intchange)
+        {
+            var result = dice.roll(2);
+            if (EcologicalType == EcologicalTypes.Herbivore)
+            {
+                result--;
+            }
+            else if (EcologicalType == EcologicalTypes.Carnivore)
+            {
+                result++;
+            }
+            if (result <= 2)
+            {
+                AddTrait("Caste");
+            }
+            else if (result >= 12)
+            {
+                AddTrait("Charisma");
+            }
+
+            result = dice.roll(2);
+            result += (strchange * 2);
+            result += (dexchange * 2);
+            result += (endchange * 2);
+            result += (educhange * 2);
+            result += (socchange * 2);
+            INT = Attribute.Score(2, result, 9, out intchange);
+        }
+
+        private void GenerateSOC(Planet homeworld, int strchange, int dexchange, int endchange, int educhange, out int socchange)
+        {
+            var result = dice.roll(2);
+            if (homeworld.Normal.Starport == 'A')
+            {
+                result += 2;
+            }
+            else if (homeworld.Normal.Starport == 'E')
+            {
+                result -= 2;
+            }
+            else if (homeworld.Normal.Starport == 'X')
+            {
+                result -= 3;
+            }
+            if (homeworld.Normal.TechLevel.Value <= 5)
+            {
+                result -= 5;
+            }
+            else if (homeworld.Normal.TechLevel.Value <= 8)
+            {
+                result -= 3;
+            }
+            if (homeworld.Normal.TechLevel.Value >= 12)
+            {
+                result += 2;
+            }
+            result += (strchange * 2);
+            result += (dexchange * 2);
+            result += (endchange * 2);
+            result += (educhange * 2);
+            SOC = Attribute.Score(2, result, 6, out socchange);
+        }
+
+        private void GenerateEDU(Planet homeworld, int strchange, int dexchange, int endchange, out int educhange)
+        {
+            var result = dice.roll(2);
+            if (homeworld.Normal.Starport == 'A')
+            {
+                result += 2;
+            }
+            else if (homeworld.Normal.Starport == 'E')
+            {
+                result -= 2;
+            }
+            else if (homeworld.Normal.Starport == 'X')
+            {
+                result -= 3;
+            }
+            result += (strchange * 2);
+            result += (dexchange * 2);
+            result += (endchange * 2);
+            var feralcheck = dice.roll(2);
+            if (homeworld.Normal.Starport == 'E' || homeworld.Normal.Starport == 'X')
+            {
+                feralcheck += 2;
+            }
+            if (feralcheck >= 12)
+            {
+                AddTrait("Feral");
+                EDU = Attribute.Score(1, result, 9, out educhange);
+            }
+            else
+            {
+                EDU = Attribute.Score(2, result, 9, out educhange);
+            }
+        }
+
+        private void GenerateEND(Planet homeworld, int strchange, int dexchange, out int endchange)
+        {
+            var result = dice.roll(2);
+            if (homeworld.Normal.Size.Value == 0)
+            {
+                result -= 5;
+            }
+            else if (homeworld.Normal.Size.Value >= 1 && homeworld.Normal.Size.Value <= 3)
+            {
+                result -= 3;
+            }
+            else if (homeworld.Normal.Size.Value >= 10)
+            {
+                result += 3;
+            }
+            result += (strchange * 2);
+            result += (dexchange * 2);
+            END = Attribute.Score(END.Dice, result, 14, out endchange);
+        }
+
+        private void GenerateDEX(Planet homeworld, int strchange, out int dexchange)
+        {
+            var result = dice.roll(2);
+            if (homeworld.Normal.Size.Value == 0)
+            {
+                result += 7;
+            }
+            else if (homeworld.Normal.Size.Value >= 1 && homeworld.Normal.Size.Value <= 3)
+            {
+                result += 5;
+            }
+            else if (homeworld.Normal.Size.Value >= 4 && homeworld.Normal.Size.Value <= 6)
+            {
+                result += 3;
+            }
+            else if (homeworld.Normal.Size.Value >= 10)
+            {
+                result -= 3;
+            }
+            if (EcologicalType == EcologicalTypes.Carnivore)
+            {
+                result += 3;
+            }
+            else if (EcologicalType == EcologicalTypes.Herbivore)
+            {
+                result -= 5;
+            }
+            result += (strchange * 2);
+            DEX = Attribute.Score(DEX.Dice, result, 14, out dexchange);
+        }
+
+        private void GenetateSTR(Planet homeworld, out int strchange)
+        {
+            var result = dice.roll(2);
+            if (homeworld.Normal.Size.Value == 0)
+            {
+                result -= 7;
+            }
+            else if (homeworld.Normal.Size.Value >= 1 && homeworld.Normal.Size.Value <= 3)
+            {
+                result -= 5;
+            }
+            else if (homeworld.Normal.Size.Value >= 4 && homeworld.Normal.Size.Value <= 6)
+            {
+                result -= 3;
+            }
+            else if (homeworld.Normal.Size.Value >= 10)
+            {
+                result += 3;
+            }
+            if (EcologicalType == EcologicalTypes.Carnivore)
+            {
+                result += 3;
+            }
+            else if (EcologicalType == EcologicalTypes.Herbivore)
+            {
+                result += 3;
+            }
+            STR = Attribute.Score(STR.Dice, result, 14, out strchange);
         }
 
         public UPP Generate()
         {
             var upp = new UPP();
-            upp.Str.Value = dice.roll(STR.dice) + STR.modifier;
-            upp.Dex.Value = dice.roll(DEX.dice) + DEX.modifier;
-            upp.End.Value = dice.roll(END.dice) + END.modifier;
-            upp.Int.Value = dice.roll(INT.dice) + INT.modifier;
-            upp.Edu.Value = dice.roll(EDU.dice) + EDU.modifier;
-            upp.Soc.Value = dice.roll(SOC.dice) + SOC.modifier;
+            upp.Str.Value = STR.Generate();
+            upp.Dex.Value = DEX.Generate();
+            upp.End.Value = END.Generate();
+            upp.Int.Value = INT.Generate();
+            upp.Edu.Value = EDU.Generate();
+            upp.Soc.Value = SOC.Generate();
             return upp;
         }
 
@@ -775,42 +889,42 @@ namespace org.DownesWard.Traveller.AlienCreation
             {
                 case 2:
                     Size = Sizes.Tiny;
-                    STR.dice = 1;
-                    END.dice = 1;
-                    DEX.dice = 3;
+                    STR.Dice = 1;
+                    END.Dice = 1;
+                    DEX.Dice = 3;
                     AttackDM = -1;
                     break;
                 case 3:
                 case 4:
                     Size = Sizes.Small;
-                    STR.dice = 1;
-                    END.dice = 1;
-                    DEX.dice = 3;
+                    STR.Dice = 1;
+                    END.Dice = 1;
+                    DEX.Dice = 3;
                     AttackDM = 0;
                     break;
                 case 11:
                 case 12:
                 case 13:
                     Size = Sizes.Large;
-                    STR.dice = 3;
-                    END.dice = 3;
-                    DEX.dice = 1;
+                    STR.Dice = 3;
+                    END.Dice = 3;
+                    DEX.Dice = 1;
                     AttackDM = 0;
                     Traits.Add("Increased Life Support");
                     break;
                 case 14:
                     Size = Sizes.Huge;
-                    STR.dice = 4;
-                    END.dice = 4;
-                    DEX.dice = 1;
+                    STR.Dice = 3;
+                    END.Dice = 3;
+                    DEX.Dice = 1;
                     AttackDM = 1;
                     Traits.Add("Increased Life Support");
                     break;
                 default:
                     Size = Sizes.Medium;
-                    STR.dice = 2;
-                    END.dice = 2;
-                    DEX.dice = 2;
+                    STR.Dice = 2;
+                    END.Dice = 2;
+                    DEX.Dice = 2;
                     AttackDM = 0;
                     break;
             }
