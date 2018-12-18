@@ -165,7 +165,7 @@ namespace org.DownesWard.Traveller.AlienCreation
 
         private void GenerateHeight(Planet homeworld)
         {
-            var result = dice.roll(2);
+            var result = dice.roll(2) - 2;
 
             if (homeworld.Normal.Size.Value == 0)
             {
@@ -183,7 +183,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             {
                 result -= 3;
             }
-            result = result.Clamp(2, 12);
+            result = result.Clamp(0, 10);
             switch (Size)
             {
                 case Sizes.Tiny:
