@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Trait_Alertness" xml:space="preserve">
+    <value>Vivacité d’esprit</value>
+  </data>
+  <data name="Trait_Athletic" xml:space="preserve">
+    <value>Athlétique</value>
+  </data>
+  <data name="Trait_BadFirstImpression" xml:space="preserve">
+    <value>Mauvaise première Impression</value>
+  </data>
+  <data name="Trait_ClosedBook" xml:space="preserve">
+    <value>Livre fermé</value>
+  </data>
+  <data name="Trait_EideticMemory" xml:space="preserve">
+    <value>Mémoire eidétique</value>
+  </data>
+  <data name="Trait_FastTalker" xml:space="preserve">
+    <value>Talker rapide</value>
+  </data>
+  <data name="Trait_Gearhead" xml:space="preserve">
+    <value>Gearhead</value>
+  </data>
+  <data name="Trait_GoodFirstImpression" xml:space="preserve">
+    <value>Bonne première Impression</value>
+  </data>
+  <data name="Trait_AcidResistance" xml:space="preserve">
+    <value>Résistance aux acide</value>
+  </data>
+  <data name="Trait_AcidVulnerability" xml:space="preserve">
+    <value>Vulnérabilité de l’acide</value>
+  </data>
+  <data name="Trait_AltitudeAdaption" xml:space="preserve">
+    <value>Adaptation de l’altitude</value>
+  </data>
+  <data name="Trait_AntiPsionic" xml:space="preserve">
+    <value>Anti-psionique</value>
+  </data>
+  <data name="Trait_BlindFighter" xml:space="preserve">
+    <value>Aveugles-Fighter</value>
+  </data>
+  <data name="Trait_Haggler" xml:space="preserve">
+    <value>Haggler</value>
+  </data>
+  <data name="Trait_Interrogator" xml:space="preserve">
+    <value>Interrogateur</value>
+  </data>
+  <data name="Trait_Intolerant" xml:space="preserve">
+    <value>Intolérants</value>
+  </data>
+  <data name="Trait_NaturalAdvocate" xml:space="preserve">
+    <value>Défenseur naturel</value>
+  </data>
+  <data name="Trait_NaturalBornLeader" xml:space="preserve">
+    <value>Natural Born Leader</value>
+  </data>
+  <data name="Trait_NaturalCompass" xml:space="preserve">
+    <value>Boussole naturelle</value>
+  </data>
+  <data name="Trait_NaturallyHonest" xml:space="preserve">
+    <value>Naturellement honnête</value>
+  </data>
+  <data name="Trait_NaturalPilot" xml:space="preserve">
+    <value>Pilote naturel</value>
+  </data>
+  <data name="Trait_NaturalSurvivalist" xml:space="preserve">
+    <value>Survivalistes naturel</value>
+  </data>
+  <data name="Trait_NaturalThief" xml:space="preserve">
+    <value>Voleur de naturel</value>
+  </data>
+  <data name="Trait_OverlyAggressive" xml:space="preserve">
+    <value>Trop agressif</value>
+  </data>
+  <data name="Trait_Psionic" xml:space="preserve">
+    <value>Psionique</value>
+  </data>
+  <data name="Trait_RacialDefence" xml:space="preserve">
+    <value>Défense raciale</value>
+  </data>
+  <data name="Trait_RacialEnemy" xml:space="preserve">
+    <value>Raciale ennemi</value>
+  </data>
+  <data name="Trait_RacialPhobia" xml:space="preserve">
+    <value>Phobie raciale</value>
+  </data>
+  <data name="Trait_RacialWeapon" xml:space="preserve">
+    <value>Arme raciale</value>
+  </data>
+  <data name="Trait_RefereesChoice" xml:space="preserve">
+    <value>Choix de l’arbitre</value>
+  </data>
+  <data name="Trait_Stealthy" xml:space="preserve">
+    <value>Furtif</value>
+  </data>
+  <data name="Trait_Trustworthy" xml:space="preserve">
+    <value>Digne de confiance</value>
+  </data>
+  <data name="Trait_WellTravelled" xml:space="preserve">
+    <value>Très fréquentée</value>
+  </data>
+  <data name="Trait_XenoEmpathy" xml:space="preserve">
+    <value>Xeno-Empathy</value>
+  </data>
+</root>

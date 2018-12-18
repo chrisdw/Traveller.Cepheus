@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-GB" target-language="fr-FR" original="TRAVELLER.ALIENCREATION/RESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="TRAVELLER.ALIENCREATION/RESOURCES.RESX" datatype="resx">
+        <trans-unit id="Trait_Alertness" translate="yes" xml:space="preserve">
+          <source>Alertness</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vivacité d’esprit</target>
+        </trans-unit>
+        <trans-unit id="Trait_Athletic" translate="yes" xml:space="preserve">
+          <source>Athletic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Athlétique</target>
+        </trans-unit>
+        <trans-unit id="Trait_BadFirstImpression" translate="yes" xml:space="preserve">
+          <source>Bad First Impression</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mauvaise première Impression</target>
+        </trans-unit>
+        <trans-unit id="Trait_ClosedBook" translate="yes" xml:space="preserve">
+          <source>Closed Book</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Livre fermé</target>
+        </trans-unit>
+        <trans-unit id="Trait_EideticMemory" translate="yes" xml:space="preserve">
+          <source>Eidetic Memory</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mémoire eidétique</target>
+        </trans-unit>
+        <trans-unit id="Trait_FastTalker" translate="yes" xml:space="preserve">
+          <source>Fast Talker</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Talker rapide</target>
+        </trans-unit>
+        <trans-unit id="Trait_Gearhead" translate="yes" xml:space="preserve">
+          <source>Gearhead</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gearhead</target>
+        </trans-unit>
+        <trans-unit id="Trait_GoodFirstImpression" translate="yes" xml:space="preserve">
+          <source>Good First Impression</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bonne première Impression</target>
+        </trans-unit>
+        <trans-unit id="Trait_AcidResistance" translate="yes" xml:space="preserve">
+          <source>Acid Resistance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Résistance aux acide</target>
+        </trans-unit>
+        <trans-unit id="Trait_AcidVulnerability" translate="yes" xml:space="preserve">
+          <source>Acid Vulnerability</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vulnérabilité de l’acide</target>
+        </trans-unit>
+        <trans-unit id="Trait_AltitudeAdaption" translate="yes" xml:space="preserve">
+          <source>Altitude Adaption</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Adaptation de l’altitude</target>
+        </trans-unit>
+        <trans-unit id="Trait_AntiPsionic" translate="yes" xml:space="preserve">
+          <source>Anti-Psionic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Anti-psionique</target>
+        </trans-unit>
+        <trans-unit id="Trait_BlindFighter" translate="yes" xml:space="preserve">
+          <source>Blind-Fighter</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aveugles-Fighter</target>
+        </trans-unit>
+        <trans-unit id="Trait_Haggler" translate="yes" xml:space="preserve">
+          <source>Haggler</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Haggler</target>
+        </trans-unit>
+        <trans-unit id="Trait_Interrogator" translate="yes" xml:space="preserve">
+          <source>Interrogator</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Interrogateur</target>
+        </trans-unit>
+        <trans-unit id="Trait_Intolerant" translate="yes" xml:space="preserve">
+          <source>Intolerant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Intolérants</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalAdvocate" translate="yes" xml:space="preserve">
+          <source>Natural Advocate</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Défenseur naturel</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalBornLeader" translate="yes" xml:space="preserve">
+          <source>Natural Born Leader</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Natural Born Leader</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalCompass" translate="yes" xml:space="preserve">
+          <source>Natural Compass</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Boussole naturelle</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturallyHonest" translate="yes" xml:space="preserve">
+          <source>Naturally Honest</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Naturellement honnête</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalPilot" translate="yes" xml:space="preserve">
+          <source>Natural Pilot</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Pilote naturel</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalSurvivalist" translate="yes" xml:space="preserve">
+          <source>Natural Survivalist</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Survivalistes naturel</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalThief" translate="yes" xml:space="preserve">
+          <source>Natural Thief</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Voleur de naturel</target>
+        </trans-unit>
+        <trans-unit id="Trait_OverlyAggressive" translate="yes" xml:space="preserve">
+          <source>Overly Aggressive</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trop agressif</target>
+        </trans-unit>
+        <trans-unit id="Trait_Psionic" translate="yes" xml:space="preserve">
+          <source>Psionic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Psionique</target>
+        </trans-unit>
+        <trans-unit id="Trait_RacialDefence" translate="yes" xml:space="preserve">
+          <source>Racial Defence</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Défense raciale</target>
+        </trans-unit>
+        <trans-unit id="Trait_RacialEnemy" translate="yes" xml:space="preserve">
+          <source>Racial Enemy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Raciale ennemi</target>
+        </trans-unit>
+        <trans-unit id="Trait_RacialPhobia" translate="yes" xml:space="preserve">
+          <source>Racial Phobia</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Phobie raciale</target>
+        </trans-unit>
+        <trans-unit id="Trait_RacialWeapon" translate="yes" xml:space="preserve">
+          <source>Racial Weapon</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Arme raciale</target>
+        </trans-unit>
+        <trans-unit id="Trait_RefereesChoice" translate="yes" xml:space="preserve">
+          <source>Referee's Choice</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Choix de l’arbitre</target>
+        </trans-unit>
+        <trans-unit id="Trait_Stealthy" translate="yes" xml:space="preserve">
+          <source>Stealthy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Furtif</target>
+        </trans-unit>
+        <trans-unit id="Trait_Trustworthy" translate="yes" xml:space="preserve">
+          <source>Trustworthy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Digne de confiance</target>
+        </trans-unit>
+        <trans-unit id="Trait_WellTravelled" translate="yes" xml:space="preserve">
+          <source>Well-Travelled</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Très fréquentée</target>
+        </trans-unit>
+        <trans-unit id="Trait_XenoEmpathy" translate="yes" xml:space="preserve">
+          <source>Xeno-Empathy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Xeno-Empathy</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

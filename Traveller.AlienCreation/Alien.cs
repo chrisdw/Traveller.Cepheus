@@ -316,101 +316,101 @@ namespace org.DownesWard.Traveller.AlienCreation
             switch (d36.roll())
             {
                 case 1:
-                    AddTrait("Alertness");
+                    AddTrait(Resources.Trait_Alertness);
                     break;
                 case 2:
-                    AddTrait("Athletic");
+                    AddTrait(Resources.Trait_Athletic);
                     break;
                 case 3:
-                    AddTrait("Bad First Impression");
+                    AddTrait(Resources.Trait_BadFirstImpression);
                     break;
                 case 4:
-                    AddTrait("Closed Book");
+                    AddTrait(Resources.Trait_ClosedBook);
                     break;
                 case 5:
-                    AddTrait("Eidetic Memory");
+                    AddTrait(Resources.Trait_EideticMemory);
                     break;
                 case 6:
-                    AddTrait("Fast Talker");
+                    AddTrait(Resources.Trait_FastTalker);
                     break;
                 case 7:
-                    AddTrait("Gearhead");
+                    AddTrait(Resources.Trait_Gearhead);
                     break;
                 case 8:
-                    AddTrait("Good First Impression");
+                    AddTrait(Resources.Trait_GoodFirstImpression);
                     break;
                 case 9:
-                    AddTrait("Haggler");
+                    AddTrait(Resources.Trait_Haggler);
                     break;
                 case 10:
-                    AddTrait("Interrogator");
+                    AddTrait(Resources.Trait_Interrogator);
                     break;
                 case 11:
                 case 12:
                 case 13:
-                    AddTrait("Intolerant");
+                    AddTrait(Resources.Trait_Intolerant);
                     break;
                 case 14:
-                    AddTrait("Natural Advocate");
+                    AddTrait(Resources.Trait_NaturalAdvocate);
                     break;
                 case 15:
-                    AddTrait("Natural Born Leader");
+                    AddTrait(Resources.Trait_NaturalBornLeader);
                     break;
                 case 16:
-                    AddTrait("Natural Compass");
+                    AddTrait(Resources.Trait_NaturalCompass);
                     break;
                 case 17:
-                    AddTrait("Natural Pilot");
+                    AddTrait(Resources.Trait_NaturalPilot);
                     break;
                 case 18:
                 case 19:
-                    AddTrait("Natural Survivalist");
+                    AddTrait(Resources.Trait_NaturalSurvivalist);
                     break;
                 case 20:
-                    AddTrait("Natural Thief");
+                    AddTrait(Resources.Trait_NaturalThief);
                     break;
                 case 21:
-                    AddTrait("Naturally Honest");
+                    AddTrait(Resources.Trait_NaturallyHonest);
                     break;
                 case 22:
-                    AddTrait("Overly Aggressive");
+                    AddTrait(Resources.Trait_OverlyAggressive);
                     break;
                 case 23:
                     if (PsionicsAllowed)
                     {
-                        AddTrait("Psionic");
+                        AddTrait(Resources.Trait_Psionic);
                     }
                     break;
                 case 24:
-                    AddTrait("Racial Defence");
+                    AddTrait(Resources.Trait_RacialDefence);
                     break;
                 case 25:
-                    AddTrait("Racial Enemy");
+                    AddTrait(Resources.Trait_RacialEnemy);
                     break;
                 case 26:
                 case 27:
                 case 28:
-                    AddTrait("Racial Phobia");
+                    AddTrait(Resources.Trait_RacialPhobia);
                     break;
                 case 29:
-                    AddTrait("Racial Weapon");
+                    AddTrait(Resources.Trait_RacialWeapon);
                     break;
                 case 30:
                 case 31:
-                    AddTrait("Stealthy");
+                    AddTrait(Resources.Trait_Stealthy);
                     break;
                 case 32:
-                    AddTrait("Trustworthy");
+                    AddTrait(Resources.Trait_Trustworthy);
                     break;
                 case 33:
                 case 34:
-                    AddTrait("Well-Travelled");
+                    AddTrait(Resources.Trait_WellTravelled);
                     break;
                 case 35:
-                    AddTrait("Xeno-Empathy");
+                    AddTrait(Resources.Trait_XenoEmpathy);
                     break;
                 case 36:
-                    AddTrait("Referee's Choice");
+                    AddTrait(Resources.Trait_RefereesChoice);
                     break;
             }
         }
@@ -421,25 +421,25 @@ namespace org.DownesWard.Traveller.AlienCreation
             switch (d36.roll())
             {
                 case 1:
-                    AddTrait("Acid Resistance");
+                    AddTrait(Resources.Trait_AcidResistance);
                     break;
                 case 2:
-                    AddTrait("Acid Vulnerability");
+                    AddTrait(Resources.Trait_AcidVulnerability);
                     break;
                 case 3:
-                    AddTrait("Altitude Adaption");
+                    AddTrait(Resources.Trait_AltitudeAdaption);
                     break;
                 case 4:
                     if (PsionicsAllowed)
                     {
-                        AddTrait("Anti-Psionic");
+                        AddTrait(Resources.Trait_AntiPsionic);
                     }
                     break;
                 case 5:
-                    AddTrait("Bad First Impression");
+                    AddTrait(Resources.Trait_BadFirstImpression);
                     break;
                 case 6:
-                    AddTrait("Blind-Fighter");
+                    AddTrait(Resources.Trait_BlindFighter);
                     break;
                 case 7:
                     AddTrait("Cold Endurance");
@@ -465,7 +465,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                     AddTrait("Frightful Presence");
                     break;
                 case 14:
-                    AddTrait("Good First Impression");
+                    AddTrait(Resources.Trait_GoodFirstImpression);
                     break;
                 case 15:
                     AddTrait("Heat Endurance");
@@ -537,7 +537,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                     AddTrait("Uplifited");
                     break;
                 case 36:
-                    AddTrait("Referee's Choice");
+                    AddTrait(Resources.Trait_RefereesChoice);
                     break;
             }
         }
@@ -559,11 +559,11 @@ namespace org.DownesWard.Traveller.AlienCreation
                     case 6:
                     case 7:
                     case 8:
-                        AddTrait("Alertness");
+                        AddTrait(Resources.Trait_Alertness);
                         break;
                     case 9:
                     case 10:
-                        AddTrait("Blind–Fighter");
+                        AddTrait(Resources.Trait_BlindFighter);
                         break;
                     case 11:
                         if (PsionicsAllowed)
@@ -572,7 +572,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                         }
                         else
                         {
-                            AddTrait("Blind–Fighter");
+                            AddTrait(Resources.Trait_NaturalCompass);
                         }
                         break;
                     case 12:
@@ -582,7 +582,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                         }
                         else
                         {
-                            AddTrait("Blind–Fighter");
+                            AddTrait(Resources.Trait_BlindFighter);
                         }
                         break;
                 }
@@ -644,7 +644,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                     case 2:
                         AddTrait("Blind");
                         AddTrait("Blindsight");
-                        AddTrait("Blind–Fighter");
+                        AddTrait(Resources.Trait_BlindFighter);
                         break;
                     case 3:
                         AddTrait("Light Blindness");
