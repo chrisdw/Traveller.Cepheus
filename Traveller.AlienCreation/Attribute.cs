@@ -103,5 +103,10 @@ namespace org.DownesWard.Traveller.AlienCreation
             change = baseStep - step;
             return TraitSteps[step];
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}D6{1:+0;-#}", Dice, Modifier);
+        }
     }
 }

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>org.DownesWard.Traveller.AlienCreation.CLI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Traveller.AlienCreation\Traveller.AlienCreation.csproj" />
+    <ProjectReference Include="..\Traveller.SystemGeneration\Traveller.SystemGeneration.csproj" />
+  </ItemGroup>
+
+</Project>

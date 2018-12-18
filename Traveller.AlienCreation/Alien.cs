@@ -10,6 +10,7 @@ namespace org.DownesWard.Traveller.AlienCreation
     {
         private Dice dice = new Dice(6);
         private Dice d3 = new Dice(3);
+        private Dice d36 = new Dice(36);
 
         public EcologicalTypes EcologicalType { get; private set; }
         public EcologicalSubtypes EcologicalSubtype { get; private set; }
@@ -38,6 +39,11 @@ namespace org.DownesWard.Traveller.AlienCreation
         public double SwimMovementRate { get; private set; }
         public double ClimbMovementRate { get; private set; }
         public List<string> Traits { get; private set; } = new List<string>();
+        public List<string> Weapons { get; private set; } = new List<string>();
+        public bool PsionicsAllowed { get; set; }
+        public int StartingAge { get; private set; }
+        public int AgingBegins { get; private set; }
+        public int AgingModifier { get; private set; }
 
         public void Generate(Planet homeworld)
         {
@@ -55,17 +61,602 @@ namespace org.DownesWard.Traveller.AlienCreation
             GenerateLimbs();
             GenerateMovement();
             GenerateAttributes(homeworld);
+            GenerateArmour();
+            GenerateWeapons();
+            GenerateVision();
+            GenerateHearing();
+            GenerateScent();
+            GenerateSpecialSenses();
+            GenerateTraits();
+            GenerateAgingProfile();
+        }
+
+        private void GenerateAgingProfile()
+        {
+            switch (dice.roll(2))
+            {
+                case 2:
+                case 3:
+                    StartingAge = 10;
+                    break;
+                case 4:
+                case 5:
+                    StartingAge = 14;
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    StartingAge = 18;
+                    break;
+                case 9:
+                case 10:
+                    StartingAge = 22;
+                    break;
+                case 11:
+                    StartingAge = 26;
+                    break;
+                case 12:
+                    StartingAge = 30;
+                    break;
+            }
+            switch (dice.roll(2))
+            {
+                case 2:
+                case 3:
+                    AgingBegins = StartingAge + 8;
+                    break;
+                case 4:
+                case 5:
+                    AgingBegins = StartingAge + 12;
+                    break;
+                case 6:
+                case 7:
+                    AgingBegins = StartingAge + 16;
+                    break;
+                case 8:
+                case 9:
+                    AgingBegins = StartingAge + 20;
+                    break;
+                case 10:
+                    AgingBegins = StartingAge + 24;
+                    break;
+                case 11:
+                case 12:
+                    AgingBegins = StartingAge + 28;
+                    break;
+            }
+            switch (dice.roll(2))
+            {
+                case 2:
+                    AgingModifier = -2;
+                    break;
+                case 3:
+                case 4:
+                    AgingModifier = -1;
+                    break;
+                case 10:
+                case 11:
+                    AgingModifier = 1;
+                    break;
+                case 12:
+                    AgingModifier = 2;
+                    break;
+                default:
+                    AgingModifier = 0;
+                    break;
+            }
+        }
+
+        private void GenerateTraits()
+        {
+            if (dice.roll() <= 4)
+            {
+                GeneratePhysicalTraits();
+            }
+            else
+            {
+                GenerateCulturalTraits();
+            }
+        }
+
+        private void GenerateCulturalTraits()
+        {
+            // Cultural
+            switch (d36.roll())
+            {
+                case 1:
+                    AddTrait("Alertness");
+                    break;
+                case 2:
+                    AddTrait("Athletic");
+                    break;
+                case 3:
+                    AddTrait("Bad First Impression");
+                    break;
+                case 4:
+                    AddTrait("Closed Book");
+                    break;
+                case 5:
+                    AddTrait("Eidetic Memory");
+                    break;
+                case 6:
+                    AddTrait("Fast Talker");
+                    break;
+                case 7:
+                    AddTrait("Gearhead");
+                    break;
+                case 8:
+                    AddTrait("Good First Impression");
+                    break;
+                case 9:
+                    AddTrait("Haggler");
+                    break;
+                case 10:
+                    AddTrait("Interrogator");
+                    break;
+                case 11:
+                case 12:
+                case 13:
+                    AddTrait("Intolerant");
+                    break;
+                case 14:
+                    AddTrait("Natural Advocate");
+                    break;
+                case 15:
+                    AddTrait("Natural Born Leader");
+                    break;
+                case 16:
+                    AddTrait("Natural Compass");
+                    break;
+                case 17:
+                    AddTrait("Natural Pilot");
+                    break;
+                case 18:
+                case 19:
+                    AddTrait("Natural Survivalist");
+                    break;
+                case 20:
+                    AddTrait("Natural Thief");
+                    break;
+                case 21:
+                    AddTrait("Naturally Honest");
+                    break;
+                case 22:
+                    AddTrait("Overly Aggressive");
+                    break;
+                case 23:
+                    if (PsionicsAllowed)
+                    {
+                        AddTrait("Psionic");
+                    }
+                    break;
+                case 24:
+                    AddTrait("Racial Defence");
+                    break;
+                case 25:
+                    AddTrait("Racial Enemy");
+                    break;
+                case 26:
+                case 27:
+                case 28:
+                    AddTrait("Racial Phobia");
+                    break;
+                case 29:
+                    AddTrait("Racial Weapon");
+                    break;
+                case 30:
+                case 31:
+                    AddTrait("Stealthy");
+                    break;
+                case 32:
+                    AddTrait("Trustworthy");
+                    break;
+                case 33:
+                case 34:
+                    AddTrait("Well-Travelled");
+                    break;
+                case 35:
+                    AddTrait("Xeno-Empathy");
+                    break;
+                case 36:
+                    AddTrait("Referee's Choice");
+                    break;
+            }
+        }
+
+        private void GeneratePhysicalTraits()
+        {
+            // Physical
+            switch (d36.roll())
+            {
+                case 1:
+                    AddTrait("Acid Resistance");
+                    break;
+                case 2:
+                    AddTrait("Acid Vulnerability");
+                    break;
+                case 3:
+                    AddTrait("Altitude Adaption");
+                    break;
+                case 4:
+                    if (PsionicsAllowed)
+                    {
+                        AddTrait("Anti-Psionic");
+                    }
+                    break;
+                case 5:
+                    AddTrait("Bad First Impression");
+                    break;
+                case 6:
+                    AddTrait("Blind-Fighter");
+                    break;
+                case 7:
+                    AddTrait("Cold Endurance");
+                    break;
+                case 8:
+                    AddTrait("Cold Resistance");
+                    AddTrait("Fire Vulnerability");
+                    break;
+                case 9:
+                    AddTrait("Electricity Resistance");
+                    break;
+                case 10:
+                    AddTrait("Engineered");
+                    break;
+                case 11:
+                    AddTrait("Fast Healing");
+                    break;
+                case 12:
+                    AddTrait("Fire Resistance");
+                    AddTrait("Cold Vulnerability");
+                    break;
+                case 13:
+                    AddTrait("Frightful Presence");
+                    break;
+                case 14:
+                    AddTrait("Good First Impression");
+                    break;
+                case 15:
+                    AddTrait("Heat Endurance");
+                    break;
+                case 16:
+                    AddTrait("Hibernation");
+                    break;
+                case 17:
+                    AddTrait("Improved Grab");
+                    break;
+                case 18:
+                    AddTrait("Improved Grab: Constrict");
+                    break;
+                case 19:
+                    AddTrait("Improved Grab: Entangle");
+                    break;
+                case 20:
+                    AddTrait("Improved Reach");
+                    break;
+                case 21:
+                    AddTrait("No Fine Manipulators");
+                    break;
+                case 22:
+                    AddTrait("Pleasant Odor");
+                    break;
+                case 23:
+                    if (PsionicsAllowed)
+                    {
+                        AddTrait("Psionic");
+                    }
+                    break;
+                case 24:
+                    AddTrait("Radiaton Resistance");
+                    break;
+                case 25:
+                    AddTrait("Regeneration");
+                    break;
+                case 26:
+                    AddTrait("Resistant to Diseases");
+                    break;
+                case 27:
+                    AddTrait("Resistant to Fear");
+                    break;
+                case 28:
+                    AddTrait("Resistant to Poisons");
+                    break;
+                case 29:
+                    if (PsionicsAllowed)
+                    {
+                        AddTrait("Resistant to Psionics");
+                    }
+                    break;
+                case 30:
+                    AddTrait("Spitting Attack");
+                    break;
+                case 31:
+                    AddTrait("Unusual Hand Structure");
+                    break;
+                case 32:
+                    AddTrait("Unusual Life Support Requirements, Major");
+                    break;
+                case 33:
+                    AddTrait("Unusual Life Support Requirements, Minor");
+                    break;
+                case 34:
+                    AddTrait("Unusual Sleep Cycle");
+                    break;
+                case 35:
+                    AddTrait("Uplifited");
+                    break;
+                case 36:
+                    AddTrait("Referee's Choice");
+                    break;
+            }
+        }
+
+        private void GenerateSpecialSenses()
+        {
+            if (dice.roll(2) >= 12)
+            {
+                switch (dice.roll(2))
+                {
+                    case 2:
+                        AddTrait("Organic Radio Communications");
+                        break;
+                    case 3:
+                    case 4:
+                        AddTrait("Vibration Sense");
+                        break;
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                        AddTrait("Alertness");
+                        break;
+                    case 9:
+                    case 10:
+                        AddTrait("Blind–Fighter");
+                        break;
+                    case 11:
+                        if (PsionicsAllowed)
+                        {
+                            AddTrait("Telepathy, Limited");
+                        }
+                        else
+                        {
+                            AddTrait("Blind–Fighter");
+                        }
+                        break;
+                    case 12:
+                        if (PsionicsAllowed)
+                        {
+                            AddTrait("Telepathy");
+                        }
+                        else
+                        {
+                            AddTrait("Blind–Fighter");
+                        }
+                        break;
+                }
+            }
+        }
+
+        private void GenerateScent()
+        {
+            if (dice.roll(2) >= 10)
+            {
+                switch (dice.roll(2))
+                {
+                    case 2:
+                        AddTrait("Anosmic");
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                        AddTrait("Poor Scent");
+                        break;
+                    default:
+                        AddTrait("Scent");
+                        break;
+                }
+            }
+        }
+
+        private void GenerateHearing()
+        {
+            if (dice.roll(2) >= 9)
+            {
+                switch (dice.roll(2))
+                {
+                    case 2:
+                        AddTrait("Deaf");
+                        AddTrait("No Vocal Cords");
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                        AddTrait("Poor Hearing");
+                        break;
+                    default:
+                        AddTrait("Acute Hearing");
+                        break;
+                }
+            }
+        }
+
+        private void GenerateVision()
+        {
+            if (dice.roll(2) >= 8)
+            {
+                switch (dice.roll(2))
+                {
+                    case 2:
+                        AddTrait("Blind");
+                        AddTrait("Blindsight");
+                        AddTrait("Blind–Fighter");
+                        break;
+                    case 3:
+                        AddTrait("Light Blindness");
+                        break;
+                    case 4:
+                        AddTrait("Light Sensitivity");
+                        break;
+                    case 5:
+                        AddTrait("Colour Blindness");
+                        break;
+                    case 6:
+                        AddTrait("Poor Vision");
+                        AddTrait("Colour Blindness");
+                        break;
+                    case 7:
+                        AddTrait("Poor Vision");
+                        break;
+                    case 8:
+                        AddTrait("Low-light Vision");
+                        break;
+                    case 9:
+                        AddTrait("Darkvision");
+                        AddTrait("Low-light Vision");
+                        break;
+                    case 10:
+                    case 11:
+                        AddTrait("Acute Vision");
+                        break;
+                    case 12:
+                        AddTrait("Acute Vision");
+                        AddTrait("Blindsight");
+                        break;
+                }
+            }
+        }
+
+        private void GenerateWeapons()
+        {
+            if (!Traits.Contains("Fragile"))
+            {
+                var result = dice.roll(2);
+                if (EcologicalType == EcologicalTypes.Carnivore)
+                {
+                    result += 3;
+                }
+                else if (EcologicalType == EcologicalTypes.Scavenger)
+                {
+                    result--;
+                }
+                else if (EcologicalType == EcologicalTypes.Herbivore)
+                {
+                    result -= 2;
+                }
+                if (result >= 9)
+                {
+                    AddTrait("Natural Weapons");
+                    result = dice.roll(2);
+                    switch (result)
+                    {
+                        case 2:
+                        case 6:
+                        case 12:
+                            Weapons.Add("Teeth");
+                            if (dice.roll(2) >= 10)
+                            {
+                                AddTrait("Poisonous");
+                            }
+                            break;
+                        case 3:
+                            Weapons.Add("Horns");
+                            break;
+                        case 4:
+                            Weapons.Add("Hooves");
+                            break;
+                        case 5:
+                            Weapons.Add("Teeth");
+                            if (dice.roll(2) >= 10)
+                            {
+                                AddTrait("Poisonous");
+                            }
+                            Weapons.Add("Hooves");
+                            break;
+                        case 7:
+                        case 11:
+                            Weapons.Add("Claws");
+                            break;
+                        case 8:
+                            Weapons.Add("Stinger");
+                            AddTrait("Poisonous");
+                            break;
+                        case 9:
+                            Weapons.Add("Thrasher");
+                            break;
+                        case 10:
+                            Weapons.Add("Claws");
+                            Weapons.Add("Teeth");
+                            if (dice.roll(2) >= 10)
+                            {
+                                AddTrait("Poisonous");
+                            }
+                            break;
+                    }
+                }
+            }
+        }
+
+        private void GenerateArmour()
+        {
+            var result = dice.roll(2);
+            if (Traits.Contains("Flyer"))
+            {
+                result += 4;
+            }
+            if (result >= 12)
+            {
+                AddTrait("Fragile");
+            }
+            else
+            {
+                result = dice.roll(2);
+                if (EcologicalType == EcologicalTypes.Carnivore)
+                {
+                    result--;
+                }
+                else if (EcologicalType == EcologicalTypes.Scavenger)
+                {
+                    result++;
+                }
+                else if (EcologicalType == EcologicalTypes.Herbivore)
+                {
+                    result += 2;
+                }
+                if (Size == Sizes.Tiny)
+                {
+                    result -= 2;
+                }
+                else if (Size == Sizes.Small)
+                {
+                    result -= 1;
+                }
+                else if (Size == Sizes.Large)
+                {
+                    result += 4;
+                }
+                else if (Size == Sizes.Huge)
+                {
+                    result += 8;
+                }
+                if (result >= 11)
+                {
+                    AddTrait("Armoured");
+                }
+            }
         }
 
         private void GenerateAttributes(Planet homeworld)
         {
-            int strchange, dexchange, endchange, educhange, socchange, intchange;
-            GenetateSTR(homeworld, out strchange);
-            GenerateDEX(homeworld, strchange, out dexchange);
-            GenerateEND(homeworld, strchange, dexchange, out endchange);
-            GenerateEDU(homeworld, strchange, dexchange, endchange, out educhange);
-            GenerateSOC(homeworld, strchange, dexchange, endchange, educhange, out socchange);
-            GenerateINT(strchange, dexchange, endchange, educhange, socchange, out intchange);
+            GenetateSTR(homeworld, out int strchange);
+            GenerateDEX(homeworld, strchange, out int dexchange);
+            GenerateEND(homeworld, strchange, dexchange, out int endchange);
+            GenerateEDU(homeworld, strchange, dexchange, endchange, out int educhange);
+            GenerateSOC(homeworld, strchange, dexchange, endchange, educhange, out int socchange);
+            GenerateINT(strchange, dexchange, endchange, educhange, socchange, out int intchange);
         }
 
         private void GenerateINT(int strchange, int dexchange, int endchange, int educhange, int socchange, out int intchange)

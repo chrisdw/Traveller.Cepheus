@@ -22,7 +22,7 @@ namespace Traveller.Test
             homeworld.Normal.Hydro.Value = 7;
             homeworld.Normal.TechLevel.Value = 7;
             homeworld.Temp = 20;
-            var alien = new Alien();
+            var alien = new Alien() { PsionicsAllowed = true };
             alien.Generate(homeworld);
 
         }
