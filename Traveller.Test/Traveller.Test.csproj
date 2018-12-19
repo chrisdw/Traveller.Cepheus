@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlienCreationTests.cs" />
+    <Compile Include="EncouterTableTests.cs" />
     <Compile Include="LanguageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -49,6 +50,10 @@
     <ProjectReference Include="..\Traveller.AlienCreation\Traveller.AlienCreation.csproj">
       <Project>{83965960-1FC4-4F8F-8DC9-C9C176C29E63}</Project>
       <Name>Traveller.AlienCreation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Traveller.AnimalEncounters\Traveller.AnimalEncounters.csproj">
+      <Project>{54302BCF-2E67-43E9-9600-50054CCAEED0}</Project>
+      <Name>Traveller.AnimalEncounters</Name>
     </ProjectReference>
     <ProjectReference Include="..\Traveller.Language\Traveller.Language.csproj">
       <Project>{4F368FD4-C244-49F6-ADCE-59E9FC14BFA6}</Project>

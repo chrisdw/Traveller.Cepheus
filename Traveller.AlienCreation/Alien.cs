@@ -49,7 +49,7 @@ namespace org.DownesWard.Traveller.AlienCreation
         public int BaseWeight { get; private set; }
         public string WeightModifier { get; private set; }
 
-        private int[,] BaseHeights = new int[5, 11]
+        private readonly int[,] BaseHeights = new int[5, 11]
         {
             { 28, 30, 32, 36, 38, 40, 42, 44, 48, 50, 52 },
             { 55, 60, 65, 70, 75, 80, 85, 90, 100, 105, 110 },
@@ -58,7 +58,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             { 440, 460, 490, 520, 550, 580, 610, 640, 670, 700, 720 }
         };
 
-        private int[,] BaseWeights = new int[5, 11]
+        private readonly int[,] BaseWeights = new int[5, 11]
         {
             { 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2 },
             { 6, 8, 10, 10, 12, 12, 14, 14, 16, 18, 20 },
@@ -67,7 +67,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             { 550, 650, 750, 850, 950, 1050, 1150, 1250, 1350, 1450, 1550 }
         };
 
-        private string[,] WeightModifiers = new string[5, 11]
+        private readonly string[,] WeightModifiers = new string[5, 11]
         {
             { "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6", "1D6" },
             { "2D6", "2D6", "2D6", "2D6", "2D6", "2D6", "2D6", "2D6", "2D6 (x2)", "2D6 (x2)", "2D6 (x2)" },
