@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlienCreationTests.cs" />
-    <Compile Include="EncouterTableTests.cs" />
+    <Compile Include="EncounterTableTests.cs" />
     <Compile Include="LanguageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -3,7 +3,7 @@
 namespace Traveller.Test
 {
     [TestClass]
-    public class EncouterTableTests
+    public class EncounterTableTests
     {
         [TestMethod]
         public void CepheusTableTest()

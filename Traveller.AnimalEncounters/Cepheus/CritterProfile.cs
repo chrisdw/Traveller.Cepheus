@@ -1,10 +1,16 @@
 ﻿using org.DownesWard.Traveller.Shared;
+using org.DownesWard.Traveller.Shared.Properties;
 using System.Xml;
 
 namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
 {
     public class CritterProfile : UPP
     {
+        // Critters can get really big
+        public override TravCode Str { get; } = new TravCode(100, Resources.UPP_Attr_Strength, "STR");
+        public override TravCode Dex { get; } = new TravCode(25, Resources.UPP_Attr_Dexterity, "DEX");
+        public override TravCode End { get; } = new TravCode(100, Resources.UPP_Attr_Endurance, "END");
+
         public TravCode Instinct { get; } = new TravCode(15, "Instinct", "INS");
         public TravCode Pack { get; } = new TravCode(15, "Pack", "PAC");
 

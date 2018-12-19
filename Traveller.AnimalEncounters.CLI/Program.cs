@@ -12,7 +12,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.CLI
             uwp.Hydro.Value = 7;
             uwp.Size.Value = 7;
             int tsize = 2;
-            TableGenerator table = new TableGenerator();
+            bool cepheus = true;
 
             foreach (string arg in args)
             {
@@ -47,8 +47,22 @@ namespace org.DownesWard.Traveller.AnimalEncounters.CLI
                     }
                 }
             }
-            table.Generate(tsize, uwp);
-            table.WriteStreamAsText(Console.Out);
+
+            if (!cepheus)
+            {
+                TableGenerator table = new TableGenerator();
+                table.Generate(tsize, uwp);
+                table.WriteStreamAsText(Console.Out);
+            }
+            else
+            {
+                var tg = new Cepheus.TableGenerator();
+                var tables = tg.Generate(tsize);
+                foreach (var t in tables)
+                {
+                    t.WriteStreamAsText(Console.Out);
+                }
+            }
         }
     }
 }
