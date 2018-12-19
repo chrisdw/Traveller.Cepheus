@@ -1,4 +1,5 @@
-﻿using org.DownesWard.Utilities;
+﻿using org.DownesWard.Traveller.CharacterGeneration;
+using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,7 +13,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
         public EcologicalTypes EcologicalType { get; private set; }
         public EcologicalSubtypes EcologicalSubtype { get; private set; }
         public CritterProfile Profile { get; private set; } = new CritterProfile();
-        public List<string> Skills { get; set; } = new List<string>();
+        public Dictionary<string, Skill> Skills { get; } = new Dictionary<string, Skill>();
         public int Weight { get; set; }
         public string NumberAppearing { get; set; }
         public List<string> Weapons { get; set; } = new List<string>();
@@ -20,6 +21,15 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
         public int Armour { get; private set; }
         public int Move { get; private set; }
         public Motions Motion { get; private set; }
+
+        public static Skill Athletics0 = new Skill("Athletics", Skill.SkillClass.Military, 1);
+        public static Skill Recon0 = new Skill("Recon", Skill.SkillClass.Military, 0);
+        public static Skill Survival0 = new Skill("Survival", Skill.SkillClass.Military, 0);
+
+        public static Skill Athletics = new Skill("Athletics", Skill.SkillClass.Military, 1);
+        public static Skill NaturalWeapons = new Skill("Natural Weapons", Skill.SkillClass.Military, 1);
+        public static Skill Recon = new Skill("Recon", Skill.SkillClass.Military, 1);
+        public static Skill Survival = new Skill("Survival", Skill.SkillClass.Military, 1);
 
         public Critter()
         {
@@ -195,10 +205,18 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                     AddWeapon("Projectile");
                     break;
             }
+            if (Weapons.Count > 0)
+            {
+                AddSkill(NaturalWeapons);
+            }
         }
 
         private void GenerateSubType(int result, ref int pack, ref int endurance, ref int instinct, ref int dexterity, ref int strength)
         {
+            AddSkill(Athletics0);
+            AddSkill(Recon0);
+            AddSkill(Survival0);
+
             switch (EcologicalType)
             {
                 case EcologicalTypes.Herbivore:
@@ -243,13 +261,13 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                         case 11:
                             EcologicalSubtype = EcologicalSubtypes.Hunter;
                             instinct += 2;
-                            AddSkill("Survival");
+                            AddSkill(Survival);
                             Move = Math.Max(dice.roll() - 4, 1) * 6;
                             break;
                         default:
                             EcologicalSubtype = EcologicalSubtypes.Gatherer;
                             pack += 2;
-                            AddSkill("Recon");
+                            AddSkill(Recon);
                             Move = Math.Max(dice.roll() - 3, 1) * 6;
                             break;
                     }
@@ -263,8 +281,8 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                             EcologicalSubtype = EcologicalSubtypes.Pouncer;
                             dexterity += 4;
                             instinct += 4;
-                            AddSkill("Athletics");
-                            AddSkill("Recon");
+                            AddSkill(Athletics);
+                            AddSkill(Recon);
                             Move = Math.Max(dice.roll() - 4, 1) * 6;
                             break;
                         case 2:
@@ -276,7 +294,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                         case 4:
                         case 10:
                             EcologicalSubtype = EcologicalSubtypes.Killer;
-                            AddSkill("Natural Weapons");
+                            AddSkill(NaturalWeapons);
                             if (dice.roll() <= 3)
                             {
                                 strength += 4;
@@ -299,7 +317,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                             dexterity += 4;
                             instinct += 2;
                             pack += 2;
-                            AddSkill("Athletics");
+                            AddSkill(Athletics);
                             Move = Math.Max(dice.roll() - 2, 2) * 6;
                             break;
                     }
@@ -311,7 +329,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                         case 4:
                         case 7:
                             EcologicalSubtype = EcologicalSubtypes.CarrionEater;
-                            AddSkill("Recon");
+                            AddSkill(Recon);
                             instinct += 2;
                             Move = Math.Max(dice.roll() - 3, 1) * 6;
                             break;
@@ -509,11 +527,15 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
             }
         }
 
-        private void AddSkill(string skill)
+        private void AddSkill(Skill skill)
         {
-            if (!Skills.Contains(skill))
+            if (!Skills.ContainsKey(skill.Name))
             {
-                Skills.Add(skill);
+                Skills.Add(skill.Name, skill);
+            }
+            else
+            {
+                Skills[skill.Name].Level += skill.Level;
             }
         }
 

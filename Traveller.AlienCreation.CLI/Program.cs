@@ -1,5 +1,6 @@
 ﻿using org.DownesWard.Traveller.SystemGeneration;
 using System;
+using System.Linq;
 
 namespace org.DownesWard.Traveller.AlienCreation.CLI
 {
@@ -37,7 +38,7 @@ namespace org.DownesWard.Traveller.AlienCreation.CLI
             Console.WriteLine("Size: {0}, DM {1:+0;-#}", alien.Size, alien.AttackDM);
             Console.WriteLine("Symmetry: {0}", alien.Symmetry);
             Console.WriteLine("Limbs {0} ({1} Pairs)", alien.LimbCount, alien.LimbPairs);
-            foreach (var s in alien.LimbGroupTypes)
+            foreach (var s in alien.LimbGroupTypes.OrderBy(s => s))
             {
                 Console.WriteLine(s);
             }
@@ -57,12 +58,12 @@ namespace org.DownesWard.Traveller.AlienCreation.CLI
             {
                 Console.WriteLine("Climbing Movement: {0}", alien.ClimbMovementRate);
             }
-            foreach (var s in alien.Traits)
+            foreach (var s in alien.Traits.OrderBy(s => s))
             {
                 Console.WriteLine(s);
             }
 
-            foreach (var s in alien.Weapons)
+            foreach (var s in alien.Weapons.OrderBy(s => s))
             {
                 Console.WriteLine(s);
             }

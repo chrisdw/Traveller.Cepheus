@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Traveller.CharacterGeneration\Traveller.CharacterGeneration.csproj" />
     <ProjectReference Include="..\Traveller.Shared\Traveller.Shared.csproj" />
     <ProjectReference Include="..\Utilities\Utilities.csproj" />
   </ItemGroup>
