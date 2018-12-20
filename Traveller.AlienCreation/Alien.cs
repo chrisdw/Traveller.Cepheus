@@ -443,99 +443,99 @@ namespace org.DownesWard.Traveller.AlienCreation
                     AddTrait(Resources.Trait_BlindFighter);
                     break;
                 case 7:
-                    AddTrait("Cold Endurance");
+                    AddTrait(Resources.Trait_ColdEndurance);
                     break;
                 case 8:
-                    AddTrait("Cold Resistance");
-                    AddTrait("Fire Vulnerability");
+                    AddTrait(Resources.Trait_ColdResistance);
+                    AddTrait(Resources.Trait_FireVulnerability);
                     break;
                 case 9:
-                    AddTrait("Electricity Resistance");
+                    AddTrait(Resources.Trait_ElectricityResistance);
                     break;
                 case 10:
-                    AddTrait("Engineered");
+                    AddTrait(Resources.Trait_Engineered);
                     break;
                 case 11:
-                    AddTrait("Fast Healing");
+                    AddTrait(Resources.Trait_FastHealing);
                     break;
                 case 12:
-                    AddTrait("Fire Resistance");
-                    AddTrait("Cold Vulnerability");
+                    AddTrait(Resources.Trait_FireResistance);
+                    AddTrait(Resources.Trait_ColdVulnerability);
                     break;
                 case 13:
-                    AddTrait("Frightful Presence");
+                    AddTrait(Resources.Trait_FrightfulPresence);
                     break;
                 case 14:
                     AddTrait(Resources.Trait_GoodFirstImpression);
                     break;
                 case 15:
-                    AddTrait("Heat Endurance");
+                    AddTrait(Resources.Trait_HeatEndurance);
                     break;
                 case 16:
-                    AddTrait("Hibernation");
+                    AddTrait(Resources.Trait_Hibernation);
                     break;
                 case 17:
-                    AddTrait("Improved Grab");
+                    AddTrait(Resources.Trait_ImprovedGrab);
                     break;
                 case 18:
-                    AddTrait("Improved Grab: Constrict");
+                    AddTrait(Resources.Trait_ImprovedGrabConstrict);
                     break;
                 case 19:
-                    AddTrait("Improved Grab: Entangle");
+                    AddTrait(Resources.Trait_ImprovedGrabEntangle);
                     break;
                 case 20:
-                    AddTrait("Improved Reach");
+                    AddTrait(Resources.Trait_ImprovedReach);
                     break;
                 case 21:
-                    AddTrait("No Fine Manipulators");
+                    AddTrait(Resources.Trait_NoFineManipulators);
                     break;
                 case 22:
-                    AddTrait("Pleasant Odor");
+                    AddTrait(Resources.Trait_PleasantOdor);
                     break;
                 case 23:
                     if (PsionicsAllowed)
                     {
-                        AddTrait("Psionic");
+                        AddTrait(Resources.Trait_Psionic);
                     }
                     break;
                 case 24:
-                    AddTrait("Radiaton Resistance");
+                    AddTrait(Resources.Trait_RadiatonResistance);
                     break;
                 case 25:
-                    AddTrait("Regeneration");
+                    AddTrait(Resources.Trait_Regeneration);
                     break;
                 case 26:
-                    AddTrait("Resistant to Diseases");
+                    AddTrait(Resources.Trait_ResistantToDisease);
                     break;
                 case 27:
-                    AddTrait("Resistant to Fear");
+                    AddTrait(Resources.Trait_ResistantToFear);
                     break;
                 case 28:
-                    AddTrait("Resistant to Poisons");
+                    AddTrait(Resources.Trait_ResistantToPoisons);
                     break;
                 case 29:
                     if (PsionicsAllowed)
                     {
-                        AddTrait("Resistant to Psionics");
+                        AddTrait(Resources.Trait_ResistantToPsionics);
                     }
                     break;
                 case 30:
-                    AddTrait("Spitting Attack");
+                    AddTrait(Resources.Trait_SpittingAttack);
                     break;
                 case 31:
-                    AddTrait("Unusual Hand Structure");
+                    AddTrait(Resources.Trait_UnusualHandStructure);
                     break;
                 case 32:
-                    AddTrait("Unusual Life Support Requirements, Major");
+                    AddTrait(Resources.Trait_UnusualLifeSupportRequirementsMajor);
                     break;
                 case 33:
-                    AddTrait("Unusual Life Support Requirements, Minor");
+                    AddTrait(Resources.Trait_UnusualLifeSupportRequirementsMinor);
                     break;
                 case 34:
-                    AddTrait("Unusual Sleep Cycle");
+                    AddTrait(Resources.Trait_UnusualSleepCycle);
                     break;
                 case 35:
-                    AddTrait("Uplifited");
+                    AddTrait(Resources.Trait_Uplifited);
                     break;
                 case 36:
                     AddTrait(Resources.Trait_RefereesChoice);
@@ -550,11 +550,11 @@ namespace org.DownesWard.Traveller.AlienCreation
                 switch (dice.roll(2))
                 {
                     case 2:
-                        AddTrait("Organic Radio Communications");
+                        AddTrait(Resources.Sense_OrganicRadioCommunications);
                         break;
                     case 3:
                     case 4:
-                        AddTrait("Vibration Sense");
+                        AddTrait(Resources.Sense_VibrationSense);
                         break;
                     case 5:
                     case 6:
@@ -569,7 +569,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                     case 11:
                         if (PsionicsAllowed)
                         {
-                            AddTrait("Telepathy, Limited");
+                            AddTrait(Resources.Sense_TelepathyLimited);
                         }
                         else
                         {
@@ -579,7 +579,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                     case 12:
                         if (PsionicsAllowed)
                         {
-                            AddTrait("Telepathy");
+                            AddTrait(Resources.Sense_Telepathy);
                         }
                         else
                         {
@@ -597,17 +597,17 @@ namespace org.DownesWard.Traveller.AlienCreation
                 switch (dice.roll(2))
                 {
                     case 2:
-                        AddTrait("Anosmic");
+                        AddTrait(Resources.Scent_Anosmic);
                         break;
                     case 3:
                     case 4:
                     case 5:
                     case 6:
                     case 7:
-                        AddTrait("Poor Scent");
+                        AddTrait(Resources.Scent_PoorScent);
                         break;
                     default:
-                        AddTrait("Scent");
+                        AddTrait(Resources.Scent_Scent);
                         break;
                 }
             }
@@ -620,17 +620,17 @@ namespace org.DownesWard.Traveller.AlienCreation
                 switch (dice.roll(2))
                 {
                     case 2:
-                        AddTrait("Deaf");
-                        AddTrait("No Vocal Cords");
+                        AddTrait(Resources.Hearing_Deaf);
+                        AddTrait(Resources.Trait_NoVocalCords);
                         break;
                     case 3:
                     case 4:
                     case 5:
                     case 6:
-                        AddTrait("Poor Hearing");
+                        AddTrait(Resources.Hearing_PoorHearing);
                         break;
                     default:
-                        AddTrait("Acute Hearing");
+                        AddTrait(Resources.Hearing_AcuteHearing);
                         break;
                 }
             }
@@ -643,40 +643,40 @@ namespace org.DownesWard.Traveller.AlienCreation
                 switch (dice.roll(2))
                 {
                     case 2:
-                        AddTrait("Blind");
-                        AddTrait("Blindsight");
+                        AddTrait(Resources.Vision_Blind);
+                        AddTrait(Resources.Vision_Blindsight);
                         AddTrait(Resources.Trait_BlindFighter);
                         break;
                     case 3:
-                        AddTrait("Light Blindness");
+                        AddTrait(Resources.Vision_LightBlindness);
                         break;
                     case 4:
-                        AddTrait("Light Sensitivity");
+                        AddTrait(Resources.Vision_LightSensitivity);
                         break;
                     case 5:
-                        AddTrait("Colour Blindness");
+                        AddTrait(Resources.Vision_ColourBlindness);
                         break;
                     case 6:
-                        AddTrait("Poor Vision");
-                        AddTrait("Colour Blindness");
+                        AddTrait(Resources.Vision_PoorVision);
+                        AddTrait(Resources.Vision_ColourBlindness);
                         break;
                     case 7:
-                        AddTrait("Poor Vision");
+                        AddTrait(Resources.Vision_PoorVision);
                         break;
                     case 8:
-                        AddTrait("Low-light Vision");
+                        AddTrait(Resources.Vision_LowLightVision);
                         break;
                     case 9:
-                        AddTrait("Darkvision");
-                        AddTrait("Low-light Vision");
+                        AddTrait(Resources.Vision_Darkvision);
+                        AddTrait(Resources.Vision_LowLightVision);
                         break;
                     case 10:
                     case 11:
-                        AddTrait("Acute Vision");
+                        AddTrait(Resources.Vision_AcuteVision);
                         break;
                     case 12:
-                        AddTrait("Acute Vision");
-                        AddTrait("Blindsight");
+                        AddTrait(Resources.Vision_AcuteVision);
+                        AddTrait(Resources.Vision_Blindsight);
                         break;
                 }
             }
@@ -684,7 +684,7 @@ namespace org.DownesWard.Traveller.AlienCreation
 
         private void GenerateWeapons()
         {
-            if (!Traits.Contains("Fragile"))
+            if (!Traits.Contains(Resources.Trait_Fragile))
             {
                 var result = dice.roll(2);
                 if (EcologicalType == EcologicalTypes.Carnivore)
@@ -701,50 +701,50 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
                 if (result >= 9)
                 {
-                    AddTrait("Natural Weapons");
+                    AddTrait(Resources.Trait_NaturalWeapons);
                     result = dice.roll(2);
                     switch (result)
                     {
                         case 2:
                         case 6:
                         case 12:
-                            Weapons.Add("Teeth");
+                            Weapons.Add(Resources.Weapon_Teeth);
                             if (dice.roll(2) >= 10)
                             {
-                                AddTrait("Poisonous");
+                                AddTrait(Resources.Trait_Poisonous);
                             }
                             break;
                         case 3:
-                            Weapons.Add("Horns");
+                            Weapons.Add(Resources.Weapon_Horns);
                             break;
                         case 4:
-                            Weapons.Add("Hooves");
+                            Weapons.Add(Resources.Weapon_Hooves);
                             break;
                         case 5:
-                            Weapons.Add("Teeth");
+                            Weapons.Add(Resources.Weapon_Teeth);
                             if (dice.roll(2) >= 10)
                             {
-                                AddTrait("Poisonous");
+                                AddTrait(Resources.Trait_Poisonous);
                             }
-                            Weapons.Add("Hooves");
+                            Weapons.Add(Resources.Weapon_Hooves);
                             break;
                         case 7:
                         case 11:
-                            Weapons.Add("Claws");
+                            Weapons.Add(Resources.Weapon_Claws);
                             break;
                         case 8:
-                            Weapons.Add("Stinger");
-                            AddTrait("Poisonous");
+                            Weapons.Add(Resources.Weapon_Stinger);
+                            AddTrait(Resources.Trait_Poisonous);
                             break;
                         case 9:
-                            Weapons.Add("Thrasher");
+                            Weapons.Add(Resources.Weapon_Thrasher);
                             break;
                         case 10:
-                            Weapons.Add("Claws");
-                            Weapons.Add("Teeth");
+                            Weapons.Add(Resources.Weapon_Claws);
+                            Weapons.Add(Resources.Weapon_Teeth);
                             if (dice.roll(2) >= 10)
                             {
-                                AddTrait("Poisonous");
+                                AddTrait(Resources.Trait_Poisonous);
                             }
                             break;
                     }
@@ -755,13 +755,13 @@ namespace org.DownesWard.Traveller.AlienCreation
         private void GenerateArmour()
         {
             var result = dice.roll(2);
-            if (Traits.Contains("Flyer"))
+            if (Traits.Contains(Resources.Trait_Flyer))
             {
                 result += 4;
             }
             if (result >= 12)
             {
-                AddTrait("Fragile");
+                AddTrait(Resources.Trait_Fragile);
             }
             else
             {
@@ -796,7 +796,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
                 if (result >= 11)
                 {
-                    AddTrait("Armoured");
+                    AddTrait(Resources.Trait_Armoured);
                 }
             }
         }
@@ -824,11 +824,11 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             if (result <= 2)
             {
-                AddTrait("Caste");
+                AddTrait(Resources.Trait_Caste);
             }
             else if (result >= 12)
             {
-                AddTrait("Charisma");
+                AddTrait(Resources.Trait_Charisma);
             }
 
             result = dice.roll(2);
@@ -1003,7 +1003,7 @@ namespace org.DownesWard.Traveller.AlienCreation
 
         private void GenerateMovement()
         {
-            if (!Traits.Contains("No Land Movement"))
+            if (!Traits.Contains(Resources.Trait_NoLandMovement))
             {
                 LandMovement = GenerateComparativeMovement();
                 GenerateSpeedTraits(LandMovement);
@@ -1021,7 +1021,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                     AddTrait("Stable");
                 }
             }
-            if (Traits.Contains("Flyer"))
+            if (Traits.Contains(Resources.Trait_Flyer))
             {
                 if (LimbGroupTypes.Contains(Resources.Limb_Wings))
                 {
@@ -1437,7 +1437,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             if (Symmetry == Symmetries.Bilateral)
             {
                 LimbGroupTypes.Add(Resources.Limb_Manipulation);
-                if (Traits.Contains("Flyer"))
+                if (Traits.Contains(Resources.Trait_Flyer))
                 {
                     LimbGroupTypes.Add(Resources.Limb_Wings);
                 }
@@ -1453,7 +1453,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
                 if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Legs) || s.Equals(Resources.Limb_DualPurpose)).Count() == 0)
                 {
-                    AddTrait("No Land Movement");
+                    AddTrait(Resources.Trait_NoLandMovement);
                 }
             }
             else if (Symmetry == Symmetries.Trilateral)
@@ -1472,7 +1472,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
                 if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Legs) || s.Equals(Resources.Limb_DualPurpose)).Count() == 0)
                 {
-                    AddTrait("No Land Movement");
+                    AddTrait(Resources.Trait_NoLandMovement);
                 }
             }
         }
@@ -1486,7 +1486,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 {
                     case 2:
                     case 3:
-                        if (Traits.Contains("Flyer"))
+                        if (Traits.Contains(Resources.Trait_Flyer))
                         {
                             LimbGroupTypes.Add(Resources.Limb_Wings);
                         }
@@ -1509,7 +1509,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                         }
                         else
                         {
-                            if (Traits.Contains("No Land Movement"))
+                            if (Traits.Contains(Resources.Trait_NoLandMovement))
                             {
                                 LimbGroupTypes.Add(Resources.Limb_Wings);
                             }
@@ -1565,7 +1565,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                         if (homeworld.Normal.Hydro.Value > 0 && homeworld.Normal.Size.Value > 0)
                         {
                             AddTrait("Natural Swimmer");
-                            AddTrait("No Land Movement");
+                            AddTrait(Resources.Trait_NoLandMovement);
                             if (!Traits.Contains("Aquatic"))
                             {
                                 AddTrait("Deep Diver");
@@ -1594,14 +1594,14 @@ namespace org.DownesWard.Traveller.AlienCreation
                     case 11:
                         if (homeworld.Normal.Atmosphere.Value >= 4)
                         {
-                            AddTrait("Flyer");
+                            AddTrait(Resources.Trait_Flyer);
                         }
                         break;
                     case 12:
                         if (homeworld.Normal.Atmosphere.Value >= 4)
                         {
-                            AddTrait("Flyer");
-                            AddTrait("No Land Movement");
+                            AddTrait(Resources.Trait_Flyer);
+                            AddTrait(Resources.Trait_NoLandMovement);
                         }
                         break;
                 }
@@ -1619,7 +1619,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             {
                 size++;
             }
-            if (Traits.Contains("Flyer"))
+            if (Traits.Contains(Resources.Trait_Flyer))
             {
                 size -= 2;
             }

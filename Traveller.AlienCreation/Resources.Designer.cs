@@ -61,6 +61,33 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Acute Hearing.
+        /// </summary>
+        internal static string Hearing_AcuteHearing {
+            get {
+                return ResourceManager.GetString("Hearing_AcuteHearing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deaf.
+        /// </summary>
+        internal static string Hearing_Deaf {
+            get {
+                return ResourceManager.GetString("Hearing_Deaf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poor Hearing.
+        /// </summary>
+        internal static string Hearing_PoorHearing {
+            get {
+                return ResourceManager.GetString("Hearing_PoorHearing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dual-purpose (Manipulation and Locomotion).
         /// </summary>
         internal static string Limb_DualPurpose {
@@ -102,6 +129,69 @@ namespace org.DownesWard.Traveller.AlienCreation {
         internal static string Limb_Wings {
             get {
                 return ResourceManager.GetString("Limb_Wings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anosmic.
+        /// </summary>
+        internal static string Scent_Anosmic {
+            get {
+                return ResourceManager.GetString("Scent_Anosmic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poor Scent.
+        /// </summary>
+        internal static string Scent_PoorScent {
+            get {
+                return ResourceManager.GetString("Scent_PoorScent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scent.
+        /// </summary>
+        internal static string Scent_Scent {
+            get {
+                return ResourceManager.GetString("Scent_Scent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Organic Radio Communications.
+        /// </summary>
+        internal static string Sense_OrganicRadioCommunications {
+            get {
+                return ResourceManager.GetString("Sense_OrganicRadioCommunications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telepathy.
+        /// </summary>
+        internal static string Sense_Telepathy {
+            get {
+                return ResourceManager.GetString("Sense_Telepathy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Telepathy, Limited.
+        /// </summary>
+        internal static string Sense_TelepathyLimited {
+            get {
+                return ResourceManager.GetString("Sense_TelepathyLimited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vibration Sense.
+        /// </summary>
+        internal static string Sense_VibrationSense {
+            get {
+                return ResourceManager.GetString("Sense_VibrationSense", resourceCulture);
             }
         }
         
@@ -151,6 +241,15 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Armoured.
+        /// </summary>
+        internal static string Trait_Armoured {
+            get {
+                return ResourceManager.GetString("Trait_Armoured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Athletic.
         /// </summary>
         internal static string Trait_Athletic {
@@ -178,11 +277,56 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Caste.
+        /// </summary>
+        internal static string Trait_Caste {
+            get {
+                return ResourceManager.GetString("Trait_Caste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Charisma.
+        /// </summary>
+        internal static string Trait_Charisma {
+            get {
+                return ResourceManager.GetString("Trait_Charisma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Closed Book.
         /// </summary>
         internal static string Trait_ClosedBook {
             get {
                 return ResourceManager.GetString("Trait_ClosedBook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold Endurance.
+        /// </summary>
+        internal static string Trait_ColdEndurance {
+            get {
+                return ResourceManager.GetString("Trait_ColdEndurance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold Resistance.
+        /// </summary>
+        internal static string Trait_ColdResistance {
+            get {
+                return ResourceManager.GetString("Trait_ColdResistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cold Vulnerability.
+        /// </summary>
+        internal static string Trait_ColdVulnerability {
+            get {
+                return ResourceManager.GetString("Trait_ColdVulnerability", resourceCulture);
             }
         }
         
@@ -196,11 +340,83 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Electricity Resistance.
+        /// </summary>
+        internal static string Trait_ElectricityResistance {
+            get {
+                return ResourceManager.GetString("Trait_ElectricityResistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Engineered.
+        /// </summary>
+        internal static string Trait_Engineered {
+            get {
+                return ResourceManager.GetString("Trait_Engineered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fast Healing.
+        /// </summary>
+        internal static string Trait_FastHealing {
+            get {
+                return ResourceManager.GetString("Trait_FastHealing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fast Talker.
         /// </summary>
         internal static string Trait_FastTalker {
             get {
                 return ResourceManager.GetString("Trait_FastTalker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fire Resistance.
+        /// </summary>
+        internal static string Trait_FireResistance {
+            get {
+                return ResourceManager.GetString("Trait_FireResistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fire Vulnerability.
+        /// </summary>
+        internal static string Trait_FireVulnerability {
+            get {
+                return ResourceManager.GetString("Trait_FireVulnerability", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flyer.
+        /// </summary>
+        internal static string Trait_Flyer {
+            get {
+                return ResourceManager.GetString("Trait_Flyer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fragile.
+        /// </summary>
+        internal static string Trait_Fragile {
+            get {
+                return ResourceManager.GetString("Trait_Fragile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Frightful Presence.
+        /// </summary>
+        internal static string Trait_FrightfulPresence {
+            get {
+                return ResourceManager.GetString("Trait_FrightfulPresence", resourceCulture);
             }
         }
         
@@ -228,6 +444,60 @@ namespace org.DownesWard.Traveller.AlienCreation {
         internal static string Trait_Haggler {
             get {
                 return ResourceManager.GetString("Trait_Haggler", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heat Endurance.
+        /// </summary>
+        internal static string Trait_HeatEndurance {
+            get {
+                return ResourceManager.GetString("Trait_HeatEndurance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hibernation.
+        /// </summary>
+        internal static string Trait_Hibernation {
+            get {
+                return ResourceManager.GetString("Trait_Hibernation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improved Grab.
+        /// </summary>
+        internal static string Trait_ImprovedGrab {
+            get {
+                return ResourceManager.GetString("Trait_ImprovedGrab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improved Grab: Constrict.
+        /// </summary>
+        internal static string Trait_ImprovedGrabConstrict {
+            get {
+                return ResourceManager.GetString("Trait_ImprovedGrabConstrict", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improved Grab: Entangle.
+        /// </summary>
+        internal static string Trait_ImprovedGrabEntangle {
+            get {
+                return ResourceManager.GetString("Trait_ImprovedGrabEntangle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improved Reach.
+        /// </summary>
+        internal static string Trait_ImprovedReach {
+            get {
+                return ResourceManager.GetString("Trait_ImprovedReach", resourceCulture);
             }
         }
         
@@ -313,11 +583,65 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Natural Weapons.
+        /// </summary>
+        internal static string Trait_NaturalWeapons {
+            get {
+                return ResourceManager.GetString("Trait_NaturalWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Fine Manipulators.
+        /// </summary>
+        internal static string Trait_NoFineManipulators {
+            get {
+                return ResourceManager.GetString("Trait_NoFineManipulators", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Land Movement.
+        /// </summary>
+        internal static string Trait_NoLandMovement {
+            get {
+                return ResourceManager.GetString("Trait_NoLandMovement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Vocal Cords.
+        /// </summary>
+        internal static string Trait_NoVocalCords {
+            get {
+                return ResourceManager.GetString("Trait_NoVocalCords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Overly Aggressive.
         /// </summary>
         internal static string Trait_OverlyAggressive {
             get {
                 return ResourceManager.GetString("Trait_OverlyAggressive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pleasant Odor.
+        /// </summary>
+        internal static string Trait_PleasantOdor {
+            get {
+                return ResourceManager.GetString("Trait_PleasantOdor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poisonous.
+        /// </summary>
+        internal static string Trait_Poisonous {
+            get {
+                return ResourceManager.GetString("Trait_Poisonous", resourceCulture);
             }
         }
         
@@ -367,11 +691,74 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Radiaton Resistance.
+        /// </summary>
+        internal static string Trait_RadiatonResistance {
+            get {
+                return ResourceManager.GetString("Trait_RadiatonResistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Referee&apos;s Choice.
         /// </summary>
         internal static string Trait_RefereesChoice {
             get {
                 return ResourceManager.GetString("Trait_RefereesChoice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Regeneration.
+        /// </summary>
+        internal static string Trait_Regeneration {
+            get {
+                return ResourceManager.GetString("Trait_Regeneration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resistant to Disease.
+        /// </summary>
+        internal static string Trait_ResistantToDisease {
+            get {
+                return ResourceManager.GetString("Trait_ResistantToDisease", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resistant to Fear.
+        /// </summary>
+        internal static string Trait_ResistantToFear {
+            get {
+                return ResourceManager.GetString("Trait_ResistantToFear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resistant to Poisons.
+        /// </summary>
+        internal static string Trait_ResistantToPoisons {
+            get {
+                return ResourceManager.GetString("Trait_ResistantToPoisons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resistant to Psionics.
+        /// </summary>
+        internal static string Trait_ResistantToPsionics {
+            get {
+                return ResourceManager.GetString("Trait_ResistantToPsionics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spitting Attack.
+        /// </summary>
+        internal static string Trait_SpittingAttack {
+            get {
+                return ResourceManager.GetString("Trait_SpittingAttack", resourceCulture);
             }
         }
         
@@ -394,6 +781,51 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unusual Hand Structure.
+        /// </summary>
+        internal static string Trait_UnusualHandStructure {
+            get {
+                return ResourceManager.GetString("Trait_UnusualHandStructure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unusual Life Support Requirements, Major.
+        /// </summary>
+        internal static string Trait_UnusualLifeSupportRequirementsMajor {
+            get {
+                return ResourceManager.GetString("Trait_UnusualLifeSupportRequirementsMajor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unusual Life Support Requirements, Minor.
+        /// </summary>
+        internal static string Trait_UnusualLifeSupportRequirementsMinor {
+            get {
+                return ResourceManager.GetString("Trait_UnusualLifeSupportRequirementsMinor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unusual Sleep Cycle.
+        /// </summary>
+        internal static string Trait_UnusualSleepCycle {
+            get {
+                return ResourceManager.GetString("Trait_UnusualSleepCycle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uplifited.
+        /// </summary>
+        internal static string Trait_Uplifited {
+            get {
+                return ResourceManager.GetString("Trait_Uplifited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Well-Travelled.
         /// </summary>
         internal static string Trait_WellTravelled {
@@ -408,6 +840,141 @@ namespace org.DownesWard.Traveller.AlienCreation {
         internal static string Trait_XenoEmpathy {
             get {
                 return ResourceManager.GetString("Trait_XenoEmpathy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Acute Vision.
+        /// </summary>
+        internal static string Vision_AcuteVision {
+            get {
+                return ResourceManager.GetString("Vision_AcuteVision", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blind.
+        /// </summary>
+        internal static string Vision_Blind {
+            get {
+                return ResourceManager.GetString("Vision_Blind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blindsight.
+        /// </summary>
+        internal static string Vision_Blindsight {
+            get {
+                return ResourceManager.GetString("Vision_Blindsight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Colour Blindness.
+        /// </summary>
+        internal static string Vision_ColourBlindness {
+            get {
+                return ResourceManager.GetString("Vision_ColourBlindness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Darkvision.
+        /// </summary>
+        internal static string Vision_Darkvision {
+            get {
+                return ResourceManager.GetString("Vision_Darkvision", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light Blindness.
+        /// </summary>
+        internal static string Vision_LightBlindness {
+            get {
+                return ResourceManager.GetString("Vision_LightBlindness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light Sensitivity.
+        /// </summary>
+        internal static string Vision_LightSensitivity {
+            get {
+                return ResourceManager.GetString("Vision_LightSensitivity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Low-light Vision.
+        /// </summary>
+        internal static string Vision_LowLightVision {
+            get {
+                return ResourceManager.GetString("Vision_LowLightVision", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Poor Vision.
+        /// </summary>
+        internal static string Vision_PoorVision {
+            get {
+                return ResourceManager.GetString("Vision_PoorVision", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Claws.
+        /// </summary>
+        internal static string Weapon_Claws {
+            get {
+                return ResourceManager.GetString("Weapon_Claws", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hooves.
+        /// </summary>
+        internal static string Weapon_Hooves {
+            get {
+                return ResourceManager.GetString("Weapon_Hooves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Horns.
+        /// </summary>
+        internal static string Weapon_Horns {
+            get {
+                return ResourceManager.GetString("Weapon_Horns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stinger.
+        /// </summary>
+        internal static string Weapon_Stinger {
+            get {
+                return ResourceManager.GetString("Weapon_Stinger", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teeth.
+        /// </summary>
+        internal static string Weapon_Teeth {
+            get {
+                return ResourceManager.GetString("Weapon_Teeth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thrasher.
+        /// </summary>
+        internal static string Weapon_Thrasher {
+            get {
+                return ResourceManager.GetString("Weapon_Thrasher", resourceCulture);
             }
         }
     }

@@ -162,6 +162,258 @@
           <source>Wings</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Flügel</target>
         </trans-unit>
+        <trans-unit id="Hearing_AcuteHearing" translate="yes" xml:space="preserve">
+          <source>Acute Hearing</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Akute Gehör</target>
+        </trans-unit>
+        <trans-unit id="Hearing_Deaf" translate="yes" xml:space="preserve">
+          <source>Deaf</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Taube</target>
+        </trans-unit>
+        <trans-unit id="Hearing_PoorHearing" translate="yes" xml:space="preserve">
+          <source>Poor Hearing</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schlechte Gehör</target>
+        </trans-unit>
+        <trans-unit id="Scent_Anosmic" translate="yes" xml:space="preserve">
+          <source>Anosmic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Anosmic</target>
+        </trans-unit>
+        <trans-unit id="Scent_PoorScent" translate="yes" xml:space="preserve">
+          <source>Poor Scent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schlechter Geruch</target>
+        </trans-unit>
+        <trans-unit id="Scent_Scent" translate="yes" xml:space="preserve">
+          <source>Scent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Duft</target>
+        </trans-unit>
+        <trans-unit id="Sense_OrganicRadioCommunications" translate="yes" xml:space="preserve">
+          <source>Organic Radio Communications</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Bio Radio Communications</target>
+        </trans-unit>
+        <trans-unit id="Sense_Telepathy" translate="yes" xml:space="preserve">
+          <source>Telepathy</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Telepathie</target>
+        </trans-unit>
+        <trans-unit id="Sense_TelepathyLimited" translate="yes" xml:space="preserve">
+          <source>Telepathy, Limited</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Telepathie, Limited</target>
+        </trans-unit>
+        <trans-unit id="Sense_VibrationSense" translate="yes" xml:space="preserve">
+          <source>Vibration Sense</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vibration Sinn</target>
+        </trans-unit>
+        <trans-unit id="Trait_Armoured" translate="yes" xml:space="preserve">
+          <source>Armoured</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gepanzerte</target>
+        </trans-unit>
+        <trans-unit id="Trait_Caste" translate="yes" xml:space="preserve">
+          <source>Caste</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kaste</target>
+        </trans-unit>
+        <trans-unit id="Trait_Charisma" translate="yes" xml:space="preserve">
+          <source>Charisma</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Charisma</target>
+        </trans-unit>
+        <trans-unit id="Trait_ColdEndurance" translate="yes" xml:space="preserve">
+          <source>Cold Endurance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kalten Ausdauer</target>
+        </trans-unit>
+        <trans-unit id="Trait_ColdResistance" translate="yes" xml:space="preserve">
+          <source>Cold Resistance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kältebeständigkeit</target>
+        </trans-unit>
+        <trans-unit id="Trait_ColdVulnerability" translate="yes" xml:space="preserve">
+          <source>Cold Vulnerability</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kalten Anfälligkeit</target>
+        </trans-unit>
+        <trans-unit id="Trait_ElectricityResistance" translate="yes" xml:space="preserve">
+          <source>Electricity Resistance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Strom-Widerstand</target>
+        </trans-unit>
+        <trans-unit id="Trait_Engineered" translate="yes" xml:space="preserve">
+          <source>Engineered</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Entwickelt</target>
+        </trans-unit>
+        <trans-unit id="Trait_FastHealing" translate="yes" xml:space="preserve">
+          <source>Fast Healing</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schnelle Heilung</target>
+        </trans-unit>
+        <trans-unit id="Trait_FireResistance" translate="yes" xml:space="preserve">
+          <source>Fire Resistance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Feuer-Widerstand</target>
+        </trans-unit>
+        <trans-unit id="Trait_FireVulnerability" translate="yes" xml:space="preserve">
+          <source>Fire Vulnerability</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Feuer-Schwachstelle</target>
+        </trans-unit>
+        <trans-unit id="Trait_Flyer" translate="yes" xml:space="preserve">
+          <source>Flyer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flyer</target>
+        </trans-unit>
+        <trans-unit id="Trait_Fragile" translate="yes" xml:space="preserve">
+          <source>Fragile</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fragile</target>
+        </trans-unit>
+        <trans-unit id="Trait_FrightfulPresence" translate="yes" xml:space="preserve">
+          <source>Frightful Presence</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schreckliche Präsenz</target>
+        </trans-unit>
+        <trans-unit id="Trait_HeatEndurance" translate="yes" xml:space="preserve">
+          <source>Heat Endurance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hitze-Ausdauer</target>
+        </trans-unit>
+        <trans-unit id="Trait_Hibernation" translate="yes" xml:space="preserve">
+          <source>Hibernation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Den Ruhezustand</target>
+        </trans-unit>
+        <trans-unit id="Trait_ImprovedGrab" translate="yes" xml:space="preserve">
+          <source>Improved Grab</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verbesserte Grab</target>
+        </trans-unit>
+        <trans-unit id="Trait_ImprovedGrabConstrict" translate="yes" xml:space="preserve">
+          <source>Improved Grab: Constrict</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verbesserte Grab: verengen</target>
+        </trans-unit>
+        <trans-unit id="Trait_ImprovedGrabEntangle" translate="yes" xml:space="preserve">
+          <source>Improved Grab: Entangle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verbesserte Grab: verwickeln</target>
+        </trans-unit>
+        <trans-unit id="Trait_ImprovedReach" translate="yes" xml:space="preserve">
+          <source>Improved Reach</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verbesserte Reichweite</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalWeapons" translate="yes" xml:space="preserve">
+          <source>Natural Weapons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Natürliche Waffen</target>
+        </trans-unit>
+        <trans-unit id="Trait_NoFineManipulators" translate="yes" xml:space="preserve">
+          <source>No Fine Manipulators</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Keine feine Manipulatoren</target>
+        </trans-unit>
+        <trans-unit id="Trait_NoLandMovement" translate="yes" xml:space="preserve">
+          <source>No Land Movement</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Kein Land-Bewegung</target>
+        </trans-unit>
+        <trans-unit id="Trait_NoVocalCords" translate="yes" xml:space="preserve">
+          <source>No Vocal Cords</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Keine Stimmbänder</target>
+        </trans-unit>
+        <trans-unit id="Trait_PleasantOdor" translate="yes" xml:space="preserve">
+          <source>Pleasant Odor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Angenehmen Geruch</target>
+        </trans-unit>
+        <trans-unit id="Trait_Poisonous" translate="yes" xml:space="preserve">
+          <source>Poisonous</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Giftig</target>
+        </trans-unit>
+        <trans-unit id="Trait_RadiatonResistance" translate="yes" xml:space="preserve">
+          <source>Radiaton Resistance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Solarien-Widerstand</target>
+        </trans-unit>
+        <trans-unit id="Trait_Regeneration" translate="yes" xml:space="preserve">
+          <source>Regeneration</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Regeneration</target>
+        </trans-unit>
+        <trans-unit id="Trait_ResistantToDisease" translate="yes" xml:space="preserve">
+          <source>Resistant to Disease</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Widerstandsfähig gegen Krankheiten</target>
+        </trans-unit>
+        <trans-unit id="Trait_ResistantToFear" translate="yes" xml:space="preserve">
+          <source>Resistant to Fear</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Resistent gegen Angst</target>
+        </trans-unit>
+        <trans-unit id="Trait_ResistantToPoisons" translate="yes" xml:space="preserve">
+          <source>Resistant to Poisons</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Resistent gegen Gifte</target>
+        </trans-unit>
+        <trans-unit id="Trait_ResistantToPsionics" translate="yes" xml:space="preserve">
+          <source>Resistant to Psionics</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Resistent gegen Psionik</target>
+        </trans-unit>
+        <trans-unit id="Trait_SpittingAttack" translate="yes" xml:space="preserve">
+          <source>Spitting Attack</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Spucken Angriff</target>
+        </trans-unit>
+        <trans-unit id="Trait_UnusualHandStructure" translate="yes" xml:space="preserve">
+          <source>Unusual Hand Structure</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ungewöhnliche Hand Struktur</target>
+        </trans-unit>
+        <trans-unit id="Trait_UnusualLifeSupportRequirementsMajor" translate="yes" xml:space="preserve">
+          <source>Unusual Life Support Requirements, Major</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ungewöhnlichen Lebens Support-Anforderungen, Major</target>
+        </trans-unit>
+        <trans-unit id="Trait_UnusualLifeSupportRequirementsMinor" translate="yes" xml:space="preserve">
+          <source>Unusual Life Support Requirements, Minor</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ungewöhnlichen Lebens Support-Anforderungen, Moll</target>
+        </trans-unit>
+        <trans-unit id="Trait_UnusualSleepCycle" translate="yes" xml:space="preserve">
+          <source>Unusual Sleep Cycle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ungewöhnliche Schlafzyklus</target>
+        </trans-unit>
+        <trans-unit id="Trait_Uplifited" translate="yes" xml:space="preserve">
+          <source>Uplifited</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Uplifited</target>
+        </trans-unit>
+        <trans-unit id="Vision_AcuteVision" translate="yes" xml:space="preserve">
+          <source>Acute Vision</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Akuten Vision</target>
+        </trans-unit>
+        <trans-unit id="Vision_Blind" translate="yes" xml:space="preserve">
+          <source>Blind</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Blind</target>
+        </trans-unit>
+        <trans-unit id="Vision_Blindsight" translate="yes" xml:space="preserve">
+          <source>Blindsight</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Blindsight</target>
+        </trans-unit>
+        <trans-unit id="Vision_ColourBlindness" translate="yes" xml:space="preserve">
+          <source>Colour Blindness</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Farbenblindheit</target>
+        </trans-unit>
+        <trans-unit id="Vision_Darkvision" translate="yes" xml:space="preserve">
+          <source>Darkvision</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Darkvision</target>
+        </trans-unit>
+        <trans-unit id="Vision_LightBlindness" translate="yes" xml:space="preserve">
+          <source>Light Blindness</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Leichte Blindheit</target>
+        </trans-unit>
+        <trans-unit id="Vision_LightSensitivity" translate="yes" xml:space="preserve">
+          <source>Light Sensitivity</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Lichtempfindlichkeit</target>
+        </trans-unit>
+        <trans-unit id="Vision_LowLightVision" translate="yes" xml:space="preserve">
+          <source>Low-light Vision</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Low-Light Vision</target>
+        </trans-unit>
+        <trans-unit id="Vision_PoorVision" translate="yes" xml:space="preserve">
+          <source>Poor Vision</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schlechte Sicht</target>
+        </trans-unit>
+        <trans-unit id="Weapon_Claws" translate="yes" xml:space="preserve">
+          <source>Claws</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Krallen</target>
+        </trans-unit>
+        <trans-unit id="Weapon_Hooves" translate="yes" xml:space="preserve">
+          <source>Hooves</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hufe</target>
+        </trans-unit>
+        <trans-unit id="Weapon_Horns" translate="yes" xml:space="preserve">
+          <source>Horns</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hörner</target>
+        </trans-unit>
+        <trans-unit id="Weapon_Stinger" translate="yes" xml:space="preserve">
+          <source>Stinger</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stinger</target>
+        </trans-unit>
+        <trans-unit id="Weapon_Teeth" translate="yes" xml:space="preserve">
+          <source>Teeth</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zähne</target>
+        </trans-unit>
+        <trans-unit id="Weapon_Thrasher" translate="yes" xml:space="preserve">
+          <source>Thrasher</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Thrasher</target>
+        </trans-unit>
       </group>
     </body>
   </file>

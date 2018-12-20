@@ -129,4 +129,193 @@
   <data name="Limb_Wings" xml:space="preserve">
     <value>Ailes</value>
   </data>
+  <data name="Hearing_AcuteHearing" xml:space="preserve">
+    <value>Audition aiguë</value>
+  </data>
+  <data name="Hearing_Deaf" xml:space="preserve">
+    <value>Sourds</value>
+  </data>
+  <data name="Hearing_PoorHearing" xml:space="preserve">
+    <value>Mauvaise audience</value>
+  </data>
+  <data name="Scent_Anosmic" xml:space="preserve">
+    <value>Anosmiques</value>
+  </data>
+  <data name="Scent_PoorScent" xml:space="preserve">
+    <value>Mauvaise odeur</value>
+  </data>
+  <data name="Scent_Scent" xml:space="preserve">
+    <value>Parfum</value>
+  </data>
+  <data name="Sense_OrganicRadioCommunications" xml:space="preserve">
+    <value>Communications Radio organique</value>
+  </data>
+  <data name="Sense_Telepathy" xml:space="preserve">
+    <value>Télépathie</value>
+  </data>
+  <data name="Sense_TelepathyLimited" xml:space="preserve">
+    <value>Télépathie, Limited</value>
+  </data>
+  <data name="Sense_VibrationSense" xml:space="preserve">
+    <value>Sens vibratoire</value>
+  </data>
+  <data name="Trait_Armoured" xml:space="preserve">
+    <value>Blindé</value>
+  </data>
+  <data name="Trait_Caste" xml:space="preserve">
+    <value>Caste</value>
+  </data>
+  <data name="Trait_Charisma" xml:space="preserve">
+    <value>Son charisme</value>
+  </data>
+  <data name="Trait_ColdEndurance" xml:space="preserve">
+    <value>Endurance de froid</value>
+  </data>
+  <data name="Trait_ColdResistance" xml:space="preserve">
+    <value>Résistance au froid</value>
+  </data>
+  <data name="Trait_ColdVulnerability" xml:space="preserve">
+    <value>Vulnérabilité de froide</value>
+  </data>
+  <data name="Trait_ElectricityResistance" xml:space="preserve">
+    <value>Résistance de l’électricité</value>
+  </data>
+  <data name="Trait_Engineered" xml:space="preserve">
+    <value>D’ingénierie</value>
+  </data>
+  <data name="Trait_FastHealing" xml:space="preserve">
+    <value>Guérison rapide</value>
+  </data>
+  <data name="Trait_FireResistance" xml:space="preserve">
+    <value>Résistance au feu</value>
+  </data>
+  <data name="Trait_FireVulnerability" xml:space="preserve">
+    <value>Vulnérabilité de feu</value>
+  </data>
+  <data name="Trait_Flyer" xml:space="preserve">
+    <value>Flyer</value>
+  </data>
+  <data name="Trait_Fragile" xml:space="preserve">
+    <value>Fragiles</value>
+  </data>
+  <data name="Trait_FrightfulPresence" xml:space="preserve">
+    <value>Terrible présence</value>
+  </data>
+  <data name="Trait_HeatEndurance" xml:space="preserve">
+    <value>Endurance de chaleur</value>
+  </data>
+  <data name="Trait_Hibernation" xml:space="preserve">
+    <value>Mise en veille prolongée</value>
+  </data>
+  <data name="Trait_ImprovedGrab" xml:space="preserve">
+    <value>Grab améliorée</value>
+  </data>
+  <data name="Trait_ImprovedGrabConstrict" xml:space="preserve">
+    <value>Amélioré le Grab : se contracter</value>
+  </data>
+  <data name="Trait_ImprovedGrabEntangle" xml:space="preserve">
+    <value>Amélioré le Grab : risques d’enchevêtrement</value>
+  </data>
+  <data name="Trait_ImprovedReach" xml:space="preserve">
+    <value>Portée améliorée</value>
+  </data>
+  <data name="Trait_NaturalWeapons" xml:space="preserve">
+    <value>Armes naturelles</value>
+  </data>
+  <data name="Trait_NoFineManipulators" xml:space="preserve">
+    <value>Aucune amende manipulateurs</value>
+  </data>
+  <data name="Trait_NoLandMovement" xml:space="preserve">
+    <value>Aucun mouvement de la terre</value>
+  </data>
+  <data name="Trait_NoVocalCords" xml:space="preserve">
+    <value>Pas de cordes vocales</value>
+  </data>
+  <data name="Trait_PleasantOdor" xml:space="preserve">
+    <value>Odeur agréable</value>
+  </data>
+  <data name="Trait_Poisonous" xml:space="preserve">
+    <value>Vénéneuses</value>
+  </data>
+  <data name="Trait_RadiatonResistance" xml:space="preserve">
+    <value>Applique la résistance</value>
+  </data>
+  <data name="Trait_Regeneration" xml:space="preserve">
+    <value>Régénération</value>
+  </data>
+  <data name="Trait_ResistantToDisease" xml:space="preserve">
+    <value>Résistance à la maladie</value>
+  </data>
+  <data name="Trait_ResistantToFear" xml:space="preserve">
+    <value>Résistant à la peur</value>
+  </data>
+  <data name="Trait_ResistantToPoisons" xml:space="preserve">
+    <value>Résistants aux Poisons</value>
+  </data>
+  <data name="Trait_ResistantToPsionics" xml:space="preserve">
+    <value>Résistant aux psionique</value>
+  </data>
+  <data name="Trait_SpittingAttack" xml:space="preserve">
+    <value>Attaque de cracher</value>
+  </data>
+  <data name="Trait_UnusualHandStructure" xml:space="preserve">
+    <value>Structure inhabituelle main</value>
+  </data>
+  <data name="Trait_UnusualLifeSupportRequirementsMajor" xml:space="preserve">
+    <value>Besoins de soutien de vie inhabituel, Major</value>
+  </data>
+  <data name="Trait_UnusualLifeSupportRequirementsMinor" xml:space="preserve">
+    <value>Besoins de soutien de vie inhabituel, mineur</value>
+  </data>
+  <data name="Trait_UnusualSleepCycle" xml:space="preserve">
+    <value>Cycle de sommeil inhabituel</value>
+  </data>
+  <data name="Trait_Uplifited" xml:space="preserve">
+    <value>Uplifited</value>
+  </data>
+  <data name="Vision_AcuteVision" xml:space="preserve">
+    <value>Vision aiguë</value>
+  </data>
+  <data name="Vision_Blind" xml:space="preserve">
+    <value>Aveugles</value>
+  </data>
+  <data name="Vision_Blindsight" xml:space="preserve">
+    <value>Blindsight</value>
+  </data>
+  <data name="Vision_ColourBlindness" xml:space="preserve">
+    <value>Daltonisme</value>
+  </data>
+  <data name="Vision_Darkvision" xml:space="preserve">
+    <value>Darkvision</value>
+  </data>
+  <data name="Vision_LightBlindness" xml:space="preserve">
+    <value>Lumière de cécité</value>
+  </data>
+  <data name="Vision_LightSensitivity" xml:space="preserve">
+    <value>Sensibilité à la lumière</value>
+  </data>
+  <data name="Vision_LowLightVision" xml:space="preserve">
+    <value>Vision de faible luminosité</value>
+  </data>
+  <data name="Vision_PoorVision" xml:space="preserve">
+    <value>Mauvaise Vision</value>
+  </data>
+  <data name="Weapon_Claws" xml:space="preserve">
+    <value>Griffes</value>
+  </data>
+  <data name="Weapon_Hooves" xml:space="preserve">
+    <value>Sabots</value>
+  </data>
+  <data name="Weapon_Horns" xml:space="preserve">
+    <value>Cors</value>
+  </data>
+  <data name="Weapon_Stinger" xml:space="preserve">
+    <value>Stinger</value>
+  </data>
+  <data name="Weapon_Teeth" xml:space="preserve">
+    <value>Dents</value>
+  </data>
+  <data name="Weapon_Thrasher" xml:space="preserve">
+    <value>Thrasher</value>
+  </data>
 </root>
