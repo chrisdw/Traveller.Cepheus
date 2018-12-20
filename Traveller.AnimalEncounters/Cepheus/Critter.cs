@@ -49,16 +49,15 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
 
         public void Generate(EcologicalTypes ecologicalType, int terrainSubTypeDM, int terrainSizeDM, int motionSizeDM, Motions motion)
         {
-            EcologicalType = ecologicalType;
-            Motion = motion;
-            var result = (dice.roll(2) + terrainSubTypeDM).Clamp(1, 13);
             var pack = 0;
             var endurance = 0;
             var instinct = 0;
             var dexterity = 0;
             var strength = 0;
 
-            GenerateSubType(result, ref pack, ref endurance, ref instinct, ref dexterity, ref strength);
+            EcologicalType = ecologicalType;
+            Motion = motion;
+            GenerateSubType(terrainSubTypeDM, ref pack, ref endurance, ref instinct, ref dexterity, ref strength);
             var sizeClass = GenerateSize(terrainSubTypeDM, terrainSizeDM, endurance, dexterity, strength);
             GenerateSocialProfile(pack, instinct);
             GeneratePackSize();
@@ -87,7 +86,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
             {
                 tw.WriteLine("Name: {0}", Name);
             }
-            tw.Write("{0:0,0}kg ", Weight);
+            tw.Write("{0:N0}kg ", Weight);
             tw.Write("{0} ({1}), ", EcologicalSubTypeLong, EcologicalTypeShort);
             tw.Write("{0} {1}, ", Terrain.TerrainName(Region), Motion);
             tw.Write(Profile.Display);
@@ -385,8 +384,10 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
             }
         }
 
-        private void GenerateSubType(int result, ref int pack, ref int endurance, ref int instinct, ref int dexterity, ref int strength)
+        private void GenerateSubType(int terrainSubTypeDM, ref int pack, ref int endurance, ref int instinct, ref int dexterity, ref int strength)
         {
+            var result = (dice.roll(2) + terrainSubTypeDM).Clamp(1, 13);
+
             AddSkill(Athletics0);
             AddSkill(Recon0);
             AddSkill(Survival0);

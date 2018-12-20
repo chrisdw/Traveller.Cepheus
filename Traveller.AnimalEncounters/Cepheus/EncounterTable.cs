@@ -21,7 +21,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                 start = 1;
                 col1 = "1d6";
             }
-            sw.WriteLine("{0} #App Size   Subtype     Move     UPP Weapons              Armour", col1);
+            sw.WriteLine("{0,3} #App Size     Subtype     Move     UPP    Weapons              Armour", col1);
 
             foreach (var c in Critters)
             {
@@ -33,7 +33,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                         sb.Add(string.Format("{0} ({1}d6)", w, c.DamageDice));
                     }
                     var wpns = string.Join(", ", sb);
-                    sw.WriteLine("{0,3} {1,4} {2:0,0}kg {3} ({4}) {5} {6}m {7} {8,20} {9} ({10})", start++, c.NumberAppearing, c.Weight, c.EcologicalSubTypeLong, c.EcologicalTypeShort, c.Motion, c.Move, c.Profile.Display, wpns, c.ArmourType, c.Armour);
+                    sw.WriteLine("{0,3} {1,-4} {2,6:N0}kg {3,10} ({4}) {5} {6}m {7} {8,-20} {9} ({10})", start++, c.NumberAppearing, c.Weight, c.EcologicalSubTypeLong, c.EcologicalTypeShort, c.Motion, c.Move, c.Profile.Display, wpns, c.ArmourType, c.Armour);
                 }
                 else
                 {

@@ -60,5 +60,28 @@ namespace Traveller.Test
             var c = new Critter(EcologicalTypes.Herbivore, 4, 2, 4, Motions.Swimming);
             c.Write(Console.Out);
         }
+
+        [TestMethod]
+        public void CreateOmnivoreCritter()
+        {
+            var c = new Critter(EcologicalTypes.Omnivore, 0, -2, -2, Motions.Walking)
+            {
+                Region = Regions.Woods
+            };
+            c.Write(Console.Out);
+        }
+
+        [TestMethod]
+        public void Create5OmnivoreCritter()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                var c = new Critter(EcologicalTypes.Omnivore, 0, -2, -2, Motions.Walking)
+                {
+                    Region = Regions.Woods
+                };
+                c.Write(Console.Out);
+            }
+        }
     }
 }
