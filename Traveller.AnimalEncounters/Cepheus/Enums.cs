@@ -56,4 +56,11 @@
         Walking
     }
 
+    public enum ArmourTypes
+    {
+        Fur,
+        Hide,
+        Scales,
+        Shell
+    }
 }

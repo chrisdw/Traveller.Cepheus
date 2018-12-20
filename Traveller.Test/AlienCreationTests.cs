@@ -18,10 +18,10 @@ namespace Traveller.Test
 
             var homeworld = new Planet(config);
             homeworld.Normal.Starport = 'C';
-            homeworld.Normal.Size.Value = 7;
-            homeworld.Normal.Atmosphere.Value = 7;
+            homeworld.Normal.Size.Value = 8;
+            homeworld.Normal.Atmosphere.Value = 6;
             homeworld.Normal.Hydro.Value = 7;
-            homeworld.Normal.TechLevel.Value = 7;
+            homeworld.Normal.TechLevel.Value = 15;
             homeworld.Temp = 20;
             var alien = new Alien() { PsionicsAllowed = true };
             alien.Generate(homeworld);

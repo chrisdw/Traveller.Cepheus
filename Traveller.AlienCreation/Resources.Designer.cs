@@ -61,6 +61,51 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dual-purpose (Manipulation and Locomotion).
+        /// </summary>
+        internal static string Limb_DualPurpose {
+            get {
+                return ResourceManager.GetString("Limb_DualPurpose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fins.
+        /// </summary>
+        internal static string Limb_Fins {
+            get {
+                return ResourceManager.GetString("Limb_Fins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Legs.
+        /// </summary>
+        internal static string Limb_Legs {
+            get {
+                return ResourceManager.GetString("Limb_Legs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manipulation.
+        /// </summary>
+        internal static string Limb_Manipulation {
+            get {
+                return ResourceManager.GetString("Limb_Manipulation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wings.
+        /// </summary>
+        internal static string Limb_Wings {
+            get {
+                return ResourceManager.GetString("Limb_Wings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Acid Resistance.
         /// </summary>
         internal static string Trait_AcidResistance {

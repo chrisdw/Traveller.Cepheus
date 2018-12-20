@@ -57,7 +57,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.CLI
             else
             {
                 var tg = new Cepheus.TableGenerator();
-                var tables = tg.Generate(tsize);
+                var tables = tg.Generate(tsize, uwp);
                 foreach (var t in tables)
                 {
                     t.WriteStreamAsText(Console.Out);

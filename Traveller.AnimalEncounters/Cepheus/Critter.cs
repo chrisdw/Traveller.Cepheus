@@ -26,6 +26,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
         public int Move { get; private set; }
         public Motions Motion { get; private set; }
         public Regions Region { get; set; }
+        public ArmourTypes ArmourType { get; private set; }
 
         public static Skill Athletics0 = new Skill("Athletics", Skill.SkillClass.Military, 1);
         public static Skill Recon0 = new Skill("Recon", Skill.SkillClass.Military, 0);
@@ -103,7 +104,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                 sb.Add(string.Format("{0} ({1}d6)", w, DamageDice));
             }
             tw.Write(string.Join(", ", sb));
-            tw.Write("; Armour {0} ", Armour);
+            tw.Write("; {0} ({1}) ", ArmourType, Armour);
             tw.WriteLine("Speed {0}m", Move);
         }
 
@@ -247,6 +248,42 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                 default:
                     Armour = 0;
                     break;
+            }
+            if (Armour <= 3)
+            {
+                // can be anything except shell
+                result = dice.roll();
+                switch (result)
+                {
+                    case 1:
+                    case 2:
+                        ArmourType = ArmourTypes.Fur;
+                        break;
+                    case 3:
+                    case 4:
+                        ArmourType = ArmourTypes.Hide;
+                        break;
+                    case 5:
+                    case 6:
+                        ArmourType = ArmourTypes.Scales;
+                        break;
+                }
+            }
+            else if (Armour <= 5)
+            {
+                // Can be hide or shell
+                if (dice.roll() <= 3)
+                {
+                    ArmourType = ArmourTypes.Hide;
+                }
+                else
+                {
+                    ArmourType = ArmourTypes.Shell;
+                }
+            }
+            else
+            {
+                ArmourType = ArmourTypes.Shell;
             }
         }
 

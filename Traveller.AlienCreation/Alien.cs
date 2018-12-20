@@ -1023,7 +1023,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             if (Traits.Contains("Flyer"))
             {
-                if (LimbGroupTypes.Contains("Wings"))
+                if (LimbGroupTypes.Contains(Resources.Limb_Wings))
                 {
                     FlyMovement = GenerateComparativeMovement();
                 }
@@ -1036,7 +1036,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             if (Traits.Contains("Natural Swimmer"))
             {
-                if (LimbGroupTypes.Contains("Fins"))
+                if (LimbGroupTypes.Contains(Resources.Limb_Fins))
                 {
                     SwimMovement = GenerateComparativeMovement();
                 }
@@ -1061,11 +1061,11 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             else if (Symmetry == Symmetries.Bilateral)
             {
-                manyLegs = (LimbGroupTypes.Where(s => s.Equals("Legs")).Count() * 2) >= 4;
+                manyLegs = (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Legs) || s.Equals(Resources.Limb_DualPurpose)).Count() * 2) >= 4;
             }
             else
             {
-                manyLegs = (LimbGroupTypes.Where(s => s.Equals("Legs")).Count() * 3) >= 4;
+                manyLegs = (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Legs) || s.Equals(Resources.Limb_DualPurpose)).Count() * 3) >= 4;
             }
             switch (Size)
             {
@@ -1436,10 +1436,10 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             if (Symmetry == Symmetries.Bilateral)
             {
-                LimbGroupTypes.Add("Manipulation");
+                LimbGroupTypes.Add(Resources.Limb_Manipulation);
                 if (Traits.Contains("Flyer"))
                 {
-                    LimbGroupTypes.Add("Wings");
+                    LimbGroupTypes.Add(Resources.Limb_Wings);
                 }
                 if (LimbGroupTypes.Count < LimbPairs)
                 {
@@ -1447,11 +1447,11 @@ namespace org.DownesWard.Traveller.AlienCreation
                     // Need to do remaining limb goups
                     AssignLimbGroups(number);
                 }
-                if (LimbGroupTypes.Where(s => s.Equals("Manipulation")).Count() > 1)
+                if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Manipulation) || s.Equals(Resources.Limb_DualPurpose)).Count() > 1)
                 {
                     AddTrait("Multiple Limbs");
                 }
-                if (!LimbGroupTypes.Contains("Legs"))
+                if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Legs) || s.Equals(Resources.Limb_DualPurpose)).Count() == 0)
                 {
                     AddTrait("No Land Movement");
                 }
@@ -1459,18 +1459,18 @@ namespace org.DownesWard.Traveller.AlienCreation
             else if (Symmetry == Symmetries.Trilateral)
             {
                 var groups = LimbCount / 3;
-                LimbGroupTypes.Add("Manipulation");
+                LimbGroupTypes.Add(Resources.Limb_Manipulation);
                 if (LimbGroupTypes.Count < groups)
                 {
                     var number = groups - LimbGroupTypes.Count;
                     // Need to do remaining limb goups
                     AssignLimbGroups(number);
                 }
-                if (LimbGroupTypes.Where(s => s.Equals("Manipulation")).Count() > 1)
+                if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Manipulation) || s.Equals(Resources.Limb_DualPurpose)).Count() > 1)
                 {
                     AddTrait("Multiple Limbs");
                 }
-                if (!LimbGroupTypes.Contains("Legs"))
+                if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Legs) || s.Equals(Resources.Limb_DualPurpose)).Count() == 0)
                 {
                     AddTrait("No Land Movement");
                 }
@@ -1488,15 +1488,15 @@ namespace org.DownesWard.Traveller.AlienCreation
                     case 3:
                         if (Traits.Contains("Flyer"))
                         {
-                            LimbGroupTypes.Add("Wings");
+                            LimbGroupTypes.Add(Resources.Limb_Wings);
                         }
                         else if (Traits.Contains("Natural Swimmer"))
                         {
-                            LimbGroupTypes.Add("Fins");
+                            LimbGroupTypes.Add(Resources.Limb_Fins);
                         }
                         else
                         {
-                            LimbGroupTypes.Add("Legs");
+                            LimbGroupTypes.Add(Resources.Limb_Legs);
                         }
                         break;
                     case 4:
@@ -1505,25 +1505,25 @@ namespace org.DownesWard.Traveller.AlienCreation
                     case 7:
                         if (Traits.Contains("Natural Swimmer"))
                         {
-                            LimbGroupTypes.Add("Fins");
+                            LimbGroupTypes.Add(Resources.Limb_Fins);
                         }
                         else
                         {
                             if (Traits.Contains("No Land Movement"))
                             {
-                                LimbGroupTypes.Add("Wings");
+                                LimbGroupTypes.Add(Resources.Limb_Wings);
                             }
                             else
                             {
-                                LimbGroupTypes.Add("Legs");
+                                LimbGroupTypes.Add(Resources.Limb_Legs);
                             }
                         }
                         break;
                     case 12:
-                        LimbGroupTypes.Add("Dual-purpose");
+                        LimbGroupTypes.Add(Resources.Limb_DualPurpose);
                         break;
                     default:
-                        LimbGroupTypes.Add("Manipulation");
+                        LimbGroupTypes.Add(Resources.Limb_Manipulation);
                         break;
                 }
             }

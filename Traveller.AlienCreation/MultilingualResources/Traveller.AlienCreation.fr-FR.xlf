@@ -142,6 +142,26 @@
           <source>Xeno-Empathy</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Xeno-Empathy</target>
         </trans-unit>
+        <trans-unit id="Limb_DualPurpose" translate="yes" xml:space="preserve">
+          <source>Dual-purpose (Manipulation and Locomotion)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Double usage (Manipulation et Locomotion)</target>
+        </trans-unit>
+        <trans-unit id="Limb_Fins" translate="yes" xml:space="preserve">
+          <source>Fins</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Nageoires</target>
+        </trans-unit>
+        <trans-unit id="Limb_Legs" translate="yes" xml:space="preserve">
+          <source>Legs</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Jambes</target>
+        </trans-unit>
+        <trans-unit id="Limb_Manipulation" translate="yes" xml:space="preserve">
+          <source>Manipulation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Manipulation</target>
+        </trans-unit>
+        <trans-unit id="Limb_Wings" translate="yes" xml:space="preserve">
+          <source>Wings</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Ailes</target>
+        </trans-unit>
       </group>
     </body>
   </file>

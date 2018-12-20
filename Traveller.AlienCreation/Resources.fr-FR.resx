@@ -114,4 +114,19 @@
   <data name="Trait_XenoEmpathy" xml:space="preserve">
     <value>Xeno-Empathy</value>
   </data>
+  <data name="Limb_DualPurpose" xml:space="preserve">
+    <value>Double usage (Manipulation et Locomotion)</value>
+  </data>
+  <data name="Limb_Fins" xml:space="preserve">
+    <value>Nageoires</value>
+  </data>
+  <data name="Limb_Legs" xml:space="preserve">
+    <value>Jambes</value>
+  </data>
+  <data name="Limb_Manipulation" xml:space="preserve">
+    <value>Manipulation</value>
+  </data>
+  <data name="Limb_Wings" xml:space="preserve">
+    <value>Ailes</value>
+  </data>
 </root>

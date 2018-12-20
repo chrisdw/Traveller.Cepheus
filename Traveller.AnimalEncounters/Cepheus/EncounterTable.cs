@@ -33,7 +33,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                         sb.Add(string.Format("{0} ({1}d6)", w, c.DamageDice));
                     }
                     var wpns = string.Join(", ", sb);
-                    sw.WriteLine("{0,3} {1,4} {2:0,0}kg {3} ({4}) {5} {6}m {7} {8,20} {9}", start++, c.NumberAppearing, c.Weight, c.EcologicalSubTypeLong, c.EcologicalTypeShort, c.Motion, c.Move, c.Profile.Display, wpns, c.Armour);
+                    sw.WriteLine("{0,3} {1,4} {2:0,0}kg {3} ({4}) {5} {6}m {7} {8,20} {9} ({10})", start++, c.NumberAppearing, c.Weight, c.EcologicalSubTypeLong, c.EcologicalTypeShort, c.Motion, c.Move, c.Profile.Display, wpns, c.ArmourType, c.Armour);
                 }
                 else
                 {

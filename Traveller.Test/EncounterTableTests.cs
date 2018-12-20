@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using org.DownesWard.Traveller.AnimalEncounters.Cepheus;
+using org.DownesWard.Traveller.Shared;
 using System;
 
 namespace Traveller.Test
@@ -10,8 +11,13 @@ namespace Traveller.Test
         [TestMethod]
         public void Cepheus2d6TableTest()
         {
+            UWP uwp = new UWP();
+            uwp.Atmosphere.Value = 7;
+            uwp.Hydro.Value = 7;
+            uwp.Size.Value = 7;
+
             var tg = new TableGenerator();
-            var tables = tg.Generate(2);
+            var tables = tg.Generate(2, uwp);
             foreach (var t in tables)
             {
                 t.WriteStreamAsText(Console.Out);
@@ -21,8 +27,13 @@ namespace Traveller.Test
         [TestMethod]
         public void Cepheus1D6TableTest()
         {
+            UWP uwp = new UWP();
+            uwp.Atmosphere.Value = 7;
+            uwp.Hydro.Value = 7;
+            uwp.Size.Value = 7;
+
             var tg = new TableGenerator();
-            var tables = tg.Generate(1);
+            var tables = tg.Generate(1, uwp);
             foreach (var t in tables)
             {
                 t.WriteStreamAsText(Console.Out);

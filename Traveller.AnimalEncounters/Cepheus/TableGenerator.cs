@@ -1,4 +1,5 @@
-﻿using org.DownesWard.Utilities;
+﻿using org.DownesWard.Traveller.Shared;
+using org.DownesWard.Utilities;
 using System.Collections.Generic;
 
 namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
@@ -32,7 +33,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
             EcologicalTypes.Carnivore
         };
 
-        public List<EncounterTable> Generate(int size)
+        public List<EncounterTable> Generate(int size, UWP uwp)
         {
             List<EncounterTable> tables = new List<EncounterTable>();
             EcologicalTypes[] table = twod6Table;
@@ -42,6 +43,10 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
             }
             foreach (var t in Terrain.Terrains)
             {
+                if (t.Region == Regions.Deeps && uwp.Hydro.Value == 0)
+                {
+                    continue;
+                }
                 var etable = new EncounterTable() { Region = t.Region };
                 tables.Add(etable);
 
