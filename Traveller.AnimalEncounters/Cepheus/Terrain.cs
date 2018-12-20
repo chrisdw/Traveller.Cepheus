@@ -98,7 +98,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                     new SubTerrain() { Motion = Motions.Flying, SizeDM = -6 }
                 }
             },
-            new Terrain() { Region = Regions.RainForest, SizeDM = -2, SubtypeDM = -2, SubTerrains =
+            new Terrain() { Region = Regions.Rainforest, SizeDM = -2, SubtypeDM = -2, SubTerrains =
                 {
                     new SubTerrain() { Motion = Motions.Walking, SizeDM = 0 },
                     new SubTerrain() { Motion = Motions.Walking, SizeDM = 0 },
@@ -179,5 +179,45 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                 }
             }
         };
+
+        public static string TerrainName(Regions region)
+        {
+            switch (region)
+            {
+                case Regions.Beach:
+                    return "Beach, Shore";
+                case Regions.Clear:
+                    return "Clear";
+                case Regions.Deeps:
+                    return "Deep Ocean";
+                case Regions.Desert:
+                    return "Desert (hot or cold)";
+                case Regions.Forest:
+                    return "Forest";
+                case Regions.Hills:
+                    return "Hills, Foothills";
+                case Regions.Jungle:
+                    return "Jungle";
+                case Regions.Mountain:
+                    return "Mountain";
+                case Regions.Ocean:
+                    return "Open Ocean";
+                case Regions.Plain:
+                    return "Plain or Prairie";
+                case Regions.Rainforest:
+                    return "Rainforest";
+                case Regions.Riverbank:
+                    return "Riverbank";
+                case Regions.Rough:
+                    return "Rough, Broken";
+                case Regions.Shallows:
+                    return "Ocean Shallows";
+                case Regions.Swamp:
+                    return "Swamp, Marsh";
+                case Regions.Woods:
+                    return "Woods";
+            }
+            return "Unknown";
+        }
     }
 }

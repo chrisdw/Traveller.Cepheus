@@ -5,7 +5,9 @@ namespace org.DownesWard.Utilities
     public class Dice
     {
         public int Sides { get; private set; }
-        private Random random = new Random();
+        private static Random random = new Random();
+        private static object randLock = new object();
+
         public Dice()
         {
             Sides = 6;
@@ -25,11 +27,13 @@ namespace org.DownesWard.Utilities
         {
             int result = 0;
 
-            for (int count = 0; count < numRolls; count++)
+            lock (randLock)
             {
-                result += random.Next(1, Sides + 1);
+                for (int count = 0; count < numRolls; count++)
+                {
+                    result += random.Next(1, Sides + 1);
+                }
             }
-
             return result;
         }
     }

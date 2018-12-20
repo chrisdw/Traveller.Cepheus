@@ -10,7 +10,7 @@
         Forest,
         Woods,
         Jungle,
-        RainForest,
+        Rainforest,
         Rough,
         Swamp,
         Beach,

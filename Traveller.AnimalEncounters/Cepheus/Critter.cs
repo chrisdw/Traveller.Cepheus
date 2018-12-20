@@ -2,6 +2,8 @@
 using org.DownesWard.Utilities;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
@@ -9,6 +11,8 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
     public class Critter
     {
         private Dice dice = new Dice(6);
+
+        public string Name { get; set; }
 
         public EcologicalTypes EcologicalType { get; private set; }
         public EcologicalSubtypes EcologicalSubtype { get; private set; }
@@ -21,6 +25,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
         public int Armour { get; private set; }
         public int Move { get; private set; }
         public Motions Motion { get; private set; }
+        public Regions Region { get; set; }
 
         public static Skill Athletics0 = new Skill("Athletics", Skill.SkillClass.Military, 1);
         public static Skill Recon0 = new Skill("Recon", Skill.SkillClass.Military, 0);
@@ -33,7 +38,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
 
         public Critter()
         {
-
+            EcologicalType = EcologicalTypes.Event;
         }
 
         public Critter(EcologicalTypes ecologicalType, int terrainSubTypeDM, int terrainSizeDM, int motionSizeDM, Motions motion)
@@ -54,7 +59,15 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
 
             GenerateSubType(result, ref pack, ref endurance, ref instinct, ref dexterity, ref strength);
             var sizeClass = GenerateSize(terrainSubTypeDM, terrainSizeDM, endurance, dexterity, strength);
+            GenerateSocialProfile(pack, instinct);
+            GeneratePackSize();
+            GenerateWeapons();
+            GenerateArmour(sizeClass);
+            GenerateSkills();
+        }
 
+        private void GenerateSocialProfile(int pack, int instinct)
+        {
             Profile["PAC"].Value = dice.roll(2) + pack;
             Profile["INS"].Value = dice.roll(2) + instinct;
             if (Move == 0)
@@ -65,14 +78,142 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
             {
                 Profile["INT"].Value = 1;
             }
-            GeneratePackSize();
-            GenerateWeapons();
-            GenerateArmour(sizeClass);
+        }
+
+        public void Write(TextWriter tw)
+        {
+            if (!string.IsNullOrEmpty(Name))
+            {
+                tw.WriteLine("Name: {0}", Name);
+            }
+            tw.Write("{0:0,0}kg ", Weight);
+            tw.Write("{0} ({1}), ", EcologicalSubTypeLong, EcologicalTypeShort);
+            tw.Write("{0} {1}, ", Terrain.TerrainName(Region), Motion);
+            tw.Write(Profile.Display);
+            tw.WriteLine(", #App: {0}", NumberAppearing);
+            var sb = new List<string>();
+            foreach (var s in Skills.Values.OrderBy(s => s.Name))
+            {
+                sb.Add(string.Format("{0}-{1}", s.Name, s.Level));
+            }
+            tw.WriteLine(string.Join(", ", sb));
+            sb.Clear();
+            foreach (var w in Weapons.OrderBy(w => w))
+            {
+                sb.Add(string.Format("{0} ({1}d6)", w, DamageDice));
+            }
+            tw.Write(string.Join(", ", sb));
+            tw.Write("; Armour {0} ", Armour);
+            tw.WriteLine("Speed {0}m", Move);
+        }
+
+        public string EcologicalTypeShort
+        {
+            get
+            {
+                switch (EcologicalType)
+                {
+                    case EcologicalTypes.Carnivore:
+                        return "C";
+                    case EcologicalTypes.Herbivore:
+                        return "H";
+                    case EcologicalTypes.Omnivore:
+                        return "O";
+                    case EcologicalTypes.Scavenger:
+                        return "S";
+                    default:
+                        return "E";
+                }
+            }
+        }
+
+        public string EcologicalSubTypeLong
+        {
+            get
+            {
+                switch (EcologicalSubtype)
+                {
+                    case EcologicalSubtypes.CarrionEater:
+                        return "Carrion Eater";
+                    case EcologicalSubtypes.Chaser:
+                        return "Chaser";
+                    case EcologicalSubtypes.Eater:
+                        return "Eater";
+                    case EcologicalSubtypes.Filter:
+                        return "Filter";
+                    case EcologicalSubtypes.Gatherer:
+                        return "Gatherer";
+                    case EcologicalSubtypes.Grazer:
+                        return "Grazer";
+                    case EcologicalSubtypes.Hijacker:
+                        return "Hijacker";
+                    case EcologicalSubtypes.Hunter:
+                        return "Hunter";
+                    case EcologicalSubtypes.Intermittent:
+                        return "Intermittent";
+                    case EcologicalSubtypes.Intimidator:
+                        return "Intimidator";
+                    case EcologicalSubtypes.Killer:
+                        return "Killer";
+                    case EcologicalSubtypes.Pouncer:
+                        return "Pouncer";
+                    case EcologicalSubtypes.Reducer:
+                        return "Reducer";
+                    case EcologicalSubtypes.Siren:
+                        return "Siren";
+                    case EcologicalSubtypes.Trapper:
+                        return "Trapper";
+                    default:
+                        return "Unknown";
+                }
+            }
+        }
+
+        private void GenerateSkills()
+        {
+            if (Weapons.Count > 0)
+            {
+                AddSkill(NaturalWeapons);
+            }
+            var skills = dice.roll();
+            var maxSkill = Skills.Count;
+            var dx = new Dice(maxSkill);
+            for (var i = 0; i < skills; i++)
+            {
+                var toBoost = dx.roll() - 1;
+                var j = 0;
+                foreach (var s in Skills.Values)
+                {
+                    if (j == toBoost)
+                    {
+                        s.Level++;
+                        break;
+                    }
+                    j++;
+                }
+            }
         }
 
         private void GenerateArmour(int sizeClass)
         {
-            int result = (dice.roll(2) - 7 + sizeClass).Clamp(1, 17);
+            int result = dice.roll(2) - 7 + sizeClass;
+            if (EcologicalType == EcologicalTypes.Herbivore)
+            {
+                result += 4;
+            }
+            else if (EcologicalType == EcologicalTypes.Scavenger)
+            {
+                result += 2;
+            }
+            else if (EcologicalType == EcologicalTypes.Carnivore)
+            {
+                result -= 2;
+            }
+            if (Motion == Motions.Flying)
+            {
+                result -= 2;
+            }
+            result = result.Clamp(1, 17);
             switch (result)
             {
                 case 4:
@@ -204,10 +345,6 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                 case 19:
                     AddWeapon("Projectile");
                     break;
-            }
-            if (Weapons.Count > 0)
-            {
-                AddSkill(NaturalWeapons);
             }
         }
 
@@ -531,7 +668,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
         {
             if (!Skills.ContainsKey(skill.Name))
             {
-                Skills.Add(skill.Name, skill);
+                Skills.Add(skill.Name, skill.Clone());
             }
             else
             {

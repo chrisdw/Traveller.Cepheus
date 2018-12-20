@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using org.DownesWard.Traveller.AlienCreation;
 using org.DownesWard.Traveller.SystemGeneration;
+using System;
 
 namespace Traveller.Test
 {
@@ -24,7 +25,7 @@ namespace Traveller.Test
             homeworld.Temp = 20;
             var alien = new Alien() { PsionicsAllowed = true };
             alien.Generate(homeworld);
-
+            alien.Write(Console.Out);
         }
     }
 }

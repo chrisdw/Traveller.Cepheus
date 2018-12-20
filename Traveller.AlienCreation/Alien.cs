@@ -2,6 +2,7 @@
 using org.DownesWard.Traveller.SystemGeneration;
 using org.DownesWard.Utilities;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace org.DownesWard.Traveller.AlienCreation
@@ -2029,6 +2030,54 @@ namespace org.DownesWard.Traveller.AlienCreation
                     EcologicalSubtype = EcologicalSubtypes.Killer;
                     break;
             }
+        }
+
+        public void Write(TextWriter tw)
+        {
+            tw.WriteLine("Niche {0} ({1})", EcologicalType, EcologicalSubtype);
+            tw.WriteLine("STR: {0}", STR);
+            tw.WriteLine("DEX: {0}", DEX);
+            tw.WriteLine("END: {0}", END);
+            tw.WriteLine("INT: {0}", INT);
+            tw.WriteLine("EDU: {0}", EDU);
+            tw.WriteLine("SOC: {0}", SOC);
+            tw.WriteLine("Metabolism {0}", Metabolism);
+            tw.WriteLine("Genders {0}:{1}", GenderModel, NumGenders);
+            tw.WriteLine("Reproduction: {0}", ReproductionMethod);
+            tw.WriteLine("Size: {0}, DM {1:+0;-#}", Size, AttackDM);
+            tw.WriteLine("Symmetry: {0}", Symmetry);
+            tw.WriteLine("Limbs {0} ({1} Pairs)", LimbCount, LimbPairs);
+            foreach (var s in LimbGroupTypes.OrderBy(s => s))
+            {
+                tw.WriteLine(s);
+            }
+            if (LandMovementRate != 0)
+            {
+                tw.WriteLine("Land Movement: {0}", LandMovementRate);
+            }
+            if (FlyMovementRate != 0)
+            {
+                tw.WriteLine("Flying Movement: {0}", FlyMovementRate);
+            }
+            if (SwimMovementRate != 0)
+            {
+                tw.WriteLine("Swiming Movement: {0}", SwimMovementRate);
+            }
+            if (ClimbMovementRate != 0)
+            {
+                tw.WriteLine("Climbing Movement: {0}", ClimbMovementRate);
+            }
+            if (Traits.Count > 0)
+            {
+                tw.WriteLine(string.Join(", ", Traits.OrderBy(s => s)));
+            }
+            if (Weapons.Count > 0)
+            {
+                tw.WriteLine(string.Join(", ", Weapons.OrderBy(s => s)));
+            }
+            tw.WriteLine("Matures at {0}, aging begins at {1} DM {2:+0;-#}", StartingAge, AgingBegins, AgingModifier);
+            tw.WriteLine("Height {0} + {1}", BaseHeight, HeightModifier);
+            tw.WriteLine("Weight {0} + {1}", BaseWeight, WeightModifier);
         }
     }
 }

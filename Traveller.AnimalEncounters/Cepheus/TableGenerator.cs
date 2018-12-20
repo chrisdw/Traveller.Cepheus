@@ -14,7 +14,7 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
             EcologicalTypes.Herbivore,
             EcologicalTypes.Herbivore,
             EcologicalTypes.Omnivore,
-            EcologicalTypes.Omnivore
+            EcologicalTypes.Carnivore
         };
 
         private readonly EcologicalTypes[] twod6Table = new EcologicalTypes[11]
@@ -51,7 +51,10 @@ namespace org.DownesWard.Traveller.AnimalEncounters.Cepheus
                     {
                         var st = dice.roll() - 1;
                         Terrain.SubTerrain subTerrain = t.SubTerrains[st];
-                        var c = new Critter(table[i], t.SubtypeDM, t.SizeDM, subTerrain.SizeDM, subTerrain.Motion);
+                        var c = new Critter(table[i], t.SubtypeDM, t.SizeDM, subTerrain.SizeDM, subTerrain.Motion)
+                        {
+                            Region = t.Region
+                        };
                         etable.Critters.Add(c);
                     }
                     else
