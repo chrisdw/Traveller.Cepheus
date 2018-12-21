@@ -526,6 +526,70 @@
           <source>Zero-Gravity Adaptation</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Adaptation de l’apesanteur</target>
         </trans-unit>
+        <trans-unit id="Print_Aging" translate="yes" xml:space="preserve">
+          <source>Matures at {0}, aging begins at {1} DM {2:+0;-#}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mûrit à {0}, vieillissement commence à {1} DM {2 : + 0 ;-#}</target>
+        </trans-unit>
+        <trans-unit id="Print_ClimbMove" translate="yes" xml:space="preserve">
+          <source>Climbing Movement: {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mouvement d’escalade : {0}</target>
+        </trans-unit>
+        <trans-unit id="Print_FlyMove" translate="yes" xml:space="preserve">
+          <source>Flying Movement: {0</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vol de mouvement : {0}</target>
+        </trans-unit>
+        <trans-unit id="Print_Genders" translate="yes" xml:space="preserve">
+          <source>Genders: {0}:{1}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Genres : {0} : {1}</target>
+        </trans-unit>
+        <trans-unit id="Print_Height" translate="yes" xml:space="preserve">
+          <source>Height {0} + {1}cm</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hauteur {0} + {1}cm</target>
+        </trans-unit>
+        <trans-unit id="Print_LandMove" translate="yes" xml:space="preserve">
+          <source>Land Movement: {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mouvement de terrain : {0}</target>
+        </trans-unit>
+        <trans-unit id="Print_Limbs" translate="yes" xml:space="preserve">
+          <source>Limbs: {0} ({1} Pairs)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Membres : {0} (paires {1})</target>
+        </trans-unit>
+        <trans-unit id="Print_Metabolism" translate="yes" xml:space="preserve">
+          <source>Metabolism: {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Métabolisme : {0}</target>
+        </trans-unit>
+        <trans-unit id="Print_Niche" translate="yes" xml:space="preserve">
+          <source>Niche: {0} ({1})</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niche : {0} ({1})</target>
+        </trans-unit>
+        <trans-unit id="Print_Reproduction" translate="yes" xml:space="preserve">
+          <source>Reproduction: {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Reproduction : {0}</target>
+        </trans-unit>
+        <trans-unit id="Print_Size" translate="yes" xml:space="preserve">
+          <source>Size: {0}, DM {1:+0;-#}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Taille : {0}, DM {1 : + 0 ;-#}</target>
+        </trans-unit>
+        <trans-unit id="Print_SwimMove" translate="yes" xml:space="preserve">
+          <source>Swiming Movement: {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Swiming mouvement : {0}</target>
+        </trans-unit>
+        <trans-unit id="Print_Symmetry" translate="yes" xml:space="preserve">
+          <source>Symmetry: {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Symétrie : {0}</target>
+        </trans-unit>
+        <trans-unit id="Print_Traits" translate="yes" xml:space="preserve">
+          <source>Traits: {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Caractéristiques : {0}</target>
+        </trans-unit>
+        <trans-unit id="Print_Weapons" translate="yes" xml:space="preserve">
+          <source>Weapons: {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Armes : {0}</target>
+        </trans-unit>
+        <trans-unit id="Print_Weight" translate="yes" xml:space="preserve">
+          <source>Weight {0} + {1}kg</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Poids {0} + {1}kg</target>
+        </trans-unit>
       </group>
     </body>
   </file>

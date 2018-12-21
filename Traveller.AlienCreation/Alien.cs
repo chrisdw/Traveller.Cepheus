@@ -2034,19 +2034,19 @@ namespace org.DownesWard.Traveller.AlienCreation
 
         public void Write(TextWriter tw)
         {
-            tw.WriteLine("Niche: {0} ({1})", EcologicalType, EcologicalSubtype);
+            tw.WriteLine(Resources.Print_Niche, EcologicalType, EcologicalSubtype);
             tw.WriteLine("STR: {0}", STR);
             tw.WriteLine("DEX: {0}", DEX);
             tw.WriteLine("END: {0}", END);
             tw.WriteLine("INT: {0}", INT);
             tw.WriteLine("EDU: {0}", EDU);
             tw.WriteLine("SOC: {0}", SOC);
-            tw.WriteLine("Metabolism {0}", Metabolism);
-            tw.WriteLine("Genders {0}:{1}", GenderModel, NumGenders);
-            tw.WriteLine("Reproduction: {0}", ReproductionMethod);
-            tw.WriteLine("Size: {0}, DM {1:+0;-#}", Size, AttackDM);
-            tw.WriteLine("Symmetry: {0}", Symmetry);
-            tw.WriteLine("Limbs: {0} ({1} Pairs)", LimbCount, LimbPairs);
+            tw.WriteLine(Resources.Print_Metabolism, Metabolism);
+            tw.WriteLine(Resources.Print_Genders, GenderModel, NumGenders);
+            tw.WriteLine(Resources.Print_Reproduction, ReproductionMethod);
+            tw.WriteLine(Resources.Print_Size, Size, AttackDM);
+            tw.WriteLine(Resources.Print_Symmetry, Symmetry);
+            tw.WriteLine(Resources.Print_Limbs, LimbCount, LimbPairs);
             var limbs = LimbGroupTypes.GroupBy(l => l)
                 .Select(l => new { Name = l.Key, Count = l.Count() });
             foreach (var lg in limbs)
@@ -2055,31 +2055,31 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             if (LandMovementRate != 0)
             {
-                tw.WriteLine("Land Movement: {0}", LandMovementRate);
+                tw.WriteLine(Resources.Print_LandMove, LandMovementRate);
             }
             if (FlyMovementRate != 0)
             {
-                tw.WriteLine("Flying Movement: {0}", FlyMovementRate);
+                tw.WriteLine(Resources.Print_FlyMove, FlyMovementRate);
             }
             if (SwimMovementRate != 0)
             {
-                tw.WriteLine("Swiming Movement: {0}", SwimMovementRate);
+                tw.WriteLine(Resources.Print_SwimMove, SwimMovementRate);
             }
             if (ClimbMovementRate != 0)
             {
-                tw.WriteLine("Climbing Movement: {0}", ClimbMovementRate);
+                tw.WriteLine(Resources.Print_ClimbMove, ClimbMovementRate);
             }
             if (Traits.Count > 0)
             {
-                tw.WriteLine("Traits: {0}", string.Join(", ", Traits.OrderBy(s => s)));
+                tw.WriteLine(Resources.Print_Traits, string.Join(", ", Traits.OrderBy(s => s)));
             }
             if (Weapons.Count > 0)
             {
-                tw.WriteLine("Weapons: {0}", string.Join(", ", Weapons.OrderBy(s => s)));
+                tw.WriteLine(Resources.Print_Weapons, string.Join(", ", Weapons.OrderBy(s => s)));
             }
-            tw.WriteLine("Matures at {0}, aging begins at {1} DM {2:+0;-#}", StartingAge, AgingBegins, AgingModifier);
-            tw.WriteLine("Height {0} + {1}", BaseHeight, HeightModifier);
-            tw.WriteLine("Weight {0} + {1}", BaseWeight, WeightModifier);
+            tw.WriteLine(Resources.Print_Aging, StartingAge, AgingBegins, AgingModifier);
+            tw.WriteLine(Resources.Print_Height, BaseHeight, HeightModifier);
+            tw.WriteLine(Resources.Print_Weight, BaseWeight, WeightModifier);
         }
     }
 }

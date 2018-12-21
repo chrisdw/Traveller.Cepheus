@@ -402,4 +402,52 @@
   <data name="Trait_ZeroGravityAdaptation" xml:space="preserve">
     <value>Zero-Gravity-Anpassung</value>
   </data>
+  <data name="Print_Aging" xml:space="preserve">
+    <value>Reift auf {0}, Alterung beginnt um DM {1} {2: + 0;-#}</value>
+  </data>
+  <data name="Print_ClimbMove" xml:space="preserve">
+    <value>Klettern Bewegung: {0}</value>
+  </data>
+  <data name="Print_FlyMove" xml:space="preserve">
+    <value>Fliegende Bewegung: {0}</value>
+  </data>
+  <data name="Print_Genders" xml:space="preserve">
+    <value>Geschlechter: {0}: {1}</value>
+  </data>
+  <data name="Print_Height" xml:space="preserve">
+    <value>Höhe {0} + {1}cm</value>
+  </data>
+  <data name="Print_LandMove" xml:space="preserve">
+    <value>Bewegung zu landen: {0}</value>
+  </data>
+  <data name="Print_Limbs" xml:space="preserve">
+    <value>Gliedmaßen: {0} ({1} Paare)</value>
+  </data>
+  <data name="Print_Metabolism" xml:space="preserve">
+    <value>Stoffwechsel: {0}</value>
+  </data>
+  <data name="Print_Niche" xml:space="preserve">
+    <value>Nische: {0} ({1})</value>
+  </data>
+  <data name="Print_Reproduction" xml:space="preserve">
+    <value>Reproduktion: {0}</value>
+  </data>
+  <data name="Print_Size" xml:space="preserve">
+    <value>Größe: {0}, DM {1: + 0;-#}</value>
+  </data>
+  <data name="Print_SwimMove" xml:space="preserve">
+    <value>Schwimmen-Bewegung: {0}</value>
+  </data>
+  <data name="Print_Symmetry" xml:space="preserve">
+    <value>Symmetrie: {0}</value>
+  </data>
+  <data name="Print_Traits" xml:space="preserve">
+    <value>Eigenschaften: {0}</value>
+  </data>
+  <data name="Print_Weapons" xml:space="preserve">
+    <value>Waffen: {0}</value>
+  </data>
+  <data name="Print_Weight" xml:space="preserve">
+    <value>Gewicht {0} + {1}kg</value>
+  </data>
 </root>

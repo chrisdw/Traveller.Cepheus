@@ -133,6 +133,150 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Matures at {0}, aging begins at {1} DM {2:+0;-#}.
+        /// </summary>
+        internal static string Print_Aging {
+            get {
+                return ResourceManager.GetString("Print_Aging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Climbing Movement: {0}.
+        /// </summary>
+        internal static string Print_ClimbMove {
+            get {
+                return ResourceManager.GetString("Print_ClimbMove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flying Movement: {0.
+        /// </summary>
+        internal static string Print_FlyMove {
+            get {
+                return ResourceManager.GetString("Print_FlyMove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Genders: {0}:{1}.
+        /// </summary>
+        internal static string Print_Genders {
+            get {
+                return ResourceManager.GetString("Print_Genders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height {0} + {1}cm.
+        /// </summary>
+        internal static string Print_Height {
+            get {
+                return ResourceManager.GetString("Print_Height", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Land Movement: {0}.
+        /// </summary>
+        internal static string Print_LandMove {
+            get {
+                return ResourceManager.GetString("Print_LandMove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limbs: {0} ({1} Pairs).
+        /// </summary>
+        internal static string Print_Limbs {
+            get {
+                return ResourceManager.GetString("Print_Limbs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Metabolism: {0}.
+        /// </summary>
+        internal static string Print_Metabolism {
+            get {
+                return ResourceManager.GetString("Print_Metabolism", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Niche: {0} ({1}).
+        /// </summary>
+        internal static string Print_Niche {
+            get {
+                return ResourceManager.GetString("Print_Niche", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reproduction: {0}.
+        /// </summary>
+        internal static string Print_Reproduction {
+            get {
+                return ResourceManager.GetString("Print_Reproduction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Size: {0}, DM {1:+0;-#}.
+        /// </summary>
+        internal static string Print_Size {
+            get {
+                return ResourceManager.GetString("Print_Size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Swiming Movement: {0}.
+        /// </summary>
+        internal static string Print_SwimMove {
+            get {
+                return ResourceManager.GetString("Print_SwimMove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Symmetry: {0}.
+        /// </summary>
+        internal static string Print_Symmetry {
+            get {
+                return ResourceManager.GetString("Print_Symmetry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Traits: {0}.
+        /// </summary>
+        internal static string Print_Traits {
+            get {
+                return ResourceManager.GetString("Print_Traits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weapons: {0}.
+        /// </summary>
+        internal static string Print_Weapons {
+            get {
+                return ResourceManager.GetString("Print_Weapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight {0} + {1}kg.
+        /// </summary>
+        internal static string Print_Weight {
+            get {
+                return ResourceManager.GetString("Print_Weight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Anosmic.
         /// </summary>
         internal static string Scent_Anosmic {
