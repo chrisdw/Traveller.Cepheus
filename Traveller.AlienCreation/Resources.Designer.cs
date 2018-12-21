@@ -232,11 +232,29 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amphibious.
+        /// </summary>
+        internal static string Trait_Amphibious {
+            get {
+                return ResourceManager.GetString("Trait_Amphibious", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Anti-Psionic.
         /// </summary>
         internal static string Trait_AntiPsionic {
             get {
                 return ResourceManager.GetString("Trait_AntiPsionic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aquatic.
+        /// </summary>
+        internal static string Trait_Aquatic {
+            get {
+                return ResourceManager.GetString("Trait_Aquatic", resourceCulture);
             }
         }
         
@@ -259,6 +277,15 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Atmospheric Requirements.
+        /// </summary>
+        internal static string Trait_AtmosphericRequirements {
+            get {
+                return ResourceManager.GetString("Trait_AtmosphericRequirements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bad First Impression.
         /// </summary>
         internal static string Trait_BadFirstImpression {
@@ -273,6 +300,15 @@ namespace org.DownesWard.Traveller.AlienCreation {
         internal static string Trait_BlindFighter {
             get {
                 return ResourceManager.GetString("Trait_BlindFighter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Burst of Speed.
+        /// </summary>
+        internal static string Trait_BurstOfSpeed {
+            get {
+                return ResourceManager.GetString("Trait_BurstOfSpeed", resourceCulture);
             }
         }
         
@@ -331,6 +367,24 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deep Diver.
+        /// </summary>
+        internal static string Trait_DeepDiver {
+            get {
+                return ResourceManager.GetString("Trait_DeepDiver", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desert Adaptation.
+        /// </summary>
+        internal static string Trait_DesertAdaptation {
+            get {
+                return ResourceManager.GetString("Trait_DesertAdaptation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Eidetic Memory.
         /// </summary>
         internal static string Trait_EideticMemory {
@@ -367,11 +421,29 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fast Speed.
+        /// </summary>
+        internal static string Trait_FastSpeed {
+            get {
+                return ResourceManager.GetString("Trait_FastSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fast Talker.
         /// </summary>
         internal static string Trait_FastTalker {
             get {
                 return ResourceManager.GetString("Trait_FastTalker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Feral.
+        /// </summary>
+        internal static string Trait_Feral {
+            get {
+                return ResourceManager.GetString("Trait_Feral", resourceCulture);
             }
         }
         
@@ -430,11 +502,29 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gendermorphic.
+        /// </summary>
+        internal static string Trait_Gendermorphic {
+            get {
+                return ResourceManager.GetString("Trait_Gendermorphic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Good First Impression.
         /// </summary>
         internal static string Trait_GoodFirstImpression {
             get {
                 return ResourceManager.GetString("Trait_GoodFirstImpression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gravity Intolerance.
+        /// </summary>
+        internal static string Trait_GravityIntolerance {
+            get {
+                return ResourceManager.GetString("Trait_GravityIntolerance", resourceCulture);
             }
         }
         
@@ -457,11 +547,29 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Heat Resistance.
+        /// </summary>
+        internal static string Trait_HeatResistance {
+            get {
+                return ResourceManager.GetString("Trait_HeatResistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hibernation.
         /// </summary>
         internal static string Trait_Hibernation {
             get {
                 return ResourceManager.GetString("Trait_Hibernation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to High Gravity Adaptation.
+        /// </summary>
+        internal static string Trait_HighGravityAdaptation {
+            get {
+                return ResourceManager.GetString("Trait_HighGravityAdaptation", resourceCulture);
             }
         }
         
@@ -502,6 +610,15 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Increased Life Support.
+        /// </summary>
+        internal static string Trait_IncreasedLifeSupport {
+            get {
+                return ResourceManager.GetString("Trait_IncreasedLifeSupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Interrogator.
         /// </summary>
         internal static string Trait_Interrogator {
@@ -520,6 +637,24 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Low Gravity Adaptation.
+        /// </summary>
+        internal static string Trait_LowGravityAdaptation {
+            get {
+                return ResourceManager.GetString("Trait_LowGravityAdaptation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Multiple Limbs.
+        /// </summary>
+        internal static string Trait_MultipleLimbs {
+            get {
+                return ResourceManager.GetString("Trait_MultipleLimbs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Natural Advocate.
         /// </summary>
         internal static string Trait_NaturalAdvocate {
@@ -534,6 +669,15 @@ namespace org.DownesWard.Traveller.AlienCreation {
         internal static string Trait_NaturalBornLeader {
             get {
                 return ResourceManager.GetString("Trait_NaturalBornLeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Natural Climber.
+        /// </summary>
+        internal static string Trait_NaturalClimber {
+            get {
+                return ResourceManager.GetString("Trait_NaturalClimber", resourceCulture);
             }
         }
         
@@ -570,6 +714,15 @@ namespace org.DownesWard.Traveller.AlienCreation {
         internal static string Trait_NaturalSurvivalist {
             get {
                 return ResourceManager.GetString("Trait_NaturalSurvivalist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Natural Swimmer.
+        /// </summary>
+        internal static string Trait_NaturalSwimmer {
+            get {
+                return ResourceManager.GetString("Trait_NaturalSwimmer", resourceCulture);
             }
         }
         
@@ -754,6 +907,15 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Slow Speed.
+        /// </summary>
+        internal static string Trait_SlowSpeed {
+            get {
+                return ResourceManager.GetString("Trait_SlowSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spitting Attack.
         /// </summary>
         internal static string Trait_SpittingAttack {
@@ -763,11 +925,65 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Stable.
+        /// </summary>
+        internal static string Trait_Stable {
+            get {
+                return ResourceManager.GetString("Trait_Stable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stalwart Movement.
+        /// </summary>
+        internal static string Trait_StalwartMovement {
+            get {
+                return ResourceManager.GetString("Trait_StalwartMovement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stealthy.
         /// </summary>
         internal static string Trait_Stealthy {
             get {
                 return ResourceManager.GetString("Trait_Stealthy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tainted Breather.
+        /// </summary>
+        internal static string Trait_TaintedBreather {
+            get {
+                return ResourceManager.GetString("Trait_TaintedBreather", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Taint Immunity.
+        /// </summary>
+        internal static string Trait_TaintImmunity {
+            get {
+                return ResourceManager.GetString("Trait_TaintImmunity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trace Breather.
+        /// </summary>
+        internal static string Trait_TraceBreather {
+            get {
+                return ResourceManager.GetString("Trait_TraceBreather", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trace Breather (Limited).
+        /// </summary>
+        internal static string Trait_TraceBreatherLimited {
+            get {
+                return ResourceManager.GetString("Trait_TraceBreatherLimited", resourceCulture);
             }
         }
         
@@ -826,6 +1042,33 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vaccum Survival.
+        /// </summary>
+        internal static string Trait_VaccumSurvival {
+            get {
+                return ResourceManager.GetString("Trait_VaccumSurvival", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vaccum Survival (Limited).
+        /// </summary>
+        internal static string Trait_VaccumSurvivalLimited {
+            get {
+                return ResourceManager.GetString("Trait_VaccumSurvivalLimited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Water Dependent.
+        /// </summary>
+        internal static string Trait_WaterDependent {
+            get {
+                return ResourceManager.GetString("Trait_WaterDependent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Well-Travelled.
         /// </summary>
         internal static string Trait_WellTravelled {
@@ -840,6 +1083,15 @@ namespace org.DownesWard.Traveller.AlienCreation {
         internal static string Trait_XenoEmpathy {
             get {
                 return ResourceManager.GetString("Trait_XenoEmpathy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zero-Gravity Adaptation.
+        /// </summary>
+        internal static string Trait_ZeroGravityAdaptation {
+            get {
+                return ResourceManager.GetString("Trait_ZeroGravityAdaptation", resourceCulture);
             }
         }
         

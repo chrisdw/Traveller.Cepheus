@@ -899,7 +899,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             if (feralcheck >= 12)
             {
-                AddTrait("Feral");
+                AddTrait(Resources.Trait_Feral);
                 EDU = Attribute.Score(1, result, 9, out educhange);
             }
             else
@@ -1018,7 +1018,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
                 if (stability >= 12)
                 {
-                    AddTrait("Stable");
+                    AddTrait(Resources.Trait_Stable);
                 }
             }
             if (Traits.Contains(Resources.Trait_Flyer))
@@ -1034,7 +1034,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
                 GenerateSpeedTraits(FlyMovement);
             }
-            if (Traits.Contains("Natural Swimmer"))
+            if (Traits.Contains(Resources.Trait_NaturalSwimmer))
             {
                 if (LimbGroupTypes.Contains(Resources.Limb_Fins))
                 {
@@ -1047,7 +1047,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
                 GenerateSpeedTraits(SwimMovement);
             }
-            if (Traits.Contains("Natural Climber"))
+            if (Traits.Contains(Resources.Trait_NaturalClimber))
             {
                 ClimbMovement = GenerateComparativeMovement();
                 GenerateSpeedTraits(ClimbMovement);
@@ -1331,11 +1331,11 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             if (LandMovementRate <= 6)
             {
-                AddTrait("Slow Speed");
+                AddTrait(Resources.Trait_SlowSpeed);
             }
             else if (LandMovementRate >= 9)
             {
-                AddTrait("Fast Speed");
+                AddTrait(Resources.Trait_FastSpeed);
             }
         }
 
@@ -1345,14 +1345,14 @@ namespace org.DownesWard.Traveller.AlienCreation
             {
                 if (dice.roll(2) >= 12)
                 {
-                    AddTrait("Burst of Speed");
+                    AddTrait(Resources.Trait_BurstOfSpeed);
                 }
             }
             if (speed != MovementRates.Fast)
             {
                 if (dice.roll(2) >= 12)
                 {
-                    AddTrait("Stalwart Movement");
+                    AddTrait(Resources.Trait_StalwartMovement);
                 }
             }
         }
@@ -1449,7 +1449,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
                 if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Manipulation) || s.Equals(Resources.Limb_DualPurpose)).Count() > 1)
                 {
-                    AddTrait("Multiple Limbs");
+                    AddTrait(Resources.Trait_MultipleLimbs);
                 }
                 if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Legs) || s.Equals(Resources.Limb_DualPurpose)).Count() == 0)
                 {
@@ -1468,7 +1468,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
                 if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Manipulation) || s.Equals(Resources.Limb_DualPurpose)).Count() > 1)
                 {
-                    AddTrait("Multiple Limbs");
+                    AddTrait(Resources.Trait_MultipleLimbs);
                 }
                 if (LimbGroupTypes.Where(s => s.Equals(Resources.Limb_Legs) || s.Equals(Resources.Limb_DualPurpose)).Count() == 0)
                 {
@@ -1490,7 +1490,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                         {
                             LimbGroupTypes.Add(Resources.Limb_Wings);
                         }
-                        else if (Traits.Contains("Natural Swimmer"))
+                        else if (Traits.Contains(Resources.Trait_NaturalSwimmer))
                         {
                             LimbGroupTypes.Add(Resources.Limb_Fins);
                         }
@@ -1503,7 +1503,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                     case 5:
                     case 6:
                     case 7:
-                        if (Traits.Contains("Natural Swimmer"))
+                        if (Traits.Contains(Resources.Trait_NaturalSwimmer))
                         {
                             LimbGroupTypes.Add(Resources.Limb_Fins);
                         }
@@ -1564,32 +1564,32 @@ namespace org.DownesWard.Traveller.AlienCreation
                     case 2:
                         if (homeworld.Normal.Hydro.Value > 0 && homeworld.Normal.Size.Value > 0)
                         {
-                            AddTrait("Natural Swimmer");
+                            AddTrait(Resources.Trait_NaturalSwimmer);
                             AddTrait(Resources.Trait_NoLandMovement);
-                            if (!Traits.Contains("Aquatic"))
+                            if (!Traits.Contains(Resources.Trait_Aquatic))
                             {
-                                AddTrait("Deep Diver");
+                                AddTrait(Resources.Trait_DeepDiver);
                             }
                         }
                         break;
                     case 3:
                         if (homeworld.Normal.Hydro.Value > 0 && homeworld.Normal.Size.Value > 0)
                         {
-                            AddTrait("Natural Swimmer");
-                            if (!Traits.Contains("Aquatic"))
+                            AddTrait(Resources.Trait_NaturalSwimmer);
+                            if (!Traits.Contains(Resources.Trait_Aquatic))
                             {
-                                AddTrait("Deep Diver");
+                                AddTrait(Resources.Trait_DeepDiver);
                             }
-                            AddTrait("Amphibious");
+                            AddTrait(Resources.Trait_Amphibious);
                             var res = dice.roll(2);
                             if (res >= 6 && res < 10)
                             {
-                                AddTrait("Water Dependent");
+                                AddTrait(Resources.Trait_WaterDependent);
                             }
                         }
                         break;
                     case 10:
-                        AddTrait("Natural Climber");
+                        AddTrait(Resources.Trait_NaturalClimber);
                         break;
                     case 11:
                         if (homeworld.Normal.Atmosphere.Value >= 4)
@@ -1623,7 +1623,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             {
                 size -= 2;
             }
-            if (Traits.Contains("Natural Swimmer"))
+            if (Traits.Contains(Resources.Trait_NaturalSwimmer))
             {
                 size += 2;
             }
@@ -1653,7 +1653,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                     END.Dice = 3;
                     DEX.Dice = 1;
                     AttackDM = 0;
-                    Traits.Add("Increased Life Support");
+                    Traits.Add(Resources.Trait_IncreasedLifeSupport);
                     break;
                 case 14:
                     Size = Sizes.Huge;
@@ -1661,7 +1661,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                     END.Dice = 3;
                     DEX.Dice = 1;
                     AttackDM = 1;
-                    Traits.Add("Increased Life Support");
+                    Traits.Add(Resources.Trait_IncreasedLifeSupport);
                     break;
                 default:
                     Size = Sizes.Medium;
@@ -1682,18 +1682,18 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             if (respiration == 12 && homeworld.Normal.Hydro.Value != 0)
             {
-                AddTrait("Aquatic");
-                AddTrait("Natural Swimmer");
-                AddTrait("Amphibious");
+                AddTrait(Resources.Trait_Aquatic);
+                AddTrait(Resources.Trait_NaturalSwimmer);
+                AddTrait(Resources.Trait_Amphibious);
                 var res = dice.roll(2);
                 if (res >= 6 && res < 10)
                 {
-                    AddTrait("Water Dependent");
+                    AddTrait(Resources.Trait_WaterDependent);
                 }
                 else
                 {
-                    RemoveTrait("Amphibious");
-                    RemoveTrait("Water Dependent");
+                    RemoveTrait(Resources.Trait_Amphibious);
+                    RemoveTrait(Resources.Trait_WaterDependent);
                 }
             }
         }
@@ -1773,7 +1773,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             {
                 if (dice.roll(2) >= 12)
                 {
-                    AddTrait("Gendermorphic");
+                    AddTrait(Resources.Trait_Gendermorphic);
                 }
             }
         }
@@ -1794,21 +1794,21 @@ namespace org.DownesWard.Traveller.AlienCreation
         {
             if (size.Value == 0)
             {
-                AddTrait("Zero-Gravity Adaptation");
-                AddTrait("Gravity Intolerance");
+                AddTrait(Resources.Trait_ZeroGravityAdaptation);
+                AddTrait(Resources.Trait_GravityIntolerance);
             }
             else if (size.Value >= 1 && size.Value <= 3)
             {
-                AddTrait("Low Gravity Adaptation");
-                AddTrait("Gravity Intolerance");
+                AddTrait(Resources.Trait_LowGravityAdaptation);
+                AddTrait(Resources.Trait_GravityIntolerance);
             }
             else if (size.Value >= 4 && size.Value <= 6)
             {
-                AddTrait("Low Gravity Adaptation");
+                AddTrait(Resources.Trait_LowGravityAdaptation);
             }
             else if (size.Value >= 10)
             {
-                AddTrait("High Gravity Adaptation");
+                AddTrait(Resources.Trait_HighGravityAdaptation);
             }
         }
 
@@ -1816,31 +1816,31 @@ namespace org.DownesWard.Traveller.AlienCreation
         {
             if (atmosphere.Value == 0)
             {
-                AddTrait("Vaccum Survival");
+                AddTrait(Resources.Trait_VaccumSurvival);
             }
             else if (atmosphere.Value == 1)
             {
-                Traits.Add("Trace Breather");
+                Traits.Add(Resources.Trait_TraceBreather);
                 if (dice.roll(2) >= 11)
                 {
-                    AddTrait("Vaccum Survival (Limited)");
+                    AddTrait(Resources.Trait_VaccumSurvivalLimited);
                 }
             }
             else if (atmosphere.Value == 2 || atmosphere.Value == 3)
             {             
                 if (dice.roll(2) >= 11)
                 {
-                    AddTrait("Trace Breather");
-                    AddTrait("Vaccum Survival (Limited)");
+                    AddTrait(Resources.Trait_TraceBreather);
+                    AddTrait(Resources.Trait_VaccumSurvivalLimited);
                 }
                 else
                 {
-                    Traits.Add("Trace Breather (Limited)");
+                    Traits.Add(Resources.Trait_TraceBreatherLimited);
                 }
             }
             else if (atmosphere.Value >= 10 && atmosphere.Value == 12)
             {
-                AddTrait("Atmospheric Requirements");
+                AddTrait(Resources.Trait_AtmosphericRequirements);
             }
             if (atmosphere.Value == 2 || 
                 atmosphere.Value == 4 ||
@@ -1849,11 +1849,11 @@ namespace org.DownesWard.Traveller.AlienCreation
             {
                 if (dice.roll(2) >= 9)
                 {
-                    AddTrait("Taint Immunity");
+                    AddTrait(Resources.Trait_TaintImmunity);
                 }
                 else
                 {
-                    AddTrait("Tainted Breather");
+                    AddTrait(Resources.Trait_TaintedBreather);
                 }
             }
         }
@@ -1862,18 +1862,18 @@ namespace org.DownesWard.Traveller.AlienCreation
         {
             if (hydro.Value == 0)
             {
-                AddTrait("Desert Adaptation");
+                AddTrait(Resources.Trait_DesertAdaptation);
             }
             else if (hydro.Value == 10)
             {
-                AddTrait("Aquatic");
-                AddTrait("Natural Swimmer");
+                AddTrait(Resources.Trait_Aquatic);
+                AddTrait(Resources.Trait_NaturalSwimmer);
                 if (dice.roll(2) >= 10)
                 {
-                    AddTrait("Amphibious");
+                    AddTrait(Resources.Trait_Amphibious);
                     if (dice.roll(2) >= 6)
                     {
-                        AddTrait("Water Dependent");
+                        AddTrait(Resources.Trait_WaterDependent);
                     }
                 }
 
@@ -1884,23 +1884,23 @@ namespace org.DownesWard.Traveller.AlienCreation
         {
             if (homeworld.Temp <= -25)
             {
-                AddTrait("Cold Endurance");
-                AddTrait("Cold Resistance");
-                AddTrait("Fire Vulnerability");
+                AddTrait(Resources.Trait_ColdEndurance);
+                AddTrait(Resources.Trait_ColdResistance);
+                AddTrait(Resources.Trait_FireVulnerability);
             }
             else if (homeworld.Temp <= 0)
             {
-                AddTrait("Cold Endurance");
+                AddTrait(Resources.Trait_ColdEndurance);
             }
             else if (homeworld.Temp >= 25 && homeworld.Temp < 45)
             {
-                AddTrait("Heat Endurance");
+                AddTrait(Resources.Trait_HeatEndurance);
             }
             else if (homeworld.Temp >= 45)
             {
-                AddTrait("Heat Endurance");
-                AddTrait("Heat Resistance");
-                AddTrait("Cold Vulnerability");
+                AddTrait(Resources.Trait_HeatEndurance);
+                AddTrait(Resources.Trait_HeatResistance);
+                AddTrait(Resources.Trait_ColdVulnerability);
             }
         }
 

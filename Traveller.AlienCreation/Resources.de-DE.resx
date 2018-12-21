@@ -318,4 +318,88 @@
   <data name="Weapon_Thrasher" xml:space="preserve">
     <value>Thrasher</value>
   </data>
+  <data name="Trait_Amphibious" xml:space="preserve">
+    <value>Amphibische</value>
+  </data>
+  <data name="Trait_Aquatic" xml:space="preserve">
+    <value>Aquatische</value>
+  </data>
+  <data name="Trait_AtmosphericRequirements" xml:space="preserve">
+    <value>Atmosphärischen Anforderungen</value>
+  </data>
+  <data name="Trait_BurstOfSpeed" xml:space="preserve">
+    <value>Temposchub</value>
+  </data>
+  <data name="Trait_DeepDiver" xml:space="preserve">
+    <value>Deep Diver</value>
+  </data>
+  <data name="Trait_DesertAdaptation" xml:space="preserve">
+    <value>Wüste-Anpassung</value>
+  </data>
+  <data name="Trait_FastSpeed" xml:space="preserve">
+    <value>Schnelle Geschwindigkeit</value>
+  </data>
+  <data name="Trait_Feral" xml:space="preserve">
+    <value>Feral</value>
+  </data>
+  <data name="Trait_Gendermorphic" xml:space="preserve">
+    <value>Gendermorphic</value>
+  </data>
+  <data name="Trait_GravityIntolerance" xml:space="preserve">
+    <value>Schwerkraft-Intoleranz</value>
+  </data>
+  <data name="Trait_HeatResistance" xml:space="preserve">
+    <value>Hitzebeständigkeit</value>
+  </data>
+  <data name="Trait_HighGravityAdaptation" xml:space="preserve">
+    <value>Hohe Dichte Anpassung</value>
+  </data>
+  <data name="Trait_IncreasedLifeSupport" xml:space="preserve">
+    <value>Erhöhte Lebensdauer Unterstützung</value>
+  </data>
+  <data name="Trait_LowGravityAdaptation" xml:space="preserve">
+    <value>Niedrigen Schwerpunkt Anpassung</value>
+  </data>
+  <data name="Trait_MultipleLimbs" xml:space="preserve">
+    <value>Mehreren Gliedmaßen</value>
+  </data>
+  <data name="Trait_NaturalClimber" xml:space="preserve">
+    <value>Natürliche Kletterer</value>
+  </data>
+  <data name="Trait_NaturalSwimmer" xml:space="preserve">
+    <value>Natürliche Schwimmer</value>
+  </data>
+  <data name="Trait_SlowSpeed" xml:space="preserve">
+    <value>Langsame Geschwindigkeit</value>
+  </data>
+  <data name="Trait_Stable" xml:space="preserve">
+    <value>Stall</value>
+  </data>
+  <data name="Trait_StalwartMovement" xml:space="preserve">
+    <value>Tapfere Bewegung</value>
+  </data>
+  <data name="Trait_TaintedBreather" xml:space="preserve">
+    <value>Verdorbene Verschnaufpause</value>
+  </data>
+  <data name="Trait_TaintImmunity" xml:space="preserve">
+    <value>Makel Immunität</value>
+  </data>
+  <data name="Trait_TraceBreather" xml:space="preserve">
+    <value>Spur-Entlüfter</value>
+  </data>
+  <data name="Trait_TraceBreatherLimited" xml:space="preserve">
+    <value>Spur-Entlüfter (Limited)</value>
+  </data>
+  <data name="Trait_VaccumSurvival" xml:space="preserve">
+    <value>Vakuum-überleben</value>
+  </data>
+  <data name="Trait_VaccumSurvivalLimited" xml:space="preserve">
+    <value>Vakuum überleben (Limited)</value>
+  </data>
+  <data name="Trait_WaterDependent" xml:space="preserve">
+    <value>Wasser-abhängigen</value>
+  </data>
+  <data name="Trait_ZeroGravityAdaptation" xml:space="preserve">
+    <value>Zero-Gravity-Anpassung</value>
+  </data>
 </root>

@@ -414,6 +414,118 @@
           <source>Thrasher</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Thrasher</target>
         </trans-unit>
+        <trans-unit id="Trait_Amphibious" translate="yes" xml:space="preserve">
+          <source>Amphibious</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Amphibische</target>
+        </trans-unit>
+        <trans-unit id="Trait_Aquatic" translate="yes" xml:space="preserve">
+          <source>Aquatic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aquatische</target>
+        </trans-unit>
+        <trans-unit id="Trait_AtmosphericRequirements" translate="yes" xml:space="preserve">
+          <source>Atmospheric Requirements</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Atmosphärischen Anforderungen</target>
+        </trans-unit>
+        <trans-unit id="Trait_BurstOfSpeed" translate="yes" xml:space="preserve">
+          <source>Burst of Speed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Temposchub</target>
+        </trans-unit>
+        <trans-unit id="Trait_DeepDiver" translate="yes" xml:space="preserve">
+          <source>Deep Diver</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Deep Diver</target>
+        </trans-unit>
+        <trans-unit id="Trait_DesertAdaptation" translate="yes" xml:space="preserve">
+          <source>Desert Adaptation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wüste-Anpassung</target>
+        </trans-unit>
+        <trans-unit id="Trait_FastSpeed" translate="yes" xml:space="preserve">
+          <source>Fast Speed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schnelle Geschwindigkeit</target>
+        </trans-unit>
+        <trans-unit id="Trait_Feral" translate="yes" xml:space="preserve">
+          <source>Feral</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Feral</target>
+        </trans-unit>
+        <trans-unit id="Trait_Gendermorphic" translate="yes" xml:space="preserve">
+          <source>Gendermorphic</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Gendermorphic</target>
+        </trans-unit>
+        <trans-unit id="Trait_GravityIntolerance" translate="yes" xml:space="preserve">
+          <source>Gravity Intolerance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Schwerkraft-Intoleranz</target>
+        </trans-unit>
+        <trans-unit id="Trait_HeatResistance" translate="yes" xml:space="preserve">
+          <source>Heat Resistance</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hitzebeständigkeit</target>
+        </trans-unit>
+        <trans-unit id="Trait_HighGravityAdaptation" translate="yes" xml:space="preserve">
+          <source>High Gravity Adaptation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Hohe Dichte Anpassung</target>
+        </trans-unit>
+        <trans-unit id="Trait_IncreasedLifeSupport" translate="yes" xml:space="preserve">
+          <source>Increased Life Support</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Erhöhte Lebensdauer Unterstützung</target>
+        </trans-unit>
+        <trans-unit id="Trait_LowGravityAdaptation" translate="yes" xml:space="preserve">
+          <source>Low Gravity Adaptation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Niedrigen Schwerpunkt Anpassung</target>
+        </trans-unit>
+        <trans-unit id="Trait_MultipleLimbs" translate="yes" xml:space="preserve">
+          <source>Multiple Limbs</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mehreren Gliedmaßen</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalClimber" translate="yes" xml:space="preserve">
+          <source>Natural Climber</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Natürliche Kletterer</target>
+        </trans-unit>
+        <trans-unit id="Trait_NaturalSwimmer" translate="yes" xml:space="preserve">
+          <source>Natural Swimmer</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Natürliche Schwimmer</target>
+        </trans-unit>
+        <trans-unit id="Trait_SlowSpeed" translate="yes" xml:space="preserve">
+          <source>Slow Speed</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Langsame Geschwindigkeit</target>
+        </trans-unit>
+        <trans-unit id="Trait_Stable" translate="yes" xml:space="preserve">
+          <source>Stable</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Stall</target>
+        </trans-unit>
+        <trans-unit id="Trait_StalwartMovement" translate="yes" xml:space="preserve">
+          <source>Stalwart Movement</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tapfere Bewegung</target>
+        </trans-unit>
+        <trans-unit id="Trait_TaintedBreather" translate="yes" xml:space="preserve">
+          <source>Tainted Breather</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Verdorbene Verschnaufpause</target>
+        </trans-unit>
+        <trans-unit id="Trait_TaintImmunity" translate="yes" xml:space="preserve">
+          <source>Taint Immunity</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Makel Immunität</target>
+        </trans-unit>
+        <trans-unit id="Trait_TraceBreather" translate="yes" xml:space="preserve">
+          <source>Trace Breather</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Spur-Entlüfter</target>
+        </trans-unit>
+        <trans-unit id="Trait_TraceBreatherLimited" translate="yes" xml:space="preserve">
+          <source>Trace Breather (Limited)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Spur-Entlüfter (Limited)</target>
+        </trans-unit>
+        <trans-unit id="Trait_VaccumSurvival" translate="yes" xml:space="preserve">
+          <source>Vaccum Survival</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vakuum-überleben</target>
+        </trans-unit>
+        <trans-unit id="Trait_VaccumSurvivalLimited" translate="yes" xml:space="preserve">
+          <source>Vaccum Survival (Limited)</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vakuum überleben (Limited)</target>
+        </trans-unit>
+        <trans-unit id="Trait_WaterDependent" translate="yes" xml:space="preserve">
+          <source>Water Dependent</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Wasser-abhängigen</target>
+        </trans-unit>
+        <trans-unit id="Trait_ZeroGravityAdaptation" translate="yes" xml:space="preserve">
+          <source>Zero-Gravity Adaptation</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Zero-Gravity-Anpassung</target>
+        </trans-unit>
       </group>
     </body>
   </file>
