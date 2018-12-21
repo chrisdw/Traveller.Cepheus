@@ -151,7 +151,7 @@ namespace org.DownesWard.Traveller.AlienCreation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Flying Movement: {0.
+        ///   Looks up a localized string similar to Flying Movement: {0}.
         /// </summary>
         internal static string Print_FlyMove {
             get {

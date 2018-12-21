@@ -535,7 +535,7 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Mouvement d’escalade : {0}</target>
         </trans-unit>
         <trans-unit id="Print_FlyMove" translate="yes" xml:space="preserve">
-          <source>Flying Movement: {0</source>
+          <source>Flying Movement: {0}</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Vol de mouvement : {0}</target>
         </trans-unit>
         <trans-unit id="Print_Genders" translate="yes" xml:space="preserve">

@@ -514,7 +514,7 @@
     <value>Climbing Movement: {0}</value>
   </data>
   <data name="Print_FlyMove" xml:space="preserve">
-    <value>Flying Movement: {0</value>
+    <value>Flying Movement: {0}</value>
   </data>
   <data name="Print_Genders" xml:space="preserve">
     <value>Genders: {0}:{1}</value>
