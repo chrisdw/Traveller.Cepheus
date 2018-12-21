@@ -1,4 +1,7 @@
-﻿namespace org.DownesWard.Traveller.AlienCreation
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace org.DownesWard.Traveller.AlienCreation
 {
     public enum EcologicalTypes
     {
@@ -30,21 +33,30 @@
 
     public enum Metabolisms
     {
+        [Display(Name = "Warm Blooded")]
         WarmBlooded,
+        [Display(Name = "Cold Blooded")]
         ColdBlooded
     }
     public enum Genders
     {
+        [Display(Name = "Asexual")]
         Asexual,
+        [Display(Name = "Hermaphroditic")]
         Hermaphroditic,
+        [Display(Name = "Bi-Gender")]
         BiGender,
+        [Display(Name = "Multi-Gender")]
         MultiGender
     }
 
     public enum ReproductionMethods
     {
+        [Display(Name = "External Budding")]
         ExternalBudding,
+        [Display(Name = "Live Bearing")]
         LiveBearing,
+        [Display(Name = "Egg Laying")]
         EggLaying
     }
 

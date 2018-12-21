@@ -23,6 +23,11 @@
     <ProjectReference Include="..\Traveller.SystemGeneration\Traveller.SystemGeneration.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.netcore.app\2.1.0\ref\netcoreapp2.1\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <XliffResource Include="MultilingualResources\Traveller.AlienCreation.de-DE.xlf" />
     <XliffResource Include="MultilingualResources\Traveller.AlienCreation.fr-FR.xlf" />
   </ItemGroup>

@@ -1827,7 +1827,7 @@ namespace org.DownesWard.Traveller.AlienCreation
                 }
             }
             else if (atmosphere.Value == 2 || atmosphere.Value == 3)
-            {             
+            {
                 if (dice.roll(2) >= 11)
                 {
                     AddTrait(Resources.Trait_TraceBreather);
@@ -1842,7 +1842,7 @@ namespace org.DownesWard.Traveller.AlienCreation
             {
                 AddTrait(Resources.Trait_AtmosphericRequirements);
             }
-            if (atmosphere.Value == 2 || 
+            if (atmosphere.Value == 2 ||
                 atmosphere.Value == 4 ||
                 atmosphere.Value == 7 ||
                 atmosphere.Value == 9)
@@ -2034,7 +2034,7 @@ namespace org.DownesWard.Traveller.AlienCreation
 
         public void Write(TextWriter tw)
         {
-            tw.WriteLine("Niche {0} ({1})", EcologicalType, EcologicalSubtype);
+            tw.WriteLine("Niche: {0} ({1})", EcologicalType, EcologicalSubtype);
             tw.WriteLine("STR: {0}", STR);
             tw.WriteLine("DEX: {0}", DEX);
             tw.WriteLine("END: {0}", END);
@@ -2046,10 +2046,12 @@ namespace org.DownesWard.Traveller.AlienCreation
             tw.WriteLine("Reproduction: {0}", ReproductionMethod);
             tw.WriteLine("Size: {0}, DM {1:+0;-#}", Size, AttackDM);
             tw.WriteLine("Symmetry: {0}", Symmetry);
-            tw.WriteLine("Limbs {0} ({1} Pairs)", LimbCount, LimbPairs);
-            foreach (var s in LimbGroupTypes.OrderBy(s => s))
+            tw.WriteLine("Limbs: {0} ({1} Pairs)", LimbCount, LimbPairs);
+            var limbs = LimbGroupTypes.GroupBy(l => l)
+                .Select(l => new { Name = l.Key, Count = l.Count() });
+            foreach (var lg in limbs)
             {
-                tw.WriteLine(s);
+                tw.WriteLine("{0} x {1}", lg.Name, lg.Count);
             }
             if (LandMovementRate != 0)
             {
@@ -2069,11 +2071,11 @@ namespace org.DownesWard.Traveller.AlienCreation
             }
             if (Traits.Count > 0)
             {
-                tw.WriteLine(string.Join(", ", Traits.OrderBy(s => s)));
+                tw.WriteLine("Traits: {0}", string.Join(", ", Traits.OrderBy(s => s)));
             }
             if (Weapons.Count > 0)
             {
-                tw.WriteLine(string.Join(", ", Weapons.OrderBy(s => s)));
+                tw.WriteLine("Weapons: {0}", string.Join(", ", Weapons.OrderBy(s => s)));
             }
             tw.WriteLine("Matures at {0}, aging begins at {1} DM {2:+0;-#}", StartingAge, AgingBegins, AgingModifier);
             tw.WriteLine("Height {0} + {1}", BaseHeight, HeightModifier);
