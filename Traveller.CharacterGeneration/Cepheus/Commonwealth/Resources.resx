@@ -234,6 +234,18 @@
   <data name="Sex_Warrior" xml:space="preserve">
     <value>Warrior</value>
   </data>
+  <data name="Skill_Aircraft" xml:space="preserve">
+    <value>Aircraft</value>
+  </data>
+  <data name="Skill_RotorAircraft" xml:space="preserve">
+    <value>Rotor Aircraft</value>
+  </data>
+  <data name="Skill_Vehicle" xml:space="preserve">
+    <value>Vehicle</value>
+  </data>
+  <data name="Skill_WingedAircraft" xml:space="preserve">
+    <value>Winged Aircraft</value>
+  </data>
   <data name="Species_Froog" xml:space="preserve">
     <value>Froog</value>
   </data>

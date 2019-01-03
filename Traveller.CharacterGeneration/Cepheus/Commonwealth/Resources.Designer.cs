@@ -412,6 +412,42 @@ namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aircraft.
+        /// </summary>
+        internal static string Skill_Aircraft {
+            get {
+                return ResourceManager.GetString("Skill_Aircraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rotor Aircraft.
+        /// </summary>
+        internal static string Skill_RotorAircraft {
+            get {
+                return ResourceManager.GetString("Skill_RotorAircraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle.
+        /// </summary>
+        internal static string Skill_Vehicle {
+            get {
+                return ResourceManager.GetString("Skill_Vehicle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Winged Aircraft.
+        /// </summary>
+        internal static string Skill_WingedAircraft {
+            get {
+                return ResourceManager.GetString("Skill_WingedAircraft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Froog.
         /// </summary>
         internal static string Species_Froog {

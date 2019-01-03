@@ -13,5 +13,24 @@
                 Cepheus.SkillLibrary.Telepathy
             }
         };
+
+        public static Skill Aircraft = new Skill(Resources.Skill_Aircraft, Skill.SkillClass.None, 1)
+        {
+            Cascade =
+            {
+                 new Skill(Resources.Skill_RotorAircraft, Skill.SkillClass.None, 1),
+                 new Skill(Resources.Skill_WingedAircraft, Skill.SkillClass.None, 1)
+            }
+        };
+
+        public static Skill Vehicle = new Skill(Resources.Skill_Vehicle, Skill.SkillClass.None, 1)
+        {
+            Cascade =
+            {
+                Aircraft,
+                Cepheus.SkillLibrary.GroundVehicle,
+                Cepheus.SkillLibrary.Watercraft
+            }
+        };
     }
 }

@@ -138,4 +138,16 @@
   <data name="Sex_Warrior" xml:space="preserve">
     <value>Guerrier</value>
   </data>
+  <data name="Skill_Aircraft" xml:space="preserve">
+    <value>Avion</value>
+  </data>
+  <data name="Skill_RotorAircraft" xml:space="preserve">
+    <value>Avion de rotor</value>
+  </data>
+  <data name="Skill_Vehicle" xml:space="preserve">
+    <value>Véhicule</value>
+  </data>
+  <data name="Skill_WingedAircraft" xml:space="preserve">
+    <value>Ailes d’avion</value>
+  </data>
 </root>

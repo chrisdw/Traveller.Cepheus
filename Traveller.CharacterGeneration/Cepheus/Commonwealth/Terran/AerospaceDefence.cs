@@ -2,7 +2,7 @@
 
 namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Terran
 {
-    public class AerospaceDefence : Cepheus.AerospaceDefence
+    public class AerospaceDefence : Commonwealth.AerospaceDefence
     {
         public string[] NCORanks { get; } = new string[6];
 

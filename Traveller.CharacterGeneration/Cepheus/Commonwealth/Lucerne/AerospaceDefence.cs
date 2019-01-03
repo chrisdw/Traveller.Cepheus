@@ -1,6 +1,6 @@
 ﻿namespace org.DownesWard.Traveller.CharacterGeneration.Cepheus.Commonwealth.Lucerne
 {
-    public class AerospaceDefence : Cepheus.AerospaceDefence
+    public class AerospaceDefence : Commonwealth.AerospaceDefence
     {
         public override CharacterGeneration.Character Owner
         {

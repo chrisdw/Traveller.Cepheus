@@ -3990,6 +3990,22 @@ schwer verletzt. Er droht, alles auf Sie zu tadeln.</target>
           <source>Warrior</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Krieger</target>
         </trans-unit>
+        <trans-unit id="Skill_Aircraft" translate="yes" xml:space="preserve">
+          <source>Aircraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Flugzeug</target>
+        </trans-unit>
+        <trans-unit id="Skill_RotorAircraft" translate="yes" xml:space="preserve">
+          <source>Rotor Aircraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Rotor Flugzeug</target>
+        </trans-unit>
+        <trans-unit id="Skill_Vehicle" translate="yes" xml:space="preserve">
+          <source>Vehicle</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Fahrzeug</target>
+        </trans-unit>
+        <trans-unit id="Skill_WingedAircraft" translate="yes" xml:space="preserve">
+          <source>Winged Aircraft</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Winged Flugzeug</target>
+        </trans-unit>
       </group>
     </body>
   </file>
