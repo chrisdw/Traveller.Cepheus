@@ -4,7 +4,7 @@
              x:Class="org.DownesWard.Traveller.CharacterGeneration.UI.SkillView">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="SkillsView" ItemsSource="Skills">
+            <ListView x:Name="SkillsView">
                 <ListView.Header>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Skill" WidthRequest="160"/>

@@ -7,7 +7,7 @@
     <body>
       <group id="TRAVELLER.CHARACTERGENERATION/PROPERTIES/RESOURCES.RESX" datatype="resx">
         <trans-unit id="Table_AdvancedEducation" translate="yes" xml:space="preserve">
-          <source>Advaned Eduation</source>
+          <source>Advanced Eduation</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Produisons Education</target>
         </trans-unit>
         <trans-unit id="Table_Education" translate="yes" xml:space="preserve">
