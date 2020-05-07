@@ -12,9 +12,9 @@ namespace Traveller.Test
         public void Cepheus2d6TableTest()
         {
             UWP uwp = new UWP();
-            uwp.Atmosphere.Value = 7;
-            uwp.Hydro.Value = 7;
-            uwp.Size.Value = 7;
+            uwp.Atmosphere.Value = 6;
+            uwp.Hydro.Value = 6;
+            uwp.Size.Value = 3;
 
             var tg = new TableGenerator();
             var tables = tg.Generate(2, uwp);
@@ -23,6 +23,23 @@ namespace Traveller.Test
                 t.WriteStreamAsText(Console.Out);
             }
         }
+
+        [TestMethod]
+        public void Cepheus2d6TabbedTableTest()
+        {
+            UWP uwp = new UWP();
+            uwp.Atmosphere.Value = 6;
+            uwp.Hydro.Value = 6;
+            uwp.Size.Value = 3;
+
+            var tg = new TableGenerator();
+            var tables = tg.Generate(2, uwp);
+            foreach (var t in tables)
+            {
+                t.WriteStreamAsTabbedText(Console.Out);
+            }
+        }
+
 
         [TestMethod]
         public void Cepheus1D6TableTest()
@@ -77,6 +94,19 @@ namespace Traveller.Test
             for (int i = 0; i < 5; i++)
             {
                 var c = new Critter(EcologicalTypes.Omnivore, 0, -2, -2, Motions.Walking)
+                {
+                    Region = Regions.Woods
+                };
+                c.Write(Console.Out);
+            }
+        }
+
+        [TestMethod]
+        public void Create5CarnivoreCritter()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                var c = new Critter(EcologicalTypes.Carnivore, 0, -2, -2, Motions.Walking)
                 {
                     Region = Regions.Woods
                 };
